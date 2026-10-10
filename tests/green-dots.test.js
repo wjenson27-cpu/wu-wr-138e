@@ -22,6 +22,12 @@ test("initials, apostrophes, and junior suffixes match", function () {
   assert.equal(dots.role(prepared, "DelShawn Phillips").green, false);
   assert.equal(dots.role(prepared, "Jamien Sherwood").green, true);
   assert.equal(dots.role(prepared, "Someone Else"), null);
+  const nate = dots.prepare({
+    asOf: "2026-10-06T09:00:00-07:00",
+    teams: [{ team: "LAR", greenDot: "Nathan Landman", fullTime: ["Nathan Landman"] }]
+  }, NOW);
+  assert.equal(dots.role(nate, "Nate Landman").green, true);
+  assert.equal(dots.role(nate, "Nate Landman").full, true);
 });
 
 test("an unsettled green dot matches nobody", function () {

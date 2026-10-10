@@ -64,6 +64,8 @@ A player is kept when any point source is above 1, or FantasyPros ranks him, or 
 
 The build stamps each player from the roster snapshots in `data/hq/rosters/`: `eddies`, `other` with the club name, or `fa`. The tab recomputes this from the live HQ rosters when those load. Someone who is not on any of the 14 rosters is a free agent. If the rosters did not load, the tab keeps the stamped value and does not call the whole league a free agent.
 
+Roster, free-agent, and green-dot matching all use `normName`. That drops jr, sr, ii, iii, iv, and v, then rewrites a short first name to the formal one (Nate/Nathan, Mike/Michael, Josh/Joshua, Cam/Cameron, Greg/Gregory, Dax/Daxton, and the same kind of pair). The rest of the name is unchanged. Chris does not match Christian, Jon does not match John, and Nate does not match Nathaniel.
+
 `data/free-agents.json` is a sample waiver list. It does not decide who is unrostered.
 
 ## The file

@@ -1,6 +1,5 @@
 /* Trade tab. Same replacement math as js/vor.js, drawn in the War Room. */
 (function (root) {
-  var SUFFIX = { jr: 1, sr: 1, ii: 1, iii: 1, iv: 1, v: 1 };
   var POS = ["QB", "RB", "WR", "TE", "DL", "LB", "DB"];
   var state = {
     teams: [],
@@ -41,17 +40,8 @@
   }
 
   function normName(name) {
-    return String(name || "")
-      .normalize("NFKD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .replace(/'/g, "")
-      .replace(/\./g, "")
-      .replace(/-/g, " ")
-      .replace(/[^a-z\s]/g, " ")
-      .split(/\s+/)
-      .filter(function (part) { return part && !SUFFIX[part]; })
-      .join(" ");
+    if (typeof WURankMath !== "undefined" && WURankMath.normName) return WURankMath.normName(name);
+    return String(name || "").toLowerCase();
   }
 
   function lookup(name) {

@@ -2,7 +2,7 @@
 
 Eddie fills `data/green-dots.json` once a week from Mike Woellert's list (@Mike_Woellert on X, and the weekly Substack post). The War Room reads that file. It does not fetch X or Substack on its own.
 
-The badges use the same name matching as the rankings board: accents come off, apostrophes and periods drop, hyphens become spaces, and jr, sr, ii, iii, iv, and v drop. `T.J. Edwards` matches `TJ Edwards`.
+The badges use the same name matching as the rankings board: accents come off, apostrophes and periods drop, hyphens become spaces, and jr, sr, ii, iii, iv, and v drop. `T.J. Edwards` matches `TJ Edwards`. A short first name matches its formal name, so `Nate Landman` matches `Nathan Landman`. That step is the first name only. Chris does not match Christian, and Jon does not match John.
 
 ## When the badges show
 

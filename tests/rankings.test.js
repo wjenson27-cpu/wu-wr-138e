@@ -1,5 +1,7 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
 const score = require("../js/scoring.js");
 const math = require("../js/rankings-math.js");
 const scoring = require("../data/scoring.json");
@@ -84,4 +86,104 @@ test("matchup grade ranks a generous defense above a stingy one", function () {
   assert.equal(hard.grade, "F");
   assert.equal(hard.place, 7);
   assert.equal(math.matchupGrade(14, [1, 2]), null);
+});
+
+test("first-name nicknames and suffixes share one key", function () {
+  const pairs = [
+    ["Nate Landman", "Nathan Landman"],
+    ["Mike Evans", "Michael Evans"],
+    ["Chris Johnson", "Christopher Johnson"],
+    ["Matt Stafford", "Matthew Stafford"],
+    ["Josh Metellus", "Joshua Metellus"],
+    ["Will Anderson Jr.", "William Anderson"],
+    ["Dan Jones", "Daniel Jones"],
+    ["Dave Montgomery", "David Montgomery"],
+    ["Tony Hill", "Anthony Hill"],
+    ["Cam Skattebo", "Cameron Skattebo"],
+    ["Zach Ertz", "Zachary Ertz"],
+    ["Jon Brooks", "Jonathan Brooks"],
+    ["Jonathon Brooks", "Jonathan Brooks"],
+    ["Rob Woods", "Robert Woods"],
+    ["Ben Sinnott", "Benjamin Sinnott"],
+    ["Tom Brady", "Thomas Brady"],
+    ["Nick Bolton", "Nicholas Bolton"],
+    ["Alex Singleton", "Alexander Singleton"],
+    ["Jake Hansen", "Jacob Hansen"],
+    ["Sam Darnold", "Samuel Darnold"],
+    ["Joe Burrow", "Joseph Burrow"],
+    ["Greg Rousseau", "Gregory Rousseau"],
+    ["Kenny Gainwell", "Kenneth Gainwell III"],
+    ["Dax Hill", "Daxton Hill"],
+    ["Kam Curl", "Kamren Curl"],
+    ["Pat Surtain II", "Patrick Surtain"]
+  ];
+  pairs.forEach(function (pair) {
+    assert.equal(math.normName(pair[0]), math.normName(pair[1]), pair.join(" / "));
+  });
+  assert.notEqual(math.normName("Chris Jones"), math.normName("Christian Jones"));
+  assert.notEqual(math.normName("Jon Jones"), math.normName("John Jones"));
+  assert.notEqual(math.normName("Nate Landman"), math.normName("Nathaniel Watson"));
+  assert.notEqual(math.normName("Tony Adams"), math.normName("Antonio Adams"));
+  assert.equal(math.normName("T.J. Edwards"), math.normName("TJ Edwards"));
+  assert.equal(math.normName("Kenneth Walker III"), "kenneth walker");
+});
+
+test("a formal roster name finds the short name on the values board", function () {
+  const values = require("../data/player-values.json");
+  const byKey = {};
+  values.players.forEach(function (player) {
+    byKey[math.normName(player.name)] = player;
+  });
+  assert.equal(byKey[math.normName("Nathan Landman")].name, "Nate Landman");
+  assert.equal(byKey[math.normName("Cameron Skattebo")].name, "Cam Skattebo");
+  assert.equal(byKey[math.normName("Daxton Hill")].name, "Dax Hill");
+  assert.equal(byKey[math.normName("Josh Metellus")].name, "Joshua Metellus");
+});
+
+test("no 2026 week 5 board name on an HQ roster is left as a free agent", function () {
+  const board = require("../data/rankings/2026-wk5.json");
+  const index = require("../data/hq/rosters/index.json");
+  const dir = path.join(__dirname, "../data/hq/rosters");
+  const entries = [];
+  index.teams.forEach(function (id) {
+    const doc = JSON.parse(fs.readFileSync(path.join(dir, id + ".json"), "utf8"));
+    const roster = doc.roster || {};
+    Object.keys(roster).forEach(function (slot) {
+      const pos = math.groupPos(slot);
+      (roster[slot] || []).forEach(function (name) {
+        entries.push({
+          name: name,
+          pos: pos,
+          club: doc.teamName || id,
+          key: math.normName(name)
+        });
+      });
+    });
+  });
+  function hit(player) {
+    const key = math.normName(player.name);
+    const exact = entries.filter(function (e) { return e.key === key && e.pos === player.pos; });
+    if (exact.length) return exact[0];
+    const named = entries.filter(function (e) { return e.key === key; });
+    if (named.length) return named[0];
+    return null;
+  }
+  const landman = board.players.find(function (p) { return p.name === "Nate Landman"; });
+  const owned = hit(landman);
+  assert.equal(owned && owned.name, "Nathan Landman");
+  assert.match(owned.club, /Newman/);
+  board.players.forEach(function (player) {
+    const onRoster = entries.some(function (e) { return e.key === math.normName(player.name); });
+    if (!onRoster) return;
+    assert.ok(hit(player), player.name + " is rostered and would show as FA");
+  });
+  const boardKeys = new Set(board.players.map(function (p) { return math.normName(p.name); }));
+  const unmatched = [];
+  const seen = new Set();
+  entries.forEach(function (e) {
+    if (boardKeys.has(e.key) || seen.has(e.name)) return;
+    seen.add(e.name);
+    unmatched.push(e.name);
+  });
+  assert.deepEqual(unmatched, ["Micah Parsons"]);
 });

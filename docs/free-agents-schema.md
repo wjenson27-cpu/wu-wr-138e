@@ -2,7 +2,7 @@
 
 `data/free-agents.json` is the waiver pool for the trade calculator. Eddie writes it from Fantrax once a day.
 
-The calculator only needs this file to answer one question: what could Bill pick up for free? A rostered player is worth his points over that line. If the best available linebacker scores 12 a game, a linebacker who scores 13 is worth almost nothing in a trade.
+The calculator only needs this file to answer one question: what could Bill pick up for free? A rostered player is worth his points over that line. If the best available linebacker scores 12 a game, a linebacker who scores 13 is worth almost nothing in a trade. A wire name is matched to the values board with the same name key as the rankings roster check, so `Nathan Landman` finds `Nate Landman`.
 
 If this file is missing, or `asOf` is more than 3 days old, the calculator ignores the wire and uses the last rostered starter instead. The Trade tab shows a badge when that happens.
 
