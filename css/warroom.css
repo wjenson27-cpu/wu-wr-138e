@@ -151,6 +151,35 @@ a.btn,a.btn.ghost{display:inline-block;text-decoration:none}
 .order-row{display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid #122334}
 .order-row span{flex:1;font-weight:700;font-size:.85rem}
 .actions{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.rk-filters .filters,.rk-filters .sorts{margin-bottom:6px}
+.rk-row{width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px;background:#0b1c2e;border-radius:9px;margin-bottom:5px;border:0;border-left:4px solid #1e3a5f}
+.rk-row .info{flex:1;min-width:0}
+.rk-row .name{display:flex;flex-wrap:wrap;align-items:center;gap:3px}
+.rk-row.you{border-left-color:#69BE28;background:#0c2416}
+.rk-row.played{opacity:.72}
+.rk-pts{margin-left:auto;text-align:right;flex-shrink:0;min-width:64px}
+.rk-pts b{display:block;font-size:1rem;color:#69BE28}
+.rk-pts span{font-size:.6rem;color:#A5ACAF}
+.rk-grade{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;background:#1e293b;color:#cbd5e1}
+.rk-grade.gA{background:#14532d;color:#86efac}
+.rk-grade.gB{background:#1e3a5f;color:#93c5fd}
+.rk-grade.gC{background:#334155;color:#e2e8f0}
+.rk-grade.gD{background:#78350f;color:#fcd34d}
+.rk-grade.gF{background:#7f1d1d;color:#fca5a5}
+.rk-flag{font-style:normal;font-size:.55rem;font-weight:800;padding:1px 4px;border-radius:4px;margin-left:3px;background:#1e293b;color:#cbd5e1}
+.rk-flag.out,.rk-flag.bye{background:#7f1d1d;color:#fca5a5}
+.rk-flag.q{background:#78350f;color:#fcd34d}
+.rk-flag.split{background:#4c1d95;color:#ddd6fe}
+.rk-flag.wire{background:#14532d;color:#86efac}
+.rk-detail{background:#061018;border-radius:8px;padding:8px 10px;margin:-2px 0 8px 0;border-left:4px solid #1e3a5f}
+.rk-src{display:flex;justify-content:space-between;gap:8px;font-size:.75rem;padding:4px 0;border-bottom:1px solid #122334}
+.rk-src b{font-weight:700}
+.rk-slot{display:flex;gap:8px;align-items:center;font-size:.8rem;padding:4px 0;border-bottom:1px solid #122334}
+.rk-slot b{width:42px;flex-shrink:0;color:#69BE28;font-size:.68rem}
+.rk-slot span{flex:1;min-width:0}
+.rk-slot em{font-style:normal;font-weight:800}
+.rk-slot.sit b{color:#A5ACAF}
+.rk-start .scoreline{margin-bottom:2px}
 @media (min-width:860px){
   .tc-sides{display:grid;grid-template-columns:1fr 1fr;align-items:start}
   .statgrid{grid-template-columns:repeat(4,1fr)}
