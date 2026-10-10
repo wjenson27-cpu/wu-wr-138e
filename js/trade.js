@@ -1,6 +1,5 @@
 /* Trade tab. Same replacement math as js/vor.js, drawn in the War Room. */
 (function (root) {
-  var SUFFIX = { jr: 1, sr: 1, ii: 1, iii: 1, iv: 1, v: 1 };
   var POS = ["QB", "RB", "WR", "TE", "DL", "LB", "DB"];
   var state = {
     teams: [],
@@ -41,17 +40,8 @@
   }
 
   function normName(name) {
-    return String(name || "")
-      .normalize("NFKD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .replace(/'/g, "")
-      .replace(/\./g, "")
-      .replace(/-/g, " ")
-      .replace(/[^a-z\s]/g, " ")
-      .split(/\s+/)
-      .filter(function (part) { return part && !SUFFIX[part]; })
-      .join(" ");
+    if (typeof WURankMath !== "undefined" && WURankMath.normName) return WURankMath.normName(name);
+    return String(name || "").toLowerCase();
   }
 
   function lookup(name) {
@@ -251,8 +241,9 @@
     var sub = row.unvalued
       ? esc(row.pos)
       : esc(row.nflTeam || "") + " · " + fmt(row.ppg) + " pts/g" + (row.games ? " · " + row.games + "g" : "");
+    var mark = window.WUGreen ? WUGreen.mark(state.greenDots, row.name) : "";
     return '<span class="tc-pos">' + esc(row.pos) + '</span><span class="tc-who"><span class="tc-pname">' +
-      esc(row.name) + " " + ir + injury + '</span><span class="tc-psub">' + sub + "</span></span>" + score;
+      esc(row.name) + mark + " " + ir + injury + '</span><span class="tc-psub">' + sub + "</span></span>" + score;
   }
 
   function resultItems(which, query) {
@@ -381,7 +372,8 @@
     var body = rows.length ? rows.map(function (p) {
       var slot = line.slotOf[p.name];
       var badge = p.ir ? '<span class="tc-badge tc-badge-ir">IR</span>' : (p.ineligible ? '<span class="tc-badge tc-badge-bench">RES</span>' : (slot ? '<span class="tc-badge">' + esc(slot) + "</span>" : '<span class="tc-badge tc-badge-bench">Bench</span>'));
-      return "<li><span>" + esc(p.name) + "</span>" + badge + "<span class=\"tc-val\">" + (p.unvalued ? "—" : fmt(p.ppg)) + "</span></li>";
+      var mark = window.WUGreen ? WUGreen.mark(state.greenDots, p.name) : "";
+      return "<li><span>" + esc(p.name) + mark + "</span>" + badge + "<span class=\"tc-val\">" + (p.unvalued ? "—" : fmt(p.ppg)) + "</span></li>";
     }).join("") : '<li class="tiny">Empty</li>';
     return "<div><p class=\"tiny\">" + label + '</p><ul class="tc-rlist">' + body + "</ul></div>";
   }
@@ -409,6 +401,7 @@
     try { localStorage.setItem("wu-trade-v1", JSON.stringify({ a: state.a, b: state.b, aSend: state.aSend, bSend: state.bSend, aFaab: state.aFaab, bFaab: state.bFaab, context: state.context })); } catch (e) {}
     host.innerHTML =
       '<div class="card"><h2>Trade calculator ' + badges() + '</h2><p class="tiny">' + esc(weightsLine()) + "</p><p class=\"tiny\">" + esc(state.waiverNote) + "</p>" +
+      (window.WUGreen ? WUGreen.note(state.greenDots) : "") +
       '<label class="hide-drafted"><input type="checkbox" id="tcContext"' + (state.context ? " checked" : "") + "> Count lineup fit</label></div>" +
       '<div class="tc-sides">' + renderSide("a") + renderSide("b") + "</div>" +
       renderVerdict() + replacementTable() +
@@ -416,6 +409,7 @@
   }
 
   function onClick(event) {
+    if (event.target.closest(".gdot")) return;
     var add = event.target.closest("[data-add]");
     if (add) {
       var which = add.getAttribute("data-add");
@@ -509,6 +503,7 @@
     state.waiverSample = !!(fa && fa.sample);
     var stale = !fa || !fa.asOf || WUVor.isStale(fa.asOf, 3, new Date());
     state.waiverOn = !!(fa && fa.players && fa.players.length && !stale);
+    state.greenDots = bundle.greenDots || null;
     state.waiverNote = state.waiverOn
       ? "Wire file " + (fa.asOf || "") + (state.waiverSample ? ". These free agents are sample names until Eddie writes the real list." : ".")
       : "Free-agent list is missing or older than 3 days, so the line is the rostered baseline only.";

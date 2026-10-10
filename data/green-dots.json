@@ -1,0 +1,201 @@
+{
+  "sample": true,
+  "asOf": "2026-10-06T09:00:00-07:00",
+  "week": 4,
+  "source": "Mike Woellert",
+  "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-4-green-dot-and-full-time-linebackers",
+  "teams": [
+    {
+      "team": "ARI",
+      "greenDot": "Mack Wilson",
+      "fullTime": ["Mack Wilson"],
+      "notes": "Wore the dot and played all 61 snaps. Gibbens played 55 and is locked in beside him."
+    },
+    {
+      "team": "ATL",
+      "greenDot": null,
+      "fullTime": [],
+      "notes": "Unsettled. Divine Deablo wore it until the blowout, then Kendal Daniels."
+    },
+    {
+      "team": "BAL",
+      "greenDot": "Roquan Smith",
+      "fullTime": ["Roquan Smith"],
+      "notes": "Wore the dot and played all 58 snaps. Simpson was at 56.9%."
+    },
+    {
+      "team": "BUF",
+      "greenDot": "Terrel Bernard",
+      "fullTime": [],
+      "notes": "Wore the dot on 67 of 73 snaps (91.8%)."
+    },
+    {
+      "team": "CAR",
+      "greenDot": "Devin Lloyd",
+      "fullTime": ["Devin Lloyd"],
+      "notes": "Took the dot back and played all 68 snaps."
+    },
+    {
+      "team": "CHI",
+      "greenDot": "T.J. Edwards",
+      "fullTime": ["T.J. Edwards"],
+      "notes": "Wore the dot and played all 32 snaps in a short defensive day."
+    },
+    {
+      "team": "CIN",
+      "greenDot": "Barrett Carter",
+      "fullTime": ["Barrett Carter"],
+      "notes": "Wore the dot and played all 54 snaps. Knight fell to 72.2%."
+    },
+    {
+      "team": "CLE",
+      "greenDot": "Carson Schwesinger",
+      "fullTime": ["Carson Schwesinger"],
+      "notes": "Wore the dot and played all 64 snaps in a man-heavy nickel."
+    },
+    {
+      "team": "DAL",
+      "greenDot": null,
+      "fullTime": [],
+      "notes": "Unsettled. Confirmed rotation between Jaishawn Barham and Shemar James."
+    },
+    {
+      "team": "DEN",
+      "greenDot": "Alex Singleton",
+      "fullTime": ["Alex Singleton"],
+      "notes": "Wore the dot and played all 65 snaps, with 14 tackles."
+    },
+    {
+      "team": "DET",
+      "greenDot": "Jack Campbell",
+      "fullTime": ["Jack Campbell"],
+      "notes": "Wore the dot and played all 72 snaps. Barnes dropped into a rotation."
+    },
+    {
+      "team": "GB",
+      "greenDot": "Zaire Franklin",
+      "fullTime": ["Zaire Franklin"],
+      "notes": "Wore the dot and played all 61 snaps. Cooper's Achilles leaves McDuffie at LB2."
+    },
+    {
+      "team": "HOU",
+      "greenDot": "Kenneth Murray",
+      "fullTime": [],
+      "notes": "Wore the dot with Al-Shaair out. He comes off in dime. Check the concussion."
+    },
+    {
+      "team": "IND",
+      "greenDot": "Akeem Davis-Gaither",
+      "fullTime": [],
+      "notes": "Wore the dot on 59 of 61 snaps. No second linebacker in the data."
+    },
+    {
+      "team": "JAX",
+      "greenDot": "Foyesade Oluokun",
+      "fullTime": ["Foyesade Oluokun"],
+      "notes": "Wore the dot and played all 71 snaps."
+    },
+    {
+      "team": "KC",
+      "greenDot": "Nick Bolton",
+      "fullTime": ["Nick Bolton"],
+      "notes": "Wore the dot and played every snap. Tranquill was off in dime."
+    },
+    {
+      "team": "LV",
+      "greenDot": "Nakobe Dean",
+      "fullTime": [],
+      "notes": "Wore the dot on 57 of 58 snaps. Quay Walker played the same share."
+    },
+    {
+      "team": "LAC",
+      "greenDot": "Daiyan Henley",
+      "fullTime": [],
+      "notes": "Wore the dot on 52 of 58 snaps. Phillips jumped to 86.2%."
+    },
+    {
+      "team": "LAR",
+      "greenDot": "Nate Landman",
+      "fullTime": [],
+      "notes": "Wore the dot and stayed on in dime, 55 of 58 snaps."
+    },
+    {
+      "team": "MIA",
+      "greenDot": "Jacob Rodriguez",
+      "fullTime": ["Jacob Rodriguez", "Jordyn Brooks"],
+      "notes": "Rodriguez wore the dot. He and Brooks both played all 72 snaps."
+    },
+    {
+      "team": "MIN",
+      "greenDot": "Blake Cashman",
+      "fullTime": [],
+      "notes": "Wore the dot on 36 of 37 snaps in a short day. Eric Wilson played 34."
+    },
+    {
+      "team": "NE",
+      "greenDot": "Robert Spillane",
+      "fullTime": ["Robert Spillane", "Christian Elliss"],
+      "notes": "Spillane wore the dot. He and Elliss both played every snap."
+    },
+    {
+      "team": "NO",
+      "greenDot": "Danny Stutsman",
+      "fullTime": ["Danny Stutsman"],
+      "notes": "Wore the dot in his first start and played all 56 snaps with Kaden Elliss out."
+    },
+    {
+      "team": "NYG",
+      "greenDot": "Tremaine Edmunds",
+      "fullTime": ["Tremaine Edmunds", "Arvell Reese"],
+      "notes": "Edmunds wore the dot. He and Reese both played all 63 snaps."
+    },
+    {
+      "team": "NYJ",
+      "greenDot": "Demario Davis",
+      "fullTime": ["Demario Davis"],
+      "notes": "Wore the dot and played all 89 snaps. Sherwood played 84."
+    },
+    {
+      "team": "PHI",
+      "greenDot": "Jeremiah Trotter",
+      "fullTime": ["Jeremiah Trotter"],
+      "notes": "Wore the dot with Zack Baun out and played all 77 snaps."
+    },
+    {
+      "team": "PIT",
+      "greenDot": "Patrick Queen",
+      "fullTime": ["Patrick Queen"],
+      "notes": "Wore the dot and played all 62 snaps."
+    },
+    {
+      "team": "SF",
+      "greenDot": "Fred Warner",
+      "fullTime": ["Fred Warner"],
+      "notes": "Wore the dot and played every snap."
+    },
+    {
+      "team": "SEA",
+      "greenDot": "Ernest Jones",
+      "fullTime": ["Ernest Jones"],
+      "notes": "Wore the dot and played all 68 snaps. Drake Thomas was at 77.9% as dime grew."
+    },
+    {
+      "team": "TB",
+      "greenDot": "Alex Anzalone",
+      "fullTime": ["Alex Anzalone"],
+      "notes": "Wore the dot and played all 55 snaps."
+    },
+    {
+      "team": "TEN",
+      "greenDot": "Anthony Hill",
+      "fullTime": ["Anthony Hill"],
+      "notes": "Wore the dot and played all 61 snaps. Cedric Gray was base-only."
+    },
+    {
+      "team": "WAS",
+      "greenDot": "Frankie Luvu",
+      "fullTime": [],
+      "notes": "Wore the dot on 63 of 66 snaps after Leo Chenal's season-ending injury."
+    }
+  ]
+}

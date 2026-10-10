@@ -6,6 +6,66 @@
   root.WURankMath = api;
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   var SUFFIX = { jr: 1, sr: 1, ii: 1, iii: 1, iv: 1, v: 1 };
+  /* First token only. Formal name is the key. Chris stays off Christian,
+     Jon stays off John, Nate stays off Nathaniel, Tony stays off Antonio. */
+  var FIRST = (function () {
+    var groups = [
+      ["nathan", "nate"],
+      ["michael", "mike", "mikey"],
+      ["christopher", "chris"],
+      ["matthew", "matt"],
+      ["joshua", "josh"],
+      ["william", "will", "bill", "billy"],
+      ["daniel", "dan", "danny"],
+      ["david", "dave"],
+      ["anthony", "tony"],
+      ["cameron", "cam"],
+      ["zachary", "zach", "zack", "zac"],
+      ["jonathan", "jon", "jonathon", "johnathan"],
+      ["robert", "rob", "bob", "bobby", "robbie"],
+      ["benjamin", "ben", "benny"],
+      ["thomas", "tom", "tommy"],
+      ["nicholas", "nick", "nic", "nicky"],
+      ["alexander", "alex"],
+      ["jacob", "jake"],
+      ["samuel", "sam", "sammy"],
+      ["joseph", "joe", "joey"],
+      ["gregory", "greg"],
+      ["kenneth", "ken", "kenny"],
+      ["daxton", "dax"],
+      ["kamren", "kam"],
+      ["patrick", "pat"],
+      ["jeffrey", "jeff", "jeffery"],
+      ["steven", "steve", "stephen"],
+      ["andrew", "andy", "drew"],
+      ["richard", "rick", "rich", "ricky"],
+      ["mitchell", "mitch"],
+      ["gabriel", "gabe"],
+      ["philip", "phil", "phillip"],
+      ["theodore", "ted", "teddy"],
+      ["timothy", "tim", "timmy"],
+      ["charles", "charlie", "chuck"],
+      ["edward", "ed", "eddie"],
+      ["frederick", "fred", "freddie", "freddy"],
+      ["ronald", "ron", "ronnie"],
+      ["donald", "don"],
+      ["douglas", "doug"],
+      ["james", "jim", "jimmy"],
+      ["vincent", "vince", "vinny"],
+      ["dominic", "dom", "dominick"],
+      ["terrence", "terry", "terence"],
+      ["lawrence", "larry"],
+      ["peter", "pete"],
+      ["walter", "walt"],
+      ["wesley", "wes"],
+      ["bradley", "brad"]
+    ];
+    var map = {};
+    groups.forEach(function (group) {
+      group.forEach(function (token) { map[token] = group[0]; });
+    });
+    return map;
+  })();
   var POS_GROUP = {
     QB: "QB", RB: "RB", FB: "RB", WR: "WR", TE: "TE",
     DL: "DL", DE: "DL", DT: "DL", NT: "DL",
@@ -45,7 +105,7 @@
   }
 
   function normName(name) {
-    return String(name || "")
+    var parts = String(name || "")
       .normalize("NFKD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
@@ -54,8 +114,9 @@
       .replace(/-/g, " ")
       .replace(/[^a-z\s]/g, " ")
       .split(/\s+/)
-      .filter(function (part) { return part && !SUFFIX[part]; })
-      .join(" ");
+      .filter(function (part) { return part && !SUFFIX[part]; });
+    if (parts.length && FIRST[parts[0]]) parts[0] = FIRST[parts[0]];
+    return parts.join(" ");
   }
 
   function canonTeam(team) {
