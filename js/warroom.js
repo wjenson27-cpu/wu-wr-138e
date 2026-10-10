@@ -446,6 +446,19 @@
         freeAgents: state.freeAgents
       });
     }
+    var rankLatest = await WUData.load("data/rankings/latest.json");
+    var rankFile = rankLatest.data && rankLatest.data.file;
+    var rankBoard = rankFile ? await WUData.load("data/rankings/" + rankFile) : { data: null };
+    state.weeklyRankings = rankBoard.data;
+    if (window.WURankings) {
+      WURankings.mount({
+        root: document.getElementById("rankRoot"),
+        board: state.weeklyRankings,
+        rosters: state.rosters,
+        teams: (state.teamsDoc && state.teamsDoc.teams) || [],
+        week: state.week
+      });
+    }
     document.querySelectorAll("nav button").forEach(function (b) {
       b.addEventListener("click", function () { show(b.getAttribute("data-p")); });
     });

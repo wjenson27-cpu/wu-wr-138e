@@ -54,6 +54,13 @@
     pts += recYds * 0.1;
     pts += hundredBonus(recYds);
     pts += num(s.recTd) * num(receiving.recTD || 6);
+    pts += num(s.krYds) * 0.1;
+    pts += num(s.prYds) * 0.1;
+    pts += (num(s.krTd) + num(s.prTd)) * num(o.returns && o.returns.returnTD || 6);
+    var fum = (o.fumbles && o.fumbles.fumbleLost != null) ? o.fumbles.fumbleLost : -3;
+    pts += num(s.fumbleLost) * num(fum);
+    var two = (passing.twoPointPass != null) ? passing.twoPointPass : 2;
+    pts += (num(s.passTwo) + num(s.rushTwo) + num(s.recTwo)) * num(two);
 
     pts += solo * num(idp.soloTackle != null ? idp.soloTackle : 2);
     pts += ast * num(idp.assistedTackle != null ? idp.assistedTackle : 1);
@@ -64,6 +71,10 @@
     if (pos === "DL") pd = num(idp.passDefensedDL != null ? idp.passDefensedDL : 4);
     pts += num(s.pd) * pd;
     pts += num(s.defInt) * num(idp.interception != null ? idp.interception : 6);
+    pts += num(s.qbHit) * num(idp.qbHit != null ? idp.qbHit : 1);
+    pts += num(s.forcedFumble) * num(idp.forcedFumble != null ? idp.forcedFumble : 3);
+    pts += num(s.safety) * num(idp.safety != null ? idp.safety : 6);
+    pts += num(s.blockedKick) * num(idp.blockedKick != null ? idp.blockedKick : 6);
     return Math.round(pts * 10) / 10;
   }
 

@@ -1,0 +1,52 @@
+name: Weekly rankings
+
+on:
+  schedule:
+    # Aimed at Pacific daylight time (UTC−7). After the first Sunday in November
+    # these run one hour earlier until March.
+    - cron: "0 6 * * 3"   # Tuesday 11:00 PM PT
+    - cron: "0 15 * * 4"  # Thursday 8:00 AM PT
+    - cron: "0 6 * * 0"   # Saturday 11:00 PM PT
+    - cron: "0 14 * * 0"  # Sunday 7:00 AM PT
+  workflow_dispatch:
+    inputs:
+      season:
+        description: Season year (blank uses the current season)
+        required: false
+        type: string
+      week:
+        description: Week number (blank uses the Fantrax week)
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-rankings
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Build rankings
+        env:
+          SEASON: ${{ inputs.season }}
+          WEEK: ${{ inputs.week }}
+        run: node scripts/build_rankings.js
+      - name: Commit rankings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rankings
+          if git diff --cached --quiet; then
+            echo "No rankings change."
+            exit 0
+          fi
+          git commit -m "Refresh weekly rankings"
+          git push
