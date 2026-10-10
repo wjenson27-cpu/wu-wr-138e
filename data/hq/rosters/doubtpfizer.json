@@ -1,0 +1,62 @@
+{
+  "teamId": "doubtpfizer",
+  "teamName": "Mrs. Doubtpfizer",
+  "owner": "Kyle Weberg",
+  "asOf": "2026-10-07",
+  "faabLeft": 91,
+  "startingQB": "Dak Prescott",
+  "roster": {
+    "QB": [
+      "Dak Prescott"
+    ],
+    "RB": [
+      "Christian McCaffrey",
+      "Braelon Allen",
+      "Chuba Hubbard",
+      "D'Andre Swift",
+      "Kaelon Black",
+      "Blake Corum"
+    ],
+    "WR": [
+      "Rashee Rice",
+      "Josh Downs",
+      "Rome Odunze",
+      "Nico Collins",
+      "Jayden Reed",
+      "Tre Harris"
+    ],
+    "TE": [
+      "Hunter Henry"
+    ],
+    "LB": [
+      "Nakobe Dean",
+      "Alex Singleton",
+      "Sonny Styles",
+      "DeMarvion Overshown"
+    ],
+    "DL": [
+      "Jonathan Allen",
+      "Mason Graham",
+      "Byron Young"
+    ],
+    "DB": [
+      "Reed Blankenship",
+      "Kamari Lassiter",
+      "Keisean Nixon"
+    ],
+    "IR": [
+      "Nico Collins",
+      "Jayden Reed",
+      "DeMarvion Overshown"
+    ]
+  },
+  "notes": "Sep 16 post-waiver: +Jalen Ramsey $2 (−Reed Blankenship); +Chauncey Gardner-Johnson $2. FAAB $109. | Sep 20: +Pat Freiermuth −Emari Demercado (Demercado was already absent from HQ roster). | Sep 23 clear: +Jonathan Allen (DL); -Pat Freiermuth (TE); -Kaelon Black (RB) | Cleared stale Rachaad White IR (now on Saltese). | Fantasy check Sep 30: −Brian Burns (Sep 29 1:32 PM). | Sep 30 W4 waivers/FA: +Kain Medrano $4; +Reed Blankenship (−Jalen Ramsey). FAAB $105. | Oct 2: +Hunter Henry/−Mark Andrews. | Oct 3: −Kain Medrano. | Oct 6: +Mason Graham (DL-CLE) $6. FAAB $99. | Oct 7 W5 waivers/FA: +Keisean Nixon (−Chauncey Gardner-Johnson); +Byron Young $4 (−Dexter Lawrence); +Tre Harris $4 (−Dontayvion Wicks). FAAB $91.",
+  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "fantraxTeamId": "xg1akj6omsb3ulv5",
+  "updated": "2026-10-07",
+  "injuryFlags": [
+    "Nico Collins — Hamstring - Questionable (IR slot)",
+    "Jayden Reed — Neck - Out Indefinitely (IR slot)",
+    "DeMarvion Overshown — Hamstring - Questionable (IR slot)"
+  ]
+}

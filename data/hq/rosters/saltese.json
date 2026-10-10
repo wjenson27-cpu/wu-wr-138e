@@ -1,0 +1,67 @@
+{
+  "teamId": "saltese",
+  "teamName": "Saltese Slamm",
+  "owner": "Luke Sahlberg",
+  "asOf": "2026-10-07",
+  "faabLeft": 11,
+  "startingQB": "Matthew Stafford",
+  "roster": {
+    "QB": [
+      "Matthew Stafford"
+    ],
+    "RB": [
+      "David Montgomery",
+      "Rico Dowdle",
+      "Jonathon Brooks",
+      "Aaron Jones",
+      "Omarion Hampton"
+    ],
+    "WR": [
+      "Jaxon Smith-Njigba",
+      "Stefon Diggs",
+      "DeVonta Smith",
+      "Carnell Tate",
+      "Ja'Kobi Lane",
+      "Dohnte Meyers"
+    ],
+    "TE": [
+      "Oronde Gadsden"
+    ],
+    "LB": [
+      "Jamien Sherwood",
+      "Terrel Bernard",
+      "Edgerrin Cooper",
+      "Teddye Buchanan",
+      "Mack Wilson"
+    ],
+    "DL": [
+      "Micah Parsons",
+      "Chase Young"
+    ],
+    "DB": [
+      "Chuck Clark",
+      "Jonas Sanker",
+      "Quinyon Mitchell",
+      "Alontae Taylor",
+      "Cole Bishop"
+    ],
+    "IR": [
+      "Ja'Kobi Lane",
+      "Jonathon Brooks",
+      "Micah Parsons"
+    ]
+  },
+  "notes": "Sep 20 AM: dropped Shaun Dolac (Sat Sep 19 6:39 PM, null). Removed stale Jonah Coleman (on Ultron). FAAB $83. | Sep 21: dropped Zach Allen (9:00 PM). | Sep 23 clear: +Denzel Boston (WR); +Oronde Gadsden (TE); -Mike Gesicki (TE); +Mason Graham (DL) | Sep 23 trade: −Jordyn Brooks +Jamien Sherwood (from Eddies) | Sep 23 PM/AM FA: +Rachaad White/−Raheim Sanders; +Jartavius Martin/−Keisean Nixon; Sigle claimed by Eddies. | Sep 25: +Chuck Clark (−Jartavius Martin). Sep 28 trade: +David Montgomery / −Denzel Boston (vs Substation). | Sep 30 W4 waivers/FA: +Nick Herbig (−Kaleb Elarms-Orr). FAAB $26. | Oct 3: +Aaron Jones (+$5 FAAB in) for Nathan Landman; −Rachaad White; −Nick Herbig; +Quinyon Mitchell (Phillips churn). FAAB $31. | Cleared stale Mason Graham (dropped Oct 4; now on Mrs. Doubtpfizer). | Oct 7 W5 waivers/FA: +Teddye Buchanan (−Jordan Battle); +Dohnte Meyers $17; +Chase Young $1; +Alontae Taylor $1; +Cole Bishop $1. FAAB $11. | Oct 6 trade: +Omarion Hampton +Mack Wilson −Breece Hall −Rhamondre Stevenson (to Eddies).",
+  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "fantraxTeamId": "xdx6ngm2msb3ulv5",
+  "updated": "2026-10-07",
+  "injuryFlags": [
+    "Breece Hall — Thigh - Doubtful that will play next game (reserve)",
+    "Rico Dowdle — Toe - Questionable (reserve)",
+    "Rachaad White — Shoulder - Questionable (reserve)",
+    "Ja'Kobi Lane — Injured Reserve List - IR - Wrist (IR slot)",
+    "Jonathon Brooks — Injured Reserve List - IR - Abdomen (IR slot)",
+    "Edgerrin Cooper — Head - Questionable (active slot)",
+    "Micah Parsons — Injured Reserve List - PUP-R - Knee - acl (IR slot)"
+  ]
+}

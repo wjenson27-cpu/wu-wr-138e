@@ -1,0 +1,60 @@
+{
+  "teamId": "goats",
+  "teamName": "Valley Old Goats",
+  "owner": "Mike Heff",
+  "asOf": "2026-10-09",
+  "faabLeft": 70,
+  "startingQB": "Patrick Mahomes",
+  "roster": {
+    "QB": [
+      "Patrick Mahomes",
+      "Deshaun Watson"
+    ],
+    "RB": [
+      "Chase Brown",
+      "Derrick Henry",
+      "Bucky Irving",
+      "Samaje Perine",
+      "Alvin Kamara",
+      "Josh Jacobs"
+    ],
+    "WR": [
+      "Devaughn Vele",
+      "DK Metcalf",
+      "Marvin Harrison"
+    ],
+    "TE": [
+      "George Kittle",
+      "Hunter Henry"
+    ],
+    "LB": [
+      "Drake Thomas",
+      "Devin Bush",
+      "Arvell Reese",
+      "Quincy Williams",
+      "Devin Lloyd"
+    ],
+    "DL": [
+      "T.J. Watt",
+      "Danielle Hunter"
+    ],
+    "DB": [
+      "Kamren Curl",
+      "Josh Metellus",
+      "Amik Robertson"
+    ],
+    "IR": [
+      "Alvin Kamara",
+      "Josh Jacobs",
+      "Devin Lloyd"
+    ]
+  },
+  "notes": "Sep 16 post-waiver: +Devaughn Vele $16 (−Marvin Mims). FAAB $84. | DATA CONFLICT: Vele $16 −Mims is Scrape A; Scrape B had Valley +Ezeiruaku $16. FAAB $84 either way. | Sep 25: +Tyrel Dodson. | Sep 30 W4 waivers/FA: +Josh Metellus $3 (−Tyrel Dodson). FAAB $81. | Oct 7 W5 waivers/FA: +Amik Robertson $11 (−Camryn Bynum). FAAB $70. | Oct 8: +Deshaun Watson/−Justice Hill.",
+  "injuryFlags": [
+    "Josh Jacobs — Personal - Reserve Commissioner Exempt List (IR slot)",
+    "Devin Lloyd — Calf - Questionable (IR slot)"
+  ],
+  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "fantraxTeamId": "81bbo25imsb3ulv5",
+  "updated": "2026-10-09"
+}

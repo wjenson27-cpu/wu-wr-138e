@@ -1,0 +1,55 @@
+{
+  "teamId": "dongers",
+  "teamName": "Drummond Dongers",
+  "owner": "Gavin Heaton",
+  "asOf": "2026-10-09",
+  "faabLeft": 3,
+  "startingQB": "Joe Burrow",
+  "roster": {
+    "QB": [
+      "Joe Burrow",
+      "Jameis Winston"
+    ],
+    "RB": [
+      "Bijan Robinson",
+      "Tony Pollard"
+    ],
+    "WR": [
+      "Chris Olave",
+      "Ladd McConkey",
+      "D.J. Moore",
+      "Parker Washington",
+      "KC Concepcion",
+      "KaVontae Turpin"
+    ],
+    "TE": [
+      "Brenton Strange",
+      "T.J. Hockenson"
+    ],
+    "LB": [
+      "Christian Elliss",
+      "T.J. Edwards",
+      "Isaiah McDuffie"
+    ],
+    "DL": [
+      "David Bailey",
+      "Zach Allen"
+    ],
+    "DB": [
+      "Kyle Hamilton",
+      "Xavier McKinney",
+      "Daxton Hill",
+      "Nick Cross"
+    ],
+    "IR": [
+      "Nick Cross"
+    ]
+  },
+  "notes": "Sep 17 AM: +T.J. Hockenson (−Kayshon Boutte). Sep 16 post-waiver: +Donovan Ezeiruaku $14. FAAB $93. | Sep 20: −Aaron Donald (also +/−Michael Mayer churn, net Mayer zero). | Sep 23 clear: +David Bailey (RB); +Daxton Hill (DB); +Christian Elliss (LB); -Nick Scott (DB); -Chris Rodriguez Jr. (RB) | Fantasy check Sep 28: −CJ Allen (trade); −Donovan Ezeiruaku; +Tony Pollard (RB). FAAB $45. | Sep 30 W4 waivers/FA: +Donovan Ezeiruaku (−Laiatu Latu); +Jeremy Reaves (−Jalen Pitre); +Jartavius Martin (−Jeremy Reaves). FAAB $45. | Oct 7 W5 waivers/FA: +Isaiah McDuffie $42. FAAB $3. | Oct 7 FA: +Jameis Winston; −Kyler Murray. | Oct 8: +Zach Allen/−Ezeiruaku; −Jartavius Martin.",
+  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "fantraxTeamId": "lreem0zbmsb3ulv5",
+  "updated": "2026-10-09",
+  "injuryFlags": [
+    "Nick Cross — Illness - Out Indefinitely (IR slot)"
+  ]
+}

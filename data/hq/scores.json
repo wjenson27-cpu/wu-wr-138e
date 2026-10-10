@@ -1,0 +1,92 @@
+{
+  "updated": "2026-10-06",
+  "asOf": "2026-10-06",
+  "week": 4,
+  "weekStatus": "final",
+  "complete": true,
+  "source": "Fantrax",
+  "note": "Week 4 FINAL from Fantrax Matchups/Standings scrape Tue Oct 6 ~6:20 AM PT. All 7 games locked. Kitty Pocket 361; survivor-low Saltese 206.5 (alive pool).",
+  "kitty": {
+    "team": "Pocket",
+    "teamFull": "Pocket Agents",
+    "teamId": "pocket",
+    "score": 361
+  },
+  "survivorLowest": {
+    "team": "Saltese Slamm",
+    "teamId": "saltese",
+    "score": 206.5
+  },
+  "matchups": [
+    {
+      "home": "Substation",
+      "away": "Towner Top Aga Bottom",
+      "homeScore": 295.5,
+      "awayScore": 216,
+      "status": "final",
+      "winner": "Substation",
+      "topScorers": [],
+      "notes": "Fantrax Week 4 final · Tue Oct 6 ~6:20 AM PT roster sync."
+    },
+    {
+      "home": "Drummond Dongers",
+      "away": "Newman Lake Sleep Paralysis Demons",
+      "homeScore": 215,
+      "awayScore": 226.5,
+      "status": "final",
+      "winner": "Newman Lake Sleep Paralysis Demons",
+      "topScorers": [],
+      "notes": "Fantrax Week 4 final · Tue Oct 6 ~6:20 AM PT roster sync."
+    },
+    {
+      "home": "Pocket Agents",
+      "away": "Mrs. Doubtpfizer",
+      "homeScore": 361,
+      "awayScore": 268.5,
+      "status": "final",
+      "winner": "Pocket Agents",
+      "topScorers": [],
+      "notes": "Fantrax Week 4 final · Tue Oct 6 ~6:20 AM PT roster sync."
+    },
+    {
+      "home": "Eagle Ridge Eddies",
+      "away": "Indian Trail Slumlords",
+      "homeScore": 226,
+      "awayScore": 218.5,
+      "status": "final",
+      "winner": "Eagle Ridge Eddies",
+      "topScorers": [],
+      "notes": "Fantrax Week 4 final · Tue Oct 6 ~6:20 AM PT roster sync."
+    },
+    {
+      "home": "Valley Old Goats",
+      "away": "Ultron",
+      "homeScore": 280.5,
+      "awayScore": 225,
+      "status": "final",
+      "winner": "Valley Old Goats",
+      "topScorers": [],
+      "notes": "Fantrax Week 4 final · Tue Oct 6 ~6:20 AM PT roster sync."
+    },
+    {
+      "home": "Little Ass Boys",
+      "away": "The Hypersecretors",
+      "homeScore": 280,
+      "awayScore": 234.5,
+      "status": "final",
+      "winner": "Little Ass Boys",
+      "topScorers": [],
+      "notes": "Fantrax Week 4 final · Tue Oct 6 ~6:20 AM PT roster sync."
+    },
+    {
+      "home": "Saltese Slamm",
+      "away": "Morningside Muff Divers",
+      "homeScore": 206.5,
+      "awayScore": 223.5,
+      "status": "final",
+      "winner": "Morningside Muff Divers",
+      "topScorers": [],
+      "notes": "Fantrax Week 4 final · Tue Oct 6 ~6:20 AM PT roster sync."
+    }
+  ]
+}

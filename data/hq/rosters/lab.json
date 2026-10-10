@@ -1,0 +1,64 @@
+{
+  "teamId": "lab",
+  "teamName": "Little Ass Boys",
+  "owner": "Jesse Nicholson",
+  "asOf": "2026-09-30",
+  "faabLeft": 67,
+  "startingQB": "C.J. Stroud",
+  "roster": {
+    "QB": [
+      "C.J. Stroud",
+      "Jayden Daniels"
+    ],
+    "RB": [
+      "Jeremiyah Love",
+      "Jaylen Warren",
+      "Kyren Williams",
+      "Tyler Allgeier",
+      "Jaylen Wright"
+    ],
+    "WR": [
+      "Mike Evans",
+      "Jakobi Meyers",
+      "Caleb Douglas",
+      "Khalil Shakir",
+      "Puka Nacua"
+    ],
+    "TE": [
+      "Isaiah Likely"
+    ],
+    "LB": [
+      "Roquan Smith",
+      "Demario Davis",
+      "Akeem Davis-Gaither",
+      "Quay Walker",
+      "Drue Tranquill"
+    ],
+    "DL": [
+      "Aidan Hutchinson"
+    ],
+    "DB": [
+      "Kevin Byard",
+      "Ronnie Hickman",
+      "Trevon Moehrig",
+      "Minkah Fitzpatrick"
+    ],
+    "IR": [
+      "Jayden Daniels",
+      "Puka Nacua",
+      "Minkah Fitzpatrick"
+    ]
+  },
+  "notes": "Sep 17 AM: dropped Baker Mayfield. Sep 16 post-waiver: +Kendrick Bourne $11 (−Tre Tucker). FAAB $104. | Sep 20: +Tutu Atwell. | Sep 22: dropped Tutu Atwell (5:47 AM). | Sep 23 clear: +C.J. Stroud (QB) | Fantasy check Sep 28: +Jakobi Meyers (WR). | Sep 30 W4 waivers/FA: +Jaylen Wright $26 (−Kendrick Bourne). FAAB $67.",
+  "source": "Fantrax Sep 30 2026 ~9:20 AM PT post-waiver roster sync (all 14 teams, after Week 4 FAAB clear).",
+  "fantraxTeamId": "a4q2ra3ymsb3ulv4",
+  "updated": "2026-09-30",
+  "injuryFlags": [
+    "Mike Evans — Ribs - Questionable (active slot)",
+    "Jaylen Wright — Foot - Questionable (reserve)",
+    "Caleb Douglas — Ankle - Questionable (reserve)",
+    "Jayden Daniels — Elbow - Questionable (IR slot)",
+    "Puka Nacua — Hip - Questionable (IR slot)",
+    "Minkah Fitzpatrick — Groin - Questionable (IR slot)"
+  ]
+}
