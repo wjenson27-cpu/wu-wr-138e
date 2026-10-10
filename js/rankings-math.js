@@ -116,15 +116,13 @@
     return keys.some(function (k) { return num(line[k]) > 0.05; });
   }
 
-  /* Projections set the consensus. Last-3 actuals widen the range.
-     A bye with only those actuals is not a projection for this week. */
-  function projectionConsensus(sleeper, espn, recent, bye) {
+  /* Projections set the consensus. Last-3 actuals only widen the range.
+     A player with nothing but those actuals is not projected this week. */
+  function projectionConsensus(sleeper, espn, recent) {
     var proj = consensus([sleeper, espn]);
     var band = consensus([sleeper, espn, recent]);
-    var pts = proj.pts;
-    if (pts == null && num(recent) != null && !bye) pts = consensus([recent]).pts;
-    if (pts == null) return { pts: null, floor: null, ceil: null, n: 0 };
-    return { pts: pts, floor: band.floor, ceil: band.ceil, n: proj.n || 1 };
+    if (proj.pts == null) return { pts: null, floor: null, ceil: null, n: 0 };
+    return { pts: proj.pts, floor: band.floor, ceil: band.ceil, n: proj.n };
   }
 
   function consensus(points) {

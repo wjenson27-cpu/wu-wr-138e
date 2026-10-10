@@ -41,9 +41,8 @@ test("a projection consensus ignores a bye that only has recent points", functio
   assert.equal(bye.pts, null);
   assert.equal(bye.floor, null);
   const formOnly = math.projectionConsensus(null, null, 14, false);
-  assert.equal(formOnly.pts, 14);
-  assert.equal(formOnly.floor, 14);
-  assert.equal(formOnly.ceil, 14);
+  assert.equal(formOnly.pts, null);
+  assert.equal(formOnly.floor, null);
 });
 
 test("consensus is the average, with the low and high kept", function () {

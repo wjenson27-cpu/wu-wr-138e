@@ -237,7 +237,7 @@
     }
     html += '<div class="card"><h2>Week ' + esc(board.week) + " rankings</h2>";
     html += "<p>Consensus averages the Sleeper and ESPN projections, rescored for Wheels Up. " + esc(asOfPt(board.asOf)) + ".</p>";
-    html += '<p class="tiny">ESPN is offense only. Last 3 widens the range and fills in only when there is no projection. FantasyPros is a rank, not points.</p></div>';
+    html += '<p class="tiny">ESPN is offense only. Last 3 widens the range and is not the projection. FantasyPros is a rank, not points.</p></div>';
     html += startSitHtml(rows, lookup);
     html += gemsHtml(rows);
     return html;

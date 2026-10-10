@@ -19,7 +19,7 @@ The action uses the built-in `GITHUB_TOKEN` with `contents: write`. It commits o
 
 ## Sources
 
-Points are never taken from a source's own PPR or standard total. Where a stat line exists, `js/scoring.js` rescores it with `data/scoring.json` (TE premium, TE first downs, IDP). Consensus points are an equal-weight average of the projection lines (Sleeper and ESPN). Last 3 is not averaged into that number. It widens the floor and the ceiling, and it becomes the consensus only when a player has no projection and is not on a bye. A bye with nothing but last-3 actuals has no consensus points.
+Points are never taken from a source's own PPR or standard total. Where a stat line exists, `js/scoring.js` rescores it with `data/scoring.json` (TE premium, TE first downs, IDP). Consensus points are an equal-weight average of the projection lines (Sleeper and ESPN). Last 3 is not averaged into that number, and it is not used when those projections are missing. It widens the floor and the ceiling when a projection exists. A player with nothing but last-3 actuals, including anyone on a bye, has no consensus points.
 
 | Source | What it contributes | If it fails |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ Grades need at least four clubs. Place is 1 plus the number of clubs with a high
 
 ## Consensus and splits
 
-Inside one position, players with a points consensus are ranked by those points (ties broken by name). Players who only have a FantasyPros rank, and bye players who only have last-3 actuals, are listed after them.
+Inside one position, players with a points consensus are ranked by those points (ties broken by name). Players who only have a FantasyPros rank or only last-3 actuals are listed after them.
 
 Each stat source also has its own positional rank, from that source's Wheels Up points. The FantasyPros rank is the rank they published.
 

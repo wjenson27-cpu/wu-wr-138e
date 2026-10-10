@@ -526,9 +526,9 @@ async function main() {
   POS_LIST.forEach(function (pos) {
     const list = byPos[pos];
     const pointRows = list.filter(function (row) {
-      return M.projectionConsensus(row.sleeperPts, row.espnPts, row.recentPts, !byTeam[row.team]).pts != null;
+      return M.projectionConsensus(row.sleeperPts, row.espnPts, row.recentPts).pts != null;
     }).map(function (row) {
-      const c = M.projectionConsensus(row.sleeperPts, row.espnPts, row.recentPts, !byTeam[row.team]);
+      const c = M.projectionConsensus(row.sleeperPts, row.espnPts, row.recentPts);
       return { key: row.key, name: row.name, pts: c.pts, floor: c.floor, ceil: c.ceil, n: c.n };
     });
     const consensusRank = M.ordinalRanks(pointRows, function (row) { return row.pts; });
