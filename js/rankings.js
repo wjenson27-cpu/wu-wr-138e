@@ -64,7 +64,9 @@
     var exact = lookup.entries.filter(function (e) { return e.norm === key && e.pos === player.pos; });
     if (exact.length) return exact[0];
     var named = lookup.entries.filter(function (e) { return e.norm === key; });
-    if (named.length === 1 && !named[0].pos) return named[0];
+    // Feeds and Fantrax disagree on some positions (edge rushers LB vs DL,
+    // two-way players). A name on any roster means he is not available.
+    if (named.length) return named[0];
     return null;
   }
 
