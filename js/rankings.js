@@ -129,6 +129,8 @@
     var pos = "ALL";
     var avail = "ALL";
     var sort = "rank";
+    var dotFilter = "ALL";
+    var dots = opts.greenDots || null;
     var query = "";
     var open = "";
 
@@ -151,12 +153,17 @@
       if (b.getAttribute("data-pos")) pos = b.getAttribute("data-pos");
       if (b.getAttribute("data-avail")) avail = b.getAttribute("data-avail");
       if (b.getAttribute("data-sort")) sort = b.getAttribute("data-sort");
+      if (b.getAttribute("data-dot")) dotFilter = b.getAttribute("data-dot");
+      if (pos !== "LB" && pos !== "IDP") dotFilter = "ALL";
       filters.querySelectorAll("button").forEach(function (btn) {
         var on = (btn.getAttribute("data-pos") && btn.getAttribute("data-pos") === pos) ||
           (btn.getAttribute("data-avail") && btn.getAttribute("data-avail") === avail) ||
-          (btn.getAttribute("data-sort") && btn.getAttribute("data-sort") === sort);
+          (btn.getAttribute("data-sort") && btn.getAttribute("data-sort") === sort) ||
+          (btn.getAttribute("data-dot") && btn.getAttribute("data-dot") === dotFilter);
         btn.classList.toggle("on", !!on);
       });
+      var dotRow = document.getElementById("rankDots");
+      if (dotRow) dotRow.hidden = !(dots && dots.fresh && (pos === "LB" || pos === "IDP"));
       renderList();
     });
     search.addEventListener("input", function () {
@@ -182,6 +189,10 @@
         if (avail === "EDDIES" && row.avail !== "eddies") return false;
         if (avail === "FA" && row.avail !== "fa") return false;
         if (avail === "OTHER" && row.avail !== "other") return false;
+        if (dotFilter === "DOT") {
+          var hit = window.WUGreen && WUGreen.role(dots, p.name);
+          if (!hit || !hit.green) return false;
+        }
         if (!q) return true;
         var blob = norm(p.name + " " + p.team + " " + p.opp + " " + row.club);
         return blob.indexOf(q) !== -1;
@@ -223,7 +234,8 @@
     }
     return '<div class="filters">' + group(posBtns, "pos") + "</div>" +
       '<div class="filters">' + group(availBtns, "avail") + "</div>" +
-      '<div class="sorts"><span class="lbl">Sort</span>' + group(sortBtns, "sort") + "</div>";
+      '<div class="sorts"><span class="lbl">Sort</span>' + group(sortBtns, "sort") + "</div>" +
+      '<div class="filters" id="rankDots" hidden><button type="button" data-dot="ALL" class="on">All</button><button type="button" data-dot="DOT">Green dot</button></div>';
   }
 
   function summaryHtml(board, rows, appWeek, lookup) {
@@ -237,15 +249,16 @@
         return esc(s.name) + (s.ok ? " is partial" : " is missing") + (s.detail ? ": " + esc(s.detail) : "");
       }).join("<br>") + "</div>";
     }
+    html += window.WUGreen ? WUGreen.note(window.__wuGreen) : "";
     html += '<div class="card"><h2>Week ' + esc(board.week) + " rankings</h2>";
     html += "<p>Consensus averages the Sleeper and ESPN projections, rescored for Wheels Up. " + esc(asOfPt(board.asOf)) + ".</p>";
     html += '<p class="tiny">ESPN is offense only. Last 3 widens the range and is not the projection. FantasyPros is a rank, not points.</p></div>';
-    html += startSitHtml(rows, lookup);
-    html += gemsHtml(rows);
+    html += startSitHtml(rows, window.__wuGreen);
+    html += gemsHtml(rows, window.__wuGreen);
     return html;
   }
 
-  function startSitHtml(rows) {
+  function startSitHtml(rows, dots) {
     var byKey = {};
     var byName = {};
     rows.forEach(function (row) {
@@ -307,14 +320,16 @@
     html += plan.starters.map(function (slot) {
       var p = slot.player;
       var tag = p.injury && !hardOut(p.injury) ? " " + p.injury : "";
-      return '<div class="rk-slot"><b>' + esc(slot.slot) + "</b><span>" + esc(p.name) + esc(tag) + "</span><em>" + esc(ptsText(p.ppg)) + "</em></div>";
+      var mark = window.WUGreen ? WUGreen.mark(dots, p.name) : "";
+      return '<div class="rk-slot"><b>' + esc(slot.slot) + "</b><span>" + esc(p.name) + mark + esc(tag) + "</span><em>" + esc(ptsText(p.ppg)) + "</em></div>";
     }).join("");
     var sit = pool.filter(function (p) { return !p.ineligible && !used[p.name]; })
       .sort(function (a, b) { return b.ppg - a.ppg || a.name.localeCompare(b.name); });
     if (sit.length) {
       html += '<p class="sec">Sit</p>';
       html += sit.map(function (p) {
-        return '<div class="rk-slot sit"><b>' + esc(p.pos) + "</b><span>" + esc(p.name) + "</span><em>" + esc(ptsText(p.ppg)) + "</em></div>";
+        var mark = window.WUGreen ? WUGreen.mark(dots, p.name) : "";
+        return '<div class="rk-slot sit"><b>' + esc(p.pos) + "</b><span>" + esc(p.name) + mark + "</span><em>" + esc(ptsText(p.ppg)) + "</em></div>";
       }).join("");
     }
     var cant = pool.filter(function (p) { return p.ineligible; });
@@ -329,7 +344,7 @@
     return html;
   }
 
-  function gemsHtml(rows) {
+  function gemsHtml(rows, dots) {
     var gems = rows.filter(function (row) {
       var p = row.player;
       if (row.avail !== "fa" || p.bye || p.played || hardOut(p.injury)) return false;
@@ -343,7 +358,8 @@
     var html = '<div class="card"><h2>On the wire</h2><p class="tiny">Unrostered, ranked inside the useful range, and not out or on a bye.</p>';
     html += gems.map(function (row) {
       var p = row.player;
-      return '<div class="rk-slot"><b>' + esc(p.pos) + esc(p.rank) + "</b><span>" + esc(p.name) + " · " + esc(side(p)) + "</span><em>" + esc(ptsText(p.pts)) + "</em></div>";
+      var mark = window.WUGreen ? WUGreen.mark(dots, p.name) : "";
+      return '<div class="rk-slot"><b>' + esc(p.pos) + esc(p.rank) + "</b><span>" + esc(p.name) + mark + " · " + esc(side(p)) + "</span><em>" + esc(ptsText(p.pts)) + "</em></div>";
     }).join("");
     html += "</div>";
     return html;
@@ -359,6 +375,7 @@
     if (p.played && !p.bye) chips += '<i class="rk-flag">Played</i>';
     if (p.split) chips += '<i class="rk-flag split">Split</i>';
     if (row.avail === "fa") chips += '<i class="rk-flag wire">FA</i>';
+    if (window.WUGreen) chips += WUGreen.mark(window.__wuGreen, p.name);
     var grade = p.matchup && p.matchup.grade ? p.matchup.grade : "";
     var html = '<button type="button" class="' + cls + '" data-key="' + key + '">';
     html += '<span class="rank">' + esc(p.rank == null ? "—" : p.rank) + "</span>";
@@ -405,6 +422,11 @@
       html += '<p class="tiny">Spread ' + esc(p.vegas.spread) + " (" + fav + "), total " + esc(p.vegas.total) + ", implied " + esc(p.vegas.implied) + "</p>";
     }
     if (p.split) html += '<p class="tiny">Sources disagree by a wide rank gap or by 6 or more points.</p>';
+    var role = window.WUGreen && WUGreen.role(window.__wuGreen, p.name);
+    if (role) {
+      var kind = role.green ? "Green dot" : "Full time";
+      html += '<p class="tiny">' + kind + " · " + esc(window.__wuGreen.source || "Mike Woellert") + (window.__wuGreen.asOfLabel ? " · " + esc(window.__wuGreen.asOfLabel) : "") + "</p>";
+    }
     html += "</div>";
     return html;
   }
@@ -412,6 +434,7 @@
   window.WURankings = {
     mount: function (opts) {
       window.__wuEddiesDoc = opts && opts.rosters ? opts.rosters.eddies : null;
+      window.__wuGreen = opts && opts.greenDots ? opts.greenDots : null;
       mount(opts || {});
     }
   };

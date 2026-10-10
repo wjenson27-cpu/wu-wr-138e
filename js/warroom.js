@@ -268,6 +268,7 @@
       $("proster").innerHTML = '<div class="card"><p>Roster did not load.</p></div>';
       return;
     }
+    html += window.WUGreen ? WUGreen.note(state.greenDots) : "";
     html += '<p class="tiny">' + esc((state.eddies && state.eddies.notes) || "") + "</p>";
     ["ACTIVE", "RESERVE", "IR"].forEach(function (bucket) {
       var list = rows.filter(function (r) { return r.bucket === bucket; });
@@ -275,8 +276,9 @@
       if (!list.length) html += '<p class="tiny">None.</p>';
       list.forEach(function (r) {
         var detail = r.flag ? r.flag.replace(r.name, "").replace(/^[\s—–-]+/, "") : "";
+        var mark = window.WUGreen ? WUGreen.mark(state.greenDots, r.name) : "";
         html += '<div class="row"><div class="pos ' + esc(r.pos) + '">' + esc(r.pos) + '</div><div class="info"><div class="name">' +
-          esc(r.name) + '</div>' + (detail ? '<div class="note">' + esc(detail) + "</div>" : "") +
+          esc(r.name) + mark + '</div>' + (detail ? '<div class="note">' + esc(detail) + "</div>" : "") +
           '</div><div class="verdict ' + (bucket === "IR" ? "SIT" : bucket === "RESERVE" ? "WATCH" : "START") + '">' + bucket + "</div></div>";
       });
     });
@@ -289,17 +291,20 @@
     var ideas = (state.plan && state.plan.trades) || [];
     var html = "";
     if (state.plan && state.plan.sample) html += '<div class="banner">Sample bid sheet. Eddie has not filled this week yet.</div>';
+    html += window.WUGreen ? WUGreen.note(state.greenDots) : "";
     html += '<div class="scroll"><table class="sheet"><thead><tr><th>#</th><th>Player</th><th>Why</th><th>Recent</th><th>FAAB</th><th>Bid</th><th>Drop</th><th></th></tr></thead><tbody>';
     if (!rows.length) html += '<tr><td colspan="8">No targets yet.</td></tr>';
     rows.forEach(function (r) {
-      html += "<tr><td>" + esc(r.rank) + "</td><td><b>" + esc(r.player) + "</b><div class=\"tiny\">" + esc(r.pos) + " " + esc(r.nflTeam) +
+      var mark = window.WUGreen ? WUGreen.mark(state.greenDots, r.player) : "";
+      html += "<tr><td>" + esc(r.rank) + "</td><td><b>" + esc(r.player) + "</b>" + mark + "<div class=\"tiny\">" + esc(r.pos) + " " + esc(r.nflTeam) +
         "</div></td><td>" + esc(r.why) + "</td><td>" + esc(r.stats) + "</td><td>$" + esc(r.faabMin) + "–" + esc(r.faabMax) +
         "</td><td>$" + esc(r.bid) + "</td><td>" + esc(r.drop) + '</td><td><span class="verdict ' + esc(r.tag) + '">' + esc(r.tag) + "</span></td></tr>";
     });
     html += "</tbody></table></div>";
     html += '<div class="sec">Drop candidates</div>';
     drops.forEach(function (d) {
-      html += '<div class="row"><div class="rank">' + esc(d.rank) + '</div><div class="info"><div class="name">' + esc(d.player) +
+      var dropMark = window.WUGreen ? WUGreen.mark(state.greenDots, d.player) : "";
+      html += '<div class="row"><div class="rank">' + esc(d.rank) + '</div><div class="info"><div class="name">' + esc(d.player) + dropMark +
         '</div><div class="note">' + esc(d.reason) + "</div></div><div class=\"pos " + esc(d.pos) + "\">" + esc(d.pos) + "</div></div>";
     });
     if (ideas.length) {
@@ -314,16 +319,36 @@
 
   function renderIdp() {
     var plan = state.plan || {};
+    var dots = state.greenDots;
     var html = "";
-    if (plan.sample) html += '<div class="banner">Sample green-dot list. Eddie has not filled this week yet.</div>';
-    html += '<div class="card"><h3>Green-dot tracker</h3><div class="scroll"><table class="idp-table"><thead><tr><th>Team</th><th>Green dot</th><th>Notes</th></tr></thead><tbody>';
-    (plan.idp || []).forEach(function (r) {
-      html += '<tr><td class="team">' + esc(r.nflTeam) + '</td><td class="dot">' + esc(r.greenDot) + '</td><td class="note">' + esc(r.notes) + "</td></tr>";
+    html += window.WUGreen ? WUGreen.note(dots) : "";
+    html += '<div class="card"><h3>Green-dot tracker</h3>';
+    if (dots && dots.fresh) {
+      html += "<p>Week " + esc(dots.week) + " · " + esc(dots.source || "Mike Woellert");
+      if (dots.asOfLabel) html += " · " + esc(dots.asOfLabel);
+      html += ".</p>";
+      if (dots.sample) html += '<p class="tiny">Sample from the free Week 4 post. Eddie replaces this file each week.</p>';
+      if (dots.sourceUrl) html += '<p class="tiny"><a href="' + esc(dots.sourceUrl) + '">Source</a></p>';
+    }
+    html += '<div class="scroll"><table class="idp-table"><thead><tr><th>Team</th><th>Green dot</th><th>Full time</th><th>Notes</th></tr></thead><tbody>';
+    var teams = (dots && dots.fresh && dots.teams) || [];
+    if (!teams.length && !(dots && dots.fresh)) {
+      (plan.idp || []).forEach(function (r) {
+        html += '<tr><td class="team">' + esc(r.nflTeam) + '</td><td class="dot">' + esc(r.greenDot) + '</td><td></td><td class="note">' + esc(r.notes) + "</td></tr>";
+      });
+    }
+    teams.forEach(function (r) {
+      var dotName = r.greenDot ? esc(r.greenDot) + (window.WUGreen ? WUGreen.mark(dots, r.greenDot, "green") : "") : "Unsettled";
+      var full = (r.fullTime || []).map(function (name) {
+        return esc(name) + (window.WUGreen ? WUGreen.mark(dots, name, "full") : "");
+      }).join(", ");
+      html += '<tr><td class="team">' + esc(r.team) + '</td><td class="dot">' + dotName + '</td><td>' + (full || "—") + '</td><td class="note">' + esc(r.notes || "") + "</td></tr>";
     });
     html += "</tbody></table></div></div>";
     html += '<div class="sec">Box safeties</div>';
     (plan.boxSafety || []).forEach(function (r) {
-      html += '<div class="row"><div class="info"><div class="name">' + esc(r.player) + '</div><div class="meta">' + esc(r.nflTeam) +
+      var boxMark = window.WUGreen ? WUGreen.mark(state.greenDots, r.player) : "";
+      html += '<div class="row"><div class="info"><div class="name">' + esc(r.player) + boxMark + '</div><div class="meta">' + esc(r.nflTeam) +
         '</div><div class="note">' + esc(r.note) + "</div></div></div>";
     });
     $("pidp").innerHTML = html;
@@ -416,6 +441,7 @@
       WUData.load("data/warroom.json"),
       WUData.load("data/player-values.json"),
       WUData.load("data/free-agents.json"),
+      WUData.load("data/green-dots.json"),
       WUData.hq("rosters/index.json")
     ]);
     state.teamsDoc = jobs[0].data;
@@ -430,9 +456,10 @@
     state.plan = jobs[9].data;
     state.values = jobs[10].data;
     state.freeAgents = jobs[11].data;
+    state.greenDots = window.WUGreen ? WUGreen.prepare(jobs[12].data, Date.now()) : null;
     if (state.plan && state.plan.week) state.week = state.plan.week;
     else if (!(state.week > 0)) state.week = WUWeek.fantraxWeek(new Date());
-    var ids = (jobs[12].data && jobs[12].data.teams) || ((state.teamsDoc && state.teamsDoc.teams) || []).map(function (t) { return t.id; });
+    var ids = (jobs[13].data && jobs[13].data.teams) || ((state.teamsDoc && state.teamsDoc.teams) || []).map(function (t) { return t.id; });
     var rosterLoads = await Promise.all(ids.map(function (id) { return WUData.hq("rosters/" + id + ".json"); }));
     ids.forEach(function (id, i) { if (rosterLoads[i].data) state.rosters[id] = rosterLoads[i].data; });
     if (!state.rosters.eddies && state.eddies) state.rosters.eddies = state.eddies;
@@ -443,7 +470,8 @@
         teams: (state.teamsDoc && state.teamsDoc.teams) || [],
         rosters: state.rosters,
         values: state.values,
-        freeAgents: state.freeAgents
+        freeAgents: state.freeAgents,
+        greenDots: state.greenDots
       });
     }
     var rankLatest = await WUData.load("data/rankings/latest.json");
@@ -456,7 +484,8 @@
         board: state.weeklyRankings,
         rosters: state.rosters,
         teams: (state.teamsDoc && state.teamsDoc.teams) || [],
-        week: state.week
+        week: state.week,
+        greenDots: state.greenDots
       });
     }
     document.querySelectorAll("nav button").forEach(function (b) {
