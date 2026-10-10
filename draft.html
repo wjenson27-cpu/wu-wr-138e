@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#002244">
+<title>WU26 War Room</title>
+<link rel="icon" href="img/eddies.png">
+<link rel="stylesheet" href="css/warroom.css">
+</head>
+<body class="has-strip">
+<div class="sticky-top">
+<header>
+  <div class="hdr">
+    <img src="img/eddies.png" alt="Eddies">
+    <div>
+      <h1 id="title">WU26 War Room</h1>
+      <div class="sub">Draft board</div>
+    </div>
+    <div class="tools">
+      <a href="index.html">In season</a>
+      <button type="button" id="btnMute">Sound</button>
+      <button type="button" id="btnTest">Test</button>
+      <button type="button" id="btnUndo2">Undo</button>
+      <button type="button" id="btnEdit">Edit</button>
+      <button type="button" id="btnCopy">Copy</button>
+    </div>
+  </div>
+</header>
+<div class="strip"><span id="stripClock">Loading the clock…</span> · <span id="stripUntil"></span></div>
+<div class="turn-alert" id="turnAlert">You're up.<div class="sub">Your pick.</div></div>
+<div class="chips" id="chips"></div>
+<nav>
+  <button type="button" class="active" data-p="pboard">Board</button>
+  <button type="button" data-p="plikes">Likes</button>
+  <button type="button" data-p="pidp">IDP</button>
+  <button type="button" data-p="plb">LBs</button>
+  <button type="button" data-p="prb">RBs</button>
+  <button type="button" data-p="pwr">WRs</button>
+  <button type="button" data-p="pdb">DBs</button>
+  <button type="button" data-p="pqb">QB</button>
+  <button type="button" data-p="pte">TE</button>
+  <button type="button" data-p="plive">Live</button>
+  <button type="button" data-p="psetup">Setup</button>
+</nav>
+</div>
+<main>
+  <section class="panel active" id="pboard"></section>
+  <section class="panel" id="plikes"></section>
+  <section class="panel" id="pidp"></section>
+  <section class="panel" id="plb"></section>
+  <section class="panel" id="prb"></section>
+  <section class="panel" id="pwr"></section>
+  <section class="panel" id="pdb"></section>
+  <section class="panel" id="pqb"></section>
+  <section class="panel" id="pte"></section>
+  <section class="panel" id="plive"></section>
+  <section class="panel" id="psetup"></section>
+</main>
+<div class="modal" id="modal">
+  <div class="box">
+    <p id="modalTxt"></p>
+    <button type="button" class="ok" id="modalOk">Draft</button>
+    <button type="button" class="no" id="modalNo">Cancel</button>
+  </div>
+</div>
+<audio id="eagleCaw" src="audio/eagle-caw.mp3" preload="auto"></audio>
+<p class="footer">Eagle Ridge Eddies</p>
+<script src="js/hq.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/draft-order.js"></script>
+<script src="js/vor.js"></script>
+<script src="js/draft.js"></script>
+</body>
+</html>

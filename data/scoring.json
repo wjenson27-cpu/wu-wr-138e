@@ -1,0 +1,118 @@
+{
+  "league": "Wheels Up Collective",
+  "leagueId": "hms8onqvmsb3ulsx",
+  "platform": "Fantrax",
+  "format": "Head-to-Head Points, 14 teams, 14-week regular season, 8-team playoff",
+  "source": "Fantrax League Rules Summary, scraped read-only by Eddie on 2026-09-28 (/workspace/fantrax-pending-claims-score-2026-09-28.json -> scoringFull + lineup). Written to this file 2026-10-09.",
+  "verifiedAgainst": "Checked against Fantrax season FPts on 2026-09-28: DeForest Buckner (3 GP) 60 shown vs ~57-60 recomputed; Brian Robinson Jr. 36 shown vs ~37 recomputed (bonuses are applied per scoring period, rounded down).",
+  "reverifyWhen": "Re-scrape the League Rules Summary if the commissioner announces a rules change, or before the playoffs (Week 15).",
+  "season": {
+    "year": 2026,
+    "week1Start": "2026-09-10",
+    "scoringPeriod": "Thursday to Wednesday PT. Fantrax Week 5 = Oct 8-14, 2026.",
+    "weekFormula": "week = 1 + floor((today_PT - 2026-09-10) / 7 days). Cross-check against the Fantrax matchup header.",
+    "targetWeekRule": "Report on the current week until its Monday night game ends. From Tuesday on, report on next week (waivers process Wednesday).",
+    "regularSeasonWeeks": 14,
+    "playoffTeams": 8,
+    "statFreeze": "Official stat corrections stop counting after 8 PM ET Wednesday."
+  },
+  "faab": {
+    "startingBudget": 115,
+    "note": "A 2026-09-28 scrape showed claimBudget 100, but faab.json and the earlier reports say $115. Treat $115 as correct and recheck on Fantrax if it matters.",
+    "waiverProcessing": "Wednesday 9:00 AM PT (seen Sep 30 and Oct 7). Fantrax also showed a Friday 9:30 AM PT run for Oct 9. Read the actual next process time from Fantrax every run.",
+    "excludeZeroBidsInHQ": true
+  },
+  "roster": {
+    "maxTotal": 20,
+    "active": 14,
+    "reserve": 6,
+    "ir": 3,
+    "irCountsTowardLimit": false,
+    "byeWeekMayMoveToIR": false,
+    "onlyOfficialIRListMayUseIR": false,
+    "startingLineup": {
+      "QB": 1,
+      "RB": 1,
+      "WR": 1,
+      "TE": 1,
+      "RWT_flex_RB_WR_TE": 3,
+      "DL": 1,
+      "LB": 1,
+      "DB": 2,
+      "ID_flex_any_IDP": 3
+    },
+    "notes": "7 offensive starters and 7 IDP starters, with no K and no team DST. Flex players are scored by their actual position. Players score in every stat group (so an offensive player's KR/PR counts)."
+  },
+  "offense": {
+    "passing": {
+      "passYards": "1 per 25 yds (0.04/yd), counted from 0 to 600",
+      "passYardBonus": "+6 per 100 yds counted in the 200-600 band (as written on Fantrax; read as +6 at 300, 400, 500 and 600)",
+      "passTD": 6,
+      "passTD50plusBonus": 6,
+      "interceptionThrown": -3,
+      "interceptionReturnedForTD_thrown": -3,
+      "twoPointPass": 2
+    },
+    "rushing": {
+      "rushYards": "1 per 10 yds, counted from 0 to 500",
+      "rushYardBonus": "+6 per 100 rush yds (100, 200, ... 500)",
+      "rushTD": 6,
+      "rushTD40to49Bonus": 6,
+      "rushTD50plusBonus": 6,
+      "carryBonus": "+1 per 7 rush attempts, counted from 0 to 50 (max +7)",
+      "twoPointRushRec": 2
+    },
+    "receiving": {
+      "reception": 1,
+      "receptionTE": 1.5,
+      "receivingFirstDownTE": 0.5,
+      "receivingFirstDownOther": 0,
+      "recYards": "1 per 10 yds, counted from 0 to 600",
+      "recYardBonus": "+6 per 100 rec yds (100, 200, ... 600)",
+      "recTD": 6,
+      "recTD50plusBonus": 6
+    },
+    "returns": {
+      "kickReturnYards": "1 per 10 yds, counted from 0 to 500",
+      "puntReturnYards": "1 per 10 yds, counted from 0 to 500",
+      "returnTD": 6,
+      "note": "Return yards count for every player, so a KR/PR job adds a real floor."
+    },
+    "fumbles": {
+      "fumbleLost": -3,
+      "fumbleRecoveredOffense": "3 by default, but 0 for QB/RB/WR/TE",
+      "fumbleRecoveryTD": 6
+    }
+  },
+  "idp": {
+    "soloTackle": 2,
+    "assistedTackle": 1,
+    "tackleBonus": "+3 per 5 total tackles (solo + assisted), counted from 0 to 40",
+    "tackleForLoss": 3,
+    "sack": "3 per 0.5 sack (6 per full sack), counted from 0 to 15",
+    "qbHit": 1,
+    "passDefensed": 3,
+    "passDefensedDL": 4,
+    "interception": 6,
+    "interceptionReturnTD": 6,
+    "interceptionYards": "1 per 10 yds, counted from 0 to 200",
+    "forcedFumble": 3,
+    "fumbleRecoveryTD": 6,
+    "fumbleRecoveryYards": "1 per 10 yds, counted from 0 to 200",
+    "stuff": 1,
+    "safety": 6,
+    "blockedKick": 6,
+    "blockedPuntOrFGForTD": 6,
+    "note": "No separate IDP fumble-recovery count; in the Buckner check an FR seems to have scored 3 through the default group. LB, DB and DL share the same scoring except DL pass defenses (4)."
+  },
+  "implications": [
+    "IDP is about half of every score: Eddies W4 had 131 IDP points vs 95 offense. Weigh IDP waivers as heavily as offense.",
+    "Tackle volume is king: 7 solo + 3 ast = 17 + 6 bonus = 23. Every-down LBs and box safeties with 8+ tackles beat boom-bust edge rushers.",
+    "Sacks are 6, TFL 3 and QB hits 1, so a pass rusher only matters if he has real snap share AND a pressure rate. DL pass defenses score 4.",
+    "TE premium is heavy: a TE line of 6-70 is ~18 (9 + 7 + ~2 first downs) vs ~13 for a WR with the same line. Start TEs in the RWT flex.",
+    "The 100-yard bonuses (+6 each 100 rush or rec yds) reward big-play and high-volume players. Weekly ceiling matters.",
+    "The carry bonus (+1 per 7) favors 14-20 carry workhorses over committee change-of-pace backs.",
+    "KR/PR yards score for anyone, so a returner role adds a ~3-6 pt floor.",
+    "Passing pays 0.04/yd, 6-pt TDs and -3 per INT, plus +6 bonuses from 300 yds. Only 1 QB starts, so QB streaming matters less than RB/TE/IDP volume."
+  ]
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#002244">
+<title>Eddies War Room</title>
+<link rel="icon" href="img/eddies.png">
+<link rel="stylesheet" href="css/warroom.css">
+</head>
+<body>
+<div class="sticky-top">
+<header>
+  <div class="hdr">
+    <img src="img/eddies.png" alt="Eddies">
+    <div>
+      <h1>Eddies War Room</h1>
+      <div class="sub">Eagle Ridge Eddies · Wheels Up · <span id="weekBadge">WEEK</span></div>
+    </div>
+    <div class="tools" id="headBadges"></div>
+  </div>
+</header>
+<div class="strip" id="strip">Loading the week…</div>
+<nav>
+  <button type="button" class="active" data-p="pweek">This Week</button>
+  <button type="button" data-p="proster">Roster</button>
+  <button type="button" data-p="pwaivers">Waivers</button>
+  <button type="button" data-p="pidp">IDP</button>
+  <button type="button" data-p="pnews">News</button>
+  <button type="button" data-p="pleague">League</button>
+  <button type="button" data-p="ptrade">Trade</button>
+  <button type="button" data-p="parchive">Archive</button>
+</nav>
+</div>
+<main>
+  <section class="panel active" id="pweek"></section>
+  <section class="panel" id="proster"></section>
+  <section class="panel" id="pwaivers"></section>
+  <section class="panel" id="pidp"></section>
+  <section class="panel" id="pnews"></section>
+  <section class="panel" id="pleague"></section>
+  <section class="panel" id="ptrade"><div id="tradeRoot"></div></section>
+  <section class="panel" id="parchive">
+    <div class="card">
+      <h2>Draft board</h2>
+      <p>The board for this league, with 2026 already loaded. Use it again next year.</p>
+      <p><a class="btn" href="draft.html">Open the draft board</a></p>
+    </div>
+    <div class="card">
+      <h2>2026 draft-day archive</h2>
+      <p>The board from draft day, left as it was.</p>
+      <p><a class="btn ghost" href="draft-archive.html">Open the 2026 archive</a></p>
+    </div>
+  </section>
+</main>
+<p class="footer">Eagle Ridge Eddies</p>
+<script src="js/week.js"></script>
+<script src="js/hq.js"></script>
+<script src="js/vor.js"></script>
+<script src="js/trade.js"></script>
+<script src="js/warroom.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "sample": true,
+  "asOf": "2026-10-09T16:05:00-07:00",
+  "season": 2026,
+  "week": 5,
+  "opponent": {
+    "teamId": "doubtpfizer",
+    "name": "Mrs. Doubtpfizer"
+  },
+  "freshness": {
+    "plan": "2026-10-09T16:05:00-07:00",
+    "roster": "2026-10-09T17:22:00-07:00",
+    "scores": null,
+    "waivers": "2026-10-09T16:05:00-07:00",
+    "news": "2026-10-09T16:05:00-07:00"
+  },
+  "lockTimes": [
+    { "label": "Sunday", "at": "2026-10-11T10:00:00-07:00" },
+    { "label": "Monday", "at": "2026-10-12T17:15:00-07:00" }
+  ],
+  "lineup": [
+    { "slot": "QB", "player": "Trevor Lawrence", "pos": "QB", "nflTeam": "JAX", "verdict": "START", "reason": "Only quarterback on the roster.", "injury": "", "practice": "" },
+    { "slot": "RB", "player": "Brian Robinson Jr.", "pos": "RB", "nflTeam": "ATL", "verdict": "START", "reason": "Lead back while Stevenson is questionable.", "injury": "", "practice": "" },
+    { "slot": "WR", "player": "Garrett Wilson", "pos": "WR", "nflTeam": "NYJ", "verdict": "START", "reason": "Coker is on bye and on the reserve.", "injury": "", "practice": "" },
+    { "slot": "TE", "player": "Brock Bowers", "pos": "TE", "nflTeam": "LV", "verdict": "START", "reason": "Clear tight end in a tight-end premium.", "injury": "Q", "practice": "" },
+    { "slot": "FLEX", "player": "Tyler Warren", "pos": "TE", "nflTeam": "IND", "verdict": "START", "reason": "Second tight end still scores here.", "injury": "", "practice": "" },
+    { "slot": "FLEX", "player": "Chimere Dike", "pos": "WR", "nflTeam": "TEN", "verdict": "START", "reason": "Best healthy wideout behind Wilson.", "injury": "", "practice": "" },
+    { "slot": "FLEX", "player": "Rhamondre Stevenson", "pos": "RB", "nflTeam": "NE", "verdict": "WATCH", "reason": "Questionable knee. Have Croskey-Merritt ready.", "injury": "Q", "practice": "Limited" },
+    { "slot": "DL", "player": "Tuli Tuipulotu", "pos": "DL", "nflTeam": "LAC", "verdict": "START", "reason": "Every-down pass rusher. Williams is the backup.", "injury": "", "practice": "" },
+    { "slot": "LB", "player": "Fred Warner", "pos": "LB", "nflTeam": "SF", "verdict": "START", "reason": "Green dot. Start him every week he is active.", "injury": "", "practice": "" },
+    { "slot": "DB", "player": "Evan Williams", "pos": "DB", "nflTeam": "GB", "verdict": "START", "reason": "Box safety and the DB1.", "injury": "", "practice": "" },
+    { "slot": "DB", "player": "Quentin Lake", "pos": "DB", "nflTeam": "LAR", "verdict": "WATCH", "reason": "Questionable hip. Love is the pivot.", "injury": "Q", "practice": "Limited" },
+    { "slot": "IDP", "player": "Trenton Simpson", "pos": "LB", "nflTeam": "BAL", "verdict": "START", "reason": "Three-down linebacker next to Warner.", "injury": "", "practice": "" },
+    { "slot": "IDP", "player": "Jordyn Brooks", "pos": "LB", "nflTeam": "MIA", "verdict": "START", "reason": "Green dot in Miami.", "injury": "", "practice": "" },
+    { "slot": "IDP", "player": "Julian Love", "pos": "DB", "nflTeam": "SEA", "verdict": "START", "reason": "Starts if Lake sits, and still a flex if Lake plays.", "injury": "", "practice": "" },
+    { "slot": "BN", "player": "Jacory Croskey-Merritt", "pos": "RB", "nflTeam": "WAS", "verdict": "SWAP", "reason": "Put him in the flex if Stevenson is inactive.", "injury": "", "practice": "" },
+    { "slot": "BN", "player": "Jalen Coker", "pos": "WR", "nflTeam": "CAR", "verdict": "SIT", "reason": "Bye this week, and he is on the reserve.", "injury": "Q", "practice": "" },
+    { "slot": "BN", "player": "Breece Hall", "pos": "RB", "nflTeam": "NYJ", "verdict": "SIT", "reason": "Out. He is on the reserve, not IR.", "injury": "O", "practice": "Out" },
+    { "slot": "BN", "player": "Cedric Gray", "pos": "LB", "nflTeam": "TEN", "verdict": "SIT", "reason": "Just added. He does not jump Warner, Simpson, or Brooks.", "injury": "", "practice": "" }
+  ],
+  "injuryWatch": [
+    { "player": "Rhamondre Stevenson", "tag": "Q — knee", "practice": "Limited", "note": "Active, not reserve. Check inactives before the early window." },
+    { "player": "Quentin Lake", "tag": "Q — hip", "practice": "Limited", "note": "Active. Julian Love is the pivot." },
+    { "player": "Jalen Coker", "tag": "Q — quad", "practice": "", "note": "Reserve, and on bye in Week 5." },
+    { "player": "Breece Hall", "tag": "O — quad", "practice": "Out", "note": "Reserve. Not an IR slot." },
+    { "player": "Zach Charbonnet", "tag": "IR — knee", "practice": "", "note": "IR slot." },
+    { "player": "Jordyn Tyson", "tag": "IR — hamstring", "practice": "", "note": "IR slot." },
+    { "player": "Travis Etienne", "tag": "IR — hamstring", "practice": "", "note": "IR slot." }
+  ],
+  "byes": [
+    { "week": 5, "players": [{ "player": "Jalen Coker", "pos": "WR", "nflTeam": "CAR" }] },
+    { "week": 6, "players": [] }
+  ],
+  "waivers": [
+    { "rank": 1, "player": "Jordan Mason", "pos": "RB", "nflTeam": "MIN", "why": "Just dropped. A handcuff with a path to carries if the lead back misses time.", "stats": "About 8 pts/g over the last three weeks he played.", "faabMin": 8, "faabMax": 14, "bid": 11, "drop": "Jacory Croskey-Merritt", "tag": "MUST" },
+    { "rank": 2, "player": "Demarcus Robinson", "pos": "WR", "nflTeam": "SF", "why": "Cheap wideout depth while Coker is out.", "stats": "About 6 pts/g on the season.", "faabMin": 1, "faabMax": 4, "bid": 2, "drop": "Brian Thomas", "tag": "LIKE" },
+    { "rank": 3, "player": "Que Robinson", "pos": "LB", "nflTeam": "DEN", "why": "Only if a green-dot linebacker gets hurt. Do not chase him.", "stats": "About 5 pts/g, sparse tackles.", "faabMin": 0, "faabMax": 1, "bid": 0, "drop": "Cedric Gray", "tag": "DART" }
+  ],
+  "drops": [
+    { "rank": 1, "player": "Brian Thomas", "pos": "WR", "reason": "Lowest scoring wideout on the active roster." },
+    { "rank": 2, "player": "Jacory Croskey-Merritt", "pos": "RB", "reason": "Useful only as the Stevenson pivot this week." },
+    { "rank": 3, "player": "Cedric Gray", "pos": "LB", "reason": "Fourth linebacker. Keep him if the wire is thin at LB." }
+  ],
+  "trades": [
+    {
+      "with": "Substation",
+      "give": ["Tyler Warren"],
+      "get": ["George Pickens"],
+      "why": "Nate has one tight end. Warren starts here and would start there. Pickens is the piece to ask about."
+    }
+  ],
+  "idp": [
+    { "nflTeam": "SF", "greenDot": "Fred Warner", "notes": "Every-down mike. Start." },
+    { "nflTeam": "MIA", "greenDot": "Jordyn Brooks", "notes": "Green dot. Tackle floor is real." },
+    { "nflTeam": "BAL", "greenDot": "Roquan Smith", "notes": "Simpson plays beside him and still gets a full share." },
+    { "nflTeam": "TEN", "greenDot": "Cedric Gray", "notes": "New add. Confirm the dot before he jumps the other linebackers." }
+  ],
+  "boxSafety": [
+    { "player": "Evan Williams", "nflTeam": "GB", "note": "Box. This is the DB to start." },
+    { "player": "Quentin Lake", "nflTeam": "LAR", "note": "Near the box. Hip is the only reason to pivot." },
+    { "player": "Julian Love", "nflTeam": "SEA", "note": "More deep than box. Fine as the third IDP, not as a DB you chase." }
+  ],
+  "news": [
+    { "source": "Fantrax", "time": "2026-10-09T09:30:00-07:00", "text": "Eddies won Cedric Gray for $3 and dropped Kyle Pitts. FAAB left is $68." },
+    { "source": "Injury report", "time": "2026-10-09T15:40:00-07:00", "text": "Rhamondre Stevenson is questionable with a knee and is still active. Breece Hall is out and on the reserve." },
+    { "source": "Fantrax", "time": "2026-10-08T21:28:00-07:00", "text": "Jordan Mason was dropped. He is the first name on the sample bid sheet." }
+  ]
+}

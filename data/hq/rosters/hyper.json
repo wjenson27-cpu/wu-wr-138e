@@ -1,0 +1,57 @@
+{
+  "teamId": "hyper",
+  "teamName": "The Hypersecretors",
+  "owner": "Jacob Crisp",
+  "asOf": "2026-10-09",
+  "faabLeft": 53,
+  "startingQB": "Bo Nix",
+  "roster": {
+    "QB": [
+      "Justin Herbert"
+    ],
+    "RB": [
+      "Kenneth Walker III",
+      "J.K. Dobbins",
+      "Keaton Mitchell",
+      "Rachaad White"
+    ],
+    "WR": [
+      "Amon-Ra St. Brown",
+      "Luther Burden",
+      "Emeka Egbuka",
+      "Jaylin Noel",
+      "Travis Hunter"
+    ],
+    "TE": [
+      "Sam LaPorta",
+      "Kenyon Sadiq",
+      "Darren Waller"
+    ],
+    "LB": [
+      "Nick Bolton",
+      "Blake Cashman",
+      "Jack Gibbens",
+      "Jacob Rodriguez",
+      "Payton Wilson"
+    ],
+    "DL": [
+      "Josh Hines-Allen",
+      "Nick Bosa",
+      "Laiatu Latu"
+    ],
+    "DB": [
+      "Jeremy Chinn",
+      "Tykee Smith"
+    ],
+    "IR": [
+      "Nick Bosa"
+    ]
+  },
+  "notes": "Sep 19 AM: −Dallas Turner. Sep 17: +Grant Delpit (−Brandon Jones). Sep 16: +Jaxson Dart $16 (−Keaton Mitchell). FAAB $92. | Sep 23 clear: +Sam Darnold (QB); +Michael Taaffe (DB); -Jaxson Dart (QB) | Sep 23 FA: +Bo Nix (QB). | Sep 24: +J.K. Dobbins $2 (−Michael Taaffe); +Baker Mayfield; −Sam Darnold. FAAB $81. | Sep 25: +Jeremy Chinn $3 (−Baker Mayfield). FAAB $78. | Sep 30 W4 waivers/FA: −MarShawn Lloyd; −Grant Delpit; +Darren Waller $6. FAAB $72. | Oct 3: +Keaton Mitchell $8/−Kirk Cousins. FAAB $64. | Oct 7 W5 waivers/FA: +Jaylin Noel $11 (−Bo Nix). FAAB $53. | Oct 8: +Rachaad White; −Alec Pierce; +Laiatu Latu.",
+  "injuryFlags": [
+    "Nick Bosa — Calf - Out Indefinitely (IR slot)"
+  ],
+  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "fantraxTeamId": "xz2uv87rmsb3ulv4",
+  "updated": "2026-10-09"
+}

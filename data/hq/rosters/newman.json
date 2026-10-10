@@ -1,0 +1,58 @@
+{
+  "teamId": "newman",
+  "teamName": "Newman Lake Sleep Paralysis Demons",
+  "owner": "Ryan McCallum",
+  "asOf": "2026-10-07",
+  "faabLeft": 77,
+  "startingQB": "Jalen Hurts",
+  "roster": {
+    "QB": [
+      "Jalen Hurts",
+      "Kirk Cousins"
+    ],
+    "RB": [
+      "Jonathan Taylor",
+      "TreVeyon Henderson",
+      "Seth McGowan"
+    ],
+    "WR": [
+      "Matthew Golden",
+      "Davante Adams",
+      "Zay Flowers",
+      "Tee Higgins",
+      "Myles Price",
+      "A.J. Brown",
+      "Quentin Johnston"
+    ],
+    "TE": [
+      "Juwan Johnson"
+    ],
+    "LB": [
+      "Kaden Elliss",
+      "Azeez Al-Shaair",
+      "Zaire Franklin",
+      "Eric Wilson",
+      "Jake Hansen",
+      "Nathan Landman",
+      "Danny Stutsman"
+    ],
+    "DL": [
+      "Andrew Van Ginkel"
+    ],
+    "DB": [
+      "L'Jarius Sneed",
+      "Xavier Watts",
+      "Jevon Holland"
+    ],
+    "IR": [
+      "A.J. Brown"
+    ]
+  },
+  "notes": "Sep 16 post-waiver: +Malaki Starks $5; +L'Jarius Sneed (null); +Chris Johnson (null, pos uncertain→RB). FAAB $110. | Sep 23 clear: +Leo Chenal (LB); -Chris Bell (WR) | Sep 23 FA: +Demond Claiborne (RB). | Sep 25: −Demond Claiborne. | Fantasy check Sep 28: +Jevon Holland (DB); −Chris Johnson (['RB']); −Malaki Starks (['DB']). Fantasy check Sep 29: −Leo Chenal (Sep 28 8:16 PM). | Sep 30 W4 waivers/FA: +Jake Hansen $5. FAAB $105. | Oct 2: +Quentin Johnston $6/−Wade Woodaz; +Danny Stutsman. | Oct 3: traded Aaron Jones +$5 FAAB for Nathan Landman. FAAB $94. | Oct 7 W5 waivers/FA: +Seth McGowan $1 (−Courtland Sutton); +Kirk Cousins $16. FAAB $77.",
+  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "fantraxTeamId": "kwaohsfwmsb3ulv4",
+  "updated": "2026-10-07",
+  "injuryFlags": [
+    "A.J. Brown — Injured Reserve List - IR - Ankle (IR slot)"
+  ]
+}

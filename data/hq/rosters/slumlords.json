@@ -1,0 +1,56 @@
+{
+  "teamId": "slumlords",
+  "teamName": "Indian Trail Slumlords",
+  "owner": "Ryan Towner",
+  "asOf": "2026-10-07",
+  "faabLeft": 31,
+  "startingQB": "Drake Maye",
+  "roster": {
+    "QB": [
+      "Drake Maye"
+    ],
+    "RB": [
+      "Jahmyr Gibbs",
+      "James Cook",
+      "Quinshon Judkins",
+      "Isiah Pacheco",
+      "Will Shipley"
+    ],
+    "WR": [
+      "Kalif Raymond",
+      "Wan'Dale Robinson",
+      "Chris Godwin",
+      "Romeo Doubs"
+    ],
+    "TE": [
+      "Harold Fannin"
+    ],
+    "LB": [
+      "Anthony Hill",
+      "Alex Anzalone"
+    ],
+    "DL": [
+      "Gregory Rousseau",
+      "Maxx Crosby",
+      "Jeffery Simmons"
+    ],
+    "DB": [
+      "Budda Baker",
+      "Talanoa Hufanga",
+      "Devon Witherspoon",
+      "Chamarri Conner"
+    ],
+    "IR": [
+      "Isiah Pacheco",
+      "Chamarri Conner"
+    ]
+  },
+  "notes": "Sep 16 post-waiver: +Kalif Raymond $15. FAAB $98. | Sep 20: +Romeo Doubs −Denzel Boston (Boston was already absent from HQ roster). | Sep 23 clear: +Chris Moore (WR); +Isaiah Williams (WR); +Lukas Van Ness (DL); -Jeremy Chinn (DB); -Romeo Doubs (WR); -Jakobi Meyers (IR) | Fantasy check Sep 28: +Jaylin Lane (WR); −Chris Moore. Fantasy check Sep 29: −Isaiah Williams, −Jaylin Lane. | Sep 30 W4 waivers/FA: +Marcus Harris $4. FAAB $68. | Oct 6: −Michael Pittman, −Marcus Harris ($0/null). | Oct 7 W5 waivers/FA: +Romeo Doubs $7 (−Dalton Schultz); +Will Shipley $30 (−Lukas Van Ness). FAAB $31.",
+  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "fantraxTeamId": "59frnthimsb3ulv4",
+  "updated": "2026-10-07",
+  "injuryFlags": [
+    "Isiah Pacheco — Injured Reserve List - IR - Back (IR slot)",
+    "Chamarri Conner — Knee - Questionable (IR slot)"
+  ]
+}

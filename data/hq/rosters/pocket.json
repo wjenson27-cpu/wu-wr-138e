@@ -1,0 +1,63 @@
+{
+  "teamId": "pocket",
+  "teamName": "Pocket Agents",
+  "owner": "Kellen Olson",
+  "asOf": "2026-10-09",
+  "faabLeft": 101,
+  "startingQB": "Jared Goff",
+  "roster": {
+    "QB": [
+      "Jared Goff",
+      "Tyler Shough"
+    ],
+    "RB": [
+      "Woody Marks",
+      "Mike Washington",
+      "Jonah Coleman",
+      "Saquon Barkley"
+    ],
+    "WR": [
+      "CeeDee Lamb",
+      "Tetairoa McMillan",
+      "Jaylen Waddle",
+      "Rashid Shaheed",
+      "Malik Washington",
+      "Adonai Mitchell"
+    ],
+    "TE": [
+      "Dalton Kincaid",
+      "Trey McBride"
+    ],
+    "LB": [
+      "Ernest Jones",
+      "Barrett Carter",
+      "Josiah Trotter"
+    ],
+    "DL": [
+      "Will Anderson Jr."
+    ],
+    "DB": [
+      "Jaquan Brisker",
+      "Cooper DeJean",
+      "Brandon Jones",
+      "Chris Johnson",
+      "Jalen Pitre",
+      "Amani Hooker"
+    ],
+    "IR": [
+      "Jonah Coleman",
+      "Adonai Mitchell",
+      "Josiah Trotter"
+    ]
+  },
+  "notes": "Sep 20 AM: +Teddye Buchanan (−Jake Hansen, null bid, Sat Sep 19 ~10:25–10:28 PM). Prior: +Marvin Mims $0 (−Kyler Gordon). FAAB $111. | Sep 23 clear: +Mike Washington (WR); -Zachariah Branch (IR) | Sep 25: −Marvin Mims; +Brandon Jones (Dennis add/drop churn). | Sep 30 W4 waivers/FA: +Jonah Coleman (−Ty Okada); +Chris Johnson (−Teddye Buchanan). FAAB $111. | Oct 7 W5 waivers/FA: +Jonah Coleman; +Jalen Pitre. FAAB $111. | Oct 8: traded Oluokun+$10 to Ultron for Hooker+Barkley; −Gainwell. FAAB $101.",
+  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "fantraxTeamId": "20zozmjgmsb3ulv4",
+  "updated": "2026-10-09",
+  "injuryFlags": [
+    "Jaylen Waddle — Leg - Questionable (active slot)",
+    "Jonah Coleman — Injured Reserve List - IR - Ankle (IR slot)",
+    "Adonai Mitchell — Finger - Questionable (IR slot)",
+    "Josiah Trotter — Shoulder - Questionable (IR slot)"
+  ]
+}

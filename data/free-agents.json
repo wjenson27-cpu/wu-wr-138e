@@ -1,0 +1,15 @@
+{
+  "sample": true,
+  "asOf": "2026-10-09T17:00:00-07:00",
+  "source": "Sample seed. Eddie replaces this file from Fantrax.",
+  "players": [
+    { "player": "Cooper Rush", "pos": "QB", "team": "DAL", "fpg": 8.4, "last3Fpg": 7.1, "rosteredPct": 4 },
+    { "player": "Emanuel Wilson", "pos": "RB", "team": "GB", "fpg": 6.1, "last3Fpg": 5.4, "rosteredPct": 8 },
+    { "player": "Jalen Nailor", "pos": "WR", "team": "MIN", "fpg": 5.2, "last3Fpg": 4.8, "rosteredPct": 2 },
+    { "player": "Luke Musgrave", "pos": "TE", "team": "GB", "fpg": 4.6, "last3Fpg": 3.9, "rosteredPct": 6 },
+    { "player": "DJ Jones", "pos": "DL", "team": "DEN", "fpg": 7.1, "last3Fpg": 6.4, "rosteredPct": 5 },
+    { "player": "Jack Gibbens", "pos": "LB", "team": "MIA", "fpg": 7.8, "last3Fpg": 6.9, "rosteredPct": 11 },
+    { "player": "Elijah Molden", "pos": "DB", "team": "TEN", "fpg": 6.4, "last3Fpg": 5.8, "rosteredPct": 3 },
+    { "player": "Rostered decoy", "pos": "LB", "team": "FA", "fpg": 40, "last3Fpg": 40, "rosteredPct": 100 }
+  ]
+}
