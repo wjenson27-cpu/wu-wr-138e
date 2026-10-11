@@ -1,6 +1,6 @@
 {
   "sample": false,
-  "asOf": "2026-10-10T14:55:00-07:00",
+  "asOf": "2026-10-11T15:05:00-07:00",
   "week": 5,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-4-green-dot-and-full-time-linebackers",
@@ -12,7 +12,7 @@
         "Mack Wilson",
         "Jack Gibbens"
       ],
-      "notes": "Both locked; Gibbens better tackle rate"
+      "notes": "Both locked; Gibbens better tackle rate; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "ATL",
@@ -36,7 +36,7 @@
       "fullTime": [
         "Terrel Bernard"
       ],
-      "notes": "Dorian Williams streamer"
+      "notes": "Dorian Williams streamer; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "CAR",
@@ -44,7 +44,7 @@
       "fullTime": [
         "Devin Lloyd"
       ],
-      "notes": "Okereke loses snaps to dime; BYE Week 5"
+      "notes": "Okereke loses snaps to dime; BYE Week 5; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "CHI",
@@ -53,7 +53,7 @@
         "T.J. Edwards",
         "Devin Bush"
       ],
-      "notes": "Volume risk when offense dominates TOA"
+      "notes": "Volume risk when offense dominates TOA; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "CIN",
@@ -61,7 +61,7 @@
       "fullTime": [
         "Barrett Carter"
       ],
-      "notes": "Demetrius Knight snap share dipped to 72.2%"
+      "notes": "Demetrius Knight snap share dipped to 72.2%; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "CLE",
@@ -70,13 +70,13 @@
         "Carson Schwesinger",
         "Quincy Williams"
       ],
-      "notes": "Man-heavy nickel"
+      "notes": "Man-heavy nickel; Woellert Week 4 list \u2014 STALE for Week 5 | Schwesinger green-dot; played 100% snaps Week 5 but med tent + limp midgame \u2014 Woellert monitoring sub candidates if he misses time."
     },
     {
       "team": "DAL",
       "greenDot": null,
       "fullTime": [],
-      "notes": "Confirmed green-dot rotation; Dee Winters highest snaps"
+      "notes": "Confirmed green-dot rotation; Dee Winters highest snaps; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "DEN",
@@ -84,7 +84,7 @@
       "fullTime": [
         "Alex Singleton"
       ],
-      "notes": "Strnad snaps swing with dime"
+      "notes": "Strnad snaps swing with dime; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "DET",
@@ -92,7 +92,7 @@
       "fullTime": [
         "Jack Campbell"
       ],
-      "notes": "Barnes/Rodriguez rotation concern"
+      "notes": "Barnes/Rodriguez rotation concern; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "GB",
@@ -101,7 +101,7 @@
         "Zaire Franklin",
         "Isaiah McDuffie"
       ],
-      "notes": "Edgerrin Cooper season-ending Achilles; McDuffie LB2 add"
+      "notes": "Edgerrin Cooper season-ending Achilles; McDuffie LB2 add; Woellert Week 4 list \u2014 STALE for Week 5 | Edgerrin Cooper season-ending Achilles already in Week 4 Woellert notes; McDuffie LB2. No change needed beyond STALE flag."
     },
     {
       "team": "HOU",
@@ -109,7 +109,7 @@
       "fullTime": [
         "Jake Hansen"
       ],
-      "notes": "Al-Shaair out (groin); Murray concussion check; Hansen better producer"
+      "notes": "Al-Shaair out (groin); Murray concussion check; Hansen better producer; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "IND",
@@ -117,7 +117,7 @@
       "fullTime": [
         "Akeem Davis-Gaither"
       ],
-      "notes": "Often one-LB nickel"
+      "notes": "Often one-LB nickel; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "JAX",
@@ -125,7 +125,7 @@
       "fullTime": [
         "Foyesade Oluokun"
       ],
-      "notes": "Ventrell Miller hold"
+      "notes": "Ventrell Miller hold; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "KC",
@@ -133,7 +133,7 @@
       "fullTime": [
         "Nick Bolton"
       ],
-      "notes": "Tranquill dime danger; BYE Week 5"
+      "notes": "Tranquill dime danger; BYE Week 5; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "LV",
@@ -142,7 +142,7 @@
         "Nakobe Dean",
         "Quay Walker"
       ],
-      "notes": "Both near every-down"
+      "notes": "Both near every-down; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "LAC",
@@ -150,7 +150,7 @@
       "fullTime": [
         "Daiyan Henley"
       ],
-      "notes": "Del'Shawn Phillips snaps up"
+      "notes": "Del'Shawn Phillips snaps up; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "LAR",
@@ -158,7 +158,7 @@
       "fullTime": [
         "Nate Landman"
       ],
-      "notes": "High dime season rate; Speights limited"
+      "notes": "High dime season rate; Speights limited; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "MIA",
@@ -185,7 +185,7 @@
         "Robert Spillane",
         "Christian Elliss"
       ],
-      "notes": "Both every-down"
+      "notes": "Both every-down; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "NO",
@@ -193,7 +193,7 @@
       "fullTime": [
         "Danny Stutsman"
       ],
-      "notes": "Kaden Elliss inactive calf Week 4; Stutsman fill-in"
+      "notes": "Kaden Elliss inactive calf Week 4; Stutsman fill-in | Kaden Elliss inactive Week 5 (Woellert notable IDP inactives + FFToday Saints inactives). FG Week 5 lists Elliss [INJ.]/Danny Stutsman as green-dot. Aligns with Week 4 Woellert Stutsman fill-in."
     },
     {
       "team": "NYG",
@@ -202,7 +202,7 @@
         "Tremaine Edmunds",
         "Arvell Reese"
       ],
-      "notes": "Both every snap"
+      "notes": "Both every snap; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "NYJ",
@@ -211,16 +211,17 @@
         "Demario Davis",
         "Jamien Sherwood"
       ],
-      "notes": "Mauigoa out (quad)"
+      "notes": "Mauigoa out (quad); Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "PHI",
-      "greenDot": "Jeremiah Trotter",
+      "greenDot": "Zack Baun",
       "fullTime": [
+        "Zack Baun",
         "Jeremiah Trotter",
         "Jihaad Campbell"
       ],
-      "notes": "Baun out concussion Week 4; Baun trending return Week 5 per Woellert playbook"
+      "notes": "Baun out concussion Week 4; Baun trending return Week 5 per Woellert playbook | Baun ACTIVE Week 5 (Woellert X). Week 4 list had Jeremiah Trotter as green-dot fill-in while Baun was out concussion. Woellert: with Baun back Trotter returns to bench. FG Week 5 table: Zack Baun green-dot, Jihaad Campbell other."
     },
     {
       "team": "PIT",
@@ -228,7 +229,7 @@
       "fullTime": [
         "Patrick Queen"
       ],
-      "notes": "Payton Wilson snaps rebound when dime down"
+      "notes": "Payton Wilson snaps rebound when dime down; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "SF",
@@ -237,7 +238,7 @@
         "Fred Warner",
         "Dre Greenlaw"
       ],
-      "notes": "Warner every-down green dot"
+      "notes": "Warner every-down green dot; Woellert Week 4 list \u2014 STALE for Week 5 | Fred Warner remains green-dot (FG Week 5 + Week 4 Woellert). Warner active SF@SEA with FF credited live."
     },
     {
       "team": "SEA",
@@ -245,7 +246,7 @@
       "fullTime": [
         "Ernest Jones"
       ],
-      "notes": "Drake Thomas snaps erode with rising dime"
+      "notes": "Drake Thomas snaps erode with rising dime; Woellert Week 4 list \u2014 STALE for Week 5"
     },
     {
       "team": "TB",
@@ -262,7 +263,7 @@
       "fullTime": [
         "Anthony Hill"
       ],
-      "notes": "Cedric Gray base-only (~45.9%); bench"
+      "notes": "Cedric Gray base-only (~45.9%); bench; Woellert Week 4 list \u2014 STALE for Week 5 | Cedric Gray still base-only sample (Woellert: 5 tackles on 5 snaps) \u2014 not every-down; FG lists Anthony Hill Jr. green-dot."
     },
     {
       "team": "WAS",
@@ -270,7 +271,7 @@
       "fullTime": [
         "Frankie Luvu"
       ],
-      "notes": "Leo Chenal season-ending neck; Styles snaps down with Luvu back"
+      "notes": "Leo Chenal season-ending neck; Styles snaps down with Luvu back; Woellert Week 4 list \u2014 STALE for Week 5"
     }
   ]
 }
