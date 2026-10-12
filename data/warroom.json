@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-11T15:05:00-07:00",
+  "asOf": "2026-10-12T15:05:00-07:00",
   "season": 2026,
   "week": 5,
   "opponent": {
@@ -9,16 +9,16 @@
     "name": "Mrs. Doubtpfizer"
   },
   "freshness": {
-    "plan": "2026-10-11T15:05:00-07:00",
-    "roster": "2026-10-11T15:05:00-07:00",
-    "scores": "2026-10-11T15:05:00-07:00",
-    "waivers": "2026-10-11T15:05:00-07:00",
-    "news": "2026-10-11T15:05:00-07:00"
+    "plan": "2026-10-12T15:05:00-07:00",
+    "roster": "2026-10-12T14:58:00-07:00",
+    "scores": "2026-10-12T14:58:00-07:00",
+    "waivers": null,
+    "news": "2026-10-12T15:05:00-07:00"
   },
   "lockTimes": [
     {
-      "label": "SNF (Robinson, Simpson)",
-      "at": "2026-10-11T17:20:00-07:00"
+      "label": "Rams inactives (Lake)",
+      "at": "2026-10-12T15:45:00-07:00"
     },
     {
       "label": "MNF Lake",
@@ -36,7 +36,7 @@
       "pos": "QB",
       "nflTeam": "JAX",
       "verdict": "START",
-      "reason": "Done: 36 live WU pts (London).",
+      "reason": "Final 36: 331 yds, 2 TD, 1 INT (London).",
       "injury": "",
       "practice": ""
     },
@@ -46,7 +46,7 @@
       "pos": "RB",
       "nflTeam": "ATL",
       "verdict": "START",
-      "reason": "Still to play BAL@ATL SNF ~5:20 PM PT.",
+      "reason": "Final 8: 7-16 + 61 KR yds; clear Bijan backup (74% opp share).",
       "injury": "",
       "practice": ""
     },
@@ -56,7 +56,7 @@
       "pos": "WR",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "Done: 29 live; heavy target share in Jets win.",
+      "reason": "Final 29: 7-104-1 on 11 targets; 35.4% share without Mitchell.",
       "injury": "",
       "practice": ""
     },
@@ -66,7 +66,7 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "Done: 34.5 live TE-premium smash.",
+      "reason": "Final 34.5: 8-110-1 (lost fumble cost -3).",
       "injury": "",
       "practice": ""
     },
@@ -76,9 +76,9 @@
       "pos": "RB",
       "nflTeam": "NE",
       "verdict": "START",
-      "reason": "ACTIVE and done: 18 live (usage up after Henderson ankle).",
+      "reason": "Final 18: 13-64-1; Henderson ankle MRI, no timetable \u2014 his backfield now.",
       "injury": "",
-      "practice": "Active"
+      "practice": ""
     },
     {
       "slot": "FLEX",
@@ -86,7 +86,7 @@
       "pos": "TE",
       "nflTeam": "IND",
       "verdict": "START",
-      "reason": "Done: 26.5 live in TE premium.",
+      "reason": "Final 26.5: 7-83 + rush TD in TE premium.",
       "injury": "",
       "practice": ""
     },
@@ -96,7 +96,7 @@
       "pos": "WR",
       "nflTeam": "ARI",
       "verdict": "START",
-      "reason": "In active flex (6 live mid-game); Dike stayed Reserve so KR/PR missed.",
+      "reason": "Final 12: 5-70, but only 49% snaps after the MHJ trade.",
       "injury": "",
       "practice": ""
     },
@@ -106,7 +106,7 @@
       "pos": "DL",
       "nflTeam": "LAC",
       "verdict": "START",
-      "reason": "Active captain; 7 live mid DEN@LAC.",
+      "reason": "Final 16: 4 tkl, FF, FR, PD.",
       "injury": "",
       "practice": ""
     },
@@ -116,7 +116,7 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "Green-dot (Woellert W4 STALE); 16 live mid SF@SEA with FF.",
+      "reason": "Final 25: 10 tkl + FF; green dot, 100% snaps (Woellert W5).",
       "injury": "",
       "practice": ""
     },
@@ -126,7 +126,7 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "Done: 28 live box-safety smash.",
+      "reason": "Final 28: 12 tkl + FR.",
       "injury": "",
       "practice": ""
     },
@@ -136,7 +136,7 @@
       "pos": "DB",
       "nflTeam": "SEA",
       "verdict": "START",
-      "reason": "Active; 7 live mid SF@SEA.",
+      "reason": "Final 15: 6 tkl, PD.",
       "injury": "",
       "practice": ""
     },
@@ -146,7 +146,17 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "Full-time (not green-dot); 12 live done.",
+      "reason": "Final 12: 8 tkl; full-time (not dot), limped off in Q2, back for all of 2H.",
+      "injury": "",
+      "practice": "In-game injury"
+    },
+    {
+      "slot": "IDP",
+      "player": "Trenton Simpson",
+      "pos": "LB",
+      "nflTeam": "BAL",
+      "verdict": "START",
+      "reason": "Final 25: 7 tkl + sack on 56% snaps; hold, lower floor.",
       "injury": "",
       "practice": ""
     },
@@ -156,19 +166,9 @@
       "pos": "DB",
       "nflTeam": "LAR",
       "verdict": "START",
-      "reason": "Q hip MNF; McVay/Garafolo lean play; Woellert would still start. Lock ~5:15 PM PT.",
+      "reason": "MNF BUF@LAR ~5:15 PM PT (proj 14.05). No bench swap available; 62.5 lead holds either way.",
       "injury": "Q",
-      "practice": "Sat limited after DNP"
-    },
-    {
-      "slot": "IDP",
-      "player": "Trenton Simpson",
-      "pos": "LB",
-      "nflTeam": "BAL",
-      "verdict": "START",
-      "reason": "Still to play BAL@ATL SNF; streamer (not full-time). Prefer over Gray.",
-      "injury": "",
-      "practice": ""
+      "practice": "Inactives ~3:45 PM PT"
     },
     {
       "slot": "BN",
@@ -176,7 +176,7 @@
       "pos": "WR",
       "nflTeam": "TEN",
       "verdict": "SIT",
-      "reason": "Reserve this week \u2014 played with targets/KR but points did not count.",
+      "reason": "Bench 19 (147 KR yds) did not count.",
       "injury": "",
       "practice": ""
     },
@@ -186,7 +186,27 @@
       "pos": "RB",
       "nflTeam": "WAS",
       "verdict": "SIT",
-      "reason": "Stevenson contingency unused.",
+      "reason": "Bench 15 (11-82-1 on ~21 snaps) did not count.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "nflTeam": "TEN",
+      "verdict": "SIT",
+      "reason": "Bench 14; base-only 39.7% snaps (Woellert: Barton > Gray).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Leonard Williams",
+      "pos": "DL",
+      "nflTeam": "SEA",
+      "verdict": "SIT",
+      "reason": "Bench 2; behind Tuli.",
       "injury": "",
       "practice": ""
     },
@@ -206,55 +226,47 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "SIT",
-      "reason": "OUT (quad) again.",
+      "reason": "OUT (quad); FG: back in the next few weeks.",
       "injury": "O",
       "practice": "Out"
-    },
-    {
-      "slot": "BN",
-      "player": "Leonard Williams",
-      "pos": "DL",
-      "nflTeam": "SEA",
-      "verdict": "SIT",
-      "reason": "Active but behind Tuli this week.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Cedric Gray",
-      "pos": "LB",
-      "nflTeam": "TEN",
-      "verdict": "SIT",
-      "reason": "Woellert: base-only (5 snaps W5).",
-      "injury": "",
-      "practice": ""
     }
   ],
   "injuryWatch": [
     {
       "player": "Quentin Lake",
       "tag": "Q \u2014 hip",
-      "practice": "Sat practice",
-      "note": "Only open lever. MNF ~5:15 PM PT. Lean START."
+      "practice": "Inactives ~3:45 PM PT",
+      "note": "MNF ~5:15 PM PT. McVay: 'trending in the right direction.' Start; if inactive, no bench swap and the lead holds. Curl (LAR DB) is a WU free agent (65% Ros) as a Woellert hedge \u2014 not needed."
+    },
+    {
+      "player": "Jordyn Brooks",
+      "tag": "In-game \u2014 undiagnosed",
+      "practice": "Watch Wed",
+      "note": "Limped off, missed most of Q2, played every 2H snap (69.8% total). No diagnosis yet; Jackson Wood is MIA's next man. Drives Tuesday's DB/LB bids."
     },
     {
       "player": "Breece Hall",
       "tag": "O \u2014 quad",
       "practice": "Out",
-      "note": "Second straight miss; week-to-week. Reserve."
+      "note": "Second straight miss; FG says back in the next few weeks. Reserve."
+    },
+    {
+      "player": "Zach Charbonnet",
+      "tag": "IR/PUP \u2014 knee",
+      "practice": "Limited Mon",
+      "note": "Seahawks not planning a PUP activation for Week 6 (FG). Stays IR."
+    },
+    {
+      "player": "TreVeyon Henderson (NE, not ours)",
+      "tag": "MRI \u2014 ankle",
+      "practice": "",
+      "note": "MRI Monday, no timetable (Cameron Wolfe); FG projects back ~Week 8. Stevenson's backfield meanwhile."
     },
     {
       "player": "Jalen Coker",
       "tag": "Q \u2014 quad / BYE",
       "practice": "",
       "note": "CAR bye Week 5. Keep."
-    },
-    {
-      "player": "Zach Charbonnet",
-      "tag": "IR \u2014 knee",
-      "practice": "Out W5",
-      "note": "IR slot; Berry: not quite ready."
     },
     {
       "player": "Jordyn Tyson",
@@ -285,25 +297,78 @@
       "players": []
     }
   ],
-  "waivers": [],
+  "waivers": [
+    {
+      "rank": 1,
+      "player": "Jaden Dugger",
+      "pos": "LB",
+      "nflTeam": "SF",
+      "why": "Watch only \u2014 no bid yet. Greenlaw suspended 1 game (appeal Tue) and Wallow hurt; Woellert: 'the one to add.' Likely short-term.",
+      "stats": "9 tkl + sack on 47 snaps W5; 8.8 FP/G season, 10% Ros",
+      "faabMin": null,
+      "faabMax": null,
+      "bid": null,
+      "drop": "TBD Tue sheet",
+      "tag": "WATCH"
+    },
+    {
+      "rank": 2,
+      "player": "Elijah Ponder",
+      "pos": "LB",
+      "nflTeam": "NE",
+      "why": "Watch only \u2014 verify role before any bid.",
+      "stats": "20.2 FP/G over 5 games, 21% Ros",
+      "faabMin": null,
+      "faabMax": null,
+      "bid": null,
+      "drop": "TBD Tue sheet",
+      "tag": "WATCH"
+    },
+    {
+      "rank": 3,
+      "player": "Mansoor Delane",
+      "pos": "DB",
+      "nflTeam": "KC",
+      "why": "Watch only \u2014 DB depth if Brooks or Lake lingers. KC bye W5.",
+      "stats": "23.33 FP/G over 3 games, 45% Ros",
+      "faabMin": null,
+      "faabMax": null,
+      "bid": null,
+      "drop": "TBD Tue sheet",
+      "tag": "WATCH"
+    },
+    {
+      "rank": 4,
+      "player": "Jacob Parrish",
+      "pos": "DB",
+      "nflTeam": "TB",
+      "why": "Watch only \u2014 DB depth if Brooks or Lake lingers.",
+      "stats": "20.0 FP/G over 4 games, 25% Ros",
+      "faabMin": null,
+      "faabMax": null,
+      "bid": null,
+      "drop": "TBD Tue sheet",
+      "tag": "WATCH"
+    }
+  ],
   "drops": [
     {
       "rank": 1,
       "player": "Cedric Gray",
       "pos": "LB",
-      "reason": "Base-only snaps; first cut if a real every-down LB hits Tuesday."
+      "reason": "Base-only (39.7% W5); first cut if a real every-down LB hits Tuesday."
     },
     {
       "rank": 2,
-      "player": "Jacory Croskey-Merritt",
-      "pos": "RB",
-      "reason": "Handcuff/fill only while Hall/Stevenson depth is covered."
+      "player": "Kendrick Bourne",
+      "pos": "WR",
+      "reason": "Only 49% snaps after the MHJ trade; Dike's KR/PR profile is stickier in this scoring."
     },
     {
       "rank": 3,
-      "player": "Kendrick Bourne",
-      "pos": "WR",
-      "reason": "Depth WR; Dike\u2019s KR/PR profile is stickier long-term in this scoring."
+      "player": "Jacory Croskey-Merritt",
+      "pos": "RB",
+      "reason": "Handcuff/fill while Hall is out; productive on ~21 snaps but no set role."
     }
   ],
   "trades": [
@@ -315,78 +380,113 @@
       "get": [
         "RB or every-down LB upgrade"
       ],
-      "why": "Kyle just scooped Pitts off waivers after you cut him for Gray \u2014 rub it in by shopping Warren\u2019s TE-premium production for a back or IDP that sticks past this week\u2019s lead."
+      "why": "Kyle burned the Pitts add and just lost Tre Harris to a hamstring \u2014 shop Warren's TE-premium production for a back or IDP that sticks past this week."
     }
   ],
   "idp": [
     {
       "nflTeam": "SF",
       "greenDot": "Fred Warner",
-      "notes": "Every-down. Start. (Woellert W4 \u2014 STALE; still active W5 with FF)"
+      "notes": "Woellert W5: 60/60, 10 tkl \u2014 lock. Dugger rising with Greenlaw suspended."
     },
     {
       "nflTeam": "MIA",
       "greenDot": "Jacob Rodriguez",
-      "notes": "Brooks full-time beside him; 12 live done."
+      "notes": "Brooks full-time; 69.8% W5 from in-game injury, not role change."
     },
     {
       "nflTeam": "BAL",
       "greenDot": "Roquan Smith",
-      "notes": "Simpson not full-time; SNF still ahead."
+      "notes": "Simpson 56.2%, 7 tkl + sack \u2014 hold, lower floor."
     },
     {
       "nflTeam": "TEN",
       "greenDot": "Anthony Hill",
-      "notes": "Gray base-only (5 snaps W5); sit."
+      "notes": "Gray base-only 39.7%; Barton 96.8% > Gray."
+    },
+    {
+      "nflTeam": "LAR",
+      "greenDot": "Nate Landman",
+      "notes": "MNF tonight; carried from W4 list."
     }
   ],
   "boxSafety": [
     {
       "player": "Evan Williams",
       "nflTeam": "GB",
-      "note": "28 live \u2014 keep starting."
+      "note": "Final 28 (12 tkl, FR) \u2014 keep starting."
     },
     {
       "player": "Julian Love",
       "nflTeam": "SEA",
-      "note": "Active mid-game; start."
+      "note": "Final 15 (6 tkl, PD); healthy."
     },
     {
       "player": "Quentin Lake",
       "nflTeam": "LAR",
-      "note": "MNF Q hip; lean start ~5:15 PM PT."
+      "note": "MNF Q hip; start ~5:15 PM PT (proj 14.05)."
     }
   ],
   "news": [
     {
       "source": "Fantrax",
-      "time": "2026-10-11T15:05:00-07:00",
-      "text": "Live 220\u2013215.5 (proj 269.42\u2013248.64, ~79% win bar). Still out: Robinson + Simpson SNF, Lake MNF."
+      "time": "2026-10-12T14:58:00-07:00",
+      "text": "Live 285\u2013222.5 (proj 299.05\u2013235.55, 100% win bar). Left: Lake vs Byron Young, both MNF LAR. 0 pending claims, 0 pending trades; FAAB unchanged ($68)."
+    },
+    {
+      "source": "LineStar",
+      "time": "2026-10-12T14:00:00-07:00",
+      "text": "Bourne 5-70 but only 49% snaps after MHJ trade; Jalen Brooks 53%. https://x.com/LineStarApp/status/2109751041453670723"
+    },
+    {
+      "source": "@dfs_avengers / ESPN",
+      "time": "2026-10-12T13:30:00-07:00",
+      "text": "Lake still QUESTIONABLE (hip) for MNF; no active/inactive yet. https://x.com/dfs_avengers/status/2109743643074625788"
+    },
+    {
+      "source": "Adam Schefter / Tom Pelissero",
+      "time": "2026-10-12T13:00:00-07:00",
+      "text": "Marvin Harrison Jr. traded to HOU (pending physical) \u2014 opens ARI WR snaps for Bourne. https://x.com/AdamSchefter/status/2109735541302337657"
     },
     {
       "source": "Fantrax",
-      "time": "2026-10-11T09:58:00-07:00",
-      "text": "Doubtpfizer FA +Kyle Pitts (TE ATL) \u2014 the TE Eddies dropped for Gray Oct 9."
+      "time": "2026-10-12T11:02:00-07:00",
+      "text": "Drops only: Substation \u2212C. Izien (DB DET, 8:22 AM) and \u2212S. Moore (WR GB); Ultron \u2212Gesicki (TE CIN) and \u2212Brissett (QB ARI, now FA at 17.6 FP/G)."
     },
     {
-      "source": "Fantrax",
-      "time": "2026-10-11T09:56:00-07:00",
-      "text": "TTAB dropped J. Brown (DB SF)."
+      "source": "Adam Schefter",
+      "time": "2026-10-12T11:02:00-07:00",
+      "text": "Greenlaw suspended one game (appeal Tue) \u2014 Dugger the SF add (9 tkl + sack W5). https://x.com/AdamSchefter/status/2109706306223571258"
     },
     {
-      "source": "Ian Rapoport / Dave Richard",
-      "time": "2026-10-11T12:00:00-07:00",
-      "text": "Stevenson ACTIVE; usage spiked after Henderson ankle. 18 live Fantrax."
+      "source": "Matt Maiocco",
+      "time": "2026-10-12T10:05:00-07:00",
+      "text": "Warner 63/63 snaps with the green dot; Dugger 47. https://x.com/MaioccoNBCS/status/2109692035490083147"
     },
     {
-      "source": "Mike Garafolo / Mike Woellert",
-      "time": "2026-10-10T13:30:00-07:00",
-      "text": "Lake Q hip MNF, trending right; Woellert would still play him. Lock Mon ~5:15 PM PT."
+      "source": "ESPN Los Angeles",
+      "time": "2026-10-12T09:21:00-07:00",
+      "text": "McVay: Lake 'trending in the right direction.' https://x.com/ESPNLosAngeles/status/2109680762878570659"
+    },
+    {
+      "source": "Cameron Wolfe",
+      "time": "2026-10-12T09:12:00-07:00",
+      "text": "Henderson (ankle) MRI, no timetable \u2014 Stevenson stock up. https://x.com/CameronWolfe/status/2109678697930461306"
+    },
+    {
+      "source": "Zain Dhanani",
+      "time": "2026-10-12T08:29:00-07:00",
+      "text": "Bijan 74% opp share, 83% 3rd-down snaps \u2014 Robinson plainly the backup. https://x.com/DhananiZain/status/2109667813451280791"
     },
     {
       "source": "Mike Woellert Substack",
-      "time": "2026-10-06T00:00:00-07:00",
-      "text": "STALE green-dot list (Week 4). Baun active / Elliss inactive / Schwesinger limp notes from Woellert X Week 5."
+      "time": "2026-10-12T07:40:00-07:00",
+      "text": "Week 5 green-dot list out (fresh): Brooks limped off/returned for 2H, Simpson 56.2%, Gray base-only. https://mikewoellert.substack.com/p/2026-week-5-idp-green-dot-and-full-time-linebackers"
+    },
+    {
+      "source": "SB Nation (Dolphins)",
+      "time": "2026-10-12T05:20:00-07:00",
+      "text": "Jordyn Brooks injured in-game vs CIN; returned. No diagnosis. https://x.com/SSMiamiDolphins/status/2109620099762029011"
     }
   ]
 }
