@@ -191,3 +191,4 @@ a.btn,a.btn.ghost{display:inline-block;text-decoration:none}
   .panel{padding:16px 18px}
   header,.strip,nav,.chips{padding-left:18px;padding-right:18px}
 }
+nav a.navlink{flex-shrink:0;background:#0b1c2e;border:1px solid #1e3a5f;color:#A5ACAF;padding:8px 12px;border-radius:16px;font-size:.75rem;font-weight:700;text-decoration:none}

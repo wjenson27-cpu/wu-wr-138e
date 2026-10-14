@@ -1,0 +1,700 @@
+{
+  "asOf": "2026-10-13T17:30:00-07:00",
+  "team": "Eagle Ridge Eddies",
+  "currentWeek": 6,
+  "faabLeft": 68,
+  "lineupSource": "Fantrax Active slots, roster sync Oct 13 ~4 PM PT (fantrax-shots-2026-10-13-pm/rosters-raw.txt). No lineup changes made.",
+  "note": "War Room plan (data/warroom.json) already moves Hall out and Robinson Jr. in for W6; this board lists the Fantrax Active lineup as it stands.",
+  "byeSource": {
+    "name": "NFL.com: 2026 NFL schedule release, every team's bye week",
+    "url": "https://www.nfl.com/_amp/2026-nfl-schedule-release-every-team-bye-week",
+    "crossCheck": "https://www.foxsports.com/stories/nfl/2026-nfl-bye-weeks-schedule-all-32-teams"
+  },
+  "deadlines": {
+    "nfl": {
+      "date": "2026-11-10",
+      "time": "4:00 PM ET / 1:00 PM PT",
+      "fantasyWeek": 9,
+      "source": "https://www.nfl.com/news/2026-27-national-football-league-important-dates"
+    },
+    "fantrax": {
+      "date": null,
+      "note": "No Fantrax league trade deadline found in HQ data (wheels-up-hq-ghpages, wheels-up-league-hq). Check Fantrax League Rules before relying on one."
+    }
+  },
+  "projectionNote": "No starter evidence here rests on a projection; every number is actual. Items would be labeled \"projection only\" otherwise.",
+  "starters": [
+    {
+      "player": "Trevor Lawrence",
+      "position": "QB",
+      "slot": "QB",
+      "nflTeam": "JAX",
+      "byeWeek": 7,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": null,
+        "note": "No backup QB rostered - W7 (JAX bye) needs a waiver QB.",
+        "byeWeek": null
+      },
+      "waiverBackup": {
+        "player": "Jacoby Brissett",
+        "pos": "QB",
+        "nflTeam": "ARI",
+        "byeWeek": 14,
+        "fpg": 17.6,
+        "last3Fpg": 21.33,
+        "rosteredPct": 79,
+        "faabRange": {
+          "low": 2,
+          "high": 16,
+          "basis": "8 winning QB claims in HQ faab.json: min $1, median $11, max $41; range = 25th-75th pct"
+        },
+        "suggestedBid": 4,
+        "why": "21.3 FP/G last 3, ARI bye W14 (covers W7). Watson CLE is the alt (bye W11).",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 17.9,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W3": 24,
+          "W4": 15,
+          "W5": 36.0
+        },
+        "usage": "W5 36 FP (Fantrax). Locked QB1; no QB on bench."
+      }
+    },
+    {
+      "player": "Breece Hall",
+      "position": "RB",
+      "slot": "RB",
+      "nflTeam": "NYJ",
+      "byeWeek": 13,
+      "byePassed": false,
+      "injury": "Q (Quadriceps) on Fantrax; NBC Oct 13: out indefinitely, no practice since W3 - treat as OUT",
+      "inRosterBackup": {
+        "player": "Brian Robinson Jr.",
+        "note": "Reserve; W4 27, W5 8 as starter; KR yards. ATL bye W11.",
+        "byeWeek": 11
+      },
+      "waiverBackup": {
+        "player": "Kimani Vidal",
+        "pos": "RB",
+        "nflTeam": "LAC",
+        "byeWeek": 7,
+        "fpg": 10.4,
+        "last3Fpg": 16.0,
+        "rosteredPct": 38,
+        "faabRange": {
+          "low": 2,
+          "high": 26,
+          "basis": "11 winning RB claims in HQ faab.json: min $1, median $6, max $65; range = 25th-75th pct"
+        },
+        "suggestedBid": 5,
+        "why": "16.0 last-3 trend; LAC bye W7.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 15.3,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 3 G (data/player-values.json)",
+        "fantraxStarterPts": {},
+        "usage": "No games since W3; has not practiced since W3 (NBC Oct 13 \"out indefinitely\")."
+      }
+    },
+    {
+      "player": "Garrett Wilson",
+      "position": "WR",
+      "slot": "WR",
+      "nflTeam": "NYJ",
+      "byeWeek": 13,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Kendrick Bourne",
+        "note": "12 FP W5 as flex; Sleeper 3.8 FP/G thru W4. ARI bye W14.",
+        "byeWeek": 14
+      },
+      "waiverBackup": {
+        "player": "Tyquan Thornton",
+        "pos": "WR",
+        "nflTeam": "KC",
+        "byeWeek": 5,
+        "fpg": 12.5,
+        "last3Fpg": 19.0,
+        "rosteredPct": 26,
+        "faabRange": {
+          "low": 3,
+          "high": 12,
+          "basis": "21 winning WR claims in HQ faab.json: min $1, median $9, max $31; range = 25th-75th pct"
+        },
+        "suggestedBid": 3,
+        "why": "19.0 last 3; KC bye already used.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 15.8,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W3": 32,
+          "W4": 5,
+          "W5": 29.0
+        },
+        "usage": "11 targets W5; alpha share with Mitchell out."
+      }
+    },
+    {
+      "player": "Brock Bowers",
+      "position": "TE",
+      "slot": "TE",
+      "nflTeam": "LV",
+      "byeWeek": 13,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Tyler Warren",
+        "note": "Already starting in flex; slide to TE and fill flex with Robinson Jr. Same W13 bye (IND/LV).",
+        "byeWeek": 13
+      },
+      "waiverBackup": {
+        "player": "Pat Freiermuth",
+        "pos": "TE",
+        "nflTeam": "PIT",
+        "byeWeek": 9,
+        "fpg": 14.4,
+        "last3Fpg": 14.5,
+        "rosteredPct": 49,
+        "faabRange": {
+          "low": 1,
+          "high": 21,
+          "basis": "4 winning TE claims in HQ faab.json: min $1, median $4, max $26; range = 25th-75th pct"
+        },
+        "suggestedBid": 2,
+        "why": "14.4 FP/G, PIT bye W9; TE premium.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 22.5,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 2 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W3": 41.5,
+          "W4": 25.5,
+          "W5": 34.5
+        },
+        "usage": "TE1, 2 games in Sleeper sample; W3-W5 Fantrax 41.5/25.5/34.5."
+      }
+    },
+    {
+      "player": "Jalen Coker",
+      "position": "WR",
+      "slot": "RB/WR/TE flex",
+      "nflTeam": "CAR",
+      "byeWeek": 5,
+      "byePassed": true,
+      "injury": "Q (Quadriceps)",
+      "inRosterBackup": {
+        "player": "Brian Robinson Jr.",
+        "note": "Next RWT; then Chimere Dike (10.0 FP/G thru W4, TEN bye W9).",
+        "byeWeek": 11
+      },
+      "waiverBackup": {
+        "player": "Tyquan Thornton",
+        "pos": "WR",
+        "nflTeam": "KC",
+        "byeWeek": 5,
+        "fpg": 12.5,
+        "last3Fpg": 19.0,
+        "rosteredPct": 26,
+        "faabRange": {
+          "low": 3,
+          "high": 12,
+          "basis": "21 winning WR claims in HQ faab.json: min $1, median $9, max $31; range = 25th-75th pct"
+        },
+        "suggestedBid": 3,
+        "why": "19.0 last 3; KC bye already used.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 17.6,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 3 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W3": 3
+        },
+        "usage": "Missed W4-W5 (quad); practiced Tue Oct 13, Canales \"looked great\"."
+      }
+    },
+    {
+      "player": "Rhamondre Stevenson",
+      "position": "RB",
+      "slot": "RB/WR/TE flex",
+      "nflTeam": "NE",
+      "byeWeek": 11,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Brian Robinson Jr.",
+        "note": "Reserve RB; Croskey-Merritt (7.7 FP/G) next.",
+        "byeWeek": 11
+      },
+      "waiverBackup": {
+        "player": "Kimani Vidal",
+        "pos": "RB",
+        "nflTeam": "LAC",
+        "byeWeek": 7,
+        "fpg": 10.4,
+        "last3Fpg": 16.0,
+        "rosteredPct": 38,
+        "faabRange": {
+          "low": 2,
+          "high": 26,
+          "basis": "11 winning RB claims in HQ faab.json: min $1, median $6, max $65; range = 25th-75th pct"
+        },
+        "suggestedBid": 5,
+        "why": "16.0 last-3 trend; LAC bye W7.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 11.5,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W5": 18.0
+        },
+        "usage": "Lead back with Henderson (high ankle) out; 18 FP W5."
+      }
+    },
+    {
+      "player": "Tyler Warren",
+      "position": "TE",
+      "slot": "RB/WR/TE flex",
+      "nflTeam": "IND",
+      "byeWeek": 13,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Brian Robinson Jr.",
+        "note": "No 3rd TE; RB/WR fill the flex.",
+        "byeWeek": 11
+      },
+      "waiverBackup": {
+        "player": "Pat Freiermuth",
+        "pos": "TE",
+        "nflTeam": "PIT",
+        "byeWeek": 9,
+        "fpg": 14.4,
+        "last3Fpg": 14.5,
+        "rosteredPct": 49,
+        "faabRange": {
+          "low": 1,
+          "high": 21,
+          "basis": "4 winning TE claims in HQ faab.json: min $1, median $4, max $26; range = 25th-75th pct"
+        },
+        "suggestedBid": 2,
+        "why": "14.4 FP/G, PIT bye W9; TE premium.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 15.2,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W3": 19.5,
+          "W4": 12.5,
+          "W5": 26.5
+        },
+        "usage": "Every-week TE2 in flex; 19.5/12.5/26.5 W3-W5."
+      }
+    },
+    {
+      "player": "Tuli Tuipulotu",
+      "position": "DL,LB,ID",
+      "slot": "DL",
+      "nflTeam": "LAC",
+      "byeWeek": 7,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Leonard Williams",
+        "note": "Only bench DL; Q (ankle), SEA bye W11. 12.9 FP/G thru W4, W4 1 FP dud.",
+        "byeWeek": 11
+      },
+      "waiverBackup": {
+        "player": "Carl Granderson",
+        "pos": "DL",
+        "nflTeam": "NO",
+        "byeWeek": 8,
+        "fpg": 17.0,
+        "last3Fpg": 17.5,
+        "rosteredPct": 45,
+        "faabRange": {
+          "low": 2,
+          "high": 14,
+          "basis": "10 winning DL claims in HQ faab.json: min $1, median $6, max $20; range = 25th-75th pct"
+        },
+        "suggestedBid": 6,
+        "why": "War Room bid sheet #3; NO bye W8, DL PD = 4.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 22.7,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W5": 16.0
+        },
+        "usage": "Every-down edge; 16 FP W5."
+      }
+    },
+    {
+      "player": "Fred Warner",
+      "position": "LB",
+      "slot": "LB",
+      "nflTeam": "SF",
+      "byeWeek": 8,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Jordyn Brooks",
+        "note": "19.6 FP/G thru W4; MIA bye W6, foot DNP Tue.",
+        "byeWeek": 6
+      },
+      "waiverBackup": {
+        "player": "Elijah Ponder",
+        "pos": "LB",
+        "nflTeam": "NE",
+        "byeWeek": 11,
+        "fpg": 21.4,
+        "last3Fpg": 22.0,
+        "rosteredPct": 21,
+        "faabRange": {
+          "low": 4,
+          "high": 28,
+          "basis": "10 winning LB claims in HQ faab.json: min $3, median $7, max $42; range = 25th-75th pct"
+        },
+        "suggestedBid": 4,
+        "why": "Sack/TFL-dependent edge LB; Landry return is a snap risk.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 24.6,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W3": 41,
+          "W4": 20,
+          "W5": 25.0
+        },
+        "usage": "Green dot, 60/60 snaps W5."
+      }
+    },
+    {
+      "player": "Julian Love",
+      "position": "DB",
+      "slot": "DB",
+      "nflTeam": "SEA",
+      "byeWeek": 11,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": null,
+        "note": "No bench DB; Brooks can cover an ID slot only, not DB.",
+        "byeWeek": null
+      },
+      "waiverBackup": {
+        "player": "Mansoor Delane",
+        "pos": "DB",
+        "nflTeam": "KC",
+        "byeWeek": 5,
+        "fpg": 23.33,
+        "last3Fpg": 30.5,
+        "rosteredPct": 45,
+        "faabRange": {
+          "low": 2,
+          "high": 11,
+          "basis": "19 winning DB claims in HQ faab.json: min $1, median $4, max $18; range = 25th-75th pct"
+        },
+        "suggestedBid": 11,
+        "why": "War Room bid sheet #1; KC bye used; 30.5 last 3.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 17.9,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 3 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W4": 14,
+          "W5": 15.0
+        },
+        "usage": "Starting S; 14/15 FP W4-W5."
+      }
+    },
+    {
+      "player": "Evan Williams",
+      "position": "DB",
+      "slot": "DB",
+      "nflTeam": "GB",
+      "byeWeek": 11,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": null,
+        "note": "No bench DB.",
+        "byeWeek": null
+      },
+      "waiverBackup": {
+        "player": "Jacob Parrish",
+        "pos": "DB",
+        "nflTeam": "TB",
+        "byeWeek": 10,
+        "fpg": 20.0,
+        "last3Fpg": 24.33,
+        "rosteredPct": 24,
+        "faabRange": {
+          "low": 2,
+          "high": 11,
+          "basis": "19 winning DB claims in HQ faab.json: min $1, median $4, max $18; range = 25th-75th pct"
+        },
+        "suggestedBid": 7,
+        "why": "War Room bid sheet #2; TB bye W10.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 26.8,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W3": 20,
+          "W4": 36,
+          "W5": 28.0
+        },
+        "usage": "Starting S; 36/28 FP W4-W5."
+      }
+    },
+    {
+      "player": "Cedric Gray",
+      "position": "LB",
+      "slot": "IDP flex",
+      "nflTeam": "TEN",
+      "byeWeek": 9,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Jordyn Brooks",
+        "note": "Brooks back from bye W7; clear upgrade on Gray.",
+        "byeWeek": 6
+      },
+      "waiverBackup": {
+        "player": "Elijah Ponder",
+        "pos": "LB",
+        "nflTeam": "NE",
+        "byeWeek": 11,
+        "fpg": 21.4,
+        "last3Fpg": 22.0,
+        "rosteredPct": 21,
+        "faabRange": {
+          "low": 4,
+          "high": 28,
+          "basis": "10 winning LB claims in HQ faab.json: min $3, median $7, max $42; range = 25th-75th pct"
+        },
+        "suggestedBid": 4,
+        "why": "Sack/TFL-dependent edge LB; Landry return is a snap risk.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 9.9,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 3 G (data/player-values.json)",
+        "fantraxStarterPts": {},
+        "usage": "Base-only, 39.7% snaps W5 (Woellert) - first cut."
+      }
+    },
+    {
+      "player": "Quentin Lake",
+      "position": "DB",
+      "slot": "IDP flex",
+      "nflTeam": "LAR",
+      "byeWeek": 11,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Jordyn Brooks",
+        "note": "Covers the ID slot (not a DB slot).",
+        "byeWeek": 6
+      },
+      "waiverBackup": {
+        "player": "Jacob Parrish",
+        "pos": "DB",
+        "nflTeam": "TB",
+        "byeWeek": 10,
+        "fpg": 20.0,
+        "last3Fpg": 24.33,
+        "rosteredPct": 24,
+        "faabRange": {
+          "low": 2,
+          "high": 11,
+          "basis": "19 winning DB claims in HQ faab.json: min $1, median $4, max $18; range = 25th-75th pct"
+        },
+        "suggestedBid": 7,
+        "why": "War Room bid sheet #2; TB bye W10.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 18.3,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W3": 15,
+          "W4": 12,
+          "W5": 13.0
+        },
+        "usage": "Cleared (hip), played MNF W5; 12/13 FP W4-W5."
+      }
+    },
+    {
+      "player": "Trenton Simpson",
+      "position": "LB",
+      "slot": "IDP flex",
+      "nflTeam": "BAL",
+      "byeWeek": 13,
+      "byePassed": false,
+      "injury": "none",
+      "inRosterBackup": {
+        "player": "Jordyn Brooks",
+        "note": "ID flex swap from W7.",
+        "byeWeek": 6
+      },
+      "waiverBackup": {
+        "player": "Elijah Ponder",
+        "pos": "LB",
+        "nflTeam": "NE",
+        "byeWeek": 11,
+        "fpg": 21.4,
+        "last3Fpg": 22.0,
+        "rosteredPct": 21,
+        "faabRange": {
+          "low": 4,
+          "high": 28,
+          "basis": "10 winning LB claims in HQ faab.json: min $3, median $7, max $42; range = 25th-75th pct"
+        },
+        "suggestedBid": 4,
+        "why": "Sack/TFL-dependent edge LB; Landry return is a snap risk.",
+        "evidence": "actual Fantrax FP/G (data/free-agents.json, as of Oct 13 3:10 PM PT)"
+      },
+      "evidence": {
+        "fpgComputed": 21.7,
+        "fpgBasis": "league-scored Sleeper stats thru W4, 4 G (data/player-values.json)",
+        "fantraxStarterPts": {
+          "W5": 25.0
+        },
+        "usage": "56.2% snaps W5, 7 tkl + sack (Woellert): lower floor than totals suggest."
+      }
+    }
+  ],
+  "byWeek": [
+    {
+      "week": 6,
+      "startersOnBye": [],
+      "count": 0,
+      "benchOnBye": [
+        "Jordyn Brooks"
+      ],
+      "stacked": false,
+      "beforeDeadline": true,
+      "flag": null
+    },
+    {
+      "week": 7,
+      "startersOnBye": [
+        "Trevor Lawrence",
+        "Tuli Tuipulotu"
+      ],
+      "count": 2,
+      "benchOnBye": [
+        "Jacory Croskey-Merritt"
+      ],
+      "stacked": false,
+      "beforeDeadline": true,
+      "flag": "WATCH: QB + DL out, no bench QB"
+    },
+    {
+      "week": 8,
+      "startersOnBye": [
+        "Fred Warner"
+      ],
+      "count": 1,
+      "benchOnBye": [],
+      "stacked": false,
+      "beforeDeadline": true,
+      "flag": null
+    },
+    {
+      "week": 9,
+      "startersOnBye": [
+        "Cedric Gray"
+      ],
+      "count": 1,
+      "benchOnBye": [
+        "Chimere Dike"
+      ],
+      "stacked": false,
+      "beforeDeadline": true,
+      "flag": null
+    },
+    {
+      "week": 10,
+      "startersOnBye": [],
+      "count": 0,
+      "benchOnBye": [],
+      "stacked": false,
+      "beforeDeadline": false,
+      "flag": null
+    },
+    {
+      "week": 11,
+      "startersOnBye": [
+        "Rhamondre Stevenson",
+        "Julian Love",
+        "Evan Williams",
+        "Quentin Lake"
+      ],
+      "count": 4,
+      "benchOnBye": [
+        "Brian Robinson Jr.",
+        "Leonard Williams"
+      ],
+      "stacked": true,
+      "beforeDeadline": false,
+      "flag": "STACKED"
+    },
+    {
+      "week": 12,
+      "startersOnBye": [],
+      "count": 0,
+      "benchOnBye": [],
+      "stacked": false,
+      "beforeDeadline": false,
+      "flag": null
+    },
+    {
+      "week": 13,
+      "startersOnBye": [
+        "Breece Hall",
+        "Garrett Wilson",
+        "Brock Bowers",
+        "Tyler Warren",
+        "Trenton Simpson"
+      ],
+      "count": 5,
+      "benchOnBye": [],
+      "stacked": true,
+      "beforeDeadline": false,
+      "flag": "STACKED"
+    },
+    {
+      "week": 14,
+      "startersOnBye": [],
+      "count": 0,
+      "benchOnBye": [
+        "Kendrick Bourne"
+      ],
+      "stacked": false,
+      "beforeDeadline": false,
+      "flag": null
+    }
+  ],
+  "summary": {
+    "biggestStackedBye": "W13 (Hall, Wilson, Bowers, Warren, Simpson - 5 starters); W11 has 4. Before the deadline the peak is W7 (Lawrence + Tuipulotu, with no backup QB)."
+  }
+}

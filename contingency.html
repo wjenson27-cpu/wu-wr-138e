@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#002244">
+<title>Eddies Contingency Board</title>
+<link rel="icon" href="img/eddies.png">
+<link rel="stylesheet" href="css/warroom.css">
+<style>
+.cg{list-style:none;margin:0;padding:0}.cg li{margin:0 0 3px 0!important;font-size:.78rem}
+.cg b{color:#e8eaed}.k{color:#A5ACAF;font-size:.68rem;text-transform:uppercase;font-weight:800;margin-top:6px}
+.card.warn{border-left-color:#f59e0b}.card.bad{border-left-color:#b91c1c}main{padding:10px 12px;max-width:720px;margin:0 auto}
+</style>
+</head>
+<body>
+<div class="sticky-top">
+<header><div class="hdr"><img src="img/eddies.png" alt="Eddies"><div><h1>Injury + Bye Contingency</h1>
+<div class="sub">Eagle Ridge Eddies · <a href="index.html" style="color:#69BE28">Back to War Room</a></div></div></div></header>
+<div class="strip" id="strip">Loading…</div>
+</div>
+<main id="root"></main>
+<p class="footer">Eagle Ridge Eddies · read-only board, no claims or lineup changes made</p>
+<script>
+function e(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+fetch('data/contingency.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+ var dl=d.deadlines.nfl;
+ document.getElementById('strip').innerHTML='Week <span>'+d.currentWeek+'</span> · FAAB <span>$'+d.faabLeft+'</span> · NFL deadline <span>'+e(dl.date)+' ('+e(dl.time)+', W'+dl.fantasyWeek+')</span>';
+ var h='<div class="sec">Bye weeks by week</div>';
+ d.byWeek.forEach(function(w){
+  h+='<div class="card'+(w.flag?(w.count>=3?' bad':' warn'):'')+'"><h3>Week '+w.week+(w.beforeDeadline?'':' <span class="badge sample">after deadline</span>')+(w.flag?' <span class="badge stale">'+e(w.flag)+'</span>':'')+'</h3>'+
+  '<p>Starters out: <b>'+(w.startersOnBye.length?e(w.startersOnBye.join(', ')):'none')+'</b></p>'+
+  (w.benchOnBye.length?'<p>Bench out: '+e(w.benchOnBye.join(', '))+'</p>':'')+'</div>'});
+ h+='<div class="sec">Starters</div>';
+ d.starters.forEach(function(s){
+  var wb=s.waiverBackup,ib=s.inRosterBackup,ev=s.evidence,pts=Object.keys(ev.fantraxStarterPts).map(function(k){return k+' '+ev.fantraxStarterPts[k]}).join(' · ');
+  h+='<div class="card'+(s.injury&&s.injury!=='none'?' warn':'')+'"><h3>'+e(s.player)+' <span class="badge">'+e(s.slot)+'</span></h3><ul class="cg">'+
+  '<li>'+e(s.position)+' · '+e(s.nflTeam)+' · Bye W'+s.byeWeek+(s.byePassed?' (done)':'')+'</li>'+
+  '<li>Injury: <b>'+e(s.injury)+'</b></li>'+
+  '<li class="k">In-roster backup</li><li><b>'+e(ib.player||'None')+'</b>'+(ib.byeWeek?' (bye W'+ib.byeWeek+')':'')+' · '+e(ib.note)+'</li>'+
+  '<li class="k">Waiver backup</li><li><b>'+e(wb.player)+'</b> '+e(wb.pos)+' '+e(wb.nflTeam)+' (bye W'+wb.byeWeek+') · '+wb.fpg+' FP/G, '+wb.last3Fpg+' last 3, '+wb.rosteredPct+'% ros</li>'+
+  '<li>FAAB range $'+wb.faabRange.low+'–$'+wb.faabRange.high+' · suggested <b>$'+wb.suggestedBid+'</b></li><li>'+e(wb.why)+'</li>'+
+  '<li class="k">Evidence</li><li>'+(ev.fpgComputed!=null?ev.fpgComputed+' FP/G ('+e(ev.fpgBasis)+')':'FP/G n/a')+'</li>'+
+  (pts?'<li>Fantrax starter pts: '+e(pts)+'</li>':'')+'<li>'+e(ev.usage)+'</li></ul></div>'});
+ h+='<div class="card"><h3>Sources</h3><p>Byes: <a style="color:#69BE28" href="'+e(d.byeSource.url)+'">'+e(d.byeSource.name)+'</a></p><p>NFL deadline: <a style="color:#69BE28" href="'+e(dl.source)+'">NFL.com important dates</a></p><p>Fantrax deadline: '+e(d.deadlines.fantrax.note)+'</p><p>'+e(d.note)+'</p><p>'+e(d.projectionNote)+'</p><p>As of '+e(d.asOf)+'</p></div>';
+ document.getElementById('root').innerHTML=h;
+}).catch(function(){document.getElementById('strip').textContent='Could not load data/contingency.json'});
+</script>
+</body>
+</html>
