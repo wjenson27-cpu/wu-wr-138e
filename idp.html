@@ -39,12 +39,13 @@ main{padding:10px 12px;max-width:720px;margin:0 auto}
 <script>
 function e(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 var TEAM={eddies:'Eddies',dongers:'Dongers',doubtpfizer:'Doubtpfizer',goats:'Old Goats',hyper:'Hypersecretors',lab:'Little Ass Boys',morningside:'Morningside',newman:'Newman Lake',pocket:'Pocket Agents',saltese:'Saltese',slumlords:'Slumlords',substation:'Substation',ttab:'TTAB',ultron:'Ultron',FREE:'FREE'};
+function f1(x){return (x==null||isNaN(x))?'–':Number(x).toFixed(1)}
 function pct(x){return x==null?'–':Math.round(x*100)+'%'}
 function own(l){return '<span class="own'+(l==='FREE'?' free':'')+'">'+e(TEAM[l]||l)+'</span>'}
 function card(r){
  var gd=r.greenDot==='green'?' · 🟢 green dot':(r.greenDot==='full'?' · full-time':'');
- return '<div class="ic t'+r.tier+(r.league==='eddies'?' mine':'')+'"><div class="ih"><b>'+r.rank+'. '+e(r.player)+'</b><span class="pp">'+(r.bye?'BYE':r.proj.toFixed(1))+'</span></div>'+
- '<div class="im">'+e(r.pos)+' '+e(r.team)+' '+(r.bye?'· BYE':'vs '+e(r.opp))+' · Tier '+r.tier+' · '+own(r.league)+'<br>Season '+r.fpgSeason.toFixed(1)+' FP/G · Last 3 '+r.fpgL3.toFixed(1)+' · Snaps '+pct(r.snapShareL3)+' (L3) · Tkl opp '+pct(r.tackleOpp)+(r.passRushProxy>0.03?' · Pressure '+pct(r.passRushProxy):'')+gd+'</div>'+
+ return '<div class="ic t'+r.tier+(r.league==='eddies'?' mine':'')+'"><div class="ih"><b>'+r.rank+'. '+e(r.player)+'</b><span class="pp">'+(r.bye?'BYE':f1(r.proj))+'</span></div>'+
+ '<div class="im">'+e(r.pos)+' '+e(r.team)+' '+(r.bye?'· BYE':'vs '+e(r.opp))+' · Tier '+r.tier+' · '+own(r.league)+'<br>Season '+f1(r.fpgSeason)+' FP/G · Last 3 '+f1(r.fpgL3)+' · Snaps '+pct(r.snapShareL3)+' (L3) · Tkl opp '+pct(r.tackleOpp)+(r.passRushProxy>0.03?' · Pressure '+pct(r.passRushProxy):'')+gd+'</div>'+
  (r.note?'<div class="in">'+e(r.note)+'</div>':'')+'</div>';
 }
 fetch('data/idp-rankings.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
@@ -53,14 +54,14 @@ fetch('data/idp-rankings.json',{cache:'no-store'}).then(function(r){return r.jso
  var h='<div class="est">'+e(d.label)+' Updated '+e(d.generatedAt)+'.</div>';
  h+='<div class="jump"><a href="#claims">Claim targets</a><a href="#movers">Top movers</a><a href="#DL">DL</a><a href="#LB">LB</a><a href="#DB">DB</a></div>';
  h+='<div class="claim" id="claims"><h2>Free-agent claim targets</h2><div class="im">For the '+e(f.nextClear)+' run. League IDP winning bids: median $'+f.median+', 75th pct $'+f.p75+', top $'+f.max+' ('+f.n+' bids).</div>';
- d.claimTargets.forEach(function(t,i){h+='<div class="ic t1"><div class="ih"><b>'+(i+1)+'. '+e(t.player)+'</b><span class="bid">$'+t.bid+' ($'+t.range[0]+'–'+t.range[1]+')</span></div><div class="im">'+e(t.pos)+' '+e(t.team)+' vs '+e(t.opp)+' · '+e(t.pos)+t.posRank+' · proj '+t.proj.toFixed(1)+' · Season '+t.fpgSeason.toFixed(1)+' · L3 '+t.fpgL3.toFixed(1)+' · Snaps '+pct(t.snapShareL3)+'</div>'+(t.note?'<div class="in">'+e(t.note)+'</div>':'')+'</div>'});
+ d.claimTargets.forEach(function(t,i){h+='<div class="ic t1"><div class="ih"><b>'+(i+1)+'. '+e(t.player)+'</b><span class="bid">$'+t.bid+' ($'+t.range[0]+'–'+t.range[1]+')</span></div><div class="im">'+e(t.pos)+' '+e(t.team)+' vs '+e(t.opp)+' · '+e(t.pos)+t.posRank+' · proj '+f1(t.proj)+' · Season '+f1(t.fpgSeason)+' · L3 '+f1(t.fpgL3)+' · Snaps '+pct(t.snapShareL3)+'</div>'+(t.note?'<div class="in">'+e(t.note)+'</div>':'')+'</div>'});
  h+='</div>';
  h+='<div class="sh" id="movers">Top movers (last 3 vs earlier FP/G)</div>';
- d.movers.up.forEach(function(m){h+='<div class="ic t2"><div class="ih"><b>▲ '+e(m.player)+'</b><span class="pp">+'+m.delta.toFixed(1)+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+m.fpgEarly.toFixed(1)+' → '+m.fpgL3.toFixed(1)+' FP/G · proj '+m.proj.toFixed(1)+'</div></div>'});
- d.movers.down.forEach(function(m){h+='<div class="ic t5"><div class="ih"><b>▼ '+e(m.player)+'</b><span class="pp" style="color:#f59e0b">'+m.delta.toFixed(1)+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+m.fpgEarly.toFixed(1)+' → '+m.fpgL3.toFixed(1)+' FP/G · proj '+m.proj.toFixed(1)+'</div></div>'});
+ d.movers.up.forEach(function(m){h+='<div class="ic t2"><div class="ih"><b>▲ '+e(m.player)+'</b><span class="pp">+'+f1(m.delta)+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+f1(m.fpgEarly)+' → '+f1(m.fpgL3)+' FP/G · proj '+f1(m.proj)+'</div></div>'});
+ d.movers.down.forEach(function(m){h+='<div class="ic t5"><div class="ih"><b>▼ '+e(m.player)+'</b><span class="pp" style="color:#f59e0b">'+f1(m.delta)+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+f1(m.fpgEarly)+' → '+f1(m.fpgL3)+' FP/G · proj '+f1(m.proj)+'</div></div>'});
  ['DL','LB','DB'].forEach(function(p){h+='<div class="sh" id="'+p+'">'+p+' · top '+d.positions[p].length+'</div>';d.positions[p].forEach(function(r){h+=card(r)})});
  document.getElementById('root').innerHTML=h;
-}).catch(function(){document.getElementById('strip').textContent='Could not load data/idp-rankings.json'});
+}).catch(function(err){console.error(err);document.getElementById('strip').textContent='Could not load data/idp-rankings.json'});
 </script>
 </body>
 </html>

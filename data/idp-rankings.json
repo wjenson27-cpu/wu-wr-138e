@@ -5512,7 +5512,7 @@
    "fpgSeason": 19.75,
    "fpgL3": 24.0,
    "snapShareL3": 0.983,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 12,
    "range": [
     5,
@@ -5530,7 +5530,7 @@
    "fpgSeason": 15.0,
    "fpgL3": 37.0,
    "snapShareL3": 1.0,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 3,
    "range": [
     1,
@@ -5548,7 +5548,7 @@
    "fpgSeason": 14.4,
    "fpgL3": 22.0,
    "snapShareL3": 0.747,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 12,
    "range": [
     5,
@@ -5566,7 +5566,7 @@
    "fpgSeason": 15.6,
    "fpgL3": 21.0,
    "snapShareL3": 0.647,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 12,
    "range": [
     5,
@@ -5584,7 +5584,7 @@
    "fpgSeason": 19.8,
    "fpgL3": 22.0,
    "snapShareL3": 0.703,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 3,
    "range": [
     1,
@@ -5602,7 +5602,7 @@
    "fpgSeason": 15.6,
    "fpgL3": 20.0,
    "snapShareL3": 0.81,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 6,
    "range": [
     2,
@@ -5620,7 +5620,7 @@
    "fpgSeason": 15.0,
    "fpgL3": 22.0,
    "snapShareL3": 0.833,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 6,
    "range": [
     2,
@@ -5638,7 +5638,7 @@
    "fpgSeason": 14.25,
    "fpgL3": 20.0,
    "snapShareL3": 0.835,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 12,
    "range": [
     5,
@@ -5656,7 +5656,7 @@
    "fpgSeason": 16.8,
    "fpgL3": 21.67,
    "snapShareL3": 0.773,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 3,
    "range": [
     1,
@@ -5674,7 +5674,7 @@
    "fpgSeason": 15.0,
    "fpgL3": 18.0,
    "snapShareL3": 0.903,
-   "greenDot": NaN,
+   "greenDot": null,
    "bid": 3,
    "range": [
     1,
