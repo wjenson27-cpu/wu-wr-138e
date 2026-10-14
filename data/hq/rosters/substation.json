@@ -2,60 +2,75 @@
   "teamId": "substation",
   "teamName": "Substation",
   "owner": "Nathan Kelly",
-  "asOf": "2026-10-09",
-  "faabLeft": 30,
-  "startingQB": "Jordan Love",
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 15,
+  "startingQB": "Brock Purdy",
   "roster": {
     "QB": [
-      "Jordan Love",
-      "Brock Purdy"
+      "Brock Purdy",
+      "Jordan Love"
     ],
     "RB": [
-      "RJ Harvey",
       "Emmett Johnson",
-      "Keaton Mitchell"
+      "RJ Harvey",
+      "Kenneth Gainwell",
+      "Tyjae Spears"
     ],
     "WR": [
       "Drake London",
-      "Skyy Moore",
       "Malik Nabers",
-      "Keenan Allen",
-      "Denzel Boston",
-      "George Pickens"
+      "George Pickens",
+      "Carnell Tate",
+      "Alec Pierce"
     ],
     "TE": [
       "Tucker Kraft"
     ],
-    "LB": [
-      "Carson Schwesinger",
-      "Jihaad Campbell",
-      "Tremaine Edmunds",
-      "Dre Greenlaw"
-    ],
     "DL": [
       "DeForest Buckner"
     ],
+    "LB": [
+      "Carson Schwesinger",
+      "Jihaad Campbell",
+      "Tremaine Edmunds"
+    ],
     "DB": [
       "Nick Emmanwori",
+      "Malik Mustapha",
       "Kevin Winston",
-      "Christian Izien",
       "Dante Trader",
-      "Brian Branch",
-      "DeShon Elliott"
+      "A.J. Haulcy"
     ],
     "IR": [
       "Brian Branch",
-      "DeShon Elliott",
-      "Dre Greenlaw"
+      "DeShon Elliott"
     ]
   },
-  "notes": "Sep 19 AM: +Trent McDuffie (−Romeo Doubs); −Avonte Maddox. Trade block: Tony Pollard, Bhayshul Tuten. FAAB $70. | Sep 23 clear: +Rashod Bateman (WR); +Skyy Moore (WR); +Keenan Allen (WR); -Trent McDuffie (DB); -Alec Pierce (WR) | Removed stale Antoine Winfield (on TTAB then traded to Eddies Sep 23). | Sep 23 FA: +Jalen Redmond (DL)/−Jared Verse. | Sep 24: +Keaton Mitchell (−Keenan Allen). | Fantasy check Sep 28: −Antonio Johnson; −Tony Pollard (if listed); +CJ Allen (LB via trade). FAAB $82. Sep 28 trade: +Denzel Boston / −David Montgomery (vs Saltese). | Sep 30 W4 waivers/FA: +Christian Izien $17; +Dante Trader $9 (−CJ Allen); +DeForest Buckner $13 (−Jalen Redmond); +Keenan Allen $13 (−Rashod Bateman). FAAB $30. | Oct 8: traded Tuten to Ultron for Pickens.",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 4 / IR 3. FAAB $29. | Oct 14 W6 waivers/FA: +Kenneth Gainwell $11; +A.J. Haulcy $3; +Tyjae Spears (\u2212Terrance Ferguson). FAAB $15.",
   "injuryFlags": [
-    "Brian Branch — Injured Reserve List - PUP-R - Achilles (IR slot)",
-    "DeShon Elliott — Injured Reserve List - IR-R - Undisclosed (IR slot)",
-    "Dre Greenlaw — Quadriceps - Questionable (IR slot)"
+    "Alec Pierce \u2014 IR (Heel) (reserve)",
+    "Terrance Ferguson \u2014 IR (Ankle) (IR slot)",
+    "Carson Schwesinger \u2014 Q (Ankle) (active)",
+    "Kevin Winston \u2014 Q (Quadriceps) (active)",
+    "Brian Branch \u2014 PUP (Achilles) (IR slot)",
+    "DeShon Elliott \u2014 IR (Knee) (IR slot)"
   ],
-  "source": "Fantrax Sep 30 2026 ~9:20 AM PT post-waiver roster sync (all 14 teams, after Week 4 FAAB clear).",
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
   "fantraxTeamId": "bbdlo6fkmsb3ulv5",
-  "updated": "2026-10-09"
+  "lineupFlags": [
+    "Alec Pierce \u2014 IR (Heel) (reserve)",
+    "Carson Schwesinger \u2014 Q (Ankle) (active)",
+    "Kevin Winston \u2014 Q (Quadriceps) (active)"
+  ],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "Alec Pierce \u2014 IR (Heel) (reserve)",
+    "Terrance Ferguson \u2014 IR (Ankle) (IR slot)",
+    "Carson Schwesinger \u2014 Q (Ankle) (active)",
+    "Kevin Winston \u2014 Q (Quadriceps) (active)",
+    "Brian Branch \u2014 PUP (Achilles) (IR slot)",
+    "DeShon Elliott \u2014 IR (Knee) (IR slot)"
+  ],
+  "updated": "2026-10-14"
 }

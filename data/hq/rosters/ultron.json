@@ -2,61 +2,65 @@
   "teamId": "ultron",
   "teamName": "Ultron",
   "owner": "Brian Aga",
-  "asOf": "2026-10-09",
-  "faabLeft": 10,
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 0,
   "startingQB": "Bryce Young",
   "roster": {
     "QB": [
-      "Bryce Young",
-      "Caleb Williams",
-      "Jacoby Brissett"
+      "Bryce Young"
     ],
     "RB": [
-      "Tank Bigsby",
-      "Kyle Monangai",
-      "Bhayshul Tuten"
+      "Bhayshul Tuten",
+      "D'Andre Swift",
+      "Chris Rodriguez Jr."
     ],
     "WR": [
-      "Ja'Marr Chase",
-      "Terry McLaurin",
       "Michael Wilson",
-      "Antonio Williams"
+      "Terry McLaurin",
+      "Ja'Marr Chase",
+      "Germie Bernard",
+      "Keenan Allen"
     ],
     "TE": [
-      "Colston Loveland",
-      "Mike Gesicki",
-      "Mark Andrews"
-    ],
-    "LB": [
-      "Jack Campbell",
-      "Patrick Queen",
-      "Robert Spillane",
-      "Frankie Luvu",
-      "Foyesade Oluokun"
+      "Pat Freiermuth"
     ],
     "DL": [
-      "Dallas Turner",
       "Jaishawn Barham",
-      "Myles Garrett"
+      "Dallas Turner"
+    ],
+    "LB": [
+      "Foyesade Oluokun",
+      "Frankie Luvu",
+      "Patrick Queen",
+      "Robert Spillane",
+      "Jack Campbell"
     ],
     "DB": [
       "Dillon Thieneman",
-      "Michael Taaffe",
-      "A.J. Haulcy"
+      "Trevon Moehrig",
+      "Grant Delpit"
     ],
     "IR": [
       "Caleb Williams",
+      "Kyle Monangai",
       "Myles Garrett"
     ]
   },
-  "notes": "Sep 20 AM: Sat Sep 19 drop Jonah Coleman then +Coleman/−Leo Chenal (null). Cleared stale Teddye Buchanan (now on Pocket). FAAB $111. | Sep 23 clear: +Terrance Ferguson (TE); +Dallas Turner (LB); +Bryce Young (QB) | Sep 24: +Michael Taaffe (−A.J. Haulcy). Cleared stale J.K. Dobbins (dropped Sep 22; claimed by Hyper Sep 24). | Sep 26: +Sam Darnold/−Jonah Coleman ($0/null). | Sep 30 W4 waivers/FA: +Tyler Higbee $1 (−Quentin Johnston). FAAB $1. | Oct 3: −Terrance Ferguson; net +Antonio Williams (Stalbird churn). | Oct 7 W5 waivers/FA: +Mike Gesicki; +Mark Andrews; +Jacoby Brissett $1 (−Sam Darnold). FAAB $0. | Oct 7 FA: +Antonio Williams; −Chris Rodriguez Jr.; −Tyler Higbee. | Oct 8: traded Hooker+Barkley to Pocket for Oluokun+$10; traded Pickens to Sub for Tuten; +Haulcy. FAAB $10.",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 13 / Reserve 4 / IR 3. FAAB $10. | Oct 14 W6 waivers/FA: +Germie Bernard $9 (\u2212Antonio Williams); +Pat Freiermuth $1 (\u2212Mark Andrews); +Trevon Moehrig; +Keenan Allen; +Malaki Starks; +Grant Delpit (\u2212Malaki Starks). FAAB $0.",
   "injuryFlags": [
-    "Caleb Williams — Hamstring - Doubtful that will play next game (IR slot)",
-    "Terrance Ferguson — Ankle - Doubtful that will play next game (IR slot)",
-    "Frankie Luvu — Groin - Questionable (reserve)",
-    "Myles Garrett — Injured Reserve List - IR - Knee (IR slot)"
+    "Caleb Williams \u2014 Q (Hamstring) (IR slot)",
+    "Kyle Monangai \u2014 Q (Toe) (IR slot)",
+    "Myles Garrett \u2014 IR (Knee) (IR slot)"
   ],
-  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
   "fantraxTeamId": "k9i4qjrlmsb3ulv5",
-  "updated": "2026-10-09"
+  "lineupFlags": [],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "Caleb Williams \u2014 Q (Hamstring) (IR slot)",
+    "Kyle Monangai \u2014 Q (Toe) (IR slot)",
+    "Myles Garrett \u2014 IR (Knee) (IR slot)"
+  ],
+  "updated": "2026-10-14"
 }

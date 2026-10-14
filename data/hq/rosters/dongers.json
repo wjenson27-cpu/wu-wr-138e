@@ -2,8 +2,8 @@
   "teamId": "dongers",
   "teamName": "Drummond Dongers",
   "owner": "Gavin Heaton",
-  "asOf": "2026-10-09",
-  "faabLeft": 3,
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 2,
   "startingQB": "Joe Burrow",
   "roster": {
     "QB": [
@@ -16,40 +16,64 @@
     ],
     "WR": [
       "Chris Olave",
-      "Ladd McConkey",
-      "D.J. Moore",
       "Parker Washington",
       "KC Concepcion",
-      "KaVontae Turpin"
+      "KaVontae Turpin",
+      "Ladd McConkey"
     ],
     "TE": [
       "Brenton Strange",
       "T.J. Hockenson"
     ],
-    "LB": [
-      "Christian Elliss",
-      "T.J. Edwards",
-      "Isaiah McDuffie"
-    ],
     "DL": [
-      "David Bailey",
-      "Zach Allen"
+      "Zach Allen",
+      "David Bailey"
+    ],
+    "LB": [
+      "Isaiah McDuffie",
+      "Christian Elliss",
+      "T.J. Edwards"
     ],
     "DB": [
       "Kyle Hamilton",
       "Xavier McKinney",
-      "Daxton Hill",
-      "Nick Cross"
+      "Kamren Kinchens",
+      "Jonas Sanker"
     ],
     "IR": [
+      "Tyreek Hill",
+      "D.J. Moore",
       "Nick Cross"
     ]
   },
-  "notes": "Sep 17 AM: +T.J. Hockenson (−Kayshon Boutte). Sep 16 post-waiver: +Donovan Ezeiruaku $14. FAAB $93. | Sep 20: −Aaron Donald (also +/−Michael Mayer churn, net Mayer zero). | Sep 23 clear: +David Bailey (RB); +Daxton Hill (DB); +Christian Elliss (LB); -Nick Scott (DB); -Chris Rodriguez Jr. (RB) | Fantasy check Sep 28: −CJ Allen (trade); −Donovan Ezeiruaku; +Tony Pollard (RB). FAAB $45. | Sep 30 W4 waivers/FA: +Donovan Ezeiruaku (−Laiatu Latu); +Jeremy Reaves (−Jalen Pitre); +Jartavius Martin (−Jeremy Reaves). FAAB $45. | Oct 7 W5 waivers/FA: +Isaiah McDuffie $42. FAAB $3. | Oct 7 FA: +Jameis Winston; −Kyler Murray. | Oct 8: +Zach Allen/−Ezeiruaku; −Jartavius Martin.",
-  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
-  "fantraxTeamId": "lreem0zbmsb3ulv5",
-  "updated": "2026-10-09",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $3. | Oct 14 W6 waivers/FA: +Jonas Sanker $1 (\u2212Daxton Hill). FAAB $2.",
   "injuryFlags": [
-    "Nick Cross — Illness - Out Indefinitely (IR slot)"
-  ]
+    "T.J. Hockenson \u2014 Q (Concussion) (active)",
+    "KC Concepcion \u2014 Q (Concussion) (reserve)",
+    "Ladd McConkey \u2014 Q (Foot) (reserve)",
+    "Tyreek Hill \u2014 O (Knee - acl) (IR slot)",
+    "D.J. Moore \u2014 Q (Shoulder - ac joint) (IR slot)",
+    "T.J. Edwards \u2014 Q (Hamstring) (reserve)",
+    "Nick Cross \u2014 Q (Illness) (IR slot)"
+  ],
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "fantraxTeamId": "lreem0zbmsb3ulv5",
+  "lineupFlags": [
+    "T.J. Hockenson \u2014 Q (Concussion) (active)",
+    "KC Concepcion \u2014 Q (Concussion) (reserve)",
+    "Ladd McConkey \u2014 Q (Foot) (reserve)",
+    "T.J. Edwards \u2014 Q (Hamstring) (reserve)"
+  ],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "T.J. Hockenson \u2014 Q (Concussion) (active)",
+    "KC Concepcion \u2014 Q (Concussion) (reserve)",
+    "Ladd McConkey \u2014 Q (Foot) (reserve)",
+    "Tyreek Hill \u2014 O (Knee - acl) (IR slot)",
+    "D.J. Moore \u2014 Q (Shoulder - ac joint) (IR slot)",
+    "T.J. Edwards \u2014 Q (Hamstring) (reserve)",
+    "Nick Cross \u2014 Q (Illness) (IR slot)"
+  ],
+  "updated": "2026-10-14"
 }

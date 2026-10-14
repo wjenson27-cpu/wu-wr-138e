@@ -1,5 +1,6 @@
 {
-  "updated": "2026-10-09",
+  "updated": "2026-10-14",
+  "asOf": "2026-10-14 9:30 AM PT",
   "teams": [
     "dongers",
     "doubtpfizer",
@@ -16,7 +17,5 @@
     "ttab",
     "ultron"
   ],
-  "count": 14,
-  "note": "Fantasy check Oct 9 ~6:20 AM PT: Oct 8 FA moves + Pocket↔Ultron and Substation↔Ultron trades applied to rosters.",
-  "source": "Fantrax Sep 30 2026 ~9:20 AM PT post-waiver roster sync — all 14 rosters rebuilt from Fantrax after Week 4 FAAB clear."
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT"
 }

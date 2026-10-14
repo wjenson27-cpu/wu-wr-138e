@@ -2,8 +2,8 @@
   "teamId": "doubtpfizer",
   "teamName": "Mrs. Doubtpfizer",
   "owner": "Kyle Weberg",
-  "asOf": "2026-10-07",
-  "faabLeft": 91,
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 86,
   "startingQB": "Dak Prescott",
   "roster": {
     "QB": [
@@ -13,50 +13,58 @@
       "Christian McCaffrey",
       "Braelon Allen",
       "Chuba Hubbard",
-      "D'Andre Swift",
       "Kaelon Black",
-      "Blake Corum"
+      "Blake Corum",
+      "Dylan Sampson"
     ],
     "WR": [
-      "Rashee Rice",
-      "Josh Downs",
-      "Rome Odunze",
       "Nico Collins",
-      "Jayden Reed",
-      "Tre Harris"
+      "Josh Downs",
+      "Rome Odunze"
     ],
     "TE": [
-      "Hunter Henry"
+      "Colston Loveland",
+      "Hunter Henry",
+      "Kyle Pitts"
+    ],
+    "DL": [
+      "Byron Young"
     ],
     "LB": [
       "Nakobe Dean",
       "Alex Singleton",
       "Sonny Styles",
-      "DeMarvion Overshown"
-    ],
-    "DL": [
-      "Jonathan Allen",
-      "Mason Graham",
-      "Byron Young"
+      "D'Marco Jackson"
     ],
     "DB": [
       "Reed Blankenship",
-      "Kamari Lassiter",
-      "Keisean Nixon"
+      "Kamari Lassiter"
     ],
     "IR": [
-      "Nico Collins",
-      "Jayden Reed",
+      "Rashee Rice",
+      "Mason Graham",
       "DeMarvion Overshown"
     ]
   },
-  "notes": "Sep 16 post-waiver: +Jalen Ramsey $2 (−Reed Blankenship); +Chauncey Gardner-Johnson $2. FAAB $109. | Sep 20: +Pat Freiermuth −Emari Demercado (Demercado was already absent from HQ roster). | Sep 23 clear: +Jonathan Allen (DL); -Pat Freiermuth (TE); -Kaelon Black (RB) | Cleared stale Rachaad White IR (now on Saltese). | Fantasy check Sep 30: −Brian Burns (Sep 29 1:32 PM). | Sep 30 W4 waivers/FA: +Kain Medrano $4; +Reed Blankenship (−Jalen Ramsey). FAAB $105. | Oct 2: +Hunter Henry/−Mark Andrews. | Oct 3: −Kain Medrano. | Oct 6: +Mason Graham (DL-CLE) $6. FAAB $99. | Oct 7 W5 waivers/FA: +Keisean Nixon (−Chauncey Gardner-Johnson); +Byron Young $4 (−Dexter Lawrence); +Tre Harris $4 (−Dontayvion Wicks). FAAB $91.",
-  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
-  "fantraxTeamId": "xg1akj6omsb3ulv5",
-  "updated": "2026-10-07",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $91. | Oct 14 W6 waivers/FA: +Dylan Sampson $1 (\u2212Tre Harris); +D'Marco Jackson $4 (\u2212Keisean Nixon). FAAB $86.",
   "injuryFlags": [
-    "Nico Collins — Hamstring - Questionable (IR slot)",
-    "Jayden Reed — Neck - Out Indefinitely (IR slot)",
-    "DeMarvion Overshown — Hamstring - Questionable (IR slot)"
-  ]
+    "Tre Harris \u2014 D (Hamstring) (reserve)",
+    "Rashee Rice \u2014 Q (Hamstring) (IR slot)",
+    "Mason Graham \u2014 Q (Knee - mcl) (IR slot)",
+    "DeMarvion Overshown \u2014 Q (Hamstring) (IR slot)"
+  ],
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "fantraxTeamId": "xg1akj6omsb3ulv5",
+  "lineupFlags": [
+    "Tre Harris \u2014 D (Hamstring) (reserve)"
+  ],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "Tre Harris \u2014 D (Hamstring) (reserve)",
+    "Rashee Rice \u2014 Q (Hamstring) (IR slot)",
+    "Mason Graham \u2014 Q (Knee - mcl) (IR slot)",
+    "DeMarvion Overshown \u2014 Q (Hamstring) (IR slot)"
+  ],
+  "updated": "2026-10-14"
 }

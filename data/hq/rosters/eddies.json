@@ -2,43 +2,43 @@
   "teamId": "eddies",
   "teamName": "Eagle Ridge Eddies",
   "owner": "Bill Jenson",
-  "asOf": "2026-10-09 5:22 PM PT",
-  "faabLeft": 68,
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 60,
   "startingQB": "Trevor Lawrence",
   "roster": {
     "QB": [
       "Trevor Lawrence"
     ],
     "RB": [
-      "Brian Robinson Jr.",
       "Rhamondre Stevenson",
-      "Jacory Croskey-Merritt",
-      "Breece Hall"
+      "Breece Hall",
+      "Brian Robinson Jr.",
+      "Jacory Croskey-Merritt"
     ],
     "WR": [
       "Garrett Wilson",
-      "Chimere Dike",
       "Jalen Coker",
-      "Brian Thomas"
+      "Kendrick Bourne",
+      "Chimere Dike"
     ],
     "TE": [
       "Brock Bowers",
       "Tyler Warren"
     ],
+    "DL": [
+      "Tuli Tuipulotu"
+    ],
     "LB": [
       "Fred Warner",
-      "Jordyn Brooks",
+      "Cedric Gray",
       "Trenton Simpson",
-      "Cedric Gray"
-    ],
-    "DL": [
-      "Tuli Tuipulotu",
-      "Leonard Williams"
+      "Jordyn Brooks"
     ],
     "DB": [
       "Julian Love",
       "Evan Williams",
-      "Quentin Lake"
+      "Quentin Lake",
+      "Mansoor Delane"
     ],
     "IR": [
       "Zach Charbonnet",
@@ -46,32 +46,31 @@
       "Travis Etienne"
     ]
   },
-  "notes": "Oct 9 rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. +Cedric Gray $3 (−Kyle Pitts). FAAB $68. Hall Reserve (O), not IR. IR: Charbonnet, Jordyn Tyson, Etienne.",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $68. | Oct 14 W6 waivers/FA: +Mansoor Delane $8 (\u2212Leonard Williams). FAAB $60.",
   "injuryFlags": [
-    "Rhamondre Stevenson — Q (Knee - Questionable) (active)",
-    "Quentin Lake — Q (Hip - Questionable) (active)",
-    "Jalen Coker — Q (Quadriceps - Questionable) (reserve; bye W5)",
-    "Breece Hall — O (Quadriceps - Out Indefinitely) (reserve)",
-    "Zach Charbonnet — IR (PUP-R - Knee - acl) (IR slot)",
-    "Jordyn Tyson — IR (IR-R - Hamstring) (IR slot)",
-    "Travis Etienne — IR (IR - Hamstring) (IR slot)"
+    "Jalen Coker \u2014 Q (Quadriceps) (active)",
+    "Breece Hall \u2014 Q (Quadriceps) (active)",
+    "Zach Charbonnet \u2014 PUP (Knee - acl) (IR slot)",
+    "Jordyn Tyson \u2014 IR (Hamstring) (IR slot)",
+    "Travis Etienne \u2014 IR (Hamstring) (IR slot)",
+    "Leonard Williams \u2014 Q (Ankle) (reserve)"
   ],
-  "source": "Fantrax Oct 9 2026 ~5:22 PM PT live Eddies roster scrape (/workspace/fantrax-eddies-roster-2026-10-09-pm.json).",
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
   "fantraxTeamId": "xbvk9dpgmsb3ulv4",
   "lineupFlags": [
-    "Rhamondre Stevenson — Q (Knee - Questionable) (active)",
-    "Quentin Lake — Q (Hip - Questionable) (active)"
+    "Jalen Coker \u2014 Q (Quadriceps) (active)",
+    "Breece Hall \u2014 Q (Quadriceps) (active)",
+    "Leonard Williams \u2014 Q (Ankle) (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Rhamondre Stevenson — Q (Knee - Questionable) (active)",
-    "Quentin Lake — Q (Hip - Questionable) (active)",
-    "Jalen Coker — Q (Quadriceps - Questionable) (reserve; bye W5)",
-    "Breece Hall — O (Quadriceps - Out Indefinitely) (reserve)",
-    "Zach Charbonnet — IR (PUP-R - Knee - acl) (IR slot)",
-    "Jordyn Tyson — IR (IR-R - Hamstring) (IR slot)",
-    "Travis Etienne — IR (IR - Hamstring) (IR slot)"
+    "Jalen Coker \u2014 Q (Quadriceps) (active)",
+    "Breece Hall \u2014 Q (Quadriceps) (active)",
+    "Zach Charbonnet \u2014 PUP (Knee - acl) (IR slot)",
+    "Jordyn Tyson \u2014 IR (Hamstring) (IR slot)",
+    "Travis Etienne \u2014 IR (Hamstring) (IR slot)",
+    "Leonard Williams \u2014 Q (Ankle) (reserve)"
   ],
-  "updated": "2026-10-09"
+  "updated": "2026-10-14"
 }

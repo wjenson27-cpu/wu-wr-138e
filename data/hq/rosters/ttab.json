@@ -2,58 +2,60 @@
   "teamId": "ttab",
   "teamName": "Towner Top Aga Bottom",
   "owner": "Chase Anderson",
-  "asOf": "2026-10-08",
-  "faabLeft": 42,
-  "startingQB": null,
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 39,
+  "startingQB": "Josh Allen",
   "roster": {
     "QB": [
       "Josh Allen"
     ],
     "RB": [
-      "Cameron Skattebo",
-      "Ashton Jeanty",
       "Javonte Williams",
+      "Ashton Jeanty",
+      "Cameron Skattebo",
       "Emanuel Wilson",
       "Najee Harris"
     ],
     "WR": [
       "Christian Watson",
-      "Jameson Williams",
-      "Tre Tucker"
+      "Jameson Williams"
     ],
     "TE": [
-      "Jake Ferguson",
-      "Dallas Goedert"
-    ],
-    "LB": [
-      "Zack Baun",
-      "Divine Deablo",
-      "Dorian Williams",
-      "Del'Shawn Phillips",
-      "Dee Winters",
-      "Harold Perkins"
+      "Dallas Goedert",
+      "Jake Ferguson"
     ],
     "DL": [
-      "Khalil Mack"
+      "Khalil Mack",
+      "Akheem Mesidor"
+    ],
+    "LB": [
+      "Dorian Williams",
+      "Zack Baun",
+      "Harold Perkins",
+      "Dee Winters"
     ],
     "DB": [
+      "Dane Belton",
       "Caleb Downs",
-      "Andrew Wingard",
-      "Ji'Ayir Brown",
-      "Malaki Starks",
-      "Dane Belton"
+      "Javon Bullard",
+      "Jordan Battle"
     ],
     "IR": [
-      "Josh Allen",
-      "Dallas Goedert"
+      "Divine Deablo",
+      "Andrew Wingard"
     ]
   },
-  "notes": "Sep 16 post-waiver: +Treydan Stukes $18 (−Nailor); +Kwity Paye $16 (−Mesidor); +Del'Shawn Phillips $8. FAAB $51. Roster may still be stale vs mid-Sep trades. | Sep 20: +/−Christian Harris churn (net zero). | Sep 23 clear: +Tre Tucker (WR); +Keon Coleman (WR) | Sep 23 trade: −Etienne −Winfield +Dorian +Wingard (from Eddies) | Sep 23 FA: +Emanuel Wilson; +Kendre Miller/−Seth McGowan; +Ji'Ayir Brown/−Cole Bishop. | Sep 25: −Kendre Miller; +Cole Bishop; +Romeo Doubs/−Jalen Thompson. | Fantasy check Sep 28: +Abdul Carter (DL); −Kwity Paye. Fantasy check Sep 29: −Abdul Carter (Sep 28 10:07 AM). | Fantasy check Sep 30: −Cole Bishop (Sep 29 8:19 PM); −Keon Coleman (Sep 29 8:13 PM). | Sep 30 W4 waivers/FA: −Romeo Doubs; +Mack Hollins; +Bradley Chubb; +Malaki Starks; +Andre Cisco. FAAB $42. | Oct 3: +Harold Perkins/−Tre Harris. | Oct 7 W5 waivers/FA: +Khalil Mack (−Bradley Chubb) [FA 09:07 AM]; +Mansoor Delane (−Treydan Stukes) [FA 09:08 AM]; +Dane Belton (−Andre Cisco) [FA 09:12 AM]. FAAB $42. | Oct 7 FA: +Najee Harris; −Mack Hollins; −Mansoor Delane.",
-  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
-  "fantraxTeamId": "4grk2ph6msb3ulv4",
-  "updated": "2026-10-08",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 5 / IR 2. FAAB $42. | Oct 14 W6 waivers/FA: +Akheem Mesidor $3 (\u2212Tre Tucker); +Jordan Battle. FAAB $39.",
   "injuryFlags": [
-    "Josh Allen — Knee - Questionable (IR slot)",
-    "Dallas Goedert — Knee - mcl - Doubtful that will play next game (IR slot)"
-  ]
+    "Andrew Wingard \u2014 Q (Knee) (IR slot)"
+  ],
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "fantraxTeamId": "4grk2ph6msb3ulv4",
+  "lineupFlags": [],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "Andrew Wingard \u2014 Q (Knee) (IR slot)"
+  ],
+  "updated": "2026-10-14"
 }

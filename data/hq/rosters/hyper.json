@@ -2,56 +2,62 @@
   "teamId": "hyper",
   "teamName": "The Hypersecretors",
   "owner": "Jacob Crisp",
-  "asOf": "2026-10-09",
-  "faabLeft": 53,
-  "startingQB": "Bo Nix",
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 50,
+  "startingQB": "Justin Herbert",
   "roster": {
     "QB": [
       "Justin Herbert"
     ],
     "RB": [
       "Kenneth Walker III",
-      "J.K. Dobbins",
       "Keaton Mitchell",
-      "Rachaad White"
+      "Rachaad White",
+      "J.K. Dobbins"
     ],
     "WR": [
-      "Amon-Ra St. Brown",
       "Luther Burden",
-      "Emeka Egbuka",
       "Jaylin Noel",
+      "Emeka Egbuka",
+      "Amon-Ra St. Brown",
       "Travis Hunter"
     ],
     "TE": [
       "Sam LaPorta",
-      "Kenyon Sadiq",
       "Darren Waller"
+    ],
+    "DL": [
+      "Josh Hines-Allen"
     ],
     "LB": [
       "Nick Bolton",
-      "Blake Cashman",
       "Jack Gibbens",
+      "Payton Wilson",
       "Jacob Rodriguez",
-      "Payton Wilson"
-    ],
-    "DL": [
-      "Josh Hines-Allen",
-      "Nick Bosa",
-      "Laiatu Latu"
+      "Blake Cashman"
     ],
     "DB": [
       "Jeremy Chinn",
       "Tykee Smith"
     ],
     "IR": [
+      "Kenyon Sadiq",
       "Nick Bosa"
     ]
   },
-  "notes": "Sep 19 AM: −Dallas Turner. Sep 17: +Grant Delpit (−Brandon Jones). Sep 16: +Jaxson Dart $16 (−Keaton Mitchell). FAAB $92. | Sep 23 clear: +Sam Darnold (QB); +Michael Taaffe (DB); -Jaxson Dart (QB) | Sep 23 FA: +Bo Nix (QB). | Sep 24: +J.K. Dobbins $2 (−Michael Taaffe); +Baker Mayfield; −Sam Darnold. FAAB $81. | Sep 25: +Jeremy Chinn $3 (−Baker Mayfield). FAAB $78. | Sep 30 W4 waivers/FA: −MarShawn Lloyd; −Grant Delpit; +Darren Waller $6. FAAB $72. | Oct 3: +Keaton Mitchell $8/−Kirk Cousins. FAAB $64. | Oct 7 W5 waivers/FA: +Jaylin Noel $11 (−Bo Nix). FAAB $53. | Oct 8: +Rachaad White; −Alec Pierce; +Laiatu Latu.",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 13 / Reserve 6 / IR 2. FAAB $53. | Oct 14 W6 waivers/FA: +Darren Waller $3. FAAB $50.",
   "injuryFlags": [
-    "Nick Bosa — Calf - Out Indefinitely (IR slot)"
+    "Kenyon Sadiq \u2014 Q (Concussion) (IR slot)",
+    "Nick Bosa \u2014 Q (Calf) (IR slot)"
   ],
-  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
   "fantraxTeamId": "xz2uv87rmsb3ulv4",
-  "updated": "2026-10-09"
+  "lineupFlags": [],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "Kenyon Sadiq \u2014 Q (Concussion) (IR slot)",
+    "Nick Bosa \u2014 Q (Calf) (IR slot)"
+  ],
+  "updated": "2026-10-14"
 }

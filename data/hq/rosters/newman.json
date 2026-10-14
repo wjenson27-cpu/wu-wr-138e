@@ -2,57 +2,69 @@
   "teamId": "newman",
   "teamName": "Newman Lake Sleep Paralysis Demons",
   "owner": "Ryan McCallum",
-  "asOf": "2026-10-07",
-  "faabLeft": 77,
-  "startingQB": "Jalen Hurts",
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 64,
+  "startingQB": "Kirk Cousins",
   "roster": {
     "QB": [
-      "Jalen Hurts",
-      "Kirk Cousins"
+      "Kirk Cousins",
+      "Jalen Hurts"
     ],
     "RB": [
       "Jonathan Taylor",
-      "TreVeyon Henderson",
       "Seth McGowan"
     ],
     "WR": [
-      "Matthew Golden",
-      "Davante Adams",
       "Zay Flowers",
-      "Tee Higgins",
-      "Myles Price",
+      "Davante Adams",
+      "Matthew Golden",
       "A.J. Brown",
-      "Quentin Johnston"
+      "Tee Higgins",
+      "Myles Price"
     ],
     "TE": [
       "Juwan Johnson"
     ],
+    "DL": [
+      "Andrew Van Ginkel",
+      "Carl Granderson"
+    ],
     "LB": [
-      "Kaden Elliss",
       "Azeez Al-Shaair",
       "Zaire Franklin",
-      "Eric Wilson",
       "Jake Hansen",
       "Nathan Landman",
-      "Danny Stutsman"
-    ],
-    "DL": [
-      "Andrew Van Ginkel"
+      "Eric Wilson"
     ],
     "DB": [
       "L'Jarius Sneed",
-      "Xavier Watts",
-      "Jevon Holland"
+      "Xavier Watts"
     ],
     "IR": [
-      "A.J. Brown"
+      "Jordan Mason",
+      "TreVeyon Henderson",
+      "Kaden Elliss"
     ]
   },
-  "notes": "Sep 16 post-waiver: +Malaki Starks $5; +L'Jarius Sneed (null); +Chris Johnson (null, pos uncertain→RB). FAAB $110. | Sep 23 clear: +Leo Chenal (LB); -Chris Bell (WR) | Sep 23 FA: +Demond Claiborne (RB). | Sep 25: −Demond Claiborne. | Fantasy check Sep 28: +Jevon Holland (DB); −Chris Johnson (['RB']); −Malaki Starks (['DB']). Fantasy check Sep 29: −Leo Chenal (Sep 28 8:16 PM). | Sep 30 W4 waivers/FA: +Jake Hansen $5. FAAB $105. | Oct 2: +Quentin Johnston $6/−Wade Woodaz; +Danny Stutsman. | Oct 3: traded Aaron Jones +$5 FAAB for Nathan Landman. FAAB $94. | Oct 7 W5 waivers/FA: +Seth McGowan $1 (−Courtland Sutton); +Kirk Cousins $16. FAAB $77.",
-  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
-  "fantraxTeamId": "kwaohsfwmsb3ulv4",
-  "updated": "2026-10-07",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $65. | Oct 14 W6 waivers/FA: +Carl Granderson $1 (\u2212Jevon Holland). FAAB $64.",
   "injuryFlags": [
-    "A.J. Brown — Injured Reserve List - IR - Ankle (IR slot)"
-  ]
+    "A.J. Brown \u2014 IR (Ankle) (reserve)",
+    "Jordan Mason \u2014 IR (Thumb) (IR slot)",
+    "TreVeyon Henderson \u2014 D (Ankle) (IR slot)",
+    "Kaden Elliss \u2014 Q (Calf) (IR slot)"
+  ],
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "fantraxTeamId": "kwaohsfwmsb3ulv4",
+  "lineupFlags": [
+    "A.J. Brown \u2014 IR (Ankle) (reserve)"
+  ],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "A.J. Brown \u2014 IR (Ankle) (reserve)",
+    "Jordan Mason \u2014 IR (Thumb) (IR slot)",
+    "TreVeyon Henderson \u2014 D (Ankle) (IR slot)",
+    "Kaden Elliss \u2014 Q (Calf) (IR slot)"
+  ],
+  "updated": "2026-10-14"
 }

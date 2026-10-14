@@ -2,62 +2,75 @@
   "teamId": "pocket",
   "teamName": "Pocket Agents",
   "owner": "Kellen Olson",
-  "asOf": "2026-10-09",
+  "asOf": "2026-10-14 9:30 AM PT",
   "faabLeft": 101,
-  "startingQB": "Jared Goff",
+  "startingQB": "Tyler Shough",
   "roster": {
     "QB": [
-      "Jared Goff",
-      "Tyler Shough"
+      "Tyler Shough",
+      "Jared Goff"
     ],
     "RB": [
       "Woody Marks",
-      "Mike Washington",
-      "Jonah Coleman",
-      "Saquon Barkley"
+      "Mike Washington"
     ],
     "WR": [
       "CeeDee Lamb",
       "Tetairoa McMillan",
-      "Jaylen Waddle",
       "Rashid Shaheed",
+      "Jaylen Waddle",
       "Malik Washington",
-      "Adonai Mitchell"
+      "Kyle Williams"
     ],
     "TE": [
       "Dalton Kincaid",
       "Trey McBride"
     ],
-    "LB": [
-      "Ernest Jones",
-      "Barrett Carter",
-      "Josiah Trotter"
-    ],
     "DL": [
       "Will Anderson Jr."
+    ],
+    "LB": [
+      "Josiah Trotter",
+      "Ernest Jones",
+      "Barrett Carter"
     ],
     "DB": [
       "Jaquan Brisker",
       "Cooper DeJean",
-      "Brandon Jones",
-      "Chris Johnson",
-      "Jalen Pitre",
-      "Amani Hooker"
+      "Amani Hooker",
+      "Brandon Jones"
     ],
     "IR": [
+      "Saquon Barkley",
       "Jonah Coleman",
-      "Adonai Mitchell",
-      "Josiah Trotter"
+      "Adonai Mitchell"
     ]
   },
-  "notes": "Sep 20 AM: +Teddye Buchanan (−Jake Hansen, null bid, Sat Sep 19 ~10:25–10:28 PM). Prior: +Marvin Mims $0 (−Kyler Gordon). FAAB $111. | Sep 23 clear: +Mike Washington (WR); -Zachariah Branch (IR) | Sep 25: −Marvin Mims; +Brandon Jones (Dennis add/drop churn). | Sep 30 W4 waivers/FA: +Jonah Coleman (−Ty Okada); +Chris Johnson (−Teddye Buchanan). FAAB $111. | Oct 7 W5 waivers/FA: +Jonah Coleman; +Jalen Pitre. FAAB $111. | Oct 8: traded Oluokun+$10 to Ultron for Hooker+Barkley; −Gainwell. FAAB $101.",
-  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
-  "fantraxTeamId": "20zozmjgmsb3ulv4",
-  "updated": "2026-10-09",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $101. | Oct 14 W6 waivers/FA: +Kyle Williams (\u2212Jalen Pitre). FAAB $101.",
   "injuryFlags": [
-    "Jaylen Waddle — Leg - Questionable (active slot)",
-    "Jonah Coleman — Injured Reserve List - IR - Ankle (IR slot)",
-    "Adonai Mitchell — Finger - Questionable (IR slot)",
-    "Josiah Trotter — Shoulder - Questionable (IR slot)"
-  ]
+    "CeeDee Lamb \u2014 Q (Quadriceps) (active)",
+    "Saquon Barkley \u2014 Q (Hamstring) (IR slot)",
+    "Jonah Coleman \u2014 IR (Ankle) (IR slot)",
+    "Adonai Mitchell \u2014 Q (Finger) (IR slot)",
+    "Amani Hooker \u2014 Q (Concussion) (active)",
+    "Jalen Pitre \u2014 D (Shoulder - ac joint) (reserve)"
+  ],
+  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "fantraxTeamId": "20zozmjgmsb3ulv4",
+  "lineupFlags": [
+    "CeeDee Lamb \u2014 Q (Quadriceps) (active)",
+    "Amani Hooker \u2014 Q (Concussion) (active)",
+    "Jalen Pitre \u2014 D (Shoulder - ac joint) (reserve)"
+  ],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "CeeDee Lamb \u2014 Q (Quadriceps) (active)",
+    "Saquon Barkley \u2014 Q (Hamstring) (IR slot)",
+    "Jonah Coleman \u2014 IR (Ankle) (IR slot)",
+    "Adonai Mitchell \u2014 Q (Finger) (IR slot)",
+    "Amani Hooker \u2014 Q (Concussion) (active)",
+    "Jalen Pitre \u2014 D (Shoulder - ac joint) (reserve)"
+  ],
+  "updated": "2026-10-14"
 }

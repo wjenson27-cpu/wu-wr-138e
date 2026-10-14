@@ -2,13 +2,13 @@
   "teamId": "lab",
   "teamName": "Little Ass Boys",
   "owner": "Jesse Nicholson",
-  "asOf": "2026-09-30",
+  "asOf": "2026-10-14 9:30 AM PT",
   "faabLeft": 67,
-  "startingQB": "C.J. Stroud",
+  "startingQB": "Jayden Daniels",
   "roster": {
     "QB": [
-      "C.J. Stroud",
-      "Jayden Daniels"
+      "Jayden Daniels",
+      "C.J. Stroud"
     ],
     "RB": [
       "Jeremiyah Love",
@@ -18,14 +18,16 @@
       "Jaylen Wright"
     ],
     "WR": [
+      "Puka Nacua",
       "Mike Evans",
       "Jakobi Meyers",
-      "Caleb Douglas",
-      "Khalil Shakir",
-      "Puka Nacua"
+      "Khalil Shakir"
     ],
     "TE": [
       "Isaiah Likely"
+    ],
+    "DL": [
+      "Aidan Hutchinson"
     ],
     "LB": [
       "Roquan Smith",
@@ -34,31 +36,25 @@
       "Quay Walker",
       "Drue Tranquill"
     ],
-    "DL": [
-      "Aidan Hutchinson"
-    ],
     "DB": [
-      "Kevin Byard",
-      "Ronnie Hickman",
-      "Trevon Moehrig",
-      "Minkah Fitzpatrick"
+      "Minkah Fitzpatrick",
+      "Ronnie Hickman"
     ],
     "IR": [
-      "Jayden Daniels",
-      "Puka Nacua",
-      "Minkah Fitzpatrick"
+      "Caleb Douglas"
     ]
   },
-  "notes": "Sep 17 AM: dropped Baker Mayfield. Sep 16 post-waiver: +Kendrick Bourne $11 (−Tre Tucker). FAAB $104. | Sep 20: +Tutu Atwell. | Sep 22: dropped Tutu Atwell (5:47 AM). | Sep 23 clear: +C.J. Stroud (QB) | Fantasy check Sep 28: +Jakobi Meyers (WR). | Sep 30 W4 waivers/FA: +Jaylen Wright $26 (−Kendrick Bourne). FAAB $67.",
-  "source": "Fantrax Sep 30 2026 ~9:20 AM PT post-waiver roster sync (all 14 teams, after Week 4 FAAB clear).",
-  "fantraxTeamId": "a4q2ra3ymsb3ulv4",
-  "updated": "2026-09-30",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 13 / Reserve 7 / IR 1. FAAB $67.",
   "injuryFlags": [
-    "Mike Evans — Ribs - Questionable (active slot)",
-    "Jaylen Wright — Foot - Questionable (reserve)",
-    "Caleb Douglas — Ankle - Questionable (reserve)",
-    "Jayden Daniels — Elbow - Questionable (IR slot)",
-    "Puka Nacua — Hip - Questionable (IR slot)",
-    "Minkah Fitzpatrick — Groin - Questionable (IR slot)"
-  ]
+    "Caleb Douglas \u2014 Q (Ankle) (IR slot)"
+  ],
+  "source": "Fantrax roster sync Wed Oct 14 2026 ~6:45 AM PT (/workspace/fantrax-scrape-2026-10-14-am-roster-sync.json)",
+  "fantraxTeamId": "a4q2ra3ymsb3ulv4",
+  "lineupFlags": [],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "Caleb Douglas \u2014 Q (Ankle) (IR slot)"
+  ],
+  "updated": "2026-10-14"
 }

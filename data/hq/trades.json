@@ -1,8 +1,25 @@
 {
-  "updated": "2026-10-09",
-  "source": "Fantrax completed trades Oct 6 2026 (Eddies↔Saltese Hall/Stevenson for Hampton/Mack Wilson; Doubtpfizer↔Ultron Swift for Loveland).",
+  "updated": "2026-10-14",
+  "source": "Fantrax roster sync Wed Oct 14 2026 ~6:45 AM PT (/workspace/fantrax-scrape-2026-10-14-am-roster-sync.json)",
   "season": 2026,
   "trades": [
+    {
+      "date": "2026-10-09",
+      "time": "9:58 AM PDT",
+      "week": 5,
+      "status": "completed",
+      "official": true,
+      "teamA": "Saltese Slamm",
+      "teamB": "Substation",
+      "givesA": [
+        "Carnell Tate (WR)"
+      ],
+      "givesB": [
+        "Dre Greenlaw (LB)",
+        "Denzel Boston (WR)"
+      ],
+      "summary": "Week 5 — Saltese sent Carnell Tate to Substation for Dre Greenlaw and Denzel Boston (Oct 9 9:58 AM PDT)."
+    },
     {
       "date": "2026-10-08",
       "time": "4:34 PM PDT",
@@ -378,17 +395,19 @@
     {
       "teamId": "eddies",
       "team": "Eagle Ridge Eddies",
-      "lastUpdated": "2026-10-07 12:36 PM PT",
+      "lastUpdated": "Oct 12 1:59 PM",
       "players": [
+        "Zach Charbonnet",
         "Jacory Croskey-Merritt",
         "Travis Etienne",
         "Brian Robinson Jr.",
         "Rhamondre Stevenson",
+        "Kendrick Bourne",
         "Chimere Dike",
-        "Brian Thomas",
         "Jordyn Tyson",
-        "Kyle Pitts",
+        "Tuli Tuipulotu",
         "Leonard Williams",
+        "Cedric Gray",
         "Trenton Simpson",
         "Julian Love"
       ],
@@ -397,13 +416,13 @@
     {
       "teamId": "morningside",
       "team": "Morningside Muff Divers",
-      "lastUpdated": "2026-10-07 9:30 AM PT",
+      "lastUpdated": "Oct 7 9:30 AM",
       "players": [
         "Derrick Barnes",
         "Bobby Okereke",
         "Pete Werner"
       ],
-      "note": "Offering LB; needing RB.",
+      "note": null,
       "positionsOffered": [
         "LB"
       ],
@@ -414,21 +433,24 @@
     {
       "teamId": "newman",
       "team": "Newman Lake Sleep Paralysis Demons",
-      "lastUpdated": "2026-10-03 12:22 PM PT",
+      "lastUpdated": "Oct 13 10:31 AM",
       "players": [
         "Jalen Hurts",
         "TreVeyon Henderson",
         "Davante Adams",
         "A.J. Brown",
         "Matthew Golden",
-        "Tee Higgins"
+        "Tee Higgins",
+        "Jake Hansen",
+        "Eric Wilson",
+        "Jevon Holland"
       ],
       "note": null
     },
     {
       "teamId": "pocket",
       "team": "Pocket Agents",
-      "lastUpdated": "2026-10-02 4:24 PM PT",
+      "lastUpdated": "Oct 2 4:24 PM",
       "players": [
         "Jared Goff",
         "Tyler Shough"
@@ -438,7 +460,7 @@
     {
       "teamId": "saltese",
       "team": "Saltese Slamm",
-      "lastUpdated": "2026-10-06 11:31 AM PT",
+      "lastUpdated": "Oct 6 11:31 AM",
       "players": [
         "Stefon Diggs",
         "DeVonta Smith"
@@ -448,14 +470,14 @@
     {
       "teamId": "substation",
       "team": "Substation",
-      "lastUpdated": "2026-09-30 8:25 AM PT",
+      "lastUpdated": "Sep 30 8:25 AM",
       "players": [],
       "note": null
     },
     {
       "teamId": "ttab",
-      "team": "Towner Top Aga Bottom",
-      "lastUpdated": "2026-10-07 3:34 PM PT",
+      "team": "TTAB",
+      "lastUpdated": "Oct 11 9:56 AM",
       "players": [
         "Ashton Jeanty",
         "Cameron Skattebo",
@@ -470,17 +492,15 @@
         "Zack Baun",
         "Divine Deablo",
         "Harold Perkins",
-        "Jeremiah Trotter",
         "Dorian Williams",
         "Dee Winters",
-        "Dane Belton",
-        "Ji'Ayir Brown"
+        "Dane Belton"
       ],
       "note": null
     }
   ],
   "leaderboard_note": "As of early HQ: Nate led all-2026 deal count (incl handshake). Fantrax official player/pick deals concentrated with Aga/Chase/Larry.",
-  "pending_note": "Pending trades 0 (Fantrax Oct 8 2026 ~6:05 AM PT check).",
-  "fantrax_completed_view": "Newest official: Newman↔Saltese Aaron Jones+$5 FAAB for Nathan Landman (Oct 3 12:22 PM); Saltese↔Substation Boston for Montgomery (Sep 28 10:04 AM); Dongers↔Substation CJ Allen+$3 FAAB for Pollard (Sep 27 8:58 AM).",
+  "pending_note": "Pending trades 0 (Fantrax Oct 14 2026 ~6:45 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
+  "fantrax_completed_view": "Newest official: Saltese↔Substation Carnell Tate for Dre Greenlaw+Denzel Boston (Oct 9 9:58 AM); Newman↔Saltese Aaron Jones+$5 FAAB for Nathan Landman (Oct 3 12:22 PM); Saltese↔Substation Boston for Montgomery (Sep 28 10:04 AM).",
   "hqComplete": true
 }

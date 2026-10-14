@@ -2,59 +2,63 @@
   "teamId": "goats",
   "teamName": "Valley Old Goats",
   "owner": "Mike Heff",
-  "asOf": "2026-10-09",
-  "faabLeft": 70,
+  "asOf": "2026-10-14 9:30 AM PT",
+  "faabLeft": 69,
   "startingQB": "Patrick Mahomes",
   "roster": {
     "QB": [
-      "Patrick Mahomes",
-      "Deshaun Watson"
+      "Patrick Mahomes"
     ],
     "RB": [
-      "Chase Brown",
-      "Derrick Henry",
       "Bucky Irving",
-      "Samaje Perine",
+      "Derrick Henry",
       "Alvin Kamara",
-      "Josh Jacobs"
+      "Samaje Perine",
+      "Chase Brown"
     ],
     "WR": [
-      "Devaughn Vele",
       "DK Metcalf",
+      "Devaughn Vele",
       "Marvin Harrison"
     ],
     "TE": [
-      "George Kittle",
-      "Hunter Henry"
-    ],
-    "LB": [
-      "Drake Thomas",
-      "Devin Bush",
-      "Arvell Reese",
-      "Quincy Williams",
-      "Devin Lloyd"
+      "George Kittle"
     ],
     "DL": [
       "T.J. Watt",
       "Danielle Hunter"
     ],
+    "LB": [
+      "Drake Thomas",
+      "Devin Lloyd",
+      "Arvell Reese",
+      "Devin Bush",
+      "Quincy Williams"
+    ],
     "DB": [
-      "Kamren Curl",
-      "Josh Metellus",
-      "Amik Robertson"
+      "Deonte Banks",
+      "Amik Robertson",
+      "Josh Metellus"
     ],
     "IR": [
-      "Alvin Kamara",
-      "Josh Jacobs",
-      "Devin Lloyd"
+      "Josh Jacobs"
     ]
   },
-  "notes": "Sep 16 post-waiver: +Devaughn Vele $16 (−Marvin Mims). FAAB $84. | DATA CONFLICT: Vele $16 −Mims is Scrape A; Scrape B had Valley +Ezeiruaku $16. FAAB $84 either way. | Sep 25: +Tyrel Dodson. | Sep 30 W4 waivers/FA: +Josh Metellus $3 (−Tyrel Dodson). FAAB $81. | Oct 7 W5 waivers/FA: +Amik Robertson $11 (−Camryn Bynum). FAAB $70. | Oct 8: +Deshaun Watson/−Justice Hill.",
+  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 1. FAAB $69.",
   "injuryFlags": [
-    "Josh Jacobs — Personal - Reserve Commissioner Exempt List (IR slot)",
-    "Devin Lloyd — Calf - Questionable (IR slot)"
+    "Josh Jacobs \u2014 Q (Personal - Reserve Commissioner Exempt List) (IR slot)",
+    "Drake Thomas \u2014 Q (Ankle) (active)"
   ],
-  "source": "Fantrax Oct 7 2026 ~9:20 AM PT post-waiver sync (Week 5 FAAB clear 9:00 AM PT)",
+  "source": "Fantrax roster sync Wed Oct 14 2026 ~6:45 AM PT (/workspace/fantrax-scrape-2026-10-14-am-roster-sync.json)",
   "fantraxTeamId": "81bbo25imsb3ulv5",
-  "updated": "2026-10-09"
+  "lineupFlags": [
+    "Drake Thomas \u2014 Q (Ankle) (active)"
+  ],
+  "pendingClaim": null,
+  "pendingClaims": [],
+  "flags": [
+    "Josh Jacobs \u2014 Q (Personal - Reserve Commissioner Exempt List) (IR slot)",
+    "Drake Thomas \u2014 Q (Ankle) (active)"
+  ],
+  "updated": "2026-10-14"
 }
