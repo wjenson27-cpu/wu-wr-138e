@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#002244">
+<title>Eddies IDP Rankings</title>
+<link rel="icon" href="img/eddies.png">
+<link rel="stylesheet" href="css/warroom.css">
+<style>
+main{padding:10px 12px;max-width:720px;margin:0 auto}
+.ic{background:#0b1c2e;border-radius:10px;border-left:4px solid #1e3a5f;padding:10px 12px;margin-bottom:7px}
+.ic.t1{border-left-color:#69BE28}.ic.t2{border-left-color:#7eb6ff}.ic.t3{border-left-color:#38bdf8}.ic.t4{border-left-color:#a78bfa}.ic.t5{border-left-color:#f59e0b}.ic.t6,.ic.t7,.ic.t8{border-left-color:#64748b}
+.ic.mine{background:linear-gradient(90deg,#12301a 0%,#0b1c2e 60%)}
+.ih{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.ih b{font-size:.92rem}.ih .pp{font-size:1.15rem;font-weight:800;color:#69BE28;white-space:nowrap}
+.im{font-size:.7rem;color:#A5ACAF;margin-top:3px;line-height:1.45}
+.im .own{font-weight:800;color:#e8eaed}.im .own.free{color:#D4A017}
+.in{font-size:.74rem;margin-top:4px;color:#cbd5e1}
+.sh{font-size:.8rem;font-weight:800;color:#69BE28;text-transform:uppercase;letter-spacing:.05em;margin:18px 0 8px}
+.claim{border:2px solid #D4A017;border-radius:12px;padding:10px;background:#140f02;margin-bottom:10px}
+.claim h2{color:#D4A017;font-size:1rem;margin-bottom:4px}
+.bid{display:inline-block;background:#D4A017;color:#140f02;font-weight:800;border-radius:6px;padding:2px 7px;font-size:.8rem}
+.jump{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.jump a{background:#0b1c2e;border:1px solid #1e3a5f;color:#A5ACAF;padding:6px 10px;border-radius:14px;font-size:.72rem;font-weight:700;text-decoration:none}
+.est{font-size:.68rem;color:#fcd34d;margin:6px 0}
+</style>
+</head>
+<body>
+<div class="sticky-top">
+<header><div class="hdr"><img src="img/eddies.png" alt="Eddies"><div><h1>IDP Rankings</h1>
+<div class="sub">Eagle Ridge Eddies · Wheels Up scoring · <a href="index.html" style="color:#69BE28">Back to War Room</a></div></div></div></header>
+<div class="strip" id="strip">Loading…</div>
+</div>
+<main id="root"></main>
+<p class="footer">Projections are estimates from a simple model. Read-only page; no claims or lineup changes are made from here.</p>
+<script>
+function e(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var TEAM={eddies:'Eddies',dongers:'Dongers',doubtpfizer:'Doubtpfizer',goats:'Old Goats',hyper:'Hypersecretors',lab:'Little Ass Boys',morningside:'Morningside',newman:'Newman Lake',pocket:'Pocket Agents',saltese:'Saltese',slumlords:'Slumlords',substation:'Substation',ttab:'TTAB',ultron:'Ultron',FREE:'FREE'};
+function pct(x){return x==null?'–':Math.round(x*100)+'%'}
+function own(l){return '<span class="own'+(l==='FREE'?' free':'')+'">'+e(TEAM[l]||l)+'</span>'}
+function card(r){
+ var gd=r.greenDot==='green'?' · 🟢 green dot':(r.greenDot==='full'?' · full-time':'');
+ return '<div class="ic t'+r.tier+(r.league==='eddies'?' mine':'')+'"><div class="ih"><b>'+r.rank+'. '+e(r.player)+'</b><span class="pp">'+(r.bye?'BYE':r.proj.toFixed(1))+'</span></div>'+
+ '<div class="im">'+e(r.pos)+' '+e(r.team)+' '+(r.bye?'· BYE':'vs '+e(r.opp))+' · Tier '+r.tier+' · '+own(r.league)+'<br>Season '+r.fpgSeason.toFixed(1)+' FP/G · Last 3 '+r.fpgL3.toFixed(1)+' · Snaps '+pct(r.snapShareL3)+' (L3) · Tkl opp '+pct(r.tackleOpp)+(r.passRushProxy>0.03?' · Pressure '+pct(r.passRushProxy):'')+gd+'</div>'+
+ (r.note?'<div class="in">'+e(r.note)+'</div>':'')+'</div>';
+}
+fetch('data/idp-rankings.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+ var f=d.faabContext;
+ document.getElementById('strip').innerHTML='Week <span>'+d.week+'</span> · stats thru W'+d.statsThroughWeek+' · FAAB <span>$'+f.eddiesFaabLeft+'</span> · Byes: <span>'+e(d.byeTeams.join(', ')||'none')+'</span>';
+ var h='<div class="est">'+e(d.label)+' Updated '+e(d.generatedAt)+'.</div>';
+ h+='<div class="jump"><a href="#claims">Claim targets</a><a href="#movers">Top movers</a><a href="#DL">DL</a><a href="#LB">LB</a><a href="#DB">DB</a></div>';
+ h+='<div class="claim" id="claims"><h2>Free-agent claim targets</h2><div class="im">For the '+e(f.nextClear)+' run. League IDP winning bids: median $'+f.median+', 75th pct $'+f.p75+', top $'+f.max+' ('+f.n+' bids).</div>';
+ d.claimTargets.forEach(function(t,i){h+='<div class="ic t1"><div class="ih"><b>'+(i+1)+'. '+e(t.player)+'</b><span class="bid">$'+t.bid+' ($'+t.range[0]+'–'+t.range[1]+')</span></div><div class="im">'+e(t.pos)+' '+e(t.team)+' vs '+e(t.opp)+' · '+e(t.pos)+t.posRank+' · proj '+t.proj.toFixed(1)+' · Season '+t.fpgSeason.toFixed(1)+' · L3 '+t.fpgL3.toFixed(1)+' · Snaps '+pct(t.snapShareL3)+'</div>'+(t.note?'<div class="in">'+e(t.note)+'</div>':'')+'</div>'});
+ h+='</div>';
+ h+='<div class="sh" id="movers">Top movers (last 3 vs earlier FP/G)</div>';
+ d.movers.up.forEach(function(m){h+='<div class="ic t2"><div class="ih"><b>▲ '+e(m.player)+'</b><span class="pp">+'+m.delta.toFixed(1)+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+m.fpgEarly.toFixed(1)+' → '+m.fpgL3.toFixed(1)+' FP/G · proj '+m.proj.toFixed(1)+'</div></div>'});
+ d.movers.down.forEach(function(m){h+='<div class="ic t5"><div class="ih"><b>▼ '+e(m.player)+'</b><span class="pp" style="color:#f59e0b">'+m.delta.toFixed(1)+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+m.fpgEarly.toFixed(1)+' → '+m.fpgL3.toFixed(1)+' FP/G · proj '+m.proj.toFixed(1)+'</div></div>'});
+ ['DL','LB','DB'].forEach(function(p){h+='<div class="sh" id="'+p+'">'+p+' · top '+d.positions[p].length+'</div>';d.positions[p].forEach(function(r){h+=card(r)})});
+ document.getElementById('root').innerHTML=h;
+}).catch(function(){document.getElementById('strip').textContent='Could not load data/idp-rankings.json'});
+</script>
+</body>
+</html>
