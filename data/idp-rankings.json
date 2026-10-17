@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T10:40-07:00",
+ "generatedAt": "2026-10-17T10:26-07:00",
  "week": 6,
  "statsThroughWeek": 5,
  "label": "Projections are ESTIMATES from a simple model, not Fantrax projections.",
@@ -10,7 +10,7 @@
   "injuries": "nflverse injuries_2026 + players.csv status",
   "schedule": "nflverse nfldata games.csv",
   "greenDots": "Mike Woellert week 5 asOf 2026-10-13T08:15:00-07:00",
-  "rosters": "HQ rosters (Oct 14 6:45 AM PT) + Oct 14 9:00-9:17 AM waiver results"
+  "rosters": "HQ rosters (Oct 17 6:40 AM PT live sync; no waiver clear since Oct 14)"
  },
  "scoring": {
   "solo": 2,
@@ -33,33 +33,7 @@
   "MIA",
   "MIN"
  ],
- "waiversApplied": [
-  "Ultron: +Trevon Moehrig (DB CAR) -None",
-  "Pocket Agents: +Kyle Williams (WR NE) -Jalen Pitre (DB HOU)",
-  "Mrs. Doubtpfizer: +D'Marco Jackson (LB CHI) -Keisean Nixon (DB GB)",
-  "Substation: +A.J. Haulcy (DB R IND) -None",
-  "Mrs. Doubtpfizer: +Dylan Sampson (RB CLE) -Tre Harris (WR LAC)",
-  "Indian Trail Slumlords: +Darius Cooper (WR PHI) -None",
-  "Ultron: +Pat Freiermuth (TE PIT) -Mark Andrews (TE BAL)",
-  "Indian Trail Slumlords: +Dameon Pierce (RB PHI) -None",
-  "Saltese Slamm: +Nik Bonitto (DL,LB,ID DEN) -Chuck Clark (DB DET)",
-  "Indian Trail Slumlords: +Jaden Dugger (LB R SF) -None",
-  "Morningside Muff Divers: +MarShawn Lloyd (RB GB) -Raheim Sanders (RB CLE)",
-  "Drummond Dongers: +Jonas Sanker (DB NO) -Daxton Hill (DB CIN)",
-  "Eagle Ridge Eddies: +Mansoor Delane (DB R KC) -Leonard Williams (DL SEA)",
-  "Ultron: +Germie Bernard (WR R PIT) -Antonio Williams (WR R WAS)",
-  "Newman Lake Sleep Paralysis Demons: +Carl Granderson (DL NO) -Jevon Holland (DB NYG)",
-  "The Hypersecretors: +Darren Waller (TE CAR) -None",
-  "Towner Top Aga Bottom: +Akheem Mesidor (DL,LB R LAC) -Tre Tucker (WR LV)",
-  "Morningside Muff Divers: +Kimani Vidal (RB LAC) -Roman Wilson (WR PIT)",
-  "Substation: +Kenneth Gainwell (RB TB) -None",
-  "Ultron: +Keenan Allen (WR IND) -None",
-  "Ultron: +Malaki Starks (DB BAL) -None",
-  "Ultron: +Grant Delpit (DB CLE) -Malaki Starks (DB BAL)",
-  "Morningside Muff Divers: +Malaki Starks (DB BAL) -C.J. Henderson (DB ATL)",
-  "Towner Top Aga Bottom: +Jordan Battle (DB CIN) -None",
-  "Substation: +Tyjae Spears (RB TEN) -Terrance Ferguson (TE LAR)"
- ],
+ "waiversApplied": [],
  "positions": {
   "DL": [
    {
@@ -100,7 +74,7 @@
     "league": "pocket",
     "rank": 1,
     "tier": 1,
-    "note": "riser: 37.7 FP/G last 3 vs 21.0 earlier"
+    "note": "injury: nan; riser: 37.7 FP/G last 3 vs 21.0 earlier"
    },
    {
     "id": "00-0041026",
@@ -140,7 +114,7 @@
     "league": "dongers",
     "rank": 2,
     "tier": 2,
-    "note": "riser: 25.3 FP/G last 3 vs 18.0 earlier"
+    "note": "injury: nan; riser: 25.3 FP/G last 3 vs 18.0 earlier"
    },
    {
     "id": "00-0036914",
@@ -180,47 +154,7 @@
     "league": "slumlords",
     "rank": 3,
     "tier": 3,
-    "note": "tough matchup vs LV"
-   },
-   {
-    "id": "00-0039111",
-    "player": "Tuli Tuipulotu",
-    "pos": "DL",
-    "nflPos": "LB",
-    "team": "LAC",
-    "opp": "KC",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 18.0,
-    "fpgL3": 24.0,
-    "proj": 22.1,
-    "snapShare": 0.814,
-    "snapShareL3": 0.873,
-    "snapShareLast": 0.95,
-    "tackleOpp": 0.07,
-    "tacklesPerSnap": 0.08,
-    "passRushProxy": 0.066,
-    "matchup": 0.944,
-    "matchupDetail": {
-     "opp": "KC",
-     "oppPlaysPG": 62.2,
-     "oppPassRate": 0.574,
-     "oppSackRate": 0.042
-    },
-    "greenDot": null,
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 16.0,
-     "2": 2.0,
-     "3": 28.0,
-     "4": 30.0,
-     "5": 14.0
-    },
-    "league": "eddies",
-    "rank": 4,
-    "tier": 3,
-    "note": "riser: 24.0 FP/G last 3 vs 9.0 earlier; snaps up to 95%"
+    "note": "injury: nan; tough matchup vs LV"
    },
    {
     "id": "00-0039840",
@@ -257,10 +191,10 @@
      "4": 14.0,
      "5": 38.0
     },
-    "league": "FREE",
-    "rank": 5,
+    "league": "lab",
+    "rank": 4,
     "tier": 3,
-    "note": "riser: 21.0 FP/G last 3 vs 7.5 earlier; snaps up to 72%"
+    "note": "injury: nan; riser: 21.0 FP/G last 3 vs 7.5 earlier"
    },
    {
     "id": "00-0037192",
@@ -296,10 +230,10 @@
      "3": 17.0,
      "4": 23.0
     },
-    "league": "FREE",
-    "rank": 6,
+    "league": "eddies",
+    "rank": 5,
     "tier": 4,
-    "note": "riser: 20.0 FP/G last 3 vs 8.5 earlier; sleeper: unrostered with a top-half projection"
+    "note": "injury: nan; riser: 20.0 FP/G last 3 vs 8.5 earlier"
    },
    {
     "id": "00-0035643",
@@ -337,9 +271,9 @@
      "5": 14.0
     },
     "league": "slumlords",
-    "rank": 7,
+    "rank": 6,
     "tier": 5,
-    "note": "riser: 19.7 FP/G last 3 vs 15.0 earlier"
+    "note": "injury: nan; riser: 19.7 FP/G last 3 vs 15.0 earlier"
    },
    {
     "id": "00-0032378",
@@ -377,9 +311,9 @@
      "5": 22.0
     },
     "league": "substation",
-    "rank": 8,
+    "rank": 7,
     "tier": 5,
-    "note": "riser: 21.3 FP/G last 3 vs 16.0 earlier; tough matchup vs TEN"
+    "note": "injury: nan; riser: 21.3 FP/G last 3 vs 16.0 earlier"
    },
    {
     "id": "00-0035248",
@@ -417,9 +351,9 @@
      "5": 17.0
     },
     "league": "dongers",
-    "rank": 9,
+    "rank": 8,
     "tier": 5,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0036568",
@@ -456,9 +390,9 @@
      "5": 25.0
     },
     "league": "FREE",
-    "rank": 10,
+    "rank": 9,
     "tier": 5,
-    "note": "riser: 19.5 FP/G last 3 vs 5.5 earlier; sleeper: unrostered with a top-half projection"
+    "note": "injury: nan; riser: 19.5 FP/G last 3 vs 5.5 earlier"
    },
    {
     "id": "00-0039137",
@@ -496,9 +430,9 @@
      "5": 8.0
     },
     "league": "doubtpfizer",
-    "rank": 11,
+    "rank": 10,
     "tier": 5,
-    "note": "riser: 17.3 FP/G last 3 vs 12.0 earlier"
+    "note": "injury: nan; riser: 17.3 FP/G last 3 vs 12.0 earlier"
    },
    {
     "id": "00-0033886",
@@ -535,9 +469,9 @@
      "4": 31.0
     },
     "league": "goats",
-    "rank": 12,
+    "rank": 11,
     "tier": 5,
-    "note": "did not play W5 \u2014 check status (proj cut 25%); good matchup vs TB"
+    "note": "did not play W5 \u2014 check status (proj cut 25%); injury: nan"
    },
    {
     "id": "00-0035402",
@@ -574,9 +508,9 @@
      "5": 27.0
     },
     "league": "newman",
-    "rank": 13,
+    "rank": 12,
     "tier": 5,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0041544",
@@ -614,9 +548,9 @@
      "5": 27.0
     },
     "league": "ttab",
-    "rank": 14,
+    "rank": 13,
     "tier": 5,
-    "note": "riser: 17.7 FP/G last 3 vs 5.5 earlier; snaps up to 63%"
+    "note": "injury: nan; riser: 17.7 FP/G last 3 vs 5.5 earlier"
    },
    {
     "id": "00-0038386",
@@ -654,9 +588,9 @@
      "5": 42.0
     },
     "league": "FREE",
-    "rank": 15,
+    "rank": 14,
     "tier": 5,
-    "note": "riser: 16.7 FP/G last 3 vs 9.5 earlier; sleeper: unrostered with a top-half projection"
+    "note": "injury: nan; riser: 16.7 FP/G last 3 vs 9.5 earlier"
    },
    {
     "id": "00-0039309",
@@ -694,9 +628,9 @@
      "5": 36.0
     },
     "league": "FREE",
-    "rank": 16,
+    "rank": 15,
     "tier": 5,
-    "note": "riser: 20.3 FP/G last 3 vs 4.5 earlier; sleeper: unrostered with a top-half projection"
+    "note": "injury: nan; riser: 20.3 FP/G last 3 vs 4.5 earlier"
    },
    {
     "id": "00-0036321",
@@ -734,9 +668,9 @@
      "5": 8.0
     },
     "league": "saltese",
-    "rank": 17,
+    "rank": 16,
     "tier": 6,
-    "note": "riser: 15.0 FP/G last 3 vs 11.0 earlier; good matchup vs NYG"
+    "note": "injury: nan; riser: 15.0 FP/G last 3 vs 11.0 earlier"
    },
    {
     "id": "00-0033945",
@@ -773,9 +707,9 @@
      "5": 14.0
     },
     "league": "FREE",
-    "rank": 18,
+    "rank": 17,
     "tier": 6,
-    "note": "riser: 14.0 FP/G last 3 vs 5.0 earlier; snaps up to 76%"
+    "note": "injury: nan; riser: 14.0 FP/G last 3 vs 5.0 earlier"
    },
    {
     "id": "00-0041557",
@@ -812,9 +746,9 @@
      "5": 25.0
     },
     "league": "FREE",
-    "rank": 19,
+    "rank": 18,
     "tier": 6,
-    "note": ""
+    "note": "injury: nan; sleeper: unrostered with a top-half projection"
    },
    {
     "id": "00-0031565",
@@ -852,9 +786,9 @@
      "5": 21.0
     },
     "league": "goats",
-    "rank": 20,
+    "rank": 19,
     "tier": 6,
-    "note": "riser: 16.7 FP/G last 3 vs 10.0 earlier"
+    "note": "injury: nan; riser: 16.7 FP/G last 3 vs 10.0 earlier"
    },
    {
     "id": "00-0037815",
@@ -892,9 +826,9 @@
      "5": 10.0
     },
     "league": "FREE",
-    "rank": 21,
+    "rank": 20,
     "tier": 6,
-    "note": "riser: 13.7 FP/G last 3 vs 8.5 earlier; good matchup vs CHI"
+    "note": "injury: nan; riser: 13.7 FP/G last 3 vs 8.5 earlier"
    },
    {
     "id": "00-0037249",
@@ -932,9 +866,9 @@
      "5": 30.0
     },
     "league": "saltese",
-    "rank": 22,
+    "rank": 21,
     "tier": 6,
-    "note": "riser: 16.3 FP/G last 3 vs 3.0 earlier"
+    "note": "injury: nan; riser: 16.3 FP/G last 3 vs 3.0 earlier"
    },
    {
     "id": "00-0035642",
@@ -972,49 +906,9 @@
      "5": 20.0
     },
     "league": "hyper",
-    "rank": 23,
+    "rank": 22,
     "tier": 6,
-    "note": ""
-   },
-   {
-    "id": "00-0031040",
-    "player": "Khalil Mack",
-    "pos": "DL",
-    "nflPos": "OLB",
-    "team": "LAC",
-    "opp": "KC",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 12.8,
-    "fpgL3": 14.0,
-    "proj": 13.5,
-    "snapShare": 0.71,
-    "snapShareL3": 0.733,
-    "snapShareLast": 0.79,
-    "tackleOpp": 0.05,
-    "tacklesPerSnap": 0.065,
-    "passRushProxy": 0.066,
-    "matchup": 0.943,
-    "matchupDetail": {
-     "opp": "KC",
-     "oppPlaysPG": 62.2,
-     "oppPassRate": 0.574,
-     "oppSackRate": 0.042
-    },
-    "greenDot": null,
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 6.0,
-     "2": 16.0,
-     "3": 15.0,
-     "4": 26.0,
-     "5": 1.0
-    },
-    "league": "ttab",
-    "rank": 24,
-    "tier": 6,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0040872",
@@ -1052,9 +946,9 @@
      "5": 12.0
     },
     "league": "ultron",
-    "rank": 25,
+    "rank": 23,
     "tier": 6,
-    "note": "snaps up to 79%"
+    "note": "injury: nan; snaps up to 79%"
    },
    {
     "id": "00-0033131",
@@ -1092,9 +986,9 @@
      "5": 22.0
     },
     "league": "FREE",
-    "rank": 26,
+    "rank": 24,
     "tier": 6,
-    "note": "riser: 14.7 FP/G last 3 vs 2.0 earlier"
+    "note": "injury: nan; riser: 14.7 FP/G last 3 vs 2.0 earlier"
    },
    {
     "id": "00-0027969",
@@ -1132,9 +1026,9 @@
      "5": 14.0
     },
     "league": "FREE",
-    "rank": 27,
-    "tier": 7,
-    "note": "good matchup vs TB"
+    "rank": 25,
+    "tier": 6,
+    "note": "injury: nan; good matchup vs TB"
    },
    {
     "id": "00-0036989",
@@ -1171,9 +1065,9 @@
      "5": 6.0
     },
     "league": "FREE",
-    "rank": 28,
+    "rank": 26,
     "tier": 7,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0040255",
@@ -1211,9 +1105,9 @@
      "5": 17.0
     },
     "league": "FREE",
-    "rank": 29,
+    "rank": 27,
     "tier": 7,
-    "note": "riser: 12.0 FP/G last 3 vs 1.5 earlier; snaps up to 59%"
+    "note": "injury: nan; riser: 12.0 FP/G last 3 vs 1.5 earlier"
    },
    {
     "id": "00-0036220",
@@ -1250,9 +1144,9 @@
      "4": 9.0
     },
     "league": "FREE",
-    "rank": 30,
+    "rank": 28,
     "tier": 7,
-    "note": "riser: 13.0 FP/G last 3 vs 4.5 earlier"
+    "note": "injury: nan; riser: 13.0 FP/G last 3 vs 4.5 earlier"
    },
    {
     "id": "00-0038574",
@@ -1290,9 +1184,9 @@
      "5": 5.0
     },
     "league": "FREE",
-    "rank": 31,
+    "rank": 29,
     "tier": 7,
-    "note": "riser: 12.0 FP/G last 3 vs 6.0 earlier"
+    "note": "injury: nan; riser: 12.0 FP/G last 3 vs 6.0 earlier"
    },
    {
     "id": "00-0039148",
@@ -1330,9 +1224,9 @@
      "5": 19.0
     },
     "league": "FREE",
-    "rank": 32,
+    "rank": 30,
     "tier": 7,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0039401",
@@ -1368,9 +1262,9 @@
      "5": 8.0
     },
     "league": "FREE",
-    "rank": 33,
+    "rank": 31,
     "tier": 7,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0038541",
@@ -1406,9 +1300,9 @@
      "5": 5.0
     },
     "league": "FREE",
-    "rank": 34,
+    "rank": 32,
     "tier": 7,
-    "note": "riser: 14.0 FP/G last 3 vs 2.0 earlier; snaps down to 18%"
+    "note": "injury: nan; riser: 14.0 FP/G last 3 vs 2.0 earlier"
    },
    {
     "id": "00-0036705",
@@ -1442,9 +1336,9 @@
      "5": 14.0
     },
     "league": "FREE",
-    "rank": 35,
+    "rank": 33,
     "tier": 7,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0039289",
@@ -1478,9 +1372,89 @@
      "5": 12.0
     },
     "league": "FREE",
-    "rank": 36,
+    "rank": 34,
     "tier": 7,
-    "note": "good matchup vs NYJ"
+    "note": "injury: nan; good matchup vs NYJ"
+   },
+   {
+    "id": "00-0041549",
+    "player": "Darrell Jackson Jr.",
+    "pos": "DL",
+    "nflPos": "DT",
+    "team": "NYJ",
+    "opp": "NE",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 7.2,
+    "fpgL3": 10.67,
+    "proj": 10.8,
+    "snapShare": 0.32,
+    "snapShareL3": 0.407,
+    "snapShareLast": 0.43,
+    "tackleOpp": 0.038,
+    "tacklesPerSnap": 0.105,
+    "passRushProxy": 0.031,
+    "matchup": 1.008,
+    "matchupDetail": {
+     "opp": "NE",
+     "oppPlaysPG": 62.6,
+     "oppPassRate": 0.597,
+     "oppSackRate": 0.059
+    },
+    "greenDot": null,
+    "injury": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 1.0,
+     "2": 3.0,
+     "3": 1.0,
+     "4": 7.0,
+     "5": 24.0
+    },
+    "league": "FREE",
+    "rank": 35,
+    "tier": 7,
+    "note": "injury: nan; riser: 10.7 FP/G last 3 vs 2.0 earlier"
+   },
+   {
+    "id": "00-0036883",
+    "player": "Tommy Togiai",
+    "pos": "DL",
+    "nflPos": "DT",
+    "team": "HOU",
+    "opp": "JAX",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 10.4,
+    "fpgL3": 13.0,
+    "proj": 10.6,
+    "snapShare": 0.618,
+    "snapShareL3": 0.607,
+    "snapShareLast": 0.52,
+    "tackleOpp": 0.087,
+    "tacklesPerSnap": 0.132,
+    "passRushProxy": 0.0,
+    "matchup": 0.963,
+    "matchupDetail": {
+     "opp": "JAX",
+     "oppPlaysPG": 57.6,
+     "oppPassRate": 0.549,
+     "oppSackRate": 0.063
+    },
+    "greenDot": null,
+    "injury": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 3.0,
+     "2": 10.0,
+     "3": 14.0,
+     "4": 13.0,
+     "5": 12.0
+    },
+    "league": "FREE",
+    "rank": 36,
+    "tier": 8,
+    "note": "injury: nan; riser: 13.0 FP/G last 3 vs 6.5 earlier"
    }
   ],
   "LB": [
@@ -1520,7 +1494,7 @@
     "league": "goats",
     "rank": 1,
     "tier": 1,
-    "note": "green dot (Woellert)"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0041509",
@@ -1560,7 +1534,7 @@
     "league": "goats",
     "rank": 2,
     "tier": 2,
-    "note": "riser: 33.0 FP/G last 3 vs 12.5 earlier"
+    "note": "injury: nan; riser: 33.0 FP/G last 3 vs 12.5 earlier"
    },
    {
     "id": "00-0036994",
@@ -1600,7 +1574,7 @@
     "league": "pocket",
     "rank": 3,
     "tier": 2,
-    "note": "riser: 30.7 FP/G last 3 vs 21.0 earlier; green dot (Woellert)"
+    "note": "injury: nan; riser: 30.7 FP/G last 3 vs 21.0 earlier"
    },
    {
     "id": "00-0034815",
@@ -1640,7 +1614,7 @@
     "league": "eddies",
     "rank": 4,
     "tier": 2,
-    "note": "riser: 27.3 FP/G last 3 vs 22.0 earlier; green dot (Woellert)"
+    "note": "injury: nan; riser: 27.3 FP/G last 3 vs 22.0 earlier"
    },
    {
     "id": "00-0034673",
@@ -1677,10 +1651,10 @@
      "4": 33.0,
      "5": 28.0
     },
-    "league": "substation",
+    "league": "ultron",
     "rank": 5,
     "tier": 3,
-    "note": "riser: 29.0 FP/G last 3 vs 14.5 earlier; green dot (Woellert)"
+    "note": "injury: nan; riser: 29.0 FP/G last 3 vs 14.5 earlier"
    },
    {
     "id": "00-0037615",
@@ -1720,7 +1694,7 @@
     "league": "doubtpfizer",
     "rank": 6,
     "tier": 3,
-    "note": "green dot (Woellert)"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0037457",
@@ -1760,7 +1734,7 @@
     "league": "newman",
     "rank": 7,
     "tier": 3,
-    "note": "riser: 26.3 FP/G last 3 vs 6.0 earlier; snaps up to 95%"
+    "note": "injury: nan; riser: 26.3 FP/G last 3 vs 6.0 earlier"
    },
    {
     "id": "00-0036418",
@@ -1799,7 +1773,7 @@
     "league": "ttab",
     "rank": 8,
     "tier": 4,
-    "note": "riser: 25.0 FP/G last 3 vs 20.5 earlier; green dot (Woellert)"
+    "note": "injury: nan; riser: 25.0 FP/G last 3 vs 20.5 earlier"
    },
    {
     "id": "00-0035166",
@@ -1838,7 +1812,7 @@
     "league": "newman",
     "rank": 9,
     "tier": 4,
-    "note": "green dot (Woellert)"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0036621",
@@ -1877,7 +1851,7 @@
     "league": "hyper",
     "rank": 10,
     "tier": 4,
-    "note": "riser: 23.5 FP/G last 3 vs 18.5 earlier; green dot (Woellert)"
+    "note": "injury: nan; riser: 23.5 FP/G last 3 vs 18.5 earlier"
    },
    {
     "id": "00-0039741",
@@ -1917,7 +1891,7 @@
     "league": "hyper",
     "rank": 11,
     "tier": 4,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0031898",
@@ -1957,7 +1931,7 @@
     "league": "doubtpfizer",
     "rank": 12,
     "tier": 4,
-    "note": "green dot (Woellert)"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0029607",
@@ -1997,7 +1971,47 @@
     "league": "lab",
     "rank": 13,
     "tier": 4,
-    "note": "riser: 23.3 FP/G last 3 vs 13.0 earlier; green dot (Woellert)"
+    "note": "injury: nan; riser: 23.3 FP/G last 3 vs 13.0 earlier"
+   },
+   {
+    "id": "00-0039111",
+    "player": "Tuli Tuipulotu",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "LAC",
+    "opp": "KC",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 18.0,
+    "fpgL3": 24.0,
+    "proj": 22.1,
+    "snapShare": 0.814,
+    "snapShareL3": 0.873,
+    "snapShareLast": 0.95,
+    "tackleOpp": 0.07,
+    "tacklesPerSnap": 0.08,
+    "passRushProxy": 0.066,
+    "matchup": 0.944,
+    "matchupDetail": {
+     "opp": "KC",
+     "oppPlaysPG": 62.2,
+     "oppPassRate": 0.574,
+     "oppSackRate": 0.042
+    },
+    "greenDot": null,
+    "injury": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 16.0,
+     "2": 2.0,
+     "3": 28.0,
+     "4": 30.0,
+     "5": 14.0
+    },
+    "league": "FREE",
+    "rank": 14,
+    "tier": 5,
+    "note": "injury: nan; riser: 24.0 FP/G last 3 vs 9.0 earlier"
    },
    {
     "id": "00-0034413",
@@ -2035,88 +2049,9 @@
      "5": 20.0
     },
     "league": "ultron",
-    "rank": 14,
-    "tier": 5,
-    "note": "riser: 20.7 FP/G last 3 vs 16.5 earlier; snaps up to 100%"
-   },
-   {
-    "id": "00-0041502",
-    "player": "Josiah Trotter",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "TB",
-    "opp": "PIT",
-    "bye": false,
-    "gp": 4,
-    "fpgSeason": 28.0,
-    "fpgL3": 17.5,
-    "proj": 21.5,
-    "snapShare": 0.888,
-    "snapShareL3": 0.905,
-    "snapShareLast": 0.98,
-    "tackleOpp": 0.175,
-    "tacklesPerSnap": 0.181,
-    "passRushProxy": 0.014,
-    "matchup": 0.923,
-    "matchupDetail": {
-     "opp": "PIT",
-     "oppPlaysPG": 60.4,
-     "oppPassRate": 0.675,
-     "oppSackRate": 0.069
-    },
-    "greenDot": "full",
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 52.0,
-     "2": 25.0,
-     "4": 19.0,
-     "5": 16.0
-    },
-    "league": "pocket",
     "rank": 15,
     "tier": 5,
-    "note": "tough matchup vs PIT"
-   },
-   {
-    "id": "00-0040579",
-    "player": "Carson Schwesinger",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "CLE",
-    "opp": "BAL",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 19.4,
-    "fpgL3": 18.33,
-    "proj": 21.4,
-    "snapShare": 1.0,
-    "snapShareL3": 1.0,
-    "snapShareLast": 1.0,
-    "tackleOpp": 0.129,
-    "tacklesPerSnap": 0.12,
-    "passRushProxy": 0.014,
-    "matchup": 1.078,
-    "matchupDetail": {
-     "opp": "BAL",
-     "oppPlaysPG": 60.8,
-     "oppPassRate": 0.526,
-     "oppSackRate": 0.069
-    },
-    "greenDot": "green",
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 18.0,
-     "2": 24.0,
-     "3": 10.0,
-     "4": 13.0,
-     "5": 32.0
-    },
-    "league": "substation",
-    "rank": 16,
-    "tier": 5,
-    "note": "green dot (Woellert); good matchup vs BAL"
+    "note": "injury: nan; riser: 20.7 FP/G last 3 vs 16.5 earlier"
    },
    {
     "id": "00-0040574",
@@ -2154,9 +2089,9 @@
      "5": 37.0
     },
     "league": "FREE",
-    "rank": 17,
+    "rank": 16,
     "tier": 5,
-    "note": "riser: 22.0 FP/G last 3 vs 16.5 earlier; sleeper: unrostered with a top-half projection"
+    "note": "injury: nan; riser: 22.0 FP/G last 3 vs 16.5 earlier"
    },
    {
     "id": "00-0035680",
@@ -2194,9 +2129,9 @@
      "5": 37.0
     },
     "league": "goats",
-    "rank": 18,
+    "rank": 17,
     "tier": 5,
-    "note": "riser: 21.0 FP/G last 3 vs 11.5 earlier; good matchup vs BAL"
+    "note": "injury: nan; riser: 21.0 FP/G last 3 vs 11.5 earlier"
    },
    {
     "id": "00-0038504",
@@ -2234,9 +2169,9 @@
      "5": 25.0
     },
     "league": "eddies",
-    "rank": 19,
+    "rank": 18,
     "tier": 5,
-    "note": "riser: 24.7 FP/G last 3 vs 14.0 earlier; tough matchup vs CLE"
+    "note": "injury: nan; riser: 24.7 FP/G last 3 vs 14.0 earlier"
    },
    {
     "id": "00-0041028",
@@ -2274,9 +2209,9 @@
      "5": 27.0
     },
     "league": "doubtpfizer",
-    "rank": 20,
+    "rank": 19,
     "tier": 5,
-    "note": "riser: 21.3 FP/G last 3 vs 11.5 earlier"
+    "note": "injury: nan; riser: 21.3 FP/G last 3 vs 11.5 earlier"
    },
    {
     "id": "00-0037587",
@@ -2314,9 +2249,9 @@
      "5": 36.0
     },
     "league": "newman",
-    "rank": 21,
+    "rank": 20,
     "tier": 5,
-    "note": "green dot (Woellert)"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0039826",
@@ -2352,9 +2287,88 @@
      "4": 37.0
     },
     "league": "FREE",
+    "rank": 21,
+    "tier": 5,
+    "note": "did not play W5 \u2014 check status (proj cut 25%); injury: nan"
+   },
+   {
+    "id": "00-0040579",
+    "player": "Carson Schwesinger",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "CLE",
+    "opp": "BAL",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 19.4,
+    "fpgL3": 18.33,
+    "proj": 19.3,
+    "snapShare": 1.0,
+    "snapShareL3": 1.0,
+    "snapShareLast": 1.0,
+    "tackleOpp": 0.129,
+    "tacklesPerSnap": 0.12,
+    "passRushProxy": 0.014,
+    "matchup": 1.078,
+    "matchupDetail": {
+     "opp": "BAL",
+     "oppPlaysPG": 60.8,
+     "oppPassRate": 0.526,
+     "oppSackRate": 0.069
+    },
+    "greenDot": "green",
+    "injury": "Questionable",
+    "dnpLast": false,
+    "weekly": {
+     "1": 18.0,
+     "2": 24.0,
+     "3": 10.0,
+     "4": 13.0,
+     "5": 32.0
+    },
+    "league": "ultron",
     "rank": 22,
     "tier": 5,
-    "note": "did not play W5 \u2014 check status (proj cut 25%); riser: 37.0 FP/G last 3 vs 4.0 earlier"
+    "note": "injury: Questionable; green dot (Woellert)"
+   },
+   {
+    "id": "00-0041502",
+    "player": "Josiah Trotter",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "TB",
+    "opp": "PIT",
+    "bye": false,
+    "gp": 4,
+    "fpgSeason": 28.0,
+    "fpgL3": 17.5,
+    "proj": 19.3,
+    "snapShare": 0.888,
+    "snapShareL3": 0.905,
+    "snapShareLast": 0.98,
+    "tackleOpp": 0.175,
+    "tacklesPerSnap": 0.181,
+    "passRushProxy": 0.014,
+    "matchup": 0.923,
+    "matchupDetail": {
+     "opp": "PIT",
+     "oppPlaysPG": 60.4,
+     "oppPassRate": 0.675,
+     "oppSackRate": 0.069
+    },
+    "greenDot": "full",
+    "injury": "Questionable",
+    "dnpLast": false,
+    "weekly": {
+     "1": 52.0,
+     "2": 25.0,
+     "4": 19.0,
+     "5": 16.0
+    },
+    "league": "pocket",
+    "rank": 23,
+    "tier": 5,
+    "note": "injury: Questionable; tough matchup vs PIT"
    },
    {
     "id": "00-0036500",
@@ -2392,9 +2406,9 @@
      "5": 11.0
     },
     "league": "saltese",
-    "rank": 23,
-    "tier": 5,
-    "note": "riser: 19.7 FP/G last 3 vs 8.5 earlier"
+    "rank": 24,
+    "tier": 6,
+    "note": "injury: nan; riser: 19.7 FP/G last 3 vs 8.5 earlier"
    },
    {
     "id": "00-0035525",
@@ -2432,9 +2446,9 @@
      "5": 20.0
     },
     "league": "goats",
-    "rank": 24,
+    "rank": 25,
     "tier": 6,
-    "note": "good matchup vs ATL"
+    "note": "injury: nan; good matchup vs ATL"
    },
    {
     "id": "00-0034874",
@@ -2472,9 +2486,9 @@
      "5": 16.0
     },
     "league": "lab",
-    "rank": 25,
+    "rank": 26,
     "tier": 6,
-    "note": "green dot (Woellert); tough matchup vs CLE"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0034431",
@@ -2512,89 +2526,9 @@
      "5": 27.0
     },
     "league": "newman",
-    "rank": 26,
-    "tier": 6,
-    "note": "riser: 21.0 FP/G last 3 vs 9.5 earlier; green dot (Woellert)"
-   },
-   {
-    "id": "00-0038553",
-    "player": "Daiyan Henley",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "LAC",
-    "opp": "KC",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 14.2,
-    "fpgL3": 17.0,
-    "proj": 18.1,
-    "snapShare": 0.892,
-    "snapShareL3": 0.91,
-    "snapShareLast": 0.95,
-    "tackleOpp": 0.1,
-    "tacklesPerSnap": 0.103,
-    "passRushProxy": 0.016,
-    "matchup": 1.044,
-    "matchupDetail": {
-     "opp": "KC",
-     "oppPlaysPG": 62.2,
-     "oppPassRate": 0.574,
-     "oppSackRate": 0.042
-    },
-    "greenDot": "green",
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 17.0,
-     "2": 3.0,
-     "3": 26.0,
-     "4": 11.0,
-     "5": 14.0
-    },
-    "league": "morningside",
     "rank": 27,
     "tier": 6,
-    "note": "riser: 17.0 FP/G last 3 vs 10.0 earlier; green dot (Woellert)"
-   },
-   {
-    "id": "00-0038922",
-    "player": "Drake Thomas",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "SEA",
-    "opp": "DEN",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 20.4,
-    "fpgL3": 19.33,
-    "proj": 17.9,
-    "snapShare": 0.866,
-    "snapShareL3": 0.797,
-    "snapShareLast": 0.77,
-    "tackleOpp": 0.117,
-    "tacklesPerSnap": 0.126,
-    "passRushProxy": 0.018,
-    "matchup": 0.959,
-    "matchupDetail": {
-     "opp": "DEN",
-     "oppPlaysPG": 57.2,
-     "oppPassRate": 0.608,
-     "oppSackRate": 0.034
-    },
-    "greenDot": null,
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 25.0,
-     "2": 19.0,
-     "3": 20.0,
-     "4": 25.0,
-     "5": 13.0
-    },
-    "league": "goats",
-    "rank": 28,
-    "tier": 6,
-    "note": ""
+    "note": "injury: nan; riser: 21.0 FP/G last 3 vs 9.5 earlier"
    },
    {
     "id": "00-0034302",
@@ -2629,10 +2563,10 @@
      "4": 12.0,
      "5": 19.0
     },
-    "league": "ultron",
-    "rank": 29,
+    "league": "substation",
+    "rank": 28,
     "tier": 6,
-    "note": "snaps up to 100%; green dot (Woellert)"
+    "note": "injury: nan; snaps up to 100%"
    },
    {
     "id": "00-0035262",
@@ -2669,9 +2603,9 @@
      "4": 25.0
     },
     "league": "lab",
-    "rank": 30,
+    "rank": 29,
     "tier": 6,
-    "note": "snaps down to 65%"
+    "note": "injury: nan; snaps down to 65%"
    },
    {
     "id": "00-0041479",
@@ -2709,9 +2643,9 @@
      "5": 11.0
     },
     "league": "slumlords",
-    "rank": 31,
+    "rank": 30,
     "tier": 6,
-    "note": "green dot (Woellert)"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0040708",
@@ -2749,9 +2683,9 @@
      "5": 11.0
     },
     "league": "substation",
-    "rank": 32,
+    "rank": 31,
     "tier": 6,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0038557",
@@ -2789,9 +2723,9 @@
      "5": 13.0
     },
     "league": "ttab",
-    "rank": 33,
+    "rank": 32,
     "tier": 6,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0036927",
@@ -2829,9 +2763,49 @@
      "5": 20.0
     },
     "league": "morningside",
+    "rank": 33,
+    "tier": 6,
+    "note": "injury: nan; snaps up to 100%"
+   },
+   {
+    "id": "00-0038553",
+    "player": "Daiyan Henley",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "LAC",
+    "opp": "KC",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 14.2,
+    "fpgL3": 17.0,
+    "proj": 16.3,
+    "snapShare": 0.892,
+    "snapShareL3": 0.91,
+    "snapShareLast": 0.95,
+    "tackleOpp": 0.1,
+    "tacklesPerSnap": 0.103,
+    "passRushProxy": 0.016,
+    "matchup": 1.044,
+    "matchupDetail": {
+     "opp": "KC",
+     "oppPlaysPG": 62.2,
+     "oppPassRate": 0.574,
+     "oppSackRate": 0.042
+    },
+    "greenDot": "green",
+    "injury": "Questionable",
+    "dnpLast": false,
+    "weekly": {
+     "1": 17.0,
+     "2": 3.0,
+     "3": 26.0,
+     "4": 11.0,
+     "5": 14.0
+    },
+    "league": "morningside",
     "rank": 34,
     "tier": 7,
-    "note": "snaps up to 100%; good matchup vs NYG"
+    "note": "injury: Questionable; riser: 17.0 FP/G last 3 vs 10.0 earlier"
    },
    {
     "id": "00-0036323",
@@ -2871,7 +2845,7 @@
     "league": "ultron",
     "rank": 35,
     "tier": 7,
-    "note": "riser: 16.7 FP/G last 3 vs 11.5 earlier; green dot (Woellert)"
+    "note": "injury: nan; riser: 16.7 FP/G last 3 vs 11.5 earlier"
    },
    {
     "id": "00-0035144",
@@ -2911,7 +2885,7 @@
     "league": "saltese",
     "rank": 36,
     "tier": 7,
-    "note": "green dot (Woellert)"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0041066",
@@ -2951,7 +2925,7 @@
     "league": "FREE",
     "rank": 37,
     "tier": 7,
-    "note": "riser: 14.3 FP/G last 3 vs 6.0 earlier; snaps up to 66%"
+    "note": "injury: nan; riser: 14.3 FP/G last 3 vs 6.0 earlier"
    },
    {
     "id": "00-0041078",
@@ -2990,7 +2964,7 @@
     "league": "slumlords",
     "rank": 38,
     "tier": 7,
-    "note": "riser: 15.5 FP/G last 3 vs 6.0 earlier; snaps up to 75%"
+    "note": "injury: nan; riser: 15.5 FP/G last 3 vs 6.0 earlier"
    },
    {
     "id": "00-0037254",
@@ -3030,7 +3004,7 @@
     "league": "saltese",
     "rank": 39,
     "tier": 7,
-    "note": "green dot (Woellert)"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0040155",
@@ -3067,10 +3041,10 @@
      "4": 9.0,
      "5": 16.0
     },
-    "league": "FREE",
+    "league": "substation",
     "rank": 40,
     "tier": 7,
-    "note": "riser: 13.0 FP/G last 3 vs 9.0 earlier; snaps up to 86%"
+    "note": "injury: nan; riser: 13.0 FP/G last 3 vs 9.0 earlier"
    },
    {
     "id": "00-0036298",
@@ -3110,7 +3084,7 @@
     "league": "lab",
     "rank": 41,
     "tier": 7,
-    "note": "green dot (Woellert); tough matchup vs TEN"
+    "note": "injury: nan; green dot (Woellert)"
    },
    {
     "id": "00-0040136",
@@ -3149,7 +3123,7 @@
     "league": "FREE",
     "rank": 42,
     "tier": 7,
-    "note": "riser: 16.0 FP/G last 3 vs 9.0 earlier"
+    "note": "injury: nan; riser: 16.0 FP/G last 3 vs 9.0 earlier"
    },
    {
     "id": "00-0036428",
@@ -3189,7 +3163,7 @@
     "league": "FREE",
     "rank": 43,
     "tier": 7,
-    "note": "riser: 15.3 FP/G last 3 vs 9.0 earlier"
+    "note": "injury: nan; riser: 15.3 FP/G last 3 vs 9.0 earlier"
    },
    {
     "id": "00-0037074",
@@ -3229,7 +3203,7 @@
     "league": "lab",
     "rank": 44,
     "tier": 8,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0038570",
@@ -3269,7 +3243,7 @@
     "league": "morningside",
     "rank": 45,
     "tier": 8,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0039774",
@@ -3306,10 +3280,10 @@
      "4": 20.0,
      "5": 7.0
     },
-    "league": "saltese",
+    "league": "FREE",
     "rank": 46,
     "tier": 8,
-    "note": "riser: 17.3 FP/G last 3 vs 7.0 earlier"
+    "note": "injury: nan; riser: 17.3 FP/G last 3 vs 7.0 earlier"
    },
    {
     "id": "00-0038505",
@@ -3349,47 +3323,47 @@
     "league": "FREE",
     "rank": 47,
     "tier": 8,
-    "note": "good matchup vs CLE"
+    "note": "injury: nan; good matchup vs CLE"
    },
    {
-    "id": "00-0033914",
-    "player": "Alex Anzalone",
+    "id": "00-0036990",
+    "player": "Divine Deablo",
     "pos": "LB",
-    "nflPos": "MLB",
-    "team": "TB",
-    "opp": "PIT",
+    "nflPos": "LB",
+    "team": "ATL",
+    "opp": "CHI",
     "bye": false,
     "gp": 5,
-    "fpgSeason": 13.4,
-    "fpgL3": 14.0,
-    "proj": 13.5,
-    "snapShare": 1.0,
-    "snapShareL3": 1.0,
+    "fpgSeason": 11.4,
+    "fpgL3": 11.33,
+    "proj": 14.0,
+    "snapShare": 0.926,
+    "snapShareL3": 0.937,
     "snapShareLast": 1.0,
-    "tackleOpp": 0.097,
-    "tacklesPerSnap": 0.09,
-    "passRushProxy": 0.01,
-    "matchup": 0.923,
+    "tackleOpp": 0.077,
+    "tacklesPerSnap": 0.077,
+    "passRushProxy": 0.009,
+    "matchup": 1.12,
     "matchupDetail": {
-     "opp": "PIT",
-     "oppPlaysPG": 60.4,
-     "oppPassRate": 0.675,
-     "oppSackRate": 0.069
+     "opp": "CHI",
+     "oppPlaysPG": 72.0,
+     "oppPassRate": 0.547,
+     "oppSackRate": 0.056
     },
     "greenDot": "green",
     "injury": null,
     "dnpLast": false,
     "weekly": {
-     "1": 12.0,
-     "2": 13.0,
-     "3": 20.0,
-     "4": 4.0,
-     "5": 18.0
+     "1": 19.0,
+     "2": 4.0,
+     "3": 7.0,
+     "4": 6.0,
+     "5": 21.0
     },
-    "league": "slumlords",
+    "league": "ttab",
     "rank": 48,
     "tier": 8,
-    "note": "green dot (Woellert); tough matchup vs PIT"
+    "note": "injury: nan; green dot (Woellert)"
    }
   ],
   "DB": [
@@ -3429,7 +3403,7 @@
     "league": "eddies",
     "rank": 1,
     "tier": 1,
-    "note": "riser: 29.0 FP/G last 3 vs 9.0 earlier; snaps up to 93%"
+    "note": "injury: nan; riser: 29.0 FP/G last 3 vs 9.0 earlier"
    },
    {
     "id": "00-0039813",
@@ -3469,7 +3443,7 @@
     "league": "eddies",
     "rank": 2,
     "tier": 1,
-    "note": "riser: 28.0 FP/G last 3 vs 22.0 earlier; good matchup vs DAL"
+    "note": "injury: nan; riser: 28.0 FP/G last 3 vs 22.0 earlier"
    },
    {
     "id": "00-0039000",
@@ -3507,7 +3481,7 @@
     "league": "goats",
     "rank": 3,
     "tier": 1,
-    "note": "riser: 27.0 FP/G last 3 vs 14.0 earlier; good matchup vs NO"
+    "note": "injury: nan; riser: 27.0 FP/G last 3 vs 14.0 earlier"
    },
    {
     "id": "00-0040143",
@@ -3543,50 +3517,10 @@
      "4": 28.0,
      "5": 32.0
     },
-    "league": "FREE",
+    "league": "lab",
     "rank": 4,
     "tier": 2,
-    "note": "riser: 24.0 FP/G last 3 vs 7.0 earlier; snaps up to 97%"
-   },
-   {
-    "id": "00-0033890",
-    "player": "Budda Baker",
-    "pos": "DB",
-    "nflPos": "S",
-    "team": "ARI",
-    "opp": "LA",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 22.8,
-    "fpgL3": 20.33,
-    "proj": 23.7,
-    "snapShare": 0.996,
-    "snapShareL3": 0.993,
-    "snapShareLast": 0.98,
-    "tackleOpp": 0.122,
-    "tacklesPerSnap": 0.116,
-    "passRushProxy": 0.033,
-    "matchup": 1.12,
-    "matchupDetail": {
-     "opp": "LA",
-     "oppPlaysPG": 69.4,
-     "oppPassRate": 0.66,
-     "oppSackRate": 0.031
-    },
-    "greenDot": null,
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 16.0,
-     "2": 37.0,
-     "3": 5.0,
-     "4": 23.0,
-     "5": 33.0
-    },
-    "league": "slumlords",
-    "rank": 5,
-    "tier": 3,
-    "note": "good matchup vs LA"
+    "note": "injury: nan; riser: 24.0 FP/G last 3 vs 7.0 earlier"
    },
    {
     "id": "00-0038038",
@@ -3624,9 +3558,9 @@
      "5": 24.0
     },
     "league": "dongers",
-    "rank": 6,
+    "rank": 5,
     "tier": 3,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0039841",
@@ -3664,9 +3598,9 @@
      "5": 23.0
     },
     "league": "pocket",
-    "rank": 7,
+    "rank": 6,
     "tier": 3,
-    "note": "riser: 21.3 FP/G last 3 vs 13.0 earlier; good matchup vs CAR"
+    "note": "injury: nan; riser: 21.3 FP/G last 3 vs 13.0 earlier"
    },
    {
     "id": "00-0039821",
@@ -3703,10 +3637,10 @@
      "4": 6.0,
      "5": 35.0
     },
-    "league": "FREE",
-    "rank": 8,
+    "league": "pocket",
+    "rank": 7,
     "tier": 3,
-    "note": "riser: 22.0 FP/G last 3 vs 3.0 earlier; sleeper: unrostered with a top-half projection"
+    "note": "injury: nan; riser: 22.0 FP/G last 3 vs 3.0 earlier"
    },
    {
     "id": "00-0036221",
@@ -3744,9 +3678,9 @@
      "5": 21.0
     },
     "league": "pocket",
-    "rank": 9,
+    "rank": 8,
     "tier": 3,
-    "note": "riser: 24.7 FP/G last 3 vs 16.0 earlier; tough matchup vs SEA"
+    "note": "injury: nan; riser: 24.7 FP/G last 3 vs 16.0 earlier"
    },
    {
     "id": "00-0040148",
@@ -3784,9 +3718,49 @@
      "5": 24.0
     },
     "league": "newman",
+    "rank": 9,
+    "tier": 3,
+    "note": "injury: nan; riser: 21.7 FP/G last 3 vs 12.5 earlier"
+   },
+   {
+    "id": "00-0033890",
+    "player": "Budda Baker",
+    "pos": "DB",
+    "nflPos": "S",
+    "team": "ARI",
+    "opp": "LA",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 22.8,
+    "fpgL3": 20.33,
+    "proj": 21.3,
+    "snapShare": 0.996,
+    "snapShareL3": 0.993,
+    "snapShareLast": 0.98,
+    "tackleOpp": 0.122,
+    "tacklesPerSnap": 0.116,
+    "passRushProxy": 0.033,
+    "matchup": 1.12,
+    "matchupDetail": {
+     "opp": "LA",
+     "oppPlaysPG": 69.4,
+     "oppPassRate": 0.66,
+     "oppSackRate": 0.031
+    },
+    "greenDot": null,
+    "injury": "Questionable",
+    "dnpLast": false,
+    "weekly": {
+     "1": 16.0,
+     "2": 37.0,
+     "3": 5.0,
+     "4": 23.0,
+     "5": 33.0
+    },
+    "league": "slumlords",
     "rank": 10,
     "tier": 3,
-    "note": "riser: 21.7 FP/G last 3 vs 12.5 earlier"
+    "note": "injury: Questionable; good matchup vs LA"
    },
    {
     "id": "00-0039888",
@@ -3826,47 +3800,7 @@
     "league": "FREE",
     "rank": 11,
     "tier": 3,
-    "note": "riser: 20.0 FP/G last 3 vs 9.0 earlier; snaps up to 100%"
-   },
-   {
-    "id": "00-0038123",
-    "player": "Dane Belton",
-    "pos": "DB",
-    "nflPos": "SAF",
-    "team": "NYJ",
-    "opp": "NE",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 17.2,
-    "fpgL3": 23.33,
-    "proj": 20.9,
-    "snapShare": 1.0,
-    "snapShareL3": 1.0,
-    "snapShareLast": 1.0,
-    "tackleOpp": 0.119,
-    "tacklesPerSnap": 0.11,
-    "passRushProxy": 0.01,
-    "matchup": 1.003,
-    "matchupDetail": {
-     "opp": "NE",
-     "oppPlaysPG": 62.6,
-     "oppPassRate": 0.597,
-     "oppSackRate": 0.059
-    },
-    "greenDot": null,
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 3.0,
-     "2": 13.0,
-     "3": 17.0,
-     "4": 29.0,
-     "5": 24.0
-    },
-    "league": "ttab",
-    "rank": 12,
-    "tier": 3,
-    "note": "riser: 23.3 FP/G last 3 vs 8.0 earlier"
+    "note": "injury: nan; riser: 20.0 FP/G last 3 vs 9.0 earlier"
    },
    {
     "id": "00-0037130",
@@ -3904,9 +3838,9 @@
      "5": 20.0
     },
     "league": "doubtpfizer",
-    "rank": 13,
+    "rank": 12,
     "tier": 3,
-    "note": "riser: 23.7 FP/G last 3 vs 13.0 earlier; tough matchup vs JAX"
+    "note": "injury: nan; riser: 23.7 FP/G last 3 vs 13.0 earlier"
    },
    {
     "id": "00-0033551",
@@ -3944,9 +3878,9 @@
      "5": 34.0
     },
     "league": "FREE",
-    "rank": 14,
+    "rank": 13,
     "tier": 3,
-    "note": "riser: 22.0 FP/G last 3 vs 4.5 earlier; snaps up to 98%"
+    "note": "injury: nan; riser: 22.0 FP/G last 3 vs 4.5 earlier"
    },
    {
     "id": "00-0036375",
@@ -3984,9 +3918,9 @@
      "5": 19.0
     },
     "league": "goats",
-    "rank": 15,
-    "tier": 4,
-    "note": "riser: 23.0 FP/G last 3 vs 15.5 earlier; tough matchup vs SF"
+    "rank": 14,
+    "tier": 3,
+    "note": "injury: nan; riser: 23.0 FP/G last 3 vs 15.5 earlier"
    },
    {
     "id": "00-0034789",
@@ -4021,9 +3955,9 @@
      "5": 15.0
     },
     "league": "lab",
-    "rank": 16,
+    "rank": 15,
     "tier": 4,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0039353",
@@ -4060,9 +3994,9 @@
      "5": 6.0
     },
     "league": "FREE",
-    "rank": 17,
+    "rank": 16,
     "tier": 4,
-    "note": "riser: 18.0 FP/G last 3 vs 6.0 earlier; snaps up to 98%"
+    "note": "injury: nan; riser: 18.0 FP/G last 3 vs 6.0 earlier"
    },
    {
     "id": "00-0038101",
@@ -4098,9 +4032,9 @@
      "4": 29.0
     },
     "league": "FREE",
-    "rank": 18,
+    "rank": 17,
     "tier": 4,
-    "note": "riser: 18.5 FP/G last 3 vs 5.0 earlier; snaps up to 100%"
+    "note": "injury: nan; riser: 18.5 FP/G last 3 vs 5.0 earlier"
    },
    {
     "id": "00-0035133",
@@ -4137,50 +4071,10 @@
      "4": 23.0,
      "5": 17.0
     },
-    "league": "FREE",
-    "rank": 19,
+    "league": "goats",
+    "rank": 18,
     "tier": 4,
-    "note": "sleeper: unrostered with a top-half projection; good matchup vs DAL"
-   },
-   {
-    "id": "00-0036281",
-    "player": "C.J. Henderson",
-    "pos": "DB",
-    "nflPos": "CB",
-    "team": "ATL",
-    "opp": "CHI",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 16.8,
-    "fpgL3": 21.67,
-    "proj": 18.3,
-    "snapShare": 0.66,
-    "snapShareL3": 0.773,
-    "snapShareLast": 0.51,
-    "tackleOpp": 0.077,
-    "tacklesPerSnap": 0.108,
-    "passRushProxy": 0.0,
-    "matchup": 1.048,
-    "matchupDetail": {
-     "opp": "CHI",
-     "oppPlaysPG": 72.0,
-     "oppPassRate": 0.547,
-     "oppSackRate": 0.056
-    },
-    "greenDot": null,
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 5.0,
-     "2": 14.0,
-     "3": 28.0,
-     "4": 34.0,
-     "5": 3.0
-    },
-    "league": "FREE",
-    "rank": 20,
-    "tier": 4,
-    "note": "riser: 21.7 FP/G last 3 vs 9.5 earlier; sleeper: unrostered with a top-half projection"
+    "note": "injury: nan; good matchup vs DAL"
    },
    {
     "id": "00-0036388",
@@ -4218,9 +4112,9 @@
      "5": 20.0
     },
     "league": "dongers",
-    "rank": 21,
+    "rank": 19,
     "tier": 4,
-    "note": "riser: 20.3 FP/G last 3 vs 6.0 earlier; good matchup vs DAL"
+    "note": "injury: nan; riser: 20.3 FP/G last 3 vs 6.0 earlier"
    },
    {
     "id": "00-0039345",
@@ -4258,9 +4152,9 @@
      "5": 23.0
     },
     "league": "FREE",
-    "rank": 22,
+    "rank": 20,
     "tier": 4,
-    "note": "riser: 19.3 FP/G last 3 vs 8.5 earlier; sleeper: unrostered with a top-half projection"
+    "note": "injury: nan; riser: 19.3 FP/G last 3 vs 8.5 earlier"
    },
    {
     "id": "00-0036293",
@@ -4298,9 +4192,9 @@
      "5": 19.0
     },
     "league": "hyper",
-    "rank": 23,
+    "rank": 21,
     "tier": 4,
-    "note": "riser: 20.3 FP/G last 3 vs 12.0 earlier"
+    "note": "injury: nan; riser: 20.3 FP/G last 3 vs 12.0 earlier"
    },
    {
     "id": "00-0037841",
@@ -4338,9 +4232,9 @@
      "5": 13.0
     },
     "league": "eddies",
-    "rank": 24,
+    "rank": 22,
     "tier": 4,
-    "note": "good matchup vs ARI"
+    "note": "injury: nan; good matchup vs ARI"
    },
    {
     "id": "00-0040733",
@@ -4377,9 +4271,9 @@
      "5": 9.0
     },
     "league": "substation",
-    "rank": 25,
-    "tier": 5,
-    "note": "riser: 16.7 FP/G last 3 vs 2.0 earlier; snaps up to 93%"
+    "rank": 23,
+    "tier": 4,
+    "note": "injury: nan; riser: 16.7 FP/G last 3 vs 2.0 earlier"
    },
    {
     "id": "00-0041391",
@@ -4417,9 +4311,9 @@
      "5": 17.0
     },
     "league": "FREE",
-    "rank": 26,
-    "tier": 5,
-    "note": "riser: 15.3 FP/G last 3 vs 9.0 earlier; snaps up to 84%"
+    "rank": 24,
+    "tier": 4,
+    "note": "injury: nan; riser: 15.3 FP/G last 3 vs 9.0 earlier"
    },
    {
     "id": "00-0037079",
@@ -4457,49 +4351,9 @@
      "5": 15.0
     },
     "league": "FREE",
-    "rank": 27,
+    "rank": 25,
     "tier": 5,
-    "note": "riser: 15.0 FP/G last 3 vs 5.5 earlier; snaps up to 100%"
-   },
-   {
-    "id": "00-0036564",
-    "player": "Talanoa Hufanga",
-    "pos": "DB",
-    "nflPos": "SAF",
-    "team": "DEN",
-    "opp": "SEA",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 19.0,
-    "fpgL3": 22.33,
-    "proj": 16.7,
-    "snapShare": 0.926,
-    "snapShareL3": 0.877,
-    "snapShareLast": 0.66,
-    "tackleOpp": 0.068,
-    "tacklesPerSnap": 0.069,
-    "passRushProxy": 0.011,
-    "matchup": 0.929,
-    "matchupDetail": {
-     "opp": "SEA",
-     "oppPlaysPG": 58.8,
-     "oppPassRate": 0.551,
-     "oppSackRate": 0.068
-    },
-    "greenDot": null,
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 11.0,
-     "2": 17.0,
-     "3": 53.0,
-     "4": 6.0,
-     "5": 8.0
-    },
-    "league": "slumlords",
-    "rank": 28,
-    "tier": 5,
-    "note": "riser: 22.3 FP/G last 3 vs 14.0 earlier; tough matchup vs SEA"
+    "note": "injury: nan; riser: 15.0 FP/G last 3 vs 5.5 earlier"
    },
    {
     "id": "00-0040688",
@@ -4537,9 +4391,9 @@
      "5": 21.0
     },
     "league": "morningside",
-    "rank": 29,
+    "rank": 26,
     "tier": 5,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0033877",
@@ -4575,9 +4429,9 @@
      "5": 11.0
     },
     "league": "FREE",
-    "rank": 30,
+    "rank": 27,
     "tier": 5,
-    "note": "riser: 16.0 FP/G last 3 vs 2.0 earlier; snaps up to 68%"
+    "note": "injury: nan; riser: 16.0 FP/G last 3 vs 2.0 earlier"
    },
    {
     "id": "00-0039834",
@@ -4613,9 +4467,9 @@
      "5": 15.0
     },
     "league": "dongers",
-    "rank": 31,
+    "rank": 28,
     "tier": 5,
-    "note": "good matchup vs ARI; snaps down to 56%"
+    "note": "injury: nan; good matchup vs ARI"
    },
    {
     "id": "00-0039872",
@@ -4653,9 +4507,9 @@
      "5": 23.0
     },
     "league": "saltese",
-    "rank": 32,
+    "rank": 29,
     "tier": 5,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0038135",
@@ -4693,9 +4547,9 @@
      "5": 20.0
     },
     "league": "pocket",
-    "rank": 33,
+    "rank": 30,
     "tier": 5,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0037288",
@@ -4732,9 +4586,9 @@
      "5": 23.0
     },
     "league": "FREE",
-    "rank": 34,
+    "rank": 31,
     "tier": 5,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0041538",
@@ -4772,9 +4626,9 @@
      "5": 19.0
     },
     "league": "ultron",
-    "rank": 35,
-    "tier": 6,
-    "note": "tough matchup vs ATL"
+    "rank": 32,
+    "tier": 5,
+    "note": "injury: nan; tough matchup vs ATL"
    },
    {
     "id": "00-0040139",
@@ -4812,9 +4666,9 @@
      "5": 15.0
     },
     "league": "FREE",
-    "rank": 36,
-    "tier": 6,
-    "note": ""
+    "rank": 33,
+    "tier": 5,
+    "note": "injury: nan"
    },
    {
     "id": "00-0041057",
@@ -4852,49 +4706,9 @@
      "5": 23.0
     },
     "league": "FREE",
-    "rank": 37,
-    "tier": 6,
-    "note": "riser: 14.7 FP/G last 3 vs 10.5 earlier; snaps up to 73%"
-   },
-   {
-    "id": "00-0041470",
-    "player": "Brandon Cisse",
-    "pos": "DB",
-    "nflPos": "CB",
-    "team": "GB",
-    "opp": "DAL",
-    "bye": false,
-    "gp": 5,
-    "fpgSeason": 13.2,
-    "fpgL3": 15.0,
-    "proj": 15.9,
-    "snapShare": 0.92,
-    "snapShareL3": 0.95,
-    "snapShareLast": 1.0,
-    "tackleOpp": 0.065,
-    "tacklesPerSnap": 0.066,
-    "passRushProxy": 0.019,
-    "matchup": 1.065,
-    "matchupDetail": {
-     "opp": "DAL",
-     "oppPlaysPG": 61.4,
-     "oppPassRate": 0.687,
-     "oppSackRate": 0.028
-    },
-    "greenDot": null,
-    "injury": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 5.0,
-     "2": 16.0,
-     "3": 14.0,
-     "4": 14.0,
-     "5": 17.0
-    },
-    "league": "FREE",
-    "rank": 38,
-    "tier": 6,
-    "note": "riser: 15.0 FP/G last 3 vs 10.5 earlier; good matchup vs DAL"
+    "rank": 34,
+    "tier": 5,
+    "note": "injury: nan; riser: 14.7 FP/G last 3 vs 10.5 earlier"
    },
    {
     "id": "00-0039867",
@@ -4932,9 +4746,9 @@
      "5": 17.0
     },
     "league": "ttab",
-    "rank": 39,
+    "rank": 35,
     "tier": 6,
-    "note": "good matchup vs DAL"
+    "note": "injury: nan; good matchup vs DAL"
    },
    {
     "id": "00-0036996",
@@ -4972,9 +4786,9 @@
      "5": 8.0
     },
     "league": "FREE",
-    "rank": 40,
+    "rank": 36,
     "tier": 6,
-    "note": "riser: 14.7 FP/G last 3 vs 10.0 earlier; good matchup vs NO"
+    "note": "injury: nan; riser: 14.7 FP/G last 3 vs 10.0 earlier"
    },
    {
     "id": "00-0040718",
@@ -5012,9 +4826,9 @@
      "5": 16.0
     },
     "league": "hyper",
-    "rank": 41,
+    "rank": 37,
     "tier": 6,
-    "note": "riser: 14.3 FP/G last 3 vs 6.5 earlier; snaps up to 100%"
+    "note": "injury: nan; riser: 14.3 FP/G last 3 vs 6.5 earlier"
    },
    {
     "id": "00-0039343",
@@ -5052,9 +4866,9 @@
      "5": 10.0
     },
     "league": "doubtpfizer",
-    "rank": 42,
+    "rank": 38,
     "tier": 6,
-    "note": "riser: 17.7 FP/G last 3 vs 12.5 earlier; tough matchup vs JAX"
+    "note": "injury: nan; riser: 17.7 FP/G last 3 vs 12.5 earlier"
    },
    {
     "id": "00-0039169",
@@ -5092,9 +4906,9 @@
      "5": 13.0
     },
     "league": "slumlords",
-    "rank": 43,
+    "rank": 39,
     "tier": 6,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0040643",
@@ -5132,9 +4946,9 @@
      "5": 18.0
     },
     "league": "dongers",
-    "rank": 44,
+    "rank": 40,
     "tier": 6,
-    "note": ""
+    "note": "injury: nan"
    },
    {
     "id": "00-0034974",
@@ -5170,10 +4984,10 @@
      "4": 14.0,
      "5": 15.0
     },
-    "league": "eddies",
-    "rank": 45,
-    "tier": 7,
-    "note": ""
+    "league": "FREE",
+    "rank": 41,
+    "tier": 6,
+    "note": "injury: nan"
    },
    {
     "id": "00-0033928",
@@ -5210,9 +5024,9 @@
      "5": 7.0
     },
     "league": "FREE",
-    "rank": 46,
-    "tier": 7,
-    "note": "riser: 15.5 FP/G last 3 vs 10.5 earlier"
+    "rank": 42,
+    "tier": 6,
+    "note": "injury: nan; riser: 15.5 FP/G last 3 vs 10.5 earlier"
    },
    {
     "id": "00-0034465",
@@ -5250,9 +5064,9 @@
      "5": 17.0
     },
     "league": "FREE",
-    "rank": 47,
-    "tier": 7,
-    "note": "riser: 16.7 FP/G last 3 vs 12.5 earlier; tough matchup vs SF"
+    "rank": 43,
+    "tier": 6,
+    "note": "injury: nan; riser: 16.7 FP/G last 3 vs 12.5 earlier"
    },
    {
     "id": "00-0035253",
@@ -5290,9 +5104,167 @@
      "5": 14.0
     },
     "league": "FREE",
+    "rank": 44,
+    "tier": 6,
+    "note": "injury: nan; riser: 15.7 FP/G last 3 vs 9.5 earlier"
+   },
+   {
+    "id": "00-0038554",
+    "player": "Ji'Ayir Brown",
+    "pos": "DB",
+    "nflPos": "SAF",
+    "team": "SF",
+    "opp": "WAS",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 14.4,
+    "fpgL3": 13.33,
+    "proj": 14.5,
+    "snapShare": 0.954,
+    "snapShareL3": 0.973,
+    "snapShareLast": 1.0,
+    "tackleOpp": 0.107,
+    "tacklesPerSnap": 0.106,
+    "passRushProxy": 0.0,
+    "matchup": 1.026,
+    "matchupDetail": {
+     "opp": "WAS",
+     "oppPlaysPG": 63.8,
+     "oppPassRate": 0.611,
+     "oppSackRate": 0.051
+    },
+    "greenDot": null,
+    "injury": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 6.0,
+     "2": 26.0,
+     "3": 14.0,
+     "4": 7.0,
+     "5": 19.0
+    },
+    "league": "FREE",
+    "rank": 45,
+    "tier": 7,
+    "note": "injury: nan"
+   },
+   {
+    "id": "00-0037195",
+    "player": "Jaylen Watson",
+    "pos": "DB",
+    "nflPos": "CB",
+    "team": "LA",
+    "opp": "ARI",
+    "bye": false,
+    "gp": 4,
+    "fpgSeason": 10.5,
+    "fpgL3": 13.0,
+    "proj": 14.5,
+    "snapShare": 0.812,
+    "snapShareL3": 0.65,
+    "snapShareLast": 1.0,
+    "tackleOpp": 0.046,
+    "tacklesPerSnap": 0.054,
+    "passRushProxy": 0.0,
+    "matchup": 1.082,
+    "matchupDetail": {
+     "opp": "ARI",
+     "oppPlaysPG": 65.8,
+     "oppPassRate": 0.653,
+     "oppSackRate": 0.056
+    },
+    "greenDot": null,
+    "injury": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 6.0,
+     "2": 10.0,
+     "3": 12.0,
+     "5": 14.0
+    },
+    "league": "FREE",
+    "rank": 46,
+    "tier": 7,
+    "note": "injury: nan; riser: 13.0 FP/G last 3 vs 8.0 earlier"
+   },
+   {
+    "id": "00-0041063",
+    "player": "Will Lee III",
+    "pos": "DB",
+    "nflPos": "CB",
+    "team": "CAR",
+    "opp": "PHI",
+    "bye": false,
+    "gp": 4,
+    "fpgSeason": 13.25,
+    "fpgL3": 12.5,
+    "proj": 14.4,
+    "snapShare": 0.702,
+    "snapShareL3": 0.955,
+    "snapShareLast": 1.0,
+    "tackleOpp": 0.067,
+    "tacklesPerSnap": 0.09,
+    "passRushProxy": 0.0,
+    "matchup": 0.976,
+    "matchupDetail": {
+     "opp": "PHI",
+     "oppPlaysPG": 57.4,
+     "oppPassRate": 0.627,
+     "oppSackRate": 0.072
+    },
+    "greenDot": null,
+    "injury": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 19.0,
+     "2": 9.0,
+     "3": 15.0,
+     "4": 10.0
+    },
+    "league": "FREE",
+    "rank": 47,
+    "tier": 7,
+    "note": "injury: nan; snaps up to 100%"
+   },
+   {
+    "id": "00-0041470",
+    "player": "Brandon Cisse",
+    "pos": "DB",
+    "nflPos": "CB",
+    "team": "GB",
+    "opp": "DAL",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 13.2,
+    "fpgL3": 15.0,
+    "proj": 14.3,
+    "snapShare": 0.92,
+    "snapShareL3": 0.95,
+    "snapShareLast": 1.0,
+    "tackleOpp": 0.065,
+    "tacklesPerSnap": 0.066,
+    "passRushProxy": 0.019,
+    "matchup": 1.065,
+    "matchupDetail": {
+     "opp": "DAL",
+     "oppPlaysPG": 61.4,
+     "oppPassRate": 0.687,
+     "oppSackRate": 0.028
+    },
+    "greenDot": null,
+    "injury": "Questionable",
+    "dnpLast": false,
+    "weekly": {
+     "1": 5.0,
+     "2": 16.0,
+     "3": 14.0,
+     "4": 14.0,
+     "5": 17.0
+    },
+    "league": "FREE",
     "rank": 48,
     "tier": 7,
-    "note": "riser: 15.7 FP/G last 3 vs 9.5 earlier"
+    "note": "injury: Questionable; riser: 15.0 FP/G last 3 vs 10.5 earlier"
    }
   ]
  },
@@ -5342,7 +5314,7 @@
     "player": "Andru Phillips",
     "pos": "DB",
     "team": "NYG",
-    "league": "FREE",
+    "league": "pocket",
     "fpgEarly": 3.0,
     "fpgL3": 22.0,
     "delta": 19.0,
@@ -5362,7 +5334,7 @@
     "player": "Jacob Parrish",
     "pos": "DB",
     "team": "TB",
-    "league": "FREE",
+    "league": "lab",
     "fpgEarly": 7.0,
     "fpgL3": 24.0,
     "delta": 17.0,
@@ -5398,7 +5370,7 @@
     "fpgEarly": 38.5,
     "fpgL3": 17.5,
     "delta": -21.0,
-    "proj": 21.5
+    "proj": 19.3
    },
    {
     "player": "Quentin Lake",
@@ -5463,10 +5435,12 @@
    3,
    3,
    3,
+   3,
    4,
    4,
    4,
    4,
+   5,
    5,
    5,
    6,
@@ -5492,10 +5466,10 @@
    31,
    42
   ],
-  "n": 47,
-  "p25": 2.5,
+  "n": 49,
+  "p25": 3.0,
   "median": 5.0,
-  "p75": 10.5,
+  "p75": 10.0,
   "p90": 18.0,
   "max": 42,
   "eddiesFaabLeft": 60,
@@ -5503,30 +5477,12 @@
  },
  "claimTargets": [
   {
-   "player": "Jacob Parrish",
-   "pos": "DB",
-   "team": "TB",
-   "opp": "PIT",
-   "proj": 25.5,
-   "posRank": 4,
-   "fpgSeason": 19.75,
-   "fpgL3": 24.0,
-   "snapShareL3": 0.983,
-   "greenDot": null,
-   "bid": 12,
-   "range": [
-    5,
-    18
-   ],
-   "note": "riser: 24.0 FP/G last 3 vs 7.0 earlier; snaps up to 97%"
-  },
-  {
    "player": "Jeremiah Trotter Jr.",
    "pos": "LB",
    "team": "PHI",
    "opp": "CAR",
    "proj": 20.2,
-   "posRank": 22,
+   "posRank": 21,
    "fpgSeason": 15.0,
    "fpgL3": 37.0,
    "snapShareL3": 1.0,
@@ -5536,43 +5492,25 @@
     1,
     5
    ],
-   "note": "did not play W5 \u2014 check status (proj cut 25%); riser: 37.0 FP/G last 3 vs 4.0 earlier"
+   "note": "did not play W5 \u2014 check status (proj cut 25%); injury: nan"
   },
   {
-   "player": "Andru Phillips",
-   "pos": "DB",
-   "team": "NYG",
-   "opp": "NO",
-   "proj": 21.9,
-   "posRank": 8,
-   "fpgSeason": 14.4,
-   "fpgL3": 22.0,
-   "snapShareL3": 0.747,
-   "greenDot": null,
-   "bid": 12,
-   "range": [
-    5,
-    18
-   ],
-   "note": "riser: 22.0 FP/G last 3 vs 3.0 earlier; sleeper: unrostered with a top-half projection"
-  },
-  {
-   "player": "Austin Booker",
-   "pos": "DL",
-   "team": "CHI",
-   "opp": "ATL",
+   "player": "Tuli Tuipulotu",
+   "pos": "LB",
+   "team": "LAC",
+   "opp": "KC",
    "proj": 22.1,
-   "posRank": 5,
-   "fpgSeason": 15.6,
-   "fpgL3": 21.0,
-   "snapShareL3": 0.647,
+   "posRank": 14,
+   "fpgSeason": 18.0,
+   "fpgL3": 24.0,
+   "snapShareL3": 0.873,
    "greenDot": null,
-   "bid": 12,
+   "bid": 6,
    "range": [
-    5,
-    18
+    3,
+    10
    ],
-   "note": "riser: 21.0 FP/G last 3 vs 7.5 earlier; snaps up to 72%"
+   "note": "injury: nan; riser: 24.0 FP/G last 3 vs 9.0 earlier"
   },
   {
    "player": "Elijah Ponder",
@@ -5580,17 +5518,17 @@
    "team": "NE",
    "opp": "NYJ",
    "proj": 21.0,
-   "posRank": 17,
+   "posRank": 16,
    "fpgSeason": 19.8,
    "fpgL3": 22.0,
    "snapShareL3": 0.703,
    "greenDot": null,
-   "bid": 3,
+   "bid": 6,
    "range": [
-    1,
-    5
+    3,
+    10
    ],
-   "note": "riser: 22.0 FP/G last 3 vs 16.5 earlier; sleeper: unrostered with a top-half projection"
+   "note": "injury: nan; riser: 22.0 FP/G last 3 vs 16.5 earlier"
   },
   {
    "player": "Quinyon Mitchell",
@@ -5605,10 +5543,10 @@
    "greenDot": null,
    "bid": 6,
    "range": [
-    2,
-    11
+    3,
+    10
    ],
-   "note": "riser: 20.0 FP/G last 3 vs 9.0 earlier; snaps up to 100%"
+   "note": "injury: nan; riser: 20.0 FP/G last 3 vs 9.0 earlier"
   },
   {
    "player": "Rasul Douglas",
@@ -5616,53 +5554,17 @@
    "team": "WAS",
    "opp": "SF",
    "proj": 20.1,
-   "posRank": 14,
+   "posRank": 13,
    "fpgSeason": 15.0,
    "fpgL3": 22.0,
    "snapShareL3": 0.833,
    "greenDot": null,
    "bid": 6,
    "range": [
-    2,
-    11
+    3,
+    10
    ],
-   "note": "riser: 22.0 FP/G last 3 vs 4.5 earlier; snaps up to 98%"
-  },
-  {
-   "player": "George Karlaftis",
-   "pos": "DL",
-   "team": "KC",
-   "opp": "LAC",
-   "proj": 20.1,
-   "posRank": 6,
-   "fpgSeason": 14.25,
-   "fpgL3": 20.0,
-   "snapShareL3": 0.835,
-   "greenDot": null,
-   "bid": 12,
-   "range": [
-    5,
-    18
-   ],
-   "note": "riser: 20.0 FP/G last 3 vs 8.5 earlier; sleeper: unrostered with a top-half projection"
-  },
-  {
-   "player": "C.J. Henderson",
-   "pos": "DB",
-   "team": "ATL",
-   "opp": "CHI",
-   "proj": 18.3,
-   "posRank": 20,
-   "fpgSeason": 16.8,
-   "fpgL3": 21.67,
-   "snapShareL3": 0.773,
-   "greenDot": null,
-   "bid": 3,
-   "range": [
-    1,
-    5
-   ],
-   "note": "riser: 21.7 FP/G last 3 vs 9.5 earlier; sleeper: unrostered with a top-half projection"
+   "note": "injury: nan; riser: 22.0 FP/G last 3 vs 4.5 earlier"
   },
   {
    "player": "Jarrian Jones",
@@ -5670,17 +5572,89 @@
    "team": "JAX",
    "opp": "HOU",
    "proj": 19.1,
-   "posRank": 17,
+   "posRank": 16,
    "fpgSeason": 15.0,
    "fpgL3": 18.0,
    "snapShareL3": 0.903,
+   "greenDot": null,
+   "bid": 6,
+   "range": [
+    3,
+    10
+   ],
+   "note": "injury: nan; riser: 18.0 FP/G last 3 vs 6.0 earlier"
+  },
+  {
+   "player": "Akayleb Evans",
+   "pos": "DB",
+   "team": "CAR",
+   "opp": "PHI",
+   "proj": 18.7,
+   "posRank": 17,
+   "fpgSeason": 14.0,
+   "fpgL3": 18.5,
+   "snapShareL3": 0.715,
    "greenDot": null,
    "bid": 3,
    "range": [
     1,
     5
    ],
-   "note": "riser: 18.0 FP/G last 3 vs 6.0 earlier; snaps up to 98%"
+   "note": "injury: nan; riser: 18.5 FP/G last 3 vs 5.0 earlier"
+  },
+  {
+   "player": "Renardo Green",
+   "pos": "DB",
+   "team": "SF",
+   "opp": "WAS",
+   "proj": 18.3,
+   "posRank": 20,
+   "fpgSeason": 15.0,
+   "fpgL3": 19.33,
+   "snapShareL3": 0.96,
+   "greenDot": null,
+   "bid": 3,
+   "range": [
+    1,
+    5
+   ],
+   "note": "injury: nan; riser: 19.3 FP/G last 3 vs 8.5 earlier"
+  },
+  {
+   "player": "Roy Lopez",
+   "pos": "DL",
+   "team": "ARI",
+   "opp": "LA",
+   "proj": 17.4,
+   "posRank": 9,
+   "fpgSeason": 12.5,
+   "fpgL3": 19.5,
+   "snapShareL3": 0.485,
+   "greenDot": null,
+   "bid": 6,
+   "range": [
+    3,
+    10
+   ],
+   "note": "injury: nan; riser: 19.5 FP/G last 3 vs 5.5 earlier"
+  },
+  {
+   "player": "Byron Murphy II",
+   "pos": "DL",
+   "team": "SEA",
+   "opp": "DEN",
+   "proj": 15.8,
+   "posRank": 15,
+   "fpgSeason": 14.0,
+   "fpgL3": 20.33,
+   "snapShareL3": 0.657,
+   "greenDot": null,
+   "bid": 6,
+   "range": [
+    3,
+    10
+   ],
+   "note": "injury: nan; riser: 20.3 FP/G last 3 vs 4.5 earlier"
   }
  ]
 }
