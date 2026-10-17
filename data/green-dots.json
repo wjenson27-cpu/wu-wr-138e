@@ -1,6 +1,6 @@
 {
   "sample": false,
-  "asOf": "2026-10-13T08:15:00-07:00",
+  "asOf": "2026-10-17T07:50:00-07:00",
   "week": 5,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-5-idp-green-dot-and-full-time-linebackers",
@@ -48,11 +48,11 @@
     },
     {
       "team": "CHI",
-      "greenDot": null,
+      "greenDot": "D'Marco Jackson",
       "fullTime": [
         "Devin Bush"
       ],
-      "notes": "Dot split: T.J. Edwards / D'Marco Jackson. Edwards left early Q2 (hamstring) after 23 snaps; D'Marco Jackson took the dot (47 snaps, 79.7%). Bush 60/60, 8 tkl. Jackson is the add if Edwards misses time."
+      "notes": "W5: dot split T.J. Edwards / D'Marco Jackson (Edwards left early Q2, hamstring; Jackson took the dot, 47 snaps). Bush 60/60. W6 update: Woellert on X (Oct 17) says Jackson has the green dot this week with Edwards out: https://x.com/Mike_Woellert/status/2111469987797852368"
     },
     {
       "team": "CIN",
