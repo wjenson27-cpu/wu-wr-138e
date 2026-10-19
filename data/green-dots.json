@@ -1,9 +1,9 @@
 {
   "sample": false,
-  "asOf": "2026-10-17T07:50:00-07:00",
-  "week": 5,
+  "asOf": "2026-10-19T06:24:56-07:00",
+  "week": 6,
   "source": "Mike Woellert",
-  "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-5-idp-green-dot-and-full-time-linebackers",
+  "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-6-green-dot-and-full-time-linebackers-idp-fantasy-football",
   "teams": [
     {
       "team": "ARI",
@@ -12,15 +12,13 @@
         "Mack Wilson",
         "Jack Gibbens"
       ],
-      "notes": "Wilson 65/65 snaps, 7 tkl. Gibbens 49 snaps (75.4%) after ~90% prior two weeks, 3 tkl \u2014 small flag, 'hold' not role change."
+      "notes": "Wilson 57/57, 9 tkl. Gibbens 49 (88%), 7 tkl. Cody Simon 7 snaps; rotation 'died'. W7 vs DEN (87.5% short passes) good for both."
     },
     {
       "team": "ATL",
-      "greenDot": "Divine Deablo",
-      "fullTime": [
-        "Divine Deablo"
-      ],
-      "notes": "Deablo wore the dot, 71/71, 12 tkl. Kendal Daniels 48 snaps (67.6%) 8 tkl + sack; Harold Perkins down to 23 (32.4%). Daniels/Perkins swapped vs W4 \u2014 situational (Daniels vs run teams). Only Deablo safe."
+      "greenDot": null,
+      "fullTime": [],
+      "notes": "Unsettled: Divine Deablo started with the dot but left hurt (arm, 24 snaps); Josh Woods finished with it (42 snaps). Kendal Daniels (neck) also left; Harold Perkins played every 2H snap. Check practice reports."
     },
     {
       "team": "BAL",
@@ -28,7 +26,7 @@
       "fullTime": [
         "Roquan Smith"
       ],
-      "notes": "Smith 64/64, 8 tkl. Trenton Simpson 36 snaps (56.2%), 7 tkl + sack; share below non-dime rate \u2014 'hold with a lower floor than tackle totals suggest.' Ravens base 46.9%."
+      "notes": "Smith 60/60, 5 tkl, 4 missed. Simpson 35 (58%), 7 tkl (20% tackle rate); 56-65% every week. BAL dime 36.7%."
     },
     {
       "team": "BUF",
@@ -36,23 +34,25 @@
       "fullTime": [
         "Terrel Bernard"
       ],
-      "notes": "Bernard wore dot, 75/78 (96.2%), 7 tkl (5,7,7 last 3). Dorian Williams 62 snaps (79.5% per article; Woellert X post says 83%), 9 tkl but 8 assists \u2014 tracks non-dime rate; 'hold'. BUF base 51.3%, dime 19.2%. Updated Oct 13 (MNF)."
+      "notes": "Bernard 96%->80% (49 snaps), 9 tkl; Kaleb Elarms-Orr 8%->30%: real rotation signal. Dorian Williams 79%->59%. BYE W7."
     },
     {
       "team": "CAR",
       "greenDot": "Devin Lloyd",
       "fullTime": [
-        "Devin Lloyd"
+        "Devin Lloyd",
+        "Bobby Okereke"
       ],
-      "notes": "Okereke loses snaps to dime; BYE Week 5 | BYE Week 5 \u2014 carried from Week 4 list"
+      "notes": "CHANGE: both played every snap (82% nickel, 1.6% dime). Okereke 8 tkl (3 TFL), sack; Lloyd 4 tkl, sack. W7 vs TB."
     },
     {
       "team": "CHI",
       "greenDot": "D'Marco Jackson",
       "fullTime": [
+        "D'Marco Jackson",
         "Devin Bush"
       ],
-      "notes": "W5: dot split T.J. Edwards / D'Marco Jackson (Edwards left early Q2, hamstring; Jackson took the dot, 47 snaps). Bush 60/60. W6 update: Woellert on X (Oct 17) says Jackson has the green dot this week with Edwards out: https://x.com/Mike_Woellert/status/2111469987797852368"
+      "notes": "Edwards (hamstring) inactive. Jackson dot, 43 (86%), 1 tkl. Bush 42 (84%), 7 tkl: Woellert prefers Bush. Jackson danger once Edwards returns. W7 vs NE (TNF)."
     },
     {
       "team": "CIN",
@@ -61,7 +61,7 @@
         "Barrett Carter",
         "Demetrius Knight"
       ],
-      "notes": "Carter 64/64, 11 tkl + sack. Knight back to 84.4%, 8 tkl. Start both. | W6 BYE."
+      "notes": "BYE W6. Carried from Week 5 list. Carter 64/64, 11 tkl + sack. Knight back to 84.4%, 8 tkl. Start both. | W6 BYE."
     },
     {
       "team": "CLE",
@@ -70,15 +70,16 @@
         "Carson Schwesinger",
         "Quincy Williams"
       ],
-      "notes": "Schwesinger 66/66, 8 tkl + sack; seen in walking boot (reported Grade 1 ankle sprain, not ruled out W6). Quincy Williams 92.4%, 11 tkl \u2014 owns dot if Schwesinger sits."
+      "notes": "Both 57/57 (98% nickel). Schwesinger 13 tkl, FF through a Grade 1 ankle sprain. W7 @ TEN (TEN runs 48.9%)."
     },
     {
       "team": "DAL",
       "greenDot": null,
       "fullTime": [
+        "Shemar James",
         "Jaishawn Barham"
       ],
-      "notes": "Dot split: Shemar James / Jaishawn Barham. Dot rotation confirmed. Barham 80.0% 7 tkl; James 41.5%; Dee Winters 63.1% but 10 tkl. Three LBs through two spots."
+      "notes": "Unsettled: Dee Winters hurt early 2Q. Dot split Shemar James/Jaishawn Barham in 1H, James in 2H (100%). James 55 (79%), Barham 57 (81%). Woellert: add Barham if Winters is out. W7 vs PHI (MNF)."
     },
     {
       "team": "DEN",
@@ -87,7 +88,7 @@
         "Alex Singleton",
         "Justin Strnad"
       ],
-      "notes": "Singleton 63/63, 7 tkl. Strnad 90.5% (rising 67.1\u219284.6\u219290.5). Both locks; Denver almost all zone."
+      "notes": "Singleton 83 snaps, 13 tkl. Strnad 74 (90%), 4 tkl, half sack (9.0% season tackle rate). W7 @ ARI good for Singleton."
     },
     {
       "team": "DET",
@@ -96,7 +97,7 @@
         "Jack Campbell",
         "Derrick Barnes"
       ],
-      "notes": "Campbell 71/71, 10 tkl. Barnes 81.7% but 4 tkl. Malcolm Rodriguez 31% deep add. Devin White broken forearm, surgery. | W6 BYE."
+      "notes": "BYE W6. Carried from Week 5 list. Campbell 71/71, 10 tkl. Barnes 81.7% but 4 tkl. Malcolm Rodriguez 31% deep add. Devin White broken forearm, surgery. | W6 BYE."
     },
     {
       "team": "GB",
@@ -104,16 +105,16 @@
       "fullTime": [
         "Zaire Franklin"
       ],
-      "notes": "Franklin 92.6%, 9 tkl. LB2 split Hopper 55.9% (2 tkl, INT) / McDuffie 47.1% (6 tkl); shared field 5 snaps. McDuffie the add but rotation concerning."
+      "notes": "Franklin 71/71 but 3 tkl (rushed on 16 snaps; GB blitz 35.7%). McDuffie 38 (54%, rising), Hopper 31 (44%). W7 @ DET."
     },
     {
       "team": "HOU",
       "greenDot": "Azeez Al-Shaair",
       "fullTime": [
         "Azeez Al-Shaair",
-        "Jake Hansen"
+        "Henry To'oTo'o"
       ],
-      "notes": "Al-Shaair back, wore dot, 58/58, 11 tkl. Hansen 94.8%, 5 tkl + INT. Kenneth Murray (W4 dot) back to bench (3 snaps)."
+      "notes": "CHANGE: To'oTo'o back from shoulder, 67/68 (99%), 6 tkl. Al-Shaair 57 (84%), 7 tkl. Jake Hansen 95%->50% (34 snaps, 1 tkl), danger. HOU 47.1% base this week. W7 vs NYG."
     },
     {
       "team": "IND",
@@ -121,23 +122,25 @@
       "fullTime": [
         "Akeem Davis-Gaither"
       ],
-      "notes": "ADG 85.2%, 7 tkl. Jaylon Carlies out (rib) \u2192 Austin Ajiake 53.7% 5 tkl (deep-league add if Carlies out again)."
+      "notes": "ADG 44/45, 9 tkl. Ajiake 54%->33%, Boettcher 17%->40% (deep add). W7 @ MIN."
     },
     {
       "team": "JAX",
       "greenDot": "Foyesade Oluokun",
       "fullTime": [
-        "Foyesade Oluokun"
+        "Foyesade Oluokun",
+        "Ventrell Miller"
       ],
-      "notes": "Oluokun 59/59, 10 tkl. Ventrell Miller 74.6% (=non-dime share), 3 tkl \u2014 package player. JAX dime 25.4%."
+      "notes": "CHANGE: Miller up 68%->75%->85% (50 snaps, 6 tkl). Oluokun 55 (93%), 8 tkl (ESPN play-by-play logged an in-game injury in 3Q; he kept playing. Status unverified). BYE W7."
     },
     {
       "team": "KC",
       "greenDot": "Nick Bolton",
       "fullTime": [
-        "Nick Bolton"
+        "Nick Bolton",
+        "Drue Tranquill"
       ],
-      "notes": "Tranquill dime danger; BYE Week 5 | BYE Week 5 \u2014 carried from Week 4 list"
+      "notes": "CHANGE: Tranquill 58 (92%), 7 tkl. Bolton 63/63, 11 tkl. W7 @ SEA (SEA ran 82 plays in W6)."
     },
     {
       "team": "LAC",
@@ -145,7 +148,7 @@
       "fullTime": [
         "Daiyan Henley"
       ],
-      "notes": "Henley 94.7%, 6 tkl. Del'Shawn Phillips 68.4% (all 6 tkl assists) \u2014 run-down role, hold."
+      "notes": "Henley 51 (89%), 4 tkl. Del'Shawn Phillips 45 (79%), bounces 48-86%, 21.6% missed tackles. BYE W7."
     },
     {
       "team": "LAR",
@@ -153,7 +156,7 @@
       "fullTime": [
         "Nate Landman"
       ],
-      "notes": "Landman wore dot, 51/57 (89.5%), 13 tkl (tied LB high), 9 run stops \u2014 lock. Rams dime 54.4% (+28.5 pts), nickel 3.5%. Omar Speights 19 snaps (33.3%), base-only \u2014 avoid. Updated Oct 13 (MNF)."
+      "notes": "Landman 69/70, 10 tkl. Speights 21 (30%) in 65.7% dime. W7 @ LV (12 personnel 63.9%) may bring more base."
     },
     {
       "team": "LV",
@@ -162,7 +165,7 @@
         "Nakobe Dean",
         "Quay Walker"
       ],
-      "notes": "Dean 66/66, 12 tkl (Doubtpfizer starter). Walker 66/66 but 4 tkl. Safest snap pair."
+      "notes": "Both 64/64. Dean 12 tkl (12 in 3 of last 4). W7 vs LAR."
     },
     {
       "team": "MIA",
@@ -171,7 +174,7 @@
         "Jacob Rodriguez",
         "Jordyn Brooks"
       ],
-      "notes": "Rodriguez 63/63, 11 tkl. Jordyn Brooks (EDDIES) 44 snaps (69.8%), 8 tkl (1 solo), 3 missed; limped off, missed most of Q2, returned for 100% of 2nd half \u2014 injury, not role change; watch this week. Jackson Wood the name if Brooks sits. | W6 BYE. Brooks (foot) DNP Tue Oct 13 bye-week practice; Woellert names Jackson Woodard if Brooks sits."
+      "notes": "BYE W6. Carried from Week 5 list. Rodriguez 63/63, 11 tkl. Jordyn Brooks (EDDIES) 44 snaps (69.8%), 8 tkl (1 solo), 3 missed; limped off, missed most of Q2, returned for 100% of 2nd half — injury, not role change; watch this week. Jackson Wood the name if Brooks sits. | W6 BYE. Brooks (foot) DNP Tue Oct 13 bye-week practice; Woellert names Jackson Woodard if Brooks sits."
     },
     {
       "team": "MIN",
@@ -180,7 +183,7 @@
         "Blake Cashman",
         "Eric Wilson"
       ],
-      "notes": "Cashman 97.7%, 9 tkl on only 43 team snaps. Eric Wilson 93% but pass-rush role (2 tkl, 5 pressures). | W6 BYE."
+      "notes": "BYE W6. Carried from Week 5 list. Cashman 97.7%, 9 tkl on only 43 team snaps. Eric Wilson 93% but pass-rush role (2 tkl, 5 pressures). | W6 BYE."
     },
     {
       "team": "NE",
@@ -189,16 +192,16 @@
         "Robert Spillane",
         "Christian Elliss"
       ],
-      "notes": "Both 82.5% (pulled in Q4 blowout). Elliss 7 tkl."
+      "notes": "Both 61 (98%), low tackle totals. Elliss listed Q (chest). Ponder (edge/LB) 48 snaps (77%) per nflverse. W7 @ CHI (TNF)."
     },
     {
       "team": "NO",
-      "greenDot": "Danny Stutsman",
+      "greenDot": "Pete Werner",
       "fullTime": [
-        "Danny Stutsman",
-        "Pete Werner"
+        "Pete Werner",
+        "Danny Stutsman"
       ],
-      "notes": "Kaden Elliss out again. Stutsman 85.3% 9 tkl; Werner 100% 10 tkl (lock). Stutsman loses snaps if Elliss returns."
+      "notes": "CHANGE: Werner now wears the dot (74/74, 11 tkl), 100% two straight games. Stutsman 66 (92%), 4 tkl, 3 missed. If Kaden Elliss returns, one loses a lot (Werner expected to keep value). W7 vs PIT (London)."
     },
     {
       "team": "NYG",
@@ -207,7 +210,7 @@
         "Tremaine Edmunds",
         "Arvell Reese"
       ],
-      "notes": "Both 61/61, 9 tkl + sack each; Giants blitz 62.2%. Both locks."
+      "notes": "Both 68/68. Edmunds 9 tkl (4th straight 9+). W7 @ HOU."
     },
     {
       "team": "NYJ",
@@ -216,16 +219,15 @@
         "Demario Davis",
         "Jamien Sherwood"
       ],
-      "notes": "Both 64 snaps, 4 tkl each; man/blitz-heavy scheme, low team snaps. Davis hold."
+      "notes": "Davis 68/68, 7 tkl; Sherwood 64 (94%), 11 tkl, FF, FR. W7 vs MIA."
     },
     {
       "team": "PHI",
       "greenDot": "Zack Baun",
       "fullTime": [
-        "Zack Baun",
-        "Jihaad Campbell"
+        "Zack Baun"
       ],
-      "notes": "Baun back, dot, 68/68, 11 tkl. Jeremiah Trotter ejected 13 seconds in. Campbell 85.3% with dime back \u2014 hold."
+      "notes": "CHANGE: true LB2 rotation. Jihaad Campbell 85%->61% (45 snaps, 5 tkl); Jeremiah Trotter 0%->36% (27 snaps, 5 tkl, half sack); they shared 0 snaps. Campbell hold, Trotter deep add. W7 vs DAL (MNF)."
     },
     {
       "team": "PIT",
@@ -234,15 +236,16 @@
         "Patrick Queen",
         "Payton Wilson"
       ],
-      "notes": "Queen 98.6% 7 tkl (0 solo). Payton Wilson 88.4% 10 tkl, rising \u2014 'lock now'."
+      "notes": "Queen 73/73, 3 tkl (borderline droppable in shallow). Payton Wilson 67 (93%, up every week), 11 tkl. W7 vs NO (London)."
     },
     {
       "team": "SEA",
       "greenDot": "Ernest Jones",
       "fullTime": [
-        "Ernest Jones"
+        "Ernest Jones",
+        "Tyrice Knight"
       ],
-      "notes": "Jones 57/57, 9 tkl + sack. Drake Thomas 76.8% capped by ~21% dime."
+      "notes": "CHANGE: Drake Thomas (ankle) out. Knight 49 (86%), 8 tkl (2 snaps in W5). Jones 57/57, 9 tkl, sack. Surratt (calf) out. Knight a start if Thomas out again. W7 vs KC."
     },
     {
       "team": "SF",
@@ -250,7 +253,7 @@
       "fullTime": [
         "Fred Warner"
       ],
-      "notes": "Warner (EDDIES) 60/60, 10 tkl \u2014 lock. Dre Greenlaw ejected (25 snaps), later suspended 1 game (appeal hearing Tue). Jaden Dugger 45 snaps (75%), 9 tkl, sack \u2014 'the one to add'. | Greenlaw appeal heard Tue Oct 13 \u2014 no ruling reported as of ~3 PM PT. If upheld, Dugger likely every-down MNF W6 vs WAS."
+      "notes": "MNF pending (Woellert: \"Pending (Monday night)\"). Carried from Week 5 list. Warner (EDDIES) 60/60, 10 tkl — lock. Dre Greenlaw ejected (25 snaps), later suspended 1 game (appeal hearing Tue). Jaden Dugger 45 snaps (75%), 9 tkl, sack — 'the one to add'. | Greenlaw appeal heard Tue Oct 13 — no ruling reported as of ~3 PM PT. If upheld, Dugger likely every-down MNF W6 vs WAS."
     },
     {
       "team": "TB",
@@ -259,16 +262,15 @@
         "Alex Anzalone",
         "Josiah Trotter"
       ],
-      "notes": "Both every snap; Trotter now true every-down (lock), Anzalone hold."
+      "notes": "Both 75 (99%). Trotter 12 tkl (Q, knee). Anzalone 3 tkl, 8.4% season tackle rate (lowest every-down LB). W7 @ CAR."
     },
     {
       "team": "TEN",
       "greenDot": "Anthony Hill",
       "fullTime": [
-        "Anthony Hill",
-        "Cody Barton"
+        "Anthony Hill"
       ],
-      "notes": "Hill 63/63, 5 tkl. Barton 96.8% (rising). Cedric Gray (EDDIES bench) 25 snaps (39.7%), 6 tkl + half sack; 17 tkl on 80 snaps last 3 wks but base-only \u2014 add Barton before Gray. | Woellert Oct 13 8:46 AM PT: Gray's snaps have cut into Anthony Hill's tackles."
+      "notes": "CHANGE: 20.5% dime cut Barton 97%->54% (42 snaps, 3 tkl), now a danger spot. Cedric Gray 47% (37 snaps), 7 tkl (4 solo), 46-47% in 3 of 4 weeks: 'waiver add'. Hill 78/78, 9 tkl. W7 vs CLE."
     },
     {
       "team": "WAS",
@@ -277,15 +279,7 @@
         "Frankie Luvu",
         "Sonny Styles"
       ],
-      "notes": "Luvu wore dot 97.6%; Styles 97.6%, 13 tkl (league high; Doubtpfizer starter). Styles snaps tied to nickel rate."
+      "notes": "MNF pending (Woellert: \"Pending (Monday night)\"). Carried from Week 5 list. Luvu wore dot 97.6%; Styles 97.6%, 13 tkl (league high; Doubtpfizer starter). Styles snaps tied to nickel rate."
     }
-  ],
-  "draft": true,
-  "draftNote": "DRAFT by Eddie research run Tue Oct 13 ~3:05 PM PT \u2014 NOT pushed. Woellert updated the W5 article Oct 13 (X post 8:15 AM PT) to add MNF teams BUF and LAR. Only BUF/LAR/MIA/SF/TEN notes changed. Week 6 green-dot list will not exist until after W6 games (~Oct 19-20); W5 list is the latest for W6 decisions.",
-  "byesWeek6": [
-    "CIN",
-    "DET",
-    "MIA",
-    "MIN"
   ]
 }
