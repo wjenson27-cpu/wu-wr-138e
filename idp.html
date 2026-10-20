@@ -26,6 +26,15 @@ main{padding:10px 12px;max-width:720px;margin:0 auto}
 .jump{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
 .jump a{background:#0b1c2e;border:1px solid #1e3a5f;color:#A5ACAF;padding:6px 10px;border-radius:14px;font-size:.72rem;font-weight:700;text-decoration:none}
 .est{font-size:.68rem;color:#fcd34d;margin:6px 0}
+.rk{display:flex;gap:5px;flex-wrap:wrap;margin-top:4px}
+.chip{font-size:.66rem;font-weight:800;border-radius:6px;padding:1px 6px;background:#1e3a5f;color:#e8eaed;white-space:nowrap}
+.chip.wk{background:#173a1f;color:#8fe36a}.chip.ros{background:#2a2350;color:#c4b5fd}
+.chip.up{background:#0f2f22;color:#4ade80}.chip.dn{background:#3a1d0b;color:#fbbf24}
+.chip.tW{background:#38bdf8;color:#04121d}.chip.tR{background:#D4A017;color:#140f02}
+.mn{font-size:.7rem;margin-top:3px;color:#93c5fd;line-height:1.4}
+.sort{display:flex;gap:6px;margin:6px 0 2px}.sort button{flex:1;background:#0b1c2e;border:1px solid #1e3a5f;color:#A5ACAF;padding:7px;border-radius:8px;font-size:.74rem;font-weight:800}
+.sort button.on{background:#69BE28;color:#04121d;border-color:#69BE28}
+.unv{font-size:.66rem;color:#94a3b8;margin:4px 0 0 14px;padding:0}
 </style>
 </head>
 <body>
@@ -42,25 +51,39 @@ var TEAM={eddies:'Eddies',dongers:'Dongers',doubtpfizer:'Doubtpfizer',goats:'Old
 function f1(x){return (x==null||isNaN(x))?'–':Number(x).toFixed(1)}
 function pct(x){return x==null?'–':Math.round(x*100)+'%'}
 function own(l){return '<span class="own'+(l==='FREE'?' free':'')+'">'+e(TEAM[l]||l)+'</span>'}
-function card(r){
+function chg(c){if(c==null)return '<span class="chip">new</span>';if(c>0)return '<span class="chip up">▲'+c+'</span>';if(c<0)return '<span class="chip dn">▼'+(-c)+'</span>';return '<span class="chip">=</span>'}
+function card(r,mode){
  var gd=r.greenDot==='green'?' · 🟢 green dot':(r.greenDot==='full'?' · full-time':'');
- return '<div class="ic t'+r.tier+(r.league==='eddies'?' mine':'')+'"><div class="ih"><b>'+r.rank+'. '+e(r.player)+'</b><span class="pp">'+(r.bye?'BYE':f1(r.proj))+'</span></div>'+
- '<div class="im">'+e(r.pos)+' '+e(r.team)+' '+(r.bye?'· BYE':'vs '+e(r.opp))+' · Tier '+r.tier+' · '+own(r.league)+'<br>Season '+f1(r.fpgSeason)+' FP/G · Last 3 '+f1(r.fpgL3)+' · Snaps '+pct(r.snapShareL3)+' (L3) · Tkl opp '+pct(r.tackleOpp)+(r.passRushProxy>0.03?' · Pressure '+pct(r.passRushProxy):'')+gd+'</div>'+
+ var n=mode==='ros'?r.rosRank:r.weeklyRank;
+ return '<div class="ic t'+r.tier+(r.league==='eddies'?' mine':'')+'"><div class="ih"><b>'+n+'. '+e(r.player)+'</b><span class="pp">'+(mode==='ros'?f1(r.rosPPG)+'<small style="font-size:.6rem;color:#A5ACAF"> ROS/wk</small>':(r.bye?'BYE':f1(r.proj)))+'</span></div>'+
+ '<div class="rk"><span class="chip wk">W'+W+' #'+r.weeklyRank+'</span><span class="chip ros">ROS #'+r.rosRank+'</span>'+chg(r.rankChange)+'<span class="chip">Tier '+r.tier+'</span></div>'+
+ '<div class="im">'+e(r.pos)+' '+e(r.team)+' '+(r.bye?'· BYE':'vs '+e(r.opp))+' · '+own(r.league)+'<br>Season '+f1(r.fpgSeason)+' FP/G · Last 3 '+f1(r.fpgL3)+' · Snaps '+pct(r.snapShareL3)+' (L3) · Tkl opp '+pct(r.tackleOpp)+(r.passRushProxy>0.03?' · Pressure '+pct(r.passRushProxy):'')+gd+'<br>ROS '+f1(r.rosPts)+' pts wks '+W+'–17'+(r.rosByeWeek?' · bye W'+r.rosByeWeek:'')+(r.rosSOS?' · sched x'+Number(r.rosSOS).toFixed(2):'')+'</div>'+
+ (r.matchupNote?'<div class="mn">'+e(r.matchupNote)+'</div>':'')+
  (r.note?'<div class="in">'+e(r.note)+'</div>':'')+'</div>';
 }
+var W=0,D=null,MODE='wk';
+function posHtml(){var h='';['DL','LB','DB'].forEach(function(p){var L=D.positions[p].slice().sort(function(a,b){return MODE==='ros'?a.rosRank-b.rosRank:a.weeklyRank-b.weeklyRank});
+ h+='<div class="sh" id="'+p+'">'+p+' · '+(MODE==='ros'?'rest of season':'Week '+W)+' · '+L.length+' players</div>';L.forEach(function(r){h+=card(r,MODE)})});return h}
+function setMode(m){MODE=m;document.getElementById('bW').className=m==='wk'?'on':'';document.getElementById('bR').className=m==='ros'?'on':'';document.getElementById('pos').innerHTML=posHtml()}
 fetch('data/idp-rankings.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
- var f=d.faabContext;
+ D=d;W=d.week;var f=d.faabContext;
  document.getElementById('strip').innerHTML='Week <span>'+d.week+'</span> · stats thru W'+d.statsThroughWeek+' · FAAB <span>$'+f.eddiesFaabLeft+'</span> · Byes: <span>'+e(d.byeTeams.join(', ')||'none')+'</span>';
- var h='<div class="est">'+e(d.label)+' Updated '+e(d.generatedAt)+'.</div>';
- h+='<div class="jump"><a href="#claims">Claim targets</a><a href="#movers">Top movers</a><a href="#DL">DL</a><a href="#LB">LB</a><a href="#DB">DB</a></div>';
- h+='<div class="claim" id="claims"><h2>Free-agent claim targets</h2><div class="im">For the '+e(f.nextClear)+' run. League IDP winning bids: median $'+f.median+', 75th pct $'+f.p75+', top $'+f.max+' ('+f.n+' bids).</div>';
- d.claimTargets.forEach(function(t,i){h+='<div class="ic t1"><div class="ih"><b>'+(i+1)+'. '+e(t.player)+'</b><span class="bid">$'+t.bid+' ($'+t.range[0]+'–'+t.range[1]+')</span></div><div class="im">'+e(t.pos)+' '+e(t.team)+' vs '+e(t.opp)+' · '+e(t.pos)+t.posRank+' · proj '+f1(t.proj)+' · Season '+f1(t.fpgSeason)+' · L3 '+f1(t.fpgL3)+' · Snaps '+pct(t.snapShareL3)+'</div>'+(t.note?'<div class="in">'+e(t.note)+'</div>':'')+'</div>'});
+ var h='<div class="est">'+e(d.label)+' Updated '+e(d.generatedAt)+'. Green dots: '+e(String(d.sources.greenDots||'').replace(/\s*\(https?:[^)]*\)/,''))+'.</div>';
+ h+='<div class="jump"><a href="#claims">Claim targets</a><a href="#mine">My IDPs</a><a href="#movers">Top movers</a><a href="#DL">DL</a><a href="#LB">LB</a><a href="#DB">DB</a></div>';
+ h+='<div class="claim" id="claims"><h2>Free-agent claim targets</h2><div class="im">For the '+e(f.nextClear)+' run. <b>ROS</b> = hold, worth FAAB · <b>WEEKLY</b> = one-week streamer, $0–1. League IDP winning bids: median $'+f.median+', 75th pct $'+f.p75+', top $'+f.max+' ('+f.n+' bids).</div>';
+ d.claimTargets.forEach(function(t,i){h+='<div class="ic t1"><div class="ih"><b>'+(i+1)+'. '+e(t.player)+'</b><span class="bid">$'+t.bid+' ($'+t.range[0]+'–'+t.range[1]+')</span></div>'+
+  '<div class="rk"><span class="chip '+(t.tag==='ROS'?'tR':'tW')+'">'+e(t.tag)+'</span><span class="chip wk">W'+W+' '+e(t.pos)+'#'+t.weeklyRank+'</span><span class="chip ros">ROS '+e(t.pos)+'#'+t.rosRank+'</span></div>'+
+  '<div class="im">'+e(t.pos)+' '+e(t.team)+' vs '+e(t.opp)+' · proj '+f1(t.proj)+' · ROS '+f1(t.rosPPG)+'/wk · Season '+f1(t.fpgSeason)+' · L3 '+f1(t.fpgL3)+' · Snaps '+pct(t.snapShareL3)+(t.rosByeWeek?' · bye W'+t.rosByeWeek:'')+'</div>'+
+  (t.matchupNote?'<div class="mn">'+e(t.matchupNote)+'</div>':'')+(t.note?'<div class="in">'+e(t.note)+'</div>':'')+'</div>'});
  h+='</div>';
- h+='<div class="sh" id="movers">Top movers (last 3 vs earlier FP/G)</div>';
- d.movers.up.forEach(function(m){h+='<div class="ic t2"><div class="ih"><b>▲ '+e(m.player)+'</b><span class="pp">+'+f1(m.delta)+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+f1(m.fpgEarly)+' → '+f1(m.fpgL3)+' FP/G · proj '+f1(m.proj)+'</div></div>'});
- d.movers.down.forEach(function(m){h+='<div class="ic t5"><div class="ih"><b>▼ '+e(m.player)+'</b><span class="pp" style="color:#f59e0b">'+f1(m.delta)+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+f1(m.fpgEarly)+' → '+f1(m.fpgL3)+' FP/G · proj '+f1(m.proj)+'</div></div>'});
- ['DL','LB','DB'].forEach(function(p){h+='<div class="sh" id="'+p+'">'+p+' · top '+d.positions[p].length+'</div>';d.positions[p].forEach(function(r){h+=card(r)})});
- document.getElementById('root').innerHTML=h;
+ if(d.eddies&&d.eddies.length){h+='<div class="sh" id="mine">My IDPs (Eddies)</div>';d.eddies.forEach(function(m){h+='<div class="ic mine"><div class="ih"><b>'+e(m.player)+'</b><span class="pp">'+f1(m.proj)+'</span></div><div class="rk"><span class="chip wk">W'+W+' '+e(m.pos)+'#'+m.weeklyRank+'</span><span class="chip ros">ROS '+e(m.pos)+'#'+m.rosRank+'</span>'+(m.injury?'<span class="chip dn">'+e(m.injury)+'</span>':'')+'</div><div class="mn">'+e(m.matchupNote)+'</div></div>'})}
+ h+='<div class="sh" id="movers">Top movers · rank vs last file (W'+(W-1)+')</div>';
+ d.movers.up.forEach(function(m){h+='<div class="ic t2"><div class="ih"><b>▲ '+e(m.player)+'</b><span class="pp">+'+m.change+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+e(m.pos)+m.prevRank+' → '+e(m.pos)+m.weeklyRank+' · proj '+f1(m.prevProj)+' → '+f1(m.proj)+' · ROS #'+m.rosRank+'</div></div>'});
+ d.movers.down.forEach(function(m){h+='<div class="ic t5"><div class="ih"><b>▼ '+e(m.player)+'</b><span class="pp" style="color:#f59e0b">'+m.change+'</span></div><div class="im">'+e(m.pos)+' '+e(m.team)+' · '+own(m.league)+' · '+e(m.pos)+m.prevRank+' → '+e(m.pos)+m.weeklyRank+' · proj '+f1(m.prevProj)+' → '+f1(m.proj)+' · ROS #'+m.rosRank+'</div></div>'});
+ h+='<div class="sort"><button id="bW" class="on" onclick="setMode(\'wk\')">Week '+W+' ranks</button><button id="bR" onclick="setMode(\'ros\')">Rest of season</button></div>';
+ h+='<div id="pos"></div>';
+ if(d.unverified&&d.unverified.length){h+='<div class="sh">Unverified inputs</div><ul class="unv">';d.unverified.forEach(function(u){h+='<li>'+e(u)+'</li>'});h+='</ul>'}
+ document.getElementById('root').innerHTML=h;document.getElementById('pos').innerHTML=posHtml();
 }).catch(function(err){console.error(err);document.getElementById('strip').textContent='Could not load data/idp-rankings.json'});
 </script>
 </body>
