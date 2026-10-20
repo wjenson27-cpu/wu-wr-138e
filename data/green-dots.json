@@ -1,6 +1,6 @@
 {
   "sample": false,
-  "asOf": "2026-10-19T06:24:56-07:00",
+  "asOf": "2026-10-20T05:24:49-07:00",
   "week": 6,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-6-green-dot-and-full-time-linebackers-idp-fantasy-football",
@@ -251,9 +251,10 @@
       "team": "SF",
       "greenDot": "Fred Warner",
       "fullTime": [
-        "Fred Warner"
+        "Fred Warner",
+        "Jaden Dugger"
       ],
-      "notes": "MNF pending (Woellert: \"Pending (Monday night)\"). Carried from Week 5 list. Warner (EDDIES) 60/60, 10 tkl — lock. Dre Greenlaw ejected (25 snaps), later suspended 1 game (appeal hearing Tue). Jaden Dugger 45 snaps (75%), 9 tkl, sack — 'the one to add'. | Greenlaw appeal heard Tue Oct 13 — no ruling reported as of ~3 PM PT. If upheld, Dugger likely every-down MNF W6 vs WAS."
+      "notes": "W6 FINAL (MNF). Warner wore the dot, 61/61 snaps per Woellert (nflverse: 67, 100%), 8 tkl (13.1% tackle rate), 60 yds allowed on 7 targets, 2 pressures. Jaden Dugger 97% with Dre Greenlaw suspended (W6 only), 11 tkl (8 solo). Woellert: Greenlaw is back W7, expects Dugger's snaps to come down; Dugger a hold, don't pay for 97%. W7 @ ATL (dome)."
     },
     {
       "team": "TB",
@@ -279,7 +280,7 @@
         "Frankie Luvu",
         "Sonny Styles"
       ],
-      "notes": "MNF pending (Woellert: \"Pending (Monday night)\"). Carried from Week 5 list. Luvu wore dot 97.6%; Styles 97.6%, 13 tkl (league high; Doubtpfizer starter). Styles snaps tied to nickel rate."
+      "notes": "W6 FINAL (MNF). WAS 71.7% base vs SF 21 personnel. Luvu dot, 59 snaps (98%), 8 tkl (6 ast) + fumble recovery. Styles 52/60 (87%), 13 tkl (2nd straight week). WAS BYE W7 - hold both."
     }
   ]
 }
