@@ -2,72 +2,76 @@
   "teamId": "eddies",
   "teamName": "Eagle Ridge Eddies",
   "owner": "Bill Jenson",
-  "asOf": "2026-10-14 9:30 AM PT",
-  "faabLeft": 60,
-  "startingQB": "Trevor Lawrence",
+  "asOf": "2026-10-21 9:34 AM PT",
+  "faabLeft": 55,
+  "startingQB": "Bryce Young",
   "roster": {
     "QB": [
+      "Bryce Young",
       "Trevor Lawrence"
     ],
     "RB": [
-      "Rhamondre Stevenson",
       "Breece Hall",
-      "Brian Robinson Jr.",
-      "Jacory Croskey-Merritt"
+      "Zach Charbonnet",
+      "Brian Robinson Jr."
     ],
     "WR": [
       "Garrett Wilson",
       "Jalen Coker",
-      "Kendrick Bourne",
-      "Chimere Dike"
+      "Chimere Dike",
+      "Kendrick Bourne"
     ],
     "TE": [
       "Brock Bowers",
       "Tyler Warren"
     ],
     "DL": [
-      "Tuli Tuipulotu"
+      "George Karlaftis"
     ],
     "LB": [
       "Fred Warner",
+      "Jordyn Brooks",
       "Cedric Gray",
       "Trenton Simpson",
-      "Jordyn Brooks"
+      "Tyrice Knight"
     ],
     "DB": [
-      "Julian Love",
-      "Evan Williams",
       "Quentin Lake",
-      "Mansoor Delane"
+      "Evan Williams",
+      "D.J. Reed"
     ],
     "IR": [
-      "Zach Charbonnet",
       "Jordyn Tyson",
+      "Jacory Croskey-Merritt",
       "Travis Etienne"
     ]
   },
-  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $68. | Oct 14 W6 waivers/FA: +Mansoor Delane $8 (\u2212Leonard Williams). FAAB $60.",
+  "notes": "",
   "injuryFlags": [
-    "Jalen Coker \u2014 Q (Quadriceps) (active)",
-    "Breece Hall \u2014 Q (Quadriceps) (active)",
-    "Zach Charbonnet \u2014 PUP (Knee - acl) (IR slot)",
-    "Jordyn Tyson \u2014 IR (Hamstring) (IR slot)",
-    "Travis Etienne \u2014 IR (Hamstring) (IR slot)"
+    "Breece Hall — Q (active)",
+    "Tyler Warren — Q (active)",
+    "Zach Charbonnet — IR (reserve)",
+    "Jordyn Tyson — IR (IR slot)",
+    "Jacory Croskey-Merritt — IR (IR slot)",
+    "Travis Etienne — IR (IR slot)"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "fantraxTeamId": "xbvk9dpgmsb3ulv4",
   "lineupFlags": [
-    "Jalen Coker \u2014 Q (Quadriceps) (active)",
-    "Breece Hall \u2014 Q (Quadriceps) (active)"
+    "Breece Hall — Q (active)",
+    "Tyler Warren — Q (active)",
+    "Zach Charbonnet — IR (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Jalen Coker \u2014 Q (Quadriceps) (active)",
-    "Breece Hall \u2014 Q (Quadriceps) (active)",
-    "Zach Charbonnet \u2014 PUP (Knee - acl) (IR slot)",
-    "Jordyn Tyson \u2014 IR (Hamstring) (IR slot)",
-    "Travis Etienne \u2014 IR (Hamstring) (IR slot)"
+    "Breece Hall — Q (active)",
+    "Tyler Warren — Q (active)",
+    "Zach Charbonnet — IR (reserve)",
+    "Jordyn Tyson — IR (IR slot)",
+    "Jacory Croskey-Merritt — IR (IR slot)",
+    "Travis Etienne — IR (IR slot)"
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-21",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

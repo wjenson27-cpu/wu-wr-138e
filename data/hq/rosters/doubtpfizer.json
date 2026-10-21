@@ -2,8 +2,8 @@
   "teamId": "doubtpfizer",
   "teamName": "Mrs. Doubtpfizer",
   "owner": "Kyle Weberg",
-  "asOf": "2026-10-14 9:30 AM PT",
-  "faabLeft": 86,
+  "asOf": "2026-10-21 9:34 AM PT",
+  "faabLeft": 85,
   "startingQB": "Dak Prescott",
   "roster": {
     "QB": [
@@ -11,11 +11,11 @@
     ],
     "RB": [
       "Christian McCaffrey",
-      "Braelon Allen",
       "Chuba Hubbard",
       "Kaelon Black",
-      "Blake Corum",
-      "Dylan Sampson"
+      "Seth McGowan",
+      "Braelon Allen",
+      "Blake Corum"
     ],
     "WR": [
       "Nico Collins",
@@ -32,39 +32,40 @@
     ],
     "LB": [
       "Nakobe Dean",
+      "DeMarvion Overshown",
+      "Elijah Ponder",
       "Alex Singleton",
-      "Sonny Styles",
-      "D'Marco Jackson"
+      "Sonny Styles"
     ],
     "DB": [
-      "Reed Blankenship",
       "Kamari Lassiter"
     ],
     "IR": [
       "Rashee Rice",
       "Mason Graham",
-      "DeMarvion Overshown"
+      "Reed Blankenship"
     ]
   },
-  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $91. | Oct 14 W6 waivers/FA: +Dylan Sampson $1 (\u2212Tre Harris); +D'Marco Jackson $4 (\u2212Keisean Nixon). FAAB $86.",
+  "notes": "",
   "injuryFlags": [
-    "Tre Harris \u2014 D (Hamstring) (reserve)",
-    "Rashee Rice \u2014 Q (Hamstring) (IR slot)",
-    "Mason Graham \u2014 Q (Knee - mcl) (IR slot)",
-    "DeMarvion Overshown \u2014 Q (Hamstring) (IR slot)"
+    "Rashee Rice — Q (IR slot)",
+    "DeMarvion Overshown — Q (active)",
+    "Mason Graham — Q (IR slot)",
+    "Reed Blankenship — Q (IR slot)"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "fantraxTeamId": "xg1akj6omsb3ulv5",
   "lineupFlags": [
-    "Tre Harris \u2014 D (Hamstring) (reserve)"
+    "DeMarvion Overshown — Q (active)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Tre Harris \u2014 D (Hamstring) (reserve)",
-    "Rashee Rice \u2014 Q (Hamstring) (IR slot)",
-    "Mason Graham \u2014 Q (Knee - mcl) (IR slot)",
-    "DeMarvion Overshown \u2014 Q (Hamstring) (IR slot)"
+    "Rashee Rice — Q (IR slot)",
+    "DeMarvion Overshown — Q (active)",
+    "Mason Graham — Q (IR slot)",
+    "Reed Blankenship — Q (IR slot)"
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-21",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

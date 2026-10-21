@@ -2,65 +2,76 @@
   "teamId": "ultron",
   "teamName": "Ultron",
   "owner": "Brian Aga",
-  "asOf": "2026-10-14 9:30 AM PT",
-  "faabLeft": 0,
-  "startingQB": "Bryce Young",
+  "asOf": "2026-10-21 9:34 AM PT",
+  "faabLeft": 2,
+  "startingQB": "Caleb Williams",
   "roster": {
     "QB": [
-      "Bryce Young"
+      "Caleb Williams"
     ],
     "RB": [
-      "Bhayshul Tuten",
       "D'Andre Swift",
-      "Chris Rodriguez Jr."
+      "Rhamondre Stevenson",
+      "Chris Rodriguez Jr.",
+      "Bhayshul Tuten"
     ],
     "WR": [
-      "Michael Wilson",
-      "Terry McLaurin",
-      "Ja'Marr Chase",
-      "Germie Bernard",
-      "Keenan Allen"
+      "Drake London",
+      "Kaden Wetjen",
+      "Michael Wilson"
     ],
     "TE": [
       "Pat Freiermuth"
     ],
     "DL": [
-      "Jaishawn Barham",
-      "Dallas Turner"
+      "Dallas Turner",
+      "Jaishawn Barham"
     ],
     "LB": [
-      "Foyesade Oluokun",
-      "Frankie Luvu",
-      "Patrick Queen",
       "Robert Spillane",
-      "Jack Campbell"
+      "Tremaine Edmunds",
+      "Patrick Queen",
+      "Carson Schwesinger",
+      "Kendal Daniels",
+      "Foyesade Oluokun"
     ],
     "DB": [
+      "Josh Metellus",
       "Dillon Thieneman",
-      "Trevon Moehrig",
       "Grant Delpit"
     ],
     "IR": [
-      "Caleb Williams",
+      "Terrance Ferguson",
       "Kyle Monangai",
       "Myles Garrett"
     ]
   },
-  "notes": "Oct 14 AM rebuild from live Fantrax: Active 13 / Reserve 4 / IR 3. FAAB $10. | Oct 14 W6 waivers/FA: +Germie Bernard $9 (\u2212Antonio Williams); +Pat Freiermuth $1 (\u2212Mark Andrews); +Trevon Moehrig; +Keenan Allen; +Malaki Starks; +Grant Delpit (\u2212Malaki Starks). FAAB $0.",
+  "notes": "",
   "injuryFlags": [
-    "Caleb Williams \u2014 Q (Hamstring) (IR slot)",
-    "Kyle Monangai \u2014 Q (Toe) (IR slot)",
-    "Myles Garrett \u2014 IR (Knee) (IR slot)"
+    "Terrance Ferguson — IR (IR slot)",
+    "Kyle Monangai — Q (IR slot)",
+    "Tremaine Edmunds — Q (active)",
+    "Kendal Daniels — Q (reserve)",
+    "Grant Delpit — Q (reserve)",
+    "Myles Garrett — IR (IR slot)"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "fantraxTeamId": "k9i4qjrlmsb3ulv5",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Tremaine Edmunds — Q (active)",
+    "Kendal Daniels — Q (reserve)",
+    "Grant Delpit — Q (reserve)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Caleb Williams \u2014 Q (Hamstring) (IR slot)",
-    "Kyle Monangai \u2014 Q (Toe) (IR slot)",
-    "Myles Garrett \u2014 IR (Knee) (IR slot)"
+    "Terrance Ferguson — IR (IR slot)",
+    "Kyle Monangai — Q (IR slot)",
+    "Tremaine Edmunds — Q (active)",
+    "Kendal Daniels — Q (reserve)",
+    "Grant Delpit — Q (reserve)",
+    "Myles Garrett — IR (IR slot)"
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-21",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

@@ -2,75 +2,64 @@
   "teamId": "pocket",
   "teamName": "Pocket Agents",
   "owner": "Kellen Olson",
-  "asOf": "2026-10-14 9:30 AM PT",
-  "faabLeft": 101,
-  "startingQB": "Tyler Shough",
+  "asOf": "2026-10-21 9:34 AM PT",
+  "faabLeft": 98,
+  "startingQB": "Jared Goff",
   "roster": {
     "QB": [
-      "Tyler Shough",
-      "Jared Goff"
+      "Jared Goff",
+      "Tyler Shough"
     ],
     "RB": [
       "Woody Marks",
       "Mike Washington"
     ],
     "WR": [
+      "Rashid Shaheed",
       "CeeDee Lamb",
       "Tetairoa McMillan",
-      "Rashid Shaheed",
       "Jaylen Waddle",
-      "Malik Washington",
-      "Kyle Williams"
+      "Malik Washington"
     ],
     "TE": [
-      "Dalton Kincaid",
-      "Trey McBride"
+      "Trey McBride",
+      "Chigoziem Okonkwo"
     ],
     "DL": [
       "Will Anderson Jr."
     ],
     "LB": [
-      "Josiah Trotter",
       "Ernest Jones",
-      "Barrett Carter"
+      "Barrett Carter",
+      "Josiah Trotter",
+      "Micah McFadden"
     ],
     "DB": [
-      "Jaquan Brisker",
       "Cooper DeJean",
+      "Brandon Jones",
       "Amani Hooker",
-      "Brandon Jones"
+      "Jaquan Brisker"
     ],
     "IR": [
       "Saquon Barkley",
       "Jonah Coleman",
-      "Adonai Mitchell"
+      "Dalton Kincaid"
     ]
   },
-  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $101. | Oct 14 W6 waivers/FA: +Kyle Williams (\u2212Jalen Pitre). FAAB $101.",
+  "notes": "",
   "injuryFlags": [
-    "CeeDee Lamb \u2014 Q (Quadriceps) (active)",
-    "Saquon Barkley \u2014 Q (Hamstring) (IR slot)",
-    "Jonah Coleman \u2014 IR (Ankle) (IR slot)",
-    "Adonai Mitchell \u2014 Q (Finger) (IR slot)",
-    "Amani Hooker \u2014 Q (Concussion) (active)",
-    "Jalen Pitre \u2014 D (Shoulder - ac joint) (reserve)"
+    "Saquon Barkley — Q (IR slot)",
+    "Jonah Coleman — IR (IR slot)"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "fantraxTeamId": "20zozmjgmsb3ulv4",
-  "lineupFlags": [
-    "CeeDee Lamb \u2014 Q (Quadriceps) (active)",
-    "Amani Hooker \u2014 Q (Concussion) (active)",
-    "Jalen Pitre \u2014 D (Shoulder - ac joint) (reserve)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "CeeDee Lamb \u2014 Q (Quadriceps) (active)",
-    "Saquon Barkley \u2014 Q (Hamstring) (IR slot)",
-    "Jonah Coleman \u2014 IR (Ankle) (IR slot)",
-    "Adonai Mitchell \u2014 Q (Finger) (IR slot)",
-    "Amani Hooker \u2014 Q (Concussion) (active)",
-    "Jalen Pitre \u2014 D (Shoulder - ac joint) (reserve)"
+    "Saquon Barkley — Q (IR slot)",
+    "Jonah Coleman — IR (IR slot)"
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-21",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

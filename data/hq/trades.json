@@ -1,8 +1,80 @@
 {
-  "updated": "2026-10-14",
-  "source": "Fantrax roster sync Wed Oct 14 2026 ~6:45 AM PT (/workspace/fantrax-scrape-2026-10-14-am-roster-sync.json)",
+  "updated": "2026-10-21",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "season": 2026,
   "trades": [
+    {
+      "date": "2026-10-20",
+      "time": "11:01 PM PDT",
+      "week": 6,
+      "status": "completed",
+      "official": true,
+      "teamA": "Saltese Slamm",
+      "teamB": "Towner Top Aga Bottom",
+      "givesA": [
+        "Stefon Diggs (WR)"
+      ],
+      "givesB": [
+        "$20 FAAB"
+      ],
+      "summary": "Week 6 — Saltese Slamm sent Stefon Diggs (WR) to TTAB for $20 FAAB (Oct 20 11:01 PM PDT)."
+    },
+    {
+      "date": "2026-10-19",
+      "time": "8:54 PM PDT",
+      "week": 6,
+      "status": "completed",
+      "official": true,
+      "teamA": "Eagle Ridge Eddies",
+      "teamB": "Ultron",
+      "givesA": [
+        "Rhamondre Stevenson (RB)"
+      ],
+      "givesB": [
+        "Bryce Young (QB)"
+      ],
+      "summary": "Week 6 — Eagle Ridge Eddies sent Rhamondre Stevenson (RB) to Ultron for Bryce Young (QB) (Oct 19 8:54 PM PDT)."
+    },
+    {
+      "date": "2026-10-16",
+      "time": "10:20 AM PDT",
+      "week": 6,
+      "status": "completed",
+      "official": true,
+      "teamA": "Newman Lake Sleep Paralysis Demons",
+      "teamB": "Substation",
+      "givesA": [
+        "Kaden Elliss (LB)",
+        "$5 FAAB"
+      ],
+      "givesB": [
+        "Jordan Love (QB)"
+      ],
+      "summary": "Week 6 — Newman Lake Sleep Paralysis Demons sent Kaden Elliss (LB), $5 FAAB to Substation for Jordan Love (QB) (Oct 16 10:20 AM PDT)."
+    },
+    {
+      "date": "2026-10-16",
+      "time": "6:29 PM PDT",
+      "week": 6,
+      "status": "completed",
+      "official": true,
+      "teamA": "Substation",
+      "teamB": "Ultron",
+      "givesA": [
+        "Easton Mascarenas-Arnold (LB)",
+        "Drake London (WR)",
+        "Tremaine Edmunds (LB)",
+        "Carson Schwesinger (LB)",
+        "$7 FAAB"
+      ],
+      "givesB": [
+        "Jack Campbell (LB)",
+        "Frankie Luvu (LB)",
+        "Ja'Marr Chase (WR)",
+        "Germie Bernard (WR)"
+      ],
+      "summary": "Week 6 — Substation sent Easton Mascarenas-Arnold (LB), Drake London (WR), Tremaine Edmunds (LB), Carson Schwesinger (LB), $7 FAAB to Ultron for Jack Campbell (LB), Frankie Luvu (LB), Ja'Marr Chase (WR), Germie Bernard (WR) (Oct 16 6:29 PM PDT)."
+    },
     {
       "date": "2026-10-09",
       "time": "9:58 AM PDT",
@@ -395,21 +467,17 @@
     {
       "teamId": "eddies",
       "team": "Eagle Ridge Eddies",
-      "lastUpdated": "Oct 12 1:59 PM",
+      "lastUpdated": "Oct 19 8:54 PM",
       "players": [
         "Zach Charbonnet",
         "Jacory Croskey-Merritt",
         "Travis Etienne",
         "Brian Robinson Jr.",
-        "Rhamondre Stevenson",
         "Kendrick Bourne",
         "Chimere Dike",
         "Jordyn Tyson",
-        "Tuli Tuipulotu",
-        "Leonard Williams",
         "Cedric Gray",
-        "Trenton Simpson",
-        "Julian Love"
+        "Trenton Simpson"
       ],
       "note": null
     },
@@ -433,17 +501,15 @@
     {
       "teamId": "newman",
       "team": "Newman Lake Sleep Paralysis Demons",
-      "lastUpdated": "Oct 13 10:31 AM",
+      "lastUpdated": "Oct 19 8:36 AM",
       "players": [
-        "Jalen Hurts",
         "TreVeyon Henderson",
         "Davante Adams",
         "A.J. Brown",
         "Matthew Golden",
         "Tee Higgins",
         "Jake Hansen",
-        "Eric Wilson",
-        "Jevon Holland"
+        "Eric Wilson"
       ],
       "note": null
     },
@@ -460,9 +526,8 @@
     {
       "teamId": "saltese",
       "team": "Saltese Slamm",
-      "lastUpdated": "Oct 6 11:31 AM",
+      "lastUpdated": "Oct 20 11:01 PM",
       "players": [
-        "Stefon Diggs",
         "DeVonta Smith"
       ],
       "note": "Looking for FAAB or flex swaps."
@@ -477,18 +542,15 @@
     {
       "teamId": "ttab",
       "team": "TTAB",
-      "lastUpdated": "Oct 11 9:56 AM",
+      "lastUpdated": "Oct 21 8:22 AM",
       "players": [
         "Ashton Jeanty",
         "Cameron Skattebo",
         "Javonte Williams",
         "Emanuel Wilson",
-        "Tre Tucker",
         "Christian Watson",
         "Jameson Williams",
-        "Jake Ferguson",
         "Dallas Goedert",
-        "Khalil Mack",
         "Zack Baun",
         "Divine Deablo",
         "Harold Perkins",
@@ -500,7 +562,8 @@
     }
   ],
   "leaderboard_note": "As of early HQ: Nate led all-2026 deal count (incl handshake). Fantrax official player/pick deals concentrated with Aga/Chase/Larry.",
-  "pending_note": "Pending trades 0 (Fantrax Oct 14 2026 ~6:45 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
-  "fantrax_completed_view": "Newest official: Saltese↔Substation Carnell Tate for Dre Greenlaw+Denzel Boston (Oct 9 9:58 AM); Newman↔Saltese Aaron Jones+$5 FAAB for Nathan Landman (Oct 3 12:22 PM); Saltese↔Substation Boston for Montgomery (Sep 28 10:04 AM).",
-  "hqComplete": true
+  "pending_note": "Pending trades 0 (Fantrax 2026-10-21 9:34 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
+  "fantrax_completed_view": "Newest official: Substation↔Ultron London+Edmunds+Schwesinger+Mascarenas-Arnold+$7 for Chase+Luvu+Campbell+Bernard (Oct 16 6:29 PM); Newman↔Substation Elliss+$5 for Jordan Love (Oct 16 10:20 AM); Saltese↔Substation Carnell Tate for Dre Greenlaw+Denzel Boston (Oct 9 9:58 AM).",
+  "hqComplete": true,
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

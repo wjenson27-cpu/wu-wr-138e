@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-14",
-  "asOf": "2026-10-14 9:30 AM PT",
+  "updated": "2026-10-21",
+  "asOf": "2026-10-21 9:34 AM PT",
   "teams": [
     "dongers",
     "doubtpfizer",
@@ -17,5 +17,6 @@
     "ttab",
     "ultron"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT"
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

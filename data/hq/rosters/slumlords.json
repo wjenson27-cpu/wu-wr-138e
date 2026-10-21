@@ -2,8 +2,8 @@
   "teamId": "slumlords",
   "teamName": "Indian Trail Slumlords",
   "owner": "Ryan Towner",
-  "asOf": "2026-10-14 9:30 AM PT",
-  "faabLeft": 1,
+  "asOf": "2026-10-21 9:34 AM PT",
+  "faabLeft": 0,
   "startingQB": "Drake Maye",
   "roster": {
     "QB": [
@@ -11,63 +11,57 @@
     ],
     "RB": [
       "Jahmyr Gibbs",
-      "James Cook",
-      "Quinshon Judkins",
-      "Will Shipley",
-      "Dameon Pierce"
+      "Dameon Pierce",
+      "James Cook"
     ],
     "WR": [
-      "Romeo Doubs",
-      "Chris Godwin",
-      "Kalif Raymond",
       "Wan'Dale Robinson",
+      "Kalif Raymond",
+      "Kyle Williams",
+      "Demario Douglas",
+      "Chris Godwin",
       "Darius Cooper"
     ],
     "TE": [
-      "Harold Fannin",
-      "Michael Mayer"
+      "Harold Fannin"
     ],
     "DL": [
-      "Gregory Rousseau",
+      "Jeffery Simmons",
       "Maxx Crosby",
-      "Jeffery Simmons"
+      "Gregory Rousseau"
     ],
     "LB": [
       "Anthony Hill",
-      "Alex Anzalone",
-      "Jaden Dugger"
+      "Jaden Dugger",
+      "Alex Anzalone"
     ],
     "DB": [
       "Budda Baker",
-      "Talanoa Hufanga",
-      "Devon Witherspoon",
-      "Chamarri Conner"
+      "Chamarri Conner",
+      "Devon Witherspoon"
     ],
     "IR": [
-      "Isiah Pacheco"
+      "Isiah Pacheco",
+      "Quinshon Judkins",
+      "Talanoa Hufanga"
     ]
   },
-  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 1. FAAB $31. | Oct 14 W6 waivers/FA: +Jaden Dugger $10; +Dameon Pierce $10; +Darius Cooper $10. FAAB $1.",
+  "notes": "",
   "injuryFlags": [
-    "Quinshon Judkins \u2014 Q (Foot) (active)",
-    "Will Shipley \u2014 D (Foot) (active)",
-    "Isiah Pacheco \u2014 IR (Back) (IR slot)",
-    "Talanoa Hufanga \u2014 Q (Ankle) (active)"
+    "Isiah Pacheco — IR (IR slot)",
+    "Quinshon Judkins — Q (IR slot)",
+    "Talanoa Hufanga — Q (IR slot)"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "fantraxTeamId": "59frnthimsb3ulv4",
-  "lineupFlags": [
-    "Quinshon Judkins \u2014 Q (Foot) (active)",
-    "Will Shipley \u2014 D (Foot) (active)",
-    "Talanoa Hufanga \u2014 Q (Ankle) (active)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Quinshon Judkins \u2014 Q (Foot) (active)",
-    "Will Shipley \u2014 D (Foot) (active)",
-    "Isiah Pacheco \u2014 IR (Back) (IR slot)",
-    "Talanoa Hufanga \u2014 Q (Ankle) (active)"
+    "Isiah Pacheco — IR (IR slot)",
+    "Quinshon Judkins — Q (IR slot)",
+    "Talanoa Hufanga — Q (IR slot)"
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-21",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

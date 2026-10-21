@@ -2,60 +2,65 @@
   "teamId": "ttab",
   "teamName": "Towner Top Aga Bottom",
   "owner": "Chase Anderson",
-  "asOf": "2026-10-14 9:30 AM PT",
-  "faabLeft": 39,
-  "startingQB": "Josh Allen",
+  "asOf": "2026-10-21 9:34 AM PT",
+  "faabLeft": 0,
+  "startingQB": "Bo Nix",
   "roster": {
     "QB": [
+      "Bo Nix",
       "Josh Allen"
     ],
     "RB": [
       "Javonte Williams",
       "Ashton Jeanty",
       "Cameron Skattebo",
-      "Emanuel Wilson",
-      "Najee Harris"
+      "Emanuel Wilson"
     ],
     "WR": [
       "Christian Watson",
-      "Jameson Williams"
+      "Ryan Flournoy",
+      "Jameson Williams",
+      "Omar Cooper Jr.",
+      "Stefon Diggs"
     ],
     "TE": [
-      "Dallas Goedert",
-      "Jake Ferguson"
+      "Dallas Goedert"
     ],
     "DL": [
-      "Khalil Mack",
-      "Akheem Mesidor"
+      "Kingsley Enagbare"
     ],
     "LB": [
-      "Dorian Williams",
       "Zack Baun",
       "Harold Perkins",
-      "Dee Winters"
+      "Dorian Williams"
     ],
     "DB": [
-      "Dane Belton",
-      "Caleb Downs",
       "Javon Bullard",
-      "Jordan Battle"
+      "Caleb Downs",
+      "Dane Belton"
     ],
     "IR": [
       "Divine Deablo",
-      "Andrew Wingard"
+      "Andrew Wingard",
+      "Dee Winters"
     ]
   },
-  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 5 / IR 2. FAAB $42. | Oct 14 W6 waivers/FA: +Akheem Mesidor $3 (\u2212Tre Tucker); +Jordan Battle. FAAB $39.",
+  "notes": "",
   "injuryFlags": [
-    "Andrew Wingard \u2014 Q (Knee) (IR slot)"
+    "Divine Deablo — Q (IR slot)",
+    "Andrew Wingard — Q (IR slot)",
+    "Dee Winters — Q (IR slot)"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "fantraxTeamId": "4grk2ph6msb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Andrew Wingard \u2014 Q (Knee) (IR slot)"
+    "Divine Deablo — Q (IR slot)",
+    "Andrew Wingard — Q (IR slot)",
+    "Dee Winters — Q (IR slot)"
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-21",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

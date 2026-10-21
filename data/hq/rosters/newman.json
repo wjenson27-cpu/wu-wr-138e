@@ -2,69 +2,66 @@
   "teamId": "newman",
   "teamName": "Newman Lake Sleep Paralysis Demons",
   "owner": "Ryan McCallum",
-  "asOf": "2026-10-14 9:30 AM PT",
-  "faabLeft": 64,
-  "startingQB": "Kirk Cousins",
+  "asOf": "2026-10-21 9:34 AM PT",
+  "faabLeft": 47,
+  "startingQB": "Jordan Love",
   "roster": {
     "QB": [
-      "Kirk Cousins",
-      "Jalen Hurts"
+      "Jordan Love"
     ],
     "RB": [
       "Jonathan Taylor",
-      "Seth McGowan"
+      "TreVeyon Henderson"
     ],
     "WR": [
+      "Myles Price",
       "Zay Flowers",
-      "Davante Adams",
       "Matthew Golden",
-      "A.J. Brown",
-      "Tee Higgins",
-      "Myles Price"
+      "Tee Higgins"
     ],
     "TE": [
-      "Juwan Johnson"
+      "Juwan Johnson",
+      "Michael Mayer"
     ],
     "DL": [
-      "Andrew Van Ginkel",
-      "Carl Granderson"
+      "Andrew Van Ginkel"
     ],
     "LB": [
       "Azeez Al-Shaair",
       "Zaire Franklin",
-      "Jake Hansen",
       "Nathan Landman",
+      "Henry To'oTo'o",
+      "Jeremiah Trotter",
+      "Jake Hansen",
       "Eric Wilson"
     ],
     "DB": [
       "L'Jarius Sneed",
-      "Xavier Watts"
+      "Xavier Watts",
+      "Jordan Battle"
     ],
     "IR": [
       "Jordan Mason",
-      "TreVeyon Henderson",
-      "Kaden Elliss"
+      "A.J. Brown",
+      "Davante Adams"
     ]
   },
-  "notes": "Oct 14 AM rebuild from live Fantrax: Active 14 / Reserve 6 / IR 3. FAAB $65. | Oct 14 W6 waivers/FA: +Carl Granderson $1 (\u2212Jevon Holland). FAAB $64.",
+  "notes": "",
   "injuryFlags": [
-    "A.J. Brown \u2014 IR (Ankle) (reserve)",
-    "Jordan Mason \u2014 IR (Thumb) (IR slot)",
-    "TreVeyon Henderson \u2014 D (Ankle) (IR slot)",
-    "Kaden Elliss \u2014 Q (Calf) (IR slot)"
+    "Jordan Mason — IR (IR slot)",
+    "A.J. Brown — Q (IR slot)",
+    "Davante Adams — IR (IR slot)"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "fantraxTeamId": "kwaohsfwmsb3ulv4",
-  "lineupFlags": [
-    "A.J. Brown \u2014 IR (Ankle) (reserve)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "A.J. Brown \u2014 IR (Ankle) (reserve)",
-    "Jordan Mason \u2014 IR (Thumb) (IR slot)",
-    "TreVeyon Henderson \u2014 D (Ankle) (IR slot)",
-    "Kaden Elliss \u2014 Q (Calf) (IR slot)"
+    "Jordan Mason — IR (IR slot)",
+    "A.J. Brown — Q (IR slot)",
+    "Davante Adams — IR (IR slot)"
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-21",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }

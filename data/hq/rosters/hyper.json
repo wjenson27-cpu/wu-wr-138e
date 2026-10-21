@@ -2,62 +2,62 @@
   "teamId": "hyper",
   "teamName": "The Hypersecretors",
   "owner": "Jacob Crisp",
-  "asOf": "2026-10-14 9:30 AM PT",
-  "faabLeft": 50,
+  "asOf": "2026-10-21 9:34 AM PT",
+  "faabLeft": 25,
   "startingQB": "Justin Herbert",
   "roster": {
     "QB": [
-      "Justin Herbert"
+      "Justin Herbert",
+      "Kirk Cousins",
+      "Michael Penix Jr."
     ],
     "RB": [
       "Kenneth Walker III",
+      "J.K. Dobbins",
       "Keaton Mitchell",
-      "Rachaad White",
-      "J.K. Dobbins"
+      "Rachaad White"
     ],
     "WR": [
-      "Luther Burden",
-      "Jaylin Noel",
-      "Emeka Egbuka",
       "Amon-Ra St. Brown",
+      "Luther Burden",
+      "Emeka Egbuka",
+      "Jaylin Noel",
       "Travis Hunter"
     ],
     "TE": [
       "Sam LaPorta",
-      "Darren Waller"
+      "Kenyon Sadiq"
     ],
-    "DL": [
-      "Josh Hines-Allen"
-    ],
+    "DL": [],
     "LB": [
       "Nick Bolton",
-      "Jack Gibbens",
-      "Payton Wilson",
+      "Blake Cashman",
       "Jacob Rodriguez",
-      "Blake Cashman"
+      "Payton Wilson"
     ],
     "DB": [
       "Jeremy Chinn",
-      "Tykee Smith"
+      "Kamren Curl"
     ],
     "IR": [
-      "Kenyon Sadiq",
-      "Nick Bosa"
+      "Nick Bosa",
+      "Jalen Pitre"
     ]
   },
-  "notes": "Oct 14 AM rebuild from live Fantrax: Active 13 / Reserve 6 / IR 2. FAAB $53. | Oct 14 W6 waivers/FA: +Darren Waller $3. FAAB $50.",
+  "notes": "",
   "injuryFlags": [
-    "Kenyon Sadiq \u2014 Q (Concussion) (IR slot)",
-    "Nick Bosa \u2014 Q (Calf) (IR slot)"
+    "Nick Bosa — Q (IR slot)",
+    "Jalen Pitre — Q (IR slot)"
   ],
-  "source": "Fantrax Week 6 waivers Wed Oct 14 2026 9:00 AM PT + FA 9:03\u20139:17 (/workspace/fantrax-waivers-standings-2026-10-14.json)",
+  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
   "fantraxTeamId": "xz2uv87rmsb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Kenyon Sadiq \u2014 Q (Concussion) (IR slot)",
-    "Nick Bosa \u2014 Q (Calf) (IR slot)"
+    "Nick Bosa — Q (IR slot)",
+    "Jalen Pitre — Q (IR slot)"
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-21",
+  "lastSynced": "2026-10-21 9:34 AM PT"
 }
