@@ -889,7 +889,7 @@ def name_key(n):
     """Normalized key for a NAME-LIKE player name (2+ Latin words, no digits/commas); None otherwise."""
     if not isinstance(n, str) or non_latin(n):
         return None
-    f = " ".join(fold(n).split())
+    f = " ".join(re.sub(r"\.(?=[A-Za-z])", ". ", fold(n)).split())     # 'T.J. Watt' -> 'T. J. Watt'
     if not NAME_LIKE.fullmatch(f) or sum(c.isalpha() for c in f) < 4:
         return None
     k = re.sub(r"[^a-z ]", " ", f.lower()); k = " ".join(k.split())
@@ -901,7 +901,18 @@ def distinct_names(names):
 def _nk(n):
     """Dedupe key for a player name: the SAME normalization as the drop filter (norm(): punctuation, apostrophes,
     Jr/Sr/II-V suffixes, accents) after look-alike folding."""
-    return norm(fold(n)) if isinstance(n, str) else ""
+    return join_initials(norm(fold(n))) if isinstance(n, str) else ""
+
+def join_initials(k):
+    """'a j third' -> 'aj third' (runs of single-letter tokens joined), so 'A. J.', 'A J', 'AJ', 'A.J.' are one name."""
+    out, run = [], ""
+    for t in k.split():
+        if len(t) == 1 and t.isalpha():
+            run += t; continue
+        if run: out.append(run); run = ""
+        out.append(t)
+    if run: out.append(run)
+    return " ".join(out)
 
 def _names_of(v):
     """Normalized player names in {field: str | [str] | record}: plain strings are taken as-is (any case), records via

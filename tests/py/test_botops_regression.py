@@ -1083,6 +1083,45 @@ class V4(V2Coverage):
         self.assertIn("give == get", " ".join(wc.schema_problems([e])))
         self.assertIsNone(self.run_({"trades": {"eddies_pending_trade_offers": 1, "eddies_pending_private": [e]}}))
 
+class V5(V4):
+    """Bot Ops v4 review (FAIL): spaced/dotted initials are one player in the dedupe key; 'T.J. Watt' is valid."""
+    VAR = ("A. J. Third", "A J Third", "AJ Third", "A.J. Third", "A.J.Third")
+    def test_botops_initial_variants_fail_closed(self):
+        for v in self.VAR:
+            with self.subTest(v=v):
+                self.assertIsNone(self.two(E("AJ Third"), E(v)))
+                self.assertIsNone(self.two(E("A. J. Third"), E(v)))
+                self.assertIsNone(self.two(E("Yo Other", "AJ Third"), E("Yo Other", v)))
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_trade_offers": 2, "eddies_pending_private": [
+                    E(type="offer", give=["AJ Third"]), E(type="offer", give=[v])]}}))
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_trade_offers": 2, "eddies_pending_private": [
+                    E(type="offer", get=["A. J. Third"]), E(type="offer", get=[v])]}}))
+    def test_dotted_initials_valid(self):
+        for v in ("T.J. Watt", "A.J. Third", "D.K. Metcalf"):
+            with self.subTest(v=v):
+                self.assertEqual(wc.schema_problems([E(v)]), [])
+                self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [E(v)]}}))
+        self.assertIsNotNone(self.two(E("T.J. Watt"), E("AJ Third")))
+    def test_cli_own_count_two_initial_variants_exit_1(self):
+        import glob, shutil, subprocess
+        src = sorted(glob.glob("/workspace/fantrax-raw-*.json"))
+        if not src:
+            self.skipTest("no raw scrape on this box")
+        d = json.loads(Path(src[-1]).read_text())
+        d.setdefault("trades", {}).update({"eddies_pending_claims_count": 2, "eddies_pending_trade_offers": 0,
+                                           "eddies_pending_private": [E("A. J. Third"), E("AJ Third")]})
+        raw = self.t / "fantrax-raw-2099-01-01-am.json"; raw.write_text(json.dumps(d))
+        data = self.t / "data"; shutil.copytree(DATA, data)
+        names = self.t / "pn.json"
+        names.write_text(json.dumps({"scraped": d.get("scraped"), "counts": {}, "names": ["A. J. Third", "AJ Third"],
+                                     "own_names": ["A. J. Third", "AJ Third"], "own_entries": 1,
+                                     "own_entries_by_type": {"cb": 1}, "schema_problems": []}))
+        before = (data / "warroom.json").read_bytes()
+        r = subprocess.run([sys.executable, str(ROOT / "scripts/build_warroom.py"), "--data-dir", str(data), "--raw-glob", str(raw),
+                            "--pending-names", str(names)], capture_output=True, text=True)
+        self.assertEqual(r.returncode, 1, r.stdout[-500:] + r.stderr[-500:])
+        self.assertEqual((data / "warroom.json").read_bytes(), before)
+
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
 add_cases(History, "gate_passes", [f.name for f in HIST_FILES],
