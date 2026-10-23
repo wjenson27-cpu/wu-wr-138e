@@ -44,8 +44,24 @@ def add_cases(cls, prefix, cases, fn):
 
 class Base(unittest.TestCase):
     def blocked(self, w):
-        with self.assertRaises(wc.PendingError, msg=w):
-            bw.build({"week": 7, **w}, DATA, NOW)
+        """Not published: the build either stops (PendingError) or (round 8) drops the free text."""
+        try:
+            out = bw.build({"week": 7, **w}, DATA, NOW)
+        except wc.PendingError:
+            return
+        texts = []
+        def walk(o, k=None):
+            if isinstance(o, dict):
+                for kk, v in o.items(): walk(v, kk)
+            elif isinstance(o, list):
+                for v in o: walk(v, k)
+            elif isinstance(o, str) and k in ("text", "why", "reason", "note", "notes", "stats"):
+                texts.append(o)
+        walk(w)
+        self.assertTrue(texts, f"not blocked and no free text to drop: {w}")
+        dumped = json.dumps(out, ensure_ascii=False)
+        for t in texts:
+            self.assertNotIn(json.dumps(t, ensure_ascii=False)[1:-1], dumped, f"published: {t!r}")
     def excluded(self, n):
         self.assertEqual(waiver_out([n]), [], n); self.assertEqual(fa_out([n]), [], n)
     def kept(self, n):
@@ -296,7 +312,7 @@ R4_PASS_WORDS = ["suspended", "dependent", "must-spend", "not an offer", "0 pend
                  "proposition", "sack/TFL-dependent", "Greenlaw suspended 1 game (appeal Tue)", "no pending",
                  "0 pending trades", "Not a must-spend Saturday.", "Smack only, not an offer: Chase is on bye",
                  "not a formal offer.", "role depends on Delpit.", "FAAB $60. Pending 0/0.", "pending 0/0",
-                 "0 pending claims, 0 pending trades", "awaits a soft matchup",
+                 "0 pending claims, 0 pending trades", "offers flex upside", "awaits a soft matchup",
                  "outstanding tape vs CHI", "Counter run scheme fits him"]
 R4_PASS_GENERAL = R4_PASS_WORDS + ["Greenlaw appeal pending; Dugger every-down MNF if upheld (pass on FAAB).",
                                    "MRI results pending"]
@@ -447,41 +463,74 @@ add_cases(Round6, "pass_set_status", [(s, v) for s in ("lineup", "news") for v i
 HIST = ROOT / "tests/fixtures/warroom-history"
 HIST_FILES = sorted(HIST.glob("*.json"))
 
-class Round7(Base):
-    """Bot Ops round 6 report: plain-wording pending moves. Fail-closed transaction rule + short safe-form list."""
-    PENDING = ["Eddie bid $12 on Emerson (processes Wed)", "Bid placed", "claim placed $12",
-               "Eddie's claim is in, processes Wed", "Eddie put in a claim for Emerson", "claim processes Wed 9 PM",
-               "Eddie's bid: $12", "Eddie sent Nathan a trade", "trade sent to Nathan, waiting", "Trade request sent",
-               "Claim submitted", "Eddie's claim is in", "Eddie put in a claim",
-               # safe-form labels never excuse a placed move
-               "W7 claim placed", "Top bid placed $12", "QB claim is in", "Eddie bids $12 on Emerson",
-               "Eddie is bidding on Emerson", "offers out to Nathan", "Eddie claimed Emerson, not processed yet",
-               "No bid yet. Eddie's claim is in", "FAAB $60 bid on Emerson", "Eddie sent Emerson to TTAB for $20 FAAB",
-               "Trade processed, claim pending", "Eddie traded for Lloyd", "Waiver claim for Emerson"]
-    SAFE = ["Claim processed: won Emerson $12", "Trade accepted and executed", "PASS — no bid", "Watch only — no bid yet",
-            "Not worth FAAB on a one-week fill-in", "FAAB $60", "FAAB left is $68", "$10 FAAB left", "Waivers clear Wed",
-            "On waivers until Wed 9 AM", "Swap in Ponder if claimed", "Only 49% snaps after the MHJ trade",
-            "Nobody claimed Stutsman or CGJ in the Tuesday run", "Saltese sent Stefon Diggs to TTAB for $20 FAAB",
-            ]
-    GENERAL_ONLY_SAFE = ["Greenlaw appeal pending", "MRI results pending"]   # strict sections block any 'pending'
-    def test_offers_verb_now_blocks(self):
-        # round 7: 'offers' is a transaction word; the old should-pass 'offers flex upside' now fails closed
-        self.blocked({"news": [{"text": "offers flex upside"}]})
-    def test_general_only_safe(self):
-        for c in self.GENERAL_ONLY_SAFE: self.assertFalse(wc.general_text_hit(c), c)
-    def test_pending_blocks_everywhere(self):
-        for c in self.PENDING:
+R7_PENDING = [  # Bot Ops round 6 + round 7 reports (own-team pending moves, any wording)
+    "Eddie bid $12 on Emerson (processes Wed)", "Bid placed", "claim placed $12", "Eddie's claim is in, processes Wed",
+    "Eddie put in a claim for Emerson", "claim processes Wed 9 PM", "Eddie's bid: $12", "Eddie sent Nathan a trade",
+    "trade sent to Nathan, waiting", "Trade request sent", "Claim submitted", "Eddie's claim is in", "Eddie put in a claim",
+    "W7 claim placed", "Top bid placed $12", "QB claim is in", "Eddie bids $12 on Emerson", "Eddie is bidding on Emerson",
+    "offers out to Nathan", "Eddie claimed Emerson, not processed yet", "No bid yet. Eddie's claim is in",
+    "FAAB $60 bid on Emerson", "Eddie sent Emerson to TTAB for $20 FAAB", "Trade processed, claim pending",
+    "completed: trade sent to Nathan", "trade sent to Nathan (one other trade completed)",
+    "Eddie claimed Emerson for $12, lost the Lake claim", "Eddie's waiver bid (processed? not yet)",
+    "Eddie's trade: accepted? no, still waiting", "Completed trade sent to Nathan, awaiting reply",
+    "trade accepted by Eddie, awaiting Nathan", "Trade: Eddie gets Emerson, Nathan gets Lloyd", "NYJ trade sent by Eddie",
+    "traded to NYJ by Eddie, pending", "Eddie is going after Emerson with $12", "targeting Emerson with $12 Wed",
+    "Eddie put $12 on Emerson", "$12 on Emerson, runs Wed", "$88 FAAB left; $12 on Emerson Wed",
+    "Eddie's Emerson add processes Wed", "Emerson add is in for Wed", "pitched Nathan a Lloyd-for-Emerson deal",
+    "Lloyd-for-Emerson deal sent to Nathan", "Eddie acquired Emerson? Not yet — Wed", "Emerson pickup pending",
+    "Eddie added Emerson (pending Wed)", "deal pending with Nathan", "swap with Nathan pending",
+    "proposed Lloyd-for-Emerson to Nathan", "Trade: Nathan gets Lloyd (awaiting)",
+    "no bid on X; Eddie claimed Y for $12 Wed", "no bid on X, Eddie claimed Y for $12 Wed",
+    "FAAB balance $88 after $12 bid on Emerson", "FAAB left is $88 after Eddie's $12 bid",
+    "on waivers until Wed – Eddie has a claim (in)", "if claimed, we drop Z – claim placed", "Eddie filed a claim",
+    "Eddie entered a bid", "Eddie lodged a claim", "we offered Lloyd", "Eddie made a claim", "Eddie put a bid",
+    "EDDIE CLAIMED EMERSON", "Eddie will claim Emerson", "Eddie is claiming Emerson", "claim hasn't been processed",
+    "Eddie cl\u0430imed Emerson", "Eddie cla\u200bimed Emerson", "Eddie \uff43\uff4c\uff41\uff49\uff4d\uff45\uff44 Emerson",
+    "Eddie cl\u00e1imed Emerson", "top bid: $12 sent", "sample bid sheet sent", "Rams/Bills bids placed",
+    "they claimed CGJ; Eddie claimed Emerson", "Kyle just scooped Pitts; Eddie bids $5",
+    "fan claim: Eddie claimed Emerson", "waiver status: Eddie claim in", "claim is insurance; Eddie's claim is in",
+    "before any bid, Eddie claimed Emerson", "pass on claims, Eddie filed one anyway",
+    "Eagle Ridge Eddies claimed Emerson", "The Eddies traded for Lloyd", "our team put in a bid", "we picked up Emerson",
+    "Eddie dropped Lloyd for Emerson", "\u00c9ddie claimed Emerson"]
+OTHER_KEPT = ["Saltese sent Stefon Diggs to TTAB for $20 FAAB", "Morningside added McLaughlin $2 (dropped Lloyd)",
+              "Nobody claimed Stutsman or CGJ in the Tuesday run", "Ponder to Doubtpfizer $1, Battle to Newman $7",
+              "Greenlaw appeal pending", "MRI results pending"]
+
+class Round8(Base):
+    """Round 8 design: own moves publish only from structured completed records; own-move free text is dropped."""
+    def out(self, w):
+        try:
+            return json.dumps(bw.build({"week": 7, **w}, DATA, NOW), ensure_ascii=False)
+        except wc.PendingError:
+            return None                                      # blocked: not published either
+    def test_own_pending_never_published(self):
+        for c in R7_PENDING:
+            for sec, w in (("news", {"news": [{"text": c}]}),
+                           ("lineup", {"lineup": [{"player": "Martin Emerson", "reason": c, "status": "ok"}]}),
+                           ("waivers", {"waivers": [{"player": "Martin Emerson", "why": c}]}),
+                           ("trades", {"trades": [{"with": "A", "why": c}]}),
+                           ("injuryWatch", {"injuryWatch": [{"player": "Martin Emerson", "note": c}]}),
+                           ("idp", {"idp": [{"player": "Martin Emerson", "notes": c}]})):
+                with self.subTest(c=c, sec=sec):
+                    o = self.out(w)
+                    self.assertTrue(o is None or json.dumps(c, ensure_ascii=False)[1:-1] not in o, o)
+    def test_other_teams_text_stays(self):
+        for c in OTHER_KEPT:
             with self.subTest(c=c):
-                self.blocked({"news": [{"text": c}]})
-                self.blocked({"lineup": [{"player": "Martin Emerson", "reason": c, "status": "ok"}]})
-                self.blocked({"waivers": [{"player": "Martin Emerson", "why": c}]})
-    def test_safe_forms_pass(self):
-        for c in self.SAFE:
-            with self.subTest(c=c):
-                self.assertFalse(wc.general_text_hit(c), c)
-                self.assertFalse(wc.strict_text_hit(c), c)
-    def test_live_data_passes(self):
-        self.assertEqual(wc.find_pending(json.loads((ROOT / "data/warroom.json").read_text())), [])
+                o = self.out({"news": [{"text": c}]})
+                self.assertIsNotNone(o); self.assertIn(c, o)
+    def test_drop_keeps_rest_of_line(self):
+        o = json.loads(self.out({"news": [{"text": "Lake is questionable. Eddie bid $12 on Emerson."}]}))
+        self.assertEqual(o["news"], [{"text": "Lake is questionable."}])
+    def test_fully_dropped_news_item_removed(self):
+        o = json.loads(self.out({"news": [{"text": "Eddie bid $12 on Emerson."}, {"text": "Lake is out."}]}))
+        self.assertEqual([n["text"] for n in o["news"]], ["Lake is out."])
+    def test_structured_completed_record_still_publishes(self):
+        self.assertIn("Completed", self.out({"trades": [{"with": "A", "status": "Completed"}]}))
+    def test_structured_pending_record_blocks(self):
+        self.assertIsNone(self.out({"claims": [{"player": "Martin Emerson", "status": "pending"}]}))
+    def test_live_data_builds(self):
+        bw.build(json.loads((ROOT / "data/warroom.json").read_text()), DATA, NOW)
 
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)

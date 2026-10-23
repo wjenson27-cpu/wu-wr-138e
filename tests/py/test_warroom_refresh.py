@@ -11,6 +11,27 @@ PT = wc.PT
 def stage():
     d = Path(tempfile.mkdtemp()) / "data"; shutil.copytree(DATA, d); return d
 
+
+def assert_not_published(tc, w, now):
+    """Round 8: a pending item is not published when the build stops (PendingError) or drops its free text."""
+    try:
+        out = bw.build(w, DATA, now)
+    except wc.PendingError:
+        return
+    texts = []
+    def walk(o, k=None):
+        if isinstance(o, dict):
+            for kk, v in o.items(): walk(v, kk)
+        elif isinstance(o, list):
+            for v in o: walk(v, k)
+        elif isinstance(o, str) and k in ("text", "why", "reason", "note", "notes", "stats"):
+            texts.append(o)
+    walk(w)
+    tc.assertTrue(texts, f"not blocked and no free text to drop: {w}")
+    dumped = json.dumps(out, ensure_ascii=False)
+    for t in texts:
+        tc.assertNotIn(json.dumps(t, ensure_ascii=False)[1:-1], dumped, f"published: {t!r}")
+
 class Week(unittest.TestCase):
     def test_week_calc(self):
         self.assertEqual(wc.week_for(date(2026, 9, 10)), 1)
@@ -131,7 +152,7 @@ class BotOpsBlocker3Pending(unittest.TestCase):
     def test_each_case_raises(self):
         for c in self.CASES:
             w = {"week": 7, "waivers": [], **c}
-            with self.assertRaises(wc.PendingError, msg=c): bw.build(w, DATA, self.NOW)
+            assert_not_published(self, w, self.NOW)
     def test_cli_nonzero_nothing_written(self):
         d = stage(); w = json.loads((d / "warroom.json").read_text()); w["trades"] = [{"with": "A", "status": "proposed"}]
         (d / "warroom.json").write_text(json.dumps(w)); before = (d / "warroom.json").read_bytes()
@@ -290,7 +311,7 @@ class BotOpsRound2(unittest.TestCase):
                   {"trades": [{"with": "A", "status": "Awaiting  Approval"}]},
                   {"trades": [{"with": "A", "status": "Open"}]},
                   {"waivers": [{"player": "Martin Emerson", "claimStatus": "open"}]}):
-            with self.assertRaises(wc.PendingError, msg=w): bw.build({"week": 7, **w}, DATA, self.NOW)
+            assert_not_published(self, {"week": 7, **w}, self.NOW)
     def test_injury_pending_and_open_status_allowed(self):
         # Round 4 rule: inside waivers/trades/drops ANY 'pending' blocks (fail closed); outside, injury text is fine.
         w = {"week": 7, "waivers": [{"player": "Martin Emerson", "why": "Stream."}],
