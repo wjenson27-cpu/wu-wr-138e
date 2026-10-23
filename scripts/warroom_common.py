@@ -818,8 +818,8 @@ TEXT_NAME = re.compile(r"[+\-\u2212]\s*([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-
 # "Eddie Jackson" never does. Records are ours only by an EXACT team name / id / owner in a TEAM field.
 OWN_KEY = re.compile(r"^(?i:eddies|eagle[\s_-]*ridge)(?![a-z])|^(?:my|own)(?:[A-Z_]|$)|^(?i:my|own)[\s_-]|(?i:^t_ere\d*$)|(?i:^ere$)")
 OUR_TEAM_NAMES = {"eagle ridge eddies", "eagle ridge", "eddies", "ere", "t_ere8", "bill jenson"}
-TEAM_FIELDS = ("team", "teamName", "team_name", "teamId", "team_id", "owner", "ownerName", "owner_name", "fantraxTeamId",
-               "franchise", "manager")
+TEAM_FIELDS = ("team", "teamName", "team_name", "teamId", "team_id", "team_key", "teamKey", "owner", "ownerName",
+               "owner_name", "fantraxTeamId", "franchise", "manager", "label")
 TEAM_CTX_FIELDS = ("name", "id", "abbrev", "shortName")        # only on a record that IS a team (under teams/myTeam)
 TEAMS_KEY = re.compile(r"^(?i:teams?|franchises?|standings|rosters?)$|^(?:my|own)(?:[A-Z_\s-]|$)")
 _OWN_IDS = None
@@ -844,6 +844,34 @@ def is_own_key(k):
         return False
     f = fold(k)
     return bool(OWN_KEY.search(f)) or f.strip().lower() in _own_ids()
+
+# v3: own-COUNT key paths use round-11 style token matching (eddie/eddies/eddy/eagle ridge/t_ere*/ere/our/ours/my/own/
+# us/mine/our team id anywhere in the path, case- and separator-insensitive). Entry ownership keeps the prefix OWN_KEY.
+OWN_TOKENS = {"eddie", "eddies", "eddy", "ere", "our", "ours", "my", "own", "us", "mine"}
+
+def _key_tokens(k):
+    f = fold(str(k))
+    f = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", f)
+    return [t for t in re.split(r"[^a-z0-9]+", f.lower()) if t]
+
+def is_own_count_key(k):
+    if not isinstance(k, str):
+        return False
+    toks = _key_tokens(k)
+    if any(t in OWN_TOKENS or re.fullmatch(r"ere\d+", t) or t in _own_ids() for t in toks):
+        return True
+    if any(a == "eagle" and b == "ridge" for a, b in zip(toks, toks[1:])) or "eagleridge" in toks:
+        return True
+    return is_own_key(k)
+
+def count_class(path):
+    """By the count's OWN key (not its section): 'offer' for trade/offer counts, 'cb' claim/bid/waiver, else 'any'."""
+    toks = _key_tokens(path)
+    if any(t.startswith(("offer", "trade")) for t in toks):
+        return "offer"
+    if any(t.startswith(("claim", "bid", "waiver")) for t in toks):
+        return "cb"
+    return "any"
 
 def is_own_record(d, team_ctx=False):
     """A dict whose TEAM field (team/teamId/owner/...) is exactly our team name or id; name/id only on a team record."""
@@ -870,16 +898,40 @@ def name_key(n):
 def distinct_names(names):
     return {k for k in (name_key(n) for n in names) if k}
 
-def entry_valid(e):
-    """One captured pending MOVE resolved to a name: claim/bid -> name-like add; offer -> name-like give or get;
-    untyped -> add if present, else any name-like player name."""
+def _nk(n):
+    return " ".join(fold(n).casefold().split()) if isinstance(n, str) else ""
+
+def _names_of(v):
+    """Normalized player names in {field: str | [str] | record}: plain strings are taken as-is (any case), records via
+    _item_names."""
+    out = set()
+    for x in (v.values() if isinstance(v, dict) else [v]):
+        for n in (x if isinstance(x, list) else [x]):
+            if isinstance(n, str):
+                if name_key(n): out.add(_nk(n))
+            elif n is not None:
+                out |= {_nk(m) for m in _item_names(n) if name_key(m)}
+    return sorted(out)
+
+def entry_key(e):
+    """(class, normalized identity) for a VALID captured pending move, else None. Class: 'cb' claim/bid, 'offer', 'any'.
+    Duplicates (same type/add/drop or same give/get, case/space-insensitive) share one key."""
     if isinstance(e, dict):
         t = e.get("type")
         if t in ("claim", "bid") or (t is None and any(k in e for k in ("add", "adds", "drop", "drops"))):
-            return any(name_key(n) for n in _item_names({"add": e.get("add"), "adds": e.get("adds")}))
-        if t == "offer":
-            return any(name_key(n) for n in _item_names({"give": e.get("give"), "get": e.get("get")}))
-    return any(name_key(n) for n in _item_names(e))
+            adds = _names_of({"add": e.get("add"), "adds": e.get("adds")})
+            drops = _names_of({"drop": e.get("drop"), "drops": e.get("drops")})
+            if not adds or set(adds) & set(drops):
+                return None                                   # no add name, or add == drop
+            return ("cb", (t if t in ("claim", "bid") else "claim", tuple(adds), tuple(drops)))
+        if t == "offer" or (t is None and any(k in e for k in ("give", "get"))):
+            g, r = _names_of({"give": e.get("give")}), _names_of({"get": e.get("get")})
+            return ("offer", ("offer", tuple(g), tuple(r))) if (g or r) else None
+    nm = sorted({_nk(n) for n in _item_names(e) if name_key(n)})
+    return ("any", ("any", tuple(nm))) if nm else None
+
+def entry_valid(e):
+    return entry_key(e) is not None
 
 def schema_problems(entries):
     """Hard problems in trades.eddies_pending_private (documented SCHEMA). Any problem stops the run."""
@@ -903,29 +955,35 @@ def schema_problems(entries):
             out.append(f"[{i}] {t} without a player name in add")
         if t == "offer" and not entry_valid(e):
             out.append(f"[{i}] offer without a player name in give/get")
+        if isinstance(e.get("add"), str) and isinstance(e.get("drop"), str) and name_key(e["add"]) \
+                and _nk(e["add"]) == _nk(e["drop"]):
+            out.append(f"[{i}] add == drop")
     return out
 
 PRIVATE_LIST_KEY = re.compile(r"^(?i:eddies|eagle[\s_-]*ridge)[\s_-]*pending[\s_-]*(?:private|names|claims|bids|trades|offers)$")
 
-def _own_count(o):
-    """Our pending MOVES: the SUM of our count keys (claims + bids + offers ...), same key matching (COUNT_ANY) and
-    coercion (_num) as pending_count, on keys whose path names us or inside a record whose TEAM field is us."""
-    total = 0
-    def walk(x, own=False, ctx=False):
-        nonlocal total
+def _own_counts(o):
+    """Our pending MOVES per class {'cb','offer','any'}: SUM of count keys whose path names us (token match) or that sit
+    inside a record whose TEAM field is us. Same key matching (COUNT_ANY) and coercion (_num) as pending_count."""
+    out = {"cb": 0, "offer": 0, "any": 0}
+    def walk(x, own=False, ctx=False, path=""):
         if isinstance(x, dict):
             own = own or is_own_record(x, ctx)
             for k, v in x.items():
-                o2 = own or is_own_key(k)
+                p = f"{path}.{k}"
+                o2 = own or is_own_count_key(k)
                 n = _num(v) if isinstance(k, str) and COUNT_ANY.search(k) else None
                 if n is not None and o2:
-                    total += n
+                    out[count_class(k)] += n
                 elif n is None:
-                    walk(v, o2, isinstance(k, str) and bool(TEAMS_KEY.search(k)))
+                    walk(v, o2, isinstance(k, str) and bool(TEAMS_KEY.search(k)), p)
         elif isinstance(x, list):
-            for v in x: walk(v, own, ctx)
+            for v in x: walk(v, own, ctx, path)
     walk(o)
-    return total
+    return out
+
+def _own_count(o):
+    return sum(_own_counts(o).values())
 
 def _item_names(x):
     out = []
@@ -1004,7 +1062,7 @@ def resolve_pending(raw, path, today, expect_file=True):
                         if _txn_pending(t, today):
                             nm = _item_names(t)
                             items.append(nm)
-                            if o2 or is_own_record(t): own_items.append(entry_valid(t))
+                            if o2 or is_own_record(t): own_items.append(entry_key(t))
                             if not nm: problems.append(f"{p}[{i}] pending transaction with no name")
                     continue
                 if QUEUE_KEY.search(k) and v not in (None, "", [], {}, 0, False):
@@ -1012,7 +1070,7 @@ def resolve_pending(raw, path, today, expect_file=True):
                     for i, e in enumerate(entries):
                         nm = _item_names(e)
                         items.append(nm)
-                        if o2 or is_own_record(e): own_items.append(entry_valid(e))
+                        if o2 or is_own_record(e): own_items.append(entry_key(e))
                         if not nm: problems.append(f"{p}[{i}] pending entry with no name")
                     continue
                 walk(v, p, o2, bool(TEAMS_KEY.search(k)))
@@ -1036,7 +1094,10 @@ def resolve_pending(raw, path, today, expect_file=True):
             # round 11: no own_names key = none of ours (other teams' names never cover our count)
             file_own = [n for n in own_l if isinstance(n, str) and n.strip()] if isinstance(own_l, list) else []
             fe = d.get("own_entries") if isinstance(d, dict) else None
-            file_own_entries = fe if isinstance(fe, int) and not isinstance(fe, bool) and fe >= 0 else 0
+            def _cnt(x): return x if isinstance(x, int) and not isinstance(x, bool) and x >= 0 else 0
+            file_own_entries = _cnt(fe)
+            bt = d.get("own_entries_by_type") if isinstance(d, dict) else None
+            file_by_type = {c: _cnt(bt.get(c)) for c in ("cb", "offer")} if isinstance(bt, dict) else {"cb": 0, "offer": 0}
             sp = d.get("schema_problems") if isinstance(d, dict) else None
             if sp:
                 problems.append(f"{len(sp) if isinstance(sp, list) else 1} schema problem(s) in the captured pending list")
@@ -1059,14 +1120,28 @@ def resolve_pending(raw, path, today, expect_file=True):
         problems.append(f"{count} pending move(s) but only {named} resolved to a name")
     # our own counts (any *eddie*pending*count) must be covered by OUR named entries or the private file, not by
     # other teams' transactions
-    own = _own_count(raw) if isinstance(raw, dict) else 0
+    oc = _own_counts(raw) if isinstance(raw, dict) else {"cb": 0, "offer": 0, "any": 0}
     if file_ok:
-        own = max(own, sum(_num(v) or 0 for k, v in ((d.get("counts") or {}).items() if isinstance(d, dict) else [])
-                           if any(is_own_key(part) for part in str(k).split("."))))
-    # v2: one VALID captured entry per pending MOVE (claim/bid: add name; offer: give/get name); names never stand in
-    own_have = max(sum(1 for ok in own_items if ok), file_own_entries if file_ok else 0)
-    if own > own_have:
-        problems.append(f"{own} of our pending move(s) but only {own_have} of ours captured as valid entries")
+        fc = {"cb": 0, "offer": 0, "any": 0}
+        for k, v in ((d.get("counts") or {}).items() if isinstance(d, dict) else []):
+            if any(is_own_count_key(part) for part in str(k).split(".")):
+                fc[count_class(str(k).split(".")[-1])] += _num(v) or 0
+        if sum(fc.values()) > sum(oc.values()):
+            oc = fc
+    # v3: one DISTINCT valid captured entry per pending MOVE, type-matched (claims/bids vs claim/bid entries, offers vs
+    # offer entries); duplicates of one move count once; names never stand in
+    keys = {k for k in own_items if k}
+    have = {c: sum(1 for k in keys if k[0] == c) for c in ("cb", "offer", "any")}
+    if file_ok:
+        for c in ("cb", "offer"):
+            have[c] = max(have[c], file_by_type[c])
+    total_have = max(sum(have.values()), file_own_entries if file_ok else 0)
+    own = sum(oc.values())
+    for c, label in (("cb", "claim/bid"), ("offer", "offer")):
+        if oc[c] > have[c]:
+            problems.append(f"{oc[c]} of our pending {label} move(s) but only {have[c]} distinct {label} entries captured")
+    if own > total_have:
+        problems.append(f"{own} of our pending move(s) but only {total_have} of ours captured as valid entries")
     if problems:
         raise PendingError("pending item(s) without a resolved name: " + "; ".join(problems[:5])
                            + " (private pending-name list is empty, missing or incomplete; run stopped, nothing written)")

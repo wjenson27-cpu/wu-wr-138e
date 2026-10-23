@@ -627,7 +627,7 @@ class Round9b(Base):
         self.t = Path(tempfile.mkdtemp())
     def names_file(self, names, counts=None):
         p = self.t / "pending-names.json"
-        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "own_entries": len(names), "scraped": "S"})); return p
+        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "own_entries": len(names), "own_entries_by_type": {"cb": len(names)}, "scraped": "S"})); return p
     RAW1 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": []}}
     RAW0 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_claims_count": 0, "pending_claims_count": None}}
     W = {"week": 7, "news": [{"text": "Martin Emerson looks like a fit."}, {"text": "Lake out."}]}
@@ -675,9 +675,9 @@ class Round10(Base):
     def f(self, content):
         # round 11: a usable file must carry the raw's scrape stamp and own_names; list form is wrapped for that
         if isinstance(content, list):
-            content = {"names": content, "own_names": content, "own_entries": len(content), "scraped": "S"}
+            content = {"names": content, "own_names": content, "own_entries": len(content), "own_entries_by_type": {"cb": len(content)}, "scraped": "S"}
         elif isinstance(content, dict) and "names" in content:
-            content = {"own_names": content["names"], "own_entries": len(content["names"]), "scraped": "S", **content}
+            content = {"own_names": content["names"], "own_entries": len(content["names"]), "own_entries_by_type": {"cb": len(content["names"])}, "scraped": "S", **content}
         p = self.t / "names.json"; p.write_text(content if isinstance(content, str) else json.dumps(content)); return str(p)
     def run_(self, raw, path=None):
         try:
@@ -750,7 +750,7 @@ class Round10b(Base):
         self.t = Path(tempfile.mkdtemp())
     def f(self, names, scraped="2026-10-23 6:00 AM PDT", counts=None):
         p = self.t / "n.json"
-        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "own_entries": len(names), "scraped": scraped})); return str(p)
+        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "own_entries": len(names), "own_entries_by_type": {"cb": len(names)}, "scraped": scraped})); return str(p)
     def run_(self, raw, path):
         try:
             return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW,
@@ -842,7 +842,7 @@ class Round11(Base):
                                     self.f({"names": ["Adonai Mitchell"], "scraped": "S"})))
     def test_own_names_cover_our_count(self):
         o = self.run_({"scraped": "S", "trades": {"eddies_pending_claims_count": "1"}},
-                      self.f({"names": ["Martin Emerson"], "own_names": ["Martin Emerson"], "own_entries": 1, "scraped": "S"}))
+                      self.f({"names": ["Martin Emerson"], "own_names": ["Martin Emerson"], "own_entries": 1, "own_entries_by_type": {"cb": 1}, "scraped": "S"}))
         self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
     def test_fractional_counts_ceil(self):
         for v in (0.5, "0.5", 0.01, "1.5"):
@@ -908,7 +908,7 @@ class PendingNamesCapture(Base):
             {"type": "claim", "add": None, "drop": None, "bid": 12}]}}, self.f({"names": [], "own_names": []})))
     def test_own_names_are_in_drop_filter(self):
         o = self.run_({"trades": {"eddies_pending_claims_count": 1}},
-                      self.f({"names": ["Adonai Mitchell"], "own_names": ["Martin Emerson"], "own_entries": 1}))
+                      self.f({"names": ["Adonai Mitchell"], "own_names": ["Martin Emerson"], "own_entries": 1, "own_entries_by_type": {"cb": 1}}))
         self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
     def test_own_names_alone_never_cover_moves(self):
         # v2: names are not moves; only valid captured entries cover our count
@@ -952,7 +952,7 @@ class V2Coverage(Base):
     # 1) coverage: one valid entry per MOVE; own counts SUMMED
     def test_botops_case_A_two_claims_one_entry(self):
         raw = {"trades": {"eddies_pending_claims_count": 2, "eddies_pending_private": [E("Yo Other", "Zed Qqname")]}}
-        self.assertIsNone(self.run_(raw, self.f({"names": ["Yo Other", "Zed Qqname"], "own_names": ["Yo Other", "Zed Qqname"], "own_entries": 1})))
+        self.assertIsNone(self.run_(raw, self.f({"names": ["Yo Other", "Zed Qqname"], "own_names": ["Yo Other", "Zed Qqname"], "own_entries": 1, "own_entries_by_type": {"cb": 1}})))
         self.assertIsNone(self.run_(raw))
     def test_botops_case_B_claim_plus_offer_sum(self):
         raw = {"trades": {"eddies_pending_claims_count": 1, "eddies_pending_trade_offers": 1, "eddies_pending_private": [
@@ -966,9 +966,9 @@ class V2Coverage(Base):
         o = self.run_(raw); self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
     def test_file_own_entries_short_fails(self):
         self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 2}},
-                                    self.f({"own_names": ["Martin Emerson", "Isaiah Lake"], "own_entries": 1})))
+                                    self.f({"own_names": ["Martin Emerson", "Isaiah Lake"], "own_entries": 1, "own_entries_by_type": {"cb": 1}})))
         self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 2}},
-                                       self.f({"own_names": ["Martin Emerson", "Isaiah Lake"], "own_entries": 2})))
+                                       self.f({"own_names": ["Martin Emerson", "Isaiah Lake"], "own_entries": 2, "own_entries_by_type": {"cb": 2}})))
     def test_bad_own_entries_value_counts_zero(self):
         for v in ("2", True, -1, None, 1.5):
             with self.subTest(v=v):
@@ -999,7 +999,7 @@ class V2Coverage(Base):
     def test_botops_drop_only_claim_fails(self):
         raw = {"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [E(None, "Zed Qqname")]}}
         self.assertIsNone(self.run_(raw))
-        self.assertIsNone(self.run_(raw, self.f({"own_names": ["Zed Qqname"], "own_entries": 1})))
+        self.assertIsNone(self.run_(raw, self.f({"own_names": ["Zed Qqname"], "own_entries": 1, "own_entries_by_type": {"cb": 1}})))
     def test_schema_problems_fail(self):
         good = E("Martin Emerson")
         bad = [{k: v for k, v in good.items() if k != "processes"}, {**good, "type": "waiver"}, {**good, "bid": "12"},
@@ -1011,8 +1011,52 @@ class V2Coverage(Base):
         self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [good]}}))
     def test_file_schema_problems_fail(self):
         self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1}},
-                                    self.f({"own_names": ["Martin Emerson"], "own_entries": 1, "schema_problems": ["[0] x"]})))
+                                    self.f({"own_names": ["Martin Emerson"], "own_entries": 1, "own_entries_by_type": {"cb": 1}, "schema_problems": ["[0] x"]})))
         self.assertIsNone(self.run_({}, self.f({"schema_problems": ["[0] x"]})))
+
+class V3(V2Coverage):
+    """Bot Ops v2 review (FAIL): duplicate entries, own-count key variants, type-matched coverage, add==drop, team_key/label."""
+    def test_botops_duplicate_entries_cover_once(self):
+        for dup in (E("Martin Emerson", "Isaiah Lake", 12), E("martin  EMERSON", "isaiah lake", 12), E(" Martin Emerson ", "Isaiah  Lake")):
+            with self.subTest(dup=dup):
+                raw = {"trades": {"eddies_pending_claims_count": 2, "eddies_pending_private": [E("Martin Emerson", "Isaiah Lake", 12), dup]}}
+                self.assertIsNone(self.run_(raw))
+        offers = [E(type="offer", give=["Bo Nix", "Al Bo"], get=["Zed Qqname"]), E(type="offer", give=["al bo", "BO NIX"], get=["zed  qqname"])]
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_trade_offers": 2, "eddies_pending_private": offers}}))
+        raw = {"trades": {"eddies_pending_claims_count": 2, "eddies_pending_private": [E("Martin Emerson", "Isaiah Lake"), E("Martin Emerson", "Zed Qqname")]}}
+        self.assertIsNotNone(self.run_(raw))
+    def test_botops_own_count_key_variants(self):
+        other = self.f({"names": ["Adonai Mitchell", "Bo Nix", "Al Bo"], "own_names": []})
+        for k in ("EDDIE_PENDING", "eddie_pending_claims", "eddy_pending_count", "t_ere8_pending_count", "trades_eddies_pending",
+                  "ourPendingClaims", "usPendingClaims", "ours_pending", "mine_pending_count", "Eagle-Ridge pending",
+                  "eddies_pending_claims_count", "myPendingClaims", "own_pending", "xbvk9dpgmsb3ulv4_pending"):
+            with self.subTest(k=k):
+                self.assertTrue(wc.is_own_count_key(k))
+                self.assertIsNone(self.run_({k: 1}, other))
+                self.assertIsNone(self.run_({"trades": {k: 1}}, other))
+        for k in ("pendingClaims", "status_pending", "bonus_pending", "ownership_pending", "owner_pending", "pending_trades_count"):
+            with self.subTest(k=k):
+                self.assertFalse(wc.is_own_count_key(k))
+    def test_type_matched_coverage(self):
+        offer = E(type="offer", give=["Bo Nix"], get=["Zed Qqname"])
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [offer]}}))
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_trade_offers": 1, "eddies_pending_private": [E("Martin Emerson")]}}))
+        self.assertIsNotNone(self.run_({"trades": {"eddies_pending_trade_offers": 1, "eddies_pending_private": [offer]}}))
+        self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [E("Martin Emerson", None, 3, "bid")]}}))
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1}},
+                                    self.f({"own_names": ["Bo Nix"], "own_entries": 1, "own_entries_by_type": {"offer": 1}})))
+    def test_add_equals_drop_is_schema_problem(self):
+        for e in (E("Martin Emerson", "Martin Emerson"), E("Martin Emerson", "martin  EMERSON")):
+            with self.subTest(e=e):
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [e]}}))
+                self.assertIn("add == drop", " ".join(wc.schema_problems([e])))
+    def test_team_key_and_label_fields(self):
+        for d in ({"team_key": "Eagle Ridge Eddies"}, {"label": "eagle ridge eddies"}, {"teamKey": "xbvk9dpgmsb3ulv4"}):
+            with self.subTest(d=d):
+                self.assertTrue(wc.is_own_record(d))
+        self.assertIsNone(self.run_({"claimsQueue": [{"label": "Eagle Ridge Eddies", "drop": "Zed Qqname"}],
+                                     "standings": [{"team_key": "Eagle Ridge Eddies", "pendingClaims": 1}]}))
+        self.assertFalse(wc.is_own_record({"label": "Eddie Jackson"}))
 
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
