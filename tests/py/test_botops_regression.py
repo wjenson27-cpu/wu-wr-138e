@@ -1122,6 +1122,44 @@ class V5(V4):
         self.assertEqual(r.returncode, 1, r.stdout[-500:] + r.stderr[-500:])
         self.assertEqual((data / "warroom.json").read_bytes(), before)
 
+class V6(V5):
+    """Bot Ops v5 review (FAIL): dotted placeholders are not players."""
+    BAD = ("P.E.N.D.I.N.G", "T.B.D. Player", "N.A. N.A.", "A.B.C.D", "X.X.X.X")
+    GOOD = ("T.J. Watt", "D.K. Metcalf", "A.J. Third", "C.J. Stroud Jr.")
+    def cli(self, add):
+        import glob, shutil, subprocess
+        src = sorted(glob.glob("/workspace/fantrax-raw-*.json"))
+        if not src:
+            self.skipTest("no raw scrape on this box")
+        d = json.loads(Path(src[-1]).read_text())
+        d.setdefault("trades", {}).update({"eddies_pending_claims_count": 1, "eddies_pending_trade_offers": 0,
+                                           "eddies_pending_private": [E(add)]})
+        t = Path(tempfile.mkdtemp()); raw = t / "r.json"; raw.write_text(json.dumps(d))
+        data = t / "data"; shutil.copytree(DATA, data)
+        names = t / "pn.json"
+        names.write_text(json.dumps({"scraped": d.get("scraped"), "counts": {}, "names": [], "own_names": [], "own_entries": 0,
+                                     "own_entries_by_type": {"cb": 0, "offer": 0}, "schema_problems": []}))
+        before = (data / "warroom.json").read_bytes()
+        r = subprocess.run([sys.executable, str(ROOT / "scripts/build_warroom.py"), "--data-dir", str(data), "--raw-glob", str(raw),
+                            "--pending-names", str(names)], capture_output=True, text=True)
+        return r, before == (data / "warroom.json").read_bytes()
+    def test_botops_placeholders_fail(self):
+        for v in self.BAD:
+            with self.subTest(v=v):
+                self.assertIsNone(wc.name_key(v))
+                self.assertTrue(wc.schema_problems([E(v)]))
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [E(v)]}}))
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_trade_offers": 1, "eddies_pending_private": [E(type="offer", give=[v])]}}))
+                r, same = self.cli(v)
+                self.assertEqual(r.returncode, 1, r.stderr[-300:]); self.assertIn("pending", (r.stdout + r.stderr).lower()); self.assertTrue(same)
+    def test_initial_names_still_valid(self):
+        for v in self.GOOD:
+            with self.subTest(v=v):
+                self.assertEqual(wc.schema_problems([E(v)]), [])
+                self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [E(v)]}}))
+                r, _ = self.cli(v)
+                self.assertEqual(r.returncode, 0, r.stderr[-300:])
+
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
 add_cases(History, "gate_passes", [f.name for f in HIST_FILES],

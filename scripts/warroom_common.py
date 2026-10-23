@@ -884,6 +884,8 @@ ENTRY_FIELDS = ("type", "add", "drop", "bid", "give", "get", "counterparty", "su
 
 NAME_LIKE = re.compile(r"[A-Za-z][A-Za-z'\-]*\.?(?:\s+[A-Za-z][A-Za-z'\-]*\.?)+")
 NAME_JUNK = {"tbd", "pending claim", "pending bid", "pending trade", "hidden", "unknown", "n a", "none", "player"}
+NAME_JUNK_WORDS = {"tbd", "tba", "pending", "claim", "bid", "trade", "offer", "hidden", "unknown", "na", "n", "a", "none", "null",
+                   "player", "name", "placeholder", "empty", "blank", "waiver", "wire"}
 
 def name_key(n):
     """Normalized key for a NAME-LIKE player name (2+ Latin words, no digits/commas); None otherwise."""
@@ -892,8 +894,13 @@ def name_key(n):
     f = " ".join(re.sub(r"\.(?=[A-Za-z])", ". ", fold(n)).split())     # 'T.J. Watt' -> 'T. J. Watt'
     if not NAME_LIKE.fullmatch(f) or sum(c.isalpha() for c in f) < 4:
         return None
-    k = re.sub(r"[^a-z ]", " ", f.lower()); k = " ".join(k.split())
-    return None if k in NAME_JUNK else k
+    k = " ".join(re.sub(r"[^a-z ]", " ", f.lower()).split())
+    if all(len(t) == 1 for t in k.split()):
+        return None                                   # only single letters ('A.B.C.D', 'X.X.X.X')
+    j = join_initials(k)                              # 'P.E.N.D.I.N.G' -> 'pending', 'T.B.D. Player' -> 'tbd player'
+    if k in NAME_JUNK or j in NAME_JUNK or all(t in NAME_JUNK_WORDS for t in j.split()):
+        return None
+    return k
 
 def distinct_names(names):
     return {k for k in (name_key(n) for n in names) if k}
