@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-22T21:48:00-07:00",
+  "asOf": "2026-10-22T21:49:00-07:00",
   "season": 2026,
   "week": 7,
   "opponent": {
@@ -9,7 +9,7 @@
     "name": "Morningside Muff Divers"
   },
   "freshness": {
-    "plan": "2026-10-22T21:48:00-07:00",
+    "plan": "2026-10-22T21:49:00-07:00",
     "roster": "2026-10-22T14:50:00-07:00",
     "scores": "2026-10-22T14:50:00-07:00",
     "waivers": "2026-10-22T14:50:00-07:00",
@@ -202,7 +202,7 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "@ NYJ. Weekly starter. LB42 weekly / LB34 ROS.",
+      "reason": "@ NYJ. START on merit: 17.2 FP/G, 3rd among Eddies LBs.",
       "injury": "",
       "practice": "FP Wed/Thu (foot)"
     },
