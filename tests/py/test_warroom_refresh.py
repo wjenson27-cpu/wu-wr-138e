@@ -3,6 +3,7 @@ from datetime import date, datetime
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
+os.environ.setdefault("WARROOM_PENDING_NAMES", str(Path(__file__).resolve().parents[1] / "fixtures" / "pending-names-test.json"))  # real scrape may have pending>=1; never the private file
 import warroom_common as wc, build_free_agents as bfa, build_warroom as bw, refresh_green_dots as rgd
 FIX = ROOT / "tests" / "fixtures"
 DATA = Path(os.environ.get("WU_DATA_DIR") or ROOT / "data")

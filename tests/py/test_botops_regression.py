@@ -10,6 +10,7 @@ from datetime import datetime
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
+os.environ.setdefault("WARROOM_PENDING_NAMES", str(Path(__file__).resolve().parents[1] / "fixtures" / "pending-names-test.json"))  # real scrape may have pending>=1; never the private file
 import warroom_common as wc, build_warroom as bw, build_free_agents as bfa, refresh_green_dots as rgd, refresh_warroom as rw
 DATA = Path(os.environ.get("WU_DATA_DIR") or ROOT / "data")
 PT = wc.PT
@@ -603,6 +604,50 @@ class Round9(Base):
     def test_private_list_never_published(self):
         o = self.build({"news": [{"text": "Lake out."}]})
         self.assertNotIn("Emerson", o)
+
+class Round9b(Base):
+    """Fail closed: a pending count >= 1 with an empty/missing private name list stops the refresh."""
+    def setUp(self):
+        self.t = Path(tempfile.mkdtemp())
+    def names_file(self, names, counts=None):
+        p = self.t / "pending-names.json"; p.write_text(json.dumps({"counts": counts or {}, "names": names})); return p
+    RAW1 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": []}}
+    RAW0 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "trades": {"eddies_pending_claims_count": 0, "pending_claims_count": None}}
+    W = {"week": 7, "news": [{"text": "Martin Emerson looks like a fit."}, {"text": "Lake out."}]}
+    def test_count_and_empty_names_fails(self):
+        for p in (self.names_file([]), self.t / "missing.json"):
+            with self.subTest(p=p), self.assertRaises(wc.PendingError):
+                bw.build(dict(self.W), DATA, NOW, raw=self.RAW1, pending_path=str(p))
+    def test_count_in_private_file_alone_fails(self):
+        with self.assertRaises(wc.PendingError):
+            bw.build(dict(self.W), DATA, NOW, raw=self.RAW0, pending_path=str(self.names_file([], {"trades.eddies_pending_claims_count": 2})))
+    def test_count_zero_empty_ok(self):
+        o = bw.build(dict(self.W), DATA, NOW, raw=self.RAW0, pending_path=str(self.names_file([])))
+        self.assertEqual(len(o["news"]), 2)
+    def test_count_and_names_drops(self):
+        p = self.names_file(["Martin Emerson"], {"trades.eddies_pending_claims_count": 1})
+        o = bw.build(dict(self.W), DATA, NOW, raw=self.RAW1, pending_path=str(p))
+        self.assertEqual([n["text"] for n in o["news"]], ["Lake out."])
+        dumped = json.dumps(o)
+        self.assertNotIn(str(p), dumped); self.assertNotIn("pending-names", dumped); self.assertNotIn("Emerson", dumped)
+    def test_cli_fails_rc_nonzero_nothing_written(self):
+        d = stage(); before = (d / "warroom.json").read_bytes()
+        rawf = self.t / "fantrax-raw-2026-10-23-test.json"
+        rawf.write_text(json.dumps({**self.RAW1, "scraped": "2026-10-23 6:00 AM PDT", "rosters": {}}))
+        env = {**os.environ, "WARROOM_PENDING_NAMES": str(self.t / "missing.json")}
+        r = subprocess.run([sys.executable, str(ROOT / "scripts/build_warroom.py"), "--data-dir", str(d), "--raw-glob",
+                            str(self.t / "fantrax-raw-*.json"), "--fa-glob", str(self.t / "none-*.json"),
+                            "--now", "2026-10-23T07:00"], capture_output=True, text=True, env=env)
+        self.assertNotEqual(r.returncode, 0, r.stdout + r.stderr); self.assertIn("pending-name list", r.stdout + r.stderr)
+        self.assertEqual((d / "warroom.json").read_bytes(), before)
+    def test_private_path_not_in_data_or_publish(self):
+        for f in (ROOT / "data").rglob("*"):
+            if f.is_file():
+                self.assertNotIn(b"eddie-private", f.read_bytes(), str(f))
+        for f in list((ROOT / ".github").rglob("*")) if (ROOT / ".github").exists() else []:
+            if f.is_file():
+                self.assertNotIn("eddie-private", f.read_text(errors="ignore"), str(f))
+        self.assertFalse(str(Path(bw.PRIVATE_PENDING).resolve()).startswith(str(ROOT)) and "fixtures" not in bw.PRIVATE_PENDING)
 
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)

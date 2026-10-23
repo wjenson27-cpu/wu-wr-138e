@@ -687,10 +687,37 @@ def pending_names(raw=None, path=None):
                 add(src.get(k))
     if path:
         try:
-            add(json.loads(open(path).read()))
+            d = json.loads(open(path).read())
+            add(d.get("names") if isinstance(d, dict) and "names" in d else d)
         except FileNotFoundError:
             pass
     return names
+
+COUNT_KEY = re.compile(r"pending.*count|count.*pending", re.I)
+
+def pending_count(raw=None, path=None):
+    """Highest pending count anywhere in the raw scrape or in the private file's counts (None/bools ignored)."""
+    best = 0
+    def walk(o):
+        nonlocal best
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if isinstance(k, str) and COUNT_KEY.search(k) and isinstance(v, (int, float)) and not isinstance(v, bool):
+                    best = max(best, int(v))
+                else:
+                    walk(v)
+        elif isinstance(o, list):
+            for v in o: walk(v)
+    walk(raw)
+    if path:
+        try:
+            d = json.loads(open(path).read())
+            for v in ((d.get("counts") or {}).values() if isinstance(d, dict) else []):
+                if isinstance(v, (int, float)) and not isinstance(v, bool):
+                    best = max(best, int(v))
+        except FileNotFoundError:
+            pass
+    return best
 
 def _name_rx(names):
     pats = set()
