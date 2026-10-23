@@ -695,7 +695,7 @@ def pending_names(raw=None, path=None):
 
 COUNT_KEY = re.compile(r"pending.*count|count.*pending", re.I)
 # round 10: any numeric-ish field whose key names pending / claims / queue / num counts (pendingClaims, numPending...)
-COUNT_ANY = re.compile(r"pending|claims?|queue|num", re.I)
+COUNT_ANY = re.compile(r"pending|claims?|queue|num|waiting", re.I)
 
 def _num(v):
     """int for ints/floats/numeric strings, 1 for True, else None."""
@@ -807,28 +807,79 @@ def scrub_pending_names(o, names):
 # ---------- round 10: resolve every pending item to names, or fail closed ----------
 # 'claim(s)/bid(s)/offer(s)' must not run on into a lower-case letter ('positions_offered', 'bidder' are not sources)
 QUEUE_KEY = re.compile(r"(?i:pending|queue)|(?i:claim|bid|offer)s?(?![a-z])")   # any list/dict under such a key is a pending source
-TXN_LIST_KEY = re.compile(r"(?i:transaction|move|request)s?(?![a-z])|(?i:activit)")
+TXN_LIST_KEY = re.compile(r"(?i:transaction|txn|move|request|log)s?(?![a-z])|(?i:activit|history|waiver[\s_-]*wire)")
 NAME_FIELDS = ("player", "name", "add", "adds", "drop", "drops", "give", "get", "offered", "requested", "players")
 ACTION_NAME = re.compile(r"\b(?:add|drop|claim|waive|trade|get|give)s?\s+((?:[A-Z][A-Za-z.'\-]+\s+){0,3}?[A-Z][a-z][A-Za-z.'\-]*)"
                          r"(?=\s+(?:[A-Z]{1,3}(?:,[A-Z]{1,3})*\s+[A-Z]{2,3}\b|[A-Z]{2,3}\b)|\s*(?:/|$|,|\())")
 TEXT_NAME = re.compile(r"[+\-\u2212]\s*([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+)")
 
+# ---------- pending-names-capture: who is "us", and what counts as a name ----------
+OWN_KEY = re.compile(r"(?i:eddie|eagle[\s_-]*ridge)|^(?:my|own)(?:[A-Z_]|$)|^(?i:my|own)[\s_-]|(?i:^t_ere\d*$)|(?i:^ere$)")
+OWN_VAL = re.compile(r"(?i:eddie|eagle\s*ridge|^ere$|^t_ere\d*$|bill\s+jenson)")
+OWN_ID_FIELDS = ("name", "team", "teamName", "team_name", "teamId", "team_id", "id", "owner", "abbrev", "fantraxTeamId")
+_OWN_IDS = None
+
+def _own_ids():
+    """Our Fantrax team id(s) from data/hq/fantrax-team-ids.json ('eddies')."""
+    global _OWN_IDS
+    if _OWN_IDS is None:
+        try:
+            from pathlib import Path
+            ids = json.loads((Path(__file__).resolve().parent.parent / "data/hq/fantrax-team-ids.json").read_text())
+            _OWN_IDS = {str(ids["eddies"]).lower()} if ids.get("eddies") else set()
+        except Exception:
+            _OWN_IDS = set()
+    return _OWN_IDS
+
+def is_own_key(k):
+    if not isinstance(k, str):
+        return False
+    f = fold(k)
+    return bool(OWN_KEY.search(f)) or f.strip().lower() in _own_ids()
+
+def is_own_record(d):
+    """A dict whose identity field (name/team/teamId/...) names us (homoglyph-folded)."""
+    if not isinstance(d, dict):
+        return False
+    for k in OWN_ID_FIELDS:
+        v = d.get(k)
+        if isinstance(v, str) and (OWN_VAL.search(fold(v)) or fold(v).strip().lower() in _own_ids()):
+            return True
+    return False
+
+NAME_LIKE = re.compile(r"[A-Za-z][A-Za-z'\-]*\.?(?:\s+[A-Za-z][A-Za-z'\-]*\.?)+")
+NAME_JUNK = {"tbd", "pending claim", "pending bid", "pending trade", "hidden", "unknown", "n a", "none", "player"}
+
+def name_key(n):
+    """Normalized key for a NAME-LIKE player name (2+ Latin words, no digits/commas); None otherwise."""
+    if not isinstance(n, str) or non_latin(n):
+        return None
+    f = " ".join(fold(n).split())
+    if not NAME_LIKE.fullmatch(f) or sum(c.isalpha() for c in f) < 4:
+        return None
+    k = re.sub(r"[^a-z ]", " ", f.lower()); k = " ".join(k.split())
+    return None if k in NAME_JUNK else k
+
+def distinct_names(names):
+    return {k for k in (name_key(n) for n in names) if k}
+
 def _own_count(o):
-    """Our pending count: same key matching (COUNT_ANY) and coercion (_num) as pending_count, on any key whose
-    path names us (eddie / eddies / eddiesPendingClaims ...)."""
+    """Our pending count: same key matching (COUNT_ANY) and coercion (_num) as pending_count, on any key whose path
+    names us (eddie / eagle ridge / my* / own* / our team id) or inside a record whose identity field names us."""
     best = 0
-    def walk(x, ctx=""):
+    def walk(x, own=False):
         nonlocal best
         if isinstance(x, dict):
+            own = own or is_own_record(x)
             for k, v in x.items():
-                kp = f"{ctx}.{k}"
+                o2 = own or is_own_key(k)
                 n = _num(v) if isinstance(k, str) and COUNT_ANY.search(k) else None
-                if n is not None and "eddie" in kp.lower():
+                if n is not None and o2:
                     best = max(best, n)
                 else:
-                    walk(v, kp)
+                    walk(v, o2)
         elif isinstance(x, list):
-            for v in x: walk(v, ctx)
+            for v in x: walk(v, own)
     walk(o)
     return best
 
@@ -887,13 +938,15 @@ def resolve_pending(raw, path, today, expect_file=True):
     - any raw transaction whose status is not exactly 'completed' or is dated today/future (resolved via its names);
     - the private file missing or malformed while anything is pending. File may be a list or {"names": [...]}."""
     items, problems = [], []                              # items: list of name-lists, one per pending entry
-    own_named = [0]                                       # named entries under an 'eddie*' key (ours)
-    def walk(o, path_=""):
+    own_items = []                                        # name-lists of OUR pending entries
+    def walk(o, path_="", own=False):
         if isinstance(o, dict):
+            own = own or is_own_record(o)
             for k, v in o.items():
                 p = f"{path_}.{k}"
                 if not isinstance(k, str):
                     continue
+                o2 = own or is_own_key(k)
                 if _num(v) is not None or v is None or v is False:
                     continue                                  # counts handled by pending_count()
                 if TXN_LIST_KEY.search(k) and isinstance(v, dict):
@@ -905,6 +958,7 @@ def resolve_pending(raw, path, today, expect_file=True):
                         if _txn_pending(t, today):
                             nm = _item_names(t)
                             items.append(nm)
+                            if o2 or is_own_record(t): own_items.append(nm)
                             if not nm: problems.append(f"{p}[{i}] pending transaction with no name")
                     continue
                 if QUEUE_KEY.search(k) and v not in (None, "", [], {}, 0, False):
@@ -912,12 +966,12 @@ def resolve_pending(raw, path, today, expect_file=True):
                     for i, e in enumerate(entries):
                         nm = _item_names(e)
                         items.append(nm)
-                        if "eddie" in p.lower() and nm: own_named[0] += 1
+                        if o2 or is_own_record(e): own_items.append(nm)
                         if not nm: problems.append(f"{p}[{i}] pending entry with no name")
                     continue
-                walk(v, p)
+                walk(v, p, o2)
         elif isinstance(o, list):
-            for v in o: walk(v, path_)
+            for v in o: walk(v, path_, own)
     walk(raw if isinstance(raw, dict) else {})
     file_names, file_ok = [], None
     if path:
@@ -940,8 +994,11 @@ def resolve_pending(raw, path, today, expect_file=True):
             file_ok = False
             file_err = str(e)
     count = max(pending_count(raw, path if file_ok else None), len(items))   # direct entries count too
-    named = sum(1 for nm in items if nm) + (len(file_names) if file_ok else 0)
-    names = [n for nm in items for n in nm] + file_names
+    # count DISTINCT, NAME-LIKE names only (dups, '—', 'TBD', '1', '\u200b' never cover a count)
+    all_keys = distinct_names([n for nm in items for n in nm] + (file_names + file_own if file_ok else []))
+    named = len(all_keys)
+    # own_names are always part of the drop filter
+    names = [n for nm in items for n in nm] + (file_names + file_own if file_ok else [])
     pending_any = count >= 1 or bool(items)
     if pending_any and isinstance(raw, dict) and raw.get("scraped") in (None, ""):
         problems.append("raw scrape has no 'scraped' stamp, so the private file cannot be checked as fresh")
@@ -953,9 +1010,10 @@ def resolve_pending(raw, path, today, expect_file=True):
     # other teams' transactions
     own = _own_count(raw) if isinstance(raw, dict) else 0
     if file_ok:
-        own = max(own, max([int(v) for k, v in ((d.get("counts") or {}).items() if isinstance(d, dict) else [])
-                            if "eddie" in str(k).lower() and isinstance(v, (int, float)) and not isinstance(v, bool)] or [0]))
-    own_have = own_named[0] + (len(file_own) if file_ok else 0)   # other teams' names never cover OUR count
+        own = max(own, max([_num(v) or 0 for k, v in ((d.get("counts") or {}).items() if isinstance(d, dict) else [])
+                            if any(is_own_key(part) for part in str(k).split("."))] or [0]))
+    # other teams' names never cover OUR count; count distinct name-like names only
+    own_have = len(distinct_names([n for nm in own_items for n in nm] + (file_own if file_ok else [])))
     if own > own_have:
         problems.append(f"{own} of our pending move(s) but only {own_have} of ours resolved to a name")
     if problems:

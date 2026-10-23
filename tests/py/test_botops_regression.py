@@ -877,6 +877,59 @@ class Round11(Base):
         self.assertIn("Emerson", self.run_({"scraped": "S", "trades": {"trade_block": {"X": {"positions_offered": ["RB"]}}}},
                                            self.f({"names": [], "own_names": [], "scraped": "S"})))
 
+class PendingNamesCapture(Base):
+    """Bot Ops round 11 follow-ups + documented eddies_pending_private schema."""
+    URL = "https://www.fantrax.com/fantasy/league/x/home"
+    W = {"week": 7, "waivers": [{"player": "Martin Emerson", "why": "Fits."}], "news": [{"text": "Lake out."}]}
+    def setUp(self):
+        self.t = Path(tempfile.mkdtemp())
+    def f(self, d):
+        p = self.t / "n.json"; p.write_text(json.dumps({"scraped": "S", "counts": {}, **d})); return str(p)
+    def run_(self, raw, path):
+        try:
+            return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW, raw={"url": self.URL, "scraped": "S", **raw}, pending_path=path))
+        except wc.PendingError:
+            return None
+    def test_schema_entries_resolve_and_drop(self):
+        raw = {"trades": {"eddies_pending_claims_count": 1, "eddies_pending_trade_offers": 1, "eddies_pending_private": [
+            {"type": "claim", "add": "Martin Emerson", "drop": "Isaiah Lake", "bid": 12, "give": [], "get": [], "counterparty": None,
+             "submitted": "2026-10-23 07:10", "processes": "2026-10-28 21:00"},
+            {"type": "offer", "add": None, "drop": None, "bid": None, "give": ["Tyler Lockett"], "get": ["Jack Campbell"],
+             "counterparty": "Substation", "submitted": "2026-10-22 20:00", "processes": None}]}}
+        o = self.run_(raw, self.f({"names": [], "own_names": []}))
+        self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_schema_entry_without_name_fails(self):
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [
+            {"type": "claim", "add": None, "drop": None, "bid": 12}]}}, self.f({"names": [], "own_names": []})))
+    def test_own_names_are_in_drop_filter(self):
+        o = self.run_({"trades": {"eddies_pending_claims_count": 1}}, self.f({"names": ["Adonai Mitchell"], "own_names": ["Martin Emerson"]}))
+        self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_distinct_name_like_only(self):
+        for own, cnt in ((["Martin Emerson", "martin  emerson"], 2), (["\u200b"], 1), (["\u2014"], 1), (["TBD"], 1), (["x"], 1),
+                         (["1"], 1), (["Pending claim"], 1), (["Emerson, Martin"], 1), (["Мartin Emerson"], 1)):
+            with self.subTest(own=own):
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": cnt}}, self.f({"names": own, "own_names": own})))
+        self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 1}}, self.f({"names": [], "own_names": ["M. Emerson"]})))
+        self.assertIsNone(self.run_({"pendingClaims": 3}, self.f({"names": ["Zed Zee", "Zed Zee", "zed zee"], "own_names": []})))
+    def test_own_team_detection_variants(self):
+        other = {"names": ["Adonai Mitchell", "Bo Nix"], "own_names": []}
+        for raw in ({"myTeam": {"pendingClaims": 1}}, {"teams": {"t_ere8": {"pendingClaims": 1}}},
+                    {"teams": [{"name": "Eagle Ridge Eddies", "pendingClaims": 1}]}, {"eagle_ridge_pending_count": 1},
+                    {"own_pending_claims": 1}, {"myPendingClaims": 1}, {"edd\u0456es": {"pendingClaims": 1}},
+                    {"teams": {"xbvk9dpgmsb3ulv4": {"pendingClaims": 1}}}, {"teams": [{"teamId": "xbvk9dpgmsb3ulv4", "pending": 1}]}):
+            with self.subTest(raw=raw):
+                self.assertIsNone(self.run_(raw, self.f(other)))
+        self.assertIsNotNone(self.run_({"teams": [{"name": "Substation", "pendingClaims": 1}]}, self.f({"names": ["Bo Nix"], "own_names": []})))
+    def test_new_sources_and_waiting_count(self):
+        for raw in ({"txns": [{"status": "pending"}]}, {"history": [{"status": "pending"}]}, {"log": [{"status": "queued"}]},
+                    {"waiverWire": [{"status": "pending"}]}, {"waitingCount": 1}):
+            with self.subTest(raw=raw):
+                self.assertIsNone(self.run_(raw, self.f({"names": [], "own_names": []})))
+        o = self.run_({"txns": [{"status": "pending", "player": "Martin Emerson"}]}, self.f({"names": [], "own_names": []}))
+        self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_login_key_is_not_a_log_source(self):
+        self.assertIsNotNone(self.run_({"login": [{"status": "pending"}], "logins": [1]}, self.f({"names": [], "own_names": []})))
+
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
 add_cases(History, "gate_passes", [f.name for f in HIST_FILES],
