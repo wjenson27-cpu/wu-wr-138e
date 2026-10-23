@@ -779,6 +779,32 @@ class Round10b(Base):
         o = self.run_({"pendingClaims": 0, "claims_pending": None, "numPending": "0", "x": {"pending": False}}, self.f([]))
         self.assertIn("Emerson", o)
 
+class Round10bProcessed(Base):
+    """Approved: a Fantrax transaction 'processed' with a PAST date counts as completed; near-misses stay pending."""
+    from datetime import date as _d
+    TODAY = _d(2026, 10, 23)
+    def pend(self, st, dt="2026-10-22 19:15"):
+        t = {"status": st, "player": "X Y"}
+        if dt is not None: t["datetime_pdt"] = dt
+        return wc._txn_pending(t, self.TODAY)
+    def test_processed_past_is_completed(self):
+        for st in ("processed", "Processed ", "PROCESSED", "proce\u200bssed", "\uff50rocessed"):
+            with self.subTest(st=st): self.assertFalse(self.pend(st))
+    def test_processed_today_future_missing_pending(self):
+        for dt in ("2026-10-23 06:00", "2026-10-28", None, "soon"):
+            with self.subTest(dt=dt): self.assertTrue(self.pend("processed", dt))
+    def test_near_misses_pending(self):
+        for st in ("processed-pending", "processing", "reprocessed", "pr\u043ecessed", "proc\u00e9ssed", "", " ", None,
+                   "processed pending", "unprocessed", "processed?"):
+            with self.subTest(st=st): self.assertTrue(self.pend(st))
+    def test_other_team_processed_rows_not_filtered(self):
+        raw = {"url": "https://www.fantrax.com/fantasy/league/x/home",
+               "transactions_since_x": [{"team": "Saltese Slamm", "action": "add Adonai Mitchell WR NYJ", "status": "processed",
+                                         "datetime_pdt": "2026-10-22 19:15"}]}
+        self.assertEqual(wc.resolve_pending(raw, None, self.TODAY), [])
+        o = bw.build({"week": 7, "news": [{"text": "Adonai Mitchell starts."}]}, DATA, NOW, raw=raw)
+        self.assertEqual(o["news"][0]["text"], "Adonai Mitchell starts.")
+
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
 add_cases(History, "gate_passes", [f.name for f in HIST_FILES],

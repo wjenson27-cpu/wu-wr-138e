@@ -847,8 +847,12 @@ def _txn_pending(t, today):
     if not isinstance(t, dict):
         return True
     st = t.get("status")
-    if not isinstance(st, str) or _status_norm(st) != "completed":
-        return True                                       # pending / queued / processing / processed / missing
+    if not isinstance(st, str) or non_latin(st):
+        return True                                       # missing / non-string / look-alike letters
+    st = prep(st).strip().lower()                         # NFKC + zero-width removal + strip + case only (no accent fold)
+    # round 10b (approved): Fantrax 'processed' WITH a past date counts as completed; nothing else does
+    if st not in ("completed", "processed"):
+        return True                                       # pending / queued / processing / processed-pending ...
     for k in ("date", "datetime_pdt", "datetime", "time_pdt"):
         if t.get(k):
             try:
