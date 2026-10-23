@@ -120,21 +120,55 @@ def _entry_keys(e):
     k |= {"id:" + str(i).strip().lower() for i in ids}
     return k
 
+TEAM_CODES = {"ari", "atl", "bal", "buf", "car", "chi", "cin", "cle", "dal", "den", "det", "gb", "gnb", "hou", "ind",
+              "jax", "jac", "kc", "kan", "lv", "lvr", "lac", "lar", "la", "mia", "min", "ne", "nwe", "no", "nor", "nyg",
+              "nyj", "phi", "pit", "sf", "sfo", "sea", "tb", "tam", "ten", "was", "wsh", "fa"}
+POS_CODES = {"qb", "rb", "wr", "te", "dl", "de", "dt", "edge", "lb", "ilb", "olb", "mlb", "db", "cb", "fs", "ss", "saf",
+             "idp", "flex", "ir", "pup", "nfi", "res", "sus", "out", "dnp", "bn", "def", "dst"}
+NAME_SUFFIX = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+def name_tokens(name):
+    """Letter-only tokens. Split on ANY non-letter (|, comma, period, parens, dash, digits, spaces); apostrophes are
+    removed first so Ja'Marr stays one token. Known team/position/status codes and Jr./III suffixes are dropped
+    (multi-letter codes only; single letters are kept as initials)."""
+    n = unicodedata.normalize("NFKD", str(name or "")).encode("ascii", "ignore").decode().lower()
+    n = re.sub(r"['`]", "", n.replace("\u2019", "'"))
+    toks = re.findall(r"[a-z]+", n)
+    return [t for t in toks if not (len(t) > 1 and (t in TEAM_CODES or t in POS_CODES or t in NAME_SUFFIX))]
+
 class Excluder:
-    """Matches on id or full normalized name; an initial-only name ('E. Cooper') matching an entry's
-    initial+last is also blocked. A different full first name (Darius Cooper) is not."""
+    """Token matching. An entry {first ... last} matches a rec when
+    (a) the rec's tokens equal {first, last} as a multiset, in any order, or
+    (b) the rec's tokens contain last AND (first OR first-initial as a lone letter).
+    Ids match too. Darius/Amari/Eric Cooper and Cooper DeJean do not match Edgerrin Cooper."""
     def __init__(self, entries):
-        self.entries = [(_entry_keys(e), (e.get("team") or "").upper()) for e in entries]
+        self.entries = []
+        for e in entries:
+            names = [e.get("name")] + list(e.get("aliases") or [])
+            ids = {str(x).strip().lower() for x in list(e.get("ids") or []) + ([e["id"]] if e.get("id") else [])}
+            fl = []
+            for nm in names:
+                t = name_tokens(nm)
+                if len(t) >= 2:
+                    fl.append((t[0], t[-1]))
+                    if "," in str(nm):   # 'Cooper, Edgerrin' entry form
+                        fl.append((t[-1], t[0]))
+            self.entries.append((fl, ids))
     def match(self, r):
-        rk = rec_keys(r)
-        rn = [k[2:] for k in rk if k.startswith("n:")]
-        rec_initial = any(len(n.split()[0]) == 1 for n in rn if " " in n)
-        for ek, _team in self.entries:
-            common = rk & ek
-            if any(not k.startswith("i:") for k in common):
-                return True          # same id or same full (normalized / reordered) name
-            if common and rec_initial:
-                return True          # 'E. Cooper' vs 'Edgerrin Cooper': block (fail closed)
+        nm = r if isinstance(r, str) else (r.get("player") or r.get("name") if isinstance(r, dict) else None)
+        toks = name_tokens(nm)
+        rid = {i[3:] for i in rec_ids(r)} if isinstance(r, dict) else set()
+        from collections import Counter
+        tc = Counter(toks)
+        for fl, ids in self.entries:
+            if rid & ids:
+                return True
+            for first, last in fl:
+                if tc == Counter([first, last]):
+                    return True
+                if last in tc and (first in tc or (first[0] in tc and tc[first[0]] >= 1 and len(first) > 1)):
+                    if last != first or tc[last] >= 2:
+                        return True
         return False
 
 def season_ending(data_dir):
@@ -159,44 +193,111 @@ def do_not_pitch(data_dir, week, today=None):
     return Excluder(keep)
 
 def identifiable(r):
-    """A rec is publishable only with a real player name. Id-only or null-name recs are blocked, because
-    without a name we cannot prove they are not on an exclude list whose entry has no id."""
+    """A rec is publishable only with a real player name (at least 2 letter tokens). Id-only or null-name recs are
+    blocked, because without a name we cannot prove they are not on an exclude list whose entry has no id."""
     nm = r if isinstance(r, str) else (r.get("player") or r.get("name") if isinstance(r, dict) else None)
-    return bool(name_keys(nm))
+    return len(name_tokens(nm)) >= 2
 
 # ---------- deny-pending gate ----------
-PENDING_KEY = re.compile(r"pending|claimsqueue|claims?$|bids?$|offers?$|queue", re.I)
+# --- strict (fail-closed) sections: allowlisted keys + allowlisted status values only ---
+STRICT_SECTIONS = {"waivers", "trades", "drops", "bids", "claims"}
+STRICT_FIELDS = {
+    "waivers": {"rank", "player", "pos", "nflTeam", "team", "why", "stats", "faabMin", "faabMax", "bid", "drop", "tag",
+                "id", "playerId", "fantraxId", "status"},
+    "drops": {"rank", "player", "pos", "nflTeam", "team", "reason", "id", "playerId", "fantraxId", "status"},
+    "trades": {"with", "give", "get", "why", "status", "date", "time"},
+    "bids": {"player", "pos", "team", "bid", "status", "date", "id", "playerId", "fantraxId"},
+    "claims": {"player", "pos", "team", "bid", "status", "date", "id", "playerId", "fantraxId"},
+}
+COMPLETED = {"completed", "complete", "processed", "executed", "accepted-and-processed", "accepted and processed"}
+STRICT_WORDS = re.compile(r"pend|review|counter|await|submit|outstanding|queue|propos|offer(?:ed)?\b|in.?progress", re.I)
+# --- top-level schema of warroom.json; any other top-level key is unknown and fails the run ---
+WARROOM_KEYS = {"schemaVersion", "sample", "asOf", "lastUpdated", "season", "week", "opponent", "freshness",
+                "lockTimes", "lineup", "injuryWatch", "byes", "waivers", "drops", "trades", "idp", "boxSafety", "news",
+                "fantraxRaw", "refreshNotes"}
+FA_KEYS = {"sample", "asOf", "source", "players", "lastUpdated"}
+FA_FIELDS = {"player", "pos", "team", "fpg", "last3Fpg", "rosteredPct", "id", "playerId", "fantraxId"}
+# --- general sections: narrow rule ---
+PENDING_KEY = re.compile(r"pending|claimsqueue|claims?$|bids?$|offers?$|queue|outstanding|submitted|proposal", re.I)
 STATUS_KEY = re.compile(r"(status|state)$", re.I)
-PENDING_VAL = {"pending", "pend", "proposed", "submitted", "claimsqueue", "claims queue", "queued", "in review",
-               "awaiting", "awaiting approval", "requested", "processing", "offered"}
-OFFER_ONLY_VAL = {"open"}                      # 'Open' blocks only inside trades/claims/bids/waivers
-TXT_PEND = re.compile(r"\bpending\b|\bpend\b|awaiting\s+approval", re.I)
-TXT_ALWAYS = re.compile(r"\bPEND\b|awaiting\s+approval", re.I)
+PENDING_VAL = re.compile(r"pend|propos|submit|queue|review|await|counter|request|process(?!ed)|offer|outstanding", re.I)
+TXT_ALWAYS = re.compile(r"\bPEND\b|awaiting\s+approval|\boutstanding\s+(?:bid|claim|trade|offer)", re.I)
+TXT_PEND = re.compile(r"\bpending\b", re.I)
 TXT_ZERO = re.compile(r"\b(?:0|no|zero)\s+pending\b", re.I)
-TXT_CTX = re.compile(r"\bbids?\b|\bclaims?\b|\btrades?\b|\bfaab\b|\boffers?\b|\$\d", re.I)
-OFFER_SECTIONS = {"waivers", "trades", "bids", "claims", "drops"}
+TXT_CTX = re.compile(r"\bbids?\b|\bclaims?\b|\btrades?\b|\bfaab\b|\boffers?\b|\$\s*\d|\bwaivers?\b", re.I)
 
-def find_pending(o, path="", in_offer=False):
-    """Paths that look like pending bids/claims/trades. Empty = clean.
-    - keys like pending/claimsQueue/claims/bids/offers (the rec field 'bid' is a recommendation, allowed)
-    - *status/*state values pending/PEND/proposed/submitted/claimsQueue/awaiting approval... (case/space-insensitive);
-      'open' only inside trades/claims/bids/waivers/drops
-    - free text: 'PEND' or 'awaiting approval' anywhere; 'pending' only next to bid/claim/trade/FAAB/offer/$N
-      (so 'MRI results pending' or 'Thu pending' is fine); '0 pending'/'no pending' is fine."""
+def _strings(o):
+    if isinstance(o, str):
+        yield o
+    elif isinstance(o, dict):
+        for k, v in o.items():
+            yield str(k); yield from _strings(v)
+    elif isinstance(o, list):
+        for v in o:
+            yield from _strings(v)
+
+def _strict_record(sec, r, path):
     hits = []
+    if not isinstance(r, dict):
+        return [f"{path} (not a record)"]
+    allowed = STRICT_FIELDS.get(sec, set())
+    for k, v in r.items():
+        if k not in allowed:
+            hits.append(f"{path}.{k} (unknown key)")
+        elif isinstance(v, bool) or (isinstance(v, (dict,)) ):
+            hits.append(f"{path}.{k} (unexpected type)")
+    st = r.get("status")
+    if st is not None and " ".join(str(st).lower().replace("_", " ").split()).replace(" ", "-") not in {c.replace(" ", "-") for c in COMPLETED}:
+        hits.append(f"{path}.status={st!r} (not a completed status)")
+    if sec in ("bids", "claims") and st is None:
+        hits.append(f"{path} (bid/claim with no completed status)")
+    for t in _strings(r):
+        if STRICT_WORDS.search(t):
+            hits.append(f"{path}: {t[:60]!r}"); break
+    return hits
+
+def find_pending(o, path="", in_offer=False, schema="warroom"):
+    """Fail-closed pending gate. Returns offending paths; empty = clean.
+    STRICT (waivers/trades/drops/bids/claims): only allowlisted keys; status must be a completed value
+    (bids/claims must carry one); any pending/review/counter/await/submit/outstanding/queue/propos text blocks;
+    booleans/objects block. Unknown top-level keys block (so a new 'outstanding' list can't slip in).
+    GENERAL (lineup, news, injuryWatch...): pending-like keys or *status values block; free text blocks on
+    PEND / 'awaiting approval' anywhere, or 'pending' next to bid/claim/trade/FAAB/offer/waiver/$N."""
+    hits = []
+    if path == "" and isinstance(o, dict):
+        top = WARROOM_KEYS if schema == "warroom" else FA_KEYS
+        for k, v in o.items():
+            p = f".{k}"
+            if k not in top:
+                hits.append(f"{p} (unknown top-level key)"); continue
+            if k in STRICT_SECTIONS:
+                if not isinstance(v, list):
+                    hits.append(f"{p} (not a list)"); continue
+                for i, r in enumerate(v):
+                    hits += _strict_record(k, r, f"{p}[{i}]")
+            elif schema == "fa" and k == "players":
+                for i, r in enumerate(v or []):
+                    bad = [x for x in (r or {}) if x not in FA_FIELDS]
+                    if bad or not isinstance(r, dict):
+                        hits.append(f"{p}[{i}] unknown keys {bad}")
+                    elif any(STRICT_WORDS.search(t) for t in _strings(r)):
+                        hits.append(f"{p}[{i}] pending-like text")
+            else:
+                hits += find_pending(v, p, False, schema)
+        return hits
     if isinstance(o, dict):
         for k, v in o.items():
             p = f"{path}.{k}"
             if k != "bid" and PENDING_KEY.search(k):
                 hits.append(p); continue
-            if STATUS_KEY.search(k) and isinstance(v, str):
-                vv = " ".join(v.lower().split())
-                if vv in PENDING_VAL or (in_offer and vv in OFFER_ONLY_VAL):
-                    hits.append(p); continue
-            hits += find_pending(v, p, in_offer or (path == "" and k in OFFER_SECTIONS))
+            if STATUS_KEY.search(k) and isinstance(v, str) and PENDING_VAL.search(v):
+                hits.append(p); continue
+            if isinstance(v, bool) and re.search(r"submit|pend|propos|queue|outstanding", k, re.I):
+                hits.append(p); continue
+            hits += find_pending(v, p, False, schema)
     elif isinstance(o, list):
         for i, v in enumerate(o):
-            hits += find_pending(v, f"{path}[{i}]", in_offer)
+            hits += find_pending(v, f"{path}[{i}]", False, schema)
     elif isinstance(o, str):
         if TXT_ALWAYS.search(o):
             hits.append(path)
@@ -206,8 +307,8 @@ def find_pending(o, path="", in_offer=False):
                 hits.append(path)
     return hits
 
-def assert_no_pending(o, what):
-    h = find_pending(o)
+def assert_no_pending(o, what, schema="warroom"):
+    h = find_pending(o, schema=schema)
     if h:
         raise PendingError(f"pending item(s) in {what}: {h[:10]} (run stopped, nothing written)")
 

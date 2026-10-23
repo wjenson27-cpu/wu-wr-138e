@@ -67,7 +67,7 @@ def validate(stage_data):
     for name in ("warroom.json", "free-agents.json"):
         p = stage_data / name
         if p.exists():
-            h = find_pending(json.loads(p.read_text()))
+            h = find_pending(json.loads(p.read_text()), schema="warroom" if name == "warroom.json" else "fa")
             if h:
                 raise Fail(f"pending item(s) in {name}: {h[:10]}")
 
@@ -82,18 +82,21 @@ def changed_files(stage_data, data):
 
 class SwapError(Exception): pass
 
-def swap_in(stage_data, data, _rename=os.rename):
-    """All-or-nothing: copy stage data next to data/ (same filesystem), keep a full backup copy of data/,
-    then two renames. If the second rename fails, the first is undone. If the rollback rename ALSO fails,
-    data/ is restored from the backup copy and SwapError is raised (runner exits nonzero).
-    Readers can see no data/ for the instant between the two renames (documented)."""
-    tag = next(tempfile._get_candidate_names())
-    new = data.parent / f".data-new-{tag}"
-    old = data.parent / f".data-old-{tag}"
-    bak = data.parent / f".data-bak-{tag}"
+def swap_in(stage_data, data, _rename=os.rename, _copytree=shutil.copytree):
+    """All-or-nothing swap of stage_data into data/.
+    Uses one scratch dir from tempfile.mkdtemp() next to data/ (same filesystem) holding: bak (full copy of
+    data/), new (copy of stage), old (the renamed original). Disk: about 2x data/ here, plus the stage copy of
+    the whole repo in the system temp dir, so ~3x data/ (+ repo) free space is needed while it runs.
+    Order: data -> scratch/old, scratch/new -> data. If the second rename fails, old is renamed back. If that
+    also fails, data/ is restored from bak and SwapError is raised (runner exit 2). If THAT fails too, SwapError
+    says so loudly and the scratch dir (with bak/old) is KEPT for manual recovery. Readers may see no data/ for
+    the instant between the two renames."""
+    scratch = Path(tempfile.mkdtemp(prefix=".data-swap-", dir=data.parent))
+    new, old, bak = scratch / "new", scratch / "old", scratch / "bak"
+    keep = False
     try:
-        shutil.copytree(data, bak)
-        shutil.copytree(stage_data, new)
+        _copytree(data, bak)
+        _copytree(stage_data, new)
         _rename(data, old)
         try:
             _rename(new, data)
@@ -101,15 +104,19 @@ def swap_in(stage_data, data, _rename=os.rename):
             try:
                 _rename(old, data)
             except BaseException as e2:
-                if data.exists():
-                    shutil.rmtree(data, ignore_errors=True)
-                shutil.copytree(bak, data)
+                try:
+                    if data.exists():
+                        shutil.rmtree(data)
+                    _copytree(bak, data)
+                except BaseException as e3:
+                    keep = True
+                    raise SwapError(f"!!! DATA RESTORE FAILED: swap failed ({e1}), rollback failed ({e2}), restore from "
+                                    f"backup failed ({e3}). data/ may be MISSING. Recover by hand from {bak} or {old}.")
                 raise SwapError(f"swap failed ({e1}); rollback rename failed ({e2}); data/ restored from backup copy")
             raise
     finally:
-        for d in (new, old, bak):
-            if d.exists() and d != data:
-                shutil.rmtree(d, ignore_errors=True)
+        if not keep:
+            shutil.rmtree(scratch, ignore_errors=True)
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
@@ -142,7 +149,7 @@ def main(argv=None):
                 try:
                     swap_in(sd, data)
                 except SwapError as e:
-                    print("FAIL:", e); return 2
+                    print("FAIL:", e, file=sys.stderr); print("FAIL:", e); return 2
                 except OSError as e:
                     print("FAIL: swap failed, rolled back:", e, "(data/ untouched)"); return 1
             print("OK"); return 0

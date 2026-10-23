@@ -37,6 +37,18 @@ NAME = r"(" + TOK + r" " + TOK + r"(?: (?:Jr\.|Sr\.|Jr|Sr|II|III|IV))?)"
 
 FINISH = re.compile(NAME + r" (?:finished (?:the game )?with|ended (?:the game )?with|took over|wore|inherited|took) the (?:green )?dot")
 BYE = re.compile(r"Green\s*Dot:\s*Bye\b(?!\s*week\s*\?)(?!\s*\?)", re.I)
+PAST = re.compile(r"last (?:year|season|week)|previously|in (?:19|20)\d\d|a year ago|used to|earlier this season|in week \d", re.I)
+def last_override(txt):
+    """Final current-week override: the LAST 'X finished with / took over / wore the dot' match in a sentence
+    that does not talk about another time (last year/season/week, previously, in 2025, earlier this season)."""
+    best = None
+    for sent in re.split(r"(?<=[.!?;])\s+", txt or ""):
+        if PAST.search(sent):
+            continue
+        for m in FINISH.finditer(sent):
+            best = m
+    return best
+
 def known_players(data_dir):
     """Names we accept as green-dot wearers: IDP rankings (all positions), HQ rosters, the previous green-dot file."""
     sys.path.insert(0, os.path.dirname(__file__))
@@ -92,8 +104,8 @@ def parse(body_html, week, prev=None, known=None):
         m = re.search(r"Week\s*\d+\s*Green\s*Dot:\s*" + NAME + r"(?:\s*\(([^)]*)\))?", sec)
         if m:
             dot, paren = m.group(1), m.group(2) or ""
-            after = sec[m.end():m.end() + 300]
-            f = FINISH.search(paren) or FINISH.search(after)
+            after = sec[m.end():m.end() + 400]
+            f = last_override(paren) or last_override(after)
             if f and f.group(1) != dot:
                 note = f"Listed {dot}; post says {f.group(1)} ended up with the dot. "
                 dot = f.group(1)
@@ -102,7 +114,7 @@ def parse(body_html, week, prev=None, known=None):
                 note = f"Dot {paren.strip()} ({dot}). "
                 dot, shared = None, True
         else:
-            f = FINISH.search(sec) or re.search(NAME + r" wore the (?:green )?dot", sec)
+            f = last_override(sec)
             dot = f.group(1) if f else None
         if dot and known is not None:
             from warroom_common import norm

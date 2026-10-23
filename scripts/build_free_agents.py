@@ -48,7 +48,7 @@ def build(scrape, data_dir, asof, extra=()):
                     "fpg": p.get("fpg"), "last3Fpg": p.get("last3Fpg"), "rosteredPct": r})
     out.sort(key=lambda x: -(x["fpg"] or 0))
     d = {"sample": False, "asOf": asof, "source": "Fantrax", "players": out}
-    assert_no_pending(d, "free-agents.json")
+    assert_no_pending(d, "free-agents.json", schema="fa")
     return d
 
 def main():

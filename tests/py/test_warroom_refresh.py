@@ -292,10 +292,13 @@ class BotOpsRound2(unittest.TestCase):
                   {"waivers": [{"player": "Martin Emerson", "claimStatus": "open"}]}):
             with self.assertRaises(wc.PendingError, msg=w): bw.build({"week": 7, **w}, DATA, self.NOW)
     def test_injury_pending_and_open_status_allowed(self):
-        w = {"week": 7, "waivers": [{"player": "Martin Emerson", "why": "MRI results pending; still a stream."}],
+        # Round 4 rule: inside waivers/trades/drops ANY 'pending' blocks (fail closed); outside, injury text is fine.
+        w = {"week": 7, "waivers": [{"player": "Martin Emerson", "why": "Stream."}],
              "injuryWatch": [{"player": "X", "status": "Open", "note": "MRI results pending"}],
              "news": [{"text": "Hall test results pending"}]}
         self.assertEqual(len(bw.build(w, DATA, self.NOW)["waivers"]), 1)
+        with self.assertRaises(wc.PendingError):
+            bw.build({"week": 7, "waivers": [{"player": "Martin Emerson", "why": "MRI results pending"}]}, DATA, self.NOW)
     # Green dots tuning
     def test_green_dot_sentence_end_not_merged(self):
         t, u = rgd.parse("<h2>Atlanta Falcons</h2><p>Week 6 Green Dot: Josh Woods. Divine Deablo finished with the dot.</p>", 6)
