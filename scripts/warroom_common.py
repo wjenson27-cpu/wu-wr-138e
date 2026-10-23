@@ -899,7 +899,9 @@ def distinct_names(names):
     return {k for k in (name_key(n) for n in names) if k}
 
 def _nk(n):
-    return " ".join(fold(n).casefold().split()) if isinstance(n, str) else ""
+    """Dedupe key for a player name: the SAME normalization as the drop filter (norm(): punctuation, apostrophes,
+    Jr/Sr/II-V suffixes, accents) after look-alike folding."""
+    return norm(fold(n)) if isinstance(n, str) else ""
 
 def _names_of(v):
     """Normalized player names in {field: str | [str] | record}: plain strings are taken as-is (any case), records via
@@ -923,10 +925,12 @@ def entry_key(e):
             drops = _names_of({"drop": e.get("drop"), "drops": e.get("drops")})
             if not adds or set(adds) & set(drops):
                 return None                                   # no add name, or add == drop
-            return ("cb", (t if t in ("claim", "bid") else "claim", tuple(adds), tuple(drops)))
+            return ("cb", ("cb", tuple(adds), tuple(drops)))           # claim == bid (FAAB league)
         if t == "offer" or (t is None and any(k in e for k in ("give", "get"))):
             g, r = _names_of({"give": e.get("give")}), _names_of({"get": e.get("get")})
-            return ("offer", ("offer", tuple(g), tuple(r))) if (g or r) else None
+            if not (g or r) or (g and g == r):
+                return None                                   # no names, or give == get
+            return ("offer", ("offer", tuple(g), tuple(r)))
     nm = sorted({_nk(n) for n in _item_names(e) if name_key(n)})
     return ("any", ("any", tuple(nm))) if nm else None
 
@@ -958,7 +962,18 @@ def schema_problems(entries):
         if isinstance(e.get("add"), str) and isinstance(e.get("drop"), str) and name_key(e["add"]) \
                 and _nk(e["add"]) == _nk(e["drop"]):
             out.append(f"[{i}] add == drop")
+        if t == "offer" and isinstance(e.get("give"), list) and e.get("give") and \
+                _names_of({"give": e.get("give")}) == _names_of({"get": e.get("get")}):
+            out.append(f"[{i}] give == get")
     return out
+
+def distinct_moves(keys):
+    """Distinct captured moves per class. A claim/bid with no drop is the same move as one with the same add and a
+    drop (partial re-capture); over-merging only makes the run fail closed."""
+    keys = {k for k in keys if k}
+    filled = {k[1][1] for k in keys if k[0] == "cb" and k[1][2]}
+    keys = {k for k in keys if not (k[0] == "cb" and not k[1][2] and k[1][1] in filled)}
+    return {c: sum(1 for k in keys if k[0] == c) for c in ("cb", "offer", "any")}
 
 PRIVATE_LIST_KEY = re.compile(r"^(?i:eddies|eagle[\s_-]*ridge)[\s_-]*pending[\s_-]*(?:private|names|claims|bids|trades|offers)$")
 
@@ -1130,8 +1145,7 @@ def resolve_pending(raw, path, today, expect_file=True):
             oc = fc
     # v3: one DISTINCT valid captured entry per pending MOVE, type-matched (claims/bids vs claim/bid entries, offers vs
     # offer entries); duplicates of one move count once; names never stand in
-    keys = {k for k in own_items if k}
-    have = {c: sum(1 for k in keys if k[0] == c) for c in ("cb", "offer", "any")}
+    have = distinct_moves(own_items)
     if file_ok:
         for c in ("cb", "offer"):
             have[c] = max(have[c], file_by_type[c])

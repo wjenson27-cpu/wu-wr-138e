@@ -1058,6 +1058,31 @@ class V3(V2Coverage):
                                      "standings": [{"team_key": "Eagle Ridge Eddies", "pendingClaims": 1}]}))
         self.assertFalse(wc.is_own_record({"label": "Eddie Jackson"}))
 
+class V4(V2Coverage):
+    """Bot Ops v3 review (FAIL): dedupe with the drop filter's name normalization, claim == bid, empty-drop merge."""
+    def two(self, a, b):
+        return self.run_({"trades": {"eddies_pending_claims_count": 2, "eddies_pending_private": [a, b]}})
+    def test_botops_same_move_twice_fails(self):
+        for a, b in ((E("Yo Other"), E("Yo Other.")), (E("Yo Other"), E("Yo' Other")), (E("Yo Other"), E("Yo Other Jr.")),
+                     (E("Yo Other", None), E("Yo Other", "Zed Qqname")), (E("Yo Other", "Zed Qqname", 5, "claim"), E("Yo Other", "Zed Qqname", 5, "bid")),
+                     (E("Yo Other", "Zed Qqname"), E("Yo Other", "Zed Qqname.")), (E("Yo Other III"), E("yo other")),
+                     (E("Yo Other", "Zed Qqname"), E("Yo Other", None, None, "bid"))):
+            with self.subTest(a=a["add"], b=b["add"]):
+                self.assertIsNone(self.two(a, b))
+    def test_distinct_moves_still_build(self):
+        for a, b in ((E("Yo Other", "Zed Qqname"), E("Yo Other", "Al Bo")), (E("Yo Other", "Zed Qqname"), E("Bo Nix", "Zed Qqname")),
+                     (E("Yo Other", None, 3, "claim"), E("Bo Nix", None, 4, "bid"))):
+            with self.subTest(a=a, b=b):
+                self.assertIsNotNone(self.two(a, b))
+        self.assertIsNotNone(self.run_({"trades": {"eddies_pending_trade_offers": 2, "eddies_pending_private": [
+            E(type="offer", give=["Bo Nix"], get=["Al Bo"]), E(type="offer", give=["Bo Nix"], get=["Zed Qqname"])]}}))
+    def test_claim_bid_one_class(self):
+        self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [E("Yo Other", None, 4, "bid")]}}))
+    def test_offer_give_equals_get(self):
+        e = E(type="offer", give=["Bo Nix"], get=["Bo Nix."])
+        self.assertIn("give == get", " ".join(wc.schema_problems([e])))
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_trade_offers": 1, "eddies_pending_private": [e]}}))
+
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
 add_cases(History, "gate_passes", [f.name for f in HIST_FILES],
