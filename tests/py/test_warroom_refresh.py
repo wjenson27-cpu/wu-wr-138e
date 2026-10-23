@@ -1,4 +1,4 @@
-import json, os, shutil, sys, tempfile, unittest
+import json, os, shutil, subprocess, sys, tempfile, unittest
 from datetime import date, datetime
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
@@ -27,8 +27,8 @@ class Week(unittest.TestCase):
 class Excludes(unittest.TestCase):
     def test_cooper_on_season_ending_list_booker_not(self):
         se = wc.season_ending(DATA)
-        self.assertIn(wc.norm("Edgerrin Cooper"), se)
-        self.assertNotIn(wc.norm("Austin Booker"), se)
+        self.assertTrue(se.match("Edgerrin Cooper"))
+        self.assertFalse(se.match("Austin Booker"))
     def test_cooper_never_in_fa_pool(self):
         scrape = {"freeAgents": [
             {"player": "Edgerrin Cooper", "pos": "LB", "team": "GB", "fpg": 28.75, "rosteredPct": 67},
@@ -42,17 +42,64 @@ class Excludes(unittest.TestCase):
     def test_cooper_and_booker_never_in_waiver_recs(self):
         w = {"week": 7, "waivers": [{"rank": 1, "player": "Edgerrin Cooper"}, {"rank": 2, "player": "Austin Booker"},
                                     {"rank": 3, "player": "Martin Emerson"}]}
-        now = datetime(2026, 10, 23, 9, 0, tzinfo=PT)
-        d = bw.build(w, DATA, now)
+        d = bw.build(w, DATA, datetime(2026, 10, 23, 9, 0, tzinfo=PT))
         self.assertEqual([(r["rank"], r["player"]) for r in d["waivers"]], [(1, "Martin Emerson")])
     def test_booker_pass_is_week_scoped(self):
-        self.assertIn(wc.norm("Austin Booker"), wc.do_not_pitch(DATA, 7, date(2026, 10, 23)))
-        self.assertNotIn(wc.norm("Austin Booker"), wc.do_not_pitch(DATA, 8, date(2026, 10, 30)))
+        self.assertTrue(wc.do_not_pitch(DATA, 7, date(2026, 10, 23)).match("Austin Booker"))
+        self.assertFalse(wc.do_not_pitch(DATA, 8, date(2026, 10, 30)).match("Austin Booker"))
     def test_committed_data_has_no_cooper_as_option(self):
-        for f in ("warroom.json", "free-agents.json", "green-dots.json"):
+        se = wc.season_ending(DATA)
+        for f in ("warroom.json", "free-agents.json"):
             d = json.loads((DATA / f).read_text())
-            opts = d.get("waivers", []) + d.get("players", []) if isinstance(d, dict) else []
-            self.assertFalse(any("Edgerrin Cooper" == (p.get("player") or p.get("name")) for p in opts), f)
+            for p in d.get("waivers", []) + d.get("players", []):
+                self.assertFalse(se.match(p), (f, p))
+
+class BotOpsBlocker1FailClosed(unittest.TestCase):
+    """Bot Ops round 1, blocker 1: missing/invalid lists must fail, not fall back to empty."""
+    def setUp(self): self.d = stage()
+    def _w(self): return {"week": 7, "waivers": [{"rank": 1, "player": "Edgerrin Cooper"}]}
+    def test_missing_season_ending_fails(self):
+        (self.d / "season-ending.json").unlink()
+        with self.assertRaises(wc.ListError): bw.build(self._w(), self.d, datetime(2026, 10, 23, tzinfo=PT))
+        with self.assertRaises(wc.ListError): bfa.build({"freeAgents": []}, self.d, "x")
+    def test_missing_do_not_pitch_fails(self):
+        (self.d / "do-not-pitch.json").unlink()
+        with self.assertRaises(wc.ListError): bw.build(self._w(), self.d, datetime(2026, 10, 23, tzinfo=PT))
+    def test_invalid_lists_fail(self):
+        for bad in ("{not json", '{"players": null}', '{"players": [{"pos": "LB"}]}', '{"players": [{"name": "  "}]}', "[]"):
+            (self.d / "season-ending.json").write_text(bad)
+            with self.assertRaises(wc.ListError, msg=bad): wc.season_ending(self.d)
+    def test_cli_exits_nonzero_and_writes_nothing(self):
+        (self.d / "season-ending.json").unlink()
+        before = (self.d / "warroom.json").read_bytes()
+        r = subprocess.run([sys.executable, str(ROOT / "scripts/build_warroom.py"), "--data-dir", str(self.d), "--no-fantrax"],
+                           capture_output=True, text=True)
+        self.assertNotEqual(r.returncode, 0); self.assertEqual((self.d / "warroom.json").read_bytes(), before)
+
+class BotOpsBlocker2Variants(unittest.TestCase):
+    """Blocker 2: name variants, id-only and null-name recs."""
+    def build(self, recs):
+        return bw.build({"week": 7, "waivers": recs}, DATA, datetime(2026, 10, 23, 9, 0, tzinfo=PT))["waivers"]
+    def test_variants_blocked(self):
+        recs = [{"player": n} for n in ("E. Cooper", "Cooper, Edgerrin", "edgerrin cooper", "Edgerrin Cooper ",
+                                        "EDGERRIN COOPER", "Edgerrin\u00a0Cooper", "Édgerrin Cooper Jr.",
+                                        "Booker, Austin", "A. Booker", "austin booker")]
+        self.assertEqual(self.build(recs), [])
+    def test_id_only_and_null_name_blocked(self):
+        out = self.build([{"playerId": "abc123"}, {"player": None}, {"player": ""}, {"id": "x", "player": None}])
+        self.assertEqual(out, [])
+    def test_id_match_from_list(self):
+        d = stage(); se = json.loads((d / "season-ending.json").read_text())
+        se["players"].append({"id": "FX-99", "pos": "LB", "team": "ZZ", "reason": "test"})
+        (d / "season-ending.json").write_text(json.dumps(se))
+        out = bw.build({"week": 7, "waivers": [{"player": "Totally Different", "playerId": "fx-99"}]}, d,
+                       datetime(2026, 10, 23, tzinfo=PT))["waivers"]
+        self.assertEqual(out, [])
+    def test_other_cooper_not_blocked(self):
+        self.assertEqual([r["player"] for r in self.build([{"player": "Darius Cooper"}])], ["Darius Cooper"])
+    def test_fa_pool_variants(self):
+        rows = [{"player": n, "pos": "LB", "team": "GB", "fpg": 1} for n in ("E. Cooper", "Cooper, Edgerrin")] + [{"player": None, "pos": "LB", "fpg": 1}]
+        self.assertEqual(bfa.build({"freeAgents": rows}, DATA, "x")["players"], [])
 
 class Stamps(unittest.TestCase):
     def test_warroom_stamps_pt_and_week(self):
@@ -66,20 +113,93 @@ class Stamps(unittest.TestCase):
         d = bw.build({"week": 7, "waivers": []}, DATA, datetime(2026, 10, 29, 8, 0, tzinfo=PT))
         self.assertEqual(d["week"], 8); self.assertTrue(d["refreshNotes"])
 
-class NoPending(unittest.TestCase):
-    def test_pending_stripped(self):
+class BotOpsBlocker3Pending(unittest.TestCase):
+    """Blocker 3: every leak Bot Ops found must stop the run."""
+    NOW = datetime(2026, 10, 23, 9, 0, tzinfo=PT)
+    CASES = [
+        {"trades": [{"with": "A", "status": "proposed"}]},
+        {"waivers": [{"player": "Martin Emerson", "bidStatus": "PENDING"}]},
+        {"claimsQueue": [{"player": "X"}]},
+        {"trades": [{"with": "A", "status": "Pending "}]},
+        {"waivers": [{"player": "Martin Emerson", "state": "submitted", "faab": 4}]},
+        {"news": [{"text": "Eddie bid $40 on X, pending"}]},
+        {"waivers": [{"player": "Martin Emerson", "why": "claim pending Wed"}]},
+        {"trades": [{"with": "A", "why": "offer is pending"}]},
+        {"pendingClaims": [{"player": "X"}]},
+        {"eddies": {"bids": [3]}},
+    ]
+    def test_each_case_raises(self):
+        for c in self.CASES:
+            w = {"week": 7, "waivers": [], **c}
+            with self.assertRaises(wc.PendingError, msg=c): bw.build(w, DATA, self.NOW)
+    def test_cli_nonzero_nothing_written(self):
+        d = stage(); w = json.loads((d / "warroom.json").read_text()); w["trades"] = [{"with": "A", "status": "proposed"}]
+        (d / "warroom.json").write_text(json.dumps(w)); before = (d / "warroom.json").read_bytes()
+        r = subprocess.run([sys.executable, str(ROOT / "scripts/build_warroom.py"), "--data-dir", str(d), "--no-fantrax"],
+                           capture_output=True, text=True)
+        self.assertNotEqual(r.returncode, 0); self.assertEqual((d / "warroom.json").read_bytes(), before)
+    def test_clean_plan_passes_and_keeps_bid_rec(self):
         w = {"week": 7, "waivers": [{"rank": 1, "player": "Martin Emerson", "bid": 0}],
-             "pendingClaims": [{"player": "X", "bid": 5}], "trades": [{"with": "A", "status": "pending"}, {"with": "B", "why": "idea"}],
-             "eddies": {"pendingTrades": [1], "bids": [3], "claims": [2]}}
-        d = bw.build(w, DATA, datetime(2026, 10, 23, 9, 0, tzinfo=PT),
-                     raw={"rosters": {}, "trades": {"pending": [{"x": 1}]}, "scraped": "s"}, raw_name="r.json")
-        self.assertFalse(wc.has_pending(d))
-        self.assertNotIn("pendingClaims", d)
-        self.assertEqual(d["trades"], [{"with": "B", "why": "idea"}])
-        self.assertEqual(d["waivers"][0]["bid"], 0)  # recommendation field is kept
+             "trades": [{"with": "B", "why": "idea"}],
+             "news": [{"text": "0 pending claims, 0 pending trades."}], "injuryWatch": [{"practice": "Thu pending"}]}
+        d = bw.build(w, DATA, self.NOW, raw={"rosters": [], "trades": {"pending": [1]}, "scraped": "s"}, raw_name="r.json")
+        self.assertEqual(d["waivers"][0]["bid"], 0)
         self.assertEqual(set(d["fantraxRaw"]), {"file", "scraped"})  # nothing else copied from raw
     def test_committed_warroom_has_no_pending(self):
         self.assertFalse(wc.has_pending(json.loads((DATA / "warroom.json").read_text())))
+
+class BotOpsBlocker4Atomic(unittest.TestCase):
+    """Blocker 4: a failed swap leaves data/ byte-identical with no .tmp / .data-* leftovers."""
+    def test_swap_failure_rolls_back(self):
+        import refresh_warroom as rw
+        root = Path(tempfile.mkdtemp()); data = root / "data"; data.mkdir()
+        (data / "warroom.json").write_text("old"); (data / "keep.json").write_text("{}")
+        st = Path(tempfile.mkdtemp()) / "data"; st.mkdir()
+        (st / "warroom.json").write_text("new"); (st / "green-dots-status.json").write_text("{}")
+        calls = []
+        def bad(a, b):
+            calls.append(1)
+            if len(calls) == 2: raise OSError("injected")
+            os.rename(a, b)
+        with self.assertRaises(OSError): rw.swap_in(st, data, bad)
+        self.assertEqual((data / "warroom.json").read_text(), "old")
+        self.assertFalse((data / "green-dots-status.json").exists())
+        self.assertEqual(sorted(p.name for p in root.iterdir()), ["data"])
+        self.assertEqual([p for p in data.rglob("*.tmp")], [])
+    def test_swap_success(self):
+        import refresh_warroom as rw
+        root = Path(tempfile.mkdtemp()); data = root / "data"; data.mkdir(); (data / "a.json").write_text("1")
+        st = Path(tempfile.mkdtemp()) / "data"; st.mkdir(); (st / "a.json").write_text("2"); (st / "b.json").write_text("3")
+        rw.swap_in(st, data)
+        self.assertEqual((data / "a.json").read_text(), "2"); self.assertEqual(sorted(p.name for p in root.iterdir()), ["data"])
+
+class BotOpsNodeWhitelist(unittest.TestCase):
+    def setUp(self):
+        import refresh_warroom as rw; self.v = rw.node_verdict
+        self.allowed = {"known one"}
+    def test_nested_failure_caught(self):
+        out = "TAP version 13\n    not ok 1 - nested new failure\nnot ok 2 - known one\n# pass 3\n# fail 2\n"
+        self.assertIn("nested new failure", self.v(1, out, self.allowed))
+    def test_crash_is_fail(self):
+        self.assertIsNotNone(self.v(1, "Error: boom\n", self.allowed))
+        self.assertIsNotNone(self.v(0, "", self.allowed))
+    def test_only_known_passes(self):
+        self.assertIsNone(self.v(1, "not ok 2 - known one\n# pass 3\n# fail 1\n", self.allowed))
+
+class BotOpsNewestByTimestamp(unittest.TestCase):
+    def test_newest_by_scrape_time_not_name(self):
+        d = Path(tempfile.mkdtemp())
+        (d / "fantrax-scrape-2026-12-31-zzz-newsletter.json").write_text(json.dumps({"scrapedAt": "2026-10-20T10:00:00-07:00", "freeAgents": []}))
+        (d / "fantrax-scrape-2026-10-22-pm-newsletter.json").write_text(json.dumps({"scrapedAt": "2026-10-22T14:58:00-07:00", "freeAgents": []}))
+        (d / "fantrax-scrape-2026-10-23-future-newsletter.json").write_text(json.dumps({"scrapedAt": "2027-01-01T00:00:00-08:00", "freeAgents": []}))
+        (d / "fantrax-scrape-2026-10-23-partial-newsletter.json").write_text(json.dumps({"scrapedAt": "2026-10-22T20:00:00-07:00", "partial": True, "freeAgents": []}))
+        f, _, t = wc.latest(str(d / "fantrax-scrape-*-newsletter.json"), "freeAgents", datetime(2026, 10, 22, 22, 0, tzinfo=PT))
+        self.assertEqual(f.name, "fantrax-scrape-2026-10-22-pm-newsletter.json")
+    def test_scraped_text_formats(self):
+        self.assertEqual(wc.iso_pt(wc.scrape_time({"scraped": "2026-10-22 ~06:17-06:30 PDT (AM sync)"})), "2026-10-22T06:17:00-07:00")
+        self.assertEqual(wc.iso_pt(wc.scrape_time({"scrape_time_PT": "2026-10-22 ~9:50 PM"})), "2026-10-22T21:50:00-07:00")
+    def test_now_without_offset_is_pt(self):
+        self.assertEqual(wc.iso_pt(wc.parse_now("2026-10-22T23:30:00")), "2026-10-22T23:30:00-07:00")
 
 class GreenDots(unittest.TestCase):
     def setUp(self): self.d = stage()
@@ -94,6 +214,18 @@ class GreenDots(unittest.TestCase):
         gd, st = rgd.run(self.d, self.now(), json.loads((FIX / "archive-w7-paid.json").read_text()),
                          lambda s: called.append(s) or {})
         self.assertEqual(called, []); self.assertTrue(st["stale"]); self.assertIn("paid", st["reason"])
+    def test_unresolved_team_refuses_rebuild(self):
+        post = json.loads((FIX / "green-dot-post-synthetic.json").read_text())
+        post = {"body_html": post["body_html"].replace("Week 7 Green Dot: PlayerCA Alpha", "No dot info.")}
+        gd, st = rgd.run(self.d, self.now(), json.loads((FIX / "archive-w7-free.json").read_text()), lambda s: post)
+        self.assertFalse(st["rebuilt"]); self.assertTrue(st["stale"]); self.assertIn("BAL", st["parse"]["unresolved"])
+    def test_finished_with_the_dot_wins(self):
+        h = "<h2>Atlanta Falcons</h2><p>Text.</p><p>Week 6 Green Dot: Divine Deablo (Josh Woods finished with the dot with both Deablo and Daniels hurt)</p>"
+        t, u = rgd.parse(h, 6)
+        self.assertEqual(t[0]["greenDot"], "Josh Woods")
+    def test_bye_marked(self):
+        t, u = rgd.parse("<h2>Detroit Lions</h2><p>Week 6 Green Dot: Bye</p>", 6, [{"team": "DET", "greenDot": "Jack Campbell", "fullTime": []}])
+        self.assertTrue(t[0]["bye"]); self.assertEqual(t[0]["greenDot"], "Jack Campbell"); self.assertNotIn("DET", u)
     def test_rebuild_from_free_post(self):
         post = json.loads((FIX / "green-dot-post-synthetic.json").read_text())
         gd, st = rgd.run(self.d, self.now(), json.loads((FIX / "archive-w7-free.json").read_text()), lambda s: post)

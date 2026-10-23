@@ -1,15 +1,19 @@
 name: War Room Saturday green-dots check
 
 # Saturday 10:23 AM PT. GitHub cron is UTC: 17:23 UTC = 10:23 AM PDT. After the first Sunday in November
-# (PST, UTC-8) this fires at 9:23 AM PT until March; change to "23 18 * * 6" then if the exact time matters.
-# Scheduled workflows only run from the default branch, so this does nothing until Bill merges the branch.
+# (PST, UTC-8) this fires at 9:23 AM PT until March; use "23 18 * * 6" then if the exact time matters.
+# Install: Bill moves this file to .github/workflows/ (the bot token has no `workflow` scope) and merges.
+# Scheduled workflows only run from the default branch.
+#
+# Review-only: this job pushes NOTHING and opens no PR. It uploads the refreshed green-dots files as an
+# artifact; Eddie/Bill review and commit them by hand.
 on:
   schedule:
     - cron: "23 17 * * 6"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: warroom-saturday
@@ -26,16 +30,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      # ci mode = green dots + JSON validation + tests only. No Fantrax / box-browser inputs.
+      # ci mode = green dots (reads Woellert's public Substack API) + JSON validation + tests. No Fantrax.
       - run: python3 scripts/refresh_warroom.py --mode ci
-      # Never pushes to main. Changes go to a review branch; Bill decides whether to merge.
-      - name: Push changes to a review branch (not main)
+      - name: Detect changes (tracked AND new files)
+        id: diff
         run: |
-          if git diff --quiet -- data; then echo "no data changes"; exit 0; fi
-          BR="auto/green-dots-$(date -u +%Y%m%d)"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b "$BR"
-          git add data/green-dots.json data/green-dots-status.json
-          git commit -m "auto: Saturday green-dots refresh (review before merging)"
-          git push origin "$BR"
+          CH="$(git status --porcelain -- data)"
+          echo "$CH"
+          if [ -n "$CH" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; else echo "changed=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Upload for review (no push, no PR)
+        if: steps.diff.outputs.changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: green-dots-review
+          path: |
+            data/green-dots.json
+            data/green-dots-status.json
+          retention-days: 14

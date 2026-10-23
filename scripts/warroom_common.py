@@ -1,86 +1,224 @@
-"""Shared helpers for the War Room refresh scripts (week math, PT stamps, exclude lists, no-pending rule)."""
+"""Shared helpers for the War Room refresh scripts.
+Week math, PT stamps, FAIL-CLOSED exclude lists with robust identity matching, the deny-pending gate,
+and "newest Fantrax file by scrape timestamp"."""
 import json, re, unicodedata
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
-try:
-    from zoneinfo import ZoneInfo
-    PT = ZoneInfo("America/Los_Angeles")
-except Exception:  # pragma: no cover
-    PT = timezone(timedelta(hours=-7))
-
+from zoneinfo import ZoneInfo
+PT = ZoneInfo("America/Los_Angeles")
 WEEK1 = date(2026, 9, 10)  # Thursday; weeks run Thu-Wed
+
+class ListError(Exception): pass
+class PendingError(Exception): pass
 
 def now_pt():
     return datetime.now(PT).replace(second=0, microsecond=0)
+
+def parse_now(s):
+    """--now override. A value with no offset is read as PT (not the box's zone)."""
+    dt = datetime.fromisoformat(s)
+    return (dt.replace(tzinfo=PT) if dt.tzinfo is None else dt).astimezone(PT)
 
 def iso_pt(dt=None):
     return (dt or now_pt()).astimezone(PT).replace(microsecond=0).isoformat()
 
 def week_for(d):
-    """week = 1 + floor((date - Sep 10 2026) / 7)."""
+    """week = 1 + floor((date_PT - Sep 10 2026) / 7)."""
     if isinstance(d, datetime):
         d = d.astimezone(PT).date()
     return 1 + (d - WEEK1).days // 7
 
+# ---------- identity matching ----------
+SUFFIX = re.compile(r"\b(jr|sr|ii|iii|iv|v)\b")
 def norm(n):
-    n = unicodedata.normalize("NFKD", n or "").encode("ascii", "ignore").decode().lower()
-    n = re.sub(r"[.']", "", n).replace("-", " ")
-    n = re.sub(r"\b(jr|sr|ii|iii|iv|v)\b", "", n)
+    n = unicodedata.normalize("NFKD", str(n or "")).encode("ascii", "ignore").decode().lower()
+    n = n.replace("\u00a0", " ")
+    n = re.sub(r"[.'\u2019]", "", n).replace("-", " ")
+    n = SUFFIX.sub("", n)
     return " ".join(n.split())
+
+def name_keys(name):
+    """Keys for a name: full normalized form, 'Last, First' reordered, and first-initial+last ('e cooper')."""
+    if not name or not str(name).strip():
+        return set()
+    raw = str(name)
+    forms = [raw]
+    if "," in raw:
+        last, _, first = raw.partition(",")
+        forms.append(f"{first} {last}")
+    keys = set()
+    for f in forms:
+        n = norm(f)
+        if not n:
+            continue
+        keys.add("n:" + n)
+        parts = n.split()
+        if len(parts) >= 2:
+            keys.add(f"i:{parts[0][0]}|{parts[-1]}")
+    return keys
+
+ID_FIELDS = ("id", "playerId", "fantraxId", "fantrax_id", "player_id")
+def rec_ids(r):
+    return {"id:" + str(r[k]).strip().lower() for k in ID_FIELDS if isinstance(r, dict) and r.get(k) not in (None, "")}
+
+def rec_keys(r):
+    """Identity keys for a rec/FA row (dict) or a bare name."""
+    if isinstance(r, str):
+        return name_keys(r)
+    nm = r.get("player") or r.get("name")
+    return rec_ids(r) | name_keys(nm)
+
+def _load_list(path, kind):
+    p = Path(path)
+    if not p.exists():
+        raise ListError(f"{kind} list missing: {p} (fail closed)")
+    try:
+        d = json.loads(p.read_text())
+    except Exception as e:
+        raise ListError(f"{kind} list is not valid JSON: {p}: {e}")
+    pl = d.get("players") if isinstance(d, dict) else None
+    if not isinstance(pl, list):
+        raise ListError(f"{kind} list has no 'players' array: {p}")
+    for i, e in enumerate(pl):
+        if not isinstance(e, dict) or not (isinstance(e.get("name"), str) and e["name"].strip() or e.get("ids") or e.get("id")):
+            raise ListError(f"{kind} list entry {i} has neither a name nor an id: {p}")
+    return pl
+
+def _entry_keys(e):
+    k = name_keys(e.get("name"))
+    for a in e.get("aliases") or []:
+        k |= name_keys(a)
+    ids = list(e.get("ids") or []) + ([e["id"]] if e.get("id") else [])
+    k |= {"id:" + str(i).strip().lower() for i in ids}
+    return k
+
+class Excluder:
+    """Matches on id or full normalized name; an initial-only name ('E. Cooper') matching an entry's
+    initial+last is also blocked. A different full first name (Darius Cooper) is not."""
+    def __init__(self, entries):
+        self.entries = [(_entry_keys(e), (e.get("team") or "").upper()) for e in entries]
+    def match(self, r):
+        rk = rec_keys(r)
+        rn = [k[2:] for k in rk if k.startswith("n:")]
+        rec_initial = any(len(n.split()[0]) == 1 for n in rn if " " in n)
+        for ek, _team in self.entries:
+            common = rk & ek
+            if any(not k.startswith("i:") for k in common):
+                return True          # same id or same full (normalized / reordered) name
+            if common and rec_initial:
+                return True          # 'E. Cooper' vs 'Edgerrin Cooper': block (fail closed)
+        return False
+
+def season_ending(data_dir):
+    return Excluder(_load_list(Path(data_dir) / "season-ending.json", "season-ending"))
+
+def do_not_pitch(data_dir, week, today=None):
+    today = today or now_pt().date()
+    keep = []
+    for p in _load_list(Path(data_dir) / "do-not-pitch.json", "do-not-pitch"):
+        wk = p.get("weeks")
+        if wk is not None and week not in wk:
+            continue
+        if p.get("until") and date.fromisoformat(p["until"]) < today:
+            continue
+        keep.append(p)
+    return Excluder(keep)
+
+def identifiable(r):
+    """A rec is publishable only with a real player name. Id-only or null-name recs are blocked, because
+    without a name we cannot prove they are not on an exclude list whose entry has no id."""
+    nm = r if isinstance(r, str) else (r.get("player") or r.get("name") if isinstance(r, dict) else None)
+    return bool(name_keys(nm))
+
+# ---------- deny-pending gate ----------
+PENDING_KEY = re.compile(r"pending|claimsqueue|claims?$|bids?$|offers?$|queue", re.I)
+STATUS_KEY = re.compile(r"(status|state)$", re.I)
+PENDING_VAL = {"pending", "proposed", "submitted", "claimsqueue", "claims queue", "queued", "in review",
+               "awaiting", "awaiting approval", "open", "offered", "requested", "processing"}
+TXT_ANY = re.compile(r"pending", re.I)
+TXT_ZERO = re.compile(r"\b(?:0|no|zero)\s+pending\b", re.I)
+TXT_CTX = re.compile(r"bid|claim|trade|faab|offer|\$", re.I)
+OFFER_SECTIONS = {"waivers", "drops", "trades", "bids", "claims"}
+
+def find_pending(o, path="", in_offer=False):
+    """Return a list of paths that look like pending bids/claims/trades. Empty list = clean.
+    - any key named like pending/claimsQueue/claims/bids/offers (the rec field 'bid' is a recommendation, allowed)
+    - any *status/*state value like pending/proposed/submitted/claimsQueue (case/space-insensitive)
+    - in waivers/drops/trades records: any free text 'pending'
+    - elsewhere: 'pending' next to bid/claim/trade/FAAB/$ words, except '0 pending' / 'no pending'."""
+    hits = []
+    if isinstance(o, dict):
+        for k, v in o.items():
+            p = f"{path}.{k}"
+            if k != "bid" and PENDING_KEY.search(k):
+                hits.append(p); continue
+            if STATUS_KEY.search(k) and isinstance(v, str) and " ".join(v.lower().split()) in PENDING_VAL:
+                hits.append(p); continue
+            hits += find_pending(v, p, in_offer or (path == "" and k in OFFER_SECTIONS))
+    elif isinstance(o, list):
+        for i, v in enumerate(o):
+            hits += find_pending(v, f"{path}[{i}]", in_offer)
+    elif isinstance(o, str) and TXT_ANY.search(o):
+        stripped = TXT_ZERO.sub("", o)
+        if TXT_ANY.search(stripped) and (in_offer or TXT_CTX.search(stripped)):
+            hits.append(path)
+    return hits
+
+def assert_no_pending(o, what):
+    h = find_pending(o)
+    if h:
+        raise PendingError(f"pending item(s) in {what}: {h[:10]} (run stopped, nothing written)")
+
+def has_pending(o):
+    return bool(find_pending(o))
+
+# ---------- newest Fantrax file by scrape timestamp ----------
+TZ = {"PDT": "-07:00", "PST": "-08:00", "PT": None, "CDT": "-05:00", "CST": "-06:00", "UTC": "+00:00", "Z": "+00:00"}
+def scrape_time(d):
+    for k in ("scrapedAt", "scraped_at", "scrape_time_PT", "asOf", "scraped"):
+        v = d.get(k) if isinstance(d, dict) else None
+        if not isinstance(v, str):
+            continue
+        try:
+            dt = datetime.fromisoformat(v.replace("Z", "+00:00"))
+            return (dt.replace(tzinfo=PT) if dt.tzinfo is None else dt).astimezone(PT)
+        except ValueError:
+            pass
+        m = re.search(r"(\d{4}-\d{2}-\d{2})\D{0,3}~?(\d{1,2}):(\d{2})\s*(AM|PM)?(?:[^A-Z]*?\b(PDT|PST|PT|CDT|CST|UTC)\b)?", v)
+        if m:
+            h = int(m.group(2)) % 12 + (12 if m.group(4) == "PM" else 0) if m.group(4) else int(m.group(2))
+            dt = datetime.fromisoformat(f"{m.group(1)}T{h:02d}:{m.group(3)}:00")
+            off = TZ.get(m.group(5) or "PT")
+            dt = dt.replace(tzinfo=PT) if off is None else datetime.fromisoformat(dt.isoformat() + off)
+            return dt.astimezone(PT)
+    return None
+
+def latest(globpat, must_have=None, now=None):
+    """Newest file matching glob by its own scrape timestamp (not its name). Files with no parseable
+    timestamp, or a timestamp in the future, are skipped."""
+    now = now or datetime.now(PT)
+    best = (None, None, None)
+    for f in Path("/").glob(globpat.lstrip("/")):
+        try:
+            d = json.loads(f.read_text())
+        except Exception:
+            continue
+        if must_have and not (isinstance(d, dict) and must_have in d):
+            continue
+        if isinstance(d, dict) and d.get("partial"):
+            continue  # partial scrapes never feed the War Room
+        t = scrape_time(d)
+        if t is None or t > now + timedelta(minutes=5):
+            continue
+        if best[2] is None or t > best[2]:
+            best = (f, d, t)
+    return best
 
 def load_json(p, default=None):
     p = Path(p)
     if not p.exists():
         return default
     return json.loads(p.read_text())
-
-def season_ending(data_dir):
-    d = load_json(Path(data_dir) / "season-ending.json", {"players": []})
-    return {norm(p["name"]) for p in d.get("players", [])}
-
-def do_not_pitch(data_dir, week, today=None):
-    today = today or now_pt().date()
-    d = load_json(Path(data_dir) / "do-not-pitch.json", {"players": []})
-    out = set()
-    for p in d.get("players", []):
-        wk = p.get("weeks")
-        if wk is not None and week not in wk:
-            continue
-        until = p.get("until")
-        if until and date.fromisoformat(until) < today:
-            continue
-        out.add(norm(p["name"]))
-    return out
-
-PENDING_KEY = re.compile(r"pending|claims?$|bids?$|offers?$", re.I)
-
-def strip_pending(o):
-    """No-pending rule: drop any key that looks like pending bids/claims/trades/offers, recursively.
-    (The War Room 'bid' field is a recommendation, not a pending bid, and is kept.)"""
-    if isinstance(o, dict):
-        return {k: strip_pending(v) for k, v in o.items() if not (PENDING_KEY.search(k) and k != "bid")}
-    if isinstance(o, list):
-        return [strip_pending(v) for v in o if not (isinstance(v, dict) and str(v.get("status", "")).lower() == "pending")]
-    return o
-
-def has_pending(o):
-    if isinstance(o, dict):
-        return any((PENDING_KEY.search(k) and k != "bid") or has_pending(v) for k, v in o.items()) or str(o.get("status", "")).lower() == "pending"
-    if isinstance(o, list):
-        return any(has_pending(v) for v in o)
-    return False
-
-def latest(globpat, must_have=None):
-    """Newest file matching glob (by name, which carries the date, then mtime) that has key must_have."""
-    files = sorted(Path("/").glob(globpat.lstrip("/")), key=lambda p: (p.name, p.stat().st_mtime), reverse=True)
-    for f in files:
-        try:
-            d = json.loads(f.read_text())
-        except Exception:
-            continue
-        if must_have is None or (isinstance(d, dict) and must_have in d):
-            return f, d
-    return None, None
 
 def write_json(p, d):
     Path(p).write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n")

@@ -8,7 +8,7 @@ import argparse, html, json, os, re, sys, urllib.request
 from datetime import datetime
 from pathlib import Path
 sys.path.insert(0, os.path.dirname(__file__))
-from warroom_common import load_json, write_json, iso_pt, now_pt, week_for, PT
+from warroom_common import load_json, write_json, iso_pt, now_pt, parse_now, week_for, PT
 
 BASE = "https://mikewoellert.substack.com"
 TEAMS = {"Arizona Cardinals": "ARI", "Atlanta Falcons": "ATL", "Baltimore Ravens": "BAL", "Buffalo Bills": "BUF",
@@ -32,34 +32,53 @@ def text(h):
 
 NAME = r"([A-Z][A-Za-z.'\u2019\-]+ [A-Z][A-Za-z.'\u2019\-]+(?: (?:Jr\.?|Sr\.?|II|III|IV))?)"
 
+FINISH = re.compile(NAME + r" (?:finished|ended) (?:the game )?with the (?:green )?dot")
 def parse(body_html, week, prev=None):
+    """Returns (teams, unresolved). Each team: team, greenDot, fullTime, notes, and bye: true on a bye week.
+    The post's own final wording wins: 'X finished with the dot' overrides the name on the Green Dot line."""
     prev = {t["team"]: t for t in (prev or [])}
     parts = re.split(r"<h[1-4][^>]*>(.*?)</h[1-4]>", body_html)
-    teams = []
+    teams, unresolved = [], []
     for i in range(1, len(parts) - 1, 2):
         title = text(parts[i])
         if title not in TEAMS:
             continue
-        sec = text(parts[i + 1])
-        if re.search(r"Green\s*Dot:\s*Bye", sec, re.I) and TEAMS[title] in prev:
-            t = dict(prev[TEAMS[title]]); t["notes"] = f"Bye in week {week}; carried from the previous list. " + (t.get("notes") or "")
-            teams.append(t); continue
-        m = re.search(r"Week\s*\d+\s*Green\s*Dot:\s*" + NAME + r"(\s*\((?:shared|split|rotat)[^)]*)?", sec)
-        if not m:
-            m = re.search(NAME + r" wore the (?:green )?dot()", sec)
-        dot = m.group(1).replace("\u2019", "'") if m else None
-        if m and m.group(2):
-            dot = None
+        ab, sec = TEAMS[title], text(parts[i + 1]).replace("\u2019", "'")
+        if re.search(r"Green\s*Dot:\s*Bye\b", sec, re.I):
+            p = prev.get(ab) or {}
+            teams.append({"team": ab, "bye": True, "greenDot": p.get("greenDot"), "fullTime": p.get("fullTime") or [],
+                          "notes": f"Bye in week {week}." + (" Dot carried from the previous list." if p.get("greenDot") else "")})
+            continue
+        dot, note, shared = None, "", False
+        m = re.search(r"Week\s*\d+\s*Green\s*Dot:\s*" + NAME + r"(?:\s*\(([^)]*)\))?", sec)
+        if m:
+            dot, paren = m.group(1), m.group(2) or ""
+            f = FINISH.search(paren) or FINISH.search(sec)
+            if f and f.group(1) != dot:
+                note = f"Listed {dot}; {f.group(1)} finished with the dot. "
+                dot = f.group(1)
+            elif re.search(r"shared|split|rotat", paren, re.I):
+                # schema: null when the post says the dot rotated; both names go in notes. Counts as resolved.
+                note = f"Dot {paren.strip()} ({dot}). "
+                dot, shared = None, True
+        else:
+            f = FINISH.search(sec) or re.search(NAME + r" wore the (?:green )?dot", sec)
+            dot = f.group(1) if f else None
+        if not dot and not shared:
+            unresolved.append(ab)
         ft = []
         for mm in re.finditer(NAME + r" played (?:all|every) (?:\d+ )?(?:of the )?snaps", sec):
-            ft.append(mm.group(1).replace("\u2019", "'"))
+            ft.append(mm.group(1))
         for mm in re.finditer(NAME + r" played \d+ snaps \((9\d|100)(?:\.\d+)?%\)", sec):
-            ft.append(mm.group(1).replace("\u2019", "'"))
-        ft = list(dict.fromkeys(ft))
+            ft.append(mm.group(1))
         first = re.split(r"(?<=[.!?]) ", sec)[0][:200]
-        teams.append({"team": TEAMS[title], "greenDot": dot, "fullTime": ft,
-                      "notes": (f"Week {week} Green Dot: {dot}. " if dot else "") + first})
-    return teams
+        row = {"team": ab, "greenDot": dot, "fullTime": list(dict.fromkeys(ft)),
+               "notes": (f"Week {week} Green Dot: {dot}. " if dot else "") + note + first}
+        if shared:
+            row["shared"] = True
+        teams.append(row)
+    missing = sorted(set(TEAMS.values()) - {t["team"] for t in teams})
+    return teams, unresolved + missing
 
 def run(data_dir, now, archive=None, post_fetch=None):
     data_dir = Path(data_dir)
@@ -92,9 +111,11 @@ def run(data_dir, now, archive=None, post_fetch=None):
             status["reason"] = f"week {wk} post is paid-only; not parsed (no paywall bypass)"
         else:
             body = (post_fetch or (lambda slug: get(f"{BASE}/api/v1/posts/{slug}")))(p.get("slug")).get("body_html") or ""
-            teams = parse(body, wk, gd.get("teams"))
-            if len([t for t in teams if t["greenDot"]]) < 16:
-                status["reason"] = f"week {wk} post found but parse found only {len(teams)} teams; left file unchanged"
+            teams, unresolved = parse(body, wk, gd.get("teams"))
+            status["parse"] = {"teams": len(teams), "bye": sum(1 for t in teams if t.get("bye")),
+                               "resolved": sum(1 for t in teams if not t.get("bye") and (t["greenDot"] or t.get("shared"))), "unresolved": unresolved}
+            if unresolved:
+                status["reason"] = f"week {wk} post found but {len(unresolved)} non-bye team(s) unresolved {unresolved}; refused rebuild"
             else:
                 pd = p.get("post_date")
                 asof = iso_pt(datetime.fromisoformat(pd.replace("Z", "+00:00"))) if pd else iso_pt(now)
@@ -111,7 +132,7 @@ def main():
     ap.add_argument("--data-dir", default=str(Path(__file__).resolve().parent.parent / "data"))
     ap.add_argument("--now"); ap.add_argument("--archive"); ap.add_argument("--post")
     a = ap.parse_args()
-    now = datetime.fromisoformat(a.now).astimezone(PT) if a.now else now_pt()
+    now = parse_now(a.now) if a.now else now_pt()
     arch = load_json(a.archive) if a.archive else None
     pf = (lambda slug: load_json(a.post)) if a.post else None
     gd, st = run(a.data_dir, now, arch, pf)
