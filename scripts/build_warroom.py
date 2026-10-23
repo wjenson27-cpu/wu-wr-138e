@@ -16,7 +16,7 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(__file__))
 from warroom_common import (season_ending, do_not_pitch, rec_keys, identifiable, latest, load_json, write_json,
                             iso_pt, now_pt, parse_now, week_for, assert_no_pending, scrub_own_moves, ingest_moves, check_raw_source,
-                            pending_names, pending_count, scrub_pending_names, ListError, PendingError, PT)
+                            pending_names, resolve_pending, scrub_pending_names, ListError, PendingError, PT)
 
 # outside every repo; never published. WARROOM_PENDING_NAMES overrides (tests).
 PRIVATE_PENDING = os.environ.get("WARROOM_PENDING_NAMES") or "/workspace/eddie-private/pending-names.json"
@@ -83,12 +83,9 @@ def build(w, data_dir, now, raw=None, raw_name=None, fa=None, fa_asof=None, pend
     if excluded:
         notes.append(f"{excluded} move record(s) excluded: not completed with a past date.")
     # Round 9 output safety net: drop every string / key / record naming a player in our private pending list.
-    names = list(pending or []) + pending_names(raw, pending_path)
-    # Round 9b FAIL CLOSED: a pending count >= 1 with no captured names means we cannot hide the move -> stop.
-    n_pend = pending_count(raw, pending_path)
-    if n_pend >= 1 and not names:
-        raise PendingError(f"{n_pend} pending move(s) in the Fantrax scrape but the private pending-name list is empty "
-                           f"or missing (run stopped, nothing written)")
+    # Round 10 FAIL CLOSED: every pending count / queue entry / unfinished raw transaction must resolve to a name
+    # (raw private fields, the transaction itself, or the private file); otherwise the run stops.
+    names = list(pending or []) + pending_names(raw, None) + resolve_pending(raw, pending_path, now.date())
     if names:
         body = {k: v for k, v in out.items() if k not in ("refreshNotes",)}
         body, hits = scrub_pending_names(body, names)

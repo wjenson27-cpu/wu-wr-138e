@@ -694,16 +694,32 @@ def pending_names(raw=None, path=None):
     return names
 
 COUNT_KEY = re.compile(r"pending.*count|count.*pending", re.I)
+# round 10: any numeric-ish field whose key names pending / claims / queue / num counts (pendingClaims, numPending...)
+COUNT_ANY = re.compile(r"pending|claims?|queue|num", re.I)
+
+def _num(v):
+    """int for ints/floats/numeric strings, 1 for True, else None."""
+    if v is True:
+        return 1
+    if isinstance(v, bool) or v is None:
+        return None
+    if isinstance(v, (int, float)):
+        return int(v)
+    if isinstance(v, str) and re.fullmatch(r"\s*\d+(?:\.0+)?\s*", v):
+        return int(float(v))
+    return None
 
 def pending_count(raw=None, path=None):
-    """Highest pending count anywhere in the raw scrape or in the private file's counts (None/bools ignored)."""
+    """Highest pending count field anywhere in the raw scrape or the private file's counts. Keys matching
+    pending/claims/queue/num with an int, float, numeric string or True (=1) count; None/False/text are ignored."""
     best = 0
     def walk(o):
         nonlocal best
         if isinstance(o, dict):
             for k, v in o.items():
-                if isinstance(k, str) and COUNT_KEY.search(k) and isinstance(v, (int, float)) and not isinstance(v, bool):
-                    best = max(best, int(v))
+                n = _num(v) if isinstance(k, str) and COUNT_ANY.search(k) else None
+                if n is not None:
+                    best = max(best, n)
                 else:
                     walk(v)
         elif isinstance(o, list):
@@ -712,10 +728,8 @@ def pending_count(raw=None, path=None):
     if path:
         try:
             d = json.loads(open(path).read())
-            for v in ((d.get("counts") or {}).values() if isinstance(d, dict) else []):
-                if isinstance(v, (int, float)) and not isinstance(v, bool):
-                    best = max(best, int(v))
-        except FileNotFoundError:
+            walk(d.get("counts") if isinstance(d, dict) else None)
+        except (OSError, ValueError):
             pass
     return best
 
@@ -726,8 +740,8 @@ def _name_rx(names):
         if not toks:
             continue
         pats.add(r"\s+".join(map(re.escape, toks)))
-        if len(toks[-1]) >= 4:
-            pats.add(re.escape(toks[-1]))           # last name alone ('Emerson') also matches
+        last = [t for t in toks if t not in ("jr", "sr", "ii", "iii", "iv")] or toks
+        pats.add(re.escape(last[-1]))               # round 10: last name alone, ANY length ('Lee'), as a whole word
     return re.compile(r"\b(?:" + "|".join(sorted(pats, key=len, reverse=True)) + r")\b") if pats else None
 
 ORPHAN = re.compile(r"^[\W\d_]*(?:(?:process\w*|runs?|clears?|goes|through|is|are|in|on|at|by|until|before|after|"
@@ -787,3 +801,135 @@ def scrub_pending_names(o, names):
             return out
         return v
     return walk(o, ""), log
+
+
+# ---------- round 10: resolve every pending item to names, or fail closed ----------
+QUEUE_KEY = re.compile(r"pending|queue|claims|bids|offers", re.I)   # any list/dict under such a key is a pending source
+TXN_LIST_KEY = re.compile(r"transactions?", re.I)
+NAME_FIELDS = ("player", "name", "add", "adds", "drop", "drops", "give", "get", "offered", "requested", "players")
+ACTION_NAME = re.compile(r"\b(?:add|drop|claim|waive|trade|get|give)s?\s+((?:[A-Z][A-Za-z.'\-]+\s+){0,3}?[A-Z][a-z][A-Za-z.'\-]*)"
+                         r"(?=\s+(?:[A-Z]{1,3}(?:,[A-Z]{1,3})*\s+[A-Z]{2,3}\b|[A-Z]{2,3}\b)|\s*(?:/|$|,|\())")
+TEXT_NAME = re.compile(r"[+\-\u2212]\s*([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+)")
+
+def _own_count(o):
+    best = 0
+    def walk(x, ctx=""):
+        nonlocal best
+        if isinstance(x, dict):
+            for k, v in x.items():
+                kp = f"{ctx}.{k}"
+                if isinstance(k, str) and COUNT_KEY.search(k) and "eddie" in kp.lower() and isinstance(v, (int, float)) \
+                        and not isinstance(v, bool):
+                    best = max(best, int(v))
+                else:
+                    walk(v, kp)
+        elif isinstance(x, list):
+            for v in x: walk(v, ctx)
+    walk(o)
+    return best
+
+def _item_names(x):
+    out = []
+    if isinstance(x, str):
+        out += ACTION_NAME.findall(x) + TEXT_NAME.findall(x)
+        if not out and re.fullmatch(r"[A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+", x.strip()):
+            out.append(x.strip())
+    elif isinstance(x, list):
+        for y in x: out += _item_names(y)
+    elif isinstance(x, dict):
+        for k in NAME_FIELDS:
+            if k in x: out += _item_names(x[k])
+        if isinstance(x.get("action"), str):
+            out += _item_names(x["action"])
+    return [n for n in out if isinstance(n, str) and n.strip()]
+
+def _txn_pending(t, today):
+    if not isinstance(t, dict):
+        return True
+    st = t.get("status")
+    if not isinstance(st, str) or _status_norm(st) != "completed":
+        return True                                       # pending / queued / processing / processed / missing
+    for k in ("date", "datetime_pdt", "datetime", "time_pdt"):
+        if t.get(k):
+            try:
+                return datetime.fromisoformat(str(t[k])[:10]).date() >= today
+            except ValueError:
+                return True
+    return True                                           # completed with no date
+
+def resolve_pending(raw, path, today, expect_file=True):
+    """-> names. Raises PendingError when any pending item cannot be resolved to a name:
+    - any *pending*count >= 1 (any level) not covered by as many named items;
+    - any non-empty pending / queue / claims / bids / offers collection (any level) whose entries have no name
+      (id-only or nameless entries are unresolved);
+    - any raw transaction whose status is not exactly 'completed' or is dated today/future (resolved via its names);
+    - the private file missing or malformed while anything is pending. File may be a list or {"names": [...]}."""
+    items, problems = [], []                              # items: list of name-lists, one per pending entry
+    own_named = [0]                                       # named entries under an 'eddie*' key (ours)
+    def walk(o, path_=""):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                p = f"{path_}.{k}"
+                if not isinstance(k, str):
+                    continue
+                if _num(v) is not None or v is None or v is False:
+                    continue                                  # counts handled by pending_count()
+                if TXN_LIST_KEY.search(k) and isinstance(v, list):
+                    for i, t in enumerate(v):
+                        if _txn_pending(t, today):
+                            nm = _item_names(t)
+                            items.append(nm)
+                            if not nm: problems.append(f"{p}[{i}] pending transaction with no name")
+                    continue
+                if QUEUE_KEY.search(k) and v not in (None, "", [], {}, 0, False):
+                    entries = v if isinstance(v, list) else [v]
+                    for i, e in enumerate(entries):
+                        nm = _item_names(e)
+                        items.append(nm)
+                        if "eddie" in p.lower() and nm: own_named[0] += 1
+                        if not nm: problems.append(f"{p}[{i}] pending entry with no name")
+                    continue
+                walk(v, p)
+        elif isinstance(o, list):
+            for v in o: walk(v, path_)
+    walk(raw if isinstance(raw, dict) else {})
+    file_names, file_ok = [], None
+    if path:
+        try:
+            d = json.loads(open(path).read())
+            lst = d if isinstance(d, list) else (d.get("names") if isinstance(d, dict) else None)
+            if not isinstance(lst, list):
+                raise ValueError("no names list")
+            # round 10: the file must be captured from THIS scrape (same scrape stamp), else it is stale
+            if isinstance(raw, dict) and raw.get("scraped") is not None:
+                if not isinstance(d, dict) or str(d.get("scraped")) != str(raw.get("scraped")):
+                    raise ValueError(f"stale: file scraped {d.get('scraped') if isinstance(d, dict) else None!r} "
+                                     f"!= raw {raw.get('scraped')!r}")
+            file_names = [n for n in lst if isinstance(n, str) and n.strip()]
+            own_l = d.get("own_names") if isinstance(d, dict) else None
+            file_own = [n for n in own_l if isinstance(n, str) and n.strip()] if isinstance(own_l, list) else file_names
+            file_ok = True
+        except (OSError, ValueError) as e:
+            file_ok = False
+            file_err = str(e)
+    count = max(pending_count(raw, path if file_ok else None), len(items))   # direct entries count too
+    named = sum(1 for nm in items if nm) + (len(file_names) if file_ok else 0)
+    names = [n for nm in items for n in nm] + file_names
+    pending_any = count >= 1 or bool(items)
+    if pending_any and expect_file and path and not file_ok:
+        problems.append(f"private pending-name file {path} missing or malformed")
+    if count > named:
+        problems.append(f"{count} pending move(s) but only {named} resolved to a name")
+    # our own counts (any *eddie*pending*count) must be covered by OUR named entries or the private file, not by
+    # other teams' transactions
+    own = _own_count(raw) if isinstance(raw, dict) else 0
+    if file_ok:
+        own = max(own, max([int(v) for k, v in ((d.get("counts") or {}).items() if isinstance(d, dict) else [])
+                            if "eddie" in str(k).lower() and isinstance(v, (int, float)) and not isinstance(v, bool)] or [0]))
+    own_have = own_named[0] + (len(file_own) if file_ok else 0)   # other teams' names never cover OUR count
+    if own > own_have:
+        problems.append(f"{own} of our pending move(s) but only {own_have} of ours resolved to a name")
+    if problems:
+        raise PendingError("pending item(s) without a resolved name: " + "; ".join(problems[:5])
+                           + " (private pending-name list is empty, missing or incomplete; run stopped, nothing written)")
+    return names

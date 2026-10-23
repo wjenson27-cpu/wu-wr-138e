@@ -3,7 +3,18 @@ from datetime import date, datetime
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
-os.environ.setdefault("WARROOM_PENDING_NAMES", str(Path(__file__).resolve().parents[1] / "fixtures" / "pending-names-test.json"))  # real scrape may have pending>=1; never the private file
+def _dummy_pending_names():
+    """A dummy names file stamped with the latest real raw scrape (so the stale check passes); never the private file."""
+    import tempfile as _t
+    fx = json.loads((Path(__file__).resolve().parents[1] / "fixtures" / "pending-names-test.json").read_text())
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+    import warroom_common as _wc
+    f, d, _ = _wc.latest("/workspace/fantrax-raw-*.json", "rosters")
+    fx["scraped"] = d.get("scraped") if isinstance(d, dict) else None
+    out = Path(_t.mkdtemp()) / "pending-names-test.json"
+    out.write_text(json.dumps(fx))
+    return str(out)
+os.environ.setdefault("WARROOM_PENDING_NAMES", _dummy_pending_names())  # real scrape may have pending>=1; never the private file
 import warroom_common as wc, build_free_agents as bfa, build_warroom as bw, refresh_green_dots as rgd
 FIX = ROOT / "tests" / "fixtures"
 DATA = Path(os.environ.get("WU_DATA_DIR") or ROOT / "data")
@@ -164,7 +175,9 @@ class BotOpsBlocker3Pending(unittest.TestCase):
         w = {"week": 7, "waivers": [{"rank": 1, "player": "Martin Emerson", "bid": 0}],
              "trades": [{"with": "B", "why": "idea"}],
              "news": [{"text": "0 pending claims, 0 pending trades."}], "injuryWatch": [{"practice": "Thu pending"}]}
-        d = bw.build(w, DATA, self.NOW, raw={"rosters": [], "trades": {"pending": [1]}, "scraped": "s"}, raw_name="r.json")
+        d = bw.build(w, DATA, self.NOW, raw={"rosters": [], "trades": {"pending": [{"player": "Odell Thurman"}]}, "scraped": "s"}, raw_name="r.json")
+        with self.assertRaises(wc.PendingError):   # round 10: a nameless raw pending entry fails closed
+            bw.build(dict(w), DATA, self.NOW, raw={"rosters": [], "trades": {"pending": [1]}, "scraped": "s"}, raw_name="r.json")
         self.assertEqual(d["waivers"][0]["bid"], 0)
         self.assertEqual(set(d["fantraxRaw"]), {"file", "scraped"})  # nothing else copied from raw
     def test_committed_warroom_has_no_pending(self):
