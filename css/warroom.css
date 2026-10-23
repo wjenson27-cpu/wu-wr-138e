@@ -192,3 +192,20 @@ a.btn,a.btn.ghost{display:inline-block;text-decoration:none}
   header,.strip,nav,.chips{padding-left:18px;padding-right:18px}
 }
 nav a.navlink{flex-shrink:0;background:#0b1c2e;border:1px solid #1e3a5f;color:#A5ACAF;padding:8px 12px;border-radius:16px;font-size:.75rem;font-weight:700;text-decoration:none}
+/* Track Record panel */
+.rt-hero{border-left-color:#D4A017}
+.rt-big{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:4px 0 6px}
+.rt-big b{font-size:2.2rem;font-weight:800;color:#69BE28;line-height:1}
+.rt-big span{font-size:.75rem;color:#A5ACAF;font-weight:700}
+.card p.rt-sub{font-size:.68rem;color:#7a8794}
+.rt-types{display:grid;grid-template-columns:1fr;gap:8px}
+.rt-type{background:#061018;border-radius:8px;padding:8px}
+.rt-tl{display:flex;justify-content:space-between;font-size:.78rem;font-weight:700}
+.rt-tl b{color:#69BE28}
+.rt-bar{height:6px;background:#122334;border-radius:3px;margin:5px 0 4px;overflow:hidden}
+.rt-bar i{display:block;height:100%;background:#69BE28;border-radius:3px}
+.rt-tn{font-size:.62rem;color:#A5ACAF}
+.rt-learn{border-left-color:#7eb6ff}
+.card p.rt-adj{color:#e8eaed}
+.rt-vs{font-weight:600;font-size:.72rem;color:#A5ACAF}
+@media (min-width:700px){.rt-types{grid-template-columns:repeat(3,1fr)}}

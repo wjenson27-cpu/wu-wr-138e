@@ -35,3 +35,8 @@ Nothing here pushes to `main`, and nothing here pushes at all. Bill reviews and 
 - Times: a `--now` or scrape time with no offset is read as PT. An ambiguous or nonexistent PT wall time (Nov 1 2026 1:00–1:59 AM, Mar 8 2026 / Mar 14 2027 2:00–2:59 AM) fails `--now`, and a scrape file with such a time is skipped. Give an explicit offset (`-07:00`/`-08:00`) instead.
 - Routine hook: `bash scripts/hooks/warroom-refresh.sh` after the day's Fantrax scrape and editorial build. If it exits 0, review the diff and commit/push as today. If it exits nonzero, `data/` is untouched.
 - `docs/workflows/warroom-saturday.yml` (Bill installs it in `.github/workflows/`) runs Saturday at 10:23 AM PT in `ci` mode. It pushes nothing and opens no PR, and uploads changed green-dot files as a review artifact.
+
+## Track Record (recommendation ledger)
+
+- `data/recs.json` logs Eddie's past calls (waiver adds, start/sit, trades, FAAB, green dots) plus weekly "what I'm learning" notes. Only past or completed decisions go in; open claims, bids and offers never do.
+- `python3 scripts/score_recs.py [--sources /workspace] [--today YYYY-MM-DD]` scores past-week calls from real Fantrax scrape files (box details, roster week points, or a season-points delta between two scrapes) and writes `data/recs-summary.json` for the Track Record tab. A call is VERIFIED only when both sides' points come from a source file; otherwise it stays open/UNVERIFIED. Any pending or future-week rec makes it exit 1 and write nothing. Tests: `tests/py/test_recs.py`.
