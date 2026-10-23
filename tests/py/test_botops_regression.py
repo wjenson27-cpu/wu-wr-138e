@@ -609,7 +609,7 @@ class Round9(Base):
             with self.subTest(w=w):
                 self.assertIsNone(self.build(w))
     def test_private_names_from_raw(self):
-        raw = {"url": "https://www.fantrax.com/fantasy/league/x/home", "trades": {"eddies_pending_private": [{"player": "Odell Thurman"}]}}
+        raw = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_private": [{"player": "Odell Thurman"}]}}
         o = bw.build({"week": 7, "news": [{"text": "Thurman looks good."}, {"text": "Lake out."}]}, DATA, NOW, raw=raw)
         self.assertEqual([n["text"] for n in o["news"]], ["Lake out."])
     def test_private_list_never_published(self):
@@ -621,9 +621,10 @@ class Round9b(Base):
     def setUp(self):
         self.t = Path(tempfile.mkdtemp())
     def names_file(self, names, counts=None):
-        p = self.t / "pending-names.json"; p.write_text(json.dumps({"counts": counts or {}, "names": names})); return p
-    RAW1 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": []}}
-    RAW0 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "trades": {"eddies_pending_claims_count": 0, "pending_claims_count": None}}
+        p = self.t / "pending-names.json"
+        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "scraped": "S"})); return p
+    RAW1 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": []}}
+    RAW0 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_claims_count": 0, "pending_claims_count": None}}
     W = {"week": 7, "news": [{"text": "Martin Emerson looks like a fit."}, {"text": "Lake out."}]}
     def test_count_and_empty_names_fails(self):
         for p in (self.names_file([]), self.t / "missing.json"):
@@ -667,10 +668,15 @@ class Round10(Base):
     def setUp(self):
         self.t = Path(tempfile.mkdtemp())
     def f(self, content):
+        # round 11: a usable file must carry the raw's scrape stamp and own_names; list form is wrapped for that
+        if isinstance(content, list):
+            content = {"names": content, "own_names": content, "scraped": "S"}
+        elif isinstance(content, dict) and "names" in content:
+            content = {"own_names": content["names"], "scraped": "S", **content}
         p = self.t / "names.json"; p.write_text(content if isinstance(content, str) else json.dumps(content)); return str(p)
     def run_(self, raw, path=None):
         try:
-            return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW, raw={"url": self.URL, **raw},
+            return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW, raw={"url": self.URL, "scraped": "S", **raw},
                                        pending_path=path if path is not None else self.f([])))
         except wc.PendingError:
             return None
@@ -738,7 +744,8 @@ class Round10b(Base):
     def setUp(self):
         self.t = Path(tempfile.mkdtemp())
     def f(self, names, scraped="2026-10-23 6:00 AM PDT", counts=None):
-        p = self.t / "n.json"; p.write_text(json.dumps({"counts": counts or {}, "names": names, "scraped": scraped})); return str(p)
+        p = self.t / "n.json"
+        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "scraped": scraped})); return str(p)
     def run_(self, raw, path):
         try:
             return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW,
@@ -804,6 +811,71 @@ class Round10bProcessed(Base):
         self.assertEqual(wc.resolve_pending(raw, None, self.TODAY), [])
         o = bw.build({"week": 7, "news": [{"text": "Adonai Mitchell starts."}]}, DATA, NOW, raw=raw)
         self.assertEqual(o["news"][0]["text"], "Adonai Mitchell starts.")
+
+class Round11(Base):
+    """Bot Ops round 10/10b: own counts coerced like general counts; own_names required; ceil; stamp required."""
+    URL = "https://www.fantrax.com/fantasy/league/x/home"
+    W = {"week": 7, "waivers": [{"player": "Martin Emerson", "why": "Fits."}], "news": [{"text": "Lake out."}]}
+    def setUp(self):
+        self.t = Path(tempfile.mkdtemp())
+    def f(self, d):
+        p = self.t / "n.json"; p.write_text(json.dumps(d)); return str(p)
+    def run_(self, raw, path):
+        try:
+            return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW, raw={"url": self.URL, **raw}, pending_path=path))
+        except wc.PendingError:
+            return None
+    OTHER = {"names": ["Adonai Mitchell"], "own_names": [], "scraped": "S"}
+    def test_own_count_variants_not_covered_by_other_names(self):
+        for tr in ({"eddies_pending_claims_count": "1"}, {"eddies_pending_claims_count": True}, {"eddiesPendingClaims": 1},
+                   {"eddies_pending_claims_count": 0.5}, {"EddiesNumPending": " 2 "}, {"eddies": {"pendingClaims": 1}}):
+            with self.subTest(tr=tr):
+                self.assertIsNone(self.run_({"scraped": "S", "trades": tr,
+                                             "pendingClaims": 1}, self.f(self.OTHER)))
+    def test_file_without_own_names_never_covers_our_count(self):
+        self.assertIsNone(self.run_({"scraped": "S", "trades": {"eddies_pending_claims_count": 1}},
+                                    self.f({"names": ["Adonai Mitchell"], "scraped": "S"})))
+    def test_own_names_cover_our_count(self):
+        o = self.run_({"scraped": "S", "trades": {"eddies_pending_claims_count": "1"}},
+                      self.f({"names": ["Martin Emerson"], "own_names": ["Martin Emerson"], "scraped": "S"}))
+        self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_fractional_counts_ceil(self):
+        for v in (0.5, "0.5", 0.01, "1.5"):
+            with self.subTest(v=v):
+                self.assertEqual(wc._num(v), 1 if float(v) <= 1 else 2)
+                self.assertIsNone(self.run_({"scraped": "S", "pendingClaims": v}, self.f({"names": [], "own_names": [], "scraped": "S"})))
+        self.assertEqual(wc._num(0), 0); self.assertIsNone(wc._num(-1)); self.assertIsNone(wc._num("one"))
+    def test_no_stamp_and_pending_fails(self):
+        self.assertIsNone(self.run_({"pendingClaims": 1}, self.f(["Adonai Mitchell"])))
+        self.assertIsNone(self.run_({"claimsQueue": [{"player": "Martin Emerson"}]}, self.f({"names": [], "own_names": []})))
+    def test_no_stamp_nothing_pending_ok(self):
+        self.assertIn("Emerson", self.run_({"pendingClaims": 0}, self.f([])))
+    def test_pending_flag_beats_processed(self):
+        from datetime import date
+        T = date(2026, 10, 23)
+        for t in ({"status": "processed", "date": "2026-10-20", "pending": True}, {"status": "completed", "date": "2026-10-20", "isPending": "yes"},
+                  {"status": "processed", "date": "2026-10-20", "queued": 1}, {"status": "processed", "date": "2026-10-20", "awaitingApproval": True}):
+            with self.subTest(t=t): self.assertTrue(wc._txn_pending(t, T))
+        self.assertFalse(wc._txn_pending({"status": "processed", "date": "2026-10-20", "pending": False}, T))
+    def test_pt_date_conversion(self):
+        from datetime import date
+        T = date(2026, 10, 23)
+        self.assertTrue(wc._txn_pending({"status": "processed", "date": "2026-10-22T23:30-10:00"}, T))   # Oct 23 02:30 PT
+        self.assertFalse(wc._txn_pending({"status": "processed", "date": "2026-10-22T23:59:59-07:00"}, T))
+        self.assertFalse(wc._txn_pending({"status": "processed", "date": "20261022"}, T))
+        self.assertTrue(wc._txn_pending({"status": "processed", "date": "10/22/2026"}, T))
+    def test_more_pending_source_shapes(self):
+        for raw in ({"moves": [{"status": "pending"}]}, {"activity": [{"status": "pending"}]}, {"requests": [{"status": "pending"}]},
+                    {"claim": {"playerId": "a"}}, {"transactions": {"items": [{"status": "pending"}]}},
+                    {"transactions": {"status": "pending", "id": 3}}):
+            with self.subTest(raw=raw):
+                self.assertIsNone(self.run_({"scraped": "S", **raw}, self.f({"names": [], "own_names": [], "scraped": "S"})))
+        o = self.run_({"scraped": "S", "moves": [{"status": "pending", "player": "Martin Emerson"}]},
+                      self.f({"names": [], "own_names": [], "scraped": "S"}))
+        self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_trade_block_offered_is_not_a_source(self):
+        self.assertIn("Emerson", self.run_({"scraped": "S", "trades": {"trade_block": {"X": {"positions_offered": ["RB"]}}}},
+                                           self.f({"names": [], "own_names": [], "scraped": "S"})))
 
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)

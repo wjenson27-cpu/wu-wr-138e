@@ -703,10 +703,11 @@ def _num(v):
         return 1
     if isinstance(v, bool) or v is None:
         return None
+    if isinstance(v, str) and re.fullmatch(r"\s*\d+(?:\.\d+)?\s*", v):
+        v = float(v)
     if isinstance(v, (int, float)):
-        return int(v)
-    if isinstance(v, str) and re.fullmatch(r"\s*\d+(?:\.0+)?\s*", v):
-        return int(float(v))
+        import math
+        return math.ceil(v) if v > 0 else (0 if v == 0 else None)   # round 11: any > 0 counts as at least 1
     return None
 
 def pending_count(raw=None, path=None):
@@ -804,23 +805,26 @@ def scrub_pending_names(o, names):
 
 
 # ---------- round 10: resolve every pending item to names, or fail closed ----------
-QUEUE_KEY = re.compile(r"pending|queue|claims|bids|offers", re.I)   # any list/dict under such a key is a pending source
-TXN_LIST_KEY = re.compile(r"transactions?", re.I)
+# 'claim(s)/bid(s)/offer(s)' must not run on into a lower-case letter ('positions_offered', 'bidder' are not sources)
+QUEUE_KEY = re.compile(r"(?i:pending|queue)|(?i:claim|bid|offer)s?(?![a-z])")   # any list/dict under such a key is a pending source
+TXN_LIST_KEY = re.compile(r"(?i:transaction|move|request)s?(?![a-z])|(?i:activit)")
 NAME_FIELDS = ("player", "name", "add", "adds", "drop", "drops", "give", "get", "offered", "requested", "players")
 ACTION_NAME = re.compile(r"\b(?:add|drop|claim|waive|trade|get|give)s?\s+((?:[A-Z][A-Za-z.'\-]+\s+){0,3}?[A-Z][a-z][A-Za-z.'\-]*)"
                          r"(?=\s+(?:[A-Z]{1,3}(?:,[A-Z]{1,3})*\s+[A-Z]{2,3}\b|[A-Z]{2,3}\b)|\s*(?:/|$|,|\())")
 TEXT_NAME = re.compile(r"[+\-\u2212]\s*([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+)")
 
 def _own_count(o):
+    """Our pending count: same key matching (COUNT_ANY) and coercion (_num) as pending_count, on any key whose
+    path names us (eddie / eddies / eddiesPendingClaims ...)."""
     best = 0
     def walk(x, ctx=""):
         nonlocal best
         if isinstance(x, dict):
             for k, v in x.items():
                 kp = f"{ctx}.{k}"
-                if isinstance(k, str) and COUNT_KEY.search(k) and "eddie" in kp.lower() and isinstance(v, (int, float)) \
-                        and not isinstance(v, bool):
-                    best = max(best, int(v))
+                n = _num(v) if isinstance(k, str) and COUNT_ANY.search(k) else None
+                if n is not None and "eddie" in kp.lower():
+                    best = max(best, n)
                 else:
                     walk(v, kp)
         elif isinstance(x, list):
@@ -843,9 +847,25 @@ def _item_names(x):
             out += _item_names(x["action"])
     return [n for n in out if isinstance(n, str) and n.strip()]
 
+PENDING_FLAG = re.compile(r"pending|queued|awaiting|in[_\s-]?progress|unprocessed", re.I)
+
+def _pt_date(v):
+    """Date in PT for an ISO-ish stamp ('2026-10-22 19:15', '2026-10-22T23:30-10:00', '20261022'); None if unparseable.
+    A stamp with an offset is converted to PT; one without is read as PT."""
+    try:
+        dt = datetime.fromisoformat(str(v).strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return dt.astimezone(PT).date() if dt.tzinfo else dt.date()
+
 def _txn_pending(t, today):
     if not isinstance(t, dict):
         return True
+    # round 11: an explicit pending flag (pending: true, isPending, queued, awaiting...) wins over any status
+    for k, v in t.items():
+        if isinstance(k, str) and k != "status" and PENDING_FLAG.search(k) and v not in (None, False, 0, "", [], {}) \
+                and not (isinstance(v, str) and v.strip().lower() in ("false", "no", "0")):
+            return True
     st = t.get("status")
     if not isinstance(st, str) or non_latin(st):
         return True                                       # missing / non-string / look-alike letters
@@ -855,10 +875,8 @@ def _txn_pending(t, today):
         return True                                       # pending / queued / processing / processed-pending ...
     for k in ("date", "datetime_pdt", "datetime", "time_pdt"):
         if t.get(k):
-            try:
-                return datetime.fromisoformat(str(t[k])[:10]).date() >= today
-            except ValueError:
-                return True
+            d = _pt_date(t[k])
+            return d is None or d >= today
     return True                                           # completed with no date
 
 def resolve_pending(raw, path, today, expect_file=True):
@@ -878,6 +896,10 @@ def resolve_pending(raw, path, today, expect_file=True):
                     continue
                 if _num(v) is not None or v is None or v is False:
                     continue                                  # counts handled by pending_count()
+                if TXN_LIST_KEY.search(k) and isinstance(v, dict):
+                    # dict-wrapped transactions ({items: [...]}) or a single transaction dict
+                    lists = [x for x in v.values() if isinstance(x, list)]
+                    v = [t for x in lists for t in x] if lists else [v]
                 if TXN_LIST_KEY.search(k) and isinstance(v, list):
                     for i, t in enumerate(v):
                         if _txn_pending(t, today):
@@ -911,7 +933,8 @@ def resolve_pending(raw, path, today, expect_file=True):
                                      f"!= raw {raw.get('scraped')!r}")
             file_names = [n for n in lst if isinstance(n, str) and n.strip()]
             own_l = d.get("own_names") if isinstance(d, dict) else None
-            file_own = [n for n in own_l if isinstance(n, str) and n.strip()] if isinstance(own_l, list) else file_names
+            # round 11: no own_names key = none of ours (other teams' names never cover our count)
+            file_own = [n for n in own_l if isinstance(n, str) and n.strip()] if isinstance(own_l, list) else []
             file_ok = True
         except (OSError, ValueError) as e:
             file_ok = False
@@ -920,6 +943,8 @@ def resolve_pending(raw, path, today, expect_file=True):
     named = sum(1 for nm in items if nm) + (len(file_names) if file_ok else 0)
     names = [n for nm in items for n in nm] + file_names
     pending_any = count >= 1 or bool(items)
+    if pending_any and isinstance(raw, dict) and raw.get("scraped") in (None, ""):
+        problems.append("raw scrape has no 'scraped' stamp, so the private file cannot be checked as fresh")
     if pending_any and expect_file and path and not file_ok:
         problems.append(f"private pending-name file {path} missing or malformed")
     if count > named:
