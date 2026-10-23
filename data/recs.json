@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "team": "Eagle Ridge Eddies",
-  "note": "Eddie's recommendation ledger. Only past or completed decisions live here; open claims, bids and offers never do. Points are filled by scripts/score_recs.py from Fantrax scrape files.",
+  "note": "Eddie's recommendation ledger. Only recs from past weeks with a finished decision live here. Points are filled by scripts/score_recs.py from Fantrax scrape files.",
   "recs": [
     {
       "id": "w4-faab-robinson",
@@ -12,13 +12,7 @@
       "call": "Claim for $6 (won), dropping Chimere Dike",
       "alternative": "Chimere Dike",
       "reason": "Bijan handcuff with a real KR floor in our return-yard scoring.",
-      "decision": "completed",
-      "status": "open",
-      "pts_player": 27.0,
-      "pts_alt": null,
-      "result": null,
-      "verified": "UNVERIFIED",
-      "source": "fantrax-week4-box-details-2026-10-06.json; no real points for Chimere Dike"
+      "decision": "completed"
     },
     {
       "id": "w5-faab-tuipulotu",
@@ -29,13 +23,7 @@
       "call": "Claim at $5-9 (won at $6) to fill the empty DL hole",
       "alternative": null,
       "reason": "Only one healthy DL after the Hall/Stevenson trade.",
-      "decision": "completed",
-      "status": "open",
-      "pts_player": 16.0,
-      "pts_alt": null,
-      "result": null,
-      "verified": "UNVERIFIED",
-      "source": "fantrax-week5-box-details-2026-10-13.json; no real points for no alternative named"
+      "decision": "completed"
     },
     {
       "id": "w5-ss-simpson-gray",
@@ -46,13 +34,7 @@
       "call": "Start Simpson on SNF over Gray",
       "alternative": "Cedric Gray",
       "reason": "Gray was base-downs only; Simpson had the snap share.",
-      "decision": "past",
-      "status": "scored",
-      "pts_player": 25.0,
-      "pts_alt": 14.0,
-      "result": "hit",
-      "verified": "VERIFIED",
-      "source": "fantrax-scrape-2026-10-12-pm-newsletter.json; fantrax-week5-box-details-2026-10-13.json"
+      "decision": "past"
     },
     {
       "id": "w5-ss-robinson-rb",
@@ -62,14 +44,9 @@
       "player": "Brian Robinson Jr.",
       "call": "Start Robinson Jr. at RB",
       "alternative": "Jacory Croskey-Merritt",
-      "reason": "SNF start in the RB slot; Croskey-Merritt sat on the bench (alternative inferred from the bench, not named in the call).",
+      "reason": "SNF start in the RB slot; Croskey-Merritt sat on our bench.",
       "decision": "past",
-      "status": "scored",
-      "pts_player": 8.0,
-      "pts_alt": 15.0,
-      "result": "miss",
-      "verified": "VERIFIED",
-      "source": "fantrax-scrape-2026-10-12-pm-newsletter.json; fantrax-week5-box-details-2026-10-13.json"
+      "alt_inferred": true
     },
     {
       "id": "w6-faab-delane",
@@ -80,13 +57,7 @@
       "call": "Bid $11 (won at $8); Leonard Williams was the drop",
       "alternative": "Leonard Williams",
       "reason": "23.3 FP/G rookie DB as IDP depth.",
-      "decision": "completed",
-      "status": "open",
-      "pts_player": 3.0,
-      "pts_alt": null,
-      "result": null,
-      "verified": "UNVERIFIED",
-      "source": "fantrax-scrape-2026-10-19-pm-newsletter.json; no real points for Leonard Williams"
+      "decision": "completed"
     },
     {
       "id": "w6-ss-delane-gray",
@@ -97,13 +68,7 @@
       "call": "Swap Delane in for Gray",
       "alternative": "Cedric Gray",
       "reason": "29 FP/G over his last 3 and 93% snaps vs Gray's ~40%.",
-      "decision": "past",
-      "status": "scored",
-      "pts_player": 3.0,
-      "pts_alt": 14.0,
-      "result": "miss",
-      "verified": "VERIFIED",
-      "source": "fantrax-scrape-2026-10-19-pm-newsletter.json; fantrax-week6-box-details-2026-10-20.json"
+      "decision": "past"
     },
     {
       "id": "w6-ss-delane-knight",
@@ -114,13 +79,7 @@
       "call": "Swap Delane in for the Knight TNF dart",
       "alternative": "Tyrice Knight",
       "reason": "Fantrax projected Delane 7.65 vs Knight 1.82.",
-      "decision": "past",
-      "status": "scored",
-      "pts_player": 3.0,
-      "pts_alt": 20.0,
-      "result": "miss",
-      "verified": "VERIFIED",
-      "source": "fantrax-scrape-2026-10-19-pm-newsletter.json; fantrax-week6-box-details-2026-10-20.json"
+      "decision": "past"
     },
     {
       "id": "w6-ss-tuli-karlaftis",
@@ -137,13 +96,7 @@
           "fantrax-scrape-2026-10-16-pm-newsletter.json",
           "fantrax-scrape-2026-10-19-pm-newsletter.json"
         ]
-      },
-      "status": "scored",
-      "pts_player": 5.0,
-      "pts_alt": 35.0,
-      "result": "miss",
-      "verified": "VERIFIED",
-      "source": "fantrax-scrape-2026-10-19-pm-newsletter.json minus fantrax-scrape-2026-10-16-pm-newsletter.json (season fpts); fantrax-week6-box-details-2026-10-20.json"
+      }
     },
     {
       "id": "w6-add-ponder-gray",
@@ -160,13 +113,7 @@
           "fantrax-scrape-2026-10-16-pm-newsletter.json",
           "fantrax-scrape-2026-10-19-pm-newsletter.json"
         ]
-      },
-      "status": "scored",
-      "pts_player": 13.0,
-      "pts_alt": 14.0,
-      "result": "miss",
-      "verified": "VERIFIED",
-      "source": "fantrax-scrape-2026-10-19-pm-newsletter.json minus fantrax-scrape-2026-10-16-pm-newsletter.json (season fpts); fantrax-week6-box-details-2026-10-20.json"
+      }
     },
     {
       "id": "w6-ss-dike-robinson",
@@ -177,13 +124,7 @@
       "call": "Start Dike at flex, Robinson Jr. sits",
       "alternative": "Brian Robinson Jr.",
       "reason": "Returner points give Dike a floor.",
-      "decision": "past",
-      "status": "scored",
-      "pts_player": 16.0,
-      "pts_alt": 3.0,
-      "result": "hit",
-      "verified": "VERIFIED",
-      "source": "fantrax-scrape-2026-10-19-pm-newsletter.json; fantrax-week6-box-details-2026-10-20.json"
+      "decision": "past"
     },
     {
       "id": "w6-ss-robinson-bourne",
@@ -194,47 +135,7 @@
       "call": "With Warren out, put Robinson Jr. in at flex (Bourne stayed in)",
       "alternative": "Kendrick Bourne",
       "reason": "Robinson was the named Warren fallback.",
-      "decision": "past",
-      "status": "scored",
-      "pts_player": 3.0,
-      "pts_alt": 9.0,
-      "result": "miss",
-      "verified": "VERIFIED",
-      "source": "fantrax-scrape-2026-10-19-pm-newsletter.json; fantrax-week6-box-details-2026-10-20.json"
-    },
-    {
-      "id": "w7-faab-ponder",
-      "date": "2026-10-19",
-      "week": 7,
-      "type": "faab",
-      "player": "Elijah Ponder",
-      "call": "Bid $9 dropping Delane (not placed; Doubtpfizer got him for $1)",
-      "alternative": "Mansoor Delane",
-      "reason": "77% snaps, 20.0 FP/G, CHI runs the most plays.",
-      "decision": "past",
-      "status": "open",
-      "result": null,
-      "pts_player": null,
-      "pts_alt": null,
-      "verified": "UNVERIFIED",
-      "source": null
-    },
-    {
-      "id": "w7-faab-reed",
-      "date": "2026-10-20",
-      "week": 7,
-      "type": "faab",
-      "player": "D.J. Reed",
-      "call": "Bid $7 (won at $5); Delane was the drop",
-      "alternative": "Mansoor Delane",
-      "reason": "94-100% snaps at DB in a top-total game.",
-      "decision": "completed",
-      "status": "open",
-      "result": null,
-      "pts_player": null,
-      "pts_alt": null,
-      "verified": "UNVERIFIED",
-      "source": null
+      "decision": "past"
     }
   ],
   "learning": [
