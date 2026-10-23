@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-22T21:47:00-07:00",
+  "asOf": "2026-10-22T21:48:00-07:00",
   "season": 2026,
   "week": 7,
   "opponent": {
@@ -9,7 +9,7 @@
     "name": "Morningside Muff Divers"
   },
   "freshness": {
-    "plan": "2026-10-22T21:47:00-07:00",
+    "plan": "2026-10-22T21:48:00-07:00",
     "roster": "2026-10-22T14:50:00-07:00",
     "scores": "2026-10-22T14:50:00-07:00",
     "waivers": "2026-10-22T14:50:00-07:00",
@@ -17,7 +17,7 @@
   },
   "lockTimes": [
     {
-      "label": "W7 TNF NE@CHI (Booker add deadline)",
+      "label": "W7 TNF NE@CHI",
       "at": "2026-10-22T17:15:00-07:00"
     },
     {
@@ -198,21 +198,11 @@
     },
     {
       "slot": "IDP",
-      "player": "Austin Booker",
-      "pos": "DL",
-      "nflTeam": "CHI",
-      "verdict": "START",
-      "reason": "IF ADDED before 5:15 PM PT: TNF vs NE with both starting guards out, RT Moses Q. Not on CHI injury report. DL6 weekly / DL11 ROS.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "IDP",
       "player": "Jordyn Brooks",
       "pos": "LB",
       "nflTeam": "MIA",
-      "verdict": "WATCH",
-      "reason": "@ NYJ. Plays this slot if Booker is not added; if Drake Thomas is ruled out, Knight (SNF) takes the slot. Weekly starter. LB42 weekly / LB34 ROS.",
+      "verdict": "START",
+      "reason": "@ NYJ. Weekly starter. LB42 weekly / LB34 ROS.",
       "injury": "",
       "practice": "FP Wed/Thu (foot)"
     },
@@ -222,7 +212,7 @@
       "pos": "LB",
       "nflTeam": "TEN",
       "verdict": "SIT",
-      "reason": "46% snaps; benched (Reed at DB, Lake at IDP). LB50 weekly / LB64 ROS.",
+      "reason": "46% snaps; benched (IDP flex is Simpson, Brooks, Lake). LB50 weekly / LB64 ROS.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -272,7 +262,7 @@
       "pos": "RB",
       "nflTeam": "WAS",
       "verdict": "SIT",
-      "reason": "IR (groin) 4+ games, WAS bye. Drop for Booker.",
+      "reason": "IR (groin) 4+ games, WAS bye. Drop candidate.",
       "injury": "IR",
       "practice": ""
     },
@@ -352,7 +342,7 @@
       "player": "Jacory Croskey-Merritt",
       "tag": "IR",
       "practice": "",
-      "note": "Groin, out 4+ games. WAS bye W7. Drop for Booker."
+      "note": "Groin, out 4+ games. WAS bye W7. Drop candidate."
     },
     {
       "player": "Travis Etienne",
@@ -423,7 +413,7 @@
       "player": "Boye Mafe",
       "pos": "DL",
       "nflTeam": "CIN",
-      "why": "ROS. @ BAL. Backup if Booker is gone; BAL passes least in NFL and its OL got healthier Thu, so sack volume capped. DL11 weekly / DL8 ROS.",
+      "why": "ROS. @ BAL. BAL passes least in NFL and its OL got healthier Thu, so sack volume capped. DL11 weekly / DL8 ROS.",
       "stats": "13.8 FP/G season, 54% rostered; FA live 2:50 PM PT",
       "faabMin": 0,
       "faabMax": 0,
@@ -463,7 +453,7 @@
       "rank": 1,
       "player": "Jacory Croskey-Merritt",
       "pos": "RB",
-      "reason": "IR 4+ games, WAS bye W7; drop for Booker."
+      "reason": "IR 4+ games, WAS bye W7; drop candidate."
     },
     {
       "rank": 2,
@@ -563,7 +553,7 @@
     {
       "source": "Fantrax",
       "time": "2026-10-22T14:50:00-07:00",
-      "text": "Live check ~2:50 PM PT, signed in. Proj 201.3-176.6 vs Morningside (projection only). FAAB $55, 0 pending claims, 0 pending trades. Booker, Mafe, Will Lee and Emerson are FAs. Other teams' FAAB and Morningside roster from the 6:21 AM PT sync."
+      "text": "Live check ~2:50 PM PT, signed in. Proj 201.3-176.6 vs Morningside (projection only). FAAB $55, 0 pending claims, 0 pending trades. Mafe, Will Lee and Emerson are FAs. Other teams' FAAB and Morningside roster from the 6:21 AM PT sync."
     },
     {
       "source": "Woellert Substack",
@@ -592,7 +582,7 @@
     {
       "source": "X @EvvRathe",
       "time": "2026-10-22T14:15:00-07:00",
-      "text": "Bears pressured QBs on 46.2% of dropbacks in W6 (Booker matchup).",
+      "text": "Bears pressured QBs on 46.2% of dropbacks in W6.",
       "url": "https://x.com/EvvRathe/status/2113378612548145410"
     },
     {
@@ -604,7 +594,7 @@
     {
       "source": "X @ATBSportsHQ",
       "time": "2026-10-22T13:50:00-07:00",
-      "text": "NE placed G Vera-Tucker on IR, elevated OL Newman-Johnson; both starting guards out (Booker matchup).",
+      "text": "NE placed G Vera-Tucker on IR, elevated OL Newman-Johnson; both starting guards out.",
       "url": "https://x.com/ATBSportsHQ/status/2113372503733084554"
     },
     {
