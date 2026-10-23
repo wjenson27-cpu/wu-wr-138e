@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-22T21:45:00-07:00",
+  "asOf": "2026-10-22T21:47:00-07:00",
   "season": 2026,
   "week": 7,
   "opponent": {
@@ -9,7 +9,7 @@
     "name": "Morningside Muff Divers"
   },
   "freshness": {
-    "plan": "2026-10-22T21:45:00-07:00",
+    "plan": "2026-10-22T21:47:00-07:00",
     "roster": "2026-10-22T14:50:00-07:00",
     "scores": "2026-10-22T14:50:00-07:00",
     "waivers": "2026-10-22T14:50:00-07:00",
@@ -407,19 +407,6 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "Austin Booker",
-      "pos": "DL",
-      "nflTeam": "CHI",
-      "why": "ROS. Free-agent add (no claim needed) BEFORE TNF kickoff 5:15 PM PT today. NE without both starting guards, RT Moses Q, PS-elevated OL; CHI pressured 46.2% of dropbacks W6. DL6 weekly / DL11 ROS.",
-      "stats": "14.33 FP/G season, 77% rostered; FA live 2:50 PM PT",
-      "faabMin": 0,
-      "faabMax": 0,
-      "bid": 0,
-      "drop": "Jacory Croskey-Merritt",
-      "tag": "LIKE"
-    },
-    {
-      "rank": 2,
       "player": "Martin Emerson",
       "pos": "DB",
       "nflTeam": "NO",
@@ -432,7 +419,7 @@
       "tag": "DART"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "player": "Boye Mafe",
       "pos": "DL",
       "nflTeam": "CIN",
@@ -445,7 +432,7 @@
       "tag": "DART"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "player": "Will Lee III",
       "pos": "DB",
       "nflTeam": "CAR",
@@ -458,7 +445,7 @@
       "tag": "DART"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "player": "Shaun Dolac",
       "pos": "LB",
       "nflTeam": "LAR",
