@@ -15,13 +15,20 @@ from datetime import datetime
 from pathlib import Path
 sys.path.insert(0, os.path.dirname(__file__))
 from warroom_common import (season_ending, do_not_pitch, rec_keys, identifiable, latest, load_json, write_json,
-                            iso_pt, now_pt, parse_now, week_for, assert_no_pending, scrub_own_moves, ListError, PendingError, PT)
+                            iso_pt, now_pt, parse_now, week_for, assert_no_pending, scrub_own_moves, ingest_moves, check_raw_source,
+                            pending_names, scrub_pending_names, ListError, PendingError, PT)
 
-def build(w, data_dir, now, raw=None, raw_name=None, fa=None, fa_asof=None):
+PRIVATE_PENDING = "/workspace/eddie-private/pending-names.json"   # outside the repo; never published
+
+def build(w, data_dir, now, raw=None, raw_name=None, fa=None, fa_asof=None, pending=None, pending_path=None):
+    # Round 9 (input side): a Fantrax input that is itself a pending / claims / offers source stops the run.
+    check_raw_source(raw, raw_name)
     # Round 8: own-team move text is DROPPED from free text first (our moves publish only from structured
     # records with a completed status); then the deny-pending gate on the INPUT plan stops the run on anything left.
     w, dropped = scrub_own_moves(w, data_dir)
     assert_no_pending(w, "warroom.json input")
+    # Round 9: move records are ingested only when status is exactly 'completed' AND dated before today.
+    w, excluded = ingest_moves(w, now.date())
     week = week_for(now)
     stamp = iso_pt(now)
     out = dict(w)
@@ -72,6 +79,16 @@ def build(w, data_dir, now, raw=None, raw_name=None, fa=None, fa_asof=None):
         notes.append(f"{len(blocked)} recommendation(s) withheld: no player name or id.")
     if dropped:
         notes.append(f"{len(dropped)} free-text sentence(s) about our own moves removed (structured records only).")
+    if excluded:
+        notes.append(f"{excluded} move record(s) excluded: not completed with a past date.")
+    # Round 9 output safety net: drop every string / key / record naming a player in our private pending list.
+    names = list(pending or []) + pending_names(raw, pending_path)
+    if names:
+        body = {k: v for k, v in out.items() if k not in ("refreshNotes",)}
+        body, hits = scrub_pending_names(body, names)
+        out = {**body, **({"refreshNotes": out["refreshNotes"]} if "refreshNotes" in out else {})}
+        if hits:
+            notes.append(f"{len(hits)} item(s) removed by the pending-name safety net.")
     if notes:
         out["refreshNotes"] = notes
     else:
@@ -86,6 +103,7 @@ def main():
     ap.add_argument("--fa-glob", default="/workspace/fantrax-scrape-*-newsletter.json")
     ap.add_argument("--no-fantrax", action="store_true", help="skip box-only Fantrax inputs (CI)")
     ap.add_argument("--now", help="override clock (tests)")
+    ap.add_argument("--pending-names", default=PRIVATE_PENDING, help="private pending-name list (never published)")
     a = ap.parse_args()
     now = parse_now(a.now) if a.now else now_pt()
     P = Path(a.data_dir) / "warroom.json"
@@ -99,7 +117,8 @@ def main():
         if faf:
             fa_asof = iso_pt(fat)
     try:
-        d = build(w, a.data_dir, now, raw, rawf.name if rawf else None, fa, fa_asof)
+        d = build(w, a.data_dir, now, raw, rawf.name if rawf else None, fa, fa_asof,
+                  pending_path=None if a.no_fantrax else a.pending_names)
     except (ListError, PendingError) as e:
         sys.exit(f"FAIL: {e}")
     write_json(P, d)

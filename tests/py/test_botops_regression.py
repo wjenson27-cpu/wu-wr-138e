@@ -526,11 +526,83 @@ class Round8(Base):
         o = json.loads(self.out({"news": [{"text": "Eddie bid $12 on Emerson."}, {"text": "Lake is out."}]}))
         self.assertEqual([n["text"] for n in o["news"]], ["Lake is out."])
     def test_structured_completed_record_still_publishes(self):
-        self.assertIn("Completed", self.out({"trades": [{"with": "A", "status": "Completed"}]}))
+        self.assertIn("Completed", self.out({"trades": [{"with": "A", "status": "Completed", "date": "2026-10-20"}]}))
     def test_structured_pending_record_blocks(self):
         self.assertIsNone(self.out({"claims": [{"player": "Martin Emerson", "status": "pending"}]}))
     def test_live_data_builds(self):
         bw.build(json.loads((ROOT / "data/warroom.json").read_text()), DATA, NOW)
+
+R8_CASES = [  # Bot Ops round 8 report
+    "Emerson add is in for Wed", "$12 on Emerson, runs Wed", "Lloyd-for-Emerson deal sent to Nathan",
+    "Eddie's claim is in, processes Wed", "Emerson claim placed", "completed: trade sent to Nathan for Emerson",
+    "Trade: Eddie gets Emerson, Nathan gets Lloyd", "NYJ trade sent by Eddie for Emerson",
+    "Eddie claimed Emerson for $12, lost the Lake claim", "Bid: Emerson $12 (Eddie)",
+    "Eddie \uff42\uff49\uff44 $12 on Emerson", "Eddie bi\u200bd $12 on Emerson", "targeting Emerson Wed",
+    "Eddie is going after Emerson", "Emerson is ours after Wed", "We grab Emerson Wed", "Grabbing Emerson Wed",
+    "Emerson incoming Wednesday", "Lake leaves, Emerson arrives Wed", "Emerson at twelve bucks Wed",
+    "Eddie b.i.d twelve on Emerson", "Emerson: $12. Wed.", "Emerson ($12, Wed)", "Emerson — $12, Wed",
+    "Nathan's Lloyd-for-Emerson deal is in", "Substation sent Lloyd for Emerson",
+    "Substation sent Lloyd for Emerson, awaiting reply", "EMERSON claim", "Em\u0435rson claim", "Émerson claim"]
+PEND = ["Martin Emerson"]
+
+class Round9(Base):
+    """Round 9 input-side design: completed+past move records only; pending sources hard-fail; private pending-name
+    safety net over every output string, record and key."""
+    def build(self, w, raw=None, raw_name=None):
+        try:
+            return json.dumps(bw.build({"week": 7, **w}, DATA, NOW, raw=raw, raw_name=raw_name, pending=PEND),
+                              ensure_ascii=False)
+        except wc.PendingError:
+            return None
+    def gone(self, w, c):
+        o = self.build(w)
+        self.assertTrue(o is None or json.dumps(c, ensure_ascii=False)[1:-1] not in o, o)
+    def test_round8_cases_every_field(self):
+        live = json.loads((ROOT / "data/warroom.json").read_text())
+        for c in R8_CASES + R7_PENDING:
+            for w in ({"news": [{"text": c}]}, {"lineup": [{"player": "Martin Emerson", "reason": c, "status": "ok"}]},
+                      {"waivers": [{"player": "X Y", "why": c}]}, {"waivers": [{"player": "X Y", "tag": c}]},
+                      {"waivers": [{"player": "X Y", "drop": c}]}, {"trades": [{"with": c, "why": "x"}]},
+                      {"trades": [{"with": "A", "give": [c]}]}, {"injuryWatch": [{"player": "Q R", "note": c}]},
+                      {"idp": [{"player": "Q R", "notes": c}]}, {"news": [{c: "x"}]},
+                      {**live, "news": live.get("news", []) + [{"text": c}]}):
+                with self.subTest(c=c, w=list(w)[:2]):
+                    self.gone(w, c)
+    def test_fragment_dropped(self):
+        o = json.loads(self.build({"news": [{"text": "Lake is out. Eddie bid $12 on Emerson. Processes Wed. Odell starts."}]}))
+        self.assertEqual(o["news"][0]["text"], "Lake is out. Odell starts.")
+    def test_completed_future_or_undated_excluded(self):
+        for r in ({"with": "Nathan", "give": ["Lloyd"], "get": ["X Y"], "status": "completed", "date": "2026-10-28"},
+                  {"with": "Nathan", "status": "completed"}, {"with": "Nathan", "status": "completed", "date": "2026-10-23"},
+                  {"with": "Nathan", "status": "completed", "date": "soon"}):
+            with self.subTest(r=r):
+                self.assertEqual(json.loads(self.build({"trades": [r]}))["trades"], [])
+    def test_completed_past_variants_publish(self):
+        for st in ("completed", "Completed ", "COMPLETED", "Completed\u200b"):
+            with self.subTest(st=st):
+                self.assertEqual(len(json.loads(self.build({"trades": [{"with": "Nathan", "status": st, "date": "2026-10-21"}]}))["trades"]), 1)
+    def test_other_statuses_stop_run(self):
+        for st in ("done", "processed", "executed", "c\u043empleted", "completed-pending", "Completed (pending)", None, 1):
+            with self.subTest(st=st):
+                self.assertIsNone(self.build({"trades": [{"with": "Nathan", "status": st, "date": "2026-10-21"}]}))
+    def test_pending_source_hard_fails(self):
+        for raw, name in (({"url": "https://www.fantrax.com/fantasy/league/x/transactions/pending"}, "r.json"),
+                          ({"url": "https://www.fantrax.com/fantasy/league/x/trade-offers"}, "r.json"),
+                          ({"url": "https://www.fantrax.com/fantasy/league/x/home"}, "fantrax-claims-queue.json"),
+                          ({"source": "Fantrax pending claims"}, "r.json")):
+            with self.subTest(raw=raw):
+                self.assertIsNone(self.build({}, raw=raw, raw_name=name))
+    def test_pending_keys_in_plan_hard_fail(self):
+        for w in ({"pendingClaims": []}, {"news": [{"pending": True}]}, {"claimsQueue": [1]}, {"offers": []}):
+            with self.subTest(w=w):
+                self.assertIsNone(self.build(w))
+    def test_private_names_from_raw(self):
+        raw = {"url": "https://www.fantrax.com/fantasy/league/x/home", "trades": {"eddies_pending_private": [{"player": "Odell Thurman"}]}}
+        o = bw.build({"week": 7, "news": [{"text": "Thurman looks good."}, {"text": "Lake out."}]}, DATA, NOW, raw=raw)
+        self.assertEqual([n["text"] for n in o["news"]], ["Lake out."])
+    def test_private_list_never_published(self):
+        o = self.build({"news": [{"text": "Lake out."}]})
+        self.assertNotIn("Emerson", o)
 
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)

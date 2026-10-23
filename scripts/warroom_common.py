@@ -302,7 +302,7 @@ STRICT_FIELDS = {
     "bids": {"player", "pos", "team", "bid", "status", "date", "id", "playerId", "fantraxId"},
     "claims": {"player", "pos", "team", "bid", "status", "date", "id", "playerId", "fantraxId"},
 }
-COMPLETED = {"completed", "complete", "processed", "executed", "accepted-and-processed", "accepted and processed"}
+COMPLETED = {"completed"}   # round 9: exactly "completed" (after fold + strip + lower); anything else stops the run
 # Free-text rules (round 5): WHOLE words / whole status phrases only, never fragments, so 'suspended', 'dependent',
 # 'must-spend', 'preview', 'reviewed', 'encounter', 'queued', 'submits', 'proposition', 'countering' are fine.
 # Text is fold()'ed first (NFKC, format chars removed, Cyrillic/Greek lookalikes -> Latin).
@@ -549,8 +549,8 @@ IN_FLIGHT = re.compile(r"\b(?:plac(?:e|ed|es|ing)|put|puts|sent|send\w*|process(
 SENTENCE = re.compile(r"(?:\b(?:[A-Z]|Jr|Sr|St|Mr|Mrs|Ms|Dr|vs)\.|[^.;!?\n\r\u2028\u2029\u2026])+[.;!?\n\r\u2028\u2029\u2026]*|[.;!?\n\r\u2028\u2029\u2026]+")
 SCRUB_SKIP_SECTIONS = {"schemaVersion", "sample", "asOf", "lastUpdated", "season", "week", "freshness", "lockTimes",
                        "byes", "fantraxRaw", "refreshNotes"}
-SCRUB_SKIP_KEYS = {"player", "pos", "nflTeam", "team", "id", "playerId", "fantraxId", "with", "give", "get", "date",
-                   "time", "status", "faabMin", "faabMax", "bid", "drop", "rank", "tag", "opponent", "url", "href",
+SCRUB_SKIP_KEYS = {"player", "pos", "nflTeam", "team", "id", "playerId", "fantraxId", "date",
+                   "time", "status", "faabMin", "faabMax", "bid", "rank", "opponent", "url", "href",
                    "verdict", "slot"}
 _OTHER = {}
 
@@ -591,9 +591,13 @@ def own_move_sentence(s, data_dir=None):
 
 def scrub_text(t, data_dir=None):
     """Returns (kept text, dropped sentences)."""
-    kept, dropped = [], []
+    kept, dropped, after_drop = [], [], False
     for m in SENTENCE.finditer(t):
-        (dropped if own_move_sentence(m.group(0), data_dir) else kept).append(m.group(0))
+        sen = m.group(0)
+        if own_move_sentence(sen, data_dir) or (after_drop and ORPHAN.match(fold(sen))):
+            dropped.append(sen); after_drop = True      # round 9: an orphan 'Processes Wed.' after a drop goes too
+        else:
+            kept.append(sen); after_drop = False
     return "".join(kept).strip(), [d.strip() for d in dropped]
 
 def scrub_own_moves(w, data_dir=None):
@@ -605,7 +609,12 @@ def scrub_own_moves(w, data_dir=None):
             log.extend((path, x) for x in d)
             return k
         if isinstance(o, dict):
-            return {key: (v if key in SCRUB_SKIP_KEYS else walk(v, f"{path}.{key}")) for key, v in o.items()}
+            out = {}
+            for key, v in o.items():
+                if isinstance(key, str) and any(own_move_sentence(m.group(0), data_dir) for m in SENTENCE.finditer(key)):
+                    log.append((f"{path}.{key}", "(key)")); continue     # round 9: keys are text too
+                out[key] = v if key in SCRUB_SKIP_KEYS else walk(v, f"{path}.{key}")
+            return out
         if isinstance(o, list):
             out = []
             for i, v in enumerate(o):
@@ -619,3 +628,135 @@ def scrub_own_moves(w, data_dir=None):
     if not isinstance(w, dict):
         return w, log
     return {k: (v if k in SCRUB_SKIP_SECTIONS else walk(v, f".{k}")) for k, v in w.items()}, log
+
+
+# ---------- round 9: input-side rules + private pending-name safety net ----------
+MOVE_SECTIONS = ("trades", "bids", "claims", "drops")
+PENDING_SOURCE = re.compile(r"pending|claims?[\s_-]*queue|trade[\s_-]*offers?|/offers?\b|/claims?\b|/bids?\b|proposal", re.I)
+
+def completed_past(r, today):
+    """A move record counts as done only with status exactly 'completed' AND a date strictly before today (PT)."""
+    if not isinstance(r, dict) or _status_norm(str(r.get("status", ""))) != "completed":
+        return False
+    try:
+        d = datetime.fromisoformat(str(r.get("date") or "")[:10]).date()
+    except ValueError:
+        return False                                   # missing / bad date = not completed
+    return d < today
+
+def ingest_moves(w, today):
+    """Round 9 INPUT rule: a move record that carries a status is ingested only if completed_past(); else excluded.
+    (Non-completed statuses already stop the run in the pending gate; this removes completed-but-future/undated.)
+    Returns (plan, excluded count)."""
+    out, n = dict(w), 0
+    for sec in MOVE_SECTIONS:
+        v = out.get(sec)
+        if isinstance(v, list):
+            keep = [r for r in v if not (isinstance(r, dict) and "status" in r) or completed_past(r, today)]
+            n += len(v) - len(keep)
+            out[sec] = keep
+    return out, n
+
+def check_raw_source(raw, raw_name=None):
+    """Round 9 hard fail: a Fantrax input that IS a pending / claim-queue / trade-offer page or file stops the run.
+    (Only the week header and scrape stamp are ever ingested from a roster scrape; its other keys are not read.)"""
+    if not isinstance(raw, dict):
+        return
+    for label, v in (("file", raw_name), ("url", raw.get("url")), ("page", raw.get("page")), ("source", raw.get("source"))):
+        if isinstance(v, str) and PENDING_SOURCE.search(fold(v)):
+            raise PendingError(f"Fantrax input {label} {v!r} is a pending/claims/offers source (run stopped, nothing written)")
+
+def pending_names(raw=None, path=None):
+    """Private pending-name list: players in our current pending claims/bids/offers. Read from the raw scrape's
+    private fields (eddies_pending_private, eddies_pending_names) and an optional private JSON file (list of names or
+    {"names": [...]}) that lives OUTSIDE the repo. Never written to data/."""
+    names = []
+    def add(x):
+        if isinstance(x, str) and x.strip():
+            names.append(x)
+        elif isinstance(x, dict):
+            for k in ("player", "name", "add", "get", "drop", "give"):
+                v = x.get(k)
+                for y in (v if isinstance(v, list) else [v]):
+                    add(y)
+        elif isinstance(x, list):
+            for y in x: add(y)
+    if isinstance(raw, dict):
+        for src in (raw, raw.get("trades") if isinstance(raw.get("trades"), dict) else {}):
+            for k in ("eddies_pending_private", "eddies_pending_names"):
+                add(src.get(k))
+    if path:
+        try:
+            add(json.loads(open(path).read()))
+        except FileNotFoundError:
+            pass
+    return names
+
+def _name_rx(names):
+    pats = set()
+    for n in names:
+        toks = re.findall(r"[a-z][a-z'-]+", fold(n).lower())
+        if not toks:
+            continue
+        pats.add(r"\s+".join(map(re.escape, toks)))
+        if len(toks[-1]) >= 4:
+            pats.add(re.escape(toks[-1]))           # last name alone ('Emerson') also matches
+    return re.compile(r"\b(?:" + "|".join(sorted(pats, key=len, reverse=True)) + r")\b") if pats else None
+
+ORPHAN = re.compile(r"^[\W\d_]*(?:(?:process\w*|runs?|clears?|goes|through|is|are|in|on|at|by|until|before|after|"
+                    r"mon|tue|wed|thu|fri|sat|sun|\w+day|tonight|tomorrow|today|am|pm|pt|noon|midnight|waivers?)\b[\W\d_]*)+$",
+                    re.I)
+
+def drop_named(t, rx):
+    """Drop sentences naming a pending player, plus any orphan timing/processing fragment right after a drop."""
+    kept, dropped, after_drop = [], [], False
+    for m in SENTENCE.finditer(t):
+        sen = m.group(0)
+        if rx.search(fold(sen).lower()) or (after_drop and ORPHAN.match(fold(sen))):
+            dropped.append(sen.strip()); after_drop = True
+        else:
+            kept.append(sen); after_drop = False
+    return "".join(kept).strip(), dropped
+
+def scrub_pending_names(o, names):
+    """Round 9 OUTPUT safety net over EVERY string value and key: a dict entry whose key names a pending player is
+    removed; a list item (record) with any non-free-text value naming one is removed; free text drops the sentence."""
+    rx = _name_rx(names)
+    log = []
+    if rx is None:
+        return o, log
+    TEXT = {"text", "why", "reason", "note", "notes", "stats", "title", "label", "summary", "detail"}
+    def hit(x):
+        return isinstance(x, str) and bool(rx.search(fold(x).lower()))
+    def walk(v, path, key=None):
+        if isinstance(v, str):
+            if key in TEXT or key is None:
+                k, d = drop_named(v, rx)
+                log.extend((path, x) for x in d)
+                return k
+            return v
+        if isinstance(v, dict):
+            out = {}
+            for k, x in v.items():
+                if hit(k):
+                    log.append((f"{path}.{k}", "(key)")); continue
+                out[k] = walk(x, f"{path}.{k}", k)
+            return out
+        if isinstance(v, list):
+            out = []
+            for i, x in enumerate(v):
+                p = f"{path}[{i}]"
+                if isinstance(x, dict) and any(hit(y) for kk, y in x.items() if kk not in TEXT) or \
+                   isinstance(x, dict) and any(hit(z) for kk, y in x.items() if kk not in TEXT and isinstance(y, list) for z in y):
+                    log.append((p, "(record)")); continue
+                if isinstance(x, str) and hit(x) and key not in TEXT:
+                    log.append((p, x)); continue
+                nx = walk(x, p, key)
+                if isinstance(x, str) and x.strip() and not nx:
+                    continue
+                if isinstance(x, dict) and isinstance(x.get("text"), str) and x["text"].strip() and not nx.get("text"):
+                    continue
+                out.append(nx)
+            return out
+        return v
+    return walk(o, ""), log
