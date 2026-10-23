@@ -37,13 +37,18 @@ NAME = r"(" + TOK + r" " + TOK + r"(?: (?:Jr\.|Sr\.|Jr|Sr|II|III|IV))?)"
 
 FINISH = re.compile(NAME + r" (?:finished (?:the game )?with|ended (?:the game )?with|took over|wore|inherited|took) the (?:green )?dot")
 BYE = re.compile(r"Green\s*Dot:\s*Bye\b(?!\s*week\s*\?)(?!\s*\?)", re.I)
-PAST = re.compile(r"last (?:year|season|week)|previously|in (?:19|20)\d\d|a year ago|used to|earlier this season|in week \d", re.I)
-def last_override(txt):
+PAST = re.compile(r"last (?:year|season|week)|previously|in (?:19|20)\d\d|a year ago|used to|earlier this season", re.I)
+WEEK_REF = re.compile(r"\b(?:in|during|for)\s+week\s*(\d+)", re.I)   # 'In Week 7, X took over' counts only if 7 is this week
+HYPO = re.compile(r"^\W*(?:if|unless|should|in case|assuming)\b|\b(?:if|unless) (?:he|they|she)\b|\bwould\b|\bcould\b|\bmight\b"
+                  r"|\bin practice\b|\bhypothetic", re.I)               # 'If he sits, X took over the dot in practice'
+def last_override(txt, week=None):
     """Final current-week override: the LAST 'X finished with / took over / wore the dot' match in a sentence
     that does not talk about another time (last year/season/week, previously, in 2025, earlier this season)."""
     best = None
     for sent in re.split(r"(?<=[.!?;])\s+", txt or ""):
-        if PAST.search(sent):
+        if PAST.search(sent) or HYPO.search(sent):
+            continue
+        if any(week is None or int(w) != week for w in WEEK_REF.findall(sent)):
             continue
         for m in FINISH.finditer(sent):
             best = m
@@ -105,7 +110,7 @@ def parse(body_html, week, prev=None, known=None):
         if m:
             dot, paren = m.group(1), m.group(2) or ""
             after = sec[m.end():m.end() + 400]
-            f = last_override(paren) or last_override(after)
+            f = last_override(paren, week) or last_override(after, week)
             if f and f.group(1) != dot:
                 note = f"Listed {dot}; post says {f.group(1)} ended up with the dot. "
                 dot = f.group(1)
@@ -114,7 +119,7 @@ def parse(body_html, week, prev=None, known=None):
                 note = f"Dot {paren.strip()} ({dot}). "
                 dot, shared = None, True
         else:
-            f = last_override(sec)
+            f = last_override(sec, week)
             dot = f.group(1) if f else None
         if dot and known is not None:
             from warroom_common import norm

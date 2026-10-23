@@ -1,7 +1,8 @@
-"""Bot Ops regression suite: every case Bot Ops failed us on in review rounds 1-3 (Oct 22 2026).
-Sources: /workspace/bot-ops/bad-data-test/results-2026-10-22-eddie-warroom-review{,-round2,-round3}.md
-One test method per case. Classes: Round1, Round2, Round3 (plus the 'no false exclusion' controls those rounds
-listed). scripts/eddie cases run that repo's build_free_agents.py from WU_EDDIE_DIR (default
+"""Bot Ops regression suite: every case Bot Ops failed us on in review rounds 1-4 (Oct 22 2026).
+Sources: /workspace/bot-ops/bad-data-test/results-2026-10-22-eddie-warroom-review{,-round2,-round3,-round4}.md
+One test method per case. Classes: Round1, Round2, Round3, Round4 (round-4 findings, fixed in round 5) and History
+(the 18 past versions of data/warroom.json on origin/main, saved under tests/fixtures/warroom-history/; every one
+must pass the pending gate), plus the 'no false exclusion' controls those rounds listed. scripts/eddie cases run that repo's build_free_agents.py from WU_EDDIE_DIR (default
 /workspace/scripts-eddie-wt, else /workspace/scripts/eddie); they are skipped ONLY on GitHub Actions, where the
 box repo does not exist. Run: python3 -m unittest tests/py/test_botops_regression.py -v"""
 import json, os, re, shutil, subprocess, sys, tempfile, unittest
@@ -284,6 +285,143 @@ class Round3(Base):
 add_cases(Round3, "b1_pending_blocked", R3_PENDING, lambda self, c: self.blocked(c))
 add_cases(Round3, "b2_name_blocked", R3_NAMES_BLOCK, lambda self, n: self.assertEqual(waiver_out([n]), [], n))
 add_cases(Round3, "b2_name_kept", R3_NAMES_KEEP, lambda self, n: self.kept(n))
+
+# ============================== ROUND 4 (fixed in round 5) ==============================
+def w_why(t): return {"waivers": [{"player": "Martin Emerson", "why": t}]}
+def t_why(t): return {"trades": [{"with": "A", "why": t}]}
+def d_reason(t): return {"drops": [{"player": "Brian Robinson", "reason": t}]}
+def news(t): return {"news": [{"text": t}]}
+R4_PASS_WORDS = ["suspended", "dependent", "must-spend", "not an offer", "0 pending claims", "preview", "reviewed",
+                 "queued", "encounter", "countering", "reviewed tape", "queued up", "in progress", "submits",
+                 "proposition", "sack/TFL-dependent", "Greenlaw suspended 1 game (appeal Tue)", "no pending",
+                 "0 pending trades", "Not a must-spend Saturday.", "Smack only, not an offer: Chase is on bye",
+                 "not a formal offer.", "role depends on Delpit.", "FAAB $60. Pending 0/0.", "pending 0/0",
+                 "0 pending claims, 0 pending trades", "offers flex upside", "awaits a soft matchup",
+                 "outstanding tape vs CHI", "Counter run scheme fits him"]
+R4_PASS_GENERAL = R4_PASS_WORDS + ["Greenlaw appeal pending; Dugger every-down MNF if upheld (pass on FAAB).",
+                                   "MRI results pending"]
+R4_BLOCK_TEXT = ["pending", "Waiver pending for Eddie", "Pending acceptance", "drop pending", "$ 12 pending",
+                 "pending-review", "in_review", "in review", "under review", "Countered", "counter offer sent",
+                 "counteroffer", "awaiting response", "awaiting approval", "PEND", "PENDING", "submitted to league",
+                 "proposed", "trade proposal", "claim in queue", "trade offer sent", "offer sent to Nathan",
+                 "not an offer; trade offer sent", "outstanding bid", "claim still outstanding", "outstanding",
+                 "\uff50\uff45\uff4e\uff44\uff49\uff4e\uff47",          # fullwidth
+                 "pen\u200bding", "pen\u200cding", "pen\u200dding", "pen\u2060ding", "pen\ufeffding", "pen\u00adding",
+                 "p\u0435nding bid",                                         # Cyrillic e
+                 "\u0440ending"]                                             # Cyrillic p
+R4_BLOCK_STATUS = ["pending", "Pending ", "PEND", "pending-review", "in_review", "Countered", "awaiting response",
+                   "queued", "open", "proposed", "accepted", "p\u0435nding", "c\u043empleted", "", 0, 1, 1.5, None,
+                   "\uff50\uff45\uff4e\uff44\uff49\uff4e\uff47"]
+R4_BLOCK_GENERAL = ["Eddie bid $40 on X ... pending", "PEND", "awaiting approval of claim", "\uff30\uff25\uff2e\uff24",
+                    "p\u0435nding bid", "pen\u200bding claim", "\uff50\uff45\uff4e\uff44\uff49\uff4e\uff47 trade",
+                    "outstanding claim on X"]
+R4_NAMES_KEEP = ["KC Concepcion", "KC Concepcion Jr.", "Jordan van den Berg", "Darius Cooper", "Keith Cooper",
+                 "Jonathon Cooper", "Omar Cooper", "Omar Cooper Jr.", "Cooper DeJean", "Cooper Kupp", "Cooper McDonald",
+                 "Cooper Rush", "Thomas Booker", "Thomas Booker IV", "Kendall Booker", "Alex Booker", "Ed Cooper",
+                 "Eric Cooper", "Elijah Cooper", "Cooper Austin"]
+# Season-ending Cooper in any disguise: out of waiver recs AND the FA pool.
+R4_NAMES_BLOCK = ["Edgerrin Coo\u200bper", "Edgerrin Coo\u00adper", "\ufeffEdgerrin Cooper", "Edgerrin\u2060 Cooper",
+                  "\uff25\uff44\uff47\uff45\uff52\uff52\uff49\uff4e \uff23\uff4f\uff4f\uff50\uff45\uff52",   # fullwidth
+                  "Edgerrin Cooper|GB", "Cooper E.", "Cooper,Edgerrin", "Edgerrin Cooper 52", "Edgerrin Cooper"]
+# Non-Latin letters (Cyrillic/Greek lookalikes): a waiver rec with one STOPS the run (fail closed); the FA pool drops it.
+R4_NAMES_NONLATIN = ["Edgerrin C\u043eoper", "\u0415dgerrin Cooper", "Edg\u0435rrin Cooper (GB)", "Austin B\u043eoker",
+                     "Edgerrin Co\u03bfper", "Darius C\u043eoper"]
+def roster_names():
+    names = set()
+    def walk(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if k in ("player", "name") and isinstance(v, str): names.add(v)
+                else: walk(v)
+        elif isinstance(o, list):
+            for v in o: walk(v)
+    for f in DATA.rglob("*.json"):
+        try: walk(json.loads(f.read_text()))
+        except Exception: pass
+    return names
+
+class Round4(Base):
+    def passes(self, w):
+        bw.build({"week": 7, **w}, DATA, NOW)
+    def test_status_key_casing_blocks(self): self.blocked({"waivers": [{"player": "Martin Emerson", "Status": "completed"}]})
+    def test_completed_status_passes(self): self.passes({"trades": [{"with": "A", "status": "Completed"}]})
+    def test_unknown_top_level_casing_blocks(self):
+        for k in ("Waivers", "WAIVERS", "Trades"): self.blocked({k: []})
+    def test_nested_give_list_pending_blocks(self): self.blocked({"trades": [{"with": "A", "give": [["pending"]]}]})
+    def test_bid_as_string_blocks(self): self.blocked({"bids": ["Martin Emerson $3"]})
+    def test_drops_not_list_blocks(self): self.blocked({"drops": {"player": "X"}})
+    def test_pending_keys_in_idp_and_boxsafety_block(self):
+        self.blocked({"idp": [{"player": "X", "pendingClaim": 1}]}); self.blocked({"boxSafety": {"outstanding": []}})
+    def test_nested_eddie_outstanding_blocks(self): self.blocked({"lineup": [{"eddie": {"outstanding": [{"type": "claim"}]}}]})
+    def test_general_numeric_status_blocks(self):
+        for v in (0, 1, 2.5, True, [1], {"x": 1}): self.blocked({"lineup": [{"player": "X", "status": v}]})
+    def test_general_string_and_null_status_ok(self):
+        self.passes({"lineup": [{"player": "X", "status": "Suspended"}], "injuryWatch": [{"player": "Y", "status": None}]})
+    def test_general_status_value_words_block(self):
+        for v in ("pending-review", "in_review", "queued", "Awaiting approval", "Countered", "p\u0435nding"):
+            self.blocked({"lineup": [{"player": "X", "status": v}]})
+    def test_roster_sweep_only_booker_and_cooper_excluded(self):
+        names = roster_names(); self.assertGreaterEqual(len(names), 2000)
+        se, dnp = wc.season_ending(DATA), wc.do_not_pitch(DATA, 7, NOW.date())
+        self.assertEqual(sorted(n for n in names if se.match(n) or dnp.match(n)), ["Austin Booker", "Edgerrin Cooper"])
+        self.assertIn("KC Concepcion", names); self.assertTrue(wc.identifiable("KC Concepcion"))
+    def test_van_den_berg_keeps_den(self): self.assertEqual(wc.name_tokens("Jordan van den Berg"), ["jordan", "van", "den", "berg"])
+    def test_kc_concepcion_tokens(self): self.assertEqual(wc.name_tokens("KC Concepcion (WR, CLE)"), ["kc", "concepcion"])
+    def test_team_code_still_stripped_elsewhere(self): self.assertEqual(wc.name_tokens("Cooper KC"), ["cooper"])
+    def test_cyrillic_name_unidentifiable(self):
+        self.assertFalse(wc.identifiable("Edgerrin C\u043eoper")); self.assertEqual(wc.name_tokens("Edgerrin C\u043eoper"), [])
+    def test_fa_output_never_has_cyrillic_cooper(self):
+        out = fa_out(["Edgerrin C\u043eoper", "Darius Cooper", "KC Concepcion"])
+        self.assertEqual([p["player"] for p in out], ["Darius Cooper", "KC Concepcion"])
+    def test_prep_strips_zero_width_and_nfkc(self):
+        self.assertEqual(wc.prep("\uff50en\u200b\u200c\u200d\u2060\ufeff\u00adding"), "pending")
+    def test_green_dot_current_week_in_week_n_counts(self):
+        t, u = rgd.parse("<h2>Atlanta Falcons</h2><p>Week 7 Green Dot: Divine Deablo. In Week 7, Josh Woods took over the dot.</p>", 7)
+        self.assertEqual(t[0]["greenDot"], "Josh Woods")
+    def test_green_dot_other_week_ignored(self):
+        t, u = rgd.parse("<h2>Atlanta Falcons</h2><p>Week 7 Green Dot: Divine Deablo. In Week 6, Josh Woods took over the dot.</p>", 7)
+        self.assertEqual(t[0]["greenDot"], "Divine Deablo")
+    def test_green_dot_hypothetical_ignored(self):
+        t, u = rgd.parse("<h2>Atlanta Falcons</h2><p>Week 7 Green Dot: Divine Deablo. If he sits, Josh Woods took over the dot in practice.</p>", 7)
+        self.assertEqual(t[0]["greenDot"], "Divine Deablo")
+    def test_runner_history_fixture_full_dry_run_rc0(self):
+        r = Path(tempfile.mkdtemp()) / "repo"; shutil.copytree(ROOT, r, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        shutil.copytree(DATA, r / "data", dirs_exist_ok=True)
+        shutil.copy(HIST / "20261017-150633-dba8a40.json", r / "data/warroom.json")   # 'not an offer' + 'Pending 0/0'
+        before = (r / "data/warroom.json").read_bytes()
+        self.assertEqual(rw.main(["--mode", "full", "--skip-tests", "--dry-run", "--root", str(r)]), 0)
+        self.assertEqual((r / "data/warroom.json").read_bytes(), before)
+    @eddie_case
+    def test_eddie_round4_names(self):
+        rc, out = eddie(SE_GOOD, ["KC Concepcion", "Jordan van den Berg", "Edgerrin C\u043eoper", "Edgerrin Coo\u200bper",
+                                  "\uff25\uff44\uff47\uff45\uff52\uff52\uff49\uff4e \uff23\uff4f\uff4f\uff50\uff45\uff52", "Omar Cooper Jr.", "Cooper Rush"])
+        self.assertEqual(rc, 0); self.assertEqual([p["player"] for p in out], ["KC Concepcion", "Jordan van den Berg", "Omar Cooper Jr.", "Cooper Rush"])
+add_cases(Round4, "pass_waiver_why", R4_PASS_WORDS, lambda self, t: self.passes(w_why(t)))
+add_cases(Round4, "pass_trade_why", R4_PASS_WORDS, lambda self, t: self.passes(t_why(t)))
+add_cases(Round4, "pass_drop_reason", R4_PASS_WORDS, lambda self, t: self.passes(d_reason(t)))
+add_cases(Round4, "pass_news", R4_PASS_GENERAL, lambda self, t: self.passes(news(t)))
+add_cases(Round4, "block_waiver_why", R4_BLOCK_TEXT, lambda self, t: self.blocked(w_why(t)))
+add_cases(Round4, "block_trade_why", R4_BLOCK_TEXT, lambda self, t: self.blocked(t_why(t)))
+add_cases(Round4, "block_status", [(sec, v) for sec in ("waivers", "trades", "drops", "bids", "claims") for v in R4_BLOCK_STATUS],
+          lambda self, c: self.blocked({c[0]: [{"player": "Martin Emerson", "status": c[1]} if c[0] != "trades" else {"with": "A", "status": c[1]}]}))
+add_cases(Round4, "block_general", R4_BLOCK_GENERAL, lambda self, t: self.blocked(news(t)))
+add_cases(Round4, "name_kept", R4_NAMES_KEEP, lambda self, n: (self.kept(n), self.assertEqual(len(fa_out([n])), 1, n)))
+add_cases(Round4, "name_blocked", R4_NAMES_BLOCK, lambda self, n: self.excluded(n))
+add_cases(Round4, "name_nonlatin_rejected", R4_NAMES_NONLATIN,
+          lambda self, n: (self.blocked({"waivers": recs([n])}), self.assertEqual(fa_out([n]), [], n), self.assertFalse(wc.identifiable(n))))
+add_cases(Round4, "dnp_booker_out_of_recs", ["Austin Booker", "Booker, Austin (CHI)"], lambda self, n: self.assertEqual(waiver_out([n]), [], n))
+add_cases(Round4, "not_matched_by_excluders", ["Edge Cooper", "Ed Cooper", "Cooper Austin", "Kendall Booker", "Jordan van den Berg"],
+          lambda self, n: self.assertFalse(wc.season_ending(DATA).match(n) or wc.do_not_pitch(DATA, 7, NOW.date()).match(n), n))
+
+# ============================== HISTORY: 18 past data/warroom.json on origin/main ==============================
+HIST = ROOT / "tests/fixtures/warroom-history"
+HIST_FILES = sorted(HIST.glob("*.json"))
+class History(unittest.TestCase):
+    def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
+add_cases(History, "gate_passes", [f.name for f in HIST_FILES],
+          lambda self, n: self.assertEqual(wc.find_pending(json.loads((HIST / n).read_text())), [], n))
+add_cases(History, "build_passes", [f.name for f in HIST_FILES],
+          lambda self, n: bw.build(json.loads((HIST / n).read_text()), DATA, NOW))
 
 if __name__ == "__main__":
     unittest.main()

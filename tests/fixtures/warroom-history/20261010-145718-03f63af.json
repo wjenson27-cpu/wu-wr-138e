@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "sample": false,
+  "asOf": "2026-10-10T14:55:00-07:00",
+  "season": 2026,
+  "week": 5,
+  "opponent": {
+    "teamId": "doubtpfizer",
+    "name": "Mrs. Doubtpfizer"
+  },
+  "freshness": {
+    "plan": "2026-10-10T14:55:00-07:00",
+    "roster": "2026-10-10T14:55:00-07:00",
+    "scores": "2026-10-10T14:55:00-07:00",
+    "waivers": "2026-10-10T14:55:00-07:00",
+    "news": "2026-10-10T14:55:00-07:00"
+  },
+  "lockTimes": [
+    {
+      "label": "Sunday early",
+      "at": "2026-10-11T10:00:00-07:00"
+    },
+    {
+      "label": "Sunday late",
+      "at": "2026-10-11T13:05:00-07:00"
+    },
+    {
+      "label": "SNF",
+      "at": "2026-10-11T17:20:00-07:00"
+    },
+    {
+      "label": "Monday",
+      "at": "2026-10-12T17:15:00-07:00"
+    }
+  ],
+  "lineup": [
+    {
+      "slot": "QB",
+      "player": "Trevor Lawrence",
+      "pos": "QB",
+      "nflTeam": "JAX",
+      "verdict": "START",
+      "reason": "Only QB; PHI missing Barkley and DeVonta helps the script.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "RB",
+      "player": "Brian Robinson Jr.",
+      "pos": "RB",
+      "nflTeam": "ATL",
+      "verdict": "START",
+      "reason": "Lead back; no injury flag.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "WR",
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "nflTeam": "NYJ",
+      "verdict": "START",
+      "reason": "Primary Jets WR with Mitchell out; watch MetLife weather.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "TE",
+      "player": "Brock Bowers",
+      "pos": "TE",
+      "nflTeam": "LV",
+      "verdict": "START",
+      "reason": "Cleared off injury report; TE premium vs thin NE secondary.",
+      "injury": "",
+      "practice": "Full"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Rhamondre Stevenson",
+      "pos": "RB",
+      "nflTeam": "NE",
+      "verdict": "START",
+      "reason": "Q but said ready to go; Croskey ready if inactive ~8:30 AM PT.",
+      "injury": "Q",
+      "practice": "Limited then Fri go"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Tyler Warren",
+      "pos": "TE",
+      "nflTeam": "IND",
+      "verdict": "START",
+      "reason": "Second TE still scores in 1.5 PPR + FD.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "FLEX",
+      "player": "Chimere Dike",
+      "pos": "WR",
+      "nflTeam": "TEN",
+      "verdict": "SWAP",
+      "reason": "Prefer Dike over Bourne for KR/PR (1 per 10). Flip into the active flex.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DL",
+      "player": "Tuli Tuipulotu",
+      "pos": "DL",
+      "nflTeam": "LAC",
+      "verdict": "START",
+      "reason": "Every-down edge; Williams is the reserve pivot.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "LB",
+      "player": "Fred Warner",
+      "pos": "LB",
+      "nflTeam": "SF",
+      "verdict": "START",
+      "reason": "Green dot (Woellert W4). Auto-start.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DB",
+      "player": "Evan Williams",
+      "pos": "DB",
+      "nflTeam": "GB",
+      "verdict": "START",
+      "reason": "Box safety; DB1.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DB",
+      "player": "Julian Love",
+      "pos": "DB",
+      "nflTeam": "SEA",
+      "verdict": "START",
+      "reason": "Start Love in a DB slot; Lake stays ID flex if active MNF.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "IDP",
+      "player": "Jordyn Brooks",
+      "pos": "LB",
+      "nflTeam": "MIA",
+      "verdict": "START",
+      "reason": "Full-time (not green dot; Rodriguez has it). Tackle floor real.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "IDP",
+      "player": "Quentin Lake",
+      "pos": "DB",
+      "nflTeam": "LAR",
+      "verdict": "WATCH",
+      "reason": "Q hip MNF; practiced Sat; Woellert still likes him. Lock Mon 5:15 PM PT.",
+      "injury": "Q",
+      "practice": "Sat practice after DNP Thu/Fri"
+    },
+    {
+      "slot": "IDP",
+      "player": "Trenton Simpson",
+      "pos": "LB",
+      "nflTeam": "BAL",
+      "verdict": "START",
+      "reason": "Streamer with rate; not full-time. Prefer over Gray.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Kendrick Bourne",
+      "pos": "WR",
+      "nflTeam": "ARI",
+      "verdict": "SIT",
+      "reason": "Just added; sit him for Dike's return juice unless you prefer ARI snaps.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Jacory Croskey-Merritt",
+      "pos": "RB",
+      "nflTeam": "WAS",
+      "verdict": "SWAP",
+      "reason": "Only if Stevenson is inactive Sunday morning.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Jalen Coker",
+      "pos": "WR",
+      "nflTeam": "CAR",
+      "verdict": "SIT",
+      "reason": "Bye. Keep him.",
+      "injury": "Q",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Breece Hall",
+      "pos": "RB",
+      "nflTeam": "NYJ",
+      "verdict": "SIT",
+      "reason": "OUT again (quad).",
+      "injury": "O",
+      "practice": "Out"
+    },
+    {
+      "slot": "BN",
+      "player": "Leonard Williams",
+      "pos": "DL",
+      "nflTeam": "SEA",
+      "verdict": "SIT",
+      "reason": "Clear ankle; behind Tuli this week.",
+      "injury": "",
+      "practice": "Full Fri"
+    },
+    {
+      "slot": "BN",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "nflTeam": "TEN",
+      "verdict": "SIT",
+      "reason": "Woellert: base-only. Bench.",
+      "injury": "",
+      "practice": ""
+    }
+  ],
+  "injuryWatch": [
+    {
+      "player": "Rhamondre Stevenson",
+      "tag": "Q \u2014 knee",
+      "practice": "Fri go",
+      "note": "Said ready to go. Confirm inactive list ~8:30 AM PT Sunday before early lock."
+    },
+    {
+      "player": "Quentin Lake",
+      "tag": "Q \u2014 hip",
+      "practice": "Sat practice",
+      "note": "MNF only designation. McVay positive; Woellert would still start."
+    },
+    {
+      "player": "Breece Hall",
+      "tag": "O \u2014 quad",
+      "practice": "Out",
+      "note": "Second straight miss; week-to-week. Reserve."
+    },
+    {
+      "player": "Jalen Coker",
+      "tag": "Q \u2014 quad / BYE",
+      "practice": "",
+      "note": "CAR bye Week 5. Keep."
+    },
+    {
+      "player": "Zach Charbonnet",
+      "tag": "IR \u2014 knee",
+      "practice": "Out W5",
+      "note": "IR slot; OUT vs SF."
+    },
+    {
+      "player": "Jordyn Tyson",
+      "tag": "IR \u2014 hamstring",
+      "practice": "",
+      "note": "IR slot."
+    },
+    {
+      "player": "Travis Etienne",
+      "tag": "IR \u2014 hamstring",
+      "practice": "",
+      "note": "IR slot."
+    }
+  ],
+  "byes": [
+    {
+      "week": 5,
+      "players": [
+        {
+          "player": "Jalen Coker",
+          "pos": "WR",
+          "nflTeam": "CAR"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "players": []
+    }
+  ],
+  "waivers": [
+    {
+      "rank": 1,
+      "player": "Jordan Mason",
+      "pos": "RB",
+      "nflTeam": "MIN",
+      "why": "Still on the wire at 91% rostered. Handcuff path if lead back misses. Not a must-spend Saturday.",
+      "stats": "13 FP/G on season sample (Fantrax PM).",
+      "faabMin": 6,
+      "faabMax": 12,
+      "bid": 9,
+      "drop": "Jacory Croskey-Merritt",
+      "tag": "LIKE"
+    },
+    {
+      "rank": 2,
+      "player": "Del'Shawn Phillips",
+      "pos": "LB",
+      "nflTeam": "LAC",
+      "why": "86% snaps Week 4 per Woellert; deeper-league LB. Only if you want Gray insurance.",
+      "stats": "13 FP/G season (Fantrax).",
+      "faabMin": 1,
+      "faabMax": 4,
+      "bid": 2,
+      "drop": "Cedric Gray",
+      "tag": "DART"
+    }
+  ],
+  "drops": [
+    {
+      "rank": 1,
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "reason": "Base-only per Woellert; fourth LB."
+    },
+    {
+      "rank": 2,
+      "player": "Kendrick Bourne",
+      "pos": "WR",
+      "reason": "New FA add; Dike/Wilson/Coker ahead long-term."
+    },
+    {
+      "rank": 3,
+      "player": "Jacory Croskey-Merritt",
+      "pos": "RB",
+      "reason": "Stevenson pivot only this week."
+    }
+  ],
+  "trades": [
+    {
+      "with": "Morningside Muff Divers",
+      "give": [
+        "Tyler Warren"
+      ],
+      "get": [
+        "RB help"
+      ],
+      "why": "They list LB on the block and need RB. Warren starts in TE premium; ask for a back that upgrades you past Croskey/Bourne depth."
+    }
+  ],
+  "idp": [
+    {
+      "nflTeam": "SF",
+      "greenDot": "Fred Warner",
+      "notes": "Every-down. Start. (Woellert W4 \u2014 STALE pending W5 list)"
+    },
+    {
+      "nflTeam": "MIA",
+      "greenDot": "Jacob Rodriguez",
+      "notes": "Brooks is full-time beside him; start Brooks."
+    },
+    {
+      "nflTeam": "BAL",
+      "greenDot": "Roquan Smith",
+      "notes": "Simpson not full-time; streamer OK over Gray."
+    },
+    {
+      "nflTeam": "TEN",
+      "greenDot": "Anthony Hill",
+      "notes": "Gray base-only; sit."
+    }
+  ],
+  "boxSafety": [
+    {
+      "player": "Evan Williams",
+      "nflTeam": "GB",
+      "note": "Box. DB to start."
+    },
+    {
+      "player": "Quentin Lake",
+      "nflTeam": "LAR",
+      "note": "Near box; hip Q for MNF \u2014 Woellert still likes him if active."
+    },
+    {
+      "player": "Julian Love",
+      "nflTeam": "SEA",
+      "note": "Fine as second DB."
+    }
+  ],
+  "news": [
+    {
+      "source": "Fantrax",
+      "time": "2026-10-10T08:23:00-07:00",
+      "text": "Eddies +Kendrick Bourne / \u2212Brian Thomas (FA add, $0). Bourne active flex; Dike moved to reserve."
+    },
+    {
+      "source": "Mike Reiss / Mark Daniels",
+      "time": "2026-10-09T11:58:00-07:00",
+      "text": "Rhamondre Stevenson (knee): \u201cReady to go.\u201d Still listed Q."
+    },
+    {
+      "source": "Sarah Barshop / Mike Woellert",
+      "time": "2026-10-10T13:25:00-07:00",
+      "text": "Quentin Lake practiced Sat after Thu/Fri DNP; Q for MNF; Woellert: good Monday sign, still play Lake."
+    },
+    {
+      "source": "NBC Sports",
+      "time": "2026-10-09T00:00:00-07:00",
+      "text": "Brock Bowers cleared off injury report. Breece Hall OUT (quad) again."
+    },
+    {
+      "source": "Mike Woellert Substack",
+      "time": "2026-10-06T00:00:00-07:00",
+      "text": "STALE green-dot list (Week 4): Warner green-dot; Brooks full-time not dot; Simpson not full-time; Gray base-only bench."
+    }
+  ]
+}

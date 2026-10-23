@@ -8,6 +8,35 @@ from zoneinfo import ZoneInfo
 PT = ZoneInfo("America/Los_Angeles")
 WEEK1 = date(2026, 9, 10)  # Thursday; weeks run Thu-Wed
 
+# ---------- text normalization (round 5) ----------
+# NFKC folds fullwidth/compatibility forms ('ｐｅｎｄｉｎｇ' -> 'pending'); every format char (Unicode category Cf:
+# U+200B-U+200D, U+2060, U+FEFF, soft hyphen U+00AD, bidi marks...) is removed so 'pen\u200bding' -> 'pending'.
+_CONFUSABLE = str.maketrans({
+    # Cyrillic lookalikes
+    "\u0430": "a", "\u0435": "e", "\u043e": "o", "\u0440": "p", "\u0441": "c", "\u0443": "y", "\u0445": "x",
+    "\u0456": "i", "\u0458": "j", "\u0455": "s", "\u0501": "d", "\u04bb": "h", "\u043a": "k", "\u043c": "m",
+    "\u043d": "h", "\u0442": "t", "\u0432": "b", "\u0457": "i", "\u0491": "r", "\u0410": "A", "\u0412": "B",
+    "\u0415": "E", "\u041a": "K", "\u041c": "M", "\u041d": "H", "\u041e": "O", "\u0420": "P", "\u0421": "C",
+    "\u0422": "T", "\u0425": "X", "\u0423": "Y", "\u0406": "I", "\u0408": "J", "\u0405": "S",
+    # Greek lookalikes
+    "\u03bf": "o", "\u03b1": "a", "\u03b5": "e", "\u03b9": "i", "\u03ba": "k", "\u03bd": "v", "\u03c1": "p",
+    "\u03c4": "t", "\u03c5": "u", "\u03c7": "x", "\u0391": "A", "\u0392": "B", "\u0395": "E", "\u0396": "Z",
+    "\u0397": "H", "\u0399": "I", "\u039a": "K", "\u039c": "M", "\u039d": "N", "\u039f": "O", "\u03a1": "P",
+    "\u03a4": "T", "\u03a5": "Y", "\u03a7": "X",
+})
+def prep(s):
+    """NFKC + drop every format (Cf) char + NBSP -> space. Use before ANY pending check or name match."""
+    s = unicodedata.normalize("NFKC", str(s if s is not None else ""))
+    return "".join(" " if ch == "\u00a0" else ch for ch in s if unicodedata.category(ch) != "Cf")
+
+def non_latin(s):
+    """True if the text has any letter that is not Latin script (Cyrillic, Greek, ...)."""
+    return any(unicodedata.category(ch).startswith("L") and "LATIN" not in unicodedata.name(ch, "") for ch in prep(s))
+
+def fold(s):
+    """prep() + map Cyrillic/Greek lookalikes to Latin, so 'p\u0435nding' is read as 'pending'."""
+    return prep(s).translate(_CONFUSABLE)
+
 class ListError(Exception): pass
 class PendingError(Exception): pass
 
@@ -127,14 +156,66 @@ POS_CODES = {"qb", "rb", "wr", "te", "dl", "de", "dt", "edge", "lb", "ilb", "olb
              "idp", "flex", "ir", "pup", "nfi", "res", "sus", "out", "dnp", "bn", "def", "dst"}
 NAME_SUFFIX = {"jr", "sr", "ii", "iii", "iv", "v"}
 
-def name_tokens(name):
-    """Letter-only tokens. Split on ANY non-letter (|, comma, period, parens, dash, digits, spaces); apostrophes are
-    removed first so Ja'Marr stays one token. Known team/position/status codes and Jr./III suffixes are dropped
-    (multi-letter codes only; single letters are kept as initials)."""
-    n = unicodedata.normalize("NFKD", str(name or "")).encode("ascii", "ignore").decode().lower()
+# Real player names that contain a team/position code as a name part (KC Concepcion, Jordan van den Berg).
+# Seeded here and extended from every name found in data/ (load_known_names), so those tokens are never stripped.
+_KNOWN_CODE_NAMES = {("kc", "concepcion"), ("jordan", "van", "den", "berg")}
+_KNOWN_LOADED = set()
+# Rec/output/exclude files are not roster sources (a rec can't vouch for its own name).
+KNOWN_SKIP = {"warroom.json", "free-agents.json", "season-ending.json", "do-not-pitch.json", "green-dots.json",
+              "green-dots-status.json"}
+NAME_FIELDS = ("player", "name", "fullName", "playerName", "greenDot")
+
+def _raw_tokens(name):
+    n = unicodedata.normalize("NFKD", prep(name)).encode("ascii", "ignore").decode().lower()
     n = re.sub(r"['`]", "", n.replace("\u2019", "'"))
-    toks = re.findall(r"[a-z]+", n)
-    return [t for t in toks if not (len(t) > 1 and (t in TEAM_CODES or t in POS_CODES or t in NAME_SUFFIX))]
+    return re.findall(r"[a-z]+", n)
+
+def _is_code(t):
+    return len(t) > 1 and (t in TEAM_CODES or t in POS_CODES)
+
+def load_known_names(data_dir):
+    """Add every real name in data_dir/**/*.json (player/name/... fields) that contains a code token."""
+    d = Path(data_dir)
+    if not d.is_dir() or str(d.resolve()) in _KNOWN_LOADED:
+        return
+    _KNOWN_LOADED.add(str(d.resolve()))
+    def walk(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if k in NAME_FIELDS and isinstance(v, str):
+                    t = [x for x in _raw_tokens(re.sub(r"\([^)]*\)", " ", v)) if x not in NAME_SUFFIX]
+                    if len(t) >= 2 and not non_latin(v) and any(_is_code(x) for x in t):
+                        _KNOWN_CODE_NAMES.add(tuple(t))
+                else:
+                    walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    for f in d.rglob("*.json"):
+        if f.name in KNOWN_SKIP:
+            continue
+        try:
+            walk(json.loads(f.read_text()))
+        except Exception:
+            continue
+
+def name_tokens(name):
+    """Letter-only tokens. Text is prep()'d (NFKC, format chars removed) first. A name with ANY non-Latin letter
+    (e.g. a Cyrillic 'о' in 'Edgerrin C\u043eoper') returns [] = unidentifiable, so it is never published.
+    Split on ANY non-letter (|, comma, period, parens, dash, digits, spaces); apostrophes are removed first so
+    Ja'Marr stays one token. Known team/position/status codes and Jr./III suffixes are dropped (multi-letter only;
+    single letters are kept as initials) EXCEPT where the code is part of a real player's name found in data/
+    (KC Concepcion keeps 'kc', Jordan van den Berg keeps 'den')."""
+    if non_latin(name):
+        return []
+    toks = _raw_tokens(name)
+    keep = set()
+    for kn in _KNOWN_CODE_NAMES:
+        L = len(kn)
+        for i in range(len(toks) - L + 1):
+            if tuple(toks[i:i + L]) == kn:
+                keep |= set(range(i, i + L)); break
+    return [t for i, t in enumerate(toks) if i in keep or not (len(t) > 1 and (_is_code(t) or t in NAME_SUFFIX))]
 
 class Excluder:
     """Token matching. An entry {first ... last} matches a rec when
@@ -172,6 +253,7 @@ class Excluder:
         return False
 
 def season_ending(data_dir):
+    load_known_names(data_dir)
     pl = _load_list(Path(data_dir) / "season-ending.json", "season-ending")
     ex = Excluder(pl)
     missing = [r["name"] for r in REQUIRED_SEASON_ENDING if not ex.match(r["name"])]
@@ -181,6 +263,7 @@ def season_ending(data_dir):
 
 def do_not_pitch(data_dir, week, today=None):
     today = today or now_pt().date()
+    load_known_names(data_dir)
     keep = []
     # do-not-pitch MAY be empty, but only as an explicit valid object: {"players": []}.
     for p in _load_list(Path(data_dir) / "do-not-pitch.json", "do-not-pitch", allow_empty=True):
@@ -210,7 +293,26 @@ STRICT_FIELDS = {
     "claims": {"player", "pos", "team", "bid", "status", "date", "id", "playerId", "fantraxId"},
 }
 COMPLETED = {"completed", "complete", "processed", "executed", "accepted-and-processed", "accepted and processed"}
-STRICT_WORDS = re.compile(r"pend|review|counter|await|submit|outstanding|queue|propos|offer(?:ed)?\b|in.?progress", re.I)
+# Free-text rules (round 5): WHOLE words / whole status phrases only, never fragments, so 'suspended', 'dependent',
+# 'must-spend', 'preview', 'reviewed', 'encounter', 'queued', 'submits', 'proposition', 'countering' are fine.
+# Text is fold()'ed first (NFKC, format chars removed, Cyrillic/Greek lookalikes -> Latin).
+TXT_ZERO = re.compile(r"\b(?:0|no|zero|none)\s+pending\b(?:\s+(?:claims?|bids?|trades?|offers?|waivers?|moves?))?"
+                      r"|\bpending\s*[:=]?\s*(?:0|none)(?:\s*/\s*0)*(?![\d.])", re.I)
+NEG_OFFER = re.compile(r"\b(?:not|no|never|without|isn'?t)\s+(?:an?\s+|the\s+|any\s+)?(?:formal\s+|real\s+|actual\s+|trade\s+)?offers?\b", re.I)
+STRICT_TXT = re.compile(
+    r"\bpend(?:ing)?\b"                                   # pending / PEND
+    r"|\bawaiting\b|\bawait(?:s|ed)?\s+(?:approval|response|acceptance|processing|league|commish|commissioner|review)\b"
+    r"|\bcountered\b|\bcounter[\s_-]?offer(?:s|ed)?\b"   # Countered / counter offer / counteroffer
+    r"|\bsubmitted\b"
+    r"|\bpropos(?:e|es|ed|al|als|ing)\b"                  # proposed / proposal (not 'proposition')
+    r"|\b(?:in|under|league|for)[\s_-]*review\b"          # in review / in_review / under review / league review
+    r"|\b(?:in|on)\s+(?:the\s+)?(?:waiver\s+|claims?\s+|bid\s+)?queue\b"
+    # an offer as a TRANSACTION (negated 'not an offer' removed first); the verb 'offers upside' is fine
+    r"|\btrade\s+offers?\b|\boffers?\s+(?:sent|made|out|submitted|extended|open|on\s+the\s+table)\b"
+    r"|\b(?:sent|send|sending|made|make|making|extend(?:ed)?|placed|got|received|accept(?:ed)?)\s+(?:an?\s+|the\s+|our\s+|his\s+)?offers?\b"
+    r"|\boffered\s+(?:to|him|them|us|me|an?|\$|\d)"
+    r"|\boutstanding\s+(?:bids?|claims?|trades?|offers?|waivers?|faab)\b"
+    r"|\b(?:still|is|are|remains?)\s+outstanding\b|^\s*outstanding\s*$", re.I)
 # --- top-level schema of warroom.json; any other top-level key is unknown and fails the run ---
 WARROOM_KEYS = {"schemaVersion", "sample", "asOf", "lastUpdated", "season", "week", "opponent", "freshness",
                 "lockTimes", "lineup", "injuryWatch", "byes", "waivers", "drops", "trades", "idp", "boxSafety", "news",
@@ -220,11 +322,31 @@ FA_FIELDS = {"player", "pos", "team", "fpg", "last3Fpg", "rosteredPct", "id", "p
 # --- general sections: narrow rule ---
 PENDING_KEY = re.compile(r"pending|claimsqueue|claims?$|bids?$|offers?$|queue|outstanding|submitted|proposal", re.I)
 STATUS_KEY = re.compile(r"(status|state)$", re.I)
-PENDING_VAL = re.compile(r"pend|propos|submit|queue|review|await|counter|request|process(?!ed)|offer|outstanding", re.I)
+# status VALUES in general sections: word-start match (so 'Suspended' is fine, 'pending-review' / 'in_review' are not)
+PENDING_VAL = re.compile(r"\b(?:pend\w*|propos\w*|submit\w*|queued?|review\w*|await\w*|counter\w*|request\w*"
+                         r"|processing|offer\w*|outstanding)\b", re.I)
 TXT_ALWAYS = re.compile(r"\bPEND\b|awaiting\s+approval|\boutstanding\s+(?:bid|claim|trade|offer)", re.I)
 TXT_PEND = re.compile(r"\bpending\b", re.I)
-TXT_ZERO = re.compile(r"\b(?:0|no|zero)\s+pending\b", re.I)
+# general sections only: a 'pending' whose subject is not a transaction (Greenlaw appeal pending, MRI results pending)
+TXT_NONTXN = re.compile(r"\b(?:appeals?|mri|results?|tests?|scans?|x-?rays?|hearings?|rulings?|decisions?|evaluations?"
+                        r"|exams?|suspensions?|reviews?|discipline)\s+(?:is\s+|are\s+|still\s+)*pending\b", re.I)
 TXT_CTX = re.compile(r"\bbids?\b|\bclaims?\b|\btrades?\b|\bfaab\b|\boffers?\b|\$\s*\d|\bwaivers?\b", re.I)
+
+def strict_text_hit(t):
+    """True if free text inside a strict section reads as pending. Non-Latin letters fail closed."""
+    if non_latin(t):
+        return True
+    t = fold(t).replace("_", " ")
+    t = TXT_ZERO.sub(" ", t)
+    t = NEG_OFFER.sub(" ", t)
+    return bool(STRICT_TXT.search(t))
+
+def general_text_hit(t):
+    t = fold(t)
+    if TXT_ALWAYS.search(t):
+        return True
+    rest = TXT_NONTXN.sub(" ", TXT_ZERO.sub(" ", t))
+    return bool(TXT_PEND.search(rest) and TXT_CTX.search(rest))
 
 def _strings(o):
     if isinstance(o, str):
@@ -236,6 +358,9 @@ def _strings(o):
         for v in o:
             yield from _strings(v)
 
+def _status_norm(st):
+    return " ".join(fold(st).lower().replace("_", " ").split()).replace(" ", "-")
+
 def _strict_record(sec, r, path):
     hits = []
     if not isinstance(r, dict):
@@ -246,23 +371,29 @@ def _strict_record(sec, r, path):
             hits.append(f"{path}.{k} (unknown key)")
         elif isinstance(v, bool) or (isinstance(v, (dict,)) ):
             hits.append(f"{path}.{k} (unexpected type)")
-    st = r.get("status")
-    if st is not None and " ".join(str(st).lower().replace("_", " ").split()).replace(" ", "-") not in {c.replace(" ", "-") for c in COMPLETED}:
-        hits.append(f"{path}.status={st!r} (not a completed status)")
-    if sec in ("bids", "claims") and st is None:
+    if "status" in r:
+        st = r["status"]
+        if not isinstance(st, str) or non_latin(st) or _status_norm(st) not in {c.replace(" ", "-") for c in COMPLETED}:
+            hits.append(f"{path}.status={st!r} (not a completed status)")   # null / number / '' / pending ... all block
+    if sec in ("bids", "claims") and r.get("status") is None:
         hits.append(f"{path} (bid/claim with no completed status)")
     for t in _strings(r):
-        if STRICT_WORDS.search(t):
+        if strict_text_hit(t):
             hits.append(f"{path}: {t[:60]!r}"); break
     return hits
 
 def find_pending(o, path="", in_offer=False, schema="warroom"):
     """Fail-closed pending gate. Returns offending paths; empty = clean.
-    STRICT (waivers/trades/drops/bids/claims): only allowlisted keys; status must be a completed value
-    (bids/claims must carry one); any pending/review/counter/await/submit/outstanding/queue/propos text blocks;
-    booleans/objects block. Unknown top-level keys block (so a new 'outstanding' list can't slip in).
-    GENERAL (lineup, news, injuryWatch...): pending-like keys or *status values block; free text blocks on
-    PEND / 'awaiting approval' anywhere, or 'pending' next to bid/claim/trade/FAAB/offer/waiver/$N."""
+    STRICT (waivers/trades/drops/bids/claims): only allowlisted keys; a status key must hold a completed value
+    (null/number/'' block; bids/claims must carry one); free text blocks on whole pending words/phrases
+    (pending, PEND, awaiting, Countered, counter offer, submitted, proposed/proposal, in/under review, in queue,
+    an offer that is not negated, outstanding bid/claim...) but NOT on fragments (suspended, dependent, preview,
+    reviewed, encounter, queued, submits, proposition) or on '0 pending' / 'no pending' / 'pending 0/0';
+    any non-Latin letter blocks; booleans/objects block. Unknown top-level keys block.
+    GENERAL (lineup, news, injuryWatch...): pending-like keys block; *status/*state values block when they are
+    not strings (numbers, booleans, lists) or start a pending word; free text blocks on PEND / 'awaiting approval'
+    anywhere, or 'pending' next to bid/claim/trade/FAAB/offer/waiver/$N (appeal/MRI/results pending is fine).
+    All text is NFKC-normalized, format chars removed and Cyrillic/Greek lookalikes folded before matching."""
     hits = []
     if path == "" and isinstance(o, dict):
         top = WARROOM_KEYS if schema == "warroom" else FA_KEYS
@@ -280,7 +411,7 @@ def find_pending(o, path="", in_offer=False, schema="warroom"):
                     bad = [x for x in (r or {}) if x not in FA_FIELDS]
                     if bad or not isinstance(r, dict):
                         hits.append(f"{p}[{i}] unknown keys {bad}")
-                    elif any(STRICT_WORDS.search(t) for t in _strings(r)):
+                    elif any(strict_text_hit(t) for t in _strings(r)):
                         hits.append(f"{p}[{i}] pending-like text")
             else:
                 hits += find_pending(v, p, False, schema)
@@ -288,23 +419,23 @@ def find_pending(o, path="", in_offer=False, schema="warroom"):
     if isinstance(o, dict):
         for k, v in o.items():
             p = f"{path}.{k}"
-            if k != "bid" and PENDING_KEY.search(k):
+            fk = fold(k)
+            if fk != "bid" and PENDING_KEY.search(fk):
                 hits.append(p); continue
-            if STATUS_KEY.search(k) and isinstance(v, str) and PENDING_VAL.search(v):
-                hits.append(p); continue
-            if isinstance(v, bool) and re.search(r"submit|pend|propos|queue|outstanding", k, re.I):
+            if STATUS_KEY.search(fk):
+                if isinstance(v, str) and PENDING_VAL.search(fold(v).replace("_", " ").replace("-", " ")):
+                    hits.append(p); continue
+                if v is not None and not isinstance(v, str):
+                    hits.append(f"{p} (non-string status)"); continue
+            if isinstance(v, bool) and re.search(r"submit|pend|propos|queue|outstanding", fk, re.I):
                 hits.append(p); continue
             hits += find_pending(v, p, False, schema)
     elif isinstance(o, list):
         for i, v in enumerate(o):
             hits += find_pending(v, f"{path}[{i}]", False, schema)
     elif isinstance(o, str):
-        if TXT_ALWAYS.search(o):
+        if general_text_hit(o):
             hits.append(path)
-        elif TXT_PEND.search(o):
-            rest = TXT_ZERO.sub("", o)
-            if TXT_PEND.search(rest) and TXT_CTX.search(rest):
-                hits.append(path)
     return hits
 
 def assert_no_pending(o, what, schema="warroom"):

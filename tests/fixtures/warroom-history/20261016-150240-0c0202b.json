@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "sample": false,
+  "asOf": "2026-10-16T15:05:00-07:00",
+  "season": 2026,
+  "week": 6,
+  "opponent": {
+    "teamId": "substation",
+    "name": "Substation"
+  },
+  "freshness": {
+    "plan": "2026-10-16T15:05:00-07:00",
+    "roster": "2026-10-16T14:57:00-07:00",
+    "scores": "2026-10-16T14:57:00-07:00",
+    "waivers": "2026-10-16T15:05:00-07:00",
+    "news": "2026-10-16T15:05:00-07:00"
+  },
+  "lockTimes": [
+    {
+      "label": "London HOU@JAX (Lawrence)",
+      "at": "2026-10-18T06:30:00-07:00"
+    },
+    {
+      "label": "Sun early (Stevenson/Wilson/Coker/Warren/Dike/Gray/Simpson/Robinson/Ponder if added)",
+      "at": "2026-10-18T10:00:00-07:00"
+    },
+    {
+      "label": "Sun late (Lake/Bourne 1:05; Karlaftis/Delane/Bowers 1:25)",
+      "at": "2026-10-18T13:05:00-07:00"
+    },
+    {
+      "label": "SNF DAL@GB (E. Williams)",
+      "at": "2026-10-18T17:20:00-07:00"
+    },
+    {
+      "label": "MNF WAS@SF (Warner, Croskey-Merritt)",
+      "at": "2026-10-19T17:15:00-07:00"
+    },
+    {
+      "label": "Next waivers clear",
+      "at": "2026-10-21T09:00:00-07:00"
+    }
+  ],
+  "lineup": [
+    {
+      "slot": "QB",
+      "player": "Trevor Lawrence",
+      "pos": "QB",
+      "nflTeam": "JAX",
+      "verdict": "START",
+      "reason": "London vs HOU; locks Sun 6:30 AM PT.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "RB",
+      "player": "Rhamondre Stevenson",
+      "pos": "RB",
+      "nflTeam": "NE",
+      "verdict": "START",
+      "reason": "Henderson Q but practiced; Rhamondre leads (FBG RB7, Berry RB9).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "WR",
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "nflTeam": "NYJ",
+      "verdict": "START",
+      "reason": "Alpha target share.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "TE",
+      "player": "Brock Bowers",
+      "pos": "TE",
+      "nflTeam": "LV",
+      "verdict": "START",
+      "reason": "LP/FP/FP, no designation.",
+      "injury": "",
+      "practice": "FP Fri"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Tyler Warren",
+      "pos": "TE",
+      "nflTeam": "IND",
+      "verdict": "WATCH",
+      "reason": "New groin, LP Fri, Questionable; if inactive start Robinson Jr. before Sun 10 AM.",
+      "injury": "Q",
+      "practice": "LP Fri"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Jalen Coker",
+      "pos": "WR",
+      "nflTeam": "CAR",
+      "verdict": "START",
+      "reason": "FP all week; KEEP call.",
+      "injury": "",
+      "practice": "FP Fri"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Chimere Dike",
+      "pos": "WR",
+      "nflTeam": "TEN",
+      "verdict": "WATCH",
+      "reason": "Active; swap Croskey in only if he is Q and practiced Sat (locks Sun 10 AM).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DL",
+      "player": "George Karlaftis",
+      "pos": "DL",
+      "nflTeam": "KC",
+      "verdict": "START",
+      "reason": "Added Fri for Tuipulotu; vs LAC Sun 1:25 PM.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "LB",
+      "player": "Fred Warner",
+      "pos": "LB",
+      "nflTeam": "SF",
+      "verdict": "START",
+      "reason": "Green dot (Woellert W5 STALE); MNF vs WAS.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DB",
+      "player": "Quentin Lake",
+      "pos": "DB",
+      "nflTeam": "LAR",
+      "verdict": "START",
+      "reason": "Box safety.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DB",
+      "player": "Evan Williams",
+      "pos": "DB",
+      "nflTeam": "GB",
+      "verdict": "START",
+      "reason": "FP Thu/Fri, no designation; SNF.",
+      "injury": "",
+      "practice": "FP Fri"
+    },
+    {
+      "slot": "IDP",
+      "player": "Tyrice Knight",
+      "pos": "LB",
+      "nflTeam": "SEA",
+      "verdict": "START",
+      "reason": "Done: 20 pts TNF (8 tkl, 4 stuffs, 85% snaps).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "IDP",
+      "player": "Trenton Simpson",
+      "pos": "LB",
+      "nflTeam": "BAL",
+      "verdict": "START",
+      "reason": "FP Fri, no designation.",
+      "injury": "",
+      "practice": "FP Fri"
+    },
+    {
+      "slot": "IDP",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "nflTeam": "TEN",
+      "verdict": "SWAP",
+      "reason": "Swap for Elijah Ponder (FA, 21.4 FP/G) if added; Gray recent ~11.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Jordyn Brooks",
+      "pos": "LB",
+      "nflTeam": "MIA",
+      "verdict": "SIT",
+      "reason": "MIA bye.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Breece Hall",
+      "pos": "RB",
+      "nflTeam": "NYJ",
+      "verdict": "SIT",
+      "reason": "OUT (quad).",
+      "injury": "O",
+      "practice": "DNP"
+    },
+    {
+      "slot": "BN",
+      "player": "Jacory Croskey-Merritt",
+      "pos": "RB",
+      "nflTeam": "WAS",
+      "verdict": "WATCH",
+      "reason": "DNP Thu+Fri; Sat designation for MNF.",
+      "injury": "",
+      "practice": "DNP Fri"
+    },
+    {
+      "slot": "BN",
+      "player": "Mansoor Delane",
+      "pos": "DB",
+      "nflTeam": "KC",
+      "verdict": "SIT",
+      "reason": "IDP depth.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Brian Robinson Jr.",
+      "pos": "RB",
+      "nflTeam": "ATL",
+      "verdict": "SIT",
+      "reason": "Warren contingency.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Kendrick Bourne",
+      "pos": "WR",
+      "nflTeam": "ARI",
+      "verdict": "SIT",
+      "reason": "Drop candidate for Ponder.",
+      "injury": "",
+      "practice": ""
+    }
+  ],
+  "injuryWatch": [
+    {
+      "player": "Tyler Warren",
+      "tag": "Q",
+      "practice": "LP Fri",
+      "note": "New groin; Colts inactives ~8:30 AM Sun."
+    },
+    {
+      "player": "Jacory Croskey-Merritt",
+      "tag": "",
+      "practice": "DNP Thu+Fri",
+      "note": "MNF; designation Sat."
+    },
+    {
+      "player": "Breece Hall",
+      "tag": "O",
+      "practice": "DNP x3",
+      "note": "Quad; Reserve."
+    },
+    {
+      "player": "Brock Bowers",
+      "tag": "",
+      "practice": "LP/FP/FP",
+      "note": "Cleared."
+    },
+    {
+      "player": "Trenton Simpson",
+      "tag": "",
+      "practice": "LP/LP/FP",
+      "note": "Cleared."
+    },
+    {
+      "player": "Evan Williams",
+      "tag": "",
+      "practice": "LP/FP/FP",
+      "note": "Cleared."
+    }
+  ],
+  "byes": [
+    {
+      "week": 6,
+      "players": [
+        {
+          "player": "Jordyn Brooks",
+          "pos": "LB",
+          "nflTeam": "MIA"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "players": []
+    }
+  ],
+  "waivers": [
+    {
+      "rank": 1,
+      "player": "Elijah Ponder",
+      "pos": "LB",
+      "nflTeam": "NE",
+      "why": "Straight free agent now; NE sacks leader, 73% snaps; start over Gray Sun.",
+      "stats": "107 FPts, 21.4 FP/G, 44% rostered",
+      "faabMin": 0,
+      "faabMax": 0,
+      "bid": 0,
+      "drop": "Kendrick Bourne",
+      "tag": "MUST"
+    },
+    {
+      "rank": 2,
+      "player": "Justin Strnad",
+      "pos": "LB",
+      "nflTeam": "DEN",
+      "why": "89% snaps TNF, half sack + FR; on waivers until Wed.",
+      "stats": "84 FPts, 14.0 FP/G, 14% rostered",
+      "faabMin": 0,
+      "faabMax": 3,
+      "bid": 1,
+      "drop": "Cedric Gray",
+      "tag": "LIKE"
+    },
+    {
+      "rank": 3,
+      "player": "Byron Murphy",
+      "pos": "DL",
+      "nflTeam": "SEA",
+      "why": "DL depth; quiet TNF (3 tkl); waivers until Wed.",
+      "stats": "81 FPts, 13.5 FP/G, 57% rostered",
+      "faabMin": 0,
+      "faabMax": 2,
+      "bid": 0,
+      "drop": "Chimere Dike",
+      "tag": "DART"
+    },
+    {
+      "rank": 4,
+      "player": "Christian Izien",
+      "pos": "DB",
+      "nflTeam": "DET",
+      "why": "FA; 20.0 FP/G but DET bye wk6 \u2014 stash only.",
+      "stats": "80 FPts, 20.0 FP/G, 35% rostered",
+      "faabMin": 0,
+      "faabMax": 0,
+      "bid": 0,
+      "drop": "Mansoor Delane",
+      "tag": "DART"
+    }
+  ],
+  "drops": [
+    {
+      "rank": 1,
+      "player": "Kendrick Bourne",
+      "pos": "WR",
+      "reason": "Reserve WR ~7 proj; FBG notes MHJ-trade bump, but Ponder matters more."
+    },
+    {
+      "rank": 2,
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "reason": "Base-down ~40% snaps; ~11 recent."
+    },
+    {
+      "rank": 3,
+      "player": "Chimere Dike",
+      "pos": "WR",
+      "reason": "KR/PR filler only."
+    }
+  ],
+  "trades": [
+    {
+      "with": "Substation",
+      "give": [
+        "Kendrick Bourne"
+      ],
+      "get": [
+        "depth IDP"
+      ],
+      "why": "Smack only: Nathan just paid for Elliss and is buying LBs with Schwesinger Q; not a formal offer."
+    }
+  ],
+  "idp": [
+    {
+      "nflTeam": "SF",
+      "greenDot": "Fred Warner",
+      "notes": "Woellert W5 STALE \u2014 Warner lock."
+    },
+    {
+      "nflTeam": "SEA",
+      "greenDot": "Ernest Jones",
+      "notes": "W5 STALE; Knight 85% snaps TNF with Drake Thomas out."
+    },
+    {
+      "nflTeam": "TEN",
+      "greenDot": "Anthony Hill",
+      "notes": "W5 STALE; Gray ~40% snaps."
+    },
+    {
+      "nflTeam": "BAL",
+      "greenDot": "Roquan Smith",
+      "notes": "W5 STALE; Simpson hold with lower floor."
+    },
+    {
+      "nflTeam": "CLE",
+      "greenDot": "Carson Schwesinger",
+      "notes": "W5 STALE; Schwesinger Q (DNP/DNP/LP)."
+    },
+    {
+      "nflTeam": "MIA",
+      "greenDot": "Jacob Rodriguez",
+      "notes": "W5 STALE; Brooks on bye."
+    }
+  ],
+  "boxSafety": [
+    {
+      "player": "Quentin Lake",
+      "nflTeam": "LAR",
+      "note": "Start"
+    },
+    {
+      "player": "Evan Williams",
+      "nflTeam": "GB",
+      "note": "Cleared \u2014 start"
+    },
+    {
+      "player": "Mansoor Delane",
+      "nflTeam": "KC",
+      "note": "Bench depth"
+    }
+  ],
+  "news": [
+    {
+      "source": "Fantrax",
+      "time": "2026-10-16T14:57:00-07:00",
+      "text": "Week 6 Eddies 20 @ Substation 25 after TNF; proj 205.93\u2013212.88. FAAB $60. Pending 0/0. Eddies +Karlaftis/\u2212Tuipulotu 8:33 AM."
+    },
+    {
+      "source": "X @By_NathanBrown",
+      "time": "2026-10-16T12:45:14-07:00",
+      "text": "Tyler Warren (groin) limited Fri, Questionable."
+    },
+    {
+      "source": "Fantrax",
+      "time": "2026-10-16T10:20:00-07:00",
+      "text": "Trade: Substation gets K. Elliss; Newman Lake gets J. Love + $5."
+    },
+    {
+      "source": "X @JoshTheAthletic",
+      "time": "2026-10-16T10:11:33-07:00",
+      "text": "Drake London (Substation) limited Fri, hip."
+    },
+    {
+      "source": "X @john_keim",
+      "time": "2026-10-16T09:28:55-07:00",
+      "text": "Croskey-Merritt did not practice Fri."
+    },
+    {
+      "source": "X @CorbinSmithNFL",
+      "time": "2026-10-15T20:31:55-07:00",
+      "text": "Tyrice Knight active TNF: 8 tackles, 85% snaps (20 WU pts per Fantrax)."
+    },
+    {
+      "source": "Fantrax",
+      "time": "2026-10-15T15:05:00-07:00",
+      "text": "Week 6 Eddies 3-2 @ Substation 3-2, live 0-0, proj 191.85\u2013208.82. FAAB $60. Pending 0/0. Lineup has Dike over Croskey and Knight over Delane."
+    },
+    {
+      "source": "X @by_JBH",
+      "time": "2026-10-15T13:56:00-07:00",
+      "text": "Evan Williams upgraded to FULL Thursday (illness)."
+    },
+    {
+      "source": "X @FantasyProsNFL",
+      "time": "2026-10-15T13:45:00-07:00",
+      "text": "Breece Hall (quad) official DNP Thursday."
+    },
+    {
+      "source": "X @BaltimoreLuke",
+      "time": "2026-10-15T13:40:00-07:00",
+      "text": "Trenton Simpson limited Thursday (hamstring)."
+    },
+    {
+      "source": "X @ameilius",
+      "time": "2026-10-15T12:56:15-07:00",
+      "text": "Edgerrin Cooper (FA) tore Achilles Oct 4 \u2014 excluded from wire file."
+    },
+    {
+      "source": "X @Mike_Woellert",
+      "time": "2026-10-15T06:51:00-07:00",
+      "text": "On Tyrice Knight: only 22 snaps so far, not expecting much."
+    }
+  ]
+}
