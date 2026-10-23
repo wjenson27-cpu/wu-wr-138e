@@ -216,7 +216,8 @@ class GreenDots(unittest.TestCase):
         self.assertEqual(called, []); self.assertTrue(st["stale"]); self.assertIn("paid", st["reason"])
     def test_unresolved_team_refuses_rebuild(self):
         post = json.loads((FIX / "green-dot-post-synthetic.json").read_text())
-        post = {"body_html": post["body_html"].replace("Week 7 Green Dot: PlayerCA Alpha", "No dot info.")}
+        self._fixture_roster(post)
+        post = {"body_html": post["body_html"].replace("Week 7 Green Dot: Playerca Alpha", "No dot info.")}
         gd, st = rgd.run(self.d, self.now(), json.loads((FIX / "archive-w7-free.json").read_text()), lambda s: post)
         self.assertFalse(st["rebuilt"]); self.assertTrue(st["stale"]); self.assertIn("BAL", st["parse"]["unresolved"])
     def test_finished_with_the_dot_wins(self):
@@ -226,8 +227,14 @@ class GreenDots(unittest.TestCase):
     def test_bye_marked(self):
         t, u = rgd.parse("<h2>Detroit Lions</h2><p>Week 6 Green Dot: Bye</p>", 6, [{"team": "DET", "greenDot": "Jack Campbell", "fullTime": []}])
         self.assertTrue(t[0]["bye"]); self.assertEqual(t[0]["greenDot"], "Jack Campbell"); self.assertNotIn("DET", u)
+    def _fixture_roster(self, post):
+        import re
+        names = sorted(set(re.findall(r"Player[a-z]{2} Alpha", post["body_html"]))) + ["Josh Woods", "Quay Walker", "Shemar James"]
+        (self.d / "hq" / "rosters").mkdir(parents=True, exist_ok=True)
+        (self.d / "hq" / "rosters" / "zz-test-fixture.json").write_text(json.dumps({"players": [{"player": n} for n in names]}))
     def test_rebuild_from_free_post(self):
         post = json.loads((FIX / "green-dot-post-synthetic.json").read_text())
+        self._fixture_roster(post)
         gd, st = rgd.run(self.d, self.now(), json.loads((FIX / "archive-w7-free.json").read_text()), lambda s: post)
         self.assertTrue(st["rebuilt"]); self.assertFalse(st["stale"])
         self.assertEqual(gd["week"], 7); self.assertEqual(gd["sourceUrl"], "https://x/gd7")
@@ -244,6 +251,104 @@ class GreenDots(unittest.TestCase):
         finally:
             rgd.get = orig
         self.assertTrue(st["stale"]); self.assertIn("fetch failed", st["reason"])
+
+class BotOpsRound2(unittest.TestCase):
+    NOW = datetime(2026, 10, 23, 9, 0, tzinfo=PT)
+    # Blocker 1: decorated / squashed names
+    def test_decorated_cooper_variants_blocked(self):
+        recs = [{"player": n} for n in ("Edgerrin Cooper (GB)", "E.Cooper", "Edgerrin Cooper - LB GB", "Edgerrin Cooper (LB, GB)",
+                                        "Edgerrin Cooper – GB", "Edgerrin Cooper, LB GB", "Edgerrin Cooper [IR]", "E.  Cooper",
+                                        "Edgerrin_Cooper", "Booker, Austin (CHI)", "A.Booker")]
+        out = bw.build({"week": 7, "waivers": recs}, DATA, self.NOW)["waivers"]
+        self.assertEqual(out, [])
+        rows = [{"player": n, "pos": "LB", "team": "GB", "fpg": 1} for n in ("Edgerrin Cooper (GB)", "E.Cooper", "Edgerrin Cooper - LB GB")]
+        self.assertEqual(bfa.build({"freeAgents": rows}, DATA, "x")["players"], [])
+    def test_real_names_survive_normalization(self):
+        out = bw.build({"week": 7, "waivers": [{"player": n} for n in ("Darius Cooper (PHI)", "D.J. Reed", "Amari Cooper - WR PIT")]}, DATA, self.NOW)["waivers"]
+        self.assertEqual(len(out), 3)
+        self.assertEqual(wc.norm("D.J. Reed"), wc.norm("DJ Reed"))
+    # Blocker 2: empty / wiped lists, seed floor
+    def test_empty_season_ending_fails(self):
+        d = stage(); (d / "season-ending.json").write_text('{"players": []}')
+        with self.assertRaises(wc.ListError): wc.season_ending(d)
+        with self.assertRaises(wc.ListError): bw.build({"week": 7, "waivers": []}, d, self.NOW)
+    def test_seed_floor_cooper_required(self):
+        d = stage(); (d / "season-ending.json").write_text(json.dumps({"players": [{"name": "Somebody Else", "pos": "LB", "team": "X"}]}))
+        with self.assertRaises(wc.ListError) as c: wc.season_ending(d)
+        self.assertIn("Edgerrin Cooper", str(c.exception))
+    def test_do_not_pitch_empty_explicit_ok_but_not_null(self):
+        d = stage(); (d / "do-not-pitch.json").write_text('{"players": []}')
+        self.assertFalse(wc.do_not_pitch(d, 7).match("Austin Booker"))
+        for bad in ("", "{}", '{"players": null}', "[]"):
+            (d / "do-not-pitch.json").write_text(bad)
+            with self.assertRaises(wc.ListError, msg=bad): wc.do_not_pitch(d, 7)
+    # Pending tuning
+    def test_pend_and_awaiting_approval_block(self):
+        for w in ({"waivers": [{"player": "Martin Emerson", "why": "PEND"}]},
+                  {"waivers": [{"player": "Martin Emerson", "why": "awaiting approval of claim"}]},
+                  {"trades": [{"with": "A", "status": "PEND"}]},
+                  {"trades": [{"with": "A", "status": "Awaiting  Approval"}]},
+                  {"trades": [{"with": "A", "status": "Open"}]},
+                  {"waivers": [{"player": "Martin Emerson", "claimStatus": "open"}]}):
+            with self.assertRaises(wc.PendingError, msg=w): bw.build({"week": 7, **w}, DATA, self.NOW)
+    def test_injury_pending_and_open_status_allowed(self):
+        w = {"week": 7, "waivers": [{"player": "Martin Emerson", "why": "MRI results pending; still a stream."}],
+             "injuryWatch": [{"player": "X", "status": "Open", "note": "MRI results pending"}],
+             "news": [{"text": "Hall test results pending"}]}
+        self.assertEqual(len(bw.build(w, DATA, self.NOW)["waivers"]), 1)
+    # Green dots tuning
+    def test_green_dot_sentence_end_not_merged(self):
+        t, u = rgd.parse("<h2>Atlanta Falcons</h2><p>Week 6 Green Dot: Josh Woods. Divine Deablo finished with the dot.</p>", 6)
+        self.assertIn(t[0]["greenDot"], ("Divine Deablo", "Josh Woods")); self.assertNotIn(".", t[0]["greenDot"])
+    def test_took_over_the_dot(self):
+        t, u = rgd.parse("<h2>Atlanta Falcons</h2><p>Week 6 Green Dot: Divine Deablo (left hurt; Josh Woods took over the dot)</p>", 6)
+        self.assertEqual(t[0]["greenDot"], "Josh Woods")
+    def test_bye_week_question_not_bye(self):
+        t, u = rgd.parse("<h2>Detroit Lions</h2><p>Week 6 Green Dot: Bye week? No. Jack Campbell kept it.</p>", 6)
+        self.assertFalse(t[0].get("bye")); self.assertIn("DET", u)
+    def test_unknown_name_refused(self):
+        t, u = rgd.parse("<h2>Atlanta Falcons</h2><p>Week 6 Green Dot: Fake Person</p>", 6, None, {"josh woods"})
+        self.assertIsNone(t[0]["greenDot"]); self.assertIn("ATL", u)
+    def test_known_players_includes_backups(self):
+        self.assertIn("josh woods", rgd.known_players(DATA))
+    # Swap double failure
+    def test_swap_and_rollback_both_fail_restores_from_backup(self):
+        import refresh_warroom as rw
+        root = Path(tempfile.mkdtemp()); data = root / "data"; data.mkdir()
+        (data / "warroom.json").write_text("old"); (data / "sub").mkdir(); (data / "sub" / "x.json").write_text("1")
+        st = Path(tempfile.mkdtemp()) / "data"; st.mkdir(); (st / "warroom.json").write_text("new")
+        n = []
+        def bad(a, b):
+            n.append(1)
+            if len(n) >= 2: raise OSError("injected")
+            os.rename(a, b)
+        with self.assertRaises(rw.SwapError): rw.swap_in(st, data, bad)
+        self.assertEqual((data / "warroom.json").read_text(), "old"); self.assertEqual((data / "sub" / "x.json").read_text(), "1")
+        self.assertEqual(sorted(p.name for p in root.iterdir()), ["data"])
+    def test_runner_exits_nonzero_on_double_failure(self):
+        import refresh_warroom as rw
+        orig = rw.swap_in
+        rw.swap_in = lambda a, b: (_ for _ in ()).throw(rw.SwapError("x"))
+        try:
+            rc = rw.main(["--mode", "ci", "--skip-tests", "--root", str(self._scratch())])
+        finally:
+            rw.swap_in = orig
+        self.assertNotEqual(rc, 0)
+    def _scratch(self):
+        r = Path(tempfile.mkdtemp()) / "repo"
+        shutil.copytree(ROOT, r, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        shutil.copytree(DATA, r / "data", dirs_exist_ok=True)
+        (r / "data" / "green-dots-status.json").write_text('{"force": "change"}')
+        return r
+    # DST
+    def test_ambiguous_dst_requires_offset(self):
+        with self.assertRaises(wc.AmbiguousTime): wc.parse_now("2026-11-01T01:30:00")
+        self.assertEqual(wc.iso_pt(wc.parse_now("2026-11-01T01:30:00-08:00")), "2026-11-01T01:30:00-08:00")
+        self.assertEqual(wc.iso_pt(wc.parse_now("2026-11-01T01:30:00-07:00")), "2026-11-01T01:30:00-07:00")
+        self.assertIsNone(wc.scrape_time({"scraped": "2026-11-01 ~1:30 AM"}))
+        self.assertIsNotNone(wc.scrape_time({"scraped": "2026-11-01 ~1:30 AM PST"}))
+    def test_nonexistent_spring_time_fails(self):
+        with self.assertRaises(wc.AmbiguousTime): wc.parse_now("2027-03-14T02:30:00")
 
 if __name__ == "__main__":
     unittest.main()

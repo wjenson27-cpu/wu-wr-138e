@@ -80,22 +80,36 @@ def changed_files(stage_data, data):
                 out.append(str(rel))
     return sorted(out)
 
+class SwapError(Exception): pass
+
 def swap_in(stage_data, data, _rename=os.rename):
-    """All-or-nothing: copy stage data next to data/ (same filesystem), then two renames.
-    If the second rename fails, the first is undone."""
-    new = Path(tempfile.mkdtemp(prefix=".data-new-", dir=data.parent))
-    old = data.parent / (".data-old-" + new.name.split("-")[-1])
+    """All-or-nothing: copy stage data next to data/ (same filesystem), keep a full backup copy of data/,
+    then two renames. If the second rename fails, the first is undone. If the rollback rename ALSO fails,
+    data/ is restored from the backup copy and SwapError is raised (runner exits nonzero).
+    Readers can see no data/ for the instant between the two renames (documented)."""
+    tag = next(tempfile._get_candidate_names())
+    new = data.parent / f".data-new-{tag}"
+    old = data.parent / f".data-old-{tag}"
+    bak = data.parent / f".data-bak-{tag}"
     try:
-        shutil.rmtree(new); shutil.copytree(stage_data, new)
+        shutil.copytree(data, bak)
+        shutil.copytree(stage_data, new)
         _rename(data, old)
         try:
             _rename(new, data)
-        except BaseException:
-            _rename(old, data)
+        except BaseException as e1:
+            try:
+                _rename(old, data)
+            except BaseException as e2:
+                if data.exists():
+                    shutil.rmtree(data, ignore_errors=True)
+                shutil.copytree(bak, data)
+                raise SwapError(f"swap failed ({e1}); rollback rename failed ({e2}); data/ restored from backup copy")
             raise
     finally:
-        if new.exists(): shutil.rmtree(new, ignore_errors=True)
-    shutil.rmtree(old, ignore_errors=True)
+        for d in (new, old, bak):
+            if d.exists() and d != data:
+                shutil.rmtree(d, ignore_errors=True)
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
@@ -125,7 +139,12 @@ def main(argv=None):
             if a.dry_run:
                 print("dry run: data/ untouched"); return 0
             if ch:
-                swap_in(sd, data)
+                try:
+                    swap_in(sd, data)
+                except SwapError as e:
+                    print("FAIL:", e); return 2
+                except OSError as e:
+                    print("FAIL: swap failed, rolled back:", e, "(data/ untouched)"); return 1
             print("OK"); return 0
         except Fail as e:
             print("FAIL:", e, "(data/ untouched)"); return 1

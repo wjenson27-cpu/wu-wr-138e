@@ -14,10 +14,20 @@ class PendingError(Exception): pass
 def now_pt():
     return datetime.now(PT).replace(second=0, microsecond=0)
 
+class AmbiguousTime(ValueError): pass
+
+def localize_pt(naive):
+    """Attach PT to a naive time. Ambiguous (Nov 1 1:00-1:59 AM, happens twice) or nonexistent
+    (spring-forward gap) wall times raise AmbiguousTime: give an explicit offset instead."""
+    a, b = naive.replace(tzinfo=PT, fold=0), naive.replace(tzinfo=PT, fold=1)
+    if a.utcoffset() != b.utcoffset():
+        raise AmbiguousTime(f"{naive.isoformat()} is ambiguous or nonexistent in PT; pass an explicit offset (-07:00 or -08:00)")
+    return a
+
 def parse_now(s):
-    """--now override. A value with no offset is read as PT (not the box's zone)."""
+    """--now override. A value with no offset is read as PT (not the box's zone); ambiguous DST times fail."""
     dt = datetime.fromisoformat(s)
-    return (dt.replace(tzinfo=PT) if dt.tzinfo is None else dt).astimezone(PT)
+    return (localize_pt(dt) if dt.tzinfo is None else dt).astimezone(PT)
 
 def iso_pt(dt=None):
     return (dt or now_pt()).astimezone(PT).replace(microsecond=0).isoformat()
@@ -30,18 +40,31 @@ def week_for(d):
 
 # ---------- identity matching ----------
 SUFFIX = re.compile(r"\b(jr|sr|ii|iii|iv|v)\b")
+POS_TEAM = r"(?:QB|RB|WR|TE|K|DL|DE|DT|EDGE|LB|ILB|OLB|DB|CB|S|FS|SS|[A-Z]{2,3})"
+def clean_name(n):
+    """Strip decorations before matching: '(GB)', '(LB, GB)', ' - LB GB', ' – GB', 'E.Cooper' -> 'E. Cooper'."""
+    n = unicodedata.normalize("NFKC", str(n or "")).replace("\u00a0", " ")
+    n = re.sub(r"\s*[\(\[][^)\]]*[\)\]]", " ", n)                                      # (GB) / [LB-GB]
+    n = re.sub(r"\s+[-\u2013\u2014|/]\s+.*$", "", n)                                    # ' - LB GB'
+    n = re.sub(r"(?:[\s,]+" + POS_TEAM + r")+\s*$", lambda m: "" if len(n[:m.start()].split()) >= 2 else m.group(0), n)  # trailing 'LB GB'
+    n = re.sub(r"\b([A-Za-z])\.(?=[A-Za-z]{2,})", r"\1. ", n)                          # E.Cooper -> E. Cooper
+    return n
+
 def norm(n):
-    n = unicodedata.normalize("NFKD", str(n or "")).encode("ascii", "ignore").decode().lower()
-    n = n.replace("\u00a0", " ")
-    n = re.sub(r"[.'\u2019]", "", n).replace("-", " ")
+    n = clean_name(n)
+    n = unicodedata.normalize("NFKD", n).encode("ascii", "ignore").decode().lower()
+    n = re.sub(r"['\u2019`]", "", n)            # D'Marco -> dmarco
+    n = re.sub(r"(?<=\b[a-z])\.(?=[a-z]\b)", "", n)  # d.j -> dj
+    n = n.replace(".", "")
+    n = re.sub(r"[^a-z0-9, ]+", " ", n)          # collapse other punctuation (hyphens etc.)
     n = SUFFIX.sub("", n)
-    return " ".join(n.split())
+    return " ".join(n.replace(",", " , ").split()).replace(" , ", ", ").strip(" ,")
 
 def name_keys(name):
     """Keys for a name: full normalized form, 'Last, First' reordered, and first-initial+last ('e cooper')."""
     if not name or not str(name).strip():
         return set()
-    raw = str(name)
+    raw = clean_name(name)
     forms = [raw]
     if "," in raw:
         last, _, first = raw.partition(",")
@@ -68,7 +91,10 @@ def rec_keys(r):
     nm = r.get("player") or r.get("name")
     return rec_ids(r) | name_keys(nm)
 
-def _load_list(path, kind):
+# Seed floor: these must always be on the season-ending list. A wiped or truncated list fails the run.
+REQUIRED_SEASON_ENDING = ({"name": "Edgerrin Cooper", "team": "GB"},)
+
+def _load_list(path, kind, allow_empty=False):
     p = Path(path)
     if not p.exists():
         raise ListError(f"{kind} list missing: {p} (fail closed)")
@@ -79,6 +105,8 @@ def _load_list(path, kind):
     pl = d.get("players") if isinstance(d, dict) else None
     if not isinstance(pl, list):
         raise ListError(f"{kind} list has no 'players' array: {p}")
+    if not pl and not allow_empty:
+        raise ListError(f"{kind} list is empty: {p} (fail closed)")
     for i, e in enumerate(pl):
         if not isinstance(e, dict) or not (isinstance(e.get("name"), str) and e["name"].strip() or e.get("ids") or e.get("id")):
             raise ListError(f"{kind} list entry {i} has neither a name nor an id: {p}")
@@ -110,12 +138,18 @@ class Excluder:
         return False
 
 def season_ending(data_dir):
-    return Excluder(_load_list(Path(data_dir) / "season-ending.json", "season-ending"))
+    pl = _load_list(Path(data_dir) / "season-ending.json", "season-ending")
+    ex = Excluder(pl)
+    missing = [r["name"] for r in REQUIRED_SEASON_ENDING if not ex.match(r["name"])]
+    if missing:
+        raise ListError(f"season-ending list is missing required seed entries {missing} (fail closed)")
+    return ex
 
 def do_not_pitch(data_dir, week, today=None):
     today = today or now_pt().date()
     keep = []
-    for p in _load_list(Path(data_dir) / "do-not-pitch.json", "do-not-pitch"):
+    # do-not-pitch MAY be empty, but only as an explicit valid object: {"players": []}.
+    for p in _load_list(Path(data_dir) / "do-not-pitch.json", "do-not-pitch", allow_empty=True):
         wk = p.get("weeks")
         if wk is not None and week not in wk:
             continue
@@ -133,35 +167,43 @@ def identifiable(r):
 # ---------- deny-pending gate ----------
 PENDING_KEY = re.compile(r"pending|claimsqueue|claims?$|bids?$|offers?$|queue", re.I)
 STATUS_KEY = re.compile(r"(status|state)$", re.I)
-PENDING_VAL = {"pending", "proposed", "submitted", "claimsqueue", "claims queue", "queued", "in review",
-               "awaiting", "awaiting approval", "open", "offered", "requested", "processing"}
-TXT_ANY = re.compile(r"pending", re.I)
+PENDING_VAL = {"pending", "pend", "proposed", "submitted", "claimsqueue", "claims queue", "queued", "in review",
+               "awaiting", "awaiting approval", "requested", "processing", "offered"}
+OFFER_ONLY_VAL = {"open"}                      # 'Open' blocks only inside trades/claims/bids/waivers
+TXT_PEND = re.compile(r"\bpending\b|\bpend\b|awaiting\s+approval", re.I)
+TXT_ALWAYS = re.compile(r"\bPEND\b|awaiting\s+approval", re.I)
 TXT_ZERO = re.compile(r"\b(?:0|no|zero)\s+pending\b", re.I)
-TXT_CTX = re.compile(r"bid|claim|trade|faab|offer|\$", re.I)
-OFFER_SECTIONS = {"waivers", "drops", "trades", "bids", "claims"}
+TXT_CTX = re.compile(r"\bbids?\b|\bclaims?\b|\btrades?\b|\bfaab\b|\boffers?\b|\$\d", re.I)
+OFFER_SECTIONS = {"waivers", "trades", "bids", "claims", "drops"}
 
 def find_pending(o, path="", in_offer=False):
-    """Return a list of paths that look like pending bids/claims/trades. Empty list = clean.
-    - any key named like pending/claimsQueue/claims/bids/offers (the rec field 'bid' is a recommendation, allowed)
-    - any *status/*state value like pending/proposed/submitted/claimsQueue (case/space-insensitive)
-    - in waivers/drops/trades records: any free text 'pending'
-    - elsewhere: 'pending' next to bid/claim/trade/FAAB/$ words, except '0 pending' / 'no pending'."""
+    """Paths that look like pending bids/claims/trades. Empty = clean.
+    - keys like pending/claimsQueue/claims/bids/offers (the rec field 'bid' is a recommendation, allowed)
+    - *status/*state values pending/PEND/proposed/submitted/claimsQueue/awaiting approval... (case/space-insensitive);
+      'open' only inside trades/claims/bids/waivers/drops
+    - free text: 'PEND' or 'awaiting approval' anywhere; 'pending' only next to bid/claim/trade/FAAB/offer/$N
+      (so 'MRI results pending' or 'Thu pending' is fine); '0 pending'/'no pending' is fine."""
     hits = []
     if isinstance(o, dict):
         for k, v in o.items():
             p = f"{path}.{k}"
             if k != "bid" and PENDING_KEY.search(k):
                 hits.append(p); continue
-            if STATUS_KEY.search(k) and isinstance(v, str) and " ".join(v.lower().split()) in PENDING_VAL:
-                hits.append(p); continue
+            if STATUS_KEY.search(k) and isinstance(v, str):
+                vv = " ".join(v.lower().split())
+                if vv in PENDING_VAL or (in_offer and vv in OFFER_ONLY_VAL):
+                    hits.append(p); continue
             hits += find_pending(v, p, in_offer or (path == "" and k in OFFER_SECTIONS))
     elif isinstance(o, list):
         for i, v in enumerate(o):
             hits += find_pending(v, f"{path}[{i}]", in_offer)
-    elif isinstance(o, str) and TXT_ANY.search(o):
-        stripped = TXT_ZERO.sub("", o)
-        if TXT_ANY.search(stripped) and (in_offer or TXT_CTX.search(stripped)):
+    elif isinstance(o, str):
+        if TXT_ALWAYS.search(o):
             hits.append(path)
+        elif TXT_PEND.search(o):
+            rest = TXT_ZERO.sub("", o)
+            if TXT_PEND.search(rest) and TXT_CTX.search(rest):
+                hits.append(path)
     return hits
 
 def assert_no_pending(o, what):
@@ -181,7 +223,9 @@ def scrape_time(d):
             continue
         try:
             dt = datetime.fromisoformat(v.replace("Z", "+00:00"))
-            return (dt.replace(tzinfo=PT) if dt.tzinfo is None else dt).astimezone(PT)
+            return (localize_pt(dt) if dt.tzinfo is None else dt).astimezone(PT)
+        except AmbiguousTime:
+            return None   # ambiguous PT wall time with no offset: file is skipped
         except ValueError:
             pass
         m = re.search(r"(\d{4}-\d{2}-\d{2})\D{0,3}~?(\d{1,2}):(\d{2})\s*(AM|PM)?(?:[^A-Z]*?\b(PDT|PST|PT|CDT|CST|UTC)\b)?", v)
@@ -189,7 +233,13 @@ def scrape_time(d):
             h = int(m.group(2)) % 12 + (12 if m.group(4) == "PM" else 0) if m.group(4) else int(m.group(2))
             dt = datetime.fromisoformat(f"{m.group(1)}T{h:02d}:{m.group(3)}:00")
             off = TZ.get(m.group(5) or "PT")
-            dt = dt.replace(tzinfo=PT) if off is None else datetime.fromisoformat(dt.isoformat() + off)
+            if off is None:
+                try:
+                    dt = localize_pt(dt)
+                except AmbiguousTime:
+                    return None
+            else:
+                dt = datetime.fromisoformat(dt.isoformat() + off)
             return dt.astimezone(PT)
     return None
 

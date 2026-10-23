@@ -30,10 +30,49 @@ def text(h):
     h = re.sub(r"<(figure|svg|picture|button)[\s\S]*?</\1>", " ", h)
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", h))).strip()
 
-NAME = r"([A-Z][A-Za-z.'\u2019\-]+ [A-Z][A-Za-z.'\u2019\-]+(?: (?:Jr\.?|Sr\.?|II|III|IV))?)"
+# A name token is an initial pair ("D.J."), or a capitalized word that ends in a lowercase letter, so
+# "Woods." (end of sentence) never runs into the next word.
+TOK = r"(?:[A-Z]\.(?:[A-Z]\.)?|[A-Z][A-Za-z'\u2019\-]*[a-z])"
+NAME = r"(" + TOK + r" " + TOK + r"(?: (?:Jr\.|Sr\.|Jr|Sr|II|III|IV))?)"
 
-FINISH = re.compile(NAME + r" (?:finished|ended) (?:the game )?with the (?:green )?dot")
-def parse(body_html, week, prev=None):
+FINISH = re.compile(NAME + r" (?:finished (?:the game )?with|ended (?:the game )?with|took over|wore|inherited|took) the (?:green )?dot")
+BYE = re.compile(r"Green\s*Dot:\s*Bye\b(?!\s*week\s*\?)(?!\s*\?)", re.I)
+def known_players(data_dir):
+    """Names we accept as green-dot wearers: IDP rankings (all positions), HQ rosters, the previous green-dot file."""
+    sys.path.insert(0, os.path.dirname(__file__))
+    from warroom_common import norm
+    d = Path(data_dir); names = set()
+    r = load_json(d / "idp-rankings.json", {}) or {}
+    for lst in (r.get("positions") or {}).values():
+        names |= {norm(p.get("player")) for p in lst if isinstance(p, dict)}
+    names |= {norm(p.get("player")) for p in r.get("eddies") or [] if isinstance(p, dict)}
+    for f in list((d / "hq" / "rosters").glob("*.json")) + [d / "hq" / "roster-eddies.json"]:
+        try:
+            x = json.loads(f.read_text())
+        except Exception:
+            continue
+        for p in (x.get("players") if isinstance(x, dict) else []) or []:
+            if isinstance(p, dict):
+                names.add(norm(p.get("player") or p.get("name")))
+    def walk(o):
+        if isinstance(o, dict):
+            if isinstance(o.get("name") or o.get("player"), str):
+                names.add(norm(o.get("name") or o.get("player")))
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk((load_json(d / "player-values.json", {}) or {}).get("players"))
+    latest = (load_json(d / "rankings" / "latest.json", {}) or {}).get("file")
+    if latest:
+        walk(load_json(d / "rankings" / Path(latest).name, {}))
+    for t in (load_json(d / "green-dots.json", {}) or {}).get("teams", []):
+        names |= {norm(t.get("greenDot"))} | {norm(n) for n in t.get("fullTime") or []}
+    names.discard("")
+    return names
+
+def parse(body_html, week, prev=None, known=None):
     """Returns (teams, unresolved). Each team: team, greenDot, fullTime, notes, and bye: true on a bye week.
     The post's own final wording wins: 'X finished with the dot' overrides the name on the Green Dot line."""
     prev = {t["team"]: t for t in (prev or [])}
@@ -44,7 +83,7 @@ def parse(body_html, week, prev=None):
         if title not in TEAMS:
             continue
         ab, sec = TEAMS[title], text(parts[i + 1]).replace("\u2019", "'")
-        if re.search(r"Green\s*Dot:\s*Bye\b", sec, re.I):
+        if BYE.search(sec):
             p = prev.get(ab) or {}
             teams.append({"team": ab, "bye": True, "greenDot": p.get("greenDot"), "fullTime": p.get("fullTime") or [],
                           "notes": f"Bye in week {week}." + (" Dot carried from the previous list." if p.get("greenDot") else "")})
@@ -53,9 +92,10 @@ def parse(body_html, week, prev=None):
         m = re.search(r"Week\s*\d+\s*Green\s*Dot:\s*" + NAME + r"(?:\s*\(([^)]*)\))?", sec)
         if m:
             dot, paren = m.group(1), m.group(2) or ""
-            f = FINISH.search(paren) or FINISH.search(sec)
+            after = sec[m.end():m.end() + 300]
+            f = FINISH.search(paren) or FINISH.search(after)
             if f and f.group(1) != dot:
-                note = f"Listed {dot}; {f.group(1)} finished with the dot. "
+                note = f"Listed {dot}; post says {f.group(1)} ended up with the dot. "
                 dot = f.group(1)
             elif re.search(r"shared|split|rotat", paren, re.I):
                 # schema: null when the post says the dot rotated; both names go in notes. Counts as resolved.
@@ -64,7 +104,12 @@ def parse(body_html, week, prev=None):
         else:
             f = FINISH.search(sec) or re.search(NAME + r" wore the (?:green )?dot", sec)
             dot = f.group(1) if f else None
-        if not dot and not shared:
+        if dot and known is not None:
+            from warroom_common import norm
+            if norm(dot) not in known:
+                note += f"Parsed name '{dot}' not found in roster files. "
+                unresolved.append(ab); dot = None
+        elif not dot and not shared:
             unresolved.append(ab)
         ft = []
         for mm in re.finditer(NAME + r" played (?:all|every) (?:\d+ )?(?:of the )?snaps", sec):
@@ -111,7 +156,7 @@ def run(data_dir, now, archive=None, post_fetch=None):
             status["reason"] = f"week {wk} post is paid-only; not parsed (no paywall bypass)"
         else:
             body = (post_fetch or (lambda slug: get(f"{BASE}/api/v1/posts/{slug}")))(p.get("slug")).get("body_html") or ""
-            teams, unresolved = parse(body, wk, gd.get("teams"))
+            teams, unresolved = parse(body, wk, gd.get("teams"), known_players(data_dir))
             status["parse"] = {"teams": len(teams), "bye": sum(1 for t in teams if t.get("bye")),
                                "resolved": sum(1 for t in teams if not t.get("bye") and (t["greenDot"] or t.get("shared"))), "unresolved": unresolved}
             if unresolved:
