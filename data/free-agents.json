@@ -4,14 +4,6 @@
   "source": "Fantrax",
   "players": [
     {
-      "player": "Edgerrin Cooper",
-      "pos": "LB",
-      "team": "GB",
-      "fpg": 28.75,
-      "last3Fpg": null,
-      "rosteredPct": 67
-    },
-    {
       "player": "Drew Lock",
       "pos": "QB",
       "team": "SEA",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-22T14:55:00-07:00",
+  "asOf": "2026-10-22T21:45:00-07:00",
   "season": 2026,
   "week": 7,
   "opponent": {
@@ -9,7 +9,7 @@
     "name": "Morningside Muff Divers"
   },
   "freshness": {
-    "plan": "2026-10-22T14:55:00-07:00",
+    "plan": "2026-10-22T21:45:00-07:00",
     "roster": "2026-10-22T14:50:00-07:00",
     "scores": "2026-10-22T14:50:00-07:00",
     "waivers": "2026-10-22T14:50:00-07:00",
@@ -468,19 +468,6 @@
       "faabMax": 0,
       "bid": null,
       "drop": "Brian Robinson Jr.",
-      "tag": "DART"
-    },
-    {
-      "rank": 6,
-      "player": "Edgerrin Cooper",
-      "pos": "LB",
-      "nflTeam": "GB",
-      "why": "ROS. UNVERIFIED: shows as FA at 28.8 FP/G but missing from our rankings, which suggests an injury. Do not chase blind; verify status first.",
-      "stats": "28.75 FP/G season, 67% rostered; FA live 2:50 PM PT",
-      "faabMin": 0,
-      "faabMax": 0,
-      "bid": null,
-      "drop": "",
       "tag": "DART"
     }
   ],
