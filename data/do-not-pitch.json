@@ -1,5 +1,5 @@
 {
-  "about": "Players Bill passed on. Excluded from waiver recs only (they stay in the FA pool). 'weeks' limits the pass to those Fantrax weeks; omit it to make the pass open-ended until 'until' (YYYY-MM-DD) or forever.",
+  "about": "Players Bill passed on. Excluded from waiver recs only (they stay in the FA pool). A pass applies ONLY to the fantasy week(s) in 'weeks' (Week = 1 + floor((date - 2026-09-10)/7), Thu-Wed); without 'weeks' it applies only to the week of 'since'. Season-ending exclusions live in season-ending.json.",
   "players": [
     {"name": "Austin Booker", "pos": "DL", "team": "CHI", "reason": "Bill passed for Week 7", "weeks": [7], "since": "2026-10-22", "source": "Bill"}
   ]

@@ -270,8 +270,15 @@ def do_not_pitch(data_dir, week, today=None):
     keep = []
     # do-not-pitch MAY be empty, but only as an explicit valid object: {"players": []}.
     for p in _load_list(Path(data_dir) / "do-not-pitch.json", "do-not-pitch", allow_empty=True):
+        # Bill's rule: a pass covers ONLY the fantasy week it was given. 'weeks' must contain the current week.
+        # No/invalid 'weeks': applies only if 'since' falls in the current week; otherwise ignored (never forever).
         wk = p.get("weeks")
-        if wk is not None and week not in wk:
+        if not (isinstance(wk, list) and wk):
+            try:
+                wk = [week_for(date.fromisoformat(str(p.get("since"))))]
+            except (TypeError, ValueError):
+                wk = []
+        if week not in wk:
             continue
         if p.get("until") and date.fromisoformat(p["until"]) < today:
             continue

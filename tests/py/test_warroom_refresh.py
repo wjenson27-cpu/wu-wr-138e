@@ -355,3 +355,18 @@ class BotOpsRound2(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Round6bWeekScopedPasses(unittest.TestCase):
+    def test_booker_w7_only_cooper_always(self):
+        self.assertEqual(wc.week_for(date(2026, 10, 22)), 7); self.assertEqual(wc.week_for(date(2026, 10, 28)), 7)
+        self.assertTrue(wc.do_not_pitch(DATA, 7, date(2026, 10, 28)).match("Austin Booker"))
+        self.assertFalse(wc.do_not_pitch(DATA, 8, date(2026, 10, 29)).match("Austin Booker"))
+        self.assertTrue(wc.season_ending(DATA).match("Edgerrin Cooper"))  # permanent, no week
+
+    def test_no_weeks_uses_since_week_never_forever(self):
+        d = stage(); (d / "do-not-pitch.json").write_text('{"players": [{"name": "Austin Booker", "since": "2026-10-22"}]}')
+        self.assertTrue(wc.do_not_pitch(d, 7).match("Austin Booker"))
+        self.assertFalse(wc.do_not_pitch(d, 8).match("Austin Booker"))
+        (d / "do-not-pitch.json").write_text('{"players": [{"name": "Austin Booker", "weeks": "x"}]}')
+        self.assertFalse(wc.do_not_pitch(d, 7).match("Austin Booker"))
