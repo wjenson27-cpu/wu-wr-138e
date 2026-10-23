@@ -413,6 +413,36 @@ add_cases(Round4, "dnp_booker_out_of_recs", ["Austin Booker", "Booker, Austin (C
 add_cases(Round4, "not_matched_by_excluders", ["Edge Cooper", "Ed Cooper", "Cooper Austin", "Kendall Booker", "Jordan van den Berg"],
           lambda self, n: self.assertFalse(wc.season_ending(DATA).match(n) or wc.do_not_pitch(DATA, 7, NOW.date()).match(n), n))
 
+# ============================== ROUND 5 (fixed in round 6) ==============================
+R5_BLOCK_GENERAL = ["trade review pending", "waiver review pending", "FAAB bid decision pending",
+                    "claim results pending for Eddie", "MRI results pending; trade pending", "Offer review pending",
+                    "$40 decision pending"]
+R5_PASS_GENERAL = ["MRI results pending", "Greenlaw appeal pending; Dugger every-down MNF if upheld (pass on FAAB).",
+                   "Suspension review pending. Waivers clear Wed.", "X-ray results pending"]
+R5_BLOCK_STRICT = ["queued claim", "claim queued", "Claim is queued", "pended", "waiting on approval",
+                   "waiting for approval", "offer: Emerson for Lloyd", "Offer - Emerson for Lloyd", "p\u00e9nding",
+                   "pe\u0301nding", "P\u00c9NDING", "\u00e1waiting approval"]
+R5_PASS_STRICT = ["queued", "queued up", "queued up a big game", "Smack only, not an offer: Chase is on bye",
+                  "suspended", "reviewed", "encounter", "not an offer", "0 pending claims", "preview", "dependent",
+                  "must-spend", "caf\u00e9 hot take"]
+def section(sec, t):
+    return {"lineup": {"lineup": [{"player": "Martin Emerson", "note": t}]}, "news": news(t),
+            "injuryWatch": {"injuryWatch": [{"player": "Martin Emerson", "note": t}]}}[sec]
+class Round6(Base):
+    passes = Round4.passes
+add_cases(Round6, "block_general", [(s, t) for s in ("lineup", "news", "injuryWatch") for t in R5_BLOCK_GENERAL],
+          lambda self, c: self.blocked(section(*c)))
+add_cases(Round6, "pass_general", [(s, t) for s in ("lineup", "news", "injuryWatch") for t in R5_PASS_GENERAL],
+          lambda self, c: self.passes(section(*c)))
+add_cases(Round6, "block_strict", [(f.__name__, t) for f in (w_why, t_why, d_reason) for t in R5_BLOCK_STRICT],
+          lambda self, c: self.blocked(globals()[c[0]](c[1])))
+add_cases(Round6, "pass_strict", [(f.__name__, t) for f in (w_why, t_why, d_reason) for t in R5_PASS_STRICT],
+          lambda self, c: self.passes(globals()[c[0]](c[1])))
+add_cases(Round6, "block_empty_status", [(s, v) for s in ("lineup", "news") for v in (None, "", "  ", "\u200b")],
+          lambda self, c: self.blocked({c[0]: [{"player": "Martin Emerson", "status": c[1]}]}))
+add_cases(Round6, "pass_set_status", [(s, v) for s in ("lineup", "news") for v in ("Questionable", "Active", "Suspended")],
+          lambda self, c: self.passes({c[0]: [{"player": "Martin Emerson", "status": c[1]}]}))
+
 # ============================== HISTORY: 18 past data/warroom.json on origin/main ==============================
 HIST = ROOT / "tests/fixtures/warroom-history"
 HIST_FILES = sorted(HIST.glob("*.json"))

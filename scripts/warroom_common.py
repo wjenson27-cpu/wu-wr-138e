@@ -35,7 +35,10 @@ def non_latin(s):
 
 def fold(s):
     """prep() + map Cyrillic/Greek lookalikes to Latin, so 'p\u0435nding' is read as 'pending'."""
-    return prep(s).translate(_CONFUSABLE)
+    s = prep(s).translate(_CONFUSABLE)
+    # round 6: strip accents/diacritics after NFKC ('p\u00e9nding' -> 'pending')
+    s = "".join(ch for ch in unicodedata.normalize("NFKD", s) if not unicodedata.combining(ch))
+    return unicodedata.normalize("NFC", s)
 
 class ListError(Exception): pass
 class PendingError(Exception): pass
@@ -312,7 +315,14 @@ STRICT_TXT = re.compile(
     r"|\b(?:sent|send|sending|made|make|making|extend(?:ed)?|placed|got|received|accept(?:ed)?)\s+(?:an?\s+|the\s+|our\s+|his\s+)?offers?\b"
     r"|\boffered\s+(?:to|him|them|us|me|an?|\$|\d)"
     r"|\boutstanding\s+(?:bids?|claims?|trades?|offers?|waivers?|faab)\b"
-    r"|\b(?:still|is|are|remains?)\s+outstanding\b|^\s*outstanding\s*$", re.I)
+    r"|\b(?:still|is|are|remains?)\s+outstanding\b|^\s*outstanding\s*$"
+    # round 6: queued claim / claim queued (bare 'queued', 'queued up' still fine), pended, waiting on approval,
+    # 'offer: Emerson for Lloyd' (an offer spelled out after a colon/dash)
+    r"|\bqueued\s+(?:claims?|bids?|waivers?|trades?|offers?|moves?|faab|drops?|adds?)\b"
+    r"|\b(?:claims?|bids?|waivers?|trades?|offers?|moves?|faab|drops?|adds?)\s+(?:is\s+|are\s+|was\s+|were\s+|still\s+|now\s+)*queued\b"
+    r"|\bpended\b"
+    r"|\bwaiting\s+(?:on|for)\s+(?:the\s+)?(?:approval|response|acceptance|processing|league|commish|commissioner|review)\b"
+    r"|\boffers?\s*[:\u2013\u2014-]\s*\S", re.I)
 # --- top-level schema of warroom.json; any other top-level key is unknown and fails the run ---
 WARROOM_KEYS = {"schemaVersion", "sample", "asOf", "lastUpdated", "season", "week", "opponent", "freshness",
                 "lockTimes", "lineup", "injuryWatch", "byes", "waivers", "drops", "trades", "idp", "boxSafety", "news",
@@ -345,7 +355,10 @@ def general_text_hit(t):
     t = fold(t)
     if TXT_ALWAYS.search(t):
         return True
-    rest = TXT_NONTXN.sub(" ", TXT_ZERO.sub(" ", t))
+    # round 6: the appeal/MRI/results/review-pending exemption applies per sentence, and only when that sentence has
+    # no bid/claim/trade/FAAB/offer/waiver/$ word ('trade review pending', 'claim results pending' still block).
+    t = TXT_ZERO.sub(" ", t)
+    rest = " ".join(s if TXT_CTX.search(s) else TXT_NONTXN.sub(" ", s) for s in re.split(r"(?<=[.;!?\n])", t))
     return bool(TXT_PEND.search(rest) and TXT_CTX.search(rest))
 
 def _strings(o):
@@ -425,6 +438,8 @@ def find_pending(o, path="", in_offer=False, schema="warroom"):
             if STATUS_KEY.search(fk):
                 if isinstance(v, str) and PENDING_VAL.search(fold(v).replace("_", " ").replace("-", " ")):
                     hits.append(p); continue
+                if (v is None or (isinstance(v, str) and not fold(v).strip())) and re.match(r"\.(lineup|news)\b", path):
+                    hits.append(f"{p} (null/empty status)"); continue   # round 6: lineup/news status must be set
                 if v is not None and not isinstance(v, str):
                     hits.append(f"{p} (non-string status)"); continue
             if isinstance(v, bool) and re.search(r"submit|pend|propos|queue|outstanding", fk, re.I):
