@@ -54,6 +54,11 @@ def add_cases(cls, prefix, cases, fn):
         slug = re.sub(r"[^a-z0-9]+", "_", str(c if not isinstance(c, dict) else json.dumps(c)).lower())[:40].strip("_")
         setattr(cls, f"test_{prefix}_{i:02d}_{slug}", (lambda c: lambda self: fn(self, c))(c))
 
+def E(add=None, drop=None, bid=None, type="claim", give=(), get=(), counterparty=None):
+    """A schema-complete trades.eddies_pending_private entry."""
+    return {"type": type, "add": add, "drop": drop, "bid": bid, "give": list(give), "get": list(get),
+            "counterparty": counterparty, "submitted": "2026-10-23 07:10", "processes": None}
+
 class Base(unittest.TestCase):
     def blocked(self, w):
         """Not published: the build either stops (PendingError) or (round 8) drops the free text."""
@@ -609,7 +614,7 @@ class Round9(Base):
             with self.subTest(w=w):
                 self.assertIsNone(self.build(w))
     def test_private_names_from_raw(self):
-        raw = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_private": [{"player": "Odell Thurman"}]}}
+        raw = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_private": [E("Odell Thurman")]}}
         o = bw.build({"week": 7, "news": [{"text": "Thurman looks good."}, {"text": "Lake out."}]}, DATA, NOW, raw=raw)
         self.assertEqual([n["text"] for n in o["news"]], ["Lake out."])
     def test_private_list_never_published(self):
@@ -622,7 +627,7 @@ class Round9b(Base):
         self.t = Path(tempfile.mkdtemp())
     def names_file(self, names, counts=None):
         p = self.t / "pending-names.json"
-        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "scraped": "S"})); return p
+        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "own_entries": len(names), "scraped": "S"})); return p
     RAW1 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": []}}
     RAW0 = {"url": "https://www.fantrax.com/fantasy/league/x/home", "scraped": "S", "trades": {"eddies_pending_claims_count": 0, "pending_claims_count": None}}
     W = {"week": 7, "news": [{"text": "Martin Emerson looks like a fit."}, {"text": "Lake out."}]}
@@ -670,9 +675,9 @@ class Round10(Base):
     def f(self, content):
         # round 11: a usable file must carry the raw's scrape stamp and own_names; list form is wrapped for that
         if isinstance(content, list):
-            content = {"names": content, "own_names": content, "scraped": "S"}
+            content = {"names": content, "own_names": content, "own_entries": len(content), "scraped": "S"}
         elif isinstance(content, dict) and "names" in content:
-            content = {"own_names": content["names"], "scraped": "S", **content}
+            content = {"own_names": content["names"], "own_entries": len(content["names"]), "scraped": "S", **content}
         p = self.t / "names.json"; p.write_text(content if isinstance(content, str) else json.dumps(content)); return str(p)
     def run_(self, raw, path=None):
         try:
@@ -705,7 +710,7 @@ class Round10(Base):
                            self.f({"counts": {"trades.eddies_pending_claims_count": 1}, "names": ["Martin Emerson"]}))
     def test_named_queue_and_transactions_resolve_and_drop(self):
         for raw in ({"claimsQueue": [{"player": "Martin Emerson"}]},
-                    {"trades": {"eddies_pending_private": [{"add": "Martin Emerson", "drop": "Isaiah Lake", "bid": 12}]}},
+                    {"trades": {"eddies_pending_private": [E("Martin Emerson", "Isaiah Lake", 12)]}},
                     {"transactions": [{"status": "pending", "action": "add Martin Emerson DB CLE / drop Isaiah Lake DB DAL"}]},
                     {"transactions": [{"status": "processing", "player": "Martin Emerson"}]},
                     {"transactions": [{"status": "completed", "date": "2026-10-28", "add": "Martin Emerson"}]}):
@@ -717,7 +722,7 @@ class Round10(Base):
                                      "transactions_since_x": [{"team": "Saltese Slamm", "action": "add Adonai Mitchell WR NYJ", "status": "processed"}]}))
     def test_count_more_than_named_items_fails(self):
         self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 2,
-                                                "eddies_pending_private": [{"player": "Martin Emerson"}]}}))
+                                                "eddies_pending_private": [E("Martin Emerson")]}}))
     def test_file_missing_or_malformed_with_pending_fails(self):
         raw = {"claimsQueue": [{"player": "Martin Emerson"}]}
         for p in (str(self.t / "nope.json"), self.f("{not json"), self.f({"names": "Martin Emerson"}), self.f(42)):
@@ -745,7 +750,7 @@ class Round10b(Base):
         self.t = Path(tempfile.mkdtemp())
     def f(self, names, scraped="2026-10-23 6:00 AM PDT", counts=None):
         p = self.t / "n.json"
-        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "scraped": scraped})); return str(p)
+        p.write_text(json.dumps({"counts": counts or {}, "names": names, "own_names": names, "own_entries": len(names), "scraped": scraped})); return str(p)
     def run_(self, raw, path):
         try:
             return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW,
@@ -837,7 +842,7 @@ class Round11(Base):
                                     self.f({"names": ["Adonai Mitchell"], "scraped": "S"})))
     def test_own_names_cover_our_count(self):
         o = self.run_({"scraped": "S", "trades": {"eddies_pending_claims_count": "1"}},
-                      self.f({"names": ["Martin Emerson"], "own_names": ["Martin Emerson"], "scraped": "S"}))
+                      self.f({"names": ["Martin Emerson"], "own_names": ["Martin Emerson"], "own_entries": 1, "scraped": "S"}))
         self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
     def test_fractional_counts_ceil(self):
         for v in (0.5, "0.5", 0.01, "1.5"):
@@ -876,6 +881,138 @@ class Round11(Base):
     def test_trade_block_offered_is_not_a_source(self):
         self.assertIn("Emerson", self.run_({"scraped": "S", "trades": {"trade_block": {"X": {"positions_offered": ["RB"]}}}},
                                            self.f({"names": [], "own_names": [], "scraped": "S"})))
+
+class PendingNamesCapture(Base):
+    """Bot Ops round 11 follow-ups + documented eddies_pending_private schema."""
+    URL = "https://www.fantrax.com/fantasy/league/x/home"
+    W = {"week": 7, "waivers": [{"player": "Martin Emerson", "why": "Fits."}], "news": [{"text": "Lake out."}]}
+    def setUp(self):
+        self.t = Path(tempfile.mkdtemp())
+    def f(self, d):
+        p = self.t / "n.json"; p.write_text(json.dumps({"scraped": "S", "counts": {}, **d})); return str(p)
+    def run_(self, raw, path):
+        try:
+            return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW, raw={"url": self.URL, "scraped": "S", **raw}, pending_path=path))
+        except wc.PendingError:
+            return None
+    def test_schema_entries_resolve_and_drop(self):
+        raw = {"trades": {"eddies_pending_claims_count": 1, "eddies_pending_trade_offers": 1, "eddies_pending_private": [
+            {"type": "claim", "add": "Martin Emerson", "drop": "Isaiah Lake", "bid": 12, "give": [], "get": [], "counterparty": None,
+             "submitted": "2026-10-23 07:10", "processes": "2026-10-28 21:00"},
+            {"type": "offer", "add": None, "drop": None, "bid": None, "give": ["Tyler Lockett"], "get": ["Jack Campbell"],
+             "counterparty": "Substation", "submitted": "2026-10-22 20:00", "processes": None}]}}
+        o = self.run_(raw, self.f({"names": [], "own_names": []}))
+        self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_schema_entry_without_name_fails(self):
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [
+            {"type": "claim", "add": None, "drop": None, "bid": 12}]}}, self.f({"names": [], "own_names": []})))
+    def test_own_names_are_in_drop_filter(self):
+        o = self.run_({"trades": {"eddies_pending_claims_count": 1}},
+                      self.f({"names": ["Adonai Mitchell"], "own_names": ["Martin Emerson"], "own_entries": 1}))
+        self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_own_names_alone_never_cover_moves(self):
+        # v2: names are not moves; only valid captured entries cover our count
+        for own in (["Martin Emerson"], ["Martin Emerson", "Isaiah Lake"], ["\u200b"], ["TBD"]):
+            with self.subTest(own=own):
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1}}, self.f({"names": own, "own_names": own})))
+        self.assertIsNone(self.run_({"pendingClaims": 3}, self.f({"names": ["Zed Zee", "Zed Zee", "zed zee"], "own_names": []})))
+    def test_own_team_detection_variants(self):
+        other = {"names": ["Adonai Mitchell", "Bo Nix"], "own_names": []}
+        for raw in ({"myTeam": {"pendingClaims": 1}}, {"teams": {"t_ere8": {"pendingClaims": 1}}},
+                    {"teams": [{"name": "Eagle Ridge Eddies", "pendingClaims": 1}]}, {"eagle_ridge_pending_count": 1},
+                    {"own_pending_claims": 1}, {"myPendingClaims": 1}, {"edd\u0456es": {"pendingClaims": 1}},
+                    {"teams": {"xbvk9dpgmsb3ulv4": {"pendingClaims": 1}}}, {"teams": [{"teamId": "xbvk9dpgmsb3ulv4", "pending": 1}]}):
+            with self.subTest(raw=raw):
+                self.assertIsNone(self.run_(raw, self.f(other)))
+        self.assertIsNotNone(self.run_({"teams": [{"name": "Substation", "pendingClaims": 1}]}, self.f({"names": ["Bo Nix"], "own_names": []})))
+    def test_new_sources_and_waiting_count(self):
+        for raw in ({"txns": [{"status": "pending"}]}, {"history": [{"status": "pending"}]}, {"log": [{"status": "queued"}]},
+                    {"waiverWire": [{"status": "pending"}]}, {"waitingCount": 1}):
+            with self.subTest(raw=raw):
+                self.assertIsNone(self.run_(raw, self.f({"names": [], "own_names": []})))
+        o = self.run_({"txns": [{"status": "pending", "player": "Martin Emerson"}]}, self.f({"names": [], "own_names": []}))
+        self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_login_key_is_not_a_log_source(self):
+        self.assertIsNotNone(self.run_({"login": [{"status": "pending"}], "logins": [1]}, self.f({"names": [], "own_names": []})))
+
+class V2Coverage(Base):
+    """Bot Ops review of eddie/pending-names-capture (FAIL): moves vs names, player-name own match, schema problems."""
+    URL = "https://www.fantrax.com/fantasy/league/x/home"
+    W = {"week": 7, "waivers": [{"player": "Martin Emerson", "why": "Fits."}], "news": [{"text": "Lake out."}]}
+    def setUp(self):
+        self.t = Path(tempfile.mkdtemp())
+    def f(self, d):
+        p = self.t / "n.json"; p.write_text(json.dumps({"scraped": "S", "counts": {}, "names": [], "own_names": [], **d})); return str(p)
+    def run_(self, raw, path=None):
+        try:
+            return json.dumps(bw.build(json.loads(json.dumps(self.W)), DATA, NOW, raw={"url": self.URL, "scraped": "S", **raw},
+                                       pending_path=path or self.f({})))
+        except wc.PendingError:
+            return None
+    # 1) coverage: one valid entry per MOVE; own counts SUMMED
+    def test_botops_case_A_two_claims_one_entry(self):
+        raw = {"trades": {"eddies_pending_claims_count": 2, "eddies_pending_private": [E("Yo Other", "Zed Qqname")]}}
+        self.assertIsNone(self.run_(raw, self.f({"names": ["Yo Other", "Zed Qqname"], "own_names": ["Yo Other", "Zed Qqname"], "own_entries": 1})))
+        self.assertIsNone(self.run_(raw))
+    def test_botops_case_B_claim_plus_offer_sum(self):
+        raw = {"trades": {"eddies_pending_claims_count": 1, "eddies_pending_trade_offers": 1, "eddies_pending_private": [
+            E(type="offer", give=["Yo Other"], get=["Zed Qqname"], counterparty="Substation")]}}
+        self.assertIsNone(self.run_(raw))
+        self.assertEqual(wc._own_count(raw), 2)
+    def test_full_coverage_publishes_and_drops(self):
+        raw = {"trades": {"eddies_pending_claims_count": 2, "eddies_pending_trade_offers": 1, "eddies_pending_private": [
+            E("Martin Emerson", "Isaiah Lake", 12), E("Yo Other", None, None, "bid"),
+            E(type="offer", give=["Zed Qqname"], get=["Bo Nix"], counterparty="Substation")]}}
+        o = self.run_(raw); self.assertIsNotNone(o); self.assertNotIn("Emerson", o)
+    def test_file_own_entries_short_fails(self):
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 2}},
+                                    self.f({"own_names": ["Martin Emerson", "Isaiah Lake"], "own_entries": 1})))
+        self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 2}},
+                                       self.f({"own_names": ["Martin Emerson", "Isaiah Lake"], "own_entries": 2})))
+    def test_bad_own_entries_value_counts_zero(self):
+        for v in ("2", True, -1, None, 1.5):
+            with self.subTest(v=v):
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1}}, self.f({"own_names": ["Martin Emerson"], "own_entries": v})))
+    # 2) own team only by exact TEAM field, never player-name fields
+    def test_botops_eddie_player_names_are_not_us(self):
+        for raw in ({"claimsQueue": [{"name": "Eddie Jackson"}]},
+                    {"transactions": [{"team": "Ultron", "name": "Eddie Lacy", "status": "pending"}]},
+                    {"transactions": [{"team": "Ultron", "player": "Eddie Lacy", "status": "pending"}]}):
+            with self.subTest(raw=raw):
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1}, **raw}))
+        for d in ({"name": "Eddie Jackson"}, {"team": "Eddies Revenge"}, {"owner": "ere fan"}, {"player": "Eddie Lacy"},
+                  {"team": "Ultron", "name": "Eagle Ridge Eddies"}, {"Eddie Jackson": 1}):
+            with self.subTest(d=d):
+                self.assertFalse(wc.is_own_record(d))
+        self.assertFalse(wc.is_own_key("Eddie Jackson")); self.assertFalse(wc.is_own_key("eddie_lacy"))
+    def test_exact_team_fields_are_us(self):
+        for d in ({"team": "Eagle Ridge Eddies"}, {"teamId": "xbvk9dpgmsb3ulv4"}, {"owner": "Bill Jenson"},
+                  {"teamName": "eagle  ridge  eddіes"}, {"fantraxTeamId": "XBVK9DPGMSB3ULV4"}):
+            with self.subTest(d=d):
+                self.assertTrue(wc.is_own_record(d))
+        self.assertTrue(wc.is_own_record({"name": "Eagle Ridge Eddies"}, team_ctx=True))
+        self.assertIsNone(self.run_({"claimsQueue": [{"team": "Eagle Ridge Eddies", "drop": "Zed Qqname"}],
+                                     "teams": [{"name": "Eagle Ridge Eddies", "pendingClaims": 1}]}))
+        self.assertIsNotNone(self.run_({"claimsQueue": [{"team": "Eagle Ridge Eddies", "add": "Martin Emerson"}],
+                                        "teams": [{"name": "Eagle Ridge Eddies", "pendingClaims": 1}]}))
+    # 3) schema problems hard-fail
+    def test_botops_drop_only_claim_fails(self):
+        raw = {"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [E(None, "Zed Qqname")]}}
+        self.assertIsNone(self.run_(raw))
+        self.assertIsNone(self.run_(raw, self.f({"own_names": ["Zed Qqname"], "own_entries": 1})))
+    def test_schema_problems_fail(self):
+        good = E("Martin Emerson")
+        bad = [{k: v for k, v in good.items() if k != "processes"}, {**good, "type": "waiver"}, {**good, "bid": "12"},
+               {**good, "bid": True}, {**good, "give": "Bo Nix"}, {**good, "add": ["Martin Emerson"]}, {**good, "add": ""},
+               {**good, "add": "TBD"}, E(type="offer"), "Martin Emerson", [good], {**good, "submitted": 20261023}]
+        for b in bad:
+            with self.subTest(b=b):
+                self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [b, good]}}))
+        self.assertIsNotNone(self.run_({"trades": {"eddies_pending_claims_count": 1, "eddies_pending_private": [good]}}))
+    def test_file_schema_problems_fail(self):
+        self.assertIsNone(self.run_({"trades": {"eddies_pending_claims_count": 1}},
+                                    self.f({"own_names": ["Martin Emerson"], "own_entries": 1, "schema_problems": ["[0] x"]})))
+        self.assertIsNone(self.run_({}, self.f({"schema_problems": ["[0] x"]})))
 
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
