@@ -33,7 +33,7 @@
     if (!s) {
       el.innerHTML = '<div class="card rt-withheld"><div class="rt-lock" aria-hidden="true">&#128274;</div><h2>Eddie\'s track record</h2>' +
         '<p>Withheld for now. The privacy check couldn\'t confirm that nothing pending would show, so this page stays empty until it can.</p>' +
-        '<p class="rt-empty">It comes back on its own after the next clean Fantrax check, usually once claims process Wednesday 9 AM PT. Last published: not yet this season.</p></div>';
+        '<p class="rt-empty">It comes back on its own after the next clean Fantrax check, once this week\'s claims have processed. Last published: not yet this season.</p></div>';
       return;
     }
     var o = s.overall || {}, oa = s.overallAll || {};

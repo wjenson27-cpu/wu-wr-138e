@@ -1,3 +1,21 @@
-data/recs.json
+# Eddie's raw recommendation ledger is private (/workspace/eddie-private/recs.json). Never commit it.
+# Only data/recs-summary.json (gated by scripts/score_recs.py) may be tracked.
+[Dd][Aa][Tt][Aa]/[Rr][Ee][Cc][Ss].[Jj][Ss][Oo][Nn]
+data/*[Rr][Ee][Cc]*
+data/**/*[Rr][Ee][Cc][Ss]*
+data/**/*[Ll][Ee][Dd][Gg][Ee][Rr]*
+data/**/*[Tt][Rr][Aa][Cc][Kk]*[Rr][Ee][Cc][Oo][Rr][Dd]*
+docs/**/*[Rr][Ee][Cc][Ss]*.json*
+docs/**/*[Ll][Ee][Dd][Gg][Ee][Rr]*
+docs/**/*[Tt][Rr][Aa][Cc][Kk]*[Rr][Ee][Cc][Oo][Rr][Dd]*
+data/**/*.jsonl
+docs/**/*.jsonl
+*.jsonl
+/*[Rr][Ee][Cc][Ss]*.[Jj][Ss][Oo][Nn]*
+/*[Ll][Ee][Dd][Gg][Ee][Rr]*
+*.bak
+*.orig
+*~
+!data/recs-summary.json
 __pycache__/
 *.pyc

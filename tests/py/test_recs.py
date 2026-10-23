@@ -92,7 +92,9 @@ class PrivacyTest(Base):
                    {"call": "Offered Lloyd for Emerson", "type": "trade"}, {"alternative": "Pending: Emerson"},
                    {"note": "pending claim Wed"}, {"pendingClaim": True}, {"decision": "pending"}, {"decision": None},
                    {"status": "pending"}, {"reason": "We'll bid $5 next week"}, {"call": "Claim goes through Wednesday"},
-                   {"call": "Bid again next Wednesday"}, {"reason": "We will claim him"}):
+                   {"call": "Bid again next Wednesday"}, {"reason": "We will claim him"}, {"call": "Claim goes thru Wed"},
+                   {"call": "Claim clears Saturday"}, {"reason": "I will put in a claim"}, {"reason": "Planning to grab him"},
+                   {"call": "The add is on deck"}):
             with self.subTest(kw=kw):
                 self.assert_blocked([rec(), rec(id="bad", **kw)])
 
@@ -123,11 +125,40 @@ class PrivacyTest(Base):
         self.assert_blocked([rec()])
 
     def test_no_raw_ledger_is_tracked(self):
-        import subprocess
-        files = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True).stdout.split()
-        bad = [f for f in files if "recs" in Path(f).name and f.endswith(".json") and f != "data/recs-summary.json"]
-        self.assertEqual(bad, [])
-        self.assertIn("data/recs.json", (ROOT / ".gitignore").read_text().split())
+        self.assertEqual(sr.ledger_violations(sr.tracked_files()), [])
+        self.assertIn("!data/recs-summary.json", (ROOT / ".gitignore").read_text().split())
+
+    def test_ledger_leak_examples_fail(self):
+        led = json.dumps({"recs": [rec()]}).encode()
+        jsonl = (json.dumps(rec()) + "\n" + json.dumps(rec(id="y"))).encode()
+        bare = json.dumps([{"call": "c", "alternative": "a", "reason": "r"}]).encode()
+        cases = [("data/ledger.json", led), ("data/Recs.json", led), ("docs/track-record.json", led),
+                 ("data/recs.json.bak", led), ("data/recs.jsonl", jsonl), ("RECS.JSON", led), ("data/rec_ledger.json", led),
+                 ("data/r\u0435cs.json", led), ("data/notes.json", led), ("misc/old.bak", led), ("x/stuff.jsonl", jsonl),
+                 ("data/hq/teams.json", bare), ("data/ＲＥＣＳ.json", b"{}"), ("data/recs-summary.json.bak", led)]
+        for path, data in cases:
+            with self.subTest(path=path):
+                self.assertTrue(sr.ledger_violations([(path, data)]), path)
+
+    def test_summary_must_pass_schema(self):
+        self.assertTrue(sr.ledger_violations([("data/recs-summary.json", json.dumps({"recs": [rec()]}).encode())]))
+        rc, led, out, _ = self.run_cli([rec()])
+        self.assertEqual(rc, 0)
+        self.assertEqual(sr.ledger_violations([("data/recs-summary.json", out.read_bytes())]), [])
+        self.assertEqual(sr.ledger_violations([("data/Recs-Summary.json", out.read_bytes())]), ["data/Recs-Summary.json: rule ledger-name"])
+
+    def test_errors_show_only_id_and_rule(self):
+        import io, contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stderr(buf):
+            self.run_cli([rec(id="w6-x", reason="Our pending claim on Martin Emerson")])
+            self.run_cli([rec(id="w6-y", alternative="Martin Emerson", status="Emerson pending")])
+            self.run_cli([rec()], [{"week": 6, "note": "Martin Emerson pending", "adjustment": "a"}])
+            self.raw(eddiesPendingClaims=1)
+            self.run_cli([rec()])
+        err = buf.getvalue()
+        self.assertNotIn("Emerson", err); self.assertNotIn("pending claim", err)
+        self.assertIn("w6-x: rule pending-text", err)
 
     @unittest.skipUnless(Path(sr.PRIVATE_LEDGER).exists(), "private ledger not on this box")
     def test_private_ledger_passes_text_and_week_checks(self):

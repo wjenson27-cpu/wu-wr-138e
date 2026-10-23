@@ -36,7 +36,8 @@ TYPES = ("waiver_add", "start_sit", "trade", "faab", "green_dot")
 DONE = ("completed", "past")
 PENDING_RE = re.compile(r"pend|queue|await|submit|propos|outstanding|in review|processe?s|processing|\bplaced\b"
                         r"|\bruns?\s+(?:mon|tue|wed|thu|fri|sat|sun|tonight|tomorrow)|\bclaim\s+in\b|no reply|\bcounter"
-                        r"|\bnext\s+(?:week|wed\w*|run|waiver\w*)|\bgo(?:es|ing)?\s+through\b|\bwe(?:'ll| will)\s+(?:bid|claim|add|offer|trade)"
+                        r"|\bnext\s+(?:week|wed\w*|run|waiver\w*)|\bgo(?:es|ing)?\s+(?:through|thru)\b|\bclears?\s+(?:mon|tue|wed|thu|fri|sat|sun|tonight|tomorrow)"
+                        r"|\bput\s+in\s+(?:a\s+)?(?:claim|bid)|\bplan(?:ning|s)?\s+to\s+(?:grab|add|claim|bid|get|pick)|\bon\s+deck\b|\bgonna\s+(?:grab|add|claim|bid)|\bwe(?:'ll| will)\s+(?:bid|claim|add|offer|trade)"
                         r"|\boffer(?:ed|s|ing)?\b|\bnot yet\b|\bthis week\b|\buntil\s+(?:mon|tue|wed|thu|fri|sat|sun)", re.I)
 REC_KEYS = {"id", "date", "week", "type", "player", "call", "alternative", "reason", "decision", "delta", "alt_inferred",
             "status", "result", "pts_player", "pts_alt", "verified", "source", "basis", "basis_player", "basis_alt"}
@@ -171,37 +172,122 @@ def check_ledger(ledger, cur_week, today):
     if not isinstance(ledger, dict) or set(ledger) - TOP_KEYS or not isinstance(ledger.get("recs"), list):
         raise ValueError("ledger: bad top-level shape or unknown key")
     for r in ledger["recs"]:
-        rid = r.get("id") if isinstance(r, dict) else None
+        rid = r.get("id") if isinstance(r, dict) and isinstance(r.get("id"), str) and re.fullmatch(r"[a-z0-9-]{1,40}", r.get("id")) else "rec"
         if not isinstance(r, dict) or set(r) - REC_KEYS:
-            raise ValueError(f"{rid}: unknown field(s) {sorted(set(r) - REC_KEYS) if isinstance(r, dict) else r}")
+            raise ValueError(f"{rid}: rule unknown-field")
         wk = r.get("week")
         if type(wk) is not int or wk < 1:
-            raise ValueError(f"{rid}: week must be an int")
+            raise ValueError(f"{rid}: rule week-not-int")
         if wk >= cur_week:
-            raise ValueError(f"{rid}: week {wk} is not past (current week {cur_week})")
+            raise ValueError(f"{rid}: rule week-not-past")
         try:
             d = date.fromisoformat(str(r.get("date")))
         except ValueError:
-            raise ValueError(f"{rid}: bad date")
+            raise ValueError(f"{rid}: rule bad-date")
         if d > today or week_of(d) not in (wk - 1, wk):
-            raise ValueError(f"{rid}: date {d} does not match week {wk}")
+            raise ValueError(f"{rid}: rule date-week-mismatch")
         if r.get("type") not in TYPES:
-            raise ValueError(f"{rid}: unknown type {r.get('type')}")
+            raise ValueError(f"{rid}: rule unknown-type")
         if r.get("decision") not in DONE:
-            raise ValueError(f"{rid}: decision must be completed/past")
+            raise ValueError(f"{rid}: rule decision-not-finished")
         if r.get("alt_inferred") not in (None, True, False):
-            raise ValueError(f"{rid}: alt_inferred must be a boolean")
+            raise ValueError(f"{rid}: rule alt-inferred-not-bool")
         for t in _texts({k: v for k, v in r.items() if k not in ("delta", "source")}):
             if text_hit(t):
-                raise ValueError(f"{rid}: pending-like text {t!r}")
+                raise ValueError(f"{rid}: rule pending-text")
     for n in ledger.get("learning") or []:
         if not isinstance(n, dict) or set(n) - NOTE_KEYS or type(n.get("week")) is not int:
-            raise ValueError(f"learning: bad note {n!r}")
+            raise ValueError("learning: rule bad-note")
         if n["week"] >= cur_week:
-            raise ValueError(f"learning: week {n['week']} is not past")
+            raise ValueError(f"learning W{n['week']}: rule week-not-past")
         for t in _texts(n):
             if text_hit(t):
-                raise ValueError(f"learning W{n['week']}: pending-like text {t!r}")
+                raise ValueError(f"learning W{n['week']}: rule pending-text")
+
+
+# ---------- ledger leak check: no raw rec records in any tracked file ----------
+REC_FIELDS = {"call", "alternative", "reason", "verified", "decision", "pts_player", "pts_alt", "result", "alt_inferred"}
+SUMMARY_PATH = "data/recs-summary.json"
+SUMMARY_KEYS = {"generatedAt", "week", "overall", "overallAll", "total", "verified", "unverified", "byType", "best",
+                "worst", "latestLearning", "recs"}
+SLIM_KEYS = {"id", "date", "week", "type", "player", "call", "alternative", "reason", "status", "result", "pts_player",
+             "pts_alt", "verified", "basis", "basis_player", "basis_alt", "source"}
+CODE_EXT = (".py", ".js", ".mjs", ".md", ".html", ".css", ".sh", ".yml", ".yaml", ".txt")
+LEDGER_NAME = re.compile(r"rec(?:s|ord|ommend\w*)?(?:[\W_]|$)|ledger|track[\W_]*record", re.I)
+
+
+def _fold_path(p):
+    return unicodedata.normalize("NFKC", p).replace("\u200b", "").lower()
+
+
+def _json_docs(text):
+    try:
+        yield json.loads(text); return
+    except ValueError:
+        pass
+    for line in text.splitlines():
+        line = line.strip()
+        if line.startswith(("{", "[")):
+            try:
+                yield json.loads(line)
+            except ValueError:
+                pass
+
+
+def has_rec_records(text):
+    text = unicodedata.normalize("NFKC", text)
+    for d in _json_docs(text):
+        for row in _rows(d):
+            keys = {unicodedata.normalize("NFKC", str(k)).lower() for k in row}
+            if len(keys & REC_FIELDS) >= 3 or (str(row.get("type")) in TYPES and keys & {"call", "alternative"}):
+                return True
+    return False
+
+
+def summary_schema_ok(doc):
+    if not isinstance(doc, dict) or set(doc) != SUMMARY_KEYS or not isinstance(doc.get("recs"), list):
+        return False
+    wk = doc.get("week")
+    for r in doc["recs"] + list(doc.get("best") or []) + list(doc.get("worst") or []):
+        if not isinstance(r, dict) or set(r) - SLIM_KEYS or type(r.get("week")) is not int or r["week"] >= wk:
+            return False
+    return not any(text_hit(t) for t in _texts({k: v for k, v in doc.items() if k != "generatedAt"})
+                   if not re.fullmatch(r"fantrax[\w .;-]*", t))
+
+
+def ledger_violations(files):
+    """files: iterable of (path, bytes). Returns ['path: rule', ...] for any tracked raw ledger."""
+    bad = []
+    for path, data in files:
+        fp = _fold_path(path)
+        try:
+            text = data.decode("utf-8")
+        except UnicodeDecodeError:
+            text = data.decode("latin-1")
+        if fp == SUMMARY_PATH and path == SUMMARY_PATH:
+            try:
+                ok = summary_schema_ok(json.loads(text))
+            except ValueError:
+                ok = False
+            if not ok:
+                bad.append(f"{path}: rule summary-schema")
+            continue
+        if fp.startswith(("data/", "docs/")) and (wc.non_latin(path) or LEDGER_NAME.search(fp.rsplit("/", 1)[-1])):
+            bad.append(f"{path}: rule ledger-name"); continue
+        if fp.endswith(CODE_EXT):
+            continue
+        if has_rec_records(text):
+            bad.append(f"{path}: rule rec-records")
+    return bad
+
+
+def tracked_files(root=ROOT):
+    import subprocess
+    out = subprocess.run(["git", "ls-files", "-z"], cwd=root, capture_output=True, check=True).stdout
+    for p in filter(None, out.decode("utf-8", "replace").split("\0")):
+        f = Path(root) / p
+        if f.is_file():
+            yield p, f.read_bytes()
 
 
 def eligible(rec, cur_week):
@@ -269,7 +355,7 @@ def pending_gate(ledger, raw, raw_name, names_path, today):
         wc.check_raw_source(raw, raw_name)
         names = wc.pending_names(raw, None) + wc.resolve_pending(raw, names_path, today)
     except wc.PendingError as e:
-        raise ValueError(str(e))
+        raise ValueError("pending gate: rule unresolved-pending")
     if not names:
         return []
     rx = wc._name_rx(names)
@@ -307,7 +393,7 @@ def main(argv=None):
             out, _ = wc.scrub_pending_names(out, names)
         for t in _texts(out):
             if wc.non_latin(t):
-                raise ValueError(f"non-Latin text in output {t!r}")
+                raise ValueError("output: rule non-latin")
     except (ValueError, OSError) as e:
         print(f"score_recs: {e}; nothing written", file=sys.stderr)
         return 1
