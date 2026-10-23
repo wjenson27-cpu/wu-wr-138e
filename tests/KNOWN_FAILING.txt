@@ -1,0 +1,5 @@
+# Node tests that already failed on main at 0645bff (Oct 22 2026), before the auto-refresh branch.
+# They are unrelated to the refresh and are NOT fixed here. Remove a line once it is fixed.
+a list older than 10 days or a missing file hides every match
+the Week 4 sample keeps the posted green dots
+no 2026 week 5 board name on an HQ roster is left as a free agent
