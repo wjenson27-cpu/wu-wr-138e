@@ -296,7 +296,7 @@ R4_PASS_WORDS = ["suspended", "dependent", "must-spend", "not an offer", "0 pend
                  "proposition", "sack/TFL-dependent", "Greenlaw suspended 1 game (appeal Tue)", "no pending",
                  "0 pending trades", "Not a must-spend Saturday.", "Smack only, not an offer: Chase is on bye",
                  "not a formal offer.", "role depends on Delpit.", "FAAB $60. Pending 0/0.", "pending 0/0",
-                 "0 pending claims, 0 pending trades", "offers flex upside", "awaits a soft matchup",
+                 "0 pending claims, 0 pending trades", "awaits a soft matchup",
                  "outstanding tape vs CHI", "Counter run scheme fits him"]
 R4_PASS_GENERAL = R4_PASS_WORDS + ["Greenlaw appeal pending; Dugger every-down MNF if upheld (pass on FAAB).",
                                    "MRI results pending"]
@@ -446,6 +446,43 @@ add_cases(Round6, "pass_set_status", [(s, v) for s in ("lineup", "news") for v i
 # ============================== HISTORY: 18 past data/warroom.json on origin/main ==============================
 HIST = ROOT / "tests/fixtures/warroom-history"
 HIST_FILES = sorted(HIST.glob("*.json"))
+
+class Round7(Base):
+    """Bot Ops round 6 report: plain-wording pending moves. Fail-closed transaction rule + short safe-form list."""
+    PENDING = ["Eddie bid $12 on Emerson (processes Wed)", "Bid placed", "claim placed $12",
+               "Eddie's claim is in, processes Wed", "Eddie put in a claim for Emerson", "claim processes Wed 9 PM",
+               "Eddie's bid: $12", "Eddie sent Nathan a trade", "trade sent to Nathan, waiting", "Trade request sent",
+               "Claim submitted", "Eddie's claim is in", "Eddie put in a claim",
+               # safe-form labels never excuse a placed move
+               "W7 claim placed", "Top bid placed $12", "QB claim is in", "Eddie bids $12 on Emerson",
+               "Eddie is bidding on Emerson", "offers out to Nathan", "Eddie claimed Emerson, not processed yet",
+               "No bid yet. Eddie's claim is in", "FAAB $60 bid on Emerson", "Eddie sent Emerson to TTAB for $20 FAAB",
+               "Trade processed, claim pending", "Eddie traded for Lloyd", "Waiver claim for Emerson"]
+    SAFE = ["Claim processed: won Emerson $12", "Trade accepted and executed", "PASS — no bid", "Watch only — no bid yet",
+            "Not worth FAAB on a one-week fill-in", "FAAB $60", "FAAB left is $68", "$10 FAAB left", "Waivers clear Wed",
+            "On waivers until Wed 9 AM", "Swap in Ponder if claimed", "Only 49% snaps after the MHJ trade",
+            "Nobody claimed Stutsman or CGJ in the Tuesday run", "Saltese sent Stefon Diggs to TTAB for $20 FAAB",
+            ]
+    GENERAL_ONLY_SAFE = ["Greenlaw appeal pending", "MRI results pending"]   # strict sections block any 'pending'
+    def test_offers_verb_now_blocks(self):
+        # round 7: 'offers' is a transaction word; the old should-pass 'offers flex upside' now fails closed
+        self.blocked({"news": [{"text": "offers flex upside"}]})
+    def test_general_only_safe(self):
+        for c in self.GENERAL_ONLY_SAFE: self.assertFalse(wc.general_text_hit(c), c)
+    def test_pending_blocks_everywhere(self):
+        for c in self.PENDING:
+            with self.subTest(c=c):
+                self.blocked({"news": [{"text": c}]})
+                self.blocked({"lineup": [{"player": "Martin Emerson", "reason": c, "status": "ok"}]})
+                self.blocked({"waivers": [{"player": "Martin Emerson", "why": c}]})
+    def test_safe_forms_pass(self):
+        for c in self.SAFE:
+            with self.subTest(c=c):
+                self.assertFalse(wc.general_text_hit(c), c)
+                self.assertFalse(wc.strict_text_hit(c), c)
+    def test_live_data_passes(self):
+        self.assertEqual(wc.find_pending(json.loads((ROOT / "data/warroom.json").read_text())), [])
+
 class History(unittest.TestCase):
     def test_count_is_18(self): self.assertEqual(len(HIST_FILES), 18)
 add_cases(History, "gate_passes", [f.name for f in HIST_FILES],

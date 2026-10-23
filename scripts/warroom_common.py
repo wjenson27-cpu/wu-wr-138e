@@ -344,10 +344,56 @@ PENDING_VAL = re.compile(r"\b(?:pend\w*|propos\w*|submit\w*|queued?|review\w*|aw
                          r"|processing|offer\w*|outstanding)\b", re.I)
 TXT_ALWAYS = re.compile(r"\bPEND\b|awaiting\s+approval|\boutstanding\s+(?:bid|claim|trade|offer)", re.I)
 TXT_PEND = re.compile(r"\bpending\b", re.I)
-# general sections only: a 'pending' whose subject is not a transaction (Greenlaw appeal pending, MRI results pending)
-TXT_NONTXN = re.compile(r"\b(?:appeals?|mri|results?|tests?|scans?|x-?rays?|hearings?|rulings?|decisions?|evaluations?"
-                        r"|exams?|suspensions?|reviews?|discipline)\s+(?:is\s+|are\s+|still\s+)*pending\b", re.I)
-TXT_CTX = re.compile(r"\bbids?\b|\bclaims?\b|\btrades?\b|\bfaab\b|\boffers?\b|\$\s*\d|\bwaivers?\b", re.I)
+
+# round 7 FAIL-CLOSED transaction rule (all free text, every section): a sentence that mentions a bid / claim /
+# trade / FAAB / offer / waiver (any form: bids, bidding, claimed, traded, offers...) BLOCKS unless that same
+# sentence states the move is finished (completed, processed, won, lost, accepted, rejected, executed, declined,
+# vetoed, failed). A negated marker ('not processed', "hasn't been accepted", 'yet to be processed') does not count.
+TXN_WORD = re.compile(r"\b(?:bid(?:s|ding|der|ders|ded)?|claim(?:s|ed|ing)?|trad(?:e|es|ed|ing)|faab"
+                      r"|offer(?:s|ed|ing)?|waiver(?:s|ed)?)\b", re.I)
+DONE_WORD = re.compile(r"\b(?:completed?|processed|won|lost|accepted|rejected|executed|declined|vetoed|failed)\b", re.I)
+NEG_DONE = re.compile(r"\b(?:not|never|un|yet\s+to\s+be|\w+n'?t)\s+(?:\w+\s+){0,2}?(?:completed?|processed|won|lost|accepted|"
+                      r"rejected|executed|declined|vetoed|failed)\b|\bun(?:processed|completed?|accepted|executed)\b", re.I)
+SENT_SPLIT = re.compile(r"[.;!?\n\r\u2028\u2029\u2026]+")
+
+# round 7 SHORT FIXED list of safe forms; the matched span is removed before the transaction check, so any OTHER
+# transaction word left in the sentence still blocks. Nothing else is exempt.
+SAFE_FORM = re.compile(
+    r"\b(?:no|not\s+worth|pass\s+on|before\s+any|save|priced\s+cheap\s+to\s+save)\s+(?:new\s+|a\s+|any\s+)?(?:bids?|claims?|trades?|faab|waivers?)"
+    r"(?:\s+(?:yet|ideas|needed|spent|or\s+faab(?:\s+spent)?))?\b"                  # 1 no-bid / pass lines
+    r"|^\s*pass\b[^a-z]*(?=no\b)"                                                       #   'PASS - no bid'
+    r"|\bfaab\s+(?:left\s+is\s+|unchanged\s+)?\(?\$\s*\d+\)?|\$\s*\d+\s+(?:of\s+)?faab(?:\s+left)?\b"  # 2 FAAB balances
+    r"|\b(?:next\s+)?waivers\s+clear\b|\b(?:on\s+)?waivers\s+until\b"            # 3 schedule
+    r"|\bif\s+(?:a\s+|the\s+)?(?:\w+\s+){0,2}?(?:claimed|claims?\s+(?:land|lands|miss))\b"  # 4 'if claimed'
+    r"|\b(?:waiver|claim)\s+target\b|\bcandidates\s+on\s+waivers\b"                # 6 targets (a rec, not a move)
+    r"|\broster,\s+faab,|\bteams'\s+faab\b|\bfan\s+claim\b"                      # 8 FAAB/claim as plain nouns
+    r"|\b(?:top|ros\s+backup|qb|w\d+)\s+(?:bid|claim)\b|\bsample\s+bid\s+sheet\b|\b\w+/\w+\s+bids\b"  # 9 rec labels
+    r"|\bclaim\s+is\s+insurance\b|\bswap\s+in\s+a\s+claimed\b",
+    re.I)
+
+# safe forms that describe something already done by someone else (stripped BEFORE the placed-verb check)
+SAFE_DONE = re.compile(
+    r"\b[A-Z]{2,4}[\s-]trade\b|\btraded\s+to\s+[A-Z]{2,3}\b"                       # 5 NFL trades (team / player code)
+    r"|\b(?:they|nobody|no\s+one|kyle\s+just\s+scooped\s+\w+\s+off)\s+(?:claimed|waivers)\b"  # 7 other teams' done moves
+    r"|\b\w+-\w+\s+trade\s+\(|^\s*trade:\s+\w+\s+gets\b"                         #   'Towner-Substation trade (', 'Trade: X gets'
+    r"|^\s*(?!eddie\b|we\b|i\b)[A-Z]\w+\s+sent\s+[\w .'-]+?\s+to\s+[A-Z]{2,5}\s+for\s+\$\s*\d+\s+faab\b"  # 'Saltese sent X to TTAB for $20 FAAB'
+    r"|\bfa/waiver\s+status\b|\bwaiver\s+status\b", re.I)
+PLACED = re.compile(r"\b(?:placed|plac(?:e|es|ing)|put\s+in|puts\s+in|sent|send(?:s|ing)?|request(?:s|ed)?|is\s+in|are\s+in"
+                    r"|process(?:es|ing)?|runs?|submit\w*|enter(?:s|ed)?|made|mak(?:e|es|ing)|waiting|bidding|bids\s+\$"
+                    r"|in\s+for|lodged|filed|out\s+to)\b", re.I)
+
+def txn_unfinished(t):
+    """True if some sentence of already-fold()ed text names a transaction without a (non-negated) completed marker."""
+    for s in SENT_SPLIT.split(t):
+        s = SAFE_DONE.sub(" ", NEG_OFFER.sub(" ", s))
+        if TXN_WORD.search(s) and PLACED.search(s) and not DONE_WORD.search(NEG_DONE.sub(" ", s)):
+            return True   # a safe form never excuses a placed / in-progress move ('W7 claim placed', 'QB claim is in')
+        s = SAFE_FORM.sub(" ", s)
+        if TXN_WORD.search(s) and (TXT_PEND.search(s) or not DONE_WORD.search(NEG_DONE.sub(" ", s))):
+            return True   # a 'pending' in the same sentence beats any completed marker
+        if TXT_PEND.search(s) and re.search(r"\$\s*\d", s):
+            return True
+    return False
 
 def strict_text_hit(t):
     """True if free text inside a strict section reads as pending. Non-Latin letters fail closed."""
@@ -356,17 +402,15 @@ def strict_text_hit(t):
     t = fold(t).replace("_", " ")
     t = TXT_ZERO.sub(" ", t)
     t = NEG_OFFER.sub(" ", t)
-    return bool(STRICT_TXT.search(t))
+    return bool(STRICT_TXT.search(t)) or txn_unfinished(t)
 
 def general_text_hit(t):
     t = fold(t)
     if TXT_ALWAYS.search(t):
         return True
-    # round 6: the appeal/MRI/results/review-pending exemption applies per sentence, and only when that sentence has
-    # no bid/claim/trade/FAAB/offer/waiver/$ word ('trade review pending', 'claim results pending' still block).
-    t = TXT_ZERO.sub(" ", t)
-    rest = " ".join(s if TXT_CTX.search(s) else TXT_NONTXN.sub(" ", s) for s in re.split(r"(?<=[.;!?\n])", t))
-    return bool(TXT_PEND.search(rest) and TXT_CTX.search(rest))
+    # round 7: any sentence with a transaction word blocks unless it carries a completed marker (txn_unfinished).
+    # Remaining 'pending' sentences without a transaction word (Greenlaw appeal pending, MRI results pending) pass.
+    return txn_unfinished(TXT_ZERO.sub(" ", t))
 
 def _strings(o):
     if isinstance(o, str):
@@ -397,7 +441,7 @@ def _strict_record(sec, r, path):
             hits.append(f"{path}.status={st!r} (not a completed status)")   # null / number / '' / pending ... all block
     if sec in ("bids", "claims") and r.get("status") is None:
         hits.append(f"{path} (bid/claim with no completed status)")
-    for t in _strings(r):
+    for t in _strings(list(r.values())):
         if strict_text_hit(t):
             hits.append(f"{path}: {t[:60]!r}"); break
     return hits

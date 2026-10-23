@@ -66,7 +66,7 @@ def build(w, data_dir, now, raw=None, raw_name=None, fa=None, fa_asof=None):
         r["rank"] = i
     out["waivers"] = wv
     if blocked:
-        notes.append(f"{len(blocked)} waiver rec(s) blocked: no player name or id.")
+        notes.append(f"{len(blocked)} recommendation(s) withheld: no player name or id.")
     if notes:
         out["refreshNotes"] = notes
     else:
