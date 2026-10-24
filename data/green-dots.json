@@ -1,6 +1,6 @@
 {
   "sample": false,
-  "asOf": "2026-10-20T05:24:49-07:00",
+  "asOf": "2026-10-24T15:15:00-07:00",
   "week": 6,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-6-green-dot-and-full-time-linebackers-idp-fantasy-football",
@@ -18,7 +18,7 @@
       "team": "ATL",
       "greenDot": null,
       "fullTime": [],
-      "notes": "Unsettled: Divine Deablo started with the dot but left hurt (arm, 24 snaps); Josh Woods finished with it (42 snaps). Kendal Daniels (neck) also left; Harold Perkins played every 2H snap. Check practice reports."
+      "notes": "Unsettled: Divine Deablo started with the dot but left hurt (arm, 24 snaps); Josh Woods finished with it (42 snaps). Kendal Daniels (neck) also left; Harold Perkins played every 2H snap. Check practice reports. W7 update (Woellert X, Oct 24): Deablo OUT; Perkins should wear the dot if active."
     },
     {
       "team": "BAL",
@@ -101,11 +101,11 @@
     },
     {
       "team": "GB",
-      "greenDot": "Zaire Franklin",
+      "greenDot": "Isaiah McDuffie",
       "fullTime": [
         "Zaire Franklin"
       ],
-      "notes": "Franklin 71/71 but 3 tkl (rushed on 16 snaps; GB blitz 35.7%). McDuffie 38 (54%, rising), Hopper 31 (44%). W7 @ DET."
+      "notes": "Franklin 71/71 but 3 tkl (rushed on 16 snaps; GB blitz 35.7%). McDuffie 38 (54%, rising), Hopper 31 (44%). W7 @ DET. W7 update (Woellert X, Oct 23): Franklin OUT (shin); McDuffie expected to wear the dot, Hopper LB2, Niemann LB3."
     },
     {
       "team": "HOU",
@@ -156,7 +156,7 @@
       "fullTime": [
         "Nate Landman"
       ],
-      "notes": "Landman 69/70, 10 tkl. Speights 21 (30%) in 65.7% dime. W7 @ LV (12 personnel 63.9%) may bring more base."
+      "notes": "Landman 69/70, 10 tkl. Speights 21 (30%) in 65.7% dime. W7 @ LV (12 personnel 63.9%) may bring more base. W7 update: Landman OUT; Kendricks elevated, Rams beat Nate Atkins expects him to wear the dot (Woellert asked, unconfirmed by him)."
     },
     {
       "team": "LV",
@@ -165,7 +165,7 @@
         "Nakobe Dean",
         "Quay Walker"
       ],
-      "notes": "Both 64/64. Dean 12 tkl (12 in 3 of last 4). W7 vs LAR."
+      "notes": "Both 64/64. Dean 12 tkl (12 in 3 of last 4). W7 vs LAR. W7 update (Woellert X, Oct 24): Quay Walker Q (chest); Lindenberg is the backup."
     },
     {
       "team": "MIA",
@@ -205,12 +205,12 @@
     },
     {
       "team": "NYG",
-      "greenDot": "Tremaine Edmunds",
+      "greenDot": "Micah McFadden",
       "fullTime": [
         "Tremaine Edmunds",
         "Arvell Reese"
       ],
-      "notes": "Both 68/68. Edmunds 9 tkl (4th straight 9+). W7 @ HOU."
+      "notes": "Both 68/68. Edmunds 9 tkl (4th straight 9+). W7 @ HOU. W7 update: Edmunds out for the year (shoulder, IR). Woellert: pick up McFadden; beat (Raanan/Stapleton) expects McFadden to wear the dot."
     },
     {
       "team": "NYJ",
