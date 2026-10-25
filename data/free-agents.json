@@ -1,39 +1,15 @@
 {
   "sample": false,
-  "asOf": "2026-10-24T15:10:00-07:00",
+  "asOf": "2026-10-25T15:05:00-07:00",
   "source": "Fantrax",
   "players": [
-    {
-      "player": "Kyler Gordon",
-      "pos": "DB",
-      "team": "CHI",
-      "fpg": 34.0,
-      "last3Fpg": null,
-      "rosteredPct": 26
-    },
-    {
-      "player": "Drew Lock",
-      "pos": "QB",
-      "team": "SEA",
-      "fpg": 23.5,
-      "last3Fpg": null,
-      "rosteredPct": 15
-    },
     {
       "player": "Deonte Banks",
       "pos": "DB",
       "team": "NYG",
-      "fpg": 20.25,
-      "last3Fpg": null,
-      "rosteredPct": 31
-    },
-    {
-      "player": "Christian Izien",
-      "pos": "DB",
-      "team": "DET",
-      "fpg": 20.0,
-      "last3Fpg": null,
-      "rosteredPct": 19
+      "fpg": 19.25,
+      "last3Fpg": 21.0,
+      "rosteredPct": 32
     },
     {
       "player": "Jalen Hurts",
@@ -44,12 +20,12 @@
       "rosteredPct": 94
     },
     {
-      "player": "Mansoor Delane",
+      "player": "Christian Izien",
       "pos": "DB",
-      "team": "KC",
-      "fpg": 18.25,
-      "last3Fpg": null,
-      "rosteredPct": 52
+      "team": "DET",
+      "fpg": 18.75,
+      "last3Fpg": 17.0,
+      "rosteredPct": 20
     },
     {
       "player": "Michael Penix Jr.",
@@ -57,23 +33,15 @@
       "team": "ATL",
       "fpg": 18.0,
       "last3Fpg": null,
-      "rosteredPct": 63
+      "rosteredPct": 64
     },
     {
-      "player": "Tuli Tuipulotu",
-      "pos": "DL",
-      "team": "LAC",
-      "fpg": 17.83,
-      "last3Fpg": null,
-      "rosteredPct": 59
-    },
-    {
-      "player": "Carl Granderson",
-      "pos": "DL",
-      "team": "NO",
-      "fpg": 17.8,
-      "last3Fpg": null,
-      "rosteredPct": 58
+      "player": "Mansoor Delane",
+      "pos": "DB",
+      "team": "KC",
+      "fpg": 17.5,
+      "last3Fpg": 16.0,
+      "rosteredPct": 52
     },
     {
       "player": "Deshaun Watson",
@@ -84,11 +52,19 @@
       "rosteredPct": 50
     },
     {
+      "player": "Carl Granderson",
+      "pos": "DL",
+      "team": "NO",
+      "fpg": 17.0,
+      "last3Fpg": 23.5,
+      "rosteredPct": 58
+    },
+    {
       "player": "C.J. Henderson",
       "pos": "DB",
       "team": "ATL",
       "fpg": 16.8,
-      "last3Fpg": null,
+      "last3Fpg": 18.5,
       "rosteredPct": 29
     },
     {
@@ -97,23 +73,7 @@
       "team": "NYJ",
       "fpg": 16.5,
       "last3Fpg": null,
-      "rosteredPct": 58
-    },
-    {
-      "player": "Jonas Sanker",
-      "pos": "DB",
-      "team": "NO",
-      "fpg": 16.33,
-      "last3Fpg": null,
-      "rosteredPct": 43
-    },
-    {
-      "player": "Quinyon Mitchell",
-      "pos": "DB",
-      "team": "PHI",
-      "fpg": 16.33,
-      "last3Fpg": null,
-      "rosteredPct": 34
+      "rosteredPct": 60
     },
     {
       "player": "Dee Winters",
@@ -124,44 +84,20 @@
       "rosteredPct": 57
     },
     {
-      "player": "Marcus Jones",
-      "pos": "DB",
-      "team": "NE",
-      "fpg": 16.0,
-      "last3Fpg": null,
-      "rosteredPct": 40
+      "player": "Tuli Tuipulotu",
+      "pos": "DL",
+      "team": "LAC",
+      "fpg": 15.83,
+      "last3Fpg": 16.33,
+      "rosteredPct": 59
     },
     {
       "player": "Cole Bishop",
       "pos": "DB",
       "team": "BUF",
-      "fpg": 15.83,
-      "last3Fpg": null,
+      "fpg": 15.67,
+      "last3Fpg": 18.67,
       "rosteredPct": 64
-    },
-    {
-      "player": "Byron Murphy",
-      "pos": "DB",
-      "team": "MIN",
-      "fpg": 15.8,
-      "last3Fpg": null,
-      "rosteredPct": 41
-    },
-    {
-      "player": "Will Lee",
-      "pos": "DB",
-      "team": "CAR",
-      "fpg": 15.8,
-      "last3Fpg": null,
-      "rosteredPct": 16
-    },
-    {
-      "player": "Chris Johnson",
-      "pos": "DB",
-      "team": "MIA",
-      "fpg": 15.6,
-      "last3Fpg": null,
-      "rosteredPct": 38
     },
     {
       "player": "Jacoby Brissett",
@@ -169,23 +105,31 @@
       "team": "ARI",
       "fpg": 15.5,
       "last3Fpg": null,
-      "rosteredPct": 68
+      "rosteredPct": 69
     },
     {
-      "player": "Jonathan Allen",
-      "pos": "DL",
-      "team": "CIN",
-      "fpg": 15.2,
-      "last3Fpg": null,
-      "rosteredPct": 48
-    },
-    {
-      "player": "Jamel Dean",
+      "player": "Will Lee",
       "pos": "DB",
-      "team": "PIT",
+      "team": "CAR",
+      "fpg": 15.4,
+      "last3Fpg": 17.0,
+      "rosteredPct": 16
+    },
+    {
+      "player": "Jake Hansen",
+      "pos": "LB",
+      "team": "HOU",
+      "fpg": 15.33,
+      "last3Fpg": 22.33,
+      "rosteredPct": 29
+    },
+    {
+      "player": "Jarrian Jones",
+      "pos": "DB",
+      "team": "JAX",
       "fpg": 15.2,
-      "last3Fpg": null,
-      "rosteredPct": 17
+      "last3Fpg": 17.0,
+      "rosteredPct": 8
     },
     {
       "player": "Jeremy Reaves",
@@ -204,20 +148,36 @@
       "rosteredPct": 48
     },
     {
-      "player": "Kamren Kinchens",
-      "pos": "DB",
-      "team": "LAR",
-      "fpg": 15.0,
-      "last3Fpg": null,
-      "rosteredPct": 34
-    },
-    {
       "player": "Jack Gibbens",
       "pos": "LB",
       "team": "ARI",
       "fpg": 14.83,
       "last3Fpg": null,
       "rosteredPct": 30
+    },
+    {
+      "player": "Jamel Dean",
+      "pos": "DB",
+      "team": "PIT",
+      "fpg": 14.8,
+      "last3Fpg": 19.0,
+      "rosteredPct": 18
+    },
+    {
+      "player": "Chris Johnson",
+      "pos": "DB",
+      "team": "MIA",
+      "fpg": 14.8,
+      "last3Fpg": 12.0,
+      "rosteredPct": 38
+    },
+    {
+      "player": "Christian Benford",
+      "pos": "DB",
+      "team": "BUF",
+      "fpg": 14.8,
+      "last3Fpg": 16.5,
+      "rosteredPct": 25
     },
     {
       "player": "Hezekiah Masses",
@@ -228,20 +188,28 @@
       "rosteredPct": 40
     },
     {
-      "player": "D.J. Wonnum",
-      "pos": "DL",
-      "team": "DET",
-      "fpg": 14.6,
-      "last3Fpg": null,
-      "rosteredPct": 42
-    },
-    {
       "player": "Daxton Hill",
       "pos": "DB",
       "team": "CIN",
       "fpg": 14.6,
       "last3Fpg": null,
       "rosteredPct": 41
+    },
+    {
+      "player": "D.J. Wonnum",
+      "pos": "DL",
+      "team": "DET",
+      "fpg": 14.6,
+      "last3Fpg": 17.5,
+      "rosteredPct": 43
+    },
+    {
+      "player": "Ja'Quan McMillian",
+      "pos": "DB",
+      "team": "DEN",
+      "fpg": 14.6,
+      "last3Fpg": 19.33,
+      "rosteredPct": 27
     },
     {
       "player": "Zyon McCollum",
@@ -252,12 +220,12 @@
       "rosteredPct": 31
     },
     {
-      "player": "Justin Walley",
+      "player": "Ji'Ayir Brown",
       "pos": "DB",
-      "team": "IND",
+      "team": "SF",
       "fpg": 14.5,
       "last3Fpg": null,
-      "rosteredPct": 22
+      "rosteredPct": 21
     },
     {
       "player": "Brandon Cisse",
@@ -265,15 +233,23 @@
       "team": "GB",
       "fpg": 14.5,
       "last3Fpg": null,
-      "rosteredPct": 22
+      "rosteredPct": 24
     },
     {
-      "player": "Ji'Ayir Brown",
+      "player": "Martin Emerson",
       "pos": "DB",
-      "team": "SF",
+      "team": "NO",
       "fpg": 14.5,
-      "last3Fpg": null,
-      "rosteredPct": 20
+      "last3Fpg": 24.5,
+      "rosteredPct": 7
+    },
+    {
+      "player": "Roger McCreary",
+      "pos": "DB",
+      "team": "DET",
+      "fpg": 14.4,
+      "last3Fpg": 18.5,
+      "rosteredPct": 13
     },
     {
       "player": "Jameis Winston",
@@ -284,20 +260,20 @@
       "rosteredPct": 51
     },
     {
+      "player": "Justin Walley",
+      "pos": "DB",
+      "team": "IND",
+      "fpg": 14.33,
+      "last3Fpg": 15.67,
+      "rosteredPct": 22
+    },
+    {
       "player": "Dohnte Meyers",
       "pos": "WR",
       "team": "CIN",
       "fpg": 14.2,
       "last3Fpg": null,
       "rosteredPct": 25
-    },
-    {
-      "player": "Leonard Williams",
-      "pos": "DL",
-      "team": "SEA",
-      "fpg": 14.17,
-      "last3Fpg": null,
-      "rosteredPct": 69
     },
     {
       "player": "Jaishawn Barham",
@@ -308,36 +284,12 @@
       "rosteredPct": 71
     },
     {
-      "player": "Justin Strnad",
-      "pos": "LB",
-      "team": "DEN",
+      "player": "Austin Booker",
+      "pos": "DL",
+      "team": "CHI",
       "fpg": 14.0,
-      "last3Fpg": null,
-      "rosteredPct": 16
-    },
-    {
-      "player": "Rasul Douglas",
-      "pos": "DB",
-      "team": "WAS",
-      "fpg": 13.83,
-      "last3Fpg": null,
-      "rosteredPct": 13
-    },
-    {
-      "player": "Boye Mafe",
-      "pos": "DL",
-      "team": "CIN",
-      "fpg": 13.8,
-      "last3Fpg": null,
-      "rosteredPct": 55
-    },
-    {
-      "player": "Dexter Lawrence",
-      "pos": "DL",
-      "team": "CIN",
-      "fpg": 13.8,
-      "last3Fpg": null,
-      "rosteredPct": 52
+      "last3Fpg": 19.33,
+      "rosteredPct": 77
     },
     {
       "player": "Trent McDuffie",
@@ -348,6 +300,22 @@
       "rosteredPct": 45
     },
     {
+      "player": "Jonas Sanker",
+      "pos": "DB",
+      "team": "NO",
+      "fpg": 13.67,
+      "last3Fpg": 12.33,
+      "rosteredPct": 43
+    },
+    {
+      "player": "Rasul Douglas",
+      "pos": "DB",
+      "team": "WAS",
+      "fpg": 13.67,
+      "last3Fpg": 21.33,
+      "rosteredPct": 13
+    },
+    {
       "player": "Craig Woodson",
       "pos": "DB",
       "team": "NE",
@@ -356,28 +324,12 @@
       "rosteredPct": 19
     },
     {
-      "player": "Byron Murphy",
+      "player": "Nick Herbig",
       "pos": "DL",
-      "team": "SEA",
-      "fpg": 13.5,
-      "last3Fpg": null,
-      "rosteredPct": 58
-    },
-    {
-      "player": "Deone Walker",
-      "pos": "DL",
-      "team": "BUF",
-      "fpg": 13.5,
-      "last3Fpg": null,
-      "rosteredPct": 42
-    },
-    {
-      "player": "Andru Phillips",
-      "pos": "DB",
-      "team": "NYG",
-      "fpg": 13.33,
-      "last3Fpg": null,
-      "rosteredPct": 25
+      "team": "PIT",
+      "fpg": 13.4,
+      "last3Fpg": 19.5,
+      "rosteredPct": 27
     },
     {
       "player": "Marcus Harris",
@@ -404,6 +356,22 @@
       "rosteredPct": 80
     },
     {
+      "player": "Gracen Halton",
+      "pos": "DL",
+      "team": "SF",
+      "fpg": 13.2,
+      "last3Fpg": 13.33,
+      "rosteredPct": 32
+    },
+    {
+      "player": "Andru Phillips",
+      "pos": "DB",
+      "team": "NYG",
+      "fpg": 13.17,
+      "last3Fpg": 16.0,
+      "rosteredPct": 25
+    },
+    {
       "player": "Tavius Robinson",
       "pos": "LB",
       "team": "BAL",
@@ -417,15 +385,15 @@
       "team": "BUF",
       "fpg": 13.17,
       "last3Fpg": null,
-      "rosteredPct": 18
+      "rosteredPct": 19
     },
     {
-      "player": "Austin Booker",
-      "pos": "DL",
-      "team": "CHI",
-      "fpg": 13.14,
-      "last3Fpg": null,
-      "rosteredPct": 77
+      "player": "Julian Blackmon",
+      "pos": "DB",
+      "team": "NO",
+      "fpg": 13.0,
+      "last3Fpg": 16.33,
+      "rosteredPct": 32
     },
     {
       "player": "Ronnie Hickman",
@@ -436,36 +404,28 @@
       "rosteredPct": 42
     },
     {
-      "player": "Julian Blackmon",
-      "pos": "DB",
-      "team": "NO",
-      "fpg": 13.0,
-      "last3Fpg": null,
-      "rosteredPct": 32
-    },
-    {
-      "player": "Nick Herbig",
+      "player": "Jonathan Allen",
       "pos": "DL",
-      "team": "PIT",
+      "team": "CIN",
       "fpg": 13.0,
-      "last3Fpg": null,
-      "rosteredPct": 27
+      "last3Fpg": 14.0,
+      "rosteredPct": 49
     },
     {
-      "player": "David Walker",
+      "player": "Justin Strnad",
       "pos": "LB",
-      "team": "TB",
+      "team": "DEN",
       "fpg": 12.83,
-      "last3Fpg": null,
-      "rosteredPct": 14
+      "last3Fpg": 15.0,
+      "rosteredPct": 17
     },
     {
-      "player": "Josh Hines-Allen",
-      "pos": "DL",
-      "team": "JAX",
+      "player": "Calen Bullock",
+      "pos": "DB",
+      "team": "HOU",
       "fpg": 12.67,
       "last3Fpg": null,
-      "rosteredPct": 76
+      "rosteredPct": 25
     },
     {
       "player": "Grant Delpit",
@@ -476,36 +436,28 @@
       "rosteredPct": 47
     },
     {
+      "player": "Quandarrius Robinson",
+      "pos": "LB",
+      "team": "DEN",
+      "fpg": 12.67,
+      "last3Fpg": null,
+      "rosteredPct": 16
+    },
+    {
+      "player": "Deone Walker",
+      "pos": "DL",
+      "team": "BUF",
+      "fpg": 12.67,
+      "last3Fpg": 9.0,
+      "rosteredPct": 42
+    },
+    {
       "player": "Khalil Mack",
       "pos": "DL",
       "team": "LAC",
       "fpg": 12.67,
       "last3Fpg": null,
       "rosteredPct": 28
-    },
-    {
-      "player": "Calen Bullock",
-      "pos": "DB",
-      "team": "HOU",
-      "fpg": 12.67,
-      "last3Fpg": null,
-      "rosteredPct": 24
-    },
-    {
-      "player": "Quandarrius Robinson",
-      "pos": "LB",
-      "team": "DEN",
-      "fpg": 12.67,
-      "last3Fpg": null,
-      "rosteredPct": 15
-    },
-    {
-      "player": "Quinnen Williams",
-      "pos": "DL",
-      "team": "DAL",
-      "fpg": 12.5,
-      "last3Fpg": null,
-      "rosteredPct": 56
     },
     {
       "player": "DaRon Bland",
@@ -516,14 +468,6 @@
       "rosteredPct": 40
     },
     {
-      "player": "Gracen Halton",
-      "pos": "DL",
-      "team": "SF",
-      "fpg": 12.5,
-      "last3Fpg": null,
-      "rosteredPct": 31
-    },
-    {
       "player": "Omar Speights",
       "pos": "LB",
       "team": "LAR",
@@ -532,12 +476,60 @@
       "rosteredPct": 24
     },
     {
+      "player": "David Walker",
+      "pos": "LB",
+      "team": "TB",
+      "fpg": 12.5,
+      "last3Fpg": 14.33,
+      "rosteredPct": 15
+    },
+    {
+      "player": "Byron Murphy",
+      "pos": "DL",
+      "team": "SEA",
+      "fpg": 12.33,
+      "last3Fpg": 17.33,
+      "rosteredPct": 58
+    },
+    {
+      "player": "Boye Mafe",
+      "pos": "DL",
+      "team": "CIN",
+      "fpg": 12.2,
+      "last3Fpg": 19.5,
+      "rosteredPct": 57
+    },
+    {
       "player": "Mike Gesicki",
       "pos": "TE",
       "team": "CIN",
       "fpg": 12.1,
       "last3Fpg": null,
+      "rosteredPct": 53
+    },
+    {
+      "player": "Marcus Jones",
+      "pos": "DB",
+      "team": "NE",
+      "fpg": 12.0,
+      "last3Fpg": 13.0,
+      "rosteredPct": 40
+    },
+    {
+      "player": "Dexter Lawrence",
+      "pos": "DL",
+      "team": "CIN",
+      "fpg": 12.0,
+      "last3Fpg": 10.0,
       "rosteredPct": 52
+    },
+    {
+      "player": "Josh Hines-Allen",
+      "pos": "DL",
+      "team": "JAX",
+      "fpg": 12.0,
+      "last3Fpg": 10.0,
+      "rosteredPct": 76
     },
     {
       "player": "Malik Willis",
@@ -548,14 +540,6 @@
       "rosteredPct": 55
     },
     {
-      "player": "Martin Emerson",
-      "pos": "DB",
-      "team": "NO",
-      "fpg": 12.0,
-      "last3Fpg": null,
-      "rosteredPct": 7
-    },
-    {
       "player": "Charles Woods",
       "pos": "DB",
       "team": "NE",
@@ -564,44 +548,12 @@
       "rosteredPct": 4
     },
     {
-      "player": "Akheem Mesidor",
+      "player": "Quinnen Williams",
       "pos": "DL",
-      "team": "LAC",
-      "fpg": 11.67,
-      "last3Fpg": null,
-      "rosteredPct": 54
-    },
-    {
-      "player": "Nik Bonitto",
-      "pos": "DL",
-      "team": "DEN",
-      "fpg": 11.67,
-      "last3Fpg": null,
-      "rosteredPct": 52
-    },
-    {
-      "player": "Cameron Heyward",
-      "pos": "DL",
-      "team": "PIT",
-      "fpg": 11.5,
-      "last3Fpg": null,
-      "rosteredPct": 62
-    },
-    {
-      "player": "Jayson Oweh",
-      "pos": "LB",
-      "team": "WAS",
-      "fpg": 11.5,
-      "last3Fpg": null,
-      "rosteredPct": 25
-    },
-    {
-      "player": "Keon Coleman",
-      "pos": "WR",
-      "team": "BUF",
-      "fpg": 11.33,
-      "last3Fpg": null,
-      "rosteredPct": 74
+      "team": "DAL",
+      "fpg": 11.17,
+      "last3Fpg": 14.33,
+      "rosteredPct": 56
     },
     {
       "player": "Cam Ward",
@@ -612,12 +564,12 @@
       "rosteredPct": 54
     },
     {
-      "player": "Danny Stutsman",
-      "pos": "LB",
-      "team": "NO",
-      "fpg": 11.17,
-      "last3Fpg": null,
-      "rosteredPct": 16
+      "player": "Cameron Heyward",
+      "pos": "DL",
+      "team": "PIT",
+      "fpg": 11.0,
+      "last3Fpg": 12.33,
+      "rosteredPct": 62
     },
     {
       "player": "Darius Cooper",
@@ -625,7 +577,15 @@
       "team": "PHI",
       "fpg": 10.83,
       "last3Fpg": null,
-      "rosteredPct": 38
+      "rosteredPct": 47
+    },
+    {
+      "player": "Tommy Togiai",
+      "pos": "DL",
+      "team": "HOU",
+      "fpg": 10.67,
+      "last3Fpg": 12.33,
+      "rosteredPct": 24
     },
     {
       "player": "Gabe Jacas",
@@ -636,244 +596,196 @@
       "rosteredPct": 49
     },
     {
-      "player": "Darren Waller",
-      "pos": "TE",
-      "team": "CAR",
-      "fpg": 10.0,
-      "last3Fpg": null,
-      "rosteredPct": 50
-    },
-    {
-      "player": "Jacory Croskey-Merritt",
-      "pos": "RB",
-      "team": "WAS",
-      "fpg": 9.8,
-      "last3Fpg": null,
-      "rosteredPct": 92
-    },
-    {
-      "player": "Mark Andrews",
-      "pos": "TE",
-      "team": "BAL",
-      "fpg": 9.58,
-      "last3Fpg": null,
-      "rosteredPct": 86
-    },
-    {
-      "player": "Raheim Sanders",
-      "pos": "RB",
+      "player": "Isaiah McGuire",
+      "pos": "DL",
       "team": "CLE",
-      "fpg": 9.2,
-      "last3Fpg": null,
-      "rosteredPct": 19
+      "fpg": 10.5,
+      "last3Fpg": 11.67,
+      "rosteredPct": 21
     },
     {
-      "player": "Romeo Doubs",
-      "pos": "WR",
-      "team": "NE",
-      "fpg": 9.17,
-      "last3Fpg": null,
-      "rosteredPct": 90
-    },
-    {
-      "player": "Daniel Jones",
-      "pos": "QB",
-      "team": "IND",
-      "fpg": 9.17,
-      "last3Fpg": null,
-      "rosteredPct": 63
-    },
-    {
-      "player": "Jake Ferguson",
-      "pos": "TE",
-      "team": "DAL",
-      "fpg": 9.08,
-      "last3Fpg": null,
-      "rosteredPct": 86
-    },
-    {
-      "player": "Roman Wilson",
-      "pos": "WR",
-      "team": "PIT",
-      "fpg": 9.0,
-      "last3Fpg": null,
-      "rosteredPct": 41
-    },
-    {
-      "player": "Terry McLaurin",
-      "pos": "WR",
-      "team": "WAS",
-      "fpg": 8.8,
-      "last3Fpg": null,
-      "rosteredPct": 98
-    },
-    {
-      "player": "Dontayvion Wicks",
-      "pos": "WR",
-      "team": "PHI",
-      "fpg": 8.5,
-      "last3Fpg": null,
-      "rosteredPct": 72
-    },
-    {
-      "player": "Ryan Flournoy",
-      "pos": "WR",
-      "team": "DAL",
-      "fpg": 8.5,
-      "last3Fpg": null,
-      "rosteredPct": 58
-    },
-    {
-      "player": "Cade Otton",
-      "pos": "TE",
-      "team": "TB",
-      "fpg": 8.33,
-      "last3Fpg": null,
-      "rosteredPct": 35
-    },
-    {
-      "player": "Eli Raridon",
-      "pos": "TE",
-      "team": "NE",
-      "fpg": 8.25,
-      "last3Fpg": null,
-      "rosteredPct": 25
-    },
-    {
-      "player": "Jaylen Wright",
-      "pos": "RB",
-      "team": "MIA",
-      "fpg": 8.25,
-      "last3Fpg": null,
-      "rosteredPct": 41
-    },
-    {
-      "player": "Foster Moreau",
-      "pos": "TE",
-      "team": "HOU",
-      "fpg": 7.92,
-      "last3Fpg": null,
-      "rosteredPct": 4
-    },
-    {
-      "player": "Rashod Bateman",
-      "pos": "WR",
-      "team": "BAL",
-      "fpg": 7.5,
-      "last3Fpg": null,
-      "rosteredPct": 52
-    },
-    {
-      "player": "MarShawn Lloyd",
-      "pos": "RB",
-      "team": "GB",
-      "fpg": 7.17,
-      "last3Fpg": null,
-      "rosteredPct": 94
-    },
-    {
-      "player": "AJ Barner",
-      "pos": "TE",
-      "team": "SEA",
-      "fpg": 7.17,
-      "last3Fpg": null,
-      "rosteredPct": 49
-    },
-    {
-      "player": "Dylan Laube",
-      "pos": "RB",
-      "team": "LV",
-      "fpg": 7.0,
-      "last3Fpg": null,
-      "rosteredPct": 6
-    },
-    {
-      "player": "Jacob Saylors",
-      "pos": "RB",
-      "team": "DET",
-      "fpg": 7.0,
-      "last3Fpg": null,
-      "rosteredPct": 6
-    },
-    {
-      "player": "Ameer Abdullah",
-      "pos": "RB",
-      "team": "JAX",
-      "fpg": 6.83,
-      "last3Fpg": null,
-      "rosteredPct": 3
-    },
-    {
-      "player": "Malachi Fields",
-      "pos": "WR",
-      "team": "NYG",
-      "fpg": 6.67,
-      "last3Fpg": null,
-      "rosteredPct": 45
-    },
-    {
-      "player": "Evan Engram",
-      "pos": "TE",
-      "team": "DEN",
-      "fpg": 6.42,
-      "last3Fpg": null,
-      "rosteredPct": 35
-    },
-    {
-      "player": "KC Concepcion",
-      "pos": "WR",
+      "player": "Maliek Collins",
+      "pos": "DL",
       "team": "CLE",
-      "fpg": 6.33,
-      "last3Fpg": null,
-      "rosteredPct": 88
+      "fpg": 10.33,
+      "last3Fpg": 17.67,
+      "rosteredPct": 20
     },
     {
-      "player": "Cooper Kupp",
-      "pos": "WR",
-      "team": "SEA",
-      "fpg": 6.33,
+      "player": "Mike Hughes",
+      "pos": "DB",
+      "team": "ATL",
+      "fpg": null,
       "last3Fpg": null,
-      "rosteredPct": 52
+      "rosteredPct": 10
     },
     {
-      "player": "Will Shipley",
-      "pos": "RB",
-      "team": "PHI",
-      "fpg": 6.0,
-      "last3Fpg": null,
-      "rosteredPct": 30
-    },
-    {
-      "player": "Ray Davis",
-      "pos": "RB",
-      "team": "BUF",
-      "fpg": 5.83,
-      "last3Fpg": null,
-      "rosteredPct": 39
-    },
-    {
-      "player": "George Holani",
-      "pos": "RB",
-      "team": "SEA",
-      "fpg": 5.5,
-      "last3Fpg": null,
-      "rosteredPct": 39
-    },
-    {
-      "player": "Corey Kiner",
-      "pos": "RB",
-      "team": "NE",
-      "fpg": 5.43,
+      "player": "Renardo Green",
+      "pos": "DB",
+      "team": "SF",
+      "fpg": null,
       "last3Fpg": null,
       "rosteredPct": 21
     },
     {
-      "player": "Chris Rodriguez Jr.",
-      "pos": "RB",
-      "team": "JAX",
-      "fpg": 4.83,
+      "player": "Azareye'h Thomas",
+      "pos": "DB",
+      "team": "NYJ",
+      "fpg": null,
       "last3Fpg": null,
-      "rosteredPct": 71
+      "rosteredPct": 9
+    },
+    {
+      "player": "Nohl Williams",
+      "pos": "DB",
+      "team": "KC",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 23
+    },
+    {
+      "player": "Denzel Ward",
+      "pos": "DB",
+      "team": "CLE",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 21
+    },
+    {
+      "player": "Taron Johnson",
+      "pos": "DB",
+      "team": "LV",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 13
+    },
+    {
+      "player": "Tyson Campbell",
+      "pos": "DB",
+      "team": "CLE",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 40
+    },
+    {
+      "player": "Antonio Johnson",
+      "pos": "DB",
+      "team": "JAX",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 19
+    },
+    {
+      "player": "Cam Hart",
+      "pos": "DB",
+      "team": "LAC",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 12
+    },
+    {
+      "player": "Andre Cisco",
+      "pos": "DB",
+      "team": "NYJ",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 13
+    },
+    {
+      "player": "Asante Samuel",
+      "pos": "DB",
+      "team": "PIT",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 6
+    },
+    {
+      "player": "Tariq Woolen",
+      "pos": "DB",
+      "team": "PHI",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 13
+    },
+    {
+      "player": "Justin Reid",
+      "pos": "DB",
+      "team": "NO",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 29
+    },
+    {
+      "player": "Andrew Mukuba",
+      "pos": "DB",
+      "team": "PHI",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 25
+    },
+    {
+      "player": "Michael Taaffe",
+      "pos": "DB",
+      "team": "MIA",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 19
+    },
+    {
+      "player": "Malik Muhammad",
+      "pos": "DB",
+      "team": "CHI",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 16
+    },
+    {
+      "player": "Greg Newsome",
+      "pos": "DB",
+      "team": "NYG",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 13
+    },
+    {
+      "player": "Camryn Bynum",
+      "pos": "DB",
+      "team": "IND",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 48
+    },
+    {
+      "player": "Josh Jobe",
+      "pos": "DB",
+      "team": "SEA",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 19
+    },
+    {
+      "player": "Marlon Humphrey",
+      "pos": "DB",
+      "team": "BAL",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 44
+    },
+    {
+      "player": "Malcolm Roach",
+      "pos": "DL",
+      "team": "DEN",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 19
+    },
+    {
+      "player": "Donovan Ezeiruaku",
+      "pos": "DL",
+      "team": "DAL",
+      "fpg": null,
+      "last3Fpg": null,
+      "rosteredPct": 68
     }
   ]
 }

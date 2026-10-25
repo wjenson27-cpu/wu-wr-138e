@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-24T15:15:00-07:00",
+  "asOf": "2026-10-25T15:05:00-07:00",
   "season": 2026,
   "week": 7,
   "opponent": {
@@ -9,35 +9,19 @@
     "name": "Morningside Muff Divers"
   },
   "freshness": {
-    "plan": "2026-10-24T15:15:00-07:00",
-    "roster": "2026-10-24T15:10:00-07:00",
-    "scores": "2026-10-24T15:10:00-07:00",
-    "waivers": "2026-10-24T15:10:00-07:00",
-    "news": "2026-10-24T15:15:00-07:00"
+    "plan": "2026-10-25T15:05:00-07:00",
+    "roster": "2026-10-25T15:05:00-07:00",
+    "scores": "2026-10-25T15:00:00-07:00",
+    "waivers": "2026-10-25T15:05:00-07:00",
+    "news": "2026-10-25T14:55:00-07:00"
   },
   "lockTimes": [
     {
-      "label": "W7 Sun 6:30 AM PIT@NO, Paris (Granderson if added)",
-      "at": "2026-10-25T06:30:00-07:00"
-    },
-    {
-      "label": "W7 Sun early 10 AM (Young, Hall, Wilson, Coker, Dike, Warner, Simpson; Hall inactives ~8:30 AM)",
-      "at": "2026-10-25T10:00:00-07:00"
-    },
-    {
-      "label": "W7 Sun 1:05 PM DEN@ARI (Bourne)",
-      "at": "2026-10-25T13:05:00-07:00"
-    },
-    {
-      "label": "W7 Sun 1:25 PM LAR@LV, GB@DET (Bowers, Lake, E. Williams, Reed)",
-      "at": "2026-10-25T13:25:00-07:00"
-    },
-    {
-      "label": "W7 SNF KC@SEA 5:20 PM (Karlaftis, Knight)",
+      "label": "W7 SNF KC@SEA 5:20 PM (Karlaftis, Knight; inactives ~3:50 PM)",
       "at": "2026-10-25T17:20:00-07:00"
     },
     {
-      "label": "W7 MNF DAL@PHI 5:15 PM",
+      "label": "W7 MNF DAL@PHI 5:15 PM (no Eddies)",
       "at": "2026-10-26T17:15:00-07:00"
     }
   ],
@@ -48,9 +32,169 @@
       "pos": "QB",
       "nflTeam": "CAR",
       "verdict": "START",
-      "reason": "vs TB (26th in QB FPA; TB without Winfield and RT Goedeke). Full all week.",
+      "reason": "Locked, final: 9 pts. TB 43-13; 163 yds, 1 TD, 2 INT, lost fumble, 5 sacks. Pulled late for Pickett.",
       "injury": "",
-      "practice": "FP Wed/Thu/Fri (knee)"
+      "practice": ""
+    },
+    {
+      "slot": "RB",
+      "player": "Cameron Skattebo",
+      "pos": "RB",
+      "nflTeam": "NYG",
+      "verdict": "START",
+      "reason": "Locked, final: 27 pts (17-124-1) in OT win. Started for inactive Hall (swap verified 8:50 AM). Hamstring in OT; NYG bye W8.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "WR",
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "nflTeam": "NYJ",
+      "verdict": "START",
+      "reason": "Locked, final: 4 pts (2-26 on 3 targets) in 28-25 loss to MIA.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "TE",
+      "player": "Brock Bowers",
+      "pos": "TE",
+      "nflTeam": "LV",
+      "verdict": "START",
+      "reason": "Locked, in progress vs LAR: 5 pts (2-21 at last read, LV down 28-3).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "FLEX",
+      "player": "Kendrick Bourne",
+      "pos": "WR",
+      "nflTeam": "ARI",
+      "verdict": "START",
+      "reason": "Locked, in progress vs DEN: 1 pt (1-5 early Q3).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "FLEX",
+      "player": "Jalen Coker",
+      "pos": "WR",
+      "nflTeam": "CAR",
+      "verdict": "START",
+      "reason": "Locked, final: 1 pt (1-9 on 4 targets).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "FLEX",
+      "player": "Chimere Dike",
+      "pos": "WR",
+      "nflTeam": "TEN",
+      "verdict": "START",
+      "reason": "Locked, final: 7 pts, all from 75 return yards.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DL",
+      "player": "George Karlaftis",
+      "pos": "DL",
+      "nflTeam": "KC",
+      "verdict": "START",
+      "reason": "SNF @ SEA 5:20 PM, not started. SEA allows 21% QB-hit rate. No designation; inactives ~3:50 PM.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "LB",
+      "player": "Fred Warner",
+      "pos": "LB",
+      "nflTeam": "SF",
+      "verdict": "START",
+      "reason": "Locked, final: 33 pts (13 tkl, 2 TFL). Wore the green dot. SF bye W8.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DB",
+      "player": "Quentin Lake",
+      "pos": "DB",
+      "nflTeam": "LAR",
+      "verdict": "START",
+      "reason": "Locked, in progress @ LV: 5 pts. Wore the Rams green dot with Landman out.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "DB",
+      "player": "Evan Williams",
+      "pos": "DB",
+      "nflTeam": "GB",
+      "verdict": "START",
+      "reason": "Locked, in progress @ DET: 7 pts (4 tkl at half).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "IDP",
+      "player": "Jordyn Brooks",
+      "pos": "LB",
+      "nflTeam": "MIA",
+      "verdict": "START",
+      "reason": "Locked, final: 23 pts (9 tkl, 2 TFL). Simpson-for-Brooks swap paid off (Simpson 6).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "IDP",
+      "player": "D.J. Reed",
+      "pos": "DB",
+      "nflTeam": "DET",
+      "verdict": "START",
+      "reason": "Locked, in progress vs GB: 5 pts (3 tkl at half).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "IDP",
+      "player": "Tyrice Knight",
+      "pos": "LB",
+      "nflTeam": "SEA",
+      "verdict": "START",
+      "reason": "SNF vs KC 5:20 PM, not started. Thomas and Surratt still OUT; full role (@theidpdesk).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Breece Hall",
+      "pos": "RB",
+      "nflTeam": "NYJ",
+      "verdict": "SIT",
+      "reason": "Inactive W7 (quad). Moved to reserve, Skattebo started.",
+      "injury": "O",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Trenton Simpson",
+      "pos": "LB",
+      "nflTeam": "BAL",
+      "verdict": "SIT",
+      "reason": "Reserve, final: 6 pts (6 tkl, 1 solo).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "nflTeam": "TEN",
+      "verdict": "SIT",
+      "reason": "Reserve, final: 5 tkl. Drop candidate for Granderson.",
+      "injury": "",
+      "practice": ""
     },
     {
       "slot": "BN",
@@ -63,164 +207,14 @@
       "practice": ""
     },
     {
-      "slot": "RB",
-      "player": "Breece Hall",
-      "pos": "RB",
-      "nflTeam": "NYJ",
-      "verdict": "WATCH",
-      "reason": "vs MIA (4th-most RB FPA). Still Q, no Sat update; decision Sunday. Inactives ~8:30 AM PT; if out, start Skattebo before 10 AM PT.",
-      "injury": "Q",
-      "practice": "DNP/LP/LP (quad)"
-    },
-    {
-      "slot": "WR",
-      "player": "Garrett Wilson",
-      "pos": "WR",
-      "nflTeam": "NYJ",
-      "verdict": "START",
-      "reason": "vs MIA (tough, 31st), but 98% snap share.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "TE",
-      "player": "Brock Bowers",
-      "pos": "TE",
-      "nflTeam": "LV",
-      "verdict": "START",
-      "reason": "vs LAR (tough), but healthy: full Thu/Fri, no tag. Locked in.",
-      "injury": "",
-      "practice": "LP/FP/FP"
-    },
-    {
-      "slot": "FLEX",
-      "player": "Jalen Coker",
-      "pos": "WR",
-      "nflTeam": "CAR",
-      "verdict": "START",
-      "reason": "vs TB (13th). FBG flags elite yards per route run.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "FLEX",
-      "player": "Chimere Dike",
-      "pos": "WR",
-      "nflTeam": "TEN",
-      "verdict": "START",
-      "reason": "vs CLE (12th). Return job is the floor.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "FLEX",
-      "player": "Kendrick Bourne",
-      "pos": "WR",
-      "nflTeam": "ARI",
-      "verdict": "START",
-      "reason": "vs DEN (27th). FBG: lower-risk PPR play. Stays in for Warren (OUT).",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "DL",
-      "player": "George Karlaftis",
-      "pos": "DL",
-      "nflTeam": "KC",
-      "verdict": "START",
-      "reason": "@ SEA: 21% QB-hit rate allowed (lg 16%); Darnold effectively the QB. DL3 weekly / DL2 ROS.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "LB",
-      "player": "Fred Warner",
-      "pos": "LB",
-      "nflTeam": "SF",
-      "verdict": "START",
-      "reason": "@ ATL (35 LB tkl pts/g allowed, boost); ATL without Deablo. Green dot (Woellert W6, current list). Lock. LB9 weekly / LB11 ROS.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "DB",
-      "player": "Evan Williams",
-      "pos": "DB",
-      "nflTeam": "GB",
-      "verdict": "START",
-      "reason": "@ DET (41 dropbacks/g). Lock. DB1 weekly / DB1 ROS.",
-      "injury": "",
-      "practice": "Not listed (GB Fri not posted)"
-    },
-    {
-      "slot": "DB",
-      "player": "D.J. Reed",
-      "pos": "DB",
-      "nflTeam": "DET",
-      "verdict": "START",
-      "reason": "vs GB. DET activated S Brian Branch; tackle impact unverified. DB12 weekly / DB9 ROS.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "IDP",
-      "player": "Trenton Simpson",
-      "pos": "LB",
-      "nflTeam": "BAL",
-      "verdict": "START",
-      "reason": "vs CIN (66% pass rate). LB22 weekly / LB29 ROS.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "IDP",
-      "player": "Quentin Lake",
-      "pos": "DB",
-      "nflTeam": "LAR",
-      "verdict": "START",
-      "reason": "@ LV (10th-most plays) at 100% snaps. DB22 weekly / DB22 ROS.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "IDP",
-      "player": "Tyrice Knight",
-      "pos": "LB",
-      "nflTeam": "SEA",
-      "verdict": "START",
-      "reason": "vs KC (SNF) with Drake Thomas and Surratt OUT; near every-down role (snap share unverified). Granderson takes this slot if added.",
-      "injury": "",
-      "practice": "LP/FP/FP (oblique), no tag"
-    },
-    {
-      "slot": "BN",
-      "player": "Jordyn Brooks",
-      "pos": "LB",
-      "nflTeam": "MIA",
-      "verdict": "SIT",
-      "reason": "@ NYJ (28 LB tkl pts/g allowed vs lg 32). A keep, just not this week. LB39 weekly / LB33 ROS.",
-      "injury": "",
-      "practice": "FP all week (foot)"
-    },
-    {
-      "slot": "BN",
-      "player": "Cedric Gray",
-      "pos": "LB",
-      "nflTeam": "TEN",
-      "verdict": "SIT",
-      "reason": "46% snaps, no dot. Drop for Granderson.",
-      "injury": "",
-      "practice": "Not listed"
-    },
-    {
       "slot": "BN",
       "player": "Zach Charbonnet",
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "SIT",
-      "reason": "OUT W7 (knee). Coach: no setback, extra week is \"part of the plan.\" Fantrax ACL tag unverified.",
+      "reason": "OUT W7 (knee).",
       "injury": "O",
-      "practice": "FP/FP/FP"
+      "practice": ""
     },
     {
       "slot": "BN",
@@ -230,7 +224,7 @@
       "verdict": "SIT",
       "reason": "OUT W7 (hamstring).",
       "injury": "O",
-      "practice": "LP/DNP"
+      "practice": ""
     },
     {
       "slot": "BN",
@@ -240,7 +234,7 @@
       "verdict": "SIT",
       "reason": "OUT W7 (groin).",
       "injury": "O",
-      "practice": "DNP/DNP"
+      "practice": ""
     },
     {
       "slot": "BN",
@@ -248,18 +242,8 @@
       "pos": "WR",
       "nflTeam": "NO",
       "verdict": "SIT",
-      "reason": "IR (hamstring). Stash only.",
+      "reason": "IR (hamstring). NO bye W8.",
       "injury": "IR",
-      "practice": "DNP"
-    },
-    {
-      "slot": "BN",
-      "player": "Cameron Skattebo",
-      "pos": "RB",
-      "nflTeam": "NYG",
-      "verdict": "SIT",
-      "reason": "Won Sat 8:28 AM PT for $6. @ HOU; deep flex (FBG). Starts only if Hall is inactive.",
-      "injury": "",
       "practice": ""
     },
     {
@@ -268,65 +252,59 @@
       "pos": "RB",
       "nflTeam": "NO",
       "verdict": "SIT",
-      "reason": "IR.",
+      "reason": "IR. NO bye W8.",
       "injury": "IR",
       "practice": ""
     }
   ],
   "injuryWatch": [
     {
+      "player": "Cameron Skattebo",
+      "tag": "",
+      "practice": "",
+      "note": "Felt something in his hamstring sliding in OT (Raanan/Graziano); Stapleton thought it could be a cramp. Severity unknown. NYG bye W8 buys time. Tracy (NYG RB) also hurt his hamstring in Q2."
+    },
+    {
+      "player": "Bryce Young",
+      "tag": "",
+      "practice": "",
+      "note": "Pulled late in a 43-6 blowout after 3 turnovers (benching, not injury). RT Taylor Moton fractured fibula, out indefinitely: OL downgrade for Young/Coker."
+    },
+    {
       "player": "Breece Hall",
-      "tag": "Q",
+      "tag": "O",
       "practice": "DNP Wed, LP Thu, LP Fri",
-      "note": "Quad. Game-time decision (@nyjets); FBG expects an RBBC with Braelon Allen. Check inactives ~8:30 AM PT Sun."
+      "note": "Inactive W7 (quad). Pre-approved swap done: Skattebo active, Hall reserve. Watch W8 practice."
+    },
+    {
+      "player": "Tyrice Knight",
+      "tag": "",
+      "practice": "",
+      "note": "SNF. No designation. Drake Thomas and Surratt still OUT; full role."
+    },
+    {
+      "player": "George Karlaftis",
+      "tag": "",
+      "practice": "",
+      "note": "SNF. No designation. Inactives ~3:50 PM PT."
     },
     {
       "player": "Zach Charbonnet",
       "tag": "O",
       "practice": "FP Wed/Thu/Fri",
-      "note": "OUT W7 (knee). Macdonald: no setback, \"part of the plan.\" Fantrax ACL tag is Fantrax-only, unverified."
+      "note": "OUT W7 (knee). Coach: no setback."
     },
     {
       "player": "Brian Robinson Jr.",
       "tag": "O",
       "practice": "LP Wed, DNP Thu",
-      "note": "OUT W7 (hamstring, @marcraimondi). ATL Fri column not posted."
+      "note": "OUT W7 (hamstring)."
     },
     {
       "player": "Tyler Warren",
       "tag": "O",
       "practice": "DNP Wed/Thu",
-      "note": "OUT W7 (groin, @Colts). Bourne keeps the FLEX."
-    },
-    {
-      "player": "Brock Bowers",
-      "tag": "",
-      "practice": "LP Wed, FP Thu/Fri",
-      "note": "Cleared, no designation. Start."
-    },
-    {
-      "player": "Tyrice Knight",
-      "tag": "",
-      "practice": "LP Wed, FP Thu/Fri",
-      "note": "Oblique cleared. Drake Thomas and Surratt OUT, so Knight starts."
-    },
-    {
-      "player": "Drake Thomas (SEA, not ours)",
-      "tag": "O",
-      "practice": "DNP x3",
-      "note": "Ankle, OUT (seahawks.com, @BradyHenderson)."
-    },
-    {
-      "player": "Bryce Young",
-      "tag": "",
-      "practice": "FP Wed/Thu/Fri",
-      "note": "Knee, full all week."
-    },
-    {
-      "player": "Jordyn Brooks",
-      "tag": "",
-      "practice": "FP Wed/Thu/Fri",
-      "note": "Foot, full all week."
+      "note": "OUT W7 (groin)."
     },
     {
       "player": "Jordyn Tyson",
@@ -341,23 +319,13 @@
       "note": "On Eddies IR."
     },
     {
-      "player": "Morningside: Jefferson / Kelce / Lamar",
+      "player": "Morningside: Kelce / Worthy",
       "tag": "",
-      "practice": "Jefferson LP/FP/FP; Kelce LP x3",
-      "note": "Jefferson and Kelce no designation. Lamar (bench) ruled OUT Sat; Huntley starts for BAL."
+      "practice": "",
+      "note": "Both SNF, no designation. KC OT Jaylon Moore OUT; RB Brashard Smith IR."
     }
   ],
   "byes": [
-    {
-      "week": 7,
-      "players": [
-        {
-          "player": "Trevor Lawrence",
-          "pos": "QB",
-          "nflTeam": "JAX"
-        }
-      ]
-    },
     {
       "week": 8,
       "players": [
@@ -365,6 +333,11 @@
           "player": "Fred Warner",
           "pos": "LB",
           "nflTeam": "SF"
+        },
+        {
+          "player": "Cameron Skattebo",
+          "pos": "RB",
+          "nflTeam": "NYG"
         },
         {
           "player": "Jordyn Tyson",
@@ -385,36 +358,23 @@
       "player": "Carl Granderson",
       "pos": "DL",
       "nflTeam": "NO",
-      "why": "ROS. Free agent now (no FAAB). vs PIT in Paris, Sun 6:30 AM PT (PIT 7.4% sack rate allowed vs lg 6.1%; 30 mph gusts). DL5 weekly / DL4 ROS. Woellert: start him over McFadden and hope for the sack.",
-      "stats": "17.8 FP/G season, 58% rostered; FA live 3:00 PM PT Sat",
-      "faabMin": 0,
-      "faabMax": 0,
-      "bid": 0,
+      "why": "ROS. On waivers until Wed Oct 28, 9 AM PT after 1.5 sacks, 2 QB hits, 1 TFL in Paris. DL4 ROS in the War Room. Replaces Gray. NO bye W8, so a Week 9+ hold. Reply 1 to put him atop Tuesday's bid sheet.",
+      "stats": "17.0 FP/G season, 23.5 last 3 (thru W6); 108 FPts YTD, 58% rostered (Fantrax 3:05 PM PT)",
+      "faabMin": 4,
+      "faabMax": 14,
+      "bid": 9,
       "drop": "Cedric Gray",
       "tag": "LIKE"
     },
     {
       "rank": 2,
-      "player": "Martin Emerson",
-      "pos": "DB",
-      "nflTeam": "NO",
-      "why": "WEEKLY. Free agent, DB3 weekly vs PIT volume; on Woellert wire list. Only if Reed or Lake is scratched.",
-      "stats": "FA live 3:00 PM PT Sat",
-      "faabMin": 0,
-      "faabMax": 0,
-      "bid": 0,
-      "drop": "",
-      "tag": "DART"
-    },
-    {
-      "rank": 3,
       "player": "Deonte Banks",
       "pos": "DB",
       "nflTeam": "NYG",
-      "why": "ROS watch. Free agent at 20.3 FP/G; NYG secondary thin (Holland OUT, Adebo back). We are fine at DB.",
-      "stats": "20.25 FP/G season, 31% rostered; FA live 3:00 PM PT Sat",
+      "why": "WEEKLY watch only. 2 tkl, 2 PD today; praised for erasing Nico Collins. NYG bye W8 and we are fine at DB.",
+      "stats": "19.25 FP/G season, 21.0 last 3 (thru W6); 85.5 FPts YTD, 32% rostered",
       "faabMin": 0,
-      "faabMax": 0,
+      "faabMax": 1,
       "bid": 0,
       "drop": "",
       "tag": "DART"
@@ -425,7 +385,7 @@
       "rank": 1,
       "player": "Cedric Gray",
       "pos": "LB",
-      "reason": "46% snaps, no dot; drop for Granderson."
+      "reason": "~46% snaps, no dot, 5 tkl W7; drop for Granderson."
     }
   ],
   "trades": [
@@ -438,159 +398,200 @@
   ],
   "idp": [
     {
-      "nflTeam": "GB",
-      "greenDot": "Isaiah McDuffie",
-      "notes": "Franklin OUT; Woellert expects Isaiah McDuffie to wear the dot, Hopper LB2."
-    },
-    {
-      "nflTeam": "NYG",
-      "greenDot": "Micah McFadden",
-      "notes": "Edmunds IR (season). McFadden expected to wear the dot (Raanan via BigBlueFilmRoom). Rostered by Ultron."
-    },
-    {
       "nflTeam": "LAR",
-      "greenDot": "Eric Kendricks",
-      "notes": "Landman OUT; Kendricks elevated and expected to wear the dot (Rams beat Nate Atkins). Bad for Dolac."
+      "greenDot": "Quentin Lake",
+      "notes": "Landman OUT; DB Quentin Lake wore the dot (StuJRams, Woellert). Shaun Dolac started at LB, not Kendricks. Rams dime 35.3%."
     },
     {
       "nflTeam": "ATL",
-      "greenDot": "",
-      "notes": "Deablo OUT; Woellert: Perkins should wear the dot if active. Warner's opponent."
+      "greenDot": "Kendal Daniels",
+      "notes": "Deablo inactive; Kendal Daniels wore the dot (Woellert). ATL beat SF 29-20."
+    },
+    {
+      "nflTeam": "SF",
+      "greenDot": "Fred Warner",
+      "notes": "Warner wore the dot: 33 pts (13 tkl, 2 TFL). SF bye W8."
     },
     {
       "nflTeam": "SEA",
       "greenDot": "",
-      "notes": "Thomas and Surratt OUT; Ciarlo elevated; Knight near every-down. Dot wearer unverified."
+      "notes": "Thomas and Surratt OUT; Knight full role on SNF. Dot wearer unverified."
+    },
+    {
+      "nflTeam": "GB",
+      "greenDot": "Isaiah McDuffie",
+      "notes": "Franklin OUT; McDuffie expected dot. Woellert \"Oooof...McDuffie\" clip ~2:42 PM (possible injury, unverified). McDuffie forced a Gibbs fumble."
+    },
+    {
+      "nflTeam": "NYG",
+      "greenDot": "Micah McFadden",
+      "notes": "Edmunds IR. McFadden 10 solo, 2 TFL (rostered by Ultron). Woellert: Giants a 2-LB defense."
+    },
+    {
+      "nflTeam": "MIA",
+      "greenDot": "Jacob Rodriguez",
+      "notes": "Brooks started: 23 pts (9 tkl, 2 TFL). No dot."
+    },
+    {
+      "nflTeam": "BAL",
+      "greenDot": "Roquan Smith",
+      "notes": "Simpson on reserve: 6 tkl. No dot."
+    },
+    {
+      "nflTeam": "TEN",
+      "greenDot": "Anthony Hill",
+      "notes": "Gray 5 tkl, no dot (~46% snaps)."
+    },
+    {
+      "nflTeam": "LV",
+      "greenDot": "Nakobe Dean",
+      "notes": "Quay Walker active (Woellert)."
     },
     {
       "nflTeam": "CHI",
       "greenDot": "D'Marco Jackson",
       "notes": "D'Marco Jackson wore the dot TNF with Edwards out."
-    },
-    {
-      "nflTeam": "LV",
-      "greenDot": "Nakobe Dean",
-      "notes": "Quay Walker Q (chest); Woellert: Lindenberg is the backup."
-    },
-    {
-      "nflTeam": "SF",
-      "greenDot": "Fred Warner",
-      "notes": "Warner dot (W6, current list). Lock @ ATL."
-    },
-    {
-      "nflTeam": "MIA",
-      "greenDot": "Jacob Rodriguez",
-      "notes": "Brooks FP all week; benched W7 on matchup. No dot."
-    },
-    {
-      "nflTeam": "TEN",
-      "greenDot": "Anthony Hill",
-      "notes": "Gray, no dot."
-    },
-    {
-      "nflTeam": "BAL",
-      "greenDot": "Roquan Smith",
-      "notes": "Simpson, no dot."
     }
   ],
   "boxSafety": [
     {
+      "player": "Quentin Lake",
+      "nflTeam": "LAR",
+      "note": "Wore the green dot @ LV; 5 pts in progress"
+    },
+    {
       "player": "Evan Williams",
       "nflTeam": "GB",
-      "note": "Start @ DET; DB1 weekly and ROS"
+      "note": "In progress @ DET; DB1 weekly and ROS"
     },
     {
       "player": "D.J. Reed",
       "nflTeam": "DET",
-      "note": "Start vs GB; DB12 weekly / DB9 ROS; Branch back for DET"
-    },
-    {
-      "player": "Quentin Lake",
-      "nflTeam": "LAR",
-      "note": "IDP flex @ LV; 100% snaps; DB22/DB22"
+      "note": "In progress vs GB; Branch back for DET"
     },
     {
       "player": "Deonte Banks",
       "nflTeam": "NYG",
-      "note": "FA ROS watch, 20.3 FP/G"
+      "note": "FA weekly watch; 2 PD W7; NYG bye W8"
     }
   ],
   "news": [
     {
       "source": "Fantrax",
-      "time": "2026-10-24T15:10:00-07:00",
-      "text": "Live check ~3:00 PM PT, signed in. Proj 189.6-180.1 vs Morningside (projection only), 0-0. Skattebo claim won $6 (drop Croskey-Merritt); FAAB $49. No trades, no pending claims or offers. Granderson, Emerson, Banks are free agents."
+      "time": "2026-10-25T15:05:00-07:00",
+      "text": "Live check ~3:00 PM PT, signed in. Eddies 129-165 vs Morningside (proj 181.3-199.4, projection only). FAAB $49; no trades, no pending claims or offers. Granderson and Banks on waivers (clear Wed 9 AM PT)."
     },
     {
       "source": "X @Mike_Woellert",
-      "time": "2026-10-24T14:00:00-07:00",
-      "text": "Granderson vs McFadden: go Granderson and hope for the sack; McFadden a safer floor.",
-      "url": "https://x.com/Mike_Woellert/status/2114092538261127534"
-    },
-    {
-      "source": "X @BradyHenderson",
-      "time": "2026-10-24T13:50:00-07:00",
-      "text": "SEA elevates LB Ciarlo and CB Diggs; G Bradford off IR.",
-      "url": "https://x.com/BradyHenderson/status/2114092343737606394"
-    },
-    {
-      "source": "X @NateAtkins_",
-      "time": "2026-10-24T13:45:00-07:00",
-      "text": "Rams: Kendricks expected to start for Landman as the green-dot LB.",
-      "url": "https://x.com/NateAtkins_/status/2114090191946395905"
-    },
-    {
-      "source": "X @AdamSchefter",
-      "time": "2026-10-24T13:35:00-07:00",
-      "text": "Lions activate S Brian Branch; debut vs GB (Reed tackle impact unverified).",
-      "url": "https://x.com/AdamSchefter/status/2114086861530419238"
-    },
-    {
-      "source": "X @RichCimini",
-      "time": "2026-10-24T13:35:00-07:00",
-      "text": "Jets roster moves; no new Hall update (Q, decision Sunday).",
-      "url": "https://x.com/RichCimini/status/2114086810246946889"
-    },
-    {
-      "source": "X @Ravens",
-      "time": "2026-10-24T12:30:00-07:00",
-      "text": "Lamar Jackson ruled OUT; Huntley starts (Morningside bench QB).",
-      "url": "https://x.com/Ravens/status/2114076968354472161"
+      "time": "2026-10-25T14:42:44-07:00",
+      "text": "\"Oooof...Isaiah McDuffie\" with a short clip; what happened is unverified (possible injury).",
+      "url": "https://x.com/Mike_Woellert/status/2114472755936596289"
     },
     {
       "source": "X @Mike_Woellert",
-      "time": "2026-10-24T11:15:00-07:00",
-      "text": "DB wire list includes Martin Emerson and Jacob Parrish.",
-      "url": "https://x.com/Mike_Woellert/status/2114046906544611489"
+      "time": "2026-10-25T14:22:52-07:00",
+      "text": "Rams ran heavy DB: dime 35.3%, 7+ DB 17.6%.",
+      "url": "https://x.com/Mike_Woellert/status/2114467753725923411"
+    },
+    {
+      "source": "X @Mike_Woellert",
+      "time": "2026-10-25T14:21:07-07:00",
+      "text": "Colts LB snaps with Allen and Boettcher out: Davis-Gaither 59, Carlies 57, Pratt 23, Ajiake 20.",
+      "url": "https://x.com/Mike_Woellert/status/2114467314556924189"
     },
     {
       "source": "X @JordanRaanan",
-      "time": "2026-10-24T11:00:00-07:00",
-      "text": "Giants S Jevon Holland downgraded to OUT.",
-      "url": "https://x.com/JordanRaanan/status/2114038673024991501"
+      "time": "2026-10-25T14:03:36-07:00",
+      "text": "Skattebo felt something in his hamstring sliding in OT: \"Good thing we have a bye week.\"",
+      "url": "https://x.com/JordanRaanan/status/2114462905236365422"
     },
     {
-      "source": "X @TheGiantsWire",
-      "time": "2026-10-24T08:30:00-07:00",
-      "text": "Harbaugh praises Skattebo and Tracy practices; Skattebo back in the mix (deep flex).",
-      "url": "https://x.com/TheGiantsWire/status/2113994162370384148"
+      "source": "X @Mike_Woellert",
+      "time": "2026-10-25T13:31:43-07:00",
+      "text": "Shaun Dolac started at LB for the Rams, not Kendricks.",
+      "url": "https://x.com/Mike_Woellert/status/2114454884938321999"
     },
     {
-      "source": "FBG email (Joe Bryant)",
-      "time": "2026-10-23T22:17:00-07:00",
-      "text": "\"The Injury Report Has Some Big Questions\": Hall RB2 if active; Bourne lower-risk PPR pivot; Keenan Allen low-ceiling WR3."
+      "source": "X @Mike_Woellert",
+      "time": "2026-10-25T13:21:28-07:00",
+      "text": "McFadden breakout: 10 solo, 2 TFL, 1 QB hit (rostered by Ultron).",
+      "url": "https://x.com/Mike_Woellert/status/2114452302757023951"
     },
     {
-      "source": "X @bcondotta",
-      "time": "2026-10-23T21:00:00-07:00",
-      "text": "Darnold and Milroe threw; Lock (Q) did not. Darnold effectively SEA starter (not formally announced).",
-      "url": "https://x.com/bcondotta/status/2113762112178925757"
+      "source": "X @art_stapleton",
+      "time": "2026-10-25T13:19:57-07:00",
+      "text": "Skattebo hamstring after OT run; could have been a cramp.",
+      "url": "https://x.com/art_stapleton/status/2114451923441263018"
     },
     {
-      "source": "X @Fantasy4Casts",
-      "time": "2026-10-23T20:50:00-07:00",
-      "text": "Paris PIT@NO forecast ~17 mph wind, 33 mph gusts.",
-      "url": "https://x.com/Fantasy4Casts/status/2113758984671010971"
+      "source": "X @RapSheet",
+      "time": "2026-10-25T13:05:40-07:00",
+      "text": "Panthers RT Taylor Moton fractured fibula, out indefinitely (Young/Coker OL hit).",
+      "url": "https://x.com/RapSheet/status/2114448328792404407"
+    },
+    {
+      "source": "X @Mike_Woellert",
+      "time": "2026-10-25T13:05:33-07:00",
+      "text": "Quentin Lake wore the Rams green dot with Landman out.",
+      "url": "https://x.com/Mike_Woellert/status/2114448299901976939"
+    },
+    {
+      "source": "X @StuJRams",
+      "time": "2026-10-25T13:01:54-07:00",
+      "text": "Lake has the green dot for the Rams.",
+      "url": "https://x.com/StuJRams/status/2114447381488173357"
+    },
+    {
+      "source": "X @AdamJWexler",
+      "time": "2026-10-25T12:26:46-07:00",
+      "text": "Bryce Young pulled late in 43-6 blowout after 3 turnovers; Pickett finished.",
+      "url": "https://x.com/AdamJWexler/status/2114438538720645330"
+    },
+    {
+      "source": "X @Mike_Woellert",
+      "time": "2026-10-25T12:21:26-07:00",
+      "text": "Quay Walker active for LV.",
+      "url": "https://x.com/Mike_Woellert/status/2114437197910736968"
+    },
+    {
+      "source": "X @art_stapleton",
+      "time": "2026-10-25T12:11:19-07:00",
+      "text": "Deonte Banks erasing Nico Collins (2 PD).",
+      "url": "https://x.com/art_stapleton/status/2114434648671686909"
+    },
+    {
+      "source": "X @RotoBallerNFL",
+      "time": "2026-10-25T11:16:16-07:00",
+      "text": "NYG RB Tyrone Tracy Jr. hamstring, questionable to return; Skattebo took over.",
+      "url": "https://x.com/RotoBallerNFL/status/2114420798253384025"
+    },
+    {
+      "source": "X @theidpdesk",
+      "time": "2026-10-25T09:35:55-07:00",
+      "text": "Tyrice Knight: full role with Thomas and Surratt out.",
+      "url": "https://x.com/theidpdesk/status/2114395544214995425"
+    },
+    {
+      "source": "X @Mike_Woellert",
+      "time": "2026-10-25T08:58:40-07:00",
+      "text": "ATL inactives: Deablo out; Kendal Daniels wore the green dot.",
+      "url": "https://x.com/Mike_Woellert/status/2114386166032261495"
+    },
+    {
+      "source": "Fantrax",
+      "time": "2026-10-25T08:50:00-07:00",
+      "text": "Breece Hall inactive; pre-approved swap saved: Skattebo active RB, Hall reserve."
+    },
+    {
+      "source": "X @Mike_Woellert",
+      "time": "2026-10-25T06:49:06-07:00",
+      "text": "\"Gray gaining ground, but still around 46%.\"",
+      "url": "https://x.com/Mike_Woellert/status/2114353559995310584"
+    },
+    {
+      "source": "FBG email",
+      "time": "2026-10-24T22:01:00-07:00",
+      "text": "\"One More Look Before Another Early Kickoff\": KC RB Brashard Smith to IR, Ott signed; Davante Adams out 5-9 weeks; Tank Dell activated."
     },
     {
       "source": "Woellert Substack",

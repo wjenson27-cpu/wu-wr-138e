@@ -1,6 +1,6 @@
 {
   "sample": false,
-  "asOf": "2026-10-24T15:15:00-07:00",
+  "asOf": "2026-10-25T15:05:00-07:00",
   "week": 6,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-6-green-dot-and-full-time-linebackers-idp-fantasy-football",
@@ -16,9 +16,9 @@
     },
     {
       "team": "ATL",
-      "greenDot": null,
+      "greenDot": "Kendal Daniels",
       "fullTime": [],
-      "notes": "Unsettled: Divine Deablo started with the dot but left hurt (arm, 24 snaps); Josh Woods finished with it (42 snaps). Kendal Daniels (neck) also left; Harold Perkins played every 2H snap. Check practice reports. W7 update (Woellert X, Oct 24): Deablo OUT; Perkins should wear the dot if active."
+      "notes": "W7 vs SF (Woellert X, Oct 25 inactives): Deablo inactive; Kendal Daniels wore the green dot (x.com/Mike_Woellert/status/2114386166032261495). W6: Deablo started with the dot but left hurt; Woods finished with it."
     },
     {
       "team": "BAL",
@@ -152,11 +152,11 @@
     },
     {
       "team": "LAR",
-      "greenDot": "Nate Landman",
+      "greenDot": "Quentin Lake",
       "fullTime": [
         "Nate Landman"
       ],
-      "notes": "Landman 69/70, 10 tkl. Speights 21 (30%) in 65.7% dime. W7 @ LV (12 personnel 63.9%) may bring more base. W7 update: Landman OUT; Kendricks elevated, Rams beat Nate Atkins expects him to wear the dot (Woellert asked, unconfirmed by him)."
+      "notes": "W7 @ LV (Woellert X, Oct 25): Landman OUT; DB Quentin Lake wore the green dot (x.com/Mike_Woellert/status/2114448299901976939; StuJRams x.com/StuJRams/status/2114447381488173357). Shaun Dolac started at LB, not Kendricks (reverses Sat Atkins report). Rams heavy DB: dime 35.3%. W6: Landman 69/70, 10 tkl."
     },
     {
       "team": "LV",
