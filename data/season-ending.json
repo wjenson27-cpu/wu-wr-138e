@@ -1,6 +1,7 @@
 {
   "about": "Players out for the season. Excluded from waiver recs and the FA pool by scripts/build_free_agents.py and scripts/build_warroom.py.",
   "players": [
-    {"name": "Edgerrin Cooper", "pos": "LB", "team": "GB", "reason": "Achilles, IR (season-ending)", "since": "2026-10-13", "source": "Bill / Eddie audit Oct 22 2026"}
+    {"name": "Edgerrin Cooper", "pos": "LB", "team": "GB", "reason": "Achilles, IR (season-ending)", "since": "2026-10-13", "source": "Bill / Eddie audit Oct 22 2026"},
+    {"name": "Tremaine Edmunds", "pos": "LB", "team": "NYG", "reason": "Out for the year (season-ending)", "since": "2026-10-27", "source": "Mike Woellert Oct 27 2026"}
   ]
 }

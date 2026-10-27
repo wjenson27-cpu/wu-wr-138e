@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-26T15:05:00-07:00",
+  "asOf": "2026-10-27T15:00:00-07:00",
   "week": 7,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-7-green-dot-and-full-time",
@@ -75,12 +75,11 @@
     },
     {
       "team": "DAL",
-      "greenDot": "",
+      "greenDot": "Shemar James",
       "fullTime": [
-        "Shemar James",
-        "Jaishawn Barham"
+        "Shemar James"
       ],
-      "notes": "Woellert: 'Will update after MNF' (DAL @ PHI, Mon Oct 26). (Dot/full-time carried from the W6 list.)"
+      "notes": "Updated Tue 6:30 AM PT after MNF: Shemar James wore the dot (87% snaps), Woellert's W8 waiver add. Overshown and Barham split LB2 (no shared snaps). W8 vs ARI."
     },
     {
       "team": "DEN",
@@ -210,7 +209,7 @@
         "Micah McFadden",
         "Arvell Reese"
       ],
-      "notes": "Edmunds out for the year. McFadden 54/54, dot, 10 tkl, 3 pressures. Reese 54/54, 7 tkl. BYE W8. Woellert: add McFadden ahead of the bye."
+      "notes": "Edmunds out for the year. McFadden has the dot for the foreseeable future (54/54, 10 tkl). Reese 54/54. BYE W8."
     },
     {
       "team": "NYJ",
@@ -227,7 +226,7 @@
       "fullTime": [
         "Zack Baun"
       ],
-      "notes": "Woellert: 'Will update after MNF' (DAL @ PHI, Mon Oct 26). (Dot/full-time carried from the W6 list.)"
+      "notes": "Updated Tue 6:30 AM PT after MNF: Baun has the dot. Campbell (55%) and Trotter (37%) rotate by series. W8 @ WSH."
     },
     {
       "team": "PIT",
