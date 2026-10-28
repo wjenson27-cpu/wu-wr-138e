@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-28T09:46:00-07:00",
+  "asOf": "2026-10-28T10:23:00-07:00",
   "season": 2026,
   "week": 8,
   "opponent": {
@@ -9,11 +9,11 @@
     "name": "Ultron"
   },
   "freshness": {
-    "plan": "2026-10-28T09:46:00-07:00",
-    "roster": "2026-10-28T09:46:00-07:00",
-    "scores": "2026-10-28T09:46:00-07:00",
-    "waivers": "2026-10-28T09:46:00-07:00",
-    "news": "2026-10-28T09:46:00-07:00"
+    "plan": "2026-10-28T10:23:00-07:00",
+    "roster": "2026-10-28T10:23:00-07:00",
+    "scores": "2026-10-28T10:23:00-07:00",
+    "waivers": "2026-10-28T10:23:00-07:00",
+    "news": "2026-10-28T10:23:00-07:00"
   },
   "lockTimes": [
     {
@@ -169,8 +169,8 @@
       "player": "Tyrice Knight",
       "pos": "LB",
       "nflTeam": "SEA",
-      "verdict": "START",
-      "reason": "vs CHI (league-high 71 plays/g, x1.14 boost). LB #37 (15.3 proj); locks Mon 5:15 PM PT.",
+      "verdict": "WATCH",
+      "reason": "vs CHI (Mon 5:15 PM PT). Watch Drake Thomas practice status\u2014if Thomas is back, Knight's snaps/value tank and he becomes our #1 cut for a Week 8 DL streamer (or Cole Bishop starts).",
       "injury": "",
       "practice": ""
     },
@@ -220,7 +220,7 @@
       "pos": "LB",
       "nflTeam": "TEN",
       "verdict": "SIT",
-      "reason": "LB #47 (13.2 proj); 56% snaps, no dot. First drop for any DL/IDP pickup.",
+      "reason": "HOLD (do not cut). Rising snaps (56%) and massive trade-deadline stash upside if Cody Barton or Gray moves.",
       "injury": "",
       "practice": ""
     },
@@ -351,7 +351,7 @@
       "faabMin": 0,
       "faabMax": 2,
       "bid": 0,
-      "drop": "Cedric Gray",
+      "drop": "Tyrice Knight (if Drake Thomas plays) or George Karlaftis",
       "tag": "LIKE"
     },
     {
@@ -364,7 +364,7 @@
       "faabMin": 0,
       "faabMax": 2,
       "bid": 0,
-      "drop": "Cedric Gray",
+      "drop": "Tyrice Knight (if Drake Thomas plays) or George Karlaftis",
       "tag": "LIKE"
     },
     {
@@ -377,7 +377,7 @@
       "faabMin": 0,
       "faabMax": 2,
       "bid": 0,
-      "drop": "Cedric Gray",
+      "drop": "Tyrice Knight (if Drake Thomas plays) or George Karlaftis",
       "tag": "DART"
     },
     {
@@ -390,22 +390,28 @@
       "faabMin": 0,
       "faabMax": 2,
       "bid": 0,
-      "drop": "Cedric Gray",
+      "drop": "Tyrice Knight (if Drake Thomas plays) or George Karlaftis",
       "tag": "DART"
     }
   ],
   "drops": [
     {
       "rank": 1,
-      "player": "Cedric Gray",
+      "player": "Tyrice Knight",
       "pos": "LB",
-      "reason": "LB #47, 56% snaps, no dot (and we added Frankie Luvu). First cut for a Week 8 DL streamer."
+      "reason": "Conditional cut if Drake Thomas returns for Seattle (CHI @ SEA MNF)\u2014if Thomas is active, Knight's snaps tank and we can cut Knight for a Week 8 DL streamer (or start Cole Bishop)."
     },
     {
       "rank": 2,
+      "player": "George Karlaftis",
+      "pos": "DL",
+      "reason": "Only if streaming a 1-for-1 Week 8 DL matchup over his tough @DEN draw (3.8% sack rate allowed)."
+    },
+    {
+      "rank": 3,
       "player": "Kendrick Bourne",
       "pos": "WR",
-      "reason": "WR5 on our bench behind Wilson, Pickens, Coker, and Dike."
+      "reason": "WR5 bench depth behind Wilson, Pickens, Coker, and Dike."
     }
   ],
   "trades": [
@@ -554,7 +560,7 @@
       "url": "https://x.com/Curtis_Crabtree/status/2114847617922531367"
     }
   ],
-  "lastUpdated": "2026-10-28T09:46:00-07:00",
+  "lastUpdated": "2026-10-28T10:23:00-07:00",
   "fantraxRaw": {
     "file": "fantrax-raw-2026-10-27-am.json",
     "scraped": "2026-10-27 ~06:45 PDT"
