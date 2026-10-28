@@ -2,8 +2,8 @@
   "teamId": "newman",
   "teamName": "Newman Lake Sleep Paralysis Demons",
   "owner": "Ryan McCallum",
-  "asOf": "2026-10-21 9:34 AM PT",
-  "faabLeft": 47,
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 44,
   "startingQB": "Jordan Love",
   "roster": {
     "QB": [
@@ -11,57 +11,61 @@
     ],
     "RB": [
       "Jonathan Taylor",
+      "Jordan Mason",
       "TreVeyon Henderson"
     ],
     "WR": [
-      "Myles Price",
-      "Zay Flowers",
       "Matthew Golden",
-      "Tee Higgins"
+      "A.J. Brown",
+      "Zay Flowers",
+      "Tee Higgins",
+      "Myles Price"
     ],
     "TE": [
-      "Juwan Johnson",
-      "Michael Mayer"
+      "Michael Mayer",
+      "Juwan Johnson"
     ],
     "DL": [
       "Andrew Van Ginkel"
     ],
     "LB": [
+      "Ty'Ron Hopper",
+      "Eric Wilson",
       "Azeez Al-Shaair",
-      "Zaire Franklin",
-      "Nathan Landman",
-      "Henry To'oTo'o",
       "Jeremiah Trotter",
-      "Jake Hansen",
-      "Eric Wilson"
+      "Henry To'oTo'o"
     ],
     "DB": [
-      "L'Jarius Sneed",
+      "Jordan Battle",
       "Xavier Watts",
-      "Jordan Battle"
+      "Grant Delpit"
     ],
     "IR": [
-      "Jordan Mason",
-      "A.J. Brown",
-      "Davante Adams"
+      "Davante Adams",
+      "Zaire Franklin",
+      "Nathan Landman"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Jordan Mason — IR (IR slot)",
-    "A.J. Brown — Q (IR slot)",
-    "Davante Adams — IR (IR slot)"
+    "Matthew Golden — Q (active)",
+    "Davante Adams — IR (IR slot)",
+    "Zaire Franklin — Q (IR slot)",
+    "Nathan Landman — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "kwaohsfwmsb3ulv4",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Matthew Golden — Q (active)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Jordan Mason — IR (IR slot)",
-    "A.J. Brown — Q (IR slot)",
-    "Davante Adams — IR (IR slot)"
+    "Matthew Golden — Q (active)",
+    "Davante Adams — IR (IR slot)",
+    "Zaire Franklin — Q (IR slot)",
+    "Nathan Landman — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

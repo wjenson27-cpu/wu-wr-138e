@@ -1,352 +1,352 @@
 {
-  "updated": "2026-10-20",
-  "asOf": "2026-10-20",
-  "week": 6,
+  "updated": "2026-10-27",
+  "asOf": "2026-10-27",
+  "week": 7,
   "season": 2026,
   "weekStatus": "final",
   "complete": true,
   "source": "Fantrax",
-  "note": "Week 6 FINAL from Fantrax Matchups scrape Tue Oct 20 (MNF complete). All 7 games locked. Kitty Pocket 262.5; survivor-low TTAB 186.5 (alive pool).",
+  "note": "Week 7 FINAL from Fantrax Matchups scrape Tue Oct 27 (MNF complete). All 7 games locked. Kitty Mrs. Doubtpfizer 311.5; survivor-low Valley Old Goats 203.5 (alive pool).",
   "kitty": {
-    "team": "Pocket",
-    "teamFull": "Pocket Agents",
-    "teamId": "pocket",
-    "score": 262.5
+    "team": "Doubtpfizer",
+    "teamFull": "Mrs. Doubtpfizer",
+    "teamId": "doubtpfizer",
+    "score": 311.5
   },
   "survivorLowest": {
-    "team": "TTAB",
-    "teamId": "ttab",
-    "score": 186.5
+    "team": "Goats",
+    "teamId": "goats",
+    "score": 203.5
   },
   "matchups": [
     {
-      "home": "Ultron",
-      "away": "Drummond Dongers",
-      "homeScore": 205.5,
-      "awayScore": 163.0,
-      "winner": "Ultron",
-      "status": "final",
-      "topScorers": [
-        {
-          "team": "Ultron",
-          "player": "Carson Schwesinger",
-          "pos": "ID",
-          "pts": 28.0
-        },
-        {
-          "team": "Ultron",
-          "player": "Caleb Williams",
-          "pos": "QB",
-          "pts": 24.0
-        },
-        {
-          "team": "Ultron",
-          "player": "Bhayshul Tuten",
-          "pos": "RB",
-          "pts": 24.0
-        },
-        {
-          "team": "Drummond Dongers",
-          "player": "Kyle Hamilton",
-          "pos": "DB",
-          "pts": 27.0
-        },
-        {
-          "team": "Drummond Dongers",
-          "player": "Zach Allen",
-          "pos": "DL",
-          "pts": 22.0
-        },
-        {
-          "team": "Drummond Dongers",
-          "player": "Christian Elliss",
-          "pos": "LB",
-          "pts": 17.0
-        }
-      ],
-      "notes": "Fantrax Week 6 final · Matchups scrape Tue Oct 20 (MNF complete)."
-    },
-    {
-      "home": "Mrs. Doubtpfizer",
-      "away": "The Hypersecretors",
-      "homeScore": 255.0,
-      "awayScore": 237.0,
+      "home": "Towner Top Aga Bottom",
+      "away": "Mrs. Doubtpfizer",
+      "homeScore": 255.5,
+      "awayScore": 311.5,
       "winner": "Mrs. Doubtpfizer",
       "status": "final",
       "topScorers": [
         {
-          "team": "Mrs. Doubtpfizer",
-          "player": "Christian McCaffrey",
-          "pos": "RB",
-          "pts": 31.0
+          "team": "Towner Top Aga Bottom",
+          "player": "Bo Nix",
+          "pos": "QB",
+          "pts": 40.0
         },
         {
-          "team": "Mrs. Doubtpfizer",
-          "player": "Chuba Hubbard",
+          "team": "Towner Top Aga Bottom",
+          "player": "Javonte Williams",
+          "pos": "RB",
+          "pts": 30.0
+        },
+        {
+          "team": "Towner Top Aga Bottom",
+          "player": "Emanuel Wilson",
           "pos": "RWT",
-          "pts": 29.0
+          "pts": 27.0
         },
         {
           "team": "Mrs. Doubtpfizer",
           "player": "Alex Singleton",
           "pos": "ID",
-          "pts": 29.0
+          "pts": 53.0
         },
         {
-          "team": "The Hypersecretors",
-          "player": "Kenneth Walker III",
+          "team": "Mrs. Doubtpfizer",
+          "player": "Nakobe Dean",
+          "pos": "LB",
+          "pts": 30.0
+        },
+        {
+          "team": "Mrs. Doubtpfizer",
+          "player": "DeMarvion Overshown",
+          "pos": "ID",
+          "pts": 30.0
+        }
+      ],
+      "notes": "Fantrax Week 7 final · Matchups scrape Tue Oct 27 ~9:05 AM PT (all games F, 0 players remaining)."
+    },
+    {
+      "home": "Little Ass Boys",
+      "away": "Drummond Dongers",
+      "homeScore": 246.5,
+      "awayScore": 278.0,
+      "winner": "Drummond Dongers",
+      "status": "final",
+      "topScorers": [
+        {
+          "team": "Little Ass Boys",
+          "player": "Quay Walker",
+          "pos": "ID",
+          "pts": 31.0
+        },
+        {
+          "team": "Little Ass Boys",
+          "player": "Jaylen Warren",
+          "pos": "RWT",
+          "pts": 24.0
+        },
+        {
+          "team": "Little Ass Boys",
+          "player": "Drue Tranquill",
+          "pos": "ID",
+          "pts": 23.0
+        },
+        {
+          "team": "Drummond Dongers",
+          "player": "Tony Pollard",
           "pos": "RB",
-          "pts": 35.0
+          "pts": 44.0
         },
         {
-          "team": "The Hypersecretors",
-          "player": "Jaylin Noel",
+          "team": "Drummond Dongers",
+          "player": "Jaxon Smith-Njigba",
+          "pos": "RWT",
+          "pts": 37.0
+        },
+        {
+          "team": "Drummond Dongers",
+          "player": "Joe Burrow",
+          "pos": "QB",
+          "pts": 36.0
+        }
+      ],
+      "notes": "Fantrax Week 7 final · Matchups scrape Tue Oct 27 ~9:05 AM PT (all games F, 0 players remaining)."
+    },
+    {
+      "home": "Ultron",
+      "away": "Newman Lake Sleep Paralysis Demons",
+      "homeScore": 269.5,
+      "awayScore": 236.0,
+      "winner": "Ultron",
+      "status": "final",
+      "topScorers": [
+        {
+          "team": "Ultron",
+          "player": "Kendal Daniels",
+          "pos": "ID",
+          "pts": 44.0
+        },
+        {
+          "team": "Ultron",
+          "player": "Micah McFadden",
+          "pos": "ID",
+          "pts": 36.0
+        },
+        {
+          "team": "Ultron",
+          "player": "Caleb Williams",
+          "pos": "QB",
+          "pts": 31.0
+        },
+        {
+          "team": "Newman Lake Sleep Paralysis Demons",
+          "player": "Zay Flowers",
+          "pos": "RWT",
+          "pts": 33.0
+        },
+        {
+          "team": "Newman Lake Sleep Paralysis Demons",
+          "player": "Tee Higgins",
           "pos": "RWT",
           "pts": 32.0
         },
         {
-          "team": "The Hypersecretors",
-          "player": "Travis Hunter",
-          "pos": "DB",
-          "pts": 28.0
+          "team": "Newman Lake Sleep Paralysis Demons",
+          "player": "Henry To'oTo'o",
+          "pos": "ID",
+          "pts": 31.0
         }
       ],
-      "notes": "Fantrax Week 6 final · Matchups scrape Tue Oct 20 (MNF complete)."
+      "notes": "Fantrax Week 7 final · Matchups scrape Tue Oct 27 ~9:05 AM PT (all games F, 0 players remaining)."
+    },
+    {
+      "home": "Pocket Agents",
+      "away": "The Hypersecretors",
+      "homeScore": 234.0,
+      "awayScore": 252.0,
+      "winner": "The Hypersecretors",
+      "status": "final",
+      "topScorers": [
+        {
+          "team": "Pocket Agents",
+          "player": "Trey McBride",
+          "pos": "TE",
+          "pts": 40.0
+        },
+        {
+          "team": "Pocket Agents",
+          "player": "Jared Goff",
+          "pos": "QB",
+          "pts": 27.0
+        },
+        {
+          "team": "Pocket Agents",
+          "player": "CeeDee Lamb",
+          "pos": "RWT",
+          "pts": 24.0
+        },
+        {
+          "team": "The Hypersecretors",
+          "player": "Blake Cashman",
+          "pos": "ID",
+          "pts": 60.0
+        },
+        {
+          "team": "The Hypersecretors",
+          "player": "Amon-Ra St. Brown",
+          "pos": "WR",
+          "pts": 30.0
+        },
+        {
+          "team": "The Hypersecretors",
+          "player": "Luther Burden",
+          "pos": "RWT",
+          "pts": 29.0
+        }
+      ],
+      "notes": "Fantrax Week 7 final · Matchups scrape Tue Oct 27 ~9:05 AM PT (all games F, 0 players remaining)."
+    },
+    {
+      "home": "Substation",
+      "away": "Indian Trail Slumlords",
+      "homeScore": 222.0,
+      "awayScore": 195.0,
+      "winner": "Substation",
+      "status": "final",
+      "topScorers": [
+        {
+          "team": "Substation",
+          "player": "Jack Campbell",
+          "pos": "LB",
+          "pts": 26.0
+        },
+        {
+          "team": "Substation",
+          "player": "Tykee Smith",
+          "pos": "DB",
+          "pts": 26.0
+        },
+        {
+          "team": "Substation",
+          "player": "Malik Nabers",
+          "pos": "RWT",
+          "pts": 24.0
+        },
+        {
+          "team": "Indian Trail Slumlords",
+          "player": "Drake Maye",
+          "pos": "QB",
+          "pts": 35.0
+        },
+        {
+          "team": "Indian Trail Slumlords",
+          "player": "Anthony Hill",
+          "pos": "LB",
+          "pts": 26.0
+        },
+        {
+          "team": "Indian Trail Slumlords",
+          "player": "Jahmyr Gibbs",
+          "pos": "RB",
+          "pts": 25.0
+        }
+      ],
+      "notes": "Fantrax Week 7 final · Matchups scrape Tue Oct 27 ~9:05 AM PT (all games F, 0 players remaining)."
+    },
+    {
+      "home": "Valley Old Goats",
+      "away": "Saltese Slamm",
+      "homeScore": 203.5,
+      "awayScore": 208.5,
+      "winner": "Saltese Slamm",
+      "status": "final",
+      "topScorers": [
+        {
+          "team": "Valley Old Goats",
+          "player": "Bucky Irving",
+          "pos": "RWT",
+          "pts": 32.0
+        },
+        {
+          "team": "Valley Old Goats",
+          "player": "Quincy Williams",
+          "pos": "ID",
+          "pts": 32.0
+        },
+        {
+          "team": "Valley Old Goats",
+          "player": "Keisean Nixon",
+          "pos": "DB",
+          "pts": 22.0
+        },
+        {
+          "team": "Saltese Slamm",
+          "player": "Jamien Sherwood",
+          "pos": "LB",
+          "pts": 29.0
+        },
+        {
+          "team": "Saltese Slamm",
+          "player": "Tre Tucker",
+          "pos": "RWT",
+          "pts": 27.0
+        },
+        {
+          "team": "Saltese Slamm",
+          "player": "Matthew Stafford",
+          "pos": "QB",
+          "pts": 22.0
+        }
+      ],
+      "notes": "Fantrax Week 7 final · Matchups scrape Tue Oct 27 ~9:05 AM PT (all games F, 0 players remaining)."
     },
     {
       "home": "Morningside Muff Divers",
-      "away": "Indian Trail Slumlords",
-      "homeScore": 212.5,
-      "awayScore": 249.5,
-      "winner": "Indian Trail Slumlords",
+      "away": "Eagle Ridge Eddies",
+      "homeScore": 192.5,
+      "awayScore": 205.5,
+      "winner": "Eagle Ridge Eddies",
       "status": "final",
       "topScorers": [
         {
           "team": "Morningside Muff Divers",
           "player": "Bobby Okereke",
           "pos": "ID",
-          "pts": 41.0
-        },
-        {
-          "team": "Morningside Muff Divers",
-          "player": "Pete Werner",
-          "pos": "LB",
-          "pts": 35.0
-        },
-        {
-          "team": "Morningside Muff Divers",
-          "player": "Aaron Rodgers",
-          "pos": "QB",
-          "pts": 19.0
-        },
-        {
-          "team": "Indian Trail Slumlords",
-          "player": "Jeffery Simmons",
-          "pos": "ID",
-          "pts": 38.0
-        },
-        {
-          "team": "Indian Trail Slumlords",
-          "player": "Budda Baker",
-          "pos": "DB",
           "pts": 31.0
         },
         {
-          "team": "Indian Trail Slumlords",
-          "player": "Drake Maye",
-          "pos": "QB",
+          "team": "Morningside Muff Divers",
+          "player": "Jessie Bates",
+          "pos": "DB",
           "pts": 29.0
-        }
-      ],
-      "notes": "Fantrax Week 6 final · Matchups scrape Tue Oct 20 (MNF complete)."
-    },
-    {
-      "home": "Valley Old Goats",
-      "away": "Towner Top Aga Bottom",
-      "homeScore": 189.5,
-      "awayScore": 186.5,
-      "winner": "Valley Old Goats",
-      "status": "final",
-      "topScorers": [
-        {
-          "team": "Valley Old Goats",
-          "player": "Quincy Williams",
-          "pos": "ID",
-          "pts": 21.0
         },
         {
-          "team": "Valley Old Goats",
-          "player": "George Kittle",
-          "pos": "TE",
-          "pts": 20.5
-        },
-        {
-          "team": "Valley Old Goats",
-          "player": "DK Metcalf",
-          "pos": "WR",
-          "pts": 20.0
-        },
-        {
-          "team": "Towner Top Aga Bottom",
-          "player": "Caleb Downs",
-          "pos": "DB",
-          "pts": 25.0
-        },
-        {
-          "team": "Towner Top Aga Bottom",
-          "player": "Josh Allen",
-          "pos": "QB",
-          "pts": 22.0
-        },
-        {
-          "team": "Towner Top Aga Bottom",
-          "player": "Javon Bullard",
-          "pos": "DB",
-          "pts": 22.0
-        }
-      ],
-      "notes": "Fantrax Week 6 final · Matchups scrape Tue Oct 20 (MNF complete)."
-    },
-    {
-      "home": "Little Ass Boys",
-      "away": "Newman Lake Sleep Paralysis Demons",
-      "homeScore": 235.5,
-      "awayScore": 209.0,
-      "winner": "Little Ass Boys",
-      "status": "final",
-      "topScorers": [
-        {
-          "team": "Little Ass Boys",
-          "player": "Jayden Daniels",
-          "pos": "QB",
-          "pts": 31.0
-        },
-        {
-          "team": "Little Ass Boys",
-          "player": "Isaiah Likely",
-          "pos": "TE",
-          "pts": 28.5
-        },
-        {
-          "team": "Little Ass Boys",
-          "player": "Jacob Parrish",
-          "pos": "DB",
-          "pts": 24.0
-        },
-        {
-          "team": "Newman Lake Sleep Paralysis Demons",
-          "player": "Matthew Golden",
-          "pos": "RWT",
-          "pts": 30.0
-        },
-        {
-          "team": "Newman Lake Sleep Paralysis Demons",
-          "player": "Nathan Landman",
-          "pos": "ID",
-          "pts": 23.0
-        },
-        {
-          "team": "Newman Lake Sleep Paralysis Demons",
-          "player": "Jonathan Taylor",
+          "team": "Morningside Muff Divers",
+          "player": "Ollie Gordon",
           "pos": "RB",
-          "pts": 22.0
-        }
-      ],
-      "notes": "Fantrax Week 6 final · Matchups scrape Tue Oct 20 (MNF complete)."
-    },
-    {
-      "home": "Saltese Slamm",
-      "away": "Pocket Agents",
-      "homeScore": 259.0,
-      "awayScore": 262.5,
-      "winner": "Pocket Agents",
-      "status": "final",
-      "topScorers": [
-        {
-          "team": "Saltese Slamm",
-          "player": "Jamien Sherwood",
-          "pos": "LB",
-          "pts": 34.0
-        },
-        {
-          "team": "Saltese Slamm",
-          "player": "Jaxon Smith-Njigba",
-          "pos": "WR",
-          "pts": 31.0
-        },
-        {
-          "team": "Saltese Slamm",
-          "player": "Tre Tucker",
-          "pos": "RWT",
           "pts": 26.0
         },
         {
-          "team": "Pocket Agents",
-          "player": "Amani Hooker",
-          "pos": "ID",
-          "pts": 36.0
-        },
-        {
-          "team": "Pocket Agents",
-          "player": "Tyler Shough",
-          "pos": "QB",
-          "pts": 32.0
-        },
-        {
-          "team": "Pocket Agents",
-          "player": "Ernest Jones",
+          "team": "Eagle Ridge Eddies",
+          "player": "Fred Warner",
           "pos": "LB",
+          "pts": 33.0
+        },
+        {
+          "team": "Eagle Ridge Eddies",
+          "player": "Cameron Skattebo",
+          "pos": "RB",
           "pts": 27.0
+        },
+        {
+          "team": "Eagle Ridge Eddies",
+          "player": "Jordyn Brooks",
+          "pos": "ID",
+          "pts": 23.0
         }
       ],
-      "notes": "Fantrax Week 6 final · Matchups scrape Tue Oct 20 (MNF complete)."
-    },
-    {
-      "home": "Substation",
-      "away": "Eagle Ridge Eddies",
-      "homeScore": 227.5,
-      "awayScore": 259.5,
-      "winner": "Eagle Ridge Eddies",
-      "status": "final",
-      "topScorers": [
-        {
-          "team": "Substation",
-          "player": "Malik Nabers",
-          "pos": "RWT",
-          "pts": 36.0
-        },
-        {
-          "team": "Substation",
-          "player": "Germie Bernard",
-          "pos": "WR",
-          "pts": 25.0
-        },
-        {
-          "team": "Substation",
-          "player": "Nick Emmanwori",
-          "pos": "DB",
-          "pts": 25.0
-        },
-        {
-          "team": "Eagle Ridge Eddies",
-          "player": "Trevor Lawrence",
-          "pos": "QB",
-          "pts": 40.0
-        },
-        {
-          "team": "Eagle Ridge Eddies",
-          "player": "George Karlaftis",
-          "pos": "DL",
-          "pts": 35.0
-        },
-        {
-          "team": "Eagle Ridge Eddies",
-          "player": "Quentin Lake",
-          "pos": "DB",
-          "pts": 25.0
-        }
-      ],
-      "notes": "Fantrax Week 6 final · Matchups scrape Tue Oct 20 (MNF complete)."
+      "notes": "Fantrax Week 7 final · Matchups scrape Tue Oct 27 ~9:05 AM PT (all games F, 0 players remaining)."
     }
   ]
 }

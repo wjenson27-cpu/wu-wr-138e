@@ -2,8 +2,8 @@
   "teamId": "substation",
   "teamName": "Substation",
   "owner": "Nathan Kelly",
-  "asOf": "2026-10-28 6:33 AM PT",
-  "faabLeft": 21,
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 0,
   "startingQB": "Bryce Young",
   "roster": {
     "QB": [
@@ -12,19 +12,22 @@
     ],
     "RB": [
       "Kenneth Gainwell",
-      "RJ Harvey",
-      "Emmett Johnson"
+      "Emmett Johnson",
+      "RJ Harvey"
     ],
     "WR": [
       "Ja'Marr Chase",
       "Germie Bernard",
+      "KC Concepcion",
+      "Chris Godwin",
+      "Makai Lemon",
       "Malik Nabers"
     ],
     "TE": [
       "Tucker Kraft"
     ],
     "DL": [
-      "DeForest Buckner"
+      "Austin Booker"
     ],
     "LB": [
       "Jack Campbell",
@@ -34,12 +37,13 @@
     "DB": [
       "Nick Emmanwori",
       "Kevin Winston",
+      "DeShon Elliott",
       "Tykee Smith"
     ],
     "IR": [
+      "Tyjae Spears",
       "Alec Pierce",
-      "Tyler Warren",
-      "DeShon Elliott"
+      "Tyler Warren"
     ]
   },
   "notes": "",
@@ -47,7 +51,7 @@
     "Alec Pierce — IR (IR slot)",
     "Tyler Warren — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 6:33 AM PT (/workspace/fantrax-raw-2026-10-28-am.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "bbdlo6fkmsb3ulv5",
   "lineupFlags": [],
   "pendingClaim": null,
@@ -57,5 +61,5 @@
     "Tyler Warren — Q (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 6:33 AM PT"
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

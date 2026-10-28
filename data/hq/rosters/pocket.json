@@ -2,8 +2,8 @@
   "teamId": "pocket",
   "teamName": "Pocket Agents",
   "owner": "Kellen Olson",
-  "asOf": "2026-10-21 9:34 AM PT",
-  "faabLeft": 98,
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 85,
   "startingQB": "Jared Goff",
   "roster": {
     "QB": [
@@ -11,55 +11,56 @@
       "Tyler Shough"
     ],
     "RB": [
-      "Woody Marks",
-      "Mike Washington"
+      "Jonah Coleman",
+      "Mike Washington",
+      "Woody Marks"
     ],
     "WR": [
-      "Rashid Shaheed",
       "CeeDee Lamb",
-      "Tetairoa McMillan",
-      "Jaylen Waddle",
-      "Malik Washington"
+      "Tetairoa McMillan"
     ],
     "TE": [
       "Trey McBride",
+      "Dalton Kincaid",
       "Chigoziem Okonkwo"
     ],
     "DL": [
+      "Josh Hines-Allen",
       "Will Anderson Jr."
     ],
     "LB": [
       "Ernest Jones",
       "Barrett Carter",
-      "Josiah Trotter",
-      "Micah McFadden"
+      "Josiah Trotter"
     ],
     "DB": [
-      "Cooper DeJean",
+      "Dane Belton",
       "Brandon Jones",
       "Amani Hooker",
-      "Jaquan Brisker"
+      "Cooper DeJean"
     ],
     "IR": [
       "Saquon Barkley",
-      "Jonah Coleman",
-      "Dalton Kincaid"
+      "Rashid Shaheed",
+      "Jaylen Waddle"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Saquon Barkley — Q (IR slot)",
-    "Jonah Coleman — IR (IR slot)"
+    "Rashid Shaheed — Q (IR slot)",
+    "Jaylen Waddle — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "20zozmjgmsb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Saquon Barkley — Q (IR slot)",
-    "Jonah Coleman — IR (IR slot)"
+    "Rashid Shaheed — Q (IR slot)",
+    "Jaylen Waddle — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

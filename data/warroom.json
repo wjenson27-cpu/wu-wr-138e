@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-28T08:50:00-07:00",
+  "asOf": "2026-10-28T09:46:00-07:00",
   "season": 2026,
   "week": 8,
   "opponent": {
@@ -9,11 +9,11 @@
     "name": "Ultron"
   },
   "freshness": {
-    "plan": "2026-10-28T08:50:00-07:00",
-    "roster": "2026-10-28T08:50:00-07:00",
-    "scores": "2026-10-28T06:33:00-07:00",
-    "waivers": "2026-10-28T08:50:00-07:00",
-    "news": "2026-10-28T08:50:00-07:00"
+    "plan": "2026-10-28T09:46:00-07:00",
+    "roster": "2026-10-28T09:46:00-07:00",
+    "scores": "2026-10-28T09:46:00-07:00",
+    "waivers": "2026-10-28T09:46:00-07:00",
+    "news": "2026-10-28T09:46:00-07:00"
   },
   "lockTimes": [
     {
@@ -176,11 +176,11 @@
     },
     {
       "slot": "BN",
-      "player": "D.J. Reed",
+      "player": "Cole Bishop",
       "pos": "DB",
-      "nflTeam": "DET",
-      "verdict": "SIT",
-      "reason": "vs MIN (33 dropbacks/g, tough x0.92 draw). DB #30 this week (15.4 proj); Luvu starts over him in IDP flex.",
+      "nflTeam": "BUF",
+      "verdict": "WATCH",
+      "reason": "vs BAL. Won for $4 on Wed waivers (dropped D.J. Reed); 100% snaps & 74% tackle share in W6 before W7 bye (DB #16 ROS, 16.0 proj).",
       "injury": "",
       "practice": ""
     },
@@ -346,76 +346,50 @@
       "player": "D.J. Wonnum",
       "pos": "DL",
       "nflTeam": "DET",
-      "why": "WEEKLY DL STREAM. Faces MIN OL allowing a 9.0% sack rate & 15% QB hit rate (x1.07 boost); snaps jumped to 72% in W7.",
+      "why": "OPEN FA STREAM. Faces MIN OL allowing a 9.0% sack rate & 15% QB hit rate (x1.07 boost); snaps jumped to 72% in W7.",
       "stats": "16.5 FP/G last 3, 72% W7 snaps",
-      "faabMin": 1,
-      "faabMax": 4,
-      "bid": 2,
+      "faabMin": 0,
+      "faabMax": 2,
+      "bid": 0,
       "drop": "Cedric Gray",
       "tag": "LIKE"
     },
     {
       "rank": 2,
-      "player": "Josh Hines-Allen",
+      "player": "Jalen Carter",
       "pos": "DL",
-      "nflTeam": "JAX",
-      "why": "ROS / W8 BOOST. Faces IND OL allowing a 7.1% sack rate & 18% hit rate on 38 DB/g (x1.12 boost, #1 DL multiplier); 88% snaps, past bye.",
-      "stats": "12.7 FP/G, 88% L3 snaps",
-      "faabMin": 1,
-      "faabMax": 3,
-      "bid": 2,
+      "nflTeam": "PHI",
+      "why": "OPEN FA / ROS. 87% snaps and wrist cast is off; faces WAS (40 DB/g, 18% QB hit rate allowed, x1.05).",
+      "stats": "17.3 FP/G last 3, 87% snaps",
+      "faabMin": 0,
+      "faabMax": 2,
+      "bid": 0,
       "drop": "Cedric Gray",
       "tag": "LIKE"
     },
     {
       "rank": 3,
-      "player": "Jalen Carter",
-      "pos": "DL",
-      "nflTeam": "PHI",
-      "why": "ROS. 87% snaps and wrist cast is off; faces WAS (40 DB/g, 18% QB hit rate allowed, x1.05).",
-      "stats": "17.3 FP/G last 3, 87% snaps",
-      "faabMin": 2,
-      "faabMax": 4,
-      "bid": 3,
-      "drop": "Cedric Gray",
-      "tag": "LIKE"
-    },
-    {
-      "rank": 4,
       "player": "Adetomiwa Adebawore",
       "pos": "DL",
       "nflTeam": "IND",
-      "why": "WEEKLY. 2 sacks (36 pts) in W7 with 29.4% pressure rate; snaps up to 49% vs JAX (lost LT Harrison).",
+      "why": "OPEN FA STREAM. 2 sacks (36 pts) in W7 with 29.4% pressure rate; snaps up to 49% vs JAX (lost LT Harrison).",
       "stats": "21.0 FP/G last 3, 49% W7 snaps",
-      "faabMin": 1,
-      "faabMax": 3,
-      "bid": 2,
+      "faabMin": 0,
+      "faabMax": 2,
+      "bid": 0,
       "drop": "Cedric Gray",
       "tag": "DART"
     },
     {
-      "rank": 5,
-      "player": "Nohl Williams",
-      "pos": "DB",
-      "nflTeam": "KC",
-      "why": "DART. 10 tackles + INT in W7 on 96% snaps (19.3 FP/G true L3); tough @DEN draw this week.",
-      "stats": "18.2 FP/G Fantrax, 86% L3 snaps",
-      "faabMin": 2,
-      "faabMax": 5,
-      "bid": 3,
-      "drop": "Cedric Gray",
-      "tag": "DART"
-    },
-    {
-      "rank": 6,
+      "rank": 4,
       "player": "Shemar James",
       "pos": "LB",
       "nflTeam": "DAL",
-      "why": "DART. Woellert's new DAL green dot (87% snaps in W7) vs ARI.",
+      "why": "OPEN FA DART. Woellert's new DAL green dot (87% snaps in W7) vs ARI.",
       "stats": "New DAL green dot (87% snaps)",
-      "faabMin": 1,
-      "faabMax": 3,
-      "bid": 2,
+      "faabMin": 0,
+      "faabMax": 2,
+      "bid": 0,
       "drop": "Cedric Gray",
       "tag": "DART"
     }
@@ -425,19 +399,13 @@
       "rank": 1,
       "player": "Cedric Gray",
       "pos": "LB",
-      "reason": "LB #47, 56% snaps, no dot (and we just added Frankie Luvu). First cut for any DL/IDP add."
+      "reason": "LB #47, 56% snaps, no dot (and we added Frankie Luvu). First cut for a Week 8 DL streamer."
     },
     {
       "rank": 2,
       "player": "Kendrick Bourne",
       "pos": "WR",
       "reason": "WR5 on our bench behind Wilson, Pickens, Coker, and Dike."
-    },
-    {
-      "rank": 3,
-      "player": "D.J. Reed",
-      "pos": "DB",
-      "reason": "DB #30 this week vs MIN (low pass volume); outside CB tackle floor."
     }
   ],
   "trades": [
@@ -515,9 +483,19 @@
       "player": "Quentin Lake",
       "nflTeam": "LAR",
       "note": "Rams green dot, 63/64 snaps (74% tackle mix); DB #5 this week vs LAC"
+    },
+    {
+      "player": "Cole Bishop",
+      "nflTeam": "BUF",
+      "note": "Won on W8 waivers ($4); 100% snaps & 74% tackle mix in W6 before W7 bye; DB #16 ROS"
     }
   ],
   "news": [
+    {
+      "source": "Fantrax Waivers",
+      "time": "2026-10-28T09:00:00-07:00",
+      "text": "Week 8 waivers cleared: The Eddies won Cole Bishop (DB BUF) for $4 (beat Ultron $2, Substation $0), dropping D.J. Reed. Eddies FAAB now $34. League spend: Substation $21 (KC Concepcion, now $0), Hyper $13 (Croskey-Merritt $9, Micah Parsons $4), Doubtpfizer $10 (Kyler Gordon $5, Kaelon Black $3, Nohl Williams $2), Saltese $6, LAB $5, Pocket $3 (Josh Hines-Allen), Newman $3 (Grant Delpit)."
+    },
     {
       "source": "Fantrax Trade",
       "time": "2026-10-27T18:16:00-07:00",
@@ -576,7 +554,7 @@
       "url": "https://x.com/Curtis_Crabtree/status/2114847617922531367"
     }
   ],
-  "lastUpdated": "2026-10-28T08:50:00-07:00",
+  "lastUpdated": "2026-10-28T09:46:00-07:00",
   "fantraxRaw": {
     "file": "fantrax-raw-2026-10-27-am.json",
     "scraped": "2026-10-27 ~06:45 PDT"

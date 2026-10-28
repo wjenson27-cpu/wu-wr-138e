@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-28",
-  "source": "Fantrax roster sync 2026-10-28 6:33 AM PT (/workspace/fantrax-raw-2026-10-28-am.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "season": 2026,
   "trades": [
     {
@@ -599,8 +599,7 @@
         "Jordyn Tyson WR NO",
         "Cedric Gray LB TEN",
         "Trenton Simpson LB BAL",
-        "Quentin Lake DB LAR",
-        "D.J. Reed DB DET"
+        "Quentin Lake DB LAR"
       ],
       "note": null
     },
@@ -697,8 +696,8 @@
     }
   ],
   "leaderboard_note": "As of early HQ: Nate led all-2026 deal count (incl handshake). Fantrax official player/pick deals concentrated with Aga/Chase/Larry.",
-  "pending_note": "Pending trades 0 (Fantrax 2026-10-28 6:33 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
+  "pending_note": "Pending trades 0 (Fantrax 2026-10-28 9:44 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
   "fantrax_completed_view": "Newest official: TTAB↔Ultron Ashton Jeanty for DeVonta Smith+Dillon Thieneman (Oct 22 3:07 PM); Saltese↔Ultron DeVonta Smith+Mack Wilson for Bhayshul Tuten (Oct 22 2:39 PM); Substation↔TTAB Brian Branch+Demario Davis for Zack Baun (Oct 22 9:56 AM).",
   "hqComplete": true,
-  "lastSynced": "2026-10-28 6:33 AM PT"
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

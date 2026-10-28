@@ -2,27 +2,28 @@
   "teamId": "lab",
   "teamName": "Little Ass Boys",
   "owner": "Jesse Nicholson",
-  "asOf": "2026-10-21 9:34 AM PT",
-  "faabLeft": 61,
-  "startingQB": "C.J. Stroud",
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 56,
+  "startingQB": "Jayden Daniels",
   "roster": {
     "QB": [
-      "C.J. Stroud",
-      "Jayden Daniels"
+      "Jayden Daniels",
+      "C.J. Stroud"
     ],
     "RB": [
-      "Tyler Allgeier",
-      "Tyrone Tracy",
-      "Jaylen Warren",
       "Kyren Williams",
-      "Jaylen Wright"
+      "Jaylen Warren",
+      "Tyler Allgeier",
+      "Dylan Sampson"
     ],
     "WR": [
       "Puka Nacua",
-      "Jakobi Meyers",
+      "Caleb Douglas",
+      "Carnell Tate",
       "Khalil Shakir"
     ],
     "TE": [
+      "Greg Dulcich",
       "Isaiah Likely"
     ],
     "DL": [
@@ -30,10 +31,10 @@
     ],
     "LB": [
       "Roquan Smith",
-      "Demario Davis",
+      "Akeem Davis-Gaither",
       "Drue Tranquill",
       "Quay Walker",
-      "Akeem Davis-Gaither"
+      "Jihaad Campbell"
     ],
     "DB": [
       "Minkah Fitzpatrick",
@@ -41,26 +42,23 @@
     ],
     "IR": [
       "Jeremiyah Love",
-      "Caleb Douglas",
       "Mike Evans"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Jeremiyah Love — Q (IR slot)",
-    "Caleb Douglas — Q (IR slot)",
     "Mike Evans — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "a4q2ra3ymsb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Jeremiyah Love — Q (IR slot)",
-    "Caleb Douglas — Q (IR slot)",
     "Mike Evans — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

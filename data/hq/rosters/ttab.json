@@ -2,65 +2,65 @@
   "teamId": "ttab",
   "teamName": "Towner Top Aga Bottom",
   "owner": "Chase Anderson",
-  "asOf": "2026-10-21 9:34 AM PT",
-  "faabLeft": 0,
-  "startingQB": "Bo Nix",
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 10,
+  "startingQB": "Josh Allen",
   "roster": {
     "QB": [
-      "Bo Nix",
       "Josh Allen"
     ],
     "RB": [
       "Javonte Williams",
-      "Ashton Jeanty",
-      "Cameron Skattebo",
-      "Emanuel Wilson"
+      "Emanuel Wilson",
+      "Zonovan Knight"
     ],
     "WR": [
       "Christian Watson",
-      "Ryan Flournoy",
+      "Stefon Diggs",
       "Jameson Williams",
-      "Omar Cooper Jr.",
-      "Stefon Diggs"
+      "Ryan Flournoy",
+      "Malik Washington",
+      "Omar Cooper Jr."
     ],
     "TE": [
       "Dallas Goedert"
     ],
     "DL": [
-      "Kingsley Enagbare"
+      "Nik Bonitto"
     ],
     "LB": [
-      "Zack Baun",
+      "Demario Davis",
       "Harold Perkins",
       "Dorian Williams"
     ],
     "DB": [
-      "Javon Bullard",
       "Caleb Downs",
-      "Dane Belton"
+      "Dillon Thieneman",
+      "Brian Branch",
+      "Javon Bullard"
     ],
     "IR": [
+      "DeVonta Smith",
       "Divine Deablo",
-      "Andrew Wingard",
-      "Dee Winters"
+      "Andrew Wingard"
     ]
   },
   "notes": "",
   "injuryFlags": [
+    "DeVonta Smith — Q (IR slot)",
     "Divine Deablo — Q (IR slot)",
-    "Andrew Wingard — Q (IR slot)",
-    "Dee Winters — Q (IR slot)"
+    "Andrew Wingard — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "4grk2ph6msb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
+    "DeVonta Smith — Q (IR slot)",
     "Divine Deablo — Q (IR slot)",
-    "Andrew Wingard — Q (IR slot)",
-    "Dee Winters — Q (IR slot)"
+    "Andrew Wingard — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

@@ -10847,8 +10847,9 @@
   "p75": 9.25,
   "p90": 17.5,
   "max": 42,
-  "eddiesFaabLeft": 49,
-  "nextClear": "Wed Oct 28, 2026 9:00 AM PT"
+  "eddiesFaabLeft": 34,
+  "nextClear": "Wed Oct 28, 2026 9:00 AM PT",
+  "leagueTopFaab": "Pocket $85, Doubtpfizer $75, Goats $64, LAB $56"
  },
  "claimTargets": [
   {
@@ -10875,31 +10876,6 @@
    ],
    "matchupNote": "vs PIT OL: 7.6% sack / 16% hit rate allowed (lg 6.0%/15%), 41 DB/g \u2192 neutral (x1.02)",
    "note": "did not play W7 \u2014 check status (proj cut 25%); sleeper: unrostered with a top-half projection"
-  },
-  {
-   "player": "Kyler Gordon",
-   "pos": "DB",
-   "team": "CHI",
-   "opp": "SEA",
-   "tag": "WEEKLY",
-   "proj": 22.5,
-   "weeklyRank": 2,
-   "rosRank": 13,
-   "posRank": 2,
-   "rosPPG": 17.26,
-   "rosByeWeek": 10.0,
-   "fpgSeason": 30.0,
-   "fpgL3": 30.0,
-   "snapShareL3": 0.44,
-   "greenDot": null,
-   "injury": null,
-   "bid": 1,
-   "range": [
-    0,
-    1
-   ],
-   "matchupNote": "vs SEA OL: 6.4% sack / 19% hit rate allowed (lg 6.0%/15%), 36 DB/g \u2192 neutral (x1.05)",
-   "note": "snaps up to 57%; sleeper: unrostered with a top-half projection"
   },
   {
    "player": "Ja'Quan McMillian",
@@ -11100,31 +11076,6 @@
    ],
    "matchupNote": "vs IND: 38 dropbacks/g, 20 cmp/g, 46 DB tkl pts/g allowed (lg 42) \u2192 boost (x1.10)",
    "note": "snaps up to 98%; sleeper: unrostered with a top-half projection"
-  },
-  {
-   "player": "Brandon Cisse",
-   "pos": "DB",
-   "team": "GB",
-   "opp": "CAR",
-   "tag": "WEEKLY",
-   "proj": 18.2,
-   "weeklyRank": 15,
-   "rosRank": 33,
-   "posRank": 15,
-   "rosPPG": 15.1,
-   "rosByeWeek": 11.0,
-   "fpgSeason": 15.43,
-   "fpgL3": 19.67,
-   "snapShareL3": 0.893,
-   "greenDot": null,
-   "injury": null,
-   "bid": 1,
-   "range": [
-    0,
-    1
-   ],
-   "matchupNote": "vs CAR: 43 dropbacks/g, 23 cmp/g, 42 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.01)",
-   "note": "riser: 19.7 FP/G last 3 vs 12.2 earlier; sleeper: unrostered with a top-half projection"
   }
  ],
  "claimTagRules": {
@@ -11199,15 +11150,16 @@
    "matchupNote": "vs PHI: 59 plays/g, 35% run, 26 LB tkl pts/g allowed (lg 32) \u2192 tough (x0.90)"
   },
   {
-   "player": "D.J. Reed",
+   "player": "Cole Bishop",
    "pos": "DB",
-   "team": "DET",
-   "opp": "MIN",
-   "proj": 15.4,
-   "weeklyRank": 30,
-   "rosRank": 15,
-   "injury": null,
-   "matchupNote": "vs MIN: 33 dropbacks/g, 18 cmp/g, 38 DB tkl pts/g allowed (lg 42) \u2192 tough (x0.92)"
+   "nfl": "BUF",
+   "opp": "BAL",
+   "proj": 16.0,
+   "wRank": 22,
+   "rosRank": 16,
+   "verdict": "SIT",
+   "snapLast": 100,
+   "greenDot": false
   },
   {
    "player": "Tyrice Knight",

@@ -2,8 +2,8 @@
   "teamId": "eddies",
   "teamName": "Eagle Ridge Eddies",
   "owner": "Bill Jenson",
-  "asOf": "2026-10-28 6:33 AM PT",
-  "faabLeft": 38,
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 34,
   "startingQB": "Trevor Lawrence",
   "roster": {
     "QB": [
@@ -38,7 +38,7 @@
     "DB": [
       "Quentin Lake",
       "Evan Williams",
-      "D.J. Reed"
+      "Cole Bishop"
     ],
     "IR": [
       "Cameron Skattebo",
@@ -55,7 +55,7 @@
     "Jordyn Tyson — IR (IR slot)",
     "Travis Etienne — IR (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 6:33 AM PT (/workspace/fantrax-raw-2026-10-28-am.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "xbvk9dpgmsb3ulv4",
   "lineupFlags": [
     "Breece Hall — Q (active)",
@@ -73,5 +73,5 @@
     "Travis Etienne — IR (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 6:33 AM PT"
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

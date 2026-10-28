@@ -2,65 +2,65 @@
   "teamId": "saltese",
   "teamName": "Saltese Slamm",
   "owner": "Luke Sahlberg",
-  "asOf": "2026-10-21 9:34 AM PT",
-  "faabLeft": 21,
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 15,
   "startingQB": "Matthew Stafford",
   "roster": {
     "QB": [
       "Matthew Stafford"
     ],
     "RB": [
-      "Aaron Jones",
+      "Bhayshul Tuten",
       "Rico Dowdle",
+      "Bijan Robinson",
       "Omarion Hampton"
     ],
     "WR": [
-      "Jaxon Smith-Njigba",
       "Denzel Boston",
-      "DeVonta Smith",
+      "Tre Tucker",
       "Antonio Williams",
-      "Ja'Kobi Lane",
-      "Tre Tucker"
+      "Ja'Kobi Lane"
     ],
     "TE": [
-      "Tyler Higbee"
+      "Colby Parkinson"
     ],
     "DL": [
-      "Chase Young",
-      "Nik Bonitto"
+      "Chase Young"
     ],
     "LB": [
       "Jamien Sherwood",
+      "Terrel Bernard",
       "Dre Greenlaw",
-      "Mack Wilson",
-      "Terrel Bernard"
+      "Dee Winters"
     ],
     "DB": [
-      "Jahdae Barron",
-      "Jevon Holland"
+      "Kyle Hamilton",
+      "Byron Murphy",
+      "Brandon Cisse",
+      "Ty Okada"
     ],
     "IR": [
+      "Aaron Jones",
       "Jonathon Brooks",
-      "David Montgomery",
-      "Micah Parsons"
+      "David Montgomery"
     ]
   },
   "notes": "",
   "injuryFlags": [
+    "Aaron Jones — Q (IR slot)",
     "Jonathon Brooks — IR (IR slot)",
-    "David Montgomery — Q (IR slot)",
-    "Micah Parsons — IR (IR slot)"
+    "David Montgomery — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "xdx6ngm2msb3ulv5",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
+    "Aaron Jones — Q (IR slot)",
     "Jonathon Brooks — IR (IR slot)",
-    "David Montgomery — Q (IR slot)",
-    "Micah Parsons — IR (IR slot)"
+    "David Montgomery — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

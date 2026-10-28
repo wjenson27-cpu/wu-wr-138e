@@ -2,25 +2,25 @@
   "teamId": "morningside",
   "teamName": "Morningside Muff Divers",
   "owner": "Tim Brandle",
-  "asOf": "2026-10-21 9:34 AM PT",
+  "asOf": "2026-10-28 9:44 AM PT",
   "faabLeft": 8,
-  "startingQB": "Aaron Rodgers",
+  "startingQB": "Lamar Jackson",
   "roster": {
     "QB": [
-      "Aaron Rodgers",
       "Lamar Jackson"
     ],
     "RB": [
       "Ollie Gordon",
       "Jaleel McLaughlin",
+      "Jadarian Price",
       "Kimani Vidal"
     ],
     "WR": [
-      "Isaiah Williams",
+      "Jordan Addison",
       "Keenan Allen",
       "Justin Jefferson",
       "Xavier Worthy",
-      "Jordan Addison"
+      "Isaiah Williams"
     ],
     "TE": [
       "Travis Kelce"
@@ -29,46 +29,43 @@
       "Lukas Van Ness"
     ],
     "LB": [
-      "Pete Werner",
-      "Derrick Barnes",
+      "Ventrell Miller",
+      "Daiyan Henley",
       "Demetrius Knight",
       "Bobby Okereke",
-      "Daiyan Henley",
-      "Ventrell Miller"
+      "Pete Werner",
+      "Derrick Barnes"
     ],
     "DB": [
       "Jessie Bates",
       "Malaki Starks"
     ],
     "IR": [
-      "Jadarian Price",
       "Deebo Samuel",
       "Derwin James"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Lamar Jackson — Q (reserve)",
-    "Jordan Addison — Q (reserve)",
-    "Jadarian Price — IR (IR slot)",
-    "Deebo Samuel — O (IR slot)",
+    "Lamar Jackson — Q (active)",
+    "Jadarian Price — IR (reserve)",
+    "Deebo Samuel — Q (IR slot)",
     "Derwin James — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "3hpc63ermsb3ulv5",
   "lineupFlags": [
-    "Lamar Jackson — Q (reserve)",
-    "Jordan Addison — Q (reserve)"
+    "Lamar Jackson — Q (active)",
+    "Jadarian Price — IR (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Lamar Jackson — Q (reserve)",
-    "Jordan Addison — Q (reserve)",
-    "Jadarian Price — IR (IR slot)",
-    "Deebo Samuel — O (IR slot)",
+    "Lamar Jackson — Q (active)",
+    "Jadarian Price — IR (reserve)",
+    "Deebo Samuel — Q (IR slot)",
     "Derwin James — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

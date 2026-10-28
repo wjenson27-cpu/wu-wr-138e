@@ -2,24 +2,23 @@
   "teamId": "doubtpfizer",
   "teamName": "Mrs. Doubtpfizer",
   "owner": "Kyle Weberg",
-  "asOf": "2026-10-21 9:34 AM PT",
-  "faabLeft": 85,
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 75,
   "startingQB": "Dak Prescott",
   "roster": {
     "QB": [
       "Dak Prescott"
     ],
     "RB": [
-      "Christian McCaffrey",
       "Chuba Hubbard",
-      "Kaelon Black",
-      "Seth McGowan",
       "Braelon Allen",
-      "Blake Corum"
+      "Kaelon Black",
+      "Blake Corum",
+      "Seth McGowan"
     ],
     "WR": [
-      "Nico Collins",
       "Josh Downs",
+      "Nico Collins",
       "Rome Odunze"
     ],
     "TE": [
@@ -33,39 +32,36 @@
     "LB": [
       "Nakobe Dean",
       "DeMarvion Overshown",
-      "Elijah Ponder",
       "Alex Singleton",
       "Sonny Styles"
     ],
     "DB": [
+      "Kyler Gordon",
+      "Nohl Williams",
       "Kamari Lassiter"
     ],
     "IR": [
       "Rashee Rice",
-      "Mason Graham",
+      "Christian McCaffrey",
       "Reed Blankenship"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Rashee Rice — Q (IR slot)",
-    "DeMarvion Overshown — Q (active)",
-    "Mason Graham — Q (IR slot)",
+    "Christian McCaffrey — Q (IR slot)",
     "Reed Blankenship — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "xg1akj6omsb3ulv5",
-  "lineupFlags": [
-    "DeMarvion Overshown — Q (active)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Rashee Rice — Q (IR slot)",
-    "DeMarvion Overshown — Q (active)",
-    "Mason Graham — Q (IR slot)",
+    "Christian McCaffrey — Q (IR slot)",
     "Reed Blankenship — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

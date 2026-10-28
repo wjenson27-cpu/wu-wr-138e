@@ -2,62 +2,74 @@
   "teamId": "hyper",
   "teamName": "The Hypersecretors",
   "owner": "Jacob Crisp",
-  "asOf": "2026-10-21 9:34 AM PT",
-  "faabLeft": 25,
-  "startingQB": "Justin Herbert",
+  "asOf": "2026-10-28 9:44 AM PT",
+  "faabLeft": 12,
+  "startingQB": "Kirk Cousins",
   "roster": {
     "QB": [
-      "Justin Herbert",
       "Kirk Cousins",
-      "Michael Penix Jr."
+      "Justin Herbert"
     ],
     "RB": [
       "Kenneth Walker III",
+      "Rachaad White",
+      "Jacory Croskey-Merritt",
       "J.K. Dobbins",
-      "Keaton Mitchell",
-      "Rachaad White"
+      "Keaton Mitchell"
     ],
     "WR": [
       "Amon-Ra St. Brown",
       "Luther Burden",
       "Emeka Egbuka",
-      "Jaylin Noel",
-      "Travis Hunter"
+      "Jaylin Noel"
     ],
     "TE": [
-      "Sam LaPorta",
-      "Kenyon Sadiq"
+      "Sam LaPorta"
     ],
-    "DL": [],
+    "DL": [
+      "Micah Parsons"
+    ],
     "LB": [
       "Nick Bolton",
       "Blake Cashman",
       "Jacob Rodriguez",
-      "Payton Wilson"
+      "Payton Wilson",
+      "Kaleb Elarms-Orr"
     ],
     "DB": [
       "Jeremy Chinn",
       "Kamren Curl"
     ],
     "IR": [
+      "Travis Hunter",
       "Nick Bosa",
       "Jalen Pitre"
     ]
   },
   "notes": "",
   "injuryFlags": [
+    "Amon-Ra St. Brown — Q (active)",
+    "Emeka Egbuka — Q (active)",
+    "Jaylin Noel — Q (reserve)",
     "Nick Bosa — Q (IR slot)",
     "Jalen Pitre — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "xz2uv87rmsb3ulv4",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Amon-Ra St. Brown — Q (active)",
+    "Emeka Egbuka — Q (active)",
+    "Jaylin Noel — Q (reserve)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
+    "Amon-Ra St. Brown — Q (active)",
+    "Emeka Egbuka — Q (active)",
+    "Jaylin Noel — Q (reserve)",
     "Nick Bosa — Q (IR slot)",
     "Jalen Pitre — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }

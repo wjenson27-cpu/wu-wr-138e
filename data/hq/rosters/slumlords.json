@@ -2,7 +2,7 @@
   "teamId": "slumlords",
   "teamName": "Indian Trail Slumlords",
   "owner": "Ryan Towner",
-  "asOf": "2026-10-21 9:34 AM PT",
+  "asOf": "2026-10-28 9:44 AM PT",
   "faabLeft": 0,
   "startingQB": "Drake Maye",
   "roster": {
@@ -11,16 +11,15 @@
     ],
     "RB": [
       "Jahmyr Gibbs",
-      "Dameon Pierce",
-      "James Cook"
+      "Quinshon Judkins",
+      "James Cook",
+      "Dameon Pierce"
     ],
     "WR": [
-      "Wan'Dale Robinson",
-      "Kalif Raymond",
-      "Kyle Williams",
       "Demario Douglas",
-      "Chris Godwin",
-      "Darius Cooper"
+      "Kalif Raymond",
+      "Wan'Dale Robinson",
+      "Kyle Williams"
     ],
     "TE": [
       "Harold Fannin"
@@ -28,40 +27,42 @@
     "DL": [
       "Jeffery Simmons",
       "Maxx Crosby",
+      "Leonard Williams",
       "Gregory Rousseau"
     ],
     "LB": [
       "Anthony Hill",
-      "Jaden Dugger",
-      "Alex Anzalone"
+      "Alex Anzalone",
+      "Jaden Dugger"
     ],
     "DB": [
-      "Budda Baker",
       "Chamarri Conner",
-      "Devon Witherspoon"
+      "Devon Witherspoon",
+      "Budda Baker"
     ],
     "IR": [
       "Isiah Pacheco",
-      "Quinshon Judkins",
       "Talanoa Hufanga"
     ]
   },
   "notes": "",
   "injuryFlags": [
+    "Dameon Pierce — Q (reserve)",
     "Isiah Pacheco — IR (IR slot)",
-    "Quinshon Judkins — Q (IR slot)",
     "Talanoa Hufanga — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "59frnthimsb3ulv4",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Dameon Pierce — Q (reserve)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
+    "Dameon Pierce — Q (reserve)",
     "Isiah Pacheco — IR (IR slot)",
-    "Quinshon Judkins — Q (IR slot)",
     "Talanoa Hufanga — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 9:44 AM PT"
 }
