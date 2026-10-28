@@ -2,7 +2,7 @@
   "teamId": "dongers",
   "teamName": "Drummond Dongers",
   "owner": "Gavin Heaton",
-  "asOf": "2026-10-28 9:44 AM PT",
+  "asOf": "2026-10-28 10:45 AM PT",
   "faabLeft": 1,
   "startingQB": "Joe Burrow",
   "roster": {
@@ -53,7 +53,7 @@
     "Jevon Holland — Q (reserve)",
     "T.J. Edwards — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "lreem0zbmsb3ulv5",
   "lineupFlags": [
     "D.J. Moore — Q (active)",
@@ -72,5 +72,5 @@
     "T.J. Edwards — Q (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }

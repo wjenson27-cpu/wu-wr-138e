@@ -2,7 +2,7 @@
   "teamId": "eddies",
   "teamName": "Eagle Ridge Eddies",
   "owner": "Bill Jenson",
-  "asOf": "2026-10-28 9:44 AM PT",
+  "asOf": "2026-10-28 10:45 AM PT",
   "faabLeft": 34,
   "startingQB": "Trevor Lawrence",
   "roster": {
@@ -11,7 +11,6 @@
     ],
     "RB": [
       "Breece Hall",
-      "Brian Robinson Jr.",
       "Zach Charbonnet"
     ],
     "WR": [
@@ -19,6 +18,7 @@
       "Jalen Coker",
       "Chimere Dike",
       "George Pickens",
+      "Ja'Kobi Lane",
       "Kendrick Bourne"
     ],
     "TE": [
@@ -49,29 +49,26 @@
   "notes": "",
   "injuryFlags": [
     "Breece Hall — Q (active)",
-    "Brian Robinson Jr. — Q (reserve)",
     "Zach Charbonnet — Q (reserve)",
     "Cameron Skattebo — Q (IR slot)",
     "Jordyn Tyson — IR (IR slot)",
     "Travis Etienne — IR (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "xbvk9dpgmsb3ulv4",
   "lineupFlags": [
     "Breece Hall — Q (active)",
-    "Brian Robinson Jr. — Q (reserve)",
     "Zach Charbonnet — Q (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Breece Hall — Q (active)",
-    "Brian Robinson Jr. — Q (reserve)",
     "Zach Charbonnet — Q (reserve)",
     "Cameron Skattebo — Q (IR slot)",
     "Jordyn Tyson — IR (IR slot)",
     "Travis Etienne — IR (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }

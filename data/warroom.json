@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-28T10:23:00-07:00",
+  "asOf": "2026-10-28T10:46:00-07:00",
   "season": 2026,
   "week": 8,
   "opponent": {
@@ -9,11 +9,11 @@
     "name": "Ultron"
   },
   "freshness": {
-    "plan": "2026-10-28T10:23:00-07:00",
-    "roster": "2026-10-28T10:23:00-07:00",
-    "scores": "2026-10-28T10:23:00-07:00",
-    "waivers": "2026-10-28T10:23:00-07:00",
-    "news": "2026-10-28T10:23:00-07:00"
+    "plan": "2026-10-28T10:46:00-07:00",
+    "roster": "2026-10-28T10:46:00-07:00",
+    "scores": "2026-10-28T10:46:00-07:00",
+    "waivers": "2026-10-28T10:46:00-07:00",
+    "news": "2026-10-28T10:46:00-07:00"
   },
   "lockTimes": [
     {
@@ -236,12 +236,12 @@
     },
     {
       "slot": "BN",
-      "player": "Brian Robinson Jr.",
-      "pos": "RB",
-      "nflTeam": "ATL",
+      "player": "Ja'Kobi Lane",
+      "pos": "WR",
+      "nflTeam": "BAL",
       "verdict": "SIT",
-      "reason": "Hamstring, no update.",
-      "injury": "Q",
+      "reason": "@BUF. Acquired from Saltese for Brian Robinson Jr.; BAL rookie WR whose snaps jumped 54% to 69% in W7 (5 targets, 20.5% air yards in back-to-back games).",
+      "injury": "",
       "practice": ""
     },
     {
@@ -379,19 +379,6 @@
       "bid": 0,
       "drop": "Tyrice Knight (if Drake Thomas plays) or George Karlaftis",
       "tag": "DART"
-    },
-    {
-      "rank": 4,
-      "player": "Shemar James",
-      "pos": "LB",
-      "nflTeam": "DAL",
-      "why": "OPEN FA DART. Woellert's new DAL green dot (87% snaps in W7) vs ARI.",
-      "stats": "New DAL green dot (87% snaps)",
-      "faabMin": 0,
-      "faabMax": 2,
-      "bid": 0,
-      "drop": "Tyrice Knight (if Drake Thomas plays) or George Karlaftis",
-      "tag": "DART"
     }
   ],
   "drops": [
@@ -498,6 +485,11 @@
   ],
   "news": [
     {
+      "source": "Fantrax Trade",
+      "time": "2026-10-28T09:49:00-07:00",
+      "text": "Completed trades: (1) The Eddies sent Brian Robinson Jr. (RB ATL) to Saltese Slamm for rookie WR Ja'Kobi Lane (BAL, 69% W7 snaps); (2) Saltese sent Tre Tucker (WR LV) + $5 FAAB to Substation for RJ Harvey (RB DEN). Saltese FAAB now $10, Substation $5, Eddies $34."
+    },
+    {
       "source": "Fantrax Waivers",
       "time": "2026-10-28T09:00:00-07:00",
       "text": "Week 8 waivers cleared: The Eddies won Cole Bishop (DB BUF) for $4 (beat Ultron $2, Substation $0), dropping D.J. Reed. Eddies FAAB now $34. League spend: Substation $21 (KC Concepcion, now $0), Hyper $13 (Croskey-Merritt $9, Micah Parsons $4), Doubtpfizer $10 (Kyler Gordon $5, Kaelon Black $3, Nohl Williams $2), Saltese $6, LAB $5, Pocket $3 (Josh Hines-Allen), Newman $3 (Grant Delpit)."
@@ -560,7 +552,7 @@
       "url": "https://x.com/Curtis_Crabtree/status/2114847617922531367"
     }
   ],
-  "lastUpdated": "2026-10-28T10:23:00-07:00",
+  "lastUpdated": "2026-10-28T10:46:00-07:00",
   "fantraxRaw": {
     "file": "fantrax-raw-2026-10-27-am.json",
     "scraped": "2026-10-27 ~06:45 PDT"

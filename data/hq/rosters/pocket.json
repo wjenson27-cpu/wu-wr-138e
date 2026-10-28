@@ -2,7 +2,7 @@
   "teamId": "pocket",
   "teamName": "Pocket Agents",
   "owner": "Kellen Olson",
-  "asOf": "2026-10-28 9:44 AM PT",
+  "asOf": "2026-10-28 10:45 AM PT",
   "faabLeft": 85,
   "startingQB": "Jared Goff",
   "roster": {
@@ -51,7 +51,7 @@
     "Rashid Shaheed — Q (IR slot)",
     "Jaylen Waddle — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "20zozmjgmsb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
@@ -62,5 +62,5 @@
     "Jaylen Waddle — Q (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }

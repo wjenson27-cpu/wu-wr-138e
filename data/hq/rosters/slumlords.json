@@ -2,7 +2,7 @@
   "teamId": "slumlords",
   "teamName": "Indian Trail Slumlords",
   "owner": "Ryan Towner",
-  "asOf": "2026-10-28 9:44 AM PT",
+  "asOf": "2026-10-28 10:45 AM PT",
   "faabLeft": 0,
   "startingQB": "Drake Maye",
   "roster": {
@@ -51,7 +51,7 @@
     "Isiah Pacheco — IR (IR slot)",
     "Talanoa Hufanga — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "59frnthimsb3ulv4",
   "lineupFlags": [
     "Dameon Pierce — Q (reserve)"
@@ -64,5 +64,5 @@
     "Talanoa Hufanga — Q (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }

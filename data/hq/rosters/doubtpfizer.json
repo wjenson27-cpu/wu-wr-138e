@@ -2,7 +2,7 @@
   "teamId": "doubtpfizer",
   "teamName": "Mrs. Doubtpfizer",
   "owner": "Kyle Weberg",
-  "asOf": "2026-10-28 9:44 AM PT",
+  "asOf": "2026-10-28 10:45 AM PT",
   "faabLeft": 75,
   "startingQB": "Dak Prescott",
   "roster": {
@@ -52,7 +52,7 @@
     "Christian McCaffrey — Q (IR slot)",
     "Reed Blankenship — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "xg1akj6omsb3ulv5",
   "lineupFlags": [],
   "pendingClaim": null,
@@ -63,5 +63,5 @@
     "Reed Blankenship — Q (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }

@@ -2,8 +2,8 @@
   "teamId": "substation",
   "teamName": "Substation",
   "owner": "Nathan Kelly",
-  "asOf": "2026-10-28 9:44 AM PT",
-  "faabLeft": 0,
+  "asOf": "2026-10-28 10:45 AM PT",
+  "faabLeft": 5,
   "startingQB": "Bryce Young",
   "roster": {
     "QB": [
@@ -12,8 +12,7 @@
     ],
     "RB": [
       "Kenneth Gainwell",
-      "Emmett Johnson",
-      "RJ Harvey"
+      "Emmett Johnson"
     ],
     "WR": [
       "Ja'Marr Chase",
@@ -21,6 +20,7 @@
       "KC Concepcion",
       "Chris Godwin",
       "Makai Lemon",
+      "Tre Tucker",
       "Malik Nabers"
     ],
     "TE": [
@@ -51,7 +51,7 @@
     "Alec Pierce — IR (IR slot)",
     "Tyler Warren — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "bbdlo6fkmsb3ulv5",
   "lineupFlags": [],
   "pendingClaim": null,
@@ -61,5 +61,5 @@
     "Tyler Warren — Q (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }

@@ -665,7 +665,7 @@
      "5": 17.0,
      "7": 25.0
     },
-    "league": "FREE",
+    "league": "saltese",
     "weeklyRank": 9,
     "rosRank": 3,
     "rank": 9,
@@ -10926,31 +10926,6 @@
    ],
    "matchupNote": "vs TB: 36 dropbacks/g, 18 cmp/g, 43 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.01)",
    "note": "snaps up to 95%; sleeper: unrostered with a top-half projection"
-  },
-  {
-   "player": "Boye Mafe",
-   "pos": "DL",
-   "team": "CIN",
-   "opp": "TEN",
-   "tag": "ROS",
-   "proj": 16.6,
-   "weeklyRank": 9,
-   "rosRank": 3,
-   "posRank": 9,
-   "rosPPG": 19.09,
-   "rosByeWeek": null,
-   "fpgSeason": 14.33,
-   "fpgL3": 21.33,
-   "snapShareL3": 0.79,
-   "greenDot": null,
-   "injury": null,
-   "bid": 11,
-   "range": [
-    4,
-    18
-   ],
-   "matchupNote": "vs TEN OL: 4.7% sack / 12% hit rate allowed (lg 6.0%/15%), 33 DB/g \u2192 tough (x0.88)",
-   "note": "riser: 21.3 FP/G last 3 vs 11.0 earlier; sleeper: unrostered with a top-half projection"
   },
   {
    "player": "Rasul Douglas",

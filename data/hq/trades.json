@@ -1,8 +1,41 @@
 {
   "updated": "2026-10-28",
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax Transactions -> History -> Trade tab (live 2026-10-28 10:45 AM PT). Complete 2026 trade log (32 trades).",
   "season": 2026,
   "trades": [
+    {
+      "date": "2026-10-28",
+      "time": "9:49 AM PDT",
+      "week": 8,
+      "status": "completed",
+      "official": true,
+      "teamA": "Eagle Ridge Eddies",
+      "teamB": "Saltese Slamm",
+      "givesA": [
+        "Brian Robinson Jr. (RB)"
+      ],
+      "givesB": [
+        "Ja'Kobi Lane (WR)"
+      ],
+      "summary": "Week 8 \u2014 Eagle Ridge Eddies sent Brian Robinson Jr. (RB) to Saltese Slamm for Ja'Kobi Lane (WR) (Oct 28 9:49 AM PDT)."
+    },
+    {
+      "date": "2026-10-28",
+      "time": "9:46 AM PDT",
+      "week": 8,
+      "status": "completed",
+      "official": true,
+      "teamA": "Saltese Slamm",
+      "teamB": "Substation",
+      "givesA": [
+        "Tre Tucker (WR)",
+        "$5 FAAB"
+      ],
+      "givesB": [
+        "RJ Harvey (RB)"
+      ],
+      "summary": "Week 8 \u2014 Saltese Slamm sent Tre Tucker (WR), $5 FAAB to Substation for RJ Harvey (RB) (Oct 28 9:46 AM PDT)."
+    },
     {
       "date": "2026-10-27",
       "time": "6:16 PM PDT",
@@ -20,7 +53,7 @@
         "George Pickens (WR)",
         "Frankie Luvu (LB)"
       ],
-      "summary": "Week 8 — Eagle Ridge Eddies sent Tyler Warren (TE), Bryce Young (QB), $11 FAAB to Substation for George Pickens (WR), Frankie Luvu (LB) (Oct 27 6:16 PM PDT)."
+      "summary": "Week 8 \u2014 Eagle Ridge Eddies sent Tyler Warren (TE), Bryce Young (QB), $11 FAAB to Substation for George Pickens (WR), Frankie Luvu (LB) (Oct 27 6:16 PM PDT)."
     },
     {
       "date": "2026-10-26",
@@ -37,7 +70,7 @@
       "givesB": [
         "Dane Belton (DB)"
       ],
-      "summary": "Week 7 — Pocket Agents sent Malik Washington (WR), $10 FAAB to TTAB for Dane Belton (DB) (Oct 26 9:51 PM PDT)."
+      "summary": "Week 7 \u2014 Pocket Agents sent Malik Washington (WR), $10 FAAB to TTAB for Dane Belton (DB) (Oct 26 9:51 PM PDT)."
     },
     {
       "date": "2026-10-22",
@@ -54,7 +87,7 @@
         "DeVonta Smith (WR)",
         "Dillon Thieneman (DB)"
       ],
-      "summary": "Week 7 — TTAB sent Ashton Jeanty (RB) to Ultron for DeVonta Smith (WR), Dillon Thieneman (DB) (Oct 22 3:07 PM PDT)."
+      "summary": "Week 7 \u2014 TTAB sent Ashton Jeanty (RB) to Ultron for DeVonta Smith (WR), Dillon Thieneman (DB) (Oct 22 3:07 PM PDT)."
     },
     {
       "date": "2026-10-22",
@@ -71,7 +104,7 @@
       "givesB": [
         "Bhayshul Tuten (RB)"
       ],
-      "summary": "Week 7 — Saltese Slamm sent DeVonta Smith (WR), Mack Wilson (LB) to Ultron for Bhayshul Tuten (RB) (Oct 22 2:39 PM PDT)."
+      "summary": "Week 7 \u2014 Saltese Slamm sent DeVonta Smith (WR), Mack Wilson (LB) to Ultron for Bhayshul Tuten (RB) (Oct 22 2:39 PM PDT)."
     },
     {
       "date": "2026-10-22",
@@ -88,7 +121,7 @@
       "givesB": [
         "Zack Baun (LB)"
       ],
-      "summary": "Week 7 — Substation sent Brian Branch (DB), Demario Davis (LB) to TTAB for Zack Baun (LB) (Oct 22 9:56 AM PDT)."
+      "summary": "Week 7 \u2014 Substation sent Brian Branch (DB), Demario Davis (LB) to TTAB for Zack Baun (LB) (Oct 22 9:56 AM PDT)."
     },
     {
       "date": "2026-10-21",
@@ -106,7 +139,7 @@
         "Jaxon Smith-Njigba (WR)",
         "Jevon Holland (DB)"
       ],
-      "summary": "Week 6 — Drummond Dongers sent Bijan Robinson (RB), Kyle Hamilton (DB) to Saltese Slamm for Jaxon Smith-Njigba (WR), Jevon Holland (DB) (Oct 21 11:37 AM PDT)."
+      "summary": "Week 6 \u2014 Drummond Dongers sent Bijan Robinson (RB), Kyle Hamilton (DB) to Saltese Slamm for Jaxon Smith-Njigba (WR), Jevon Holland (DB) (Oct 21 11:37 AM PDT)."
     },
     {
       "date": "2026-10-21",
@@ -123,7 +156,7 @@
         "Jihaad Campbell (LB)",
         "Carnell Tate (WR)"
       ],
-      "summary": "Week 6 — Little Ass Boys sent Demario Davis (LB) to Substation for Jihaad Campbell (LB), Carnell Tate (WR) (Oct 21 10:15 AM PDT)."
+      "summary": "Week 6 \u2014 Little Ass Boys sent Demario Davis (LB) to Substation for Jihaad Campbell (LB), Carnell Tate (WR) (Oct 21 10:15 AM PDT)."
     },
     {
       "date": "2026-10-20",
@@ -139,7 +172,7 @@
       "givesB": [
         "$20 FAAB"
       ],
-      "summary": "Week 6 — Saltese Slamm sent Stefon Diggs (WR) to TTAB for $20 FAAB (Oct 20 11:01 PM PDT)."
+      "summary": "Week 6 \u2014 Saltese Slamm sent Stefon Diggs (WR) to TTAB for $20 FAAB (Oct 20 11:01 PM PDT)."
     },
     {
       "date": "2026-10-19",
@@ -155,7 +188,7 @@
       "givesB": [
         "Bryce Young (QB)"
       ],
-      "summary": "Week 6 — Eagle Ridge Eddies sent Rhamondre Stevenson (RB) to Ultron for Bryce Young (QB) (Oct 19 8:54 PM PDT)."
+      "summary": "Week 6 \u2014 Eagle Ridge Eddies sent Rhamondre Stevenson (RB) to Ultron for Bryce Young (QB) (Oct 19 8:54 PM PDT)."
     },
     {
       "date": "2026-10-16",
@@ -172,7 +205,7 @@
       "givesB": [
         "Jordan Love (QB)"
       ],
-      "summary": "Week 6 — Newman Lake Sleep Paralysis Demons sent Kaden Elliss (LB), $5 FAAB to Substation for Jordan Love (QB) (Oct 16 10:20 AM PDT)."
+      "summary": "Week 6 \u2014 Newman Lake Sleep Paralysis Demons sent Kaden Elliss (LB), $5 FAAB to Substation for Jordan Love (QB) (Oct 16 10:20 AM PDT)."
     },
     {
       "date": "2026-10-16",
@@ -195,7 +228,7 @@
         "Ja'Marr Chase (WR)",
         "Germie Bernard (WR)"
       ],
-      "summary": "Week 6 — Substation sent Easton Mascarenas-Arnold (LB), Drake London (WR), Tremaine Edmunds (LB), Carson Schwesinger (LB), $7 FAAB to Ultron for Jack Campbell (LB), Frankie Luvu (LB), Ja'Marr Chase (WR), Germie Bernard (WR) (Oct 16 6:29 PM PDT)."
+      "summary": "Week 6 \u2014 Substation sent Easton Mascarenas-Arnold (LB), Drake London (WR), Tremaine Edmunds (LB), Carson Schwesinger (LB), $7 FAAB to Ultron for Jack Campbell (LB), Frankie Luvu (LB), Ja'Marr Chase (WR), Germie Bernard (WR) (Oct 16 6:29 PM PDT)."
     },
     {
       "date": "2026-10-09",
@@ -212,7 +245,7 @@
         "Dre Greenlaw (LB)",
         "Denzel Boston (WR)"
       ],
-      "summary": "Week 5 — Saltese sent Carnell Tate to Substation for Dre Greenlaw and Denzel Boston (Oct 9 9:58 AM PDT)."
+      "summary": "Week 5 \u2014 Saltese sent Carnell Tate to Substation for Dre Greenlaw and Denzel Boston (Oct 9 9:58 AM PDT)."
     },
     {
       "date": "2026-10-08",
@@ -230,7 +263,7 @@
         "Amani Hooker (DB)",
         "Saquon Barkley (RB)"
       ],
-      "summary": "Week 5 — Pocket Agents sent Foyesade Oluokun and $10 FAAB to Ultron for Amani Hooker and Saquon Barkley (Oct 8 4:34 PM PDT)."
+      "summary": "Week 5 \u2014 Pocket Agents sent Foyesade Oluokun and $10 FAAB to Ultron for Amani Hooker and Saquon Barkley (Oct 8 4:34 PM PDT)."
     },
     {
       "date": "2026-10-08",
@@ -246,7 +279,7 @@
       "givesB": [
         "George Pickens (WR)"
       ],
-      "summary": "Week 5 — Substation sent Bhayshul Tuten to Ultron for George Pickens (Oct 8 11:39 AM PDT)."
+      "summary": "Week 5 \u2014 Substation sent Bhayshul Tuten to Ultron for George Pickens (Oct 8 11:39 AM PDT)."
     },
     {
       "date": "2026-10-06",
@@ -262,7 +295,7 @@
       "givesB": [
         "Colston Loveland (TE)"
       ],
-      "summary": "Week 5 — Doubtpfizer sent D'Andre Swift to Ultron for Colston Loveland (Oct 6 7:59 AM PDT)."
+      "summary": "Week 5 \u2014 Doubtpfizer sent D'Andre Swift to Ultron for Colston Loveland (Oct 6 7:59 AM PDT)."
     },
     {
       "date": "2026-10-06",
@@ -280,7 +313,7 @@
         "Breece Hall (RB)",
         "Rhamondre Stevenson (RB)"
       ],
-      "summary": "Week 5 — Eddies sent Omarion Hampton and Mack Wilson to Saltese for Breece Hall and Rhamondre Stevenson (Oct 6 11:31 AM PDT)."
+      "summary": "Week 5 \u2014 Eddies sent Omarion Hampton and Mack Wilson to Saltese for Breece Hall and Rhamondre Stevenson (Oct 6 11:31 AM PDT)."
     },
     {
       "date": "2026-10-03",
@@ -296,7 +329,7 @@
       "givesB": [
         "Nathan Landman (LB)"
       ],
-      "summary": "Fantrax official — Newman traded Aaron Jones and $5 FAAB to Saltese for Nathan Landman (Oct 3 12:22 PM PDT, Week 4)."
+      "summary": "Fantrax official \u2014 Newman traded Aaron Jones and $5 FAAB to Saltese for Nathan Landman (Oct 3 12:22 PM PDT, Week 4)."
     },
     {
       "date": "2026-09-28",
@@ -311,7 +344,7 @@
       "givesB": [
         "David Montgomery (RB)"
       ],
-      "summary": "Fantrax official — Saltese traded Denzel Boston to Substation for David Montgomery (Sep 28 10:04 AM PDT)."
+      "summary": "Fantrax official \u2014 Saltese traded Denzel Boston to Substation for David Montgomery (Sep 28 10:04 AM PDT)."
     },
     {
       "date": "2026-09-27",
@@ -327,7 +360,7 @@
       "givesB": [
         "Tony Pollard (RB)"
       ],
-      "summary": "Fantrax official — Dongers traded CJ Allen and $3 FAAB to Substation for Tony Pollard (Sep 27 8:58 AM PDT)."
+      "summary": "Fantrax official \u2014 Dongers traded CJ Allen and $3 FAAB to Substation for Tony Pollard (Sep 27 8:58 AM PDT)."
     },
     {
       "date": "2026-09-23",
@@ -344,7 +377,7 @@
         "Dorian Williams (LB)",
         "Andrew Wingard (DB)"
       ],
-      "summary": "Fantrax official — TTAB traded Travis Etienne and Antoine Winfield to Eagle Ridge Eddies for Dorian Williams and Andrew Wingard (Sep 23 11:27 AM PDT; accepted by Bill)."
+      "summary": "Fantrax official \u2014 TTAB traded Travis Etienne and Antoine Winfield to Eagle Ridge Eddies for Dorian Williams and Andrew Wingard (Sep 23 11:27 AM PDT; accepted by Bill)."
     },
     {
       "date": "2026-09-23",
@@ -359,7 +392,7 @@
       "givesB": [
         "Jamien Sherwood (LB)"
       ],
-      "summary": "Fantrax official — Saltese traded Jordyn Brooks to Eagle Ridge Eddies for Jamien Sherwood (Sep 23 9:52 AM PDT; accepted by Bill)."
+      "summary": "Fantrax official \u2014 Saltese traded Jordyn Brooks to Eagle Ridge Eddies for Jamien Sherwood (Sep 23 9:52 AM PDT; accepted by Bill)."
     },
     {
       "date": "2026-09-22",
@@ -377,7 +410,7 @@
         "Kevin Winston (DB)",
         "$20 FAAB"
       ],
-      "summary": "Fantrax official — Substation traded Saquon Barkley and Tank Bigsby to Ultron for Drake London, Kevin Winston, and $20 FAAB (Sep 22 8:46 PM PDT)."
+      "summary": "Fantrax official \u2014 Substation traded Saquon Barkley and Tank Bigsby to Ultron for Drake London, Kevin Winston, and $20 FAAB (Sep 22 8:46 PM PDT)."
     },
     {
       "date": "2026-09-22",
@@ -397,7 +430,7 @@
         "James Cook (RB)",
         "$15 FAAB"
       ],
-      "summary": "Fantrax official — Slumlords traded Drake London, Jack Campbell, and George Pickens to Ultron for Alex Anzalone, Chris Godwin, James Cook, and $15 FAAB (Sep 22 10:20 AM PDT)."
+      "summary": "Fantrax official \u2014 Slumlords traded Drake London, Jack Campbell, and George Pickens to Ultron for Alex Anzalone, Chris Godwin, James Cook, and $15 FAAB (Sep 22 10:20 AM PDT)."
     },
     {
       "date": "2026-09-16",
@@ -413,7 +446,7 @@
         "Emmett Johnson",
         "$15 FAAB"
       ],
-      "summary": "Fantrax official — Substation traded Terry McLaurin to Ultron for Emmett Johnson and $15 FAAB (Sep 16 12:13 PM PDT)."
+      "summary": "Fantrax official \u2014 Substation traded Terry McLaurin to Ultron for Emmett Johnson and $15 FAAB (Sep 16 12:13 PM PDT)."
     },
     {
       "date": "2026-09-16",
@@ -431,7 +464,7 @@
         "Tony Pollard (RB)",
         "Tremaine Edmunds (LB)"
       ],
-      "summary": "Fantrax official — Substation traded Dallas Goedert, Antoine Winfield, and $8 FAAB to TTAB for Tony Pollard and Tremaine Edmunds (Sep 16 11:40 AM PDT)."
+      "summary": "Fantrax official \u2014 Substation traded Dallas Goedert, Antoine Winfield, and $8 FAAB to TTAB for Tony Pollard and Tremaine Edmunds (Sep 16 11:40 AM PDT)."
     },
     {
       "date": "2026-09-15",
@@ -447,7 +480,7 @@
         "Jihaad Campbell (LB)",
         "R.J. Harvey (RB)"
       ],
-      "summary": "Fantrax official — Substation traded Sam LaPorta to Hypersecretors for Jihaad Campbell and R.J. Harvey (Sep 15 6:39 PM PDT)."
+      "summary": "Fantrax official \u2014 Substation traded Sam LaPorta to Hypersecretors for Jihaad Campbell and R.J. Harvey (Sep 15 6:39 PM PDT)."
     },
     {
       "date": "2026-09-14",
@@ -462,7 +495,7 @@
       "givesB": [
         "$4 FAAB"
       ],
-      "summary": "Fantrax official — Pocket Agents traded Jonas Sanker to Saltese for $4 FAAB."
+      "summary": "Fantrax official \u2014 Pocket Agents traded Jonas Sanker to Saltese for $4 FAAB."
     },
     {
       "date": "2026-09-08",
@@ -476,7 +509,7 @@
       "givesB": [
         "$10 FAAB"
       ],
-      "summary": "Fantrax official — Pocket Agents traded Bo Nix to Substation for $10 FAAB (Sep 8 6:04 PM PDT). Jordan Love was dropped by Substation in the same transaction (not sent to Pocket). Corrected Sep 11 per Bill + Fantrax re-verify.",
+      "summary": "Fantrax official \u2014 Pocket Agents traded Bo Nix to Substation for $10 FAAB (Sep 8 6:04 PM PDT). Jordan Love was dropped by Substation in the same transaction (not sent to Pocket). Corrected Sep 11 per Bill + Fantrax re-verify.",
       "official": true,
       "corrected": true
     },
@@ -491,7 +524,7 @@
       "givesB": [
         "5 draft picks (swap package)"
       ],
-      "summary": "Fantrax official #1 — draft 5-for-5 pick swap (Aug 28).",
+      "summary": "Fantrax official #1 \u2014 draft 5-for-5 pick swap (Aug 28).",
       "official": true
     },
     {
@@ -505,7 +538,7 @@
       "givesB": [
         "Kaleb Elarms-Orr (LB)"
       ],
-      "summary": "Fantrax official #2 — Larry buys Elarms-Orr from Aga for $20 FAAB.",
+      "summary": "Fantrax official #2 \u2014 Larry buys Elarms-Orr from Aga for $20 FAAB.",
       "official": true
     },
     {
@@ -522,7 +555,7 @@
         "Cameron Skattebo (RB)",
         "Caleb Downs (DB)"
       ],
-      "summary": "Fantrax official #3 — live Sep 3 player trade; Chase sends $10 FAAB to Aga. Related: Chase +Zavion Thomas −Evan Williams; Aga +Bryce Boettcher −Najee.",
+      "summary": "Fantrax official #3 \u2014 live Sep 3 player trade; Chase sends $10 FAAB to Aga. Related: Chase +Zavion Thomas \u2212Evan Williams; Aga +Bryce Boettcher \u2212Najee.",
       "official": true
     },
     {
@@ -531,12 +564,12 @@
       "teamA": "Saltese Slamm (Larry)",
       "teamB": "Substation (Nate)",
       "givesA": [
-        "draft pick(s) — handshake"
+        "draft pick(s) \u2014 handshake"
       ],
       "givesB": [
-        "draft pick(s) — handshake"
+        "draft pick(s) \u2014 handshake"
       ],
-      "summary": "Handshake only — Fantrax chairs unchanged (Larry↔Nate pick swap).",
+      "summary": "Handshake only \u2014 Fantrax chairs unchanged (Larry\u2194Nate pick swap).",
       "official": false
     },
     {
@@ -550,7 +583,7 @@
       "givesB": [
         "R2 / R3 / R8 chairs (handshake)"
       ],
-      "summary": "Handshake only — Bill↔Nate R2/R3/R8; Eddies still sat 10/19/38/103 on Fantrax.",
+      "summary": "Handshake only \u2014 Bill\u2194Nate R2/R3/R8; Eddies still sat 10/19/38/103 on Fantrax.",
       "official": false
     },
     {
@@ -565,7 +598,7 @@
         "4.08",
         "4.12"
       ],
-      "summary": "Handshake — Nate 3.04 for Chase 4.08+4.12; Schwesinger still Nate on Fantrax.",
+      "summary": "Handshake \u2014 Nate 3.04 for Chase 4.08+4.12; Schwesinger still Nate on Fantrax.",
       "official": false
     },
     {
@@ -580,7 +613,7 @@
       "givesB": [
         "R20 chair (Sadiq stays Jacob)"
       ],
-      "summary": "Handshake — Nate $10 FAAB to Jacob for R20 chairs; Branch stays Nate, Sadiq stays Jacob.",
+      "summary": "Handshake \u2014 Nate $10 FAAB to Jacob for R20 chairs; Branch stays Nate, Sadiq stays Jacob.",
       "official": false
     }
   ],
@@ -593,7 +626,6 @@
       "players": [
         "Zach Charbonnet RB SEA",
         "Travis Etienne RB NO",
-        "Brian Robinson Jr. RB ATL",
         "Kendrick Bourne WR ARI",
         "Chimere Dike WR TEN",
         "Jordyn Tyson WR NO",
@@ -696,8 +728,8 @@
     }
   ],
   "leaderboard_note": "As of early HQ: Nate led all-2026 deal count (incl handshake). Fantrax official player/pick deals concentrated with Aga/Chase/Larry.",
-  "pending_note": "Pending trades 0 (Fantrax 2026-10-28 9:44 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
-  "fantrax_completed_view": "Newest official: TTAB↔Ultron Ashton Jeanty for DeVonta Smith+Dillon Thieneman (Oct 22 3:07 PM); Saltese↔Ultron DeVonta Smith+Mack Wilson for Bhayshul Tuten (Oct 22 2:39 PM); Substation↔TTAB Brian Branch+Demario Davis for Zack Baun (Oct 22 9:56 AM).",
+  "pending_note": "Pending trades 0 (Fantrax 2026-10-28 10:45 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
+  "fantrax_completed_view": "Newest official: TTAB\u2194Ultron Ashton Jeanty for DeVonta Smith+Dillon Thieneman (Oct 22 3:07 PM); Saltese\u2194Ultron DeVonta Smith+Mack Wilson for Bhayshul Tuten (Oct 22 2:39 PM); Substation\u2194TTAB Brian Branch+Demario Davis for Zack Baun (Oct 22 9:56 AM).",
   "hqComplete": true,
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28T10:45:00-07:00"
 }

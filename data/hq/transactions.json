@@ -1,7 +1,20 @@
 {
   "updated": "2026-10-28",
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "items": [
+    {
+      "date": "2026-10-28",
+      "team": "Saltese Slamm",
+      "type": "ADD",
+      "summary": "Added Boye Mafe (DL-CIN) ($0/null bid)",
+      "time": "9:47 AM PDT",
+      "player": "Boye Mafe",
+      "playerMeta": "DL-CIN",
+      "dropped": null,
+      "droppedMeta": null,
+      "bid": null,
+      "period": "Week 8"
+    },
     {
       "date": "2026-10-28",
       "team": "Towner Top Aga Bottom",
@@ -6308,7 +6321,7 @@
       "time": "5:56 PM PT"
     }
   ],
-  "note": "Oct 28 AM: +28 FA rows (Oct 28 7:56 AM–9:36 AM PT), no bids, no new trades. Oct 14 Week 6 FAAB clear + morning FA: 25 new Claim/Add/Drop rows prepended.",
+  "note": "Oct 28 AM: +1 FA rows (Oct 28 9:47 AM–9:47 AM PT), no bids, no new trades. Oct 14 Week 6 FAAB clear + morning FA: 25 new Claim/Add/Drop rows prepended.",
   "dataConflictNote": "Late-claim attribution conflict resolved Sep 16 ~10:06 AM PT (Scrape A verified): Ultron Hooker $18; Valley Vele $16; Dongers Ezeiruaku $14; Saltese Sigle $3.",
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }

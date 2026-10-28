@@ -55,7 +55,7 @@
       "owner": "Luke Sahlberg",
       "abbrev": "SAL",
       "record": "3-4-0",
-      "faab": 15,
+      "faab": 10,
       "projW1": 191.27,
       "powerRank": 3,
       "note": "Luke Sahlberg — beat Eddies 255–241. FAAB $83. Sep 19: dropped Shaun Dolac; Sep 17: +Keisean Nixon/−Marques Sigle. See transactions. | Sep 23: acquired Jamien Sherwood for Jordyn Brooks (Eddies). | Sep 23 FA: +Rachaad White/−Sanders; +Jartavius Martin/−Nixon. | Sep 25: +Chuck Clark/−Jartavius Martin. | Sep 30 W4 waivers/FA: +Nick Herbig (−Kaleb Elarms-Orr). FAAB $26. | Oct 3: traded Nathan Landman to Newman for Aaron Jones +$5 FAAB; −Nick Herbig; −Rachaad White; +/−Jaelan Phillips; +Quinyon Mitchell. FAAB $31. | Oct 7 W5 waivers/FA: +Teddye Buchanan (−Jordan Battle); +Dohnte Meyers $17; +Chase Young $1; +Alontae Taylor $1; +Cole Bishop $1. FAAB $11.",
@@ -321,7 +321,7 @@
       "owner": "Nathan Kelly",
       "abbrev": "SUB",
       "record": "4-3-0",
-      "faab": 0,
+      "faab": 5,
       "projW1": 157.94,
       "powerRank": 14,
       "note": "Nathan Kelly — W1 win. Sep 16 trades: McLaurin → Ultron for Emmett+$15; Goedert+Winfield+$8 → TTAB for Pollard+Edmunds. Block: Pollard, Tuten. FAAB $77. Sep 18 FA: see transactions. | Sep 23 FA: +Jalen Redmond/−Jared Verse. | Sep 27: acquired CJ Allen +$3 FAAB for Tony Pollard; −Antonio Johnson. FAAB $82. | Sep 30 W4 waivers/FA: +Christian Izien $17; +Dante Trader $9 (−CJ Allen); +DeForest Buckner $13 (−Jalen Redmond); +Keenan Allen $13 (−Rashod Bateman). FAAB $30. | Oct 8: Tuten→Ultron for Pickens. | Oct 10: +Alec Pierce $1 (−Keenan Allen). FAAB $29.",
@@ -345,6 +345,6 @@
   "standingsSource": "Fantrax Week 7 finals (Tue Oct 27 2026); records cross-checked vs Fantrax standings scrape Oct 27 AM",
   "week": 8,
   "hqNote": "Week 6 FINAL: Eddies beat Substation 259.5–227.5 (4-2, four straight). Kitty Pocket 262.5; survivor TTAB 186.5 off the bus. Last Ride: Saltese beat Ultron 259–205.5 (Ultron out). Pocket, LAB and Goats share 5-1. OMVP Jaxon Smith-Njigba 197 / DMVP Nakobe Dean 163.",
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
-  "note": "Week 6 finals applied Tue Oct 20 · records/PF/PA from Fantrax finals. Oct 28 9:44 AM PT roster sync: FAAB verified live, all 14 updated."
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "note": "Week 6 finals applied Tue Oct 20 · records/PF/PA from Fantrax finals. Oct 28 10:45 AM PT roster sync: FAAB verified live, all 14 updated."
 }

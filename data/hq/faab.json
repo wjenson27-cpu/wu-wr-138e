@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-28",
-  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-10-28 9:44 AM PT roster sync.",
+  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-10-28 10:45 AM PT roster sync.",
   "startingBudget": 115,
   "note": "Week 8 FAAB clear (Wed Oct 28, 9:00 AM PT) \u2014 spend by team: Substation $21 (KC Concepcion $21); The Hypersecretors $13 (Jacory Croskey-Merritt $9, Micah Parsons $4); Mrs. Doubtpfizer $10 (Kyler Gordon $5, Kaelon Black $3, Nohl Williams $2); Saltese Slamm $6 (Dee Winters $4, Colby Parkinson $1, Ty Okada $1); Little Ass Boys $5 (Greg Dulcich $5); Eagle Ridge Eddies $4 (Cole Bishop $4); Pocket Agents $3 (Josh Hines-Allen $3); Newman Lake $3 (Grant Delpit $3). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 9:44 AM PT.",
   "excludeZeroBids": true,
@@ -37,12 +37,12 @@
       "owner": "Luke Sahlberg",
       "abbrev": "SAL",
       "starting": 115,
-      "remaining": 15,
+      "remaining": 10,
       "spentClaims": 101,
-      "tradeOut": 24,
+      "tradeOut": 29,
       "tradeIn": 25,
-      "spentKnown": 125,
-      "remainingKnown": 15
+      "spentKnown": 130,
+      "remainingKnown": 10
     },
     {
       "id": "lab",
@@ -181,12 +181,12 @@
       "owner": "Nathan Kelly",
       "abbrev": "SUB",
       "starting": 115,
-      "remaining": 0,
+      "remaining": 5,
       "spentClaims": 134,
       "tradeOut": 35,
-      "tradeIn": 16,
+      "tradeIn": 21,
       "spentKnown": 169,
-      "remainingKnown": 0
+      "remainingKnown": 5
     }
   ],
   "claims": [
@@ -2231,5 +2231,5 @@
     }
   ],
   "incomplete": false,
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }

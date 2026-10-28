@@ -2,19 +2,19 @@
   "teamId": "hyper",
   "teamName": "The Hypersecretors",
   "owner": "Jacob Crisp",
-  "asOf": "2026-10-28 9:44 AM PT",
+  "asOf": "2026-10-28 10:45 AM PT",
   "faabLeft": 12,
   "startingQB": "Kirk Cousins",
   "roster": {
     "QB": [
       "Kirk Cousins",
-      "Justin Herbert"
+      "Justin Herbert",
+      "Michael Penix Jr."
     ],
     "RB": [
       "Kenneth Walker III",
       "Rachaad White",
       "Jacory Croskey-Merritt",
-      "J.K. Dobbins",
       "Keaton Mitchell"
     ],
     "WR": [
@@ -34,7 +34,8 @@
       "Blake Cashman",
       "Jacob Rodriguez",
       "Payton Wilson",
-      "Kaleb Elarms-Orr"
+      "Kaleb Elarms-Orr",
+      "Shemar James"
     ],
     "DB": [
       "Jeremy Chinn",
@@ -42,8 +43,7 @@
     ],
     "IR": [
       "Travis Hunter",
-      "Nick Bosa",
-      "Jalen Pitre"
+      "Nick Bosa"
     ]
   },
   "notes": "",
@@ -51,10 +51,9 @@
     "Amon-Ra St. Brown — Q (active)",
     "Emeka Egbuka — Q (active)",
     "Jaylin Noel — Q (reserve)",
-    "Nick Bosa — Q (IR slot)",
-    "Jalen Pitre — Q (IR slot)"
+    "Nick Bosa — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 9:44 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
   "fantraxTeamId": "xz2uv87rmsb3ulv4",
   "lineupFlags": [
     "Amon-Ra St. Brown — Q (active)",
@@ -67,9 +66,8 @@
     "Amon-Ra St. Brown — Q (active)",
     "Emeka Egbuka — Q (active)",
     "Jaylin Noel — Q (reserve)",
-    "Nick Bosa — Q (IR slot)",
-    "Jalen Pitre — Q (IR slot)"
+    "Nick Bosa — Q (IR slot)"
   ],
   "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 9:44 AM PT"
+  "lastSynced": "2026-10-28 10:45 AM PT"
 }
