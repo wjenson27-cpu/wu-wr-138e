@@ -1,8 +1,130 @@
 {
-  "updated": "2026-10-21",
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "updated": "2026-10-28",
+  "source": "Fantrax roster sync 2026-10-28 6:33 AM PT (/workspace/fantrax-raw-2026-10-28-am.json)",
   "season": 2026,
   "trades": [
+    {
+      "date": "2026-10-27",
+      "time": "6:16 PM PDT",
+      "week": 8,
+      "status": "completed",
+      "official": true,
+      "teamA": "Eagle Ridge Eddies",
+      "teamB": "Substation",
+      "givesA": [
+        "Tyler Warren (TE)",
+        "Bryce Young (QB)",
+        "$11 FAAB"
+      ],
+      "givesB": [
+        "George Pickens (WR)",
+        "Frankie Luvu (LB)"
+      ],
+      "summary": "Week 8 — Eagle Ridge Eddies sent Tyler Warren (TE), Bryce Young (QB), $11 FAAB to Substation for George Pickens (WR), Frankie Luvu (LB) (Oct 27 6:16 PM PDT)."
+    },
+    {
+      "date": "2026-10-26",
+      "time": "9:51 PM PDT",
+      "week": 7,
+      "status": "completed",
+      "official": true,
+      "teamA": "Pocket Agents",
+      "teamB": "Towner Top Aga Bottom",
+      "givesA": [
+        "Malik Washington (WR)",
+        "$10 FAAB"
+      ],
+      "givesB": [
+        "Dane Belton (DB)"
+      ],
+      "summary": "Week 7 — Pocket Agents sent Malik Washington (WR), $10 FAAB to TTAB for Dane Belton (DB) (Oct 26 9:51 PM PDT)."
+    },
+    {
+      "date": "2026-10-22",
+      "time": "3:07 PM PDT",
+      "week": 7,
+      "status": "completed",
+      "official": true,
+      "teamA": "Towner Top Aga Bottom",
+      "teamB": "Ultron",
+      "givesA": [
+        "Ashton Jeanty (RB)"
+      ],
+      "givesB": [
+        "DeVonta Smith (WR)",
+        "Dillon Thieneman (DB)"
+      ],
+      "summary": "Week 7 — TTAB sent Ashton Jeanty (RB) to Ultron for DeVonta Smith (WR), Dillon Thieneman (DB) (Oct 22 3:07 PM PDT)."
+    },
+    {
+      "date": "2026-10-22",
+      "time": "2:39 PM PDT",
+      "week": 7,
+      "status": "completed",
+      "official": true,
+      "teamA": "Saltese Slamm",
+      "teamB": "Ultron",
+      "givesA": [
+        "DeVonta Smith (WR)",
+        "Mack Wilson (LB)"
+      ],
+      "givesB": [
+        "Bhayshul Tuten (RB)"
+      ],
+      "summary": "Week 7 — Saltese Slamm sent DeVonta Smith (WR), Mack Wilson (LB) to Ultron for Bhayshul Tuten (RB) (Oct 22 2:39 PM PDT)."
+    },
+    {
+      "date": "2026-10-22",
+      "time": "9:56 AM PDT",
+      "week": 7,
+      "status": "completed",
+      "official": true,
+      "teamA": "Substation",
+      "teamB": "Towner Top Aga Bottom",
+      "givesA": [
+        "Brian Branch (DB)",
+        "Demario Davis (LB)"
+      ],
+      "givesB": [
+        "Zack Baun (LB)"
+      ],
+      "summary": "Week 7 — Substation sent Brian Branch (DB), Demario Davis (LB) to TTAB for Zack Baun (LB) (Oct 22 9:56 AM PDT)."
+    },
+    {
+      "date": "2026-10-21",
+      "time": "11:37 AM PDT",
+      "week": 6,
+      "status": "completed",
+      "official": true,
+      "teamA": "Drummond Dongers",
+      "teamB": "Saltese Slamm",
+      "givesA": [
+        "Bijan Robinson (RB)",
+        "Kyle Hamilton (DB)"
+      ],
+      "givesB": [
+        "Jaxon Smith-Njigba (WR)",
+        "Jevon Holland (DB)"
+      ],
+      "summary": "Week 6 — Drummond Dongers sent Bijan Robinson (RB), Kyle Hamilton (DB) to Saltese Slamm for Jaxon Smith-Njigba (WR), Jevon Holland (DB) (Oct 21 11:37 AM PDT)."
+    },
+    {
+      "date": "2026-10-21",
+      "time": "10:15 AM PDT",
+      "week": 6,
+      "status": "completed",
+      "official": true,
+      "teamA": "Little Ass Boys",
+      "teamB": "Substation",
+      "givesA": [
+        "Demario Davis (LB)"
+      ],
+      "givesB": [
+        "Jihaad Campbell (LB)",
+        "Carnell Tate (WR)"
+      ],
+      "summary": "Week 6 — Little Ass Boys sent Demario Davis (LB) to Substation for Jihaad Campbell (LB), Carnell Tate (WR) (Oct 21 10:15 AM PDT)."
+    },
     {
       "date": "2026-10-20",
       "time": "11:01 PM PDT",
@@ -129,7 +251,7 @@
     {
       "date": "2026-10-06",
       "time": "7:59 AM PDT",
-      "week": 5,
+      "week": 4,
       "status": "completed",
       "official": true,
       "teamA": "Mrs. Doubtpfizer",
@@ -145,7 +267,7 @@
     {
       "date": "2026-10-06",
       "time": "11:31 AM PDT",
-      "week": 5,
+      "week": 4,
       "status": "completed",
       "official": true,
       "teamA": "Eagle Ridge Eddies (Bill)",
@@ -467,17 +589,18 @@
     {
       "teamId": "eddies",
       "team": "Eagle Ridge Eddies",
-      "lastUpdated": "Oct 19 8:54 PM",
+      "lastUpdated": "Oct 27 6:16 PM",
       "players": [
-        "Zach Charbonnet",
-        "Jacory Croskey-Merritt",
-        "Travis Etienne",
-        "Brian Robinson Jr.",
-        "Kendrick Bourne",
-        "Chimere Dike",
-        "Jordyn Tyson",
-        "Cedric Gray",
-        "Trenton Simpson"
+        "Zach Charbonnet RB SEA",
+        "Travis Etienne RB NO",
+        "Brian Robinson Jr. RB ATL",
+        "Kendrick Bourne WR ARI",
+        "Chimere Dike WR TEN",
+        "Jordyn Tyson WR NO",
+        "Cedric Gray LB TEN",
+        "Trenton Simpson LB BAL",
+        "Quentin Lake DB LAR",
+        "D.J. Reed DB DET"
       ],
       "note": null
     },
@@ -486,9 +609,9 @@
       "team": "Morningside Muff Divers",
       "lastUpdated": "Oct 7 9:30 AM",
       "players": [
-        "Derrick Barnes",
-        "Bobby Okereke",
-        "Pete Werner"
+        "Derrick Barnes LB DET",
+        "Bobby Okereke LB CAR",
+        "Pete Werner LB NO"
       ],
       "note": null,
       "positionsOffered": [
@@ -501,15 +624,31 @@
     {
       "teamId": "newman",
       "team": "Newman Lake Sleep Paralysis Demons",
-      "lastUpdated": "Oct 19 8:36 AM",
+      "lastUpdated": "Oct 23 2:48 PM",
       "players": [
-        "TreVeyon Henderson",
-        "Davante Adams",
-        "A.J. Brown",
-        "Matthew Golden",
-        "Tee Higgins",
-        "Jake Hansen",
-        "Eric Wilson"
+        "Jordan Love QB GB",
+        "TreVeyon Henderson RB NE",
+        "Jordan Mason RB MIN",
+        "Jonathan Taylor RB IND",
+        "Davante Adams WR LAR",
+        "A.J. Brown WR NE",
+        "Zay Flowers WR BAL",
+        "Matthew Golden WR GB",
+        "Tee Higgins WR CIN",
+        "Myles Price WR MIN",
+        "Juwan Johnson TE NO",
+        "Michael Mayer TE LV",
+        "Andrew Van Ginkel DL,LB,ID MIN",
+        "Azeez Al-Shaair LB HOU",
+        "Zaire Franklin LB GB",
+        "Ty'Ron Hopper LB GB",
+        "Nathan Landman LB LAR",
+        "Henry To'oTo'o LB HOU",
+        "Jeremiah Trotter LB PHI",
+        "Eric Wilson LB MIN",
+        "Jordan Battle DB CIN",
+        "L'Jarius Sneed DB KC",
+        "Xavier Watts DB ATL"
       ],
       "note": null
     },
@@ -518,18 +657,19 @@
       "team": "Pocket Agents",
       "lastUpdated": "Oct 2 4:24 PM",
       "players": [
-        "Jared Goff",
-        "Tyler Shough"
+        "Jared Goff QB DET",
+        "Tyler Shough QB NO"
       ],
-      "note": "Goff & Shough both top 5 QBs through 3 weeks. Looking to potentially trade 1 for a running back."
+      "note": "Goff & Shough both top 5 QBs through 3 weeks. Looking to potentially trade 1 for a running back.",
+      "positionsNeeded": [
+        "RB"
+      ]
     },
     {
       "teamId": "saltese",
       "team": "Saltese Slamm",
-      "lastUpdated": "Oct 20 11:01 PM",
-      "players": [
-        "DeVonta Smith"
-      ],
+      "lastUpdated": "Oct 22 2:39 PM",
+      "players": [],
       "note": "Looking for FAAB or flex swaps."
     },
     {
@@ -542,28 +682,23 @@
     {
       "teamId": "ttab",
       "team": "TTAB",
-      "lastUpdated": "Oct 21 8:22 AM",
+      "lastUpdated": "Oct 26 9:51 PM",
       "players": [
-        "Ashton Jeanty",
-        "Cameron Skattebo",
-        "Javonte Williams",
-        "Emanuel Wilson",
-        "Christian Watson",
-        "Jameson Williams",
-        "Dallas Goedert",
-        "Zack Baun",
-        "Divine Deablo",
-        "Harold Perkins",
-        "Dorian Williams",
-        "Dee Winters",
-        "Dane Belton"
+        "Javonte Williams RB DAL",
+        "Emanuel Wilson RB SEA",
+        "Christian Watson WR GB",
+        "Jameson Williams WR DET",
+        "Dallas Goedert TE PHI",
+        "Divine Deablo LB ATL",
+        "Harold Perkins LB ATL",
+        "Dorian Williams LB BUF"
       ],
       "note": null
     }
   ],
   "leaderboard_note": "As of early HQ: Nate led all-2026 deal count (incl handshake). Fantrax official player/pick deals concentrated with Aga/Chase/Larry.",
-  "pending_note": "Pending trades 0 (Fantrax 2026-10-21 9:34 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
-  "fantrax_completed_view": "Newest official: Substation↔Ultron London+Edmunds+Schwesinger+Mascarenas-Arnold+$7 for Chase+Luvu+Campbell+Bernard (Oct 16 6:29 PM); Newman↔Substation Elliss+$5 for Jordan Love (Oct 16 10:20 AM); Saltese↔Substation Carnell Tate for Dre Greenlaw+Denzel Boston (Oct 9 9:58 AM).",
+  "pending_note": "Pending trades 0 (Fantrax 2026-10-28 6:33 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
+  "fantrax_completed_view": "Newest official: TTAB↔Ultron Ashton Jeanty for DeVonta Smith+Dillon Thieneman (Oct 22 3:07 PM); Saltese↔Ultron DeVonta Smith+Mack Wilson for Bhayshul Tuten (Oct 22 2:39 PM); Substation↔TTAB Brian Branch+Demario Davis for Zack Baun (Oct 22 9:56 AM).",
   "hqComplete": true,
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "lastSynced": "2026-10-28 6:33 AM PT"
 }

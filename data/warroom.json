@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-27T15:00:00-07:00",
+  "asOf": "2026-10-28T08:50:00-07:00",
   "season": 2026,
   "week": 8,
   "opponent": {
@@ -9,27 +9,27 @@
     "name": "Ultron"
   },
   "freshness": {
-    "plan": "2026-10-27T15:00:00-07:00",
-    "roster": "2026-10-27T14:55:00-07:00",
-    "scores": null,
-    "waivers": "2026-10-27T15:00:00-07:00",
-    "news": "2026-10-27T14:50:00-07:00"
+    "plan": "2026-10-28T08:50:00-07:00",
+    "roster": "2026-10-28T08:50:00-07:00",
+    "scores": "2026-10-28T06:33:00-07:00",
+    "waivers": "2026-10-28T08:50:00-07:00",
+    "news": "2026-10-28T08:50:00-07:00"
   },
   "lockTimes": [
     {
-      "label": "W8 claims run Wed 9 AM",
+      "label": "W8 claims run Wed 9 AM PT",
       "at": "2026-10-28T09:00:00-07:00"
     },
     {
-      "label": "TNF CAR@GB 5:15 PM (Coker, E. Williams, Young)",
+      "label": "TNF CAR@GB 5:15 PM PT (Coker, E. Williams)",
       "at": "2026-10-29T17:15:00-07:00"
     },
     {
-      "label": "Sunday early 10:00 AM PST (Hall, Wilson, Bowers, Lawrence)",
+      "label": "Sunday early 10:00 AM PT (Hall, Wilson, Bowers, Lawrence, Pickens, Luvu)",
       "at": "2026-11-01T10:00:00-08:00"
     },
     {
-      "label": "MNF CHI@SEA 5:15 PM PST (Knight, Charbonnet)",
+      "label": "MNF CHI@SEA 5:15 PM PT (Knight, Charbonnet)",
       "at": "2026-11-02T17:15:00-08:00"
     }
   ],
@@ -40,7 +40,7 @@
       "pos": "QB",
       "nflTeam": "JAX",
       "verdict": "START",
-      "reason": "vs IND (25.7 pts/g allowed, #10). He is the guy; LT Harrison loss stings a bit.",
+      "reason": "vs IND (25.7 pts/g allowed, #10). Clear QB1 post-trade (23.41 proj).",
       "injury": "",
       "practice": ""
     },
@@ -70,7 +70,17 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "@NYJ, stingy pass D (187.7 yds/g), but matchup-proof at TE premium.",
+      "reason": "@NYJ, stingy pass D (187.7 yds/g), but matchup-proof at TE premium (W13 bye).",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "FLEX",
+      "player": "George Pickens",
+      "pos": "WR",
+      "nflTeam": "DAL",
+      "verdict": "START",
+      "reason": "vs ARI. Acquired from Substation (Oct 27); locked into active RWT flex.",
       "injury": "",
       "practice": ""
     },
@@ -80,7 +90,7 @@
       "pos": "WR",
       "nflTeam": "CAR",
       "verdict": "START",
-      "reason": "@GB TNF Thu 5:15 PM PT lock. New shoulder tag, but FULL Tue.",
+      "reason": "@GB TNF Thu 5:15 PM PT lock. Upgraded to FULL practice Tue.",
       "injury": "Q",
       "practice": "LP Mon, FP Tue"
     },
@@ -90,18 +100,8 @@
       "pos": "WR",
       "nflTeam": "TEN",
       "verdict": "START",
-      "reason": "@CIN, return yards are his floor.",
+      "reason": "@CIN, return yards give him a strong weekly floor.",
       "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "FLEX",
-      "player": "Tyler Warren",
-      "pos": "TE",
-      "nflTeam": "IND",
-      "verdict": "SWAP",
-      "reason": "Groin, likely OUT (DNP all W7). Swap in Bourne (@DAL, more snaps coming with Jalen Brooks out) before Sun 10:00 AM PT.",
-      "injury": "Q",
       "practice": ""
     },
     {
@@ -110,7 +110,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "@DEN, tough OL (3.8% sack rate allowed). DL #6 this week; our only DL.",
+      "reason": "@DEN, tough OL (3.8% sack / 10% QB hit rate allowed, x0.89). DL #5 this week, #4 ROS; consider streaming a 2nd DL.",
       "injury": "",
       "practice": ""
     },
@@ -120,7 +120,7 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "vs NE (61 plays/g). 100% snaps; LB #19 this week, #31 ROS. Not a dot.",
+      "reason": "vs NE (61 plays/g). 100% snaps; LB #16 this week (21.6 proj), #24 ROS.",
       "injury": "",
       "practice": ""
     },
@@ -130,7 +130,7 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "vs CAR, Thu lock. DB #1 this week and ROS.",
+      "reason": "vs CAR, Thu lock. DB #1 this week (23.0 proj) and #2 ROS.",
       "injury": "",
       "practice": ""
     },
@@ -140,7 +140,7 @@
       "pos": "DB",
       "nflTeam": "LAR",
       "verdict": "START",
-      "reason": "vs LAC, DB #8 this week. Wore the Rams dot.",
+      "reason": "vs LAC, DB #5 this week (19.9 proj), #10 ROS. Wore the Rams green dot (63/64 snaps).",
       "injury": "",
       "practice": ""
     },
@@ -150,17 +150,17 @@
       "pos": "LB",
       "nflTeam": "BAL",
       "verdict": "START",
-      "reason": "@BUF, LB #21. Woellert likes this spot (snaps 58% to 76%).",
+      "reason": "@BUF, LB #23 (18.4 proj). Snaps jumped 58% to 76% in W7.",
       "injury": "",
       "practice": ""
     },
     {
       "slot": "IDP",
-      "player": "D.J. Reed",
-      "pos": "DB",
-      "nflTeam": "DET",
+      "player": "Frankie Luvu",
+      "pos": "LB",
+      "nflTeam": "WAS",
       "verdict": "START",
-      "reason": "vs MIN (31st in pass attempts), DB #32, a tough draw. Upgrade if a DB add lands.",
+      "reason": "vs PHI, LB #32 this week (16.3 proj), #25 ROS. Acquired from Substation; 98% snaps + WAS green dot.",
       "injury": "",
       "practice": ""
     },
@@ -170,7 +170,17 @@
       "pos": "LB",
       "nflTeam": "SEA",
       "verdict": "START",
-      "reason": "vs CHI (league-high 72 plays/g). LB #42; locks Mon 5:15 PM PT. Oblique tag with full practices, not a worry.",
+      "reason": "vs CHI (league-high 71 plays/g, x1.14 boost). LB #37 (15.3 proj); locks Mon 5:15 PM PT.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "D.J. Reed",
+      "pos": "DB",
+      "nflTeam": "DET",
+      "verdict": "SIT",
+      "reason": "vs MIN (33 dropbacks/g, tough x0.92 draw). DB #30 this week (15.4 proj); Luvu starts over him in IDP flex.",
       "injury": "",
       "practice": ""
     },
@@ -179,8 +189,8 @@
       "player": "Kendrick Bourne",
       "pos": "WR",
       "nflTeam": "ARI",
-      "verdict": "WATCH",
-      "reason": "Starts for Warren if Warren is ruled out. Jalen Brooks out for season; LaFleur: Bourne \"can play some X.\"",
+      "verdict": "SIT",
+      "reason": "@DAL; bench WR depth behind Wilson, Pickens, Coker, and Dike.",
       "injury": "",
       "practice": ""
     },
@@ -190,7 +200,7 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "SIT",
-      "reason": "W8 BYE.",
+      "reason": "W8 BYE (ROS LB #9).",
       "injury": "",
       "practice": ""
     },
@@ -206,21 +216,11 @@
     },
     {
       "slot": "BN",
-      "player": "Bryce Young",
-      "pos": "QB",
-      "nflTeam": "CAR",
-      "verdict": "SIT",
-      "reason": "FULL Mon/Tue with knee tag; no Canales starter quote. Lawrence is QB1.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
       "player": "Cedric Gray",
       "pos": "LB",
       "nflTeam": "TEN",
       "verdict": "SIT",
-      "reason": "LB #48; 56% snaps. First drop for any IDP add.",
+      "reason": "LB #47 (13.2 proj); 56% snaps, no dot. First drop for any DL/IDP pickup.",
       "injury": "",
       "practice": ""
     },
@@ -230,7 +230,7 @@
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "WATCH",
-      "reason": "Fallback if Hall is OUT. Macdonald: both, either or neither could play.",
+      "reason": "Fallback if Hall is OUT (Mon 5:15 PM PT vs CHI).",
       "injury": "Q",
       "practice": ""
     },
@@ -277,18 +277,6 @@
       "tag": "Q",
       "practice": "",
       "note": "Quad; inactive W7. FBG projects W8 return. Jets practice reports start Wed."
-    },
-    {
-      "player": "Tyler Warren",
-      "tag": "Q",
-      "practice": "",
-      "note": "Groin; sat W7 after DNP all week. Bloom says sell. IND traded Quenton Nelson to SEA."
-    },
-    {
-      "player": "Bryce Young",
-      "tag": "",
-      "practice": "FP Mon, FP Tue",
-      "note": "Knee tag; no starter quote. CAR OL thin (Moton out for season; Lewis, Simpkins DNP Tue)."
     },
     {
       "player": "Trevor Lawrence",
@@ -355,66 +343,66 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "Jamel Dean",
-      "pos": "DB",
-      "nflTeam": "PIT",
-      "why": "ROS. 96% snaps; DB #2 this week and #4 ROS. Plays CLE (neutral). Ankle not on the W7 report.",
-      "stats": "26.5 FP/G last 3, 15.8 season, 18% rostered",
-      "faabMin": 8,
-      "faabMax": 18,
-      "bid": 13,
-      "drop": "D.J. Reed",
-      "tag": "MUST"
+      "player": "D.J. Wonnum",
+      "pos": "DL",
+      "nflTeam": "DET",
+      "why": "WEEKLY DL STREAM. Faces MIN OL allowing a 9.0% sack rate & 15% QB hit rate (x1.07 boost); snaps jumped to 72% in W7.",
+      "stats": "16.5 FP/G last 3, 72% W7 snaps",
+      "faabMin": 1,
+      "faabMax": 4,
+      "bid": 2,
+      "drop": "Cedric Gray",
+      "tag": "LIKE"
     },
     {
       "rank": 2,
-      "player": "Nohl Williams",
-      "pos": "DB",
-      "nflTeam": "KC",
-      "why": "ROS. 10 tackles in W7 on 96% snaps. @DEN is a tough draw. DB #10 this week, #6 ROS.",
-      "stats": "18.2 FP/G",
-      "faabMin": 4,
-      "faabMax": 14,
-      "bid": 9,
+      "player": "Josh Hines-Allen",
+      "pos": "DL",
+      "nflTeam": "JAX",
+      "why": "ROS / W8 BOOST. Faces IND OL allowing a 7.1% sack rate & 18% hit rate on 38 DB/g (x1.12 boost, #1 DL multiplier); 88% snaps, past bye.",
+      "stats": "12.7 FP/G, 88% L3 snaps",
+      "faabMin": 1,
+      "faabMax": 3,
+      "bid": 2,
       "drop": "Cedric Gray",
       "tag": "LIKE"
     },
     {
       "rank": 3,
-      "player": "Adetomiwa Adebawore",
+      "player": "Jalen Carter",
       "pos": "DL",
-      "nflTeam": "IND",
-      "why": "WEEKLY. 2 sacks W7, 29.4% pressure rate (tied NFL best). @JAX just lost LT Harrison. DL #3 this week, #8 ROS; DL insurance.",
-      "stats": "2 sacks W7",
-      "faabMin": 1,
+      "nflTeam": "PHI",
+      "why": "ROS. 87% snaps and wrist cast is off; faces WAS (40 DB/g, 18% QB hit rate allowed, x1.05).",
+      "stats": "17.3 FP/G last 3, 87% snaps",
+      "faabMin": 2,
       "faabMax": 4,
       "bid": 3,
-      "drop": "Bryce Young",
+      "drop": "Cedric Gray",
       "tag": "LIKE"
     },
     {
       "rank": 4,
-      "player": "Mason Graham",
+      "player": "Adetomiwa Adebawore",
       "pos": "DL",
-      "nflTeam": "CLE",
-      "why": "ROS. DL #2 ROS. Sat W7 despite full practices (reason unverified); bid only if Wed practice shows him healthy.",
-      "stats": "16.0 FP/G",
+      "nflTeam": "IND",
+      "why": "WEEKLY. 2 sacks (36 pts) in W7 with 29.4% pressure rate; snaps up to 49% vs JAX (lost LT Harrison).",
+      "stats": "21.0 FP/G last 3, 49% W7 snaps",
       "faabMin": 1,
-      "faabMax": 5,
+      "faabMax": 3,
       "bid": 2,
       "drop": "Cedric Gray",
       "tag": "DART"
     },
     {
       "rank": 5,
-      "player": "Jalen Carter",
-      "pos": "DL",
-      "nflTeam": "PHI",
-      "why": "ROS. 87% snaps; cast is off. @WSH (x1.05). DL #10 this week, #16 ROS. Why Hyper dropped him is unverified.",
-      "stats": "13.4 FP/G season, 17.3 last 3",
+      "player": "Nohl Williams",
+      "pos": "DB",
+      "nflTeam": "KC",
+      "why": "DART. 10 tackles + INT in W7 on 96% snaps (19.3 FP/G true L3); tough @DEN draw this week.",
+      "stats": "18.2 FP/G Fantrax, 86% L3 snaps",
       "faabMin": 2,
-      "faabMax": 6,
-      "bid": 4,
+      "faabMax": 5,
+      "bid": 3,
       "drop": "Cedric Gray",
       "tag": "DART"
     },
@@ -423,24 +411,11 @@
       "player": "Shemar James",
       "pos": "LB",
       "nflTeam": "DAL",
-      "why": "ROS. Woellert's new DAL green dot (87% snaps) and his top W8 add. Plays ARI. Not in our model yet.",
-      "stats": "New dot W7",
+      "why": "DART. Woellert's new DAL green dot (87% snaps in W7) vs ARI.",
+      "stats": "New DAL green dot (87% snaps)",
       "faabMin": 1,
-      "faabMax": 4,
+      "faabMax": 3,
       "bid": 2,
-      "drop": "Cedric Gray",
-      "tag": "DART"
-    },
-    {
-      "rank": 7,
-      "player": "Kyler Gordon",
-      "pos": "DB",
-      "nflTeam": "CHI",
-      "why": "WEEKLY. 1 sack, 2 TFL in W7 but only 57% snaps; big-play dependent. @SEA. DB #3 this week, #15 ROS.",
-      "stats": "34.0 FP/G (small sample), 26% rostered",
-      "faabMin": 0,
-      "faabMax": 1,
-      "bid": 1,
       "drop": "Cedric Gray",
       "tag": "DART"
     }
@@ -450,19 +425,19 @@
       "rank": 1,
       "player": "Cedric Gray",
       "pos": "LB",
-      "reason": "LB #48, 56% snaps, no dot. First cut for any IDP add."
+      "reason": "LB #47, 56% snaps, no dot (and we just added Frankie Luvu). First cut for any DL/IDP add."
     },
     {
       "rank": 2,
-      "player": "Bryce Young",
-      "pos": "QB",
-      "reason": "Lawrence is QB1; Young is a backup with a thin OL."
+      "player": "Kendrick Bourne",
+      "pos": "WR",
+      "reason": "WR5 on our bench behind Wilson, Pickens, Coker, and Dike."
     },
     {
       "rank": 3,
       "player": "D.J. Reed",
       "pos": "DB",
-      "reason": "DB #32 this week, #20 ROS; tough MIN draw. Cut for a better DB."
+      "reason": "DB #30 this week vs MIN (low pass volume); outside CB tackle floor."
     }
   ],
   "trades": [
@@ -474,6 +449,11 @@
     }
   ],
   "idp": [
+    {
+      "nflTeam": "WAS",
+      "greenDot": "Frankie Luvu",
+      "notes": "Acquired from Substation! Wears WAS green dot (98% snaps). W8 vs PHI."
+    },
     {
       "nflTeam": "MIA",
       "greenDot": "Jacob Rodriguez",
@@ -529,20 +509,20 @@
     {
       "player": "Evan Williams",
       "nflTeam": "GB",
-      "note": "66/66 snaps W7; DB #1 this week vs CAR TNF"
+      "note": "66/66 snaps W7 (78% tackle mix); DB #1 this week vs CAR TNF"
     },
     {
       "player": "Quentin Lake",
       "nflTeam": "LAR",
-      "note": "Rams dot, 63 of 64 snaps; W8 vs LAC"
-    },
-    {
-      "player": "Jamel Dean",
-      "nflTeam": "PIT",
-      "note": "FA; 96% snaps, 26.5 FP/G last 3"
+      "note": "Rams green dot, 63/64 snaps (74% tackle mix); DB #5 this week vs LAC"
     }
   ],
   "news": [
+    {
+      "source": "Fantrax Trade",
+      "time": "2026-10-27T18:16:00-07:00",
+      "text": "Completed trade: The Eddies sent Tyler Warren (TE), Bryce Young (QB) + $11 FAAB to Substation for George Pickens (WR DAL) and Frankie Luvu (LB WAS). Eddies FAAB now $38; projected 193.5 vs Ultron 188.1."
+    },
     {
       "source": "Fantrax",
       "time": "2026-10-27T14:55:00-07:00",
@@ -596,15 +576,13 @@
       "url": "https://x.com/Curtis_Crabtree/status/2114847617922531367"
     }
   ],
-  "lastUpdated": "2026-10-27T15:00:00-07:00",
+  "lastUpdated": "2026-10-28T08:50:00-07:00",
   "fantraxRaw": {
     "file": "fantrax-raw-2026-10-27-am.json",
     "scraped": "2026-10-27 ~06:45 PDT"
   },
   "refreshNotes": [
-    "Editorial plan was written for week 8; current week is 7. Re-run the newsletter routine.",
-    "Fantrax header says week 8; date math says 7.",
-    "2 free-text sentence(s) about our own moves removed (structured records only).",
-    "12 item(s) removed by the pending-name safety net."
+    "Updated Wed Oct 28 8:50 AM PT post Eddies-Substation trade (Pickens + Luvu in, Warren + Young out, FAAB $38).",
+    "Fixed IDP model L3 calculation to use last 3 games played (d.tail(3)) instead of calendar weeks 5-7, and regressed single-game PD/turnover outliers (removing Jamel Dean's inflated 26.5 L3 / CB ball-play spike and removing him from boxSafety)."
   ]
 }

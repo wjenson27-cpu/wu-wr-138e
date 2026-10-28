@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-21",
-  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-10-21 9:34 AM PT roster sync.",
+  "updated": "2026-10-28",
+  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-10-28 6:33 AM PT roster sync.",
   "startingBudget": 115,
   "note": "Week 6 FAAB clear (Wed Oct 14, 9:00 AM PT) — spend by team: Slumlords $30 (Darius Cooper $10, Dameon Pierce $10, Jaden Dugger $10); Morningside $30 (MarShawn Lloyd $18, Kimani Vidal $12); Substation $14 (A.J. Haulcy $3, Kenneth Gainwell $11); Ultron $10 (Pat Freiermuth $1, Germie Bernard $9); Eagle Ridge Eddies $8 (Mansoor Delane $8); Mrs. Doubtpfizer $5 (D'Marco Jackson $4, Dylan Sampson $1); Hypersecretors $3 (Darren Waller $3); TTAB $3 (Akheem Mesidor $3); Saltese $1 (Nik Bonitto $1); Dongers $1 (Jonas Sanker $1); Newman $1 (Carl Granderson $1). $0 executed claims excluded from claims[] (Pocket Kyle Williams; Ultron Trevon Moehrig). No $ spend: Pocket, Goats, LAB. Balances set to Fantrax Claim Budget Remaining ~9:30 AM PT.",
   "excludeZeroBids": true,
@@ -40,7 +40,7 @@
       "remaining": 21,
       "spentClaims": 95,
       "tradeOut": 24,
-      "tradeIn": 5,
+      "tradeIn": 25,
       "spentKnown": 119,
       "remainingKnown": 21
     },
@@ -76,12 +76,12 @@
       "owner": "Bill Jenson",
       "abbrev": "ERE",
       "starting": 115,
-      "remaining": 55,
-      "spentClaims": 60,
-      "tradeOut": 0,
+      "remaining": 38,
+      "spentClaims": 66,
+      "tradeOut": 11,
       "tradeIn": 0,
-      "spentKnown": 60,
-      "remainingKnown": 55
+      "spentKnown": 77,
+      "remainingKnown": 38
     },
     {
       "id": "dongers",
@@ -102,12 +102,12 @@
       "owner": "Chase Anderson",
       "abbrev": "TTA",
       "starting": 115,
-      "remaining": 0,
+      "remaining": 10,
       "spentClaims": 93,
-      "tradeOut": 10,
-      "tradeIn": 8,
-      "spentKnown": 103,
-      "remainingKnown": 0
+      "tradeOut": 30,
+      "tradeIn": 18,
+      "spentKnown": 123,
+      "remainingKnown": 10
     },
     {
       "id": "hyper",
@@ -153,14 +153,14 @@
       "name": "Valley Old Goats",
       "owner": "Mike Heff",
       "abbrev": "VOG",
-      "starting": 115,
+      "starting": 100,
       "remaining": 64,
       "spentClaims": 36,
       "tradeOut": 0,
       "tradeIn": 0,
       "spentKnown": 36,
       "remainingKnown": 64,
-      "note": " | Sep23 clear: scrape rem 84 vs formula 99"
+      "note": " | Started at $100: only team that did not pay dues by Aug 1 (no +$15 bonus), per Bill Oct 23 2026"
     },
     {
       "id": "pocket",
@@ -168,12 +168,12 @@
       "owner": "Kellen Olson",
       "abbrev": "PKT",
       "starting": 115,
-      "remaining": 98,
+      "remaining": 88,
       "spentClaims": 21,
-      "tradeOut": 10,
+      "tradeOut": 20,
       "tradeIn": 14,
-      "spentKnown": 31,
-      "remainingKnown": 98
+      "spentKnown": 41,
+      "remainingKnown": 88
     },
     {
       "id": "substation",
@@ -181,15 +181,28 @@
       "owner": "Nathan Kelly",
       "abbrev": "SUB",
       "starting": 115,
-      "remaining": 10,
+      "remaining": 21,
       "spentClaims": 113,
       "tradeOut": 35,
-      "tradeIn": 43,
+      "tradeIn": 16,
       "spentKnown": 148,
-      "remainingKnown": 10
+      "remainingKnown": -17
     }
   ],
   "claims": [
+    {
+      "date": "2026-10-24",
+      "time": "8:28 AM PDT",
+      "player": "Cameron Skattebo",
+      "amount": 6,
+      "team": "Eagle Ridge Eddies",
+      "kind": "claim",
+      "teamId": "eddies",
+      "pos": "RB",
+      "dropped": "Jacory Croskey-Merritt",
+      "note": "Week 7 claim; dropped Jacory Croskey-Merritt",
+      "attribution": "fantrax-roster-sync-2026-10-24-am"
+    },
     {
       "date": "2026-10-21",
       "time": "9:00 AM PDT",
@@ -1003,7 +1016,9 @@
       "player": "Quentin Johnston",
       "bid": 6,
       "dropped": "Wade Woodaz",
-      "note": "Fantasy check Oct 3 scrape"
+      "note": "Fantasy check Oct 3 scrape",
+      "amount": 6,
+      "kind": "claim"
     },
     {
       "date": "2026-09-30",
@@ -2047,5 +2062,5 @@
     }
   ],
   "incomplete": false,
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "lastSynced": "2026-10-28 6:33 AM PT"
 }

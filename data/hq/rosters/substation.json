@@ -2,25 +2,23 @@
   "teamId": "substation",
   "teamName": "Substation",
   "owner": "Nathan Kelly",
-  "asOf": "2026-10-21 9:34 AM PT",
-  "faabLeft": 10,
-  "startingQB": "Brock Purdy",
+  "asOf": "2026-10-28 6:33 AM PT",
+  "faabLeft": 21,
+  "startingQB": "Bryce Young",
   "roster": {
     "QB": [
-      "Brock Purdy",
-      "Kyler Murray"
+      "Bryce Young",
+      "Brock Purdy"
     ],
     "RB": [
-      "RJ Harvey",
       "Kenneth Gainwell",
+      "RJ Harvey",
       "Emmett Johnson"
     ],
     "WR": [
       "Ja'Marr Chase",
       "Germie Bernard",
-      "Malik Nabers",
-      "George Pickens",
-      "Carnell Tate"
+      "Malik Nabers"
     ],
     "TE": [
       "Tucker Kraft"
@@ -30,41 +28,34 @@
     ],
     "LB": [
       "Jack Campbell",
-      "Frankie Luvu",
-      "Jihaad Campbell"
+      "Zack Baun",
+      "Kaden Elliss"
     ],
     "DB": [
-      "Malik Mustapha",
-      "Tykee Smith",
       "Nick Emmanwori",
-      "Kevin Winston"
+      "Kevin Winston",
+      "Tykee Smith"
     ],
     "IR": [
-      "Kaden Elliss",
-      "Brian Branch",
+      "Alec Pierce",
+      "Tyler Warren",
       "DeShon Elliott"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Kevin Winston — Q (active)",
-    "Kaden Elliss — Q (IR slot)",
-    "Brian Branch — IR (IR slot)",
-    "DeShon Elliott — IR (IR slot)"
+    "Alec Pierce — IR (IR slot)",
+    "Tyler Warren — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-21 9:34 AM PT (/workspace/fantrax-raw-2026-10-21-am2.json)",
+  "source": "Fantrax roster sync 2026-10-28 6:33 AM PT (/workspace/fantrax-raw-2026-10-28-am.json)",
   "fantraxTeamId": "bbdlo6fkmsb3ulv5",
-  "lineupFlags": [
-    "Kevin Winston — Q (active)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Kevin Winston — Q (active)",
-    "Kaden Elliss — Q (IR slot)",
-    "Brian Branch — IR (IR slot)",
-    "DeShon Elliott — IR (IR slot)"
+    "Alec Pierce — IR (IR slot)",
+    "Tyler Warren — Q (IR slot)"
   ],
-  "updated": "2026-10-21",
-  "lastSynced": "2026-10-21 9:34 AM PT"
+  "updated": "2026-10-28",
+  "lastSynced": "2026-10-28 6:33 AM PT"
 }
