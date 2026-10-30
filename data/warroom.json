@@ -340,8 +340,7 @@
       "faabMax": 0,
       "bid": 0,
       "drop": "Tyrice Knight (if Thomas cleared or Knight tagged)",
-      "tag": "DART",
-      "horizon": "WEEKLY"
+      "tag": "DART"
     },
     {
       "rank": 2,
@@ -354,8 +353,7 @@
       "faabMax": 0,
       "bid": 0,
       "drop": "Tyrice Knight (if Thomas cleared or Knight tagged)",
-      "tag": "LIKE",
-      "horizon": "ROS"
+      "tag": "LIKE"
     },
     {
       "rank": 3,
@@ -368,8 +366,7 @@
       "faabMax": 0,
       "bid": 0,
       "drop": "",
-      "tag": "DART",
-      "horizon": "WEEKLY"
+      "tag": "DART"
     }
   ],
   "drops": [
