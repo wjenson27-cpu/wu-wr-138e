@@ -17,6 +17,8 @@ To rebuild trade prices from the season's stat lines, run `python3 scripts/build
 
 To rebuild the weekly rankings board, run `node scripts/build_rankings.js` from this folder. A scheduled action does that through the week and commits `data/rankings/`.
 
+To rebuild the ROS trade ideas, run `python3 scripts/build_trade_finder.py` from this folder. It writes `data/trade-finder.json` for `trade-finder.html`. The list is ideas only. It does not send trades or contact Fantrax.
+
 ## Auto-refresh (branch `eddie/warroom-auto-refresh`; merge is Bill's)
 
 Nothing here pushes to `main`, and nothing here pushes at all. Bill reviews and merges.
