@@ -1,16 +1,81 @@
 {
   "schemaVersion": 1,
-  "sample": true,
-  "updatedAt": "2026-10-31T13:02:00-07:00",
+  "sample": false,
+  "updatedAt": "2026-10-31T06:40:00-07:00",
   "season": 2026,
-  "note": "SAMPLE anytime-TD card. Not the league sheet.",
+  "note": "League anytime-TD picks for Week 8 from the HQ sheet (updated 2026-10-30). Entries are unlabeled on purpose.",
   "picks": [
-    {"week": 7, "participant": "Saltese Slamm", "pick": "George Kittle", "result": "No"},
-    {"week": 8, "participant": "Eagleridge Eddie's", "pick": "Breece Hall", "result": "pending"},
-    {"week": 8, "participant": "Ultron", "pick": "Jahmyr Gibbs", "result": "pending"},
-    {"week": 8, "participant": "Saltese Slamm", "pick": "Jonathan Taylor", "result": "Yes"},
-    {"week": 8, "participant": "Indian Trail Slumlords", "pick": "Derrick Henry", "result": "pending"},
-    {"week": 8, "participant": "Pocket Agents", "pick": "CeeDee Lamb", "result": "pending"},
-    {"week": 8, "participant": "Mrs. Doubtpfizer", "pick": "Travis Kelce", "result": "pending"}
+    {
+      "week": 8,
+      "participant": "Entry 1",
+      "pick": "CeeDee Lamb",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 2",
+      "pick": "Derrick Henry",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 3",
+      "pick": "Bhayshul Tuten",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 4",
+      "pick": "Jahmyr Gibbs",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 5",
+      "pick": "Zay Flowers",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 6",
+      "pick": "Javonte Williams",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 7",
+      "pick": "Bijan Robinson",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 8",
+      "pick": "Jaxon Smith-Njigba",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 9",
+      "pick": "Josh Allen",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 10",
+      "pick": "Ashton Jeanty",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 11",
+      "pick": "Puka Nacua",
+      "result": "pending"
+    },
+    {
+      "week": 8,
+      "participant": "Entry 12",
+      "pick": "Bucky Irving",
+      "result": "pending"
+    }
   ]
 }

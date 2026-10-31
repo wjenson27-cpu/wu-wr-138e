@@ -1,52 +1,281 @@
 {
   "schemaVersion": 1,
-  "sample": true,
-  "sampleNote": "SAMPLE DATA. Not a live scrape. Placeholder Sunday scores so the page can render before a refresh job exists. Replace this file about every 30 minutes. Do not treat these points as real.",
-  "updatedAt": "2026-10-31T13:02:00-07:00",
+  "sample": false,
+  "updatedAt": "2026-10-31T06:40:00-07:00",
   "season": 2026,
   "week": 8,
   "opponent": "ultron",
+  "source": "Fantrax read-only scrape fantrax-raw-2026-10-31-am.json (League HQ sync)",
+  "dataNote": "Team score and projected final are Fantrax matchup totals. Per-player points, projections and game status are not in the scrape and are left null.",
   "teams": [
     {
       "id": "eddies",
       "name": "Eagleridge Eddie's",
       "record": "5-2",
+      "score": 33.0,
+      "projection": 201.2,
       "starters": [
-        {"slot": "QB", "player": "Trevor Lawrence", "pos": "QB", "nflTeam": "JAX", "status": "live", "points": 14.2, "projection": 22.4, "remainingProj": 8.0, "injury": ""},
-        {"slot": "RB", "player": "Breece Hall", "pos": "RB", "nflTeam": "NYJ", "status": "live", "points": 8.6, "projection": 16.8, "remainingProj": 7.5, "injury": "Q"},
-        {"slot": "WR", "player": "Garrett Wilson", "pos": "WR", "nflTeam": "NYJ", "status": "live", "points": 6.1, "projection": 15.2, "remainingProj": 8.4, "injury": ""},
-        {"slot": "TE", "player": "Brock Bowers", "pos": "TE", "nflTeam": "LV", "status": "live", "points": 9.4, "projection": 14.1, "remainingProj": 5.2, "injury": ""},
-        {"slot": "FLEX", "player": "George Pickens", "pos": "WR", "nflTeam": "DAL", "status": "live", "points": 7.0, "projection": 15.5, "remainingProj": 8.0, "injury": "Q"},
-        {"slot": "FLEX", "player": "Jalen Coker", "pos": "WR", "nflTeam": "CAR", "status": "final", "points": 10.0, "projection": 11.2, "remainingProj": 0, "injury": ""},
-        {"slot": "FLEX", "player": "Chimere Dike", "pos": "WR", "nflTeam": "TEN", "status": "not_started", "points": 0, "projection": 10.8, "remainingProj": 10.8, "injury": ""},
-        {"slot": "DL", "player": "George Karlaftis", "pos": "DL", "nflTeam": "KC", "status": "not_started", "points": 0, "projection": 13.4, "remainingProj": 13.4, "injury": ""},
-        {"slot": "LB", "player": "Jordyn Brooks", "pos": "LB", "nflTeam": "MIA", "status": "live", "points": 7.8, "projection": 14.6, "remainingProj": 6.5, "injury": ""},
-        {"slot": "DB", "player": "Evan Williams", "pos": "DB", "nflTeam": "GB", "status": "final", "points": 23.0, "projection": 12.8, "remainingProj": 0, "injury": ""},
-        {"slot": "DB", "player": "Quentin Lake", "pos": "DB", "nflTeam": "LAR", "status": "not_started", "points": 0, "projection": 13.1, "remainingProj": 13.1, "injury": ""},
-        {"slot": "IDP", "player": "Trenton Simpson", "pos": "LB", "nflTeam": "BAL", "status": "live", "points": 6.5, "projection": 12.4, "remainingProj": 6.2, "injury": ""},
-        {"slot": "IDP", "player": "Frankie Luvu", "pos": "LB", "nflTeam": "WAS", "status": "not_started", "points": 0, "projection": 11.9, "remainingProj": 0, "injury": "OUT", "swap": {"player": "Cedric Gray", "pos": "LB", "nflTeam": "TEN", "note": "Bench LB, kickoff still ahead"}},
-        {"slot": "IDP", "player": "Cole Bishop", "pos": "DB", "nflTeam": "BUF", "status": "live", "points": 5.4, "projection": 11.6, "remainingProj": 6.4, "injury": ""}
+        {
+          "player": "Trevor Lawrence",
+          "pos": "QB",
+          "nflTeam": "JAX",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Breece Hall",
+          "pos": "RB",
+          "nflTeam": "NYJ",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": "Q"
+        },
+        {
+          "player": "Garrett Wilson",
+          "pos": "WR",
+          "nflTeam": "NYJ",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Jalen Coker",
+          "pos": "WR",
+          "nflTeam": "CAR",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Chimere Dike",
+          "pos": "WR",
+          "nflTeam": "TEN",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "George Pickens",
+          "pos": "WR",
+          "nflTeam": "DAL",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": "Q"
+        },
+        {
+          "player": "Brock Bowers",
+          "pos": "TE",
+          "nflTeam": "LV",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "George Karlaftis",
+          "pos": "DL",
+          "nflTeam": "KC",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Jordyn Brooks",
+          "pos": "LB",
+          "nflTeam": "MIA",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Frankie Luvu",
+          "pos": "LB",
+          "nflTeam": "WAS",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Trenton Simpson",
+          "pos": "LB",
+          "nflTeam": "BAL",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Quentin Lake",
+          "pos": "DB",
+          "nflTeam": "LAR",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Evan Williams",
+          "pos": "DB",
+          "nflTeam": "GB",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Cole Bishop",
+          "pos": "DB",
+          "nflTeam": "BUF",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        }
       ]
     },
     {
       "id": "ultron",
       "name": "Ultron",
       "record": "3-4",
+      "score": 0.0,
+      "projection": 211.7,
       "starters": [
-        {"slot": "QB", "player": "Caleb Williams", "pos": "QB", "nflTeam": "CHI", "status": "not_started", "points": 0, "projection": 21.8, "remainingProj": 21.8, "injury": ""},
-        {"slot": "RB", "player": "Ashton Jeanty", "pos": "RB", "nflTeam": "LV", "status": "live", "points": 11.4, "projection": 17.2, "remainingProj": 6.4, "injury": ""},
-        {"slot": "WR", "player": "Drake London", "pos": "WR", "nflTeam": "ATL", "status": "live", "points": 8.8, "projection": 16.4, "remainingProj": 7.2, "injury": ""},
-        {"slot": "TE", "player": "Jake Ferguson", "pos": "TE", "nflTeam": "DAL", "status": "live", "points": 4.2, "projection": 10.6, "remainingProj": 6.2, "injury": ""},
-        {"slot": "FLEX", "player": "D'Andre Swift", "pos": "RB", "nflTeam": "CHI", "status": "not_started", "points": 0, "projection": 13.5, "remainingProj": 13.5, "injury": ""},
-        {"slot": "FLEX", "player": "Michael Wilson", "pos": "WR", "nflTeam": "ARI", "status": "live", "points": 3.1, "projection": 9.8, "remainingProj": 6.5, "injury": ""},
-        {"slot": "FLEX", "player": "Rhamondre Stevenson", "pos": "RB", "nflTeam": "NE", "status": "live", "points": 5.2, "projection": 12.1, "remainingProj": 6.8, "injury": "Q"},
-        {"slot": "DL", "player": "Dallas Turner", "pos": "DL", "nflTeam": "MIN", "status": "not_started", "points": 0, "projection": 11.2, "remainingProj": 11.2, "injury": "D"},
-        {"slot": "LB", "player": "Carson Schwesinger", "pos": "LB", "nflTeam": "CLE", "status": "live", "points": 9.1, "projection": 15.4, "remainingProj": 6.0, "injury": ""},
-        {"slot": "IDP", "player": "Foyesade Oluokun", "pos": "LB", "nflTeam": "JAX", "status": "live", "points": 6.4, "projection": 14.8, "remainingProj": 8.1, "injury": ""},
-        {"slot": "DB", "player": "Josh Metellus", "pos": "DB", "nflTeam": "MIN", "status": "not_started", "points": 0, "projection": 12.2, "remainingProj": 12.2, "injury": ""},
-        {"slot": "IDP", "player": "Patrick Queen", "pos": "LB", "nflTeam": "PIT", "status": "live", "points": 4.8, "projection": 13.6, "remainingProj": 8.4, "injury": ""},
-        {"slot": "DB", "player": "Dante Trader", "pos": "DB", "nflTeam": "MIA", "status": "live", "points": 4.5, "projection": 10.4, "remainingProj": 5.5, "injury": ""},
-        {"slot": "IDP", "player": "Kendal Daniels", "pos": "LB", "nflTeam": "ATL", "status": "live", "points": 3.2, "projection": 11.0, "remainingProj": 7.4, "injury": ""}
+        {
+          "player": "Josh Allen",
+          "pos": "QB",
+          "nflTeam": "BUF",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Bijan Robinson",
+          "pos": "RB",
+          "nflTeam": "ATL",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Omarion Hampton",
+          "pos": "RB",
+          "nflTeam": "LAC",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Rhamondre Stevenson",
+          "pos": "RB",
+          "nflTeam": "NE",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Drake London",
+          "pos": "WR",
+          "nflTeam": "ATL",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Michael Wilson",
+          "pos": "WR",
+          "nflTeam": "ARI",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Tyler Higbee",
+          "pos": "TE",
+          "nflTeam": "LAR",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Dallas Turner",
+          "pos": "DL",
+          "nflTeam": "MIN",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Foyesade Oluokun",
+          "pos": "LB",
+          "nflTeam": "JAX",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Kendal Daniels",
+          "pos": "LB",
+          "nflTeam": "ATL",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Robert Spillane",
+          "pos": "LB",
+          "nflTeam": "NE",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Kyle Hamilton",
+          "pos": "DB",
+          "nflTeam": "BAL",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Josh Metellus",
+          "pos": "DB",
+          "nflTeam": "MIN",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "A.J. Haulcy",
+          "pos": "DB",
+          "nflTeam": "IND",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        }
       ]
     }
   ]
