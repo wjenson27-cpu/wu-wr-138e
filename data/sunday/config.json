@@ -1,0 +1,8 @@
+{
+  "featuredTeam": "eddies",
+  "featuredName": "Eagleridge Eddie's",
+  "live": "data/sunday/live.json",
+  "parlay": "data/td-parlay.json",
+  "refreshMinutes": 5,
+  "staleMinutes": 45
+}

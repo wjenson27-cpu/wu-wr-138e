@@ -12,12 +12,15 @@ Eddie fills `data/warroom.json`, `data/free-agents.json`, and `data/green-dots.j
 - [docs/draft-setup.md](docs/draft-setup.md)
 - [docs/rankings-schema.md](docs/rankings-schema.md)
 - [docs/green-dots-schema.md](docs/green-dots-schema.md)
+- [docs/sunday-command-center.md](docs/sunday-command-center.md)
 
 To rebuild trade prices from the season's stat lines, run `python3 scripts/build_player_values.py` from this folder. The Trade tab reads `data/player-values.json`.
 
 To rebuild the weekly rankings board, run `node scripts/build_rankings.js` from this folder. A scheduled action does that through the week and commits `data/rankings/`.
 
 To rebuild the ROS trade ideas, run `python3 scripts/build_trade_finder.py` from this folder. It writes `data/trade-finder.json` for `trade-finder.html`. The list is ideas only. It does not send trades or contact Fantrax.
+
+`sunday.html` is the phone page for Sunday. It reads `data/sunday/config.json`, `data/sunday/live.json`, and `data/td-parlay.json`. A separate job is meant to refresh the live file about every 30 minutes. The page refetches every 5 minutes. It does not scrape.
 
 ## Auto-refresh (branch `eddie/warroom-auto-refresh`; merge is Bill's)
 
