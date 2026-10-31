@@ -144,7 +144,7 @@ body.su{overflow-x:hidden}
     return '<div class="su-player"><div class="su-who"><div class="su-name">' + esc(row.player) + injuryHtml(row.injury) +
       '</div><div class="su-meta">' + esc(meta(row)) + " · " + statusHtml(row) + "</div></div>" +
       '<div class="su-pts"><b>' + esc(row.pointsLabel) + "</b>" + delta +
-      '<span class="su-proj">proj ' + esc(row.projection.toFixed(1)) + "</span></div></div>";
+      '<span class="su-proj">proj ' + esc(row.projection == null ? "—" : row.projection.toFixed(1)) + "</span></div></div>";
   }
 
   function teamBlock(side, extraClass) {

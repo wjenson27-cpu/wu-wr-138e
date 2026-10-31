@@ -5,9 +5,10 @@ const path = require("node:path");
 const sunday = require("../js/sunday.js");
 
 const root = path.join(__dirname, "..");
-const live = require("../data/sunday/live.json");
+const live = require("./fixtures/sunday-sample-live.json");
+const realLive = require("../data/sunday/live.json");
 const config = require("../data/sunday/config.json");
-const parlay = require("../data/td-parlay.json");
+const parlay = require("./fixtures/sunday-sample-parlay.json");
 
 test("win probability is a normal approximation from projections and remaining points", function () {
   assert.equal(sunday.winProbability(10, 10, 0, 0), 0.5);
@@ -146,4 +147,12 @@ test("new Sunday files do not name the owner or carry an owner field", function 
   assert.match(page, /cache:\s*"no-store"/);
   assert.match(page, /t=/);
   assert.match(page, /WU Sunday Command Center/);
+});
+
+test("the published Sunday file is real Week 8 data with team totals", function () {
+  assert.equal(realLive.sample, false);
+  const model = sunday.buildModel(realLive, require("../data/td-parlay.json"), config, Date.parse(realLive.updatedAt));
+  assert.equal(model.ok, true);
+  assert.equal(model.featured.name, "Eagleridge Eddie's");
+  assert.ok(model.parlay.picks.length >= 1);
 });

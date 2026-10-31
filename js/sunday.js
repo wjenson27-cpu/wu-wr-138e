@@ -135,6 +135,13 @@
       remaining += remainingOf(p);
       projection += num(p.projection);
     });
+    /* Team-level Fantrax totals when the feed has no per-player points. */
+    var hasPlayerPts = starters.some(function (p) { return p.points != null && p.points !== ""; });
+    if (!hasPlayerPts && team && team.score != null && team.projection != null) {
+      score = num(team.score);
+      projection = num(team.projection);
+      remaining = Math.max(0, projection - score);
+    }
     return {
       score: round1(score),
       remaining: round1(remaining),
@@ -147,6 +154,7 @@
      Final games (remaining 0) reduce to points − projection. */
   function paceDelta(player) {
     if (statusKind(player && player.status) === "not_started") return null;
+    if (player.points == null || player.projection == null) return null;
     return round1(num(player.points) + remainingOf(player) - num(player.projection));
   }
 
@@ -187,9 +195,9 @@
       statusLabel: statusLabel(p.status),
       injury: inj,
       points: round1(p.points),
-      projection: round1(p.projection),
+      projection: p.projection == null || p.projection === "" ? null : round1(p.projection),
       remaining: round1(remainingOf(p)),
-      pointsLabel: kind === "not_started" ? "—" : oneDecimal(p.points),
+      pointsLabel: kind === "not_started" || p.points == null ? "—" : oneDecimal(p.points),
       delta: delta,
       deltaLabel: formatDelta(delta),
       deltaTone: deltaTone(delta),
