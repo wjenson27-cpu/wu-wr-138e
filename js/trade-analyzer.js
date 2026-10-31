@@ -1,6 +1,6 @@
 /* Desk trade check for Eagleridge Eddie's. Runs in the browser.
-   Rosters, power rankings, the latest score file, club colors, and the
-   lineup rules are the copies already in this repo. Week score files
+   Rosters are read from this repo and from the public league site, and
+   the copy with the newer timestamp is kept. Week score files
    (scores-wN-2026.json) are not stored here; those are read from the
    public league site. Owner, contact, and pending bid/trade fields are
    never shown. Nothing is written back. */
@@ -27,17 +27,33 @@
   };
   var FEATURED = "Eagleridge Eddie's";
   var HQ = "https://wjenson27-cpu.github.io/wheels-up-league-hq/data/";
+  var TEAM_COUNT = 14;
+  var SKILL = ["RB", "WR", "TE"];
+  var VALUE_POS = ["QB", "RB", "WR", "TE", "DL", "LB", "DB"];
+  /* Bill's lineup. Depth and replacement use this even when scoring.json differs. */
+  var BILL_LINEUP = { QB: 1, RB: 1, WR: 1, TE: 1, RWT: 3, DL: 1, LB: 1, DB: 2, ID: 3 };
   var LOCAL = {
     rosterIndex: "data/hq/rosters/index.json",
     rankings: "data/hq/rankings.json",
     scoring: "data/scoring.json",
     teams: "data/hq/teams.json",
-    scores: "data/hq/scores.json"
+    scores: "data/hq/scores.json",
+    values: "data/player-values.json",
+    freeAgents: "data/free-agents.json"
   };
   var PRIVATE_TEXT = /@[a-z0-9.-]+\.[a-z]{2,}|\b\d{3}[-.\s]\d{3}[-.\s]\d{4}\b/i;
 
   function rosterPath(id) {
     return "data/hq/rosters/" + id + ".json";
+  }
+
+  function rosterRequest(id) {
+    if (!safeId(id)) return null;
+    return { local: rosterPath(id), remote: HQ + "rosters/" + id + ".json" };
+  }
+
+  function rosterIndexRequest() {
+    return { local: LOCAL.rosterIndex, remote: HQ + "rosters/index.json" };
   }
 
   function weekScoreRequest(week) {
@@ -87,9 +103,173 @@
       DB: num("DB"),
       ID: num("ID_flex_any_IDP")
     };
-    if (Object.keys(lineup).some(function (key) { return lineup[key] == null; })) return null;
-    return lineup;
+  if (Object.keys(lineup).some(function (key) { return lineup[key] == null; })) return null;
+  return lineup;
+}
+
+function lineupsMatch(a, b) {
+  if (!a || !b) return false;
+  return ["QB", "RB", "WR", "TE", "RWT", "DL", "LB", "DB", "ID"].every(function (key) {
+    return a[key] === b[key];
+  });
+}
+
+function resolveLineup(scoring) {
+  var parsed = lineupFromScoring(scoring);
+  if (lineupsMatch(parsed, BILL_LINEUP)) return parsed;
+  return {
+    QB: BILL_LINEUP.QB,
+    RB: BILL_LINEUP.RB,
+    WR: BILL_LINEUP.WR,
+    TE: BILL_LINEUP.TE,
+    RWT: BILL_LINEUP.RWT,
+    DL: BILL_LINEUP.DL,
+    LB: BILL_LINEUP.LB,
+    DB: BILL_LINEUP.DB,
+    ID: BILL_LINEUP.ID
+  };
+}
+
+function replacementBases(lineup, teamCount) {
+  var line = lineup || BILL_LINEUP;
+  var clubs = teamCount || TEAM_COUNT;
+  return {
+    QB: (line.QB || 0) * clubs,
+    RB: (line.RB || 0) * clubs,
+    WR: (line.WR || 0) * clubs,
+    TE: (line.TE || 0) * clubs,
+    DL: (line.DL || 0) * clubs,
+    LB: (line.LB || 0) * clubs,
+    DB: (line.DB || 0) * clubs
+  };
+}
+
+function byPpg(a, b) {
+  return b.ppg - a.ppg || String(a.name).localeCompare(String(b.name)) || String(a.key).localeCompare(String(b.key));
+}
+
+function takeBest(list, count, used) {
+  var picked = [];
+  if (!(count > 0)) return picked;
+  list.slice().sort(byPpg).forEach(function (player) {
+    if (picked.length >= count || !player || used.has(player.key)) return;
+    if (!Number.isFinite(player.ppg) || VALUE_POS.indexOf(player.pos) === -1) return;
+    used.add(player.key);
+    picked.push(player);
+  });
+  return picked;
+}
+
+function teamFlex(players, lineup) {
+  var used = new Set();
+  var active = (players || []).filter(function (player) {
+    return player && !player.ir && VALUE_POS.indexOf(player.pos) !== -1 && Number.isFinite(player.ppg);
+  });
+  VALUE_POS.forEach(function (pos) {
+    takeBest(active.filter(function (player) { return player.pos === pos; }), lineup[pos] || 0, used);
+  });
+  var flex = { RB: 0, WR: 0, TE: 0, DL: 0, LB: 0, DB: 0 };
+  function fill(group, slots) {
+    var remaining = active.filter(function (player) {
+      return group.indexOf(player.pos) !== -1 && !used.has(player.key);
+    });
+    takeBest(remaining, slots, used).forEach(function (player) { flex[player.pos] += 1; });
   }
+  fill(SKILL, lineup.RWT || 0);
+  fill(IDP, lineup.ID || 0);
+  return { used: used, flex: flex };
+}
+
+function replacementPlan(teamRosters, freeAgents, lineup, teamCount) {
+  var line = lineup || BILL_LINEUP;
+  var clubs = teamCount || TEAM_COUNT;
+  var bases = replacementBases(line, clubs);
+  var flex = { RB: 0, WR: 0, TE: 0, DL: 0, LB: 0, DB: 0 };
+  var used = new Set();
+  (teamRosters || []).forEach(function (team) {
+    var result = teamFlex(team.players || [], line);
+    result.used.forEach(function (key) { used.add(key); });
+    Object.keys(flex).forEach(function (pos) { flex[pos] += result.flex[pos] || 0; });
+  });
+  var pool = [];
+  var seen = new Set();
+  function add(player) {
+    if (!player || player.ir || VALUE_POS.indexOf(player.pos) === -1 || !Number.isFinite(player.ppg)) return;
+    var key = player.key || playerKey(player.name);
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    pool.push({ key: key, name: player.name || key, pos: player.pos, ppg: player.ppg });
+  }
+  (teamRosters || []).forEach(function (team) {
+    (team.players || []).forEach(add);
+  });
+  (freeAgents || []).forEach(add);
+  function fillRemainder(group, need) {
+    if (!(need > 0)) return;
+    var remaining = pool.filter(function (player) {
+      return group.indexOf(player.pos) !== -1 && !used.has(player.key);
+    });
+    takeBest(remaining, need, used).forEach(function (player) { flex[player.pos] += 1; });
+  }
+  var skillHave = SKILL.reduce(function (sum, pos) { return sum + flex[pos]; }, 0);
+  var idHave = IDP.reduce(function (sum, pos) { return sum + flex[pos]; }, 0);
+  fillRemainder(SKILL, (line.RWT || 0) * clubs - skillHave);
+  fillRemainder(IDP, (line.ID || 0) * clubs - idHave);
+  var ranks = {};
+  var grouped = {};
+  VALUE_POS.forEach(function (pos) {
+    ranks[pos] = bases[pos] + (flex[pos] || 0);
+    grouped[pos] = pool.filter(function (player) { return player.pos === pos; }).sort(byPpg);
+  });
+  var replacement = {};
+  VALUE_POS.forEach(function (pos) {
+    var list = grouped[pos];
+    var rank = ranks[pos];
+    var player = list.length && rank > 0 ? list[Math.min(rank, list.length) - 1] : null;
+    replacement[pos] = {
+      rank: rank,
+      ppg: player ? player.ppg : null,
+      name: player ? player.name : null,
+      available: list.length
+    };
+  });
+  return { bases: bases, flex: flex, ranks: ranks, replacement: replacement };
+}
+
+function playerVor(player, plan) {
+  if (!player || !plan || !Number.isFinite(player.ppg)) return null;
+  var pos = VALUE_POS.indexOf(player.valuePos) !== -1 ? player.valuePos : player.pos;
+  var rep = plan.replacement && plan.replacement[pos];
+  if (!rep || !Number.isFinite(rep.ppg)) return null;
+  return player.ppg - rep.ppg;
+}
+
+function vorChange(sent, received, plan) {
+  var delta = 0;
+  var missing = false;
+  function apply(list, sign) {
+    (list || []).forEach(function (player) {
+      var vor = playerVor(player, plan);
+      if (vor == null) missing = true;
+      else delta += sign * vor;
+    });
+  }
+  apply(sent, -1);
+  apply(received, 1);
+  if (!(sent && sent.length) && !(received && received.length)) return 0;
+  return missing ? null : delta;
+}
+
+function formulaNote(plan) {
+  var ranks = plan
+    ? VALUE_POS.map(function (pos) { return pos + " " + plan.ranks[pos]; }).join(", ")
+    : "unavailable";
+  return "Replacement rank starts at 14 times the required starters: QB 14, RB 14, WR 14, TE 14, DL 14, LB 14, DB 28. " +
+    "The 42 RB/WR/TE flex spots and the 42 DL/LB/DB flex spots then go to the highest points per game left after each club fills its required starters. " +
+    "A spot a club cannot fill goes to the next-best rostered or free-agent player. Final ranks: " + ranks + ". " +
+    "VOR is points per game minus the points per game at that rank. Rostered rates come from player-values.json when the name is there, otherwise from logged points divided by weeks with a log. " +
+    "Free-agent rates are fpg in free-agents.json. IR is not in the pool.";
+}
 
   function rosterPlayers(roster) {
     var chart = roster && roster.roster;
@@ -249,6 +429,119 @@
     return String(rounded);
   }
 
+  function signedPts(n) {
+    var text = formatPts(n);
+    if (text === "—") return text;
+    if (Number(n) > 0) return "+" + text;
+    return text;
+  }
+
+  function parseRosterStamp(raw) {
+    if (raw == null) return null;
+    var text = String(raw).trim();
+    if (!text) return null;
+    var match = text.match(/^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{1,2}):(\d{2})\s*(AM|PM))?(?:\s*PT)?$/i);
+    if (!match) {
+      var parsed = Date.parse(text);
+      if (!Number.isFinite(parsed)) return null;
+      return { ms: parsed, label: /PT\s*$/i.test(text) ? text : text + " PT" };
+    }
+    var hour = 0;
+    var minute = 0;
+    if (match[4]) {
+      hour = Number(match[4]) % 12;
+      if (String(match[6]).toUpperCase() === "PM") hour += 12;
+      minute = Number(match[5]);
+    }
+    var label = match[4]
+      ? match[1] + "-" + match[2] + "-" + match[3] + " " + Number(match[4]) + ":" + match[5] + " " + String(match[6]).toUpperCase() + " PT"
+      : match[1] + "-" + match[2] + "-" + match[3] + " PT";
+    return {
+      ms: Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]), hour, minute),
+      label: label
+    };
+  }
+
+  function rosterClock(file) {
+    if (!file || typeof file !== "object") return null;
+    var best = null;
+    ["asOf", "lastSynced", "updated"].forEach(function (key) {
+      var parsed = parseRosterStamp(file[key]);
+      if (!parsed) return;
+      if (!best || parsed.ms > best.ms) best = parsed;
+    });
+    return best;
+  }
+
+  function pickFresher(localFile, remoteFile) {
+    if (!remoteFile && !localFile) return null;
+    if (!remoteFile) return { file: localFile, time: rosterClock(localFile), from: "local" };
+    if (!localFile) return { file: remoteFile, time: rosterClock(remoteFile), from: "hq" };
+    var localTime = rosterClock(localFile);
+    var remoteTime = rosterClock(remoteFile);
+    var localMs = localTime ? localTime.ms : -Infinity;
+    var remoteMs = remoteTime ? remoteTime.ms : -Infinity;
+    if (remoteMs >= localMs) return { file: remoteFile, time: remoteTime, from: "hq" };
+    return { file: localFile, time: localTime, from: "local" };
+  }
+
+  function asOfLine(label) {
+    if (!label) return "Rosters as of unknown";
+    var text = String(label).trim();
+    if (!/PT$/i.test(text)) text += " PT";
+    return "Rosters as of " + text;
+  }
+
+  function loggedPpg(store, key) {
+    var weeks = store && store.get(key);
+    if (!weeks || !weeks.size) return null;
+    var sum = 0;
+    weeks.forEach(function (pts) { sum += pts; });
+    return sum / weeks.size;
+  }
+
+  function rateIndex(valuesFile) {
+    var map = new Map();
+    ((valuesFile && valuesFile.players) || []).forEach(function (row) {
+      var key = playerKey(row && row.name);
+      var ppg = Number(row && row.ppg);
+      var pos = row && row.position;
+      if (!key || !Number.isFinite(ppg) || VALUE_POS.indexOf(pos) === -1) return;
+      map.set(key, { ppg: ppg, pos: pos });
+    });
+    return map;
+  }
+
+  function freeAgentRates(file, rosteredKeys) {
+    if (!file || file.sample === true) return [];
+    var list = [];
+    var seen = new Set();
+    ((file && file.players) || []).forEach(function (row) {
+      var pct = Number(row && row.rosteredPct);
+      if (Number.isFinite(pct) && pct >= 100) return;
+      var name = publicLabel(row && (row.player || row.name));
+      var key = playerKey(name);
+      var pos = row && row.pos;
+      var ppg = Number(row && (row.fpg != null ? row.fpg : row.ppg));
+      if (!key || seen.has(key) || (rosteredKeys && rosteredKeys.has(key))) return;
+      if (VALUE_POS.indexOf(pos) === -1 || !Number.isFinite(ppg)) return;
+      seen.add(key);
+      list.push({ key: key, name: name, pos: pos, ppg: ppg, ir: false });
+    });
+    return list;
+  }
+
+  function attachRates(players, rates, logs) {
+    (players || []).forEach(function (player) {
+      var rate = rates && rates.get(player.key);
+      var ppg = rate && Number.isFinite(rate.ppg) ? rate.ppg : loggedPpg(logs, player.key);
+      player.ppg = Number.isFinite(ppg) ? ppg : null;
+      if (VALUE_POS.indexOf(player.pos) !== -1) player.valuePos = player.pos;
+      else if (rate && VALUE_POS.indexOf(rate.pos) !== -1) player.valuePos = rate.pos;
+      else player.valuePos = null;
+    });
+  }
+
   function safeId(id) {
     return /^[a-z0-9-]{1,40}$/.test(String(id || "")) ? String(id) : "";
   }
@@ -340,6 +633,11 @@
     return "Logged points favor " + name + " by " + formatPts(edge.diff) + ". These are week logs, not a forecast.";
   }
 
+  function vorSentence(changeA, changeB, nameA, nameB) {
+    if (changeA == null || changeB == null) return "No VOR total. A player in the deal has no points per game, so the change is incomplete.";
+    return nameA + " VOR " + signedPts(changeA) + ". " + nameB + " VOR " + signedPts(changeB) + ".";
+  }
+
   function depthTable(before, after) {
     var rows = OFFENSE.concat(IDP).map(function (pos) {
       var now = before.have[pos];
@@ -360,8 +658,9 @@
     if (!packet.rows.length) return "<p class=\"ta-empty\">No players marked.</p>";
     return "<ul class=\"ta-points\">" + packet.rows.map(function (row) {
       var logged = row.pts == null ? "no week log" : formatPts(row.pts) + " logged";
+      var vor = row.vor == null ? "VOR —" : "VOR " + signedPts(row.vor);
       var tag = row.ir ? " · IR" : "";
-      return "<li><span>" + esc(row.name) + "</span> <span class=\"ta-pos\">" + esc(row.pos) + tag + "</span> <strong>" + esc(logged) + "</strong></li>";
+      return "<li><span>" + esc(row.name) + "</span> <span class=\"ta-pos\">" + esc(row.pos) + tag + "</span> <strong>" + esc(logged) + "</strong> <span class=\"ta-vor\">" + esc(vor) + "</span></li>";
     }).join("") + "</ul>";
   }
 
@@ -377,6 +676,8 @@
     teams: [],
     lineup: null,
     logs: new Map(),
+    plan: null,
+    asOfLabel: "",
     featured: FEATURED,
     sideA: "eddies",
     sideB: "ultron",
@@ -389,12 +690,15 @@
     return state.teams.filter(function (team) { return team.id === id; })[0] || null;
   }
 
-  function sideCard(team, before, after, packet) {
+  function sideCard(team, before, after, packet, vorDelta, showChange) {
+    var change = showChange
+      ? "<p class=\"ta-vorline\">" + esc(vorDelta == null ? "VOR change —" : "VOR change " + signedPts(vorDelta)) + "</p>"
+      : "";
     return "<article class=\"ta-side\" data-team=\"" + esc(team.id) + "\"><h3><span class=\"ta-mark\" style=\"background:" +
       esc(team.color) + "\"></span> " + esc(team.name) + " <span class=\"ta-pos\">" + esc(team.abbrev) +
       "</span></h3><p class=\"ta-season\">" + esc(seasonLine(team)) + "</p><div data-depth=\"" + esc(team.id) + "\">" +
-      depthTable(before, after) + "</div><h4>Players in the deal</h4><div data-points=\"" + esc(team.id) + "\">" +
-      pointRows(packet) + "</div></article>";
+      depthTable(before, after) + "</div><h4>Players in the deal</h4>" + change +
+      "<div data-points=\"" + esc(team.id) + "\">" + pointRows(packet) + "</div></article>";
   }
 
   function playerColumn(team, picks, side) {
@@ -442,7 +746,11 @@
     var edge = depthEdge(beforeA, afterA, beforeB, afterB);
     var ptsA = dealPoints(state.logs, markedA);
     var ptsB = dealPoints(state.logs, markedB);
+    ptsA.rows.forEach(function (row, i) { row.vor = playerVor(markedA[i], state.plan); });
+    ptsB.rows.forEach(function (row, i) { row.vor = playerVor(markedB[i], state.plan); });
     var pEdge = pointsEdge(ptsA, ptsB);
+    var vorA = vorChange(markedA, markedB, state.plan);
+    var vorB = vorChange(markedB, markedA, state.plan);
     var options = state.teams.map(function (team) {
       return "<option value=\"" + esc(team.id) + "\">" + esc(team.name) + "</option>";
     }).join("");
@@ -451,16 +759,18 @@
       : "<div class=\"ta-grid\">" + playerColumn(teamA, state.pickA, "a") + playerColumn(teamB, state.pickB, "b") + "</div>";
     var dealOpen = !same && (markedA.length || markedB.length);
     var summary = same
-      ? "Pick two different clubs to see depth and logged points."
+      ? "Pick two different clubs to see depth, logged points, and VOR."
       : dealOpen
-        ? depthSentence(edge, teamA.name, teamB.name) + " " + pointsSentence(pEdge, teamA.name, teamB.name)
+        ? depthSentence(edge, teamA.name, teamB.name) + " " + pointsSentence(pEdge, teamA.name, teamB.name) + " " + vorSentence(vorA, vorB, teamA.name, teamB.name)
         : "Mark the players moving each way. The tables are the current depth charts, offense and IDP.";
+    var note = formulaNote(state.plan);
     app.innerHTML = "<div class=\"ta-picks\"><label>Sends <select id=\"taSideA\" data-side=\"a\">" + options +
       "</select></label><label>Receives from <select id=\"taSideB\" data-side=\"b\">" + options +
       "</select></label></div><section class=\"card ta-result\" id=\"taResult\"><h2>This deal</h2><p class=\"ta-summary\">" +
       esc(summary) + "</p>" + (dealOpen ? meterBar(edge, teamA.color, teamB.color) : "") + "<div class=\"ta-grid\">" +
-      sideCard(teamA, beforeA, afterA, ptsA) + sideCard(teamB, beforeB, afterB, ptsB) +
-      "</div><p class=\"ta-note\">IDP starters are DL, LB, and DB, plus the ID flex. RWT flex is RB, WR, and TE. IR is not active depth. Logged points come from the posted week score files and only where that player was listed. A blank log is not zero.</p></section>" +
+      sideCard(teamA, beforeA, afterA, ptsA, vorA, dealOpen) + sideCard(teamB, beforeB, afterB, ptsB, vorB, dealOpen) +
+      "</div><p class=\"ta-note\" id=\"taFormula\" title=\"VOR is points per game minus the replacement points per game.\">" +
+      esc(note) + " IR is not active depth. Logged points come from the posted week score files and only where that player was listed. A blank log is not zero.</p></section>" +
       lists;
     var selA = document.getElementById("taSideA");
     var selB = document.getElementById("taSideB");
@@ -534,51 +844,110 @@
     if (strip) strip.textContent = text;
   }
 
+  function setAsOf(label) {
+    state.asOfLabel = label || "";
+    var el = document.getElementById("taAsOf");
+    var line = asOfLine(label);
+    if (el) el.textContent = line;
+    return line;
+  }
+
+  function loadOptional(url) {
+    return fetchJson(url).catch(function () { return null; });
+  }
+
+  function loadRosterSet() {
+    var indexReq = rosterIndexRequest();
+    return Promise.all([
+      loadOptional(indexReq.local),
+      loadOptional(indexReq.remote)
+    ]).then(function (pair) {
+      var chosenIndex = pickFresher(pair[0], pair[1]);
+      if (!chosenIndex || !chosenIndex.file) throw new Error("rosters");
+      var ids = Array.isArray(chosenIndex.file.teams) ? chosenIndex.file.teams.filter(safeId) : [];
+      return Promise.all(ids.map(function (id) {
+        var req = rosterRequest(id);
+        return Promise.all([
+          loadOptional(req.local),
+          loadOptional(req.remote)
+        ]).then(function (files) {
+          var chosen = pickFresher(files[0], files[1]);
+          if (!chosen || !chosen.file) throw new Error(id);
+          return { id: id, roster: chosen.file, time: chosen.time, from: chosen.from };
+        });
+      })).then(function (rows) {
+        var oldest = null;
+        rows.forEach(function (row) {
+          if (!row.time) return;
+          if (!oldest || row.time.ms < oldest.ms) oldest = row.time;
+        });
+        return { rows: rows, asOf: oldest || chosenIndex.time || null };
+      });
+    });
+  }
+
   function startAnalyzer() {
     state.featured = FEATURED;
     var lede = document.getElementById("taLede");
     if (lede) {
-      lede.textContent = "Desk copy for " + state.featured + ". Pick two clubs and the players moving each way. Depth includes IDP. Points are logged week totals only. This page does not send trades.";
+      lede.textContent = "Desk copy for " + state.featured + ". Pick two clubs and the players moving each way. Depth includes IDP. Points are logged week totals. VOR is points per game over replacement. This page does not send trades.";
     }
     var app = document.getElementById("taApp");
     Promise.all([
-      fetchJson(LOCAL.rosterIndex),
       fetchJson(LOCAL.rankings),
       fetchJson(LOCAL.scoring),
       fetchJson(LOCAL.teams),
-      loadLogs()
+      loadLogs(),
+      loadOptional(LOCAL.values),
+      loadOptional(LOCAL.freeAgents),
+      loadRosterSet()
     ]).then(function (loaded) {
-      var index = loaded[0];
-      var rankings = loaded[1];
-      var scoring = loaded[2];
-      var teamsFile = loaded[3];
-      var logs = loaded[4];
-      state.lineup = lineupFromScoring(scoring);
+      var rankings = loaded[0];
+      var scoring = loaded[1];
+      var teamsFile = loaded[2];
+      var logs = loaded[3];
+      var values = loaded[4];
+      var freeAgents = loaded[5];
+      var rosterSet = loaded[6];
+      state.lineup = resolveLineup(scoring);
       state.logs = logs.store;
       var ranks = rankIndex(rankings);
       var colors = colorIndex(teamsFile);
-      var ids = Array.isArray(index.teams) ? index.teams.filter(safeId) : [];
-      return Promise.all(ids.map(function (id) {
-        return fetchJson(rosterPath(id)).then(function (roster) {
-          return teamRecord(id, roster, colors.get(id), ranks.get(id), state.featured);
-        });
-      })).then(function (teams) {
-        state.teams = teams;
-        if (!teams.some(function (team) { return team.id === state.sideA; }) && teams[0]) state.sideA = teams[0].id;
-        if (!teams.some(function (team) { return team.id === state.sideB; })) {
-          var other = teams.filter(function (team) { return team.id !== state.sideA; })[0] || teams[0];
-          state.sideB = other ? other.id : state.sideA;
-        }
-        var bits = [];
-        if (logs.through) bits.push("Score file through week " + logs.through);
-        if (rankings && Number.isInteger(Number(rankings.week))) bits.push("power rankings week " + rankings.week);
-        bits.push(teams.length + " clubs");
-        setStrip(bits.join(" · "));
-        render();
+      var rates = rateIndex(values);
+      var teams = rosterSet.rows.map(function (row) {
+        return teamRecord(row.id, row.roster, colors.get(row.id), ranks.get(row.id), state.featured);
       });
+      var rosteredKeys = new Set();
+      teams.forEach(function (team) {
+        attachRates(team.players, rates, logs.store);
+        team.players.forEach(function (player) { rosteredKeys.add(player.key); });
+      });
+      var fas = freeAgentRates(freeAgents, rosteredKeys);
+      state.plan = replacementPlan(teams.map(function (team) {
+        return {
+          id: team.id,
+          players: team.players.map(function (player) {
+            var pos = VALUE_POS.indexOf(player.valuePos) !== -1 ? player.valuePos : player.pos;
+            return { key: player.key, name: player.name, pos: pos, ppg: player.ppg, ir: player.ir };
+          })
+        };
+      }), fas, state.lineup, TEAM_COUNT);
+      state.teams = teams;
+      if (!teams.some(function (team) { return team.id === state.sideA; }) && teams[0]) state.sideA = teams[0].id;
+      if (!teams.some(function (team) { return team.id === state.sideB; })) {
+        var other = teams.filter(function (team) { return team.id !== state.sideA; })[0] || teams[0];
+        state.sideB = other ? other.id : state.sideA;
+      }
+      var bits = [setAsOf(rosterSet.asOf && rosterSet.asOf.label)];
+      if (logs.through) bits.push("Score file through week " + logs.through);
+      if (rankings && Number.isInteger(Number(rankings.week))) bits.push("power rankings week " + rankings.week);
+      bits.push(teams.length + " clubs");
+      setStrip(bits.join(" · "));
+      render();
     }).catch(function (err) {
       console.error(err);
       setStrip("Roster or ranking files are unavailable.");
+      setAsOf("");
       if (app) app.innerHTML = "<div class=\"banner\">Roster or ranking files are unavailable. No depth or points were filled in.</div>";
     });
   }
@@ -601,8 +970,21 @@
     LOCAL: LOCAL,
     OFFENSE: OFFENSE,
     IDP: IDP,
+    BILL_LINEUP: BILL_LINEUP,
+    TEAM_COUNT: TEAM_COUNT,
     rosterPath: rosterPath,
+    rosterRequest: rosterRequest,
+    rosterIndexRequest: rosterIndexRequest,
     weekScoreRequest: weekScoreRequest,
+    resolveLineup: resolveLineup,
+    replacementBases: replacementBases,
+    replacementPlan: replacementPlan,
+    playerVor: playerVor,
+    vorChange: vorChange,
+    formulaNote: formulaNote,
+    parseRosterStamp: parseRosterStamp,
+    pickFresher: pickFresher,
+    asOfLine: asOfLine,
     playerKey: playerKey,
     publicLabel: publicLabel,
     clubName: clubName,

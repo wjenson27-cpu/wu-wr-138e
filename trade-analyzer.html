@@ -12,7 +12,10 @@
 <link rel="stylesheet" href="css/warroom.css">
 <style>
 main{padding:10px 12px 24px;max-width:980px;margin:0 auto}
-.ta-lede{font-size:.8rem;color:#A5ACAF;margin:0 0 10px;line-height:1.4}
+.ta-lede{font-size:.8rem;color:#A5ACAF;margin:0 0 6px;line-height:1.4}
+.ta-asof{font-size:.8rem;font-weight:800;color:#69BE28;margin:0 0 10px}
+.ta-vor,.ta-vorline{color:#D4A017;font-weight:800}
+.ta-vorline{font-size:.78rem;margin:0 0 4px}
 .ta-picks{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
 .ta-picks label{display:flex;flex-direction:column;gap:4px;font-size:.65rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#A5ACAF;min-width:0}
 .ta-picks select{text-transform:none;letter-spacing:0;font-weight:700;margin:0}
@@ -62,6 +65,7 @@ main{padding:10px 12px 24px;max-width:980px;margin:0 auto}
 </div>
 <main id="main-content">
   <p class="ta-lede" id="taLede">Desk copy for Eagleridge Eddie's. Loading roster and ranking files.</p>
+  <p class="ta-asof" id="taAsOf">Rosters as of …</p>
   <div id="taApp" aria-busy="true">
     <div class="card"><p>Loading roster and ranking files.</p></div>
   </div>

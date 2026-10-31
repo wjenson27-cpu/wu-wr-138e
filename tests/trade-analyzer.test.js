@@ -108,6 +108,116 @@ test("sending the only quarterback opens a starter hole and logs the posted week
   assert.equal(ta.formatPts(ta.pointsEdge(ptsA, ptsB).diff), "22");
 });
 
+test("replacement bases are 14 times Bill's required starters", function () {
+  assert.deepEqual(ta.BILL_LINEUP, {
+    QB: 1, RB: 1, WR: 1, TE: 1, RWT: 3, DL: 1, LB: 1, DB: 2, ID: 3
+  });
+  assert.deepEqual(ta.replacementBases(ta.BILL_LINEUP, 14), {
+    QB: 14, RB: 14, WR: 14, TE: 14, DL: 14, LB: 14, DB: 28
+  });
+  assert.equal(ta.BILL_LINEUP.RWT * 14, 42);
+  assert.equal(ta.BILL_LINEUP.ID * 14, 42);
+  assert.deepEqual(ta.resolveLineup(require("../data/scoring.json")), ta.BILL_LINEUP);
+  const wrong = {
+    roster: {
+      startingLineup: {
+        QB: 2, RB: 2, WR: 2, TE: 2, RWT_flex_RB_WR_TE: 0,
+        DL: 2, LB: 2, DB: 1, ID_flex_any_IDP: 0
+      }
+    }
+  };
+  assert.deepEqual(ta.resolveLineup(wrong), ta.BILL_LINEUP);
+  assert.deepEqual(ta.lineupFromScoring(wrong), {
+    QB: 2, RB: 2, WR: 2, TE: 2, RWT: 0, DL: 2, LB: 2, DB: 1, ID: 0
+  });
+});
+
+test("flex spots follow a greedy club lineup and final ranks add those spots", function () {
+  const teams = [];
+  for (let i = 0; i < 14; i++) {
+    const players = [];
+    function add(pos, n, ppg) {
+      for (let k = 0; k < n; k++) {
+        players.push({ key: i + "-" + pos + "-" + k, name: pos + " " + i + " " + k, pos: pos, ppg: ppg - k, ir: false });
+      }
+    }
+    add("QB", 1, 20);
+    add("RB", 2, 18);
+    add("WR", 4, 30);
+    add("TE", 1, 12);
+    add("DL", 2, 16);
+    add("LB", 2, 15);
+    add("DB", 3, 14);
+    teams.push({ id: "t" + i, players: players });
+  }
+  const plan = ta.replacementPlan(teams, [], ta.BILL_LINEUP, 14);
+  assert.deepEqual(plan.bases, { QB: 14, RB: 14, WR: 14, TE: 14, DL: 14, LB: 14, DB: 28 });
+  assert.equal(plan.flex.RB + plan.flex.WR + plan.flex.TE, 42);
+  assert.equal(plan.flex.DL + plan.flex.LB + plan.flex.DB, 42);
+  assert.equal(plan.flex.WR, 42);
+  assert.equal(plan.flex.RB, 0);
+  assert.equal(plan.flex.TE, 0);
+  assert.equal(plan.flex.DL, 14);
+  assert.equal(plan.flex.LB, 14);
+  assert.equal(plan.flex.DB, 14);
+  assert.deepEqual(plan.ranks, { QB: 14, RB: 14, WR: 56, TE: 14, DL: 28, LB: 28, DB: 42 });
+  assert.match(ta.formulaNote(plan), /Final ranks: QB 14, RB 14, WR 56, TE 14, DL 28, LB 28, DB 42/);
+});
+
+test("a club that cannot fill flex leaves that spot for the next-best player", function () {
+  const lineup = { QB: 1, RB: 1, WR: 1, TE: 0, RWT: 1, DL: 0, LB: 0, DB: 0, ID: 0 };
+  const teams = [
+    { players: [
+      { key: "qa", name: "QA", pos: "QB", ppg: 10, ir: false },
+      { key: "ra", name: "RA", pos: "RB", ppg: 30, ir: false },
+      { key: "wa", name: "WA", pos: "WR", ppg: 5, ir: false },
+      { key: "irb", name: "IRB", pos: "RB", ppg: 99, ir: true }
+    ]},
+    { players: [
+      { key: "qb", name: "QB", pos: "QB", ppg: 9, ir: false },
+      { key: "rb1", name: "RB1", pos: "RB", ppg: 20, ir: false },
+      { key: "rb2", name: "RB2", pos: "RB", ppg: 12, ir: false },
+      { key: "wr1", name: "WR1", pos: "WR", ppg: 25, ir: false },
+      { key: "wr2", name: "WR2", pos: "WR", ppg: 15, ir: false }
+    ]}
+  ];
+  const plan = ta.replacementPlan(teams, [], lineup, 2);
+  assert.deepEqual(plan.bases, { QB: 2, RB: 2, WR: 2, TE: 0, DL: 0, LB: 0, DB: 0 });
+  assert.equal(plan.flex.RB, 1);
+  assert.equal(plan.flex.WR, 1);
+  assert.equal(plan.ranks.QB, 2);
+  assert.equal(plan.ranks.RB, 3);
+  assert.equal(plan.ranks.WR, 3);
+  assert.equal(plan.replacement.RB.ppg, 12);
+  assert.equal(plan.replacement.WR.ppg, 5);
+  const withFa = ta.replacementPlan(teams, [{ key: "fa", name: "FA RB", pos: "RB", ppg: 19 }], lineup, 2);
+  assert.equal(withFa.replacement.RB.ppg, 19);
+  assert.equal(withFa.flex.RB, 1);
+  const dup = ta.replacementPlan(teams, [{ key: "rb2", name: "RB2", pos: "RB", ppg: 50 }], lineup, 2);
+  assert.equal(dup.replacement.RB.ppg, 12);
+  const sent = [{ key: "ra", name: "RA", pos: "RB", ppg: 30, valuePos: "RB" }];
+  const got = [{ key: "wr1", name: "WR1", pos: "WR", ppg: 25, valuePos: "WR" }];
+  assert.equal(ta.playerVor(sent[0], plan), 18);
+  assert.equal(ta.vorChange(sent, got, plan), (25 - 5) - (30 - 12));
+});
+
+test("the newer roster timestamp wins and a tie keeps the league site", function () {
+  const older = { asOf: "2026-10-28 10:45 AM PT", roster: { QB: ["Old Name"] } };
+  const newer = { asOf: "2026-10-30 4:16 PM PT", roster: { QB: ["New Name"] } };
+  const picked = ta.pickFresher(older, newer);
+  assert.equal(picked.from, "hq");
+  assert.equal(picked.file.roster.QB[0], "New Name");
+  assert.equal(ta.asOfLine(picked.time.label), "Rosters as of 2026-10-30 4:16 PM PT");
+  const tie = ta.pickFresher(newer, { asOf: "2026-10-30 4:16 PM PT", roster: { QB: ["Live"] } });
+  assert.equal(tie.from, "hq");
+  assert.equal(tie.file.roster.QB[0], "Live");
+  const localNewer = ta.pickFresher({ asOf: "2026-10-31 1:00 AM PT", roster: { QB: ["Local"] } }, newer);
+  assert.equal(localNewer.from, "local");
+  assert.equal(ta.rosterIndexRequest().remote, ta.HQ + "rosters/index.json");
+  assert.equal(ta.rosterRequest("ultron").remote, ta.HQ + "rosters/ultron.json");
+  assert.equal(ta.rosterRequest("../teams"), null);
+});
+
 test("the page is noindex and the war room nav is the only link", function () {
   const page = read("trade-analyzer.html");
   const home = read("index.html");
