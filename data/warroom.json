@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-10-30T15:15:00-07:00",
+  "asOf": "2026-10-31T15:05:00-07:00",
   "season": 2026,
   "week": 8,
   "opponent": {
@@ -9,23 +9,19 @@
     "name": "Ultron"
   },
   "freshness": {
-    "plan": "2026-10-30T15:15:00-07:00",
-    "roster": "2026-10-30T15:15:00-07:00",
-    "scores": "2026-10-30T15:15:00-07:00",
-    "waivers": "2026-10-30T15:15:00-07:00",
-    "news": "2026-10-30T15:00:00-07:00"
+    "plan": "2026-10-31T15:05:00-07:00",
+    "roster": "2026-10-31T15:05:00-07:00",
+    "scores": "2026-10-31T15:05:00-07:00",
+    "waivers": "2026-10-31T15:05:00-07:00",
+    "news": "2026-10-31T14:45:00-07:00"
   },
   "lockTimes": [
-    {
-      "label": "TNF CAR@GB 5:15 PM PT (Coker, E. Williams)",
-      "at": "2026-10-29T17:15:00-07:00"
-    },
     {
       "label": "Sunday early 10:00 AM PT (Hall, Wilson, Bowers, Lawrence, Pickens, Simpson, Bishop)",
       "at": "2026-11-01T10:00:00-08:00"
     },
     {
-      "label": "MNF CHI@SEA 5:15 PM PT (Knight, Charbonnet)",
+      "label": "MNF CHI@SEA 5:15 PM PT (Charbonnet)",
       "at": "2026-11-02T17:15:00-08:00"
     },
     {
@@ -50,7 +46,7 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "vs LV soft run D. QUESTIONABLE (quad, LP Fri); Braelon Allen off report. If OUT, Charbonnet (Mon) is the RB fallback. Locks Sun 10:00 AM PT.",
+      "reason": "vs LV (6th-most PPR to RBs). Still Q (quad), game-time decision; no game since W3. If inactive at 8:30 AM PT, start Corey Kiner (NE @MIA 1:25 PM). Locks Sun 10:00 AM PT.",
       "injury": "Q",
       "practice": "LP Wed/Thu/Fri (quad)"
     },
@@ -70,7 +66,7 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "@NYJ, matchup-proof at TE premium. No game designation.",
+      "reason": "@NYJ (27th vs TE, tough), but TE premium. 26.7 / 22.2, 84% snaps.",
       "injury": "",
       "practice": "LP Wed, FP Thu (calf)"
     },
@@ -80,7 +76,7 @@
       "pos": "WR",
       "nflTeam": "DAL",
       "verdict": "START",
-      "reason": "vs ARI. QUESTIONABLE (shoulder/hamstring), expected to play (Machota). If OUT, Lane swaps in at Sun 10:00 AM PT.",
+      "reason": "vs ARI. Q (shoulder/hamstring), expected to play. 14.7 season / 21.3 last-3, 79% snaps. If OUT, Lane (6.5 last-3).",
       "injury": "Q",
       "practice": "LP Wed/Thu"
     },
@@ -100,7 +96,7 @@
       "pos": "WR",
       "nflTeam": "TEN",
       "verdict": "START",
-      "reason": "@CIN. Tate/Spears out or doubtful, TEN trailing script = volume; return floor.",
+      "reason": "@CIN. 11.0 / 14.0 but only 21% W7 snaps; return yards carry him.",
       "injury": "",
       "practice": ""
     },
@@ -110,7 +106,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "@DEN, DL #5. Woellert low-volume game (DEN 57.1 plays/gm).",
+      "reason": "@DEN, tough OL (27th in sacks allowed). 18.0 / 24.5, 84% snaps. Only DL; start.",
       "injury": "",
       "practice": ""
     },
@@ -120,7 +116,7 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "vs NE. LB #16 this week, #24 ROS. Not a dot, but he earns it.",
+      "reason": "vs NE. 18.2 / 17.5, 90% snaps. Woellert LB14 Sat; LB16 wk / LB25 ROS.",
       "injury": "",
       "practice": ""
     },
@@ -150,7 +146,7 @@
       "pos": "LB",
       "nflTeam": "BAL",
       "verdict": "START",
-      "reason": "@BUF, LB #23. Roquan Smith FP Fri, no designation; caps ceiling. Woellert: strong start.",
+      "reason": "@BUF. 19.3 / 17.0, 63% snaps; LB24 wk. Roquan back caps ceiling.",
       "injury": "",
       "practice": ""
     },
@@ -160,7 +156,7 @@
       "pos": "LB",
       "nflTeam": "WAS",
       "verdict": "START",
-      "reason": "vs PHI, LB #32 (tough draw). WAS green dot.",
+      "reason": "vs PHI (SNF), tough. 17.0 / 20.5, 98% snaps; WAS green dot. Trade post is a joke/unverified.",
       "injury": "",
       "practice": ""
     },
@@ -170,19 +166,9 @@
       "pos": "DB",
       "nflTeam": "BUF",
       "verdict": "START",
-      "reason": "vs BAL, DB #24 wk / #16 ROS. Woellert: strong start.",
+      "reason": "vs BAL. 15.8 / 21.0, 100% snaps; Woellert DB13.",
       "injury": "",
       "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Tyrice Knight",
-      "pos": "LB",
-      "nflTeam": "SEA",
-      "verdict": "WATCH",
-      "reason": "SIT. New LP (hip) Thu; Drake Thomas LP (ankle). Top IDP cut once SEA clears Thomas or tags Knight.",
-      "injury": "",
-      "practice": "LP Thu (hip)"
     },
     {
       "slot": "BN",
@@ -220,9 +206,9 @@
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "SIT",
-      "reason": "Fallback only if Hall OUT (Mon vs CHI). FP Thu.",
-      "injury": "Q",
-      "practice": "FP Thu"
+      "reason": "No designation; expected to debut Mon vs CHI (Garafolo). 0 pts this year; stay bench.",
+      "injury": "",
+      "practice": "LP Fri"
     },
     {
       "slot": "BN",
@@ -263,6 +249,16 @@
       "reason": "IR slot. NO bye W8.",
       "injury": "IR",
       "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Corey Kiner",
+      "pos": "RB",
+      "nflTeam": "NE",
+      "verdict": "WATCH",
+      "reason": "@MIA 1:25 PM PT. 5.4 / 10.3, 16% snaps. Henderson OUT (illness) bumps him; Hall fallback.",
+      "injury": "",
+      "practice": ""
     }
   ],
   "injuryWatch": [
@@ -270,31 +266,19 @@
       "player": "Breece Hall",
       "tag": "Q",
       "practice": "LP Wed/Thu/Fri",
-      "note": "Quad; Allen off report. Locks Sun 10:00 AM PT."
+      "note": "Quad, game-time decision. Inactives ~8:30 AM PT; Kiner fallback."
     },
     {
       "player": "George Pickens",
       "tag": "Q",
       "practice": "LP Wed/Thu",
-      "note": "Shoulder + hamstring; expected to play (Machota)."
+      "note": "Expected to play (Machota)."
     },
     {
-      "player": "Tyrice Knight",
+      "player": "Zach Charbonnet",
       "tag": "",
-      "practice": "LP Thu (hip)",
-      "note": "New hip; Drake Thomas LP (ankle). SEA Fri report pending; Sat designations decide."
-    },
-    {
-      "player": "Trenton Simpson",
-      "tag": "",
-      "practice": "Not on report",
-      "note": "Roquan Smith FP Fri, no designation."
-    },
-    {
-      "player": "Cedric Gray",
-      "tag": "",
-      "practice": "Not on report",
-      "note": "Aggregator concussion claim UNVERIFIED; not on TEN report."
+      "practice": "LP Fri",
+      "note": "No designation; expected debut Mon."
     }
   ],
   "byes": [
@@ -331,56 +315,50 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "D.J. Wonnum",
-      "pos": "DL",
-      "nflTeam": "DET",
-      "why": "WEEKLY $0 stream vs MIN leaky OL; FP Thu. Use if Knight is cut.",
-      "stats": "13.5 FP/G season, proj 16.7 W8",
+      "player": "Jamel Dean",
+      "pos": "DB",
+      "nflTeam": "PIT",
+      "why": "ROS watch vs CLE. 26.5 last-3 FP/G; snaps unverified. Compare Bishop 15.8 / 21.0.",
+      "stats": "15.83 FP/G season, 26.5 last-3, 19 last wk",
       "faabMin": 0,
       "faabMax": 0,
       "bid": 0,
-      "drop": "Tyrice Knight (if Thomas cleared or Knight tagged)",
-      "tag": "DART"
-    },
-    {
-      "rank": 2,
-      "player": "Carl Granderson",
-      "pos": "DL",
-      "nflTeam": "NO",
-      "why": "ROS stash, $0 FA. W8 bye.",
-      "stats": "18.0 FP/G Fantrax; DL #5 ROS",
-      "faabMin": 0,
-      "faabMax": 0,
-      "bid": 0,
-      "drop": "Tyrice Knight (if Thomas cleared or Knight tagged)",
+      "drop": "Kendrick Bourne",
       "tag": "LIKE"
     },
     {
-      "rank": 3,
-      "player": "Elijah Ponder",
-      "pos": "LB",
-      "nflTeam": "NE",
-      "why": "WEEKLY watch @MIA; off report. MIA allows pressure on 47.4% dropbacks.",
-      "stats": "17.43 FP/G Fantrax; LB #36 wk / #46 ROS",
+      "rank": 2,
+      "player": "D.J. Wonnum",
+      "pos": "DL",
+      "nflTeam": "DET",
+      "why": "WEEKLY vs MIN (3rd-most sacks allowed). 72% snaps.",
+      "stats": "13.5 FP/G season, 16.5 last-3, 8 last wk",
       "faabMin": 0,
       "faabMax": 0,
       "bid": 0,
-      "drop": "",
+      "drop": "Kendrick Bourne",
       "tag": "DART"
+    },
+    {
+      "rank": 3,
+      "player": "Carl Granderson",
+      "pos": "DL",
+      "nflTeam": "NO",
+      "why": "ROS stash; W8 bye. 68% snaps.",
+      "stats": "18.0 FP/G season, 23.0 last-3",
+      "faabMin": 0,
+      "faabMax": 0,
+      "bid": 0,
+      "drop": "Kendrick Bourne",
+      "tag": "LIKE"
     }
   ],
   "drops": [
     {
       "rank": 1,
-      "player": "Tyrice Knight",
-      "pos": "LB",
-      "reason": "Conditional: new hip tag plus Drake Thomas returning. Cut once SEA clears Thomas or tags Knight."
-    },
-    {
-      "rank": 2,
       "player": "Kendrick Bourne",
       "pos": "WR",
-      "reason": "WR depth."
+      "reason": "6.6 / 8.0 FP/G, WR depth only."
     }
   ],
   "trades": [
@@ -388,7 +366,7 @@
       "with": "Ultron",
       "give": [],
       "get": [],
-      "why": "No offer. Ultron lost B. Robinson Jr. (OUT, hamstring) and streamed Higbee at TE."
+      "why": "No offer. Ultron gains from Henderson OUT (Stevenson) and Deablo OUT (Daniels)."
     }
   ],
   "idp": [
@@ -410,7 +388,7 @@
     {
       "nflTeam": "SEA",
       "greenDot": "Ernest Jones",
-      "notes": "Thomas LP (ankle) Thu; Knight LP (hip, new). SEA dime up (Woellert)."
+      "notes": "Thomas FP Fri, no designation; Knight dropped by Eddies Fri."
     },
     {
       "nflTeam": "TEN",
@@ -466,6 +444,41 @@
     }
   ],
   "news": [
+    {
+      "source": "Fantrax",
+      "time": "2026-10-31T15:05:00-07:00",
+      "text": "Live ~3:05 PM PT: Eddies 33, Ultron 0; proj 201.3-214. Hypersecretors dropped Micah Parsons; Valley Old Goats dropped Kendre Miller. 0 pending."
+    },
+    {
+      "source": "X @mwiggins92",
+      "time": "2026-10-31T14:00:00-07:00",
+      "text": "Charbonnet expected to debut Monday (Garafolo).",
+      "url": "https://x.com/mwiggins92/status/2116642890436784422"
+    },
+    {
+      "source": "X @johnpboyle",
+      "time": "2026-10-31T13:45:00-07:00",
+      "text": "SEA Sat: Drake Thomas, Knight, Charbonnet no designation; Charles Cross out.",
+      "url": "https://x.com/johnpboyle/status/2116632705907745270"
+    },
+    {
+      "source": "X @tori_mcelhaney",
+      "time": "2026-10-31T13:00:00-07:00",
+      "text": "Divine Deablo downgraded to OUT; Kendal Daniels up.",
+      "url": "https://x.com/tori_mcelhaney/status/2116621232623980761"
+    },
+    {
+      "source": "X @AdamSchefter",
+      "time": "2026-10-31T12:14:00-07:00",
+      "text": "Mansoor Delane OUT.",
+      "url": "https://x.com/AdamSchefter/status/2116609883055550918"
+    },
+    {
+      "source": "X @CreatorStockX",
+      "time": "2026-10-30T21:00:00-07:00",
+      "text": "Jeffery Simmons traded TEN to CHI (terms unverified).",
+      "url": "https://x.com/CreatorStockX/status/2116513030234083749"
+    },
     {
       "source": "Fantrax",
       "time": "2026-10-30T15:15:00-07:00",
@@ -535,49 +548,14 @@
       "time": "2026-10-29T12:30:00-07:00",
       "text": "Macdonald: Drake Thomas will practice Thursday.",
       "url": "https://x.com/BradyHenderson/status/2115890068183474613"
-    },
-    {
-      "source": "X @Mike_Woellert",
-      "time": "2026-10-29T10:30:00-07:00",
-      "text": "Jeffery Simmons traded TEN to CHI; unsure of impact on TEN LBs.",
-      "url": "https://x.com/Mike_Woellert/status/2115823205562589521"
-    },
-    {
-      "source": "Fantrax",
-      "time": "2026-10-28T14:55:00-07:00",
-      "text": "Live check ~2:55 PM PT. W8 Eddies (5-2) @ Ultron (3-4), proj 197.6 to 187.8. FAAB $34. Ultron added DB A.J. Haulcy (dropped Roschon Johnson); Hyper added Shemar James and Penix; TTAB added Bryan Cook; Pocket added Tory Horton; Morningside added Jacoby Brissett. No new trades."
-    },
-    {
-      "source": "X @BaltimoreLuke",
-      "time": "2026-10-28T14:22:00-07:00",
-      "text": "Ravens: Roquan Smith (knee) and Kyle Hamilton (knee) DNP Wed; Simpson and Lane not on report.",
-      "url": "https://x.com/BaltimoreLuke/status/2115554761030459610"
-    },
-    {
-      "source": "X @RichCimini",
-      "time": "2026-10-28T14:16:00-07:00",
-      "text": "Breece Hall LP (quad): three straight practices, none full yet.",
-      "url": "https://x.com/RichCimini/status/2115553336363753712"
-    },
-    {
-      "source": "X @samwarren83",
-      "time": "2026-10-28T14:13:00-07:00",
-      "text": "Brock Bowers LP (calf); was also LP last Wed before going full.",
-      "url": "https://x.com/samwarren83/status/2115552449587233272"
-    },
-    {
-      "source": "X @Mike_Woellert",
-      "time": "2026-10-28T13:41:00-07:00",
-      "text": "\"James to land on IR\" is Derwin James (LAC S), not Shemar James.",
-      "url": "https://x.com/Mike_Woellert/status/2115544586529448053"
     }
   ],
-  "lastUpdated": "2026-10-30T15:15:00-07:00",
+  "lastUpdated": "2026-10-31T15:05:00-07:00",
   "fantraxRaw": {
-    "file": "fantrax-scrape-2026-10-30-pm-newsletter.json",
-    "scraped": "2026-10-30 ~15:15 PDT"
+    "file": "fantrax-scrape-2026-10-31-pm-newsletter.json",
+    "scraped": "2026-10-31 ~15:05 PDT"
   },
   "refreshNotes": [
-    "Updated Fri Oct 30 3:15 PM PT from Eddie Daily: Hall/Pickens Q, Knight hip LP, Thomas LP, Wonnum WEEKLY / Granderson ROS."
+    "Updated Sat Oct 31 3:05 PM PT from Eddie Daily: Hall GTD (Kiner fallback), Knight gone, Charbonnet debut Mon."
   ]
 }
