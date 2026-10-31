@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#002244">
+<title>WU Sunday Command Center</title>
+<link rel="icon" href="img/eddies.png">
+<link rel="stylesheet" href="css/warroom.css">
+<style>
+body.su{overflow-x:hidden}
+.su .hdr > div:not(.tools){flex:1;min-width:0}
+.su .tools{flex:0 0 auto}
+.su-main{max-width:640px;margin:0 auto;padding:10px 12px 28px}
+.su h1{font-size:.98rem;line-height:1.15}
+.su .sub a{color:#69BE28;text-decoration:none}
+.su-banner{margin-bottom:8px}
+.su-stale{background:#3f1010;border:1px solid #f87171;color:#fecaca;border-radius:8px;padding:8px 10px;font-size:.75rem;margin-bottom:8px;line-height:1.35}
+.su-card{overflow:hidden}
+.su-vs{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:6px;align-items:end}
+.su-club{font-weight:800;font-size:.84rem;line-height:1.15;overflow-wrap:anywhere}
+.su-rec{font-size:.62rem;color:#A5ACAF;font-weight:700;margin-top:1px}
+.su-score{font-size:1.55rem;font-weight:800;color:#69BE28;line-height:1.05;letter-spacing:-.03em}
+.su-proj{display:block;font-size:.62rem;color:#A5ACAF;font-weight:700}
+.su-right{text-align:right}
+.su-mid{font-size:.62rem;font-weight:800;color:#64748b;padding-bottom:18px}
+.su-win{margin-top:10px}
+.su-win b{font-size:1.15rem}
+.su-win span{font-size:.68rem;color:#A5ACAF;font-weight:700}
+.su-bar{height:8px;background:#061018;border-radius:99px;margin:6px 0 4px;overflow:hidden}
+.su-bar i{display:block;height:100%;border-radius:99px;background:#69BE28}
+.su-bar i.mid{background:#fbbf24}
+.su-bar i.bad{background:#f87171}
+.su-formula{font-size:.62rem;color:#64748b;line-height:1.35}
+.su-alert{background:#3f1010;border:1px solid #f87171;color:#fecaca;border-radius:8px;padding:8px 10px;margin-bottom:10px}
+.su-alert h2{font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;margin:0 0 4px;color:#fca5a5}
+.su-alert p{font-size:.78rem;line-height:1.35;margin:0 0 6px}
+.su-alert p:last-child{margin-bottom:0}
+.su-alert b{color:#fff}
+.su-ok{background:#0c2416;border:1px solid #14532d;color:#86efac;border-radius:8px;padding:8px 10px;font-size:.75rem;margin-bottom:10px}
+.su-team{border-left-color:#7eb6ff}
+.su-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.su-head h2{font-size:.95rem;margin:0;overflow-wrap:anywhere}
+.su-player{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #122334}
+.su-player:last-child{border-bottom:0;padding-bottom:0}
+.su-name{font-weight:700;font-size:.88rem;line-height:1.2;overflow-wrap:anywhere}
+.su-meta{font-size:.64rem;color:#A5ACAF;margin-top:1px;line-height:1.3}
+.su-pts{text-align:right;min-width:58px}
+.su-pts b{display:block;font-size:.95rem;color:#e8eaed;line-height:1.1}
+.su-delta{display:block;font-size:.68rem;font-weight:800}
+.su-delta.up{color:#69BE28}
+.su-delta.down{color:#f87171}
+.su-delta.flat{color:#A5ACAF}
+.su-inj{font-style:normal;font-size:.55rem;font-weight:800;padding:1px 4px;border-radius:4px;margin-left:4px;vertical-align:1px}
+.su-inj.q{background:#78350f;color:#fcd34d}
+.su-inj.d{background:#7c2d12;color:#fdba74}
+.su-inj.out,.su-inj.ir{background:#7f1d1d;color:#fca5a5}
+.su-st{font-weight:800}
+.su-st.live{color:#69BE28}
+.su-st.final{color:#94a3b8}
+.su-st.not_started{color:#7eb6ff}
+.su-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#69BE28;margin-right:3px;vertical-align:middle}
+.su-pick{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid #122334}
+.su-pick:last-child{border-bottom:0}
+.su-pill{font-size:.6rem;font-weight:800;padding:2px 6px;border-radius:99px}
+.su-pill.yes{background:#14532d;color:#86efac}
+.su-pill.no{background:#7f1d1d;color:#fca5a5}
+.su-pill.pending{background:#78350f;color:#fcd34d}
+.su-pill.na{background:#1e293b;color:#94a3b8}
+.su-life{font-size:.78rem;margin:0 0 6px}
+.su-life.alive{color:#86efac}
+.su-life.hit{color:#69BE28}
+.su-life.dead{color:#fca5a5}
+@media (max-width:389px){
+  .su-score{font-size:1.4rem}
+  .su-club{font-size:.78rem}
+}
+</style>
+</head>
+<body class="su">
+<div class="sticky-top">
+<header>
+  <div class="hdr">
+    <img src="img/eddies.png" alt="Eddies">
+    <div>
+      <h1>WU Sunday Command Center</h1>
+      <div class="sub"><span id="clubSub">Eagleridge Eddie's</span> · <a href="index.html">War Room</a></div>
+    </div>
+    <div class="tools" id="headBadges"></div>
+  </div>
+</header>
+<div class="strip" id="strip">Loading Sunday…</div>
+</div>
+<main class="su-main" id="root"></main>
+<p class="footer">Eagleridge Eddie's · read-only Sunday board</p>
+<script src="js/sunday.js"></script>
+<script>
+(function () {
+  var escMap = {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"};
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return escMap[c]; });
+  }
+  function $(id) { return document.getElementById(id); }
+  var refreshMs = WUSunday.REFRESH_MS;
+  var lastFetch = 0;
+  var timer = 0;
+
+  function bust(url) {
+    return url + (url.indexOf("?") >= 0 ? "&" : "?") + "t=" + Date.now();
+  }
+
+  function loadJson(url) {
+    return fetch(bust(url), { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error(r.status + " " + url);
+      return r.json();
+    });
+  }
+
+  function meta(row) {
+    var bits = [];
+    if (row.pos) bits.push(row.pos);
+    if (row.nflTeam) bits.push(row.nflTeam);
+    if (row.slot && row.slot !== row.pos) bits.push(row.slot);
+    return bits.join(" · ");
+  }
+
+  function injuryHtml(code) {
+    if (!code) return "";
+    var cls = code === "OUT" ? "out" : code === "IR" ? "ir" : code === "D" ? "d" : "q";
+    return ' <i class="su-inj ' + cls + '">' + esc(code) + "</i>";
+  }
+
+  function statusHtml(row) {
+    var dot = row.status === "live" ? '<i class="su-dot"></i>' : "";
+    return '<span class="su-st ' + esc(row.status) + '">' + dot + esc(row.statusLabel) + "</span>";
+  }
+
+  function playerHtml(row) {
+    var delta = row.deltaLabel
+      ? '<span class="su-delta ' + esc(row.deltaTone) + '">' + esc(row.deltaLabel) + "</span>"
+      : "";
+    return '<div class="su-player"><div class="su-who"><div class="su-name">' + esc(row.player) + injuryHtml(row.injury) +
+      '</div><div class="su-meta">' + esc(meta(row)) + " · " + statusHtml(row) + "</div></div>" +
+      '<div class="su-pts"><b>' + esc(row.pointsLabel) + "</b>" + delta +
+      '<span class="su-proj">proj ' + esc(row.projection.toFixed(1)) + "</span></div></div>";
+  }
+
+  function teamBlock(side, extraClass) {
+    var rows = side.starters.map(playerHtml).join("");
+    return '<section class="card ' + extraClass + '"><div class="su-head"><h2>' + esc(side.name) +
+      "</h2><span class=\"su-proj\">" + esc(side.scoreLabel) + " · proj " + esc(side.projectedLabel) +
+      "</span></div>" + rows + "</section>";
+  }
+
+  function alertHtml(a) {
+    var who = esc(a.player) + " (" + esc(a.pos) + ", " + esc(a.nflTeam) + ")";
+    var line = "<b>" + esc(a.team) + "</b> · " + who + " is <b>" + esc(a.injuryLabel) + "</b> before kickoff.";
+    if (a.swap) {
+      line += " Swap in <b>" + esc(a.swap.player) + "</b>";
+      if (a.swap.pos || a.swap.nflTeam) {
+        line += " (" + esc([a.swap.pos, a.swap.nflTeam].filter(Boolean).join(", ")) + ")";
+      }
+      line += ".";
+      if (a.swap.note) line += " " + esc(a.swap.note) + ".";
+    }
+    return "<p>" + line + "</p>";
+  }
+
+  function parlayHtml(p) {
+    var life = p.state === "alive" ? "The parlay is still alive."
+      : p.state === "hit" ? "The parlay hit."
+      : p.state === "dead" ? "The parlay is dead."
+      : "No picks for this week.";
+    var rows = p.picks.map(function (pick) {
+      var cls = pick.result === "Yes" ? "yes" : pick.result === "No" ? "no" : pick.result === "N/A" ? "na" : "pending";
+      var label = pick.result === "pending" ? "Pending" : pick.result;
+      return '<div class="su-pick"><div><div class="su-name">' + esc(pick.pick) +
+        '</div><div class="su-meta">' + esc(pick.participant) + "</div></div>" +
+        '<span class="su-pill ' + cls + '">' + esc(label) + "</span></div>";
+    }).join("");
+    var counts = p.state === "empty" ? "" : '<p class="tiny">' + p.yes + " hit · " + p.no + " miss · " + p.pending + " pending</p>";
+    var note = p.note ? '<p class="tiny">' + esc(p.note) + "</p>" : "";
+    return '<section class="card"><h2>TD parlay · Week ' + esc(p.week) + '</h2><p class="su-life ' + esc(p.state) + '">' +
+      esc(life) + "</p>" + counts + rows + note + "</section>";
+  }
+
+  function render(model) {
+    var badges = "";
+    if (model.sample || model.parlaySample) badges += '<span class="badge sample">SAMPLE</span>';
+    badges += model.stale ? '<span class="badge stale">STALE</span>' : '<span class="badge ok">FRESH</span>';
+    $("headBadges").innerHTML = badges;
+    $("clubSub").textContent = model.featured.name;
+    var when = model.updatedLabel || "unknown time";
+    $("strip").innerHTML = "Week <span>" + esc(model.week) + "</span> · Updated <span>" + esc(when) +
+      "</span> · refreshes every " + esc(model.refreshMinutes) + " min";
+
+    var html = "";
+    if (model.sample || model.parlaySample) {
+      html += '<div class="banner su-banner">Sample data, clearly marked. Scores and picks are placeholders until a job refreshes the JSON.</div>';
+    }
+    if (model.stale) {
+      html += '<div class="su-stale"><b>STALE.</b> The score file is more than ' + esc(WUSunday.STALE_MINUTES) + " minutes old.</div>";
+    }
+    var bar = Math.max(0, Math.min(100, Math.round(model.winProb * 1000) / 10));
+    html += '<section class="card su-card"><div class="su-vs">' +
+      '<div><div class="su-club">' + esc(model.featured.name) + "</div>" +
+      (model.featured.record ? '<div class="su-rec">' + esc(model.featured.record) + "</div>" : "") +
+      '<div class="su-score">' + esc(model.featured.scoreLabel) + '</div><span class="su-proj">proj ' +
+      esc(model.featured.projectedLabel) + "</span></div>" +
+      '<div class="su-mid">vs</div>' +
+      '<div class="su-right"><div class="su-club">' + esc(model.opponent.name) + "</div>" +
+      (model.opponent.record ? '<div class="su-rec">' + esc(model.opponent.record) + "</div>" : "") +
+      '<div class="su-score">' + esc(model.opponent.scoreLabel) + '</div><span class="su-proj">proj ' +
+      esc(model.opponent.projectedLabel) + "</span></div></div>" +
+      '<div class="su-win"><b class="su-delta ' + (model.winTone === "bad" ? "down" : model.winTone === "mid" ? "flat" : "up") + '">' +
+      esc(model.winPctLabel) + '</b> <span>win probability</span>' +
+      '<div class="su-bar" role="img" aria-label="Win probability ' + esc(model.winPctLabel) + '"><i class="' +
+      esc(model.winTone) + '" style="width:' + bar + '%"></i></div>' +
+      '<p class="su-formula">Normal approximation. Margin of projected finals, divided by the square root of both clubs’ remaining projected points. Ties in a finished game stay at 50%.</p></div></section>';
+
+    if (model.alerts.length) {
+      html += '<section class="su-alert"><h2>Lock alerts</h2>' + model.alerts.map(alertHtml).join("") + "</section>";
+    } else {
+      html += '<div class="su-ok">No OUT or Doubtful starters before kickoff.</div>';
+    }
+    html += '<div class="sec">Starters</div><p class="tiny">Colored delta is points plus what is left, minus the full projection. Hidden before kickoff.</p>';
+    html += teamBlock(model.featured, "");
+    html += teamBlock(model.opponent, "su-team");
+    html += '<div class="sec">Anytime TD</div>';
+    html += parlayHtml(model.parlay);
+    $("root").innerHTML = html;
+  }
+
+  function fail(err) {
+    $("strip").textContent = "Could not load Sunday data";
+    if (!$("root").childNodes.length) {
+      $("root").innerHTML = '<div class="su-stale">' + esc(err && err.message ? err.message : "Load failed") + "</div>";
+    }
+  }
+
+  function load() {
+    var cfgUrl = "data/sunday/config.json";
+    return loadJson(cfgUrl).then(function (config) {
+      var liveUrl = (config && config.live) || "data/sunday/live.json";
+      var parlayUrl = (config && config.parlay) || "data/td-parlay.json";
+      return Promise.all([liveUrl, parlayUrl].map(loadJson)).then(function (pair) {
+        var model = WUSunday.buildModel(pair[0], pair[1], config, Date.now());
+        if (!model.ok) throw new Error(model.error);
+        refreshMs = Math.max(1, model.refreshMinutes) * 60 * 1000;
+        lastFetch = Date.now();
+        render(model);
+      });
+    }).catch(fail);
+  }
+
+  function arm() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(load, refreshMs);
+  }
+
+  load().then(arm);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible" && Date.now() - lastFetch >= refreshMs) load();
+  });
+})();
+</script>
+</body>
+</html>
