@@ -192,3 +192,36 @@ a.btn,a.btn.ghost{display:inline-block;text-decoration:none}
   header,.strip,nav,.chips{padding-left:18px;padding-right:18px}
 }
 nav a.navlink{flex-shrink:0;background:#0b1c2e;border:1px solid #1e3a5f;color:#A5ACAF;padding:8px 12px;border-radius:16px;font-size:.75rem;font-weight:700;text-decoration:none}
+main{max-width:100%;overflow-x:clip}
+.scroll{max-width:100%}
+.xsource{font-weight:800;color:#69BE28;font-size:.8rem;margin:0 0 8px;line-height:1.35}
+.xboard{width:100%;table-layout:fixed;font-variant-numeric:tabular-nums}
+.xboard th:nth-child(2),.xboard td:nth-child(2){width:3.4rem}
+.xboard th:nth-child(3),.xboard td:nth-child(3){width:4.4rem}
+.xboard th:nth-child(4),.xboard td:nth-child(4){width:5.2rem}
+.xboard td,.xboard th{overflow-wrap:anywhere}
+.xboard td:first-child{font-weight:700}
+tr.you td:first-child{color:#69BE28}
+.xsides{display:flex;flex-direction:column;gap:8px}
+.xside{background:#061018;border-radius:8px;padding:8px;min-width:0}
+.xside.you{box-shadow:inset 3px 0 0 #69BE28}
+.xside-top{display:flex;align-items:center;gap:8px}
+.xside-top h3{flex:1;min-width:0;font-size:.92rem;margin:0}
+.xscore{font-size:1.15rem;font-weight:800;font-variant-numeric:tabular-nums}
+.xnet{font-size:.75rem;color:#D4A017;font-weight:800;margin:4px 0}
+.xgot{font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#A5ACAF;margin:6px 0 2px}
+.xassets{list-style:none;margin:0}
+.xassets li{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;padding:4px 0;border-bottom:1px solid #122334;font-size:.8rem}
+.xname{font-weight:700;min-width:0}
+.xnums{margin-left:auto;font-size:.68rem;color:#A5ACAF;font-variant-numeric:tabular-nums}
+.xmiss{margin-left:auto;font-size:.68rem;color:#fca5a5;font-weight:700}
+.xtrade-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
+.xtrade-top h3{font-size:.82rem;margin:0;line-height:1.3}
+.xwin{flex-shrink:0;font-size:.68rem;font-weight:800;padding:3px 8px;border-radius:99px}
+.xwin.win{background:#14532d;color:#86efac}
+.xwin.even{background:#1e3a5f;color:#93c5fd}
+.xwin.miss{background:#7f1d1d;color:#fca5a5}
+.xformula{margin-top:12px}
+@media (min-width:860px){
+  .xsides{display:grid;grid-template-columns:1fr 1fr;align-items:start}
+}

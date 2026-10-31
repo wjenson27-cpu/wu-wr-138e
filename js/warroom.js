@@ -474,6 +474,15 @@
         greenDots: state.greenDots
       });
     }
+    if (window.WUTradeCenter) {
+      WUTradeCenter.mount({
+        trades: state.trades,
+        teams: (state.teamsDoc && state.teamsDoc.teams) || [],
+        rosters: state.rosters,
+        values: state.values,
+        freeAgents: state.freeAgents
+      });
+    }
     var rankLatest = await WUData.load("data/rankings/latest.json");
     var rankFile = rankLatest.data && rankLatest.data.file;
     var rankBoard = rankFile ? await WUData.load("data/rankings/" + rankFile) : { data: null };

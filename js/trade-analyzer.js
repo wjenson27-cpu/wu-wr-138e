@@ -957,7 +957,8 @@ function formulaNote(plan) {
     started = true;
     function start() {
       var app = document.getElementById("taApp");
-      if (app) app.addEventListener("change", onChange);
+      if (!app) return;
+      app.addEventListener("change", onChange);
       startAnalyzer();
     }
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
@@ -981,6 +982,9 @@ function formulaNote(plan) {
     replacementPlan: replacementPlan,
     playerVor: playerVor,
     vorChange: vorChange,
+    rateIndex: rateIndex,
+    freeAgentRates: freeAgentRates,
+    attachRates: attachRates,
     formulaNote: formulaNote,
     parseRosterStamp: parseRosterStamp,
     pickFresher: pickFresher,
