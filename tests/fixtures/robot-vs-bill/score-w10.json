@@ -1,0 +1,112 @@
+{
+  "week": 10,
+  "status": "final",
+  "actual": [
+    {
+      "slot": "QB",
+      "player": "Joe Burrow",
+      "pos": "QB",
+      "team": "CIN"
+    },
+    {
+      "slot": "RB",
+      "player": "Bijan Robinson",
+      "pos": "RB",
+      "team": "ATL"
+    },
+    {
+      "slot": "WR",
+      "player": "Ja'Marr Chase",
+      "pos": "WR",
+      "team": "CIN"
+    },
+    {
+      "slot": "TE",
+      "player": "Trey McBride",
+      "pos": "TE",
+      "team": "ARI"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Breece Hall",
+      "pos": "RB",
+      "team": "NYJ"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "team": "NYJ"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Amon-Ra St. Brown",
+      "pos": "WR",
+      "team": "DET"
+    },
+    {
+      "slot": "DL",
+      "player": "Nick Bosa",
+      "pos": "DL",
+      "team": "SF"
+    },
+    {
+      "slot": "LB",
+      "player": "Roquan Smith",
+      "pos": "LB",
+      "team": "BAL"
+    },
+    {
+      "slot": "DB",
+      "player": "Derwin James",
+      "pos": "DB",
+      "team": "LAC"
+    },
+    {
+      "slot": "DB",
+      "player": "Kyle Hamilton",
+      "pos": "DB",
+      "team": "BAL"
+    },
+    {
+      "slot": "IDP",
+      "player": "T.J. Watt",
+      "pos": "DL",
+      "team": "PIT"
+    },
+    {
+      "slot": "IDP",
+      "player": "Fred Warner",
+      "pos": "LB",
+      "team": "SF"
+    },
+    {
+      "slot": "IDP",
+      "player": "Brian Branch",
+      "pos": "DB",
+      "team": "DET"
+    }
+  ],
+  "points": {
+    "Joe Burrow": 10,
+    "Bijan Robinson": 10,
+    "Ja'Marr Chase": 10,
+    "Trey McBride": 10,
+    "Breece Hall": 10,
+    "Garrett Wilson": 10,
+    "Drake London": 10,
+    "Nick Bosa": 10,
+    "Roquan Smith": 10,
+    "Derwin James": 10,
+    "Kyle Hamilton": 10,
+    "T.J. Watt": 10,
+    "Fred Warner": 10,
+    "Xavier McKinney": 10,
+    "Amon-Ra St. Brown": 18,
+    "Brian Branch": 16
+  },
+  "bye": [],
+  "inactive": [
+    "Nick Bosa"
+  ]
+}

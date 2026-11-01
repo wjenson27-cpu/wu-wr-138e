@@ -1,0 +1,112 @@
+{
+  "week": 9,
+  "status": "final",
+  "actual": [
+    {
+      "slot": "QB",
+      "player": "Joe Burrow",
+      "pos": "QB",
+      "team": "CIN"
+    },
+    {
+      "slot": "RB",
+      "player": "Bijan Robinson",
+      "pos": "RB",
+      "team": "ATL"
+    },
+    {
+      "slot": "WR",
+      "player": "Ja'Marr Chase",
+      "pos": "WR",
+      "team": "CIN"
+    },
+    {
+      "slot": "TE",
+      "player": "Trey McBride",
+      "pos": "TE",
+      "team": "ARI"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Breece Hall",
+      "pos": "RB",
+      "team": "NYJ"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "team": "NYJ"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Adam Thielen",
+      "pos": "WR",
+      "team": "CAR"
+    },
+    {
+      "slot": "DL",
+      "player": "Nick Bosa",
+      "pos": "DL",
+      "team": "SF"
+    },
+    {
+      "slot": "LB",
+      "player": "Roquan Smith",
+      "pos": "LB",
+      "team": "BAL"
+    },
+    {
+      "slot": "DB",
+      "player": "Derwin James",
+      "pos": "DB",
+      "team": "LAC"
+    },
+    {
+      "slot": "DB",
+      "player": "Sauce Gardner",
+      "pos": "DB",
+      "team": "NYJ"
+    },
+    {
+      "slot": "IDP",
+      "player": "T.J. Watt",
+      "pos": "DL",
+      "team": "PIT"
+    },
+    {
+      "slot": "IDP",
+      "player": "Fred Warner",
+      "pos": "LB",
+      "team": "SF"
+    },
+    {
+      "slot": "IDP",
+      "player": "Xavier McKinney",
+      "pos": "DB",
+      "team": "GB"
+    }
+  ],
+  "points": {
+    "Joe Burrow": 22,
+    "Bijan Robinson": 18,
+    "Ja'Marr Chase": 16,
+    "Trey McBride": 11,
+    "Breece Hall": 14,
+    "Garrett Wilson": 10,
+    "Drake London": 8,
+    "Nick Bosa": 7,
+    "Roquan Smith": 11,
+    "Derwin James": 6,
+    "Kyle Hamilton": 5,
+    "T.J. Watt": 9,
+    "Fred Warner": 9,
+    "Xavier McKinney": 4,
+    "Adam Thielen": 2,
+    "Sauce Gardner": 12
+  },
+  "bye": [
+    "Sauce Gardner"
+  ],
+  "inactive": []
+}
