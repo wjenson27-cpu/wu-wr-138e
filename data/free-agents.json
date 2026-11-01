@@ -108,14 +108,6 @@
       "rosteredPct": 41.0
     },
     {
-      "player": "Quinyon Mitchell",
-      "pos": "DB",
-      "team": "PHI",
-      "fpg": 16.29,
-      "last3Fpg": 19.67,
-      "rosteredPct": 38.0
-    },
-    {
       "player": "Bo Nix",
       "pos": "QB",
       "team": "DEN",
@@ -170,14 +162,6 @@
       "fpg": 15.83,
       "last3Fpg": 26.5,
       "rosteredPct": 20.0
-    },
-    {
-      "player": "Dexter Lawrence",
-      "pos": "DL",
-      "team": "CIN",
-      "fpg": 15.5,
-      "last3Fpg": 18.5,
-      "rosteredPct": 65.0
     },
     {
       "player": "Chase Young",
@@ -1178,14 +1162,6 @@
       "fpg": 9.29,
       "last3Fpg": 14.67,
       "rosteredPct": 17.0
-    },
-    {
-      "player": "Jaylen Wright",
-      "pos": "RB",
-      "team": "MIA",
-      "fpg": 9.2,
-      "last3Fpg": 9.5,
-      "rosteredPct": 37.0
     },
     {
       "player": "Raheim Sanders",
