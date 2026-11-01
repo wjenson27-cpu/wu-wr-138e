@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "season": 2026,
+  "week": 9,
+  "window": {
+    "start": "2026-11-05",
+    "end": "2026-11-09",
+    "label": "Nov 5–9"
+  },
+  "status": "pending",
+  "robotLockedAt": null,
+  "firstKickoff": null,
+  "robot": [],
+  "actual": [],
+  "totals": {
+    "robot": null,
+    "eddies": null
+  },
+  "margin": null,
+  "result": null,
+  "winner": null,
+  "decisions": []
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "season": 2026,
+  "club": "Eagleridge Eddie's",
+  "sides": {
+    "robot": "Robot",
+    "eddies": "Eddies"
+  },
+  "firstWeek": 9,
+  "record": {
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "label": "0-0-0"
+  },
+  "points": {
+    "robot": 0.0,
+    "eddies": 0.0,
+    "margin": 0.0
+  },
+  "weeks": [
+    {
+      "week": 9,
+      "file": "w09.json",
+      "window": {
+        "start": "2026-11-05",
+        "end": "2026-11-09",
+        "label": "Nov 5–9"
+      },
+      "status": "pending",
+      "locked": false,
+      "robotLockedAt": null,
+      "result": null,
+      "winner": null,
+      "robotPoints": null,
+      "eddiesPoints": null,
+      "margin": null,
+      "decisions": []
+    }
+  ]
+}

@@ -22,6 +22,42 @@ To rebuild the ROS trade ideas, run `python3 scripts/build_trade_finder.py` from
 
 `sunday.html` is the phone page for Sunday. It reads `data/sunday/config.json`, `data/sunday/live.json`, and `data/td-parlay.json`. A separate job is meant to refresh the live file about every 30 minutes. The page refetches every 5 minutes. It does not scrape.
 
+## Robot vs. The Eddies
+
+`robot-vs-bill.html` is the phone scoreboard for the Robot's locked lineup against the Eagleridge Eddie's Fantrax lineup. It is not linked from the War Room home page. The board starts at Week 9 (Nov 5–9 2026). Earlier weeks are not recorded. Times are Pacific, labeled PT.
+
+- `data/robot-vs-bill/season.json` is the running tally (W-L-T, points for each side, margin).
+- `data/robot-vs-bill/wNN.json` is one week. `w09.json` ships unlocked, with empty lineups and null points.
+- `data/robot-vs-bill/schema.json` is the JSON Schema. Field notes: [docs/robot-vs-bill.md](docs/robot-vs-bill.md).
+
+Week file shape:
+
+```json
+{
+  "week": 9,
+  "window": { "start": "2026-11-05", "end": "2026-11-09", "label": "Nov 5–9" },
+  "status": "pending",
+  "robotLockedAt": "2026-11-05T09:30:00-08:00",
+  "firstKickoff": "2026-11-05T17:15:00-08:00",
+  "robot": [{ "slot": "QB", "player": "Player A", "pos": "QB", "team": "CIN", "points": null }],
+  "actual": [{ "slot": "QB", "player": "Player A", "pos": "QB", "team": "CIN", "points": null }],
+  "totals": { "robot": null, "eddies": null },
+  "margin": null,
+  "result": null,
+  "winner": null,
+  "decisions": []
+}
+```
+
+Slots, in order: QB, RB, WR, TE, three FLEX (RB/WR/TE), DL, LB, two DB, three IDP (DL/LB/DB). `result` is `W`, `L`, or `T` from the Robot side once `status` is `final`. `decisions` lists slot indexes whose players differ. `swing` is Robot points minus Eddies points. A player in both lineups counts once on each side. A bye or inactive player scores 0. Points stay null until the week is final.
+
+```bash
+python3 scripts/lock_robot_lineup.py --input lock.json --now 2026-11-05T09:30:00-08:00
+python3 scripts/score_robot_vs_bill.py --input score.json
+```
+
+A locked lineup cannot be edited. A lock at or after `firstKickoff` is refused, and so is any overwrite after that kickoff. Sample lineups stay in `tests/fixtures/robot-vs-bill/`.
+
 ## Auto-refresh (branch `eddie/warroom-auto-refresh`; merge is Bill's)
 
 Nothing here pushes to `main`, and nothing here pushes at all. Bill reviews and merges.

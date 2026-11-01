@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eddies.local/robot-vs-bill/schema.json",
+  "title": "Robot vs. The Eddies scoreboard",
+  "description": "Season tally and one week file. Points are null until status is final. No personal fields, bids, claims, or trades.",
+  "oneOf": [
+    { "$ref": "#/$defs/season" },
+    { "$ref": "#/$defs/week" }
+  ],
+  "$defs": {
+    "player": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slot", "player", "pos", "team", "points"],
+      "properties": {
+        "slot": { "enum": ["QB", "RB", "WR", "TE", "FLEX", "DL", "LB", "DB", "IDP"] },
+        "player": { "type": "string", "minLength": 2 },
+        "pos": { "enum": ["QB", "RB", "WR", "TE", "DL", "LB", "DB"] },
+        "team": { "type": "string", "pattern": "^[A-Z]{2,4}$" },
+        "points": { "type": ["number", "null"] }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slot", "index", "robotPlayer", "eddiesPlayer", "swing"],
+      "properties": {
+        "slot": { "type": "string" },
+        "index": { "type": "integer", "minimum": 0, "maximum": 13 },
+        "robotPlayer": { "type": "string" },
+        "robotPos": { "type": "string" },
+        "robotTeam": { "type": "string" },
+        "robotPoints": { "type": ["number", "null"] },
+        "eddiesPlayer": { "type": ["string", "null"] },
+        "eddiesPos": { "type": ["string", "null"] },
+        "eddiesTeam": { "type": ["string", "null"] },
+        "eddiesPoints": { "type": ["number", "null"] },
+        "swing": {
+          "type": ["number", "null"],
+          "description": "Robot points minus Eddies points at this decision. Null until the week is final."
+        }
+      }
+    },
+    "week": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion", "season", "week", "window", "status",
+        "robotLockedAt", "firstKickoff", "robot", "actual",
+        "totals", "margin", "result", "winner", "decisions"
+      ],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "season": { "const": 2026 },
+        "week": { "type": "integer", "minimum": 9, "maximum": 18 },
+        "window": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["start", "end", "label"],
+          "properties": {
+            "start": { "type": "string" },
+            "end": { "type": "string" },
+            "label": { "type": "string" }
+          }
+        },
+        "status": { "enum": ["pending", "final"] },
+        "robotLockedAt": {
+          "type": ["string", "null"],
+          "description": "ISO 8601 lock time with a Pacific offset, or null when the week is not locked."
+        },
+        "firstKickoff": { "type": ["string", "null"] },
+        "robot": { "type": "array", "items": { "$ref": "#/$defs/player" } },
+        "actual": { "type": "array", "items": { "$ref": "#/$defs/player" } },
+        "totals": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["robot", "eddies"],
+          "properties": {
+            "robot": { "type": ["number", "null"] },
+            "eddies": { "type": ["number", "null"] }
+          }
+        },
+        "margin": { "type": ["number", "null"], "description": "Robot total minus Eddies total." },
+        "result": { "enum": ["W", "L", "T", null], "description": "W-L-T from the Robot side." },
+        "winner": { "enum": ["Robot", "Eddies", "tie", null] },
+        "decisions": { "type": "array", "items": { "$ref": "#/$defs/decision" } }
+      }
+    },
+    "season": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "season", "club", "sides", "firstWeek", "record", "points", "weeks"],
+      "properties": {
+        "schemaVersion": { "const": 1 },
+        "season": { "const": 2026 },
+        "club": { "const": "Eagleridge Eddie's" },
+        "sides": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["robot", "eddies"],
+          "properties": {
+            "robot": { "const": "Robot" },
+            "eddies": { "const": "Eddies" }
+          }
+        },
+        "firstWeek": { "const": 9 },
+        "record": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["wins", "losses", "ties", "label"],
+          "properties": {
+            "wins": { "type": "integer", "minimum": 0 },
+            "losses": { "type": "integer", "minimum": 0 },
+            "ties": { "type": "integer", "minimum": 0 },
+            "label": { "type": "string", "description": "wins-losses-ties" }
+          }
+        },
+        "points": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["robot", "eddies", "margin"],
+          "properties": {
+            "robot": { "type": "number" },
+            "eddies": { "type": "number" },
+            "margin": { "type": "number" }
+          }
+        },
+        "weeks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["week", "file", "status", "locked", "result", "robotPoints", "eddiesPoints", "margin", "decisions"],
+            "properties": {
+              "week": { "type": "integer", "minimum": 9 },
+              "file": { "type": "string" },
+              "window": { "type": "object" },
+              "status": { "enum": ["pending", "final"] },
+              "locked": { "type": "boolean" },
+              "robotLockedAt": { "type": ["string", "null"] },
+              "result": { "enum": ["W", "L", "T", null] },
+              "winner": { "enum": ["Robot", "Eddies", "tie", null] },
+              "robotPoints": { "type": ["number", "null"] },
+              "eddiesPoints": { "type": ["number", "null"] },
+              "margin": { "type": ["number", "null"] },
+              "decisions": { "type": "array" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
