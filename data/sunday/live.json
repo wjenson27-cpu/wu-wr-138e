@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "updatedAt": "2026-11-01T14:08:00-08:00",
+  "updatedAt": "2026-11-01T14:38:00-08:00",
   "season": 2026,
   "week": 8,
   "opponent": "ultron",
@@ -12,8 +12,8 @@
       "id": "eddies",
       "name": "Eagleridge Eddie's",
       "record": "5-2",
-      "score": 197.0,
-      "projection": 236.95,
+      "score": 226.0,
+      "projection": 259.25,
       "starters": [
         {
           "player": "Trevor Lawrence",
@@ -147,8 +147,8 @@
       "id": "ultron",
       "name": "Ultron",
       "record": "3-4",
-      "score": 201.0,
-      "projection": 235.46,
+      "score": 204.0,
+      "projection": 233.51,
       "starters": [
         {
           "player": "Josh Allen",
