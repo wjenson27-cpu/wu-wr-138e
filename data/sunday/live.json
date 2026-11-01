@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "updatedAt": "2026-10-31T06:40:00-07:00",
+  "updatedAt": "2026-11-01T10:31:00-08:00",
   "season": 2026,
   "week": 8,
   "opponent": "ultron",
-  "source": "Fantrax read-only scrape fantrax-raw-2026-10-31-am.json (League HQ sync)",
+  "source": "Fantrax read-only scrape fantrax-raw-2026-11-01-am.json (League HQ sync)",
   "dataNote": "Team score and projected final are Fantrax matchup totals. Per-player points, projections and game status are not in the scrape and are left null.",
   "teams": [
     {
       "id": "eddies",
       "name": "Eagleridge Eddie's",
       "record": "5-2",
-      "score": 33.0,
-      "projection": 201.2,
+      "score": 62.0,
+      "projection": 204.79,
       "starters": [
         {
           "player": "Trevor Lawrence",
@@ -25,13 +25,13 @@
           "injury": ""
         },
         {
-          "player": "Breece Hall",
+          "player": "Corey Kiner",
           "pos": "RB",
-          "nflTeam": "NYJ",
+          "nflTeam": "NE",
           "status": null,
           "points": null,
           "projection": null,
-          "injury": "Q"
+          "injury": ""
         },
         {
           "player": "Garrett Wilson",
@@ -147,8 +147,8 @@
       "id": "ultron",
       "name": "Ultron",
       "record": "3-4",
-      "score": 0.0,
-      "projection": 211.7,
+      "score": 35.0,
+      "projection": 217.08,
       "starters": [
         {
           "player": "Josh Allen",
