@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "updatedAt": "2026-11-01T16:03:00-08:00",
+  "updatedAt": "2026-11-01T16:36:00-08:00",
   "season": 2026,
   "week": 8,
   "opponent": "ultron",
-  "source": "Fantrax read-only scrape fantrax-raw-2026-11-01-am.json (League HQ sync)",
+  "source": "Fantrax read-only scrape fantrax-raw-2026-11-01-pm.json (League HQ sync)",
   "dataNote": "Team score and projected final are Fantrax matchup totals. Per-player points, projections and game status are not in the scrape and are left null.",
   "teams": [
     {
       "id": "eddies",
       "name": "Eagleridge Eddie's",
       "record": "5-2",
-      "score": 251.0,
-      "projection": 263.38,
+      "score": 255.0,
+      "projection": 263.04,
       "starters": [
         {
           "player": "Trevor Lawrence",
@@ -147,8 +147,8 @@
       "id": "ultron",
       "name": "Ultron",
       "record": "3-4",
-      "score": 218.0,
-      "projection": 223.37,
+      "score": 227.0,
+      "projection": 227.0,
       "starters": [
         {
           "player": "Josh Allen",
