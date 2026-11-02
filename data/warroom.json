@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-01T14:55:00-08:00",
+  "asOf": "2026-11-02T15:10:00-08:00",
   "season": 2026,
   "week": 8,
   "opponent": {
@@ -9,17 +9,13 @@
     "name": "Ultron"
   },
   "freshness": {
-    "plan": "2026-11-01T14:55:00-08:00",
-    "roster": "2026-11-01T14:38:00-08:00",
-    "scores": "2026-11-01T14:38:00-08:00",
-    "waivers": "2026-10-31T15:05:00-07:00",
-    "news": "2026-11-01T14:55:00-08:00"
+    "plan": "2026-11-02T15:10:00-08:00",
+    "roster": "2026-11-02T14:55:00-08:00",
+    "scores": "2026-11-02T14:55:00-08:00",
+    "waivers": "2026-11-02T14:55:00-08:00",
+    "news": "2026-11-02T15:10:00-08:00"
   },
   "lockTimes": [
-    {
-      "label": "SNF PHI@WAS 5:20 PM PT (Luvu)",
-      "at": "2026-11-01T17:20:00-08:00"
-    },
     {
       "label": "MNF CHI@SEA 5:15 PM PT (Charbonnet, bench)",
       "at": "2026-11-02T17:15:00-08:00"
@@ -27,6 +23,10 @@
     {
       "label": "W9 claims run Wed Nov 4 9 AM PT",
       "at": "2026-11-04T09:00:00-08:00"
+    },
+    {
+      "label": "TNF JAX@BAL Thu Nov 5 5:15 PM PT (Lawrence, Lane, Simpson)",
+      "at": "2026-11-05T17:15:00-08:00"
     }
   ],
   "lineup": [
@@ -36,7 +36,7 @@
       "pos": "QB",
       "nflTeam": "JAX",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 24 final. vs IND (25.7 pts/g allowed, #10). Practiced Wed; absence rumor is dead. FBG QB7.",
+      "reason": "W9 early look vs TTAB: @BAL Thu.",
       "injury": "",
       "practice": ""
     },
@@ -45,8 +45,8 @@
       "player": "Breece Hall",
       "pos": "RB",
       "nflTeam": "NYJ",
-      "verdict": "SIT",
-      "reason": "Inactive W8 (quad), 5th straight miss; Kiner started. Fantrax note: expected back Sun Nov 8.",
+      "verdict": "START",
+      "reason": "W9 early look vs TTAB: @KC; Rapoport: good to go, confirm practice.",
       "injury": "OUT",
       "practice": "LP Wed/Thu/Fri (quad)"
     },
@@ -56,7 +56,7 @@
       "pos": "WR",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 14 final. vs LV. FBG lists him as a W8 faller; still a start.",
+      "reason": "W9 early look vs TTAB: @KC.",
       "injury": "",
       "practice": ""
     },
@@ -66,7 +66,7 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 34 final (7-92-2). @NYJ (27th vs TE, tough), but TE premium. 26.7 / 22.2, 84% snaps.",
+      "reason": "W9 early look vs TTAB: @SF.",
       "injury": "",
       "practice": "LP Wed, FP Thu (calf)"
     },
@@ -76,7 +76,7 @@
       "pos": "WR",
       "nflTeam": "DAL",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 6 final. vs ARI. Q (shoulder/hamstring), expected to play. 14.7 season / 21.3 last-3, 79% snaps. If OUT, Lane (6.5 last-3).",
+      "reason": "W9 early look vs TTAB: @IND; hamstring tightness, 57% snaps W8.",
       "injury": "",
       "practice": "LP Wed/Thu"
     },
@@ -86,7 +86,7 @@
       "pos": "WR",
       "nflTeam": "CAR",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 10 final. Played TNF @GB: 2-36-1, fumble lost, 10 pts.",
+      "reason": "W9 early look vs TTAB: vs DEN.",
       "injury": "",
       "practice": "FP Tue; no designation"
     },
@@ -95,8 +95,8 @@
       "player": "Chimere Dike",
       "pos": "WR",
       "nflTeam": "TEN",
-      "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 34 final. @CIN. 11.0 / 14.0 but only 21% W7 snaps; return yards carry him.",
+      "verdict": "SIT",
+      "reason": "W9 early look vs TTAB: BYE W9 (TEN).",
       "injury": "",
       "practice": ""
     },
@@ -106,7 +106,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 29 live. @DEN, tough OL (27th in sacks allowed). 18.0 / 24.5, 84% snaps. Only DL; start.",
+      "reason": "W9 early look vs TTAB: vs NYJ.",
       "injury": "",
       "practice": ""
     },
@@ -116,7 +116,7 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 5 live. vs NE. 18.2 / 17.5, 90% snaps. Woellert LB14 Sat; LB16 wk / LB25 ROS.",
+      "reason": "W9 early look vs TTAB: vs DET.",
       "injury": "",
       "practice": ""
     },
@@ -126,7 +126,7 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 23 final. Played TNF vs CAR: 10 tackles, 23 pts.",
+      "reason": "W9 early look vs TTAB: @NE.",
       "injury": "",
       "practice": ""
     },
@@ -136,7 +136,7 @@
       "pos": "DB",
       "nflTeam": "LAR",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 21 live (INT, 45-yd return). vs LAC, DB #5. LAC runs toward his side (Woellert).",
+      "reason": "W9 early look vs TTAB: @WAS; lost LAR dot to Landman.",
       "injury": "",
       "practice": ""
     },
@@ -145,8 +145,8 @@
       "player": "Trenton Simpson",
       "pos": "LB",
       "nflTeam": "BAL",
-      "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 7 final. @BUF. 19.3 / 17.0, 63% snaps; LB24 wk. Roquan back caps ceiling.",
+      "verdict": "SIT",
+      "reason": "W9 early look vs TTAB: vs JAX Thu; BAL dot rotation, 64% snaps.",
       "injury": "",
       "practice": ""
     },
@@ -156,7 +156,7 @@
       "pos": "LB",
       "nflTeam": "WAS",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: SNF vs PHI 5:20 PM PT. vs PHI (SNF), tough. 17.0 / 20.5, 98% snaps; WAS green dot. Trade post is a joke/unverified.",
+      "reason": "W9 early look vs TTAB: vs LAR; WAS green dot, 100% snaps.",
       "injury": "",
       "practice": ""
     },
@@ -166,7 +166,7 @@
       "pos": "DB",
       "nflTeam": "BUF",
       "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 17 final (1st career sack + FF). vs BAL. 15.8 / 21.0, 100% snaps; Woellert DB13.",
+      "reason": "W9 early look vs TTAB: @MIN MNF.",
       "injury": "",
       "practice": ""
     },
@@ -176,7 +176,7 @@
       "pos": "LB",
       "nflTeam": "TEN",
       "verdict": "SIT",
-      "reason": "SIT, HOLD. Not on TEN report (concussion claim unverified). Saleh: earned expanded role; Woellert W8 flex.",
+      "reason": "W9 early look vs TTAB: BYE W9 (TEN).",
       "injury": "",
       "practice": ""
     },
@@ -186,7 +186,7 @@
       "pos": "WR",
       "nflTeam": "BAL",
       "verdict": "SIT",
-      "reason": "@BUF. Not on BAL report; Lamar expected back (FBG), good for Lane.",
+      "reason": "W9 early look vs TTAB: vs JAX Thu.",
       "injury": "",
       "practice": ""
     },
@@ -196,7 +196,7 @@
       "pos": "WR",
       "nflTeam": "ARI",
       "verdict": "SIT",
-      "reason": "@DAL; bench WR depth. ARI traded Marvin Harrison Jr., more targets open up.",
+      "reason": "W9 early look vs TTAB: Ankle, expected out for season (Athletic).",
       "injury": "",
       "practice": ""
     },
@@ -206,7 +206,7 @@
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "SIT",
-      "reason": "No designation; expected to debut Mon vs CHI (Garafolo). 0 pts this year; stay bench.",
+      "reason": "W9 early look vs TTAB: MNF debut tonight; reassess.",
       "injury": "",
       "practice": "LP Fri"
     },
@@ -215,8 +215,8 @@
       "player": "Fred Warner",
       "pos": "LB",
       "nflTeam": "SF",
-      "verdict": "SIT",
-      "reason": "W8 BYE.",
+      "verdict": "START",
+      "reason": "W9 early look vs TTAB: vs LV; W8 bye.",
       "injury": "",
       "practice": ""
     },
@@ -225,8 +225,8 @@
       "player": "Cameron Skattebo",
       "pos": "RB",
       "nflTeam": "NYG",
-      "verdict": "SIT",
-      "reason": "W8 BYE. FBG now calls it a minor hamstring expected to heal over the bye; W9 possible.",
+      "verdict": "START",
+      "reason": "W9 early look vs TTAB: @PHI; GTD hamstring, if out start Kiner.",
       "injury": "Q",
       "practice": ""
     },
@@ -255,8 +255,8 @@
       "player": "Corey Kiner",
       "pos": "RB",
       "nflTeam": "NE",
-      "verdict": "START",
-      "reason": "W8 live 2:38 PM PT: 2 live. @MIA 1:25 PM PT. 5.4 / 10.3, 16% snaps. Henderson OUT (illness) bumps him; Hall fallback.",
+      "verdict": "SIT",
+      "reason": "W9 early look vs TTAB: vs GB; fallback for Skattebo.",
       "injury": "",
       "practice": ""
     }
@@ -264,21 +264,39 @@
   "injuryWatch": [
     {
       "player": "Breece Hall",
-      "tag": "OUT",
+      "tag": "Q",
       "practice": "",
-      "note": "Inactive W8; Fantrax says expected back Nov 8."
+      "note": "Rapoport: good to go for W9 @KC; confirm Wed practice."
+    },
+    {
+      "player": "Kendrick Bourne",
+      "tag": "D",
+      "practice": "",
+      "note": "Expected to miss rest of season, ankle (Jonathan Jones, Athletic, Nov 2)."
+    },
+    {
+      "player": "Cameron Skattebo",
+      "tag": "Q",
+      "practice": "",
+      "note": "Hamstring, day-to-day, likely GTD @PHI (RotoWire Nov 2)."
     },
     {
       "player": "George Pickens",
       "tag": "",
       "practice": "",
-      "note": "Active (Machota) but only 6 pts; a small account said he was ruled out mid-game (unverified). Watch this week."
+      "note": "Hamstring tightness limited W8 snaps (57%); mid-game ruled-out claim was false."
     },
     {
-      "player": "Zach Charbonnet",
-      "tag": "",
+      "player": "Jordyn Tyson",
+      "tag": "IR-R",
       "practice": "",
-      "note": "Expected debut Mon vs CHI."
+      "note": "Saints TBD on Wed practice return."
+    },
+    {
+      "player": "Travis Etienne",
+      "tag": "IR",
+      "practice": "",
+      "note": "Saints TBD on Wed practice return."
     }
   ],
   "byes": [
@@ -315,27 +333,40 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "Jamel Dean",
+      "player": "Trent McDuffie",
       "pos": "DB",
-      "nflTeam": "PIT",
-      "why": "ROS. 26.5 last-3 FP/G; snaps unverified. Would push Bishop (15.8 / 21.0).",
-      "stats": "15.83 season, 26.5 last-3, 19 W7",
-      "faabMin": 0,
-      "faabMax": 0,
-      "bid": 0,
+      "nflTeam": "LAR",
+      "why": "ROS. 32 pts W8 (1 game in the 3-wk window), 16.8 season FP/G; snaps unverified; @WAS W9. Would push Bishop (16.0 / 18.0).",
+      "stats": "16.83 season, 32.0 last-3 (1 GP), 32 W8",
+      "faabMin": 3,
+      "faabMax": 10,
+      "bid": 6,
       "drop": "Kendrick Bourne",
       "tag": "ROS"
     },
     {
       "rank": 2,
-      "player": "Elijah Ponder",
-      "pos": "LB",
+      "player": "Quinnen Williams",
+      "pos": "DL",
+      "nflTeam": "DAL",
+      "why": "ROS DL2. 28.0 last-3, 35 W8; @IND W9. DL depth behind Karlaftis (19.7 / 26.3).",
+      "stats": "16.88 season, 28.0 last-3, 35 W8",
+      "faabMin": 1,
+      "faabMax": 6,
+      "bid": 3,
+      "drop": "Kendrick Bourne",
+      "tag": "ROS"
+    },
+    {
+      "rank": 3,
+      "player": "Marcus Jones",
+      "pos": "DB",
       "nflTeam": "NE",
-      "why": "ROS look. LB-eligible edge, Woellert DL8 W8; 83% W7 snaps / 73% 3-wk. Waiver status after Hypersecretors flip unverified.",
-      "stats": "17.43 season, 17.33 last-3, 2 W7",
+      "why": "WEEKLY/ROS. 23.0 last-3, vs ATL W9; snaps unverified.",
+      "stats": "16.25 season, 23.0 last-3, 18 W8",
       "faabMin": 0,
       "faabMax": 3,
-      "bid": 0,
+      "bid": 1,
       "drop": "Kendrick Bourne",
       "tag": "ROS"
     }
@@ -345,15 +376,15 @@
       "rank": 1,
       "player": "Kendrick Bourne",
       "pos": "WR",
-      "reason": "6.6 / 8.0 FP/G, WR depth only."
+      "reason": "Expected out for the season (ankle); 6.1 / 5.0 FP/G."
     }
   ],
   "trades": [
     {
-      "with": "Ultron",
+      "with": "TTAB",
       "give": [],
       "get": [],
-      "why": "No offer. Smack only: Eddies up 22 with Luvu still to play SNF."
+      "why": "W9 opponent; smack only. Bill wants one more quality DB/LB with an offensive player coming back."
     }
   ],
   "idp": [
@@ -432,6 +463,78 @@
   ],
   "news": [
     {
+      "source": "X @UnderdogNFL",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Breece Hall: Rap: Breece Hall (quad) \"should\" play in Week 9.",
+      "url": "https://x.com/UnderdogNFL/status/2117261944327389616"
+    },
+    {
+      "source": "X @theGLgrind",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Breece Hall: Per NFL Network's Ian Rapoport, Breece Hall is now \"good to go\" after missing the last five games with a quad injury; expected to play Sunday vs. Chiefs (Braelo",
+      "url": "https://x.com/theGLgrind/status/2117319464194654397"
+    },
+    {
+      "source": "X @UnderdogNFL",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Breece Hall: Fowler (ESPN): Breece Hall (quad) 'hoping' for a Week 9 return (was inactive W8 after limited practices all week).",
+      "url": "https://x.com/UnderdogNFL/status/2116894172334506234"
+    },
+    {
+      "source": "X @jonmachota",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "George Pickens: Cowboys WR George Pickens warming up. He was listed as questionable with shoulder and hamstring injuries, but he's good to go today.",
+      "url": "https://x.com/jonmachota/status/2116943863621284098"
+    },
+    {
+      "source": "X @jonmachota",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "George Pickens: Stephen Jones on 105.3 The Fan: Pickens not upset with usage; 'George has some things healthwise... He's had some different things with his hamstring...' (hamst",
+      "url": "https://x.com/jonmachota/status/2117322302270714166"
+    },
+    {
+      "source": "X @calvinwatkins",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "George Pickens: Cowboys-Cardinals snap counts: for the second consecutive week Ryan Flournoy got more snaps than Pickens; Pickens (shoulder/hamstring) is nicked up.",
+      "url": "https://x.com/calvinwatkins/status/2117253981722325447"
+    },
+    {
+      "source": "X @jjones9",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Kendrick Bourne: Cardinals WR Kendrick Bourne is expected to miss the remainder of the season with an ankle injury, source tells The Athletic.",
+      "url": "https://x.com/jjones9/status/2117381473410113622"
+    },
+    {
+      "source": "X @AdamSchefter",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Kendrick Bourne: Cardinals HC Mike LaFleur also said the ankle injury that WR Kendrick Bourne suffered Sunday vs. Dallas could be season-ending.",
+      "url": "https://x.com/AdamSchefter/status/2117372250219294999"
+    },
+    {
+      "source": "X @RotoWireNFL",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Cam Skattebo: Cam Skattebo (hamstring) is 'day-to-day' and will likely be a game-time decision for Sunday's matchup with the Eagles, per HC John Harbaugh (via Jordan Raanan).",
+      "url": "https://x.com/RotoWireNFL/status/2117362315523727729"
+    },
+    {
+      "source": "X @DDuggan21",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Cam Skattebo: Giants RB Cam Skattebo, who injured his hamstring on his long run in OT vs. the Texans, worked on the side with a trainer in the first post-bye practice; Eric G",
+      "url": "https://x.com/DDuggan21/status/2117344525735629045"
+    },
+    {
+      "source": "X @RossJacksonNOLA",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Jordyn Tyson / Travis Etienne: Jordyn Tyson, Travis Etienne Jr. and Kelvin Banks Jr. will all be looked at today with the intent of judging whether Wednesday will be their chance to return to",
+      "url": "https://x.com/RossJacksonNOLA/status/2117303360537727129"
+    },
+    {
+      "source": "X @Matthew_Paras",
+      "time": "2026-11-02T15:10:00-08:00",
+      "text": "Jordyn Tyson / Travis Etienne: TBD on whether the IR guys (Travis Etienne, Jordyn Tyson and Kelvin Banks) practice this week, Moore said.",
+      "url": "https://x.com/Matthew_Paras/status/2117303115523457103"
+    },
+    {
       "source": "Fantrax",
       "time": "2026-11-01T14:38:00-08:00",
       "text": "Live 2:38 PM PT: Eddies 226, Ultron 204 (proj 259.3-233.5). Eddies left: Kiner, Karlaftis, Brooks, Lake live; Luvu SNF."
@@ -465,84 +568,14 @@
       "time": "2026-11-01T12:35:00-08:00",
       "text": "Jack Campbell (DET, Substation) carted off on a stretcher; injury unconfirmed.",
       "url": "https://x.com/SMHighlights1/status/2116992571734200501"
-    },
-    {
-      "source": "X @jonmachota",
-      "time": "2026-11-01T09:22:00-08:00",
-      "text": "Pickens warmed up and was good to go; finished with 6 pts.",
-      "url": "https://x.com/jonmachota/status/2116943863621284098"
-    },
-    {
-      "source": "Fantrax",
-      "time": "2026-10-31T15:05:00-07:00",
-      "text": "Live ~3:05 PM PT: Eddies 33, Ultron 0; proj 201.3-214. Hypersecretors dropped Micah Parsons; Valley Old Goats dropped Kendre Miller. 0 pending."
-    },
-    {
-      "source": "X @mwiggins92",
-      "time": "2026-10-31T14:00:00-07:00",
-      "text": "Charbonnet expected to debut Monday (Garafolo).",
-      "url": "https://x.com/mwiggins92/status/2116642890436784422"
-    },
-    {
-      "source": "X @johnpboyle",
-      "time": "2026-10-31T13:45:00-07:00",
-      "text": "SEA Sat: Drake Thomas, Knight, Charbonnet no designation; Charles Cross out.",
-      "url": "https://x.com/johnpboyle/status/2116632705907745270"
-    },
-    {
-      "source": "X @tori_mcelhaney",
-      "time": "2026-10-31T13:00:00-07:00",
-      "text": "Divine Deablo downgraded to OUT; Kendal Daniels up.",
-      "url": "https://x.com/tori_mcelhaney/status/2116621232623980761"
-    },
-    {
-      "source": "X @AdamSchefter",
-      "time": "2026-10-31T12:14:00-07:00",
-      "text": "Mansoor Delane OUT.",
-      "url": "https://x.com/AdamSchefter/status/2116609883055550918"
-    },
-    {
-      "source": "X @CreatorStockX",
-      "time": "2026-10-30T21:00:00-07:00",
-      "text": "Jeffery Simmons traded TEN to CHI (terms unverified).",
-      "url": "https://x.com/CreatorStockX/status/2116513030234083749"
-    },
-    {
-      "source": "Fantrax",
-      "time": "2026-10-30T15:15:00-07:00",
-      "text": "Live ~3:15 PM PT: Eddies 33, Ultron 0 after TNF; proj 202.9-201.6. Morningside-Saltese trade 1:12 PM (D. Knight / Bernard, Boston). Ultron +Woods, +Higbee. TTAB +Tuipulotu. 0 pending."
-    },
-    {
-      "source": "X @jonmachota",
-      "time": "2026-10-30T13:30:00-07:00",
-      "text": "Pickens questionable, expected to play.",
-      "url": "https://x.com/jonmachota/status/2116275950371373437"
-    },
-    {
-      "source": "X @DWAZ73",
-      "time": "2026-10-30T12:00:00-07:00",
-      "text": "Breece Hall questionable (quad); Braelon Allen off report.",
-      "url": "https://x.com/DWAZ73/status/2116248351373209796"
-    },
-    {
-      "source": "X @ByDanielFlick",
-      "time": "2026-10-30T11:00:00-07:00",
-      "text": "Brian Robinson Jr. OUT (hamstring).",
-      "url": "https://x.com/ByDanielFlick/status/2116216559488078268"
-    },
-    {
-      "source": "X @seahawks_wired_",
-      "time": "2026-10-29T16:30:00-07:00",
-      "text": "SEA Thu: Drake Thomas LP (ankle), Tyrice Knight LP (hip).",
-      "url": "https://x.com/seahawks_wired_/status/2115942631683351033"
     }
   ],
-  "lastUpdated": "2026-11-01T14:55:00-08:00",
+  "lastUpdated": "2026-11-02T15:10:00-08:00",
   "fantraxRaw": {
-    "file": "fantrax-raw-2026-11-01-am.json",
-    "scraped": "2026-11-01 ~14:38 PST"
+    "file": "fantrax-scrape-2026-11-02-pm-newsletter.json",
+    "scraped": "2026-11-02 ~14:55 PST"
   },
   "refreshNotes": [
-    "Updated Sun Nov 1 2:55 PM PT from Eddie Daily: W8 live 226-204, Hall OUT/Kiner started, Luvu SNF left. Free-agent stats from Sat 3:05 PM PT export (W8 mid-game), Sunday adds removed."
+    "Updated Mon Nov 2 3:10 PM PT from Eddie Daily: W8 Eddies 269-227 (Charbonnet bench MNF), Bourne expected season-ending, W9 vs TTAB early look, Woellert W8 dot changes (LAR, IND, DET, BAL, JAX)."
   ]
 }

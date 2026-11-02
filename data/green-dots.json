@@ -1,8 +1,8 @@
 {
-  "asOf": "2026-11-01T14:55:00-08:00",
-  "week": 7,
+  "asOf": "2026-11-02T15:10:00-08:00",
+  "week": 8,
   "source": "Mike Woellert",
-  "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-7-green-dot-and-full-time",
+  "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-8-green-dot-and-full-time-linebackers-idp-fantasy",
   "teams": [
     {
       "team": "ARI",
@@ -23,11 +23,9 @@
     },
     {
       "team": "BAL",
-      "greenDot": "Roquan Smith",
-      "fullTime": [
-        "Roquan Smith"
-      ],
-      "notes": "Smith 45 (88%), 8 tkl. Simpson (EDDIES) 58%->76% (39), 6 tkl, 5 rush snaps, 1 pressure, because BAL cut dime 36.7%->17.6%. W8 @ BUF (base-friendly: 13p 27%, 12p 30% in W6), good for Simpson."
+      "greenDot": "Roquan Smith (Teddye Buchanan wore it in 4th)",
+      "fullTime": [],
+      "notes": "W8 (Woellert, Nov 2): Smith 88%->64% (49), sat 3 stretches; Buchanan 18%->53%; Trenton Simpson (Eddies) 64%, 4 tkl. Possible dot rotation - watch W9."
     },
     {
       "team": "BUF",
@@ -48,12 +46,9 @@
     },
     {
       "team": "CHI",
-      "greenDot": "D'Marco Jackson",
-      "fullTime": [
-        "D'Marco Jackson",
-        "Devin Bush"
-      ],
-      "notes": "T.J. Edwards (hamstring) out again. Jackson 50/50, 6 tkl, 4 run stops. Bush 48 (96%), 4 tkl. W8 @ SEA (MNF)."
+      "greenDot": null,
+      "fullTime": null,
+      "notes": "W8 (Woellert, Nov 2): Woellert: 'Will update after MNF'. Keep file as-is."
     },
     {
       "team": "CIN",
@@ -79,7 +74,7 @@
       "fullTime": [
         "Shemar James"
       ],
-      "notes": "Updated Tue 6:30 AM PT after MNF: Shemar James wore the dot (87% snaps), Woellert's W8 waiver add. Overshown and Barham split LB2 (no shared snaps). W8 vs ARI."
+      "notes": "W8 (Woellert, Nov 2): James 96% (75/78); Overshown clear LB2 at 74%; Barham 18%. No dot change; consider adding Overshown note."
     },
     {
       "team": "DEN",
@@ -92,12 +87,12 @@
     },
     {
       "team": "DET",
-      "greenDot": "Jack Campbell",
+      "greenDot": "Jack Campbell (Derrick Barnes took it in 4th)",
       "fullTime": [
         "Jack Campbell",
         "Derrick Barnes"
       ],
-      "notes": "Both 65/65. Campbell 11 tkl. Barnes 6 tkl, 10 targets (most among LBs). Barnes' 100% is a jump, not the norm. W8 vs MIN. W8: Jack Campbell left on a stretcher Nov 1 (injury unconfirmed); watch the dot."
+      "notes": "W8 (Woellert, Nov 2): Campbell 78% before neck injury (hospital, positive update Mon). If out: Barnes takes dot, Malcolm Rodriguez likely LB2; Rolder (hamstring) 34%."
     },
     {
       "team": "GB",
@@ -119,20 +114,17 @@
     },
     {
       "team": "IND",
-      "greenDot": "Akeem Davis-Gaither",
+      "greenDot": "Akeem Davis-Gaither (rotation w/ Ajiake and C.J. Allen)",
       "fullTime": [
-        "Akeem Davis-Gaither"
+        "C.J. Allen"
       ],
-      "notes": "ADG 54 (96%), 7 tkl. Germaine Pratt (elevated from the practice squad) 18 (32%), Ajiake 17 (30%). Boettcher and CJ Allen inactive. W8 @ JAX. W8 update (Woellert, Nov 1): dot rotated. ADG sat 2 series and the whole 4th; Ajiake wore it in 2nd/3rd; CJ Allen wore it the entire 4th (Allen 45 of 51 snaps, ADG 36)."
+      "notes": "W8 (Woellert, Nov 2): ADG 96%->68% (36), sat full 4th; C.J. Allen 44/53 (83%), 10 tkl, TFL, sack, wore dot in 4th - Woellert's waiver add of the week. ADG/Ajiake in danger."
     },
     {
       "team": "JAX",
       "greenDot": "Foyesade Oluokun",
-      "fullTime": [
-        "Foyesade Oluokun",
-        "Ventrell Miller"
-      ],
-      "notes": "BYE W7. Season table: Oluokun is the dot, and Miller rose to 85% in W6. W8 vs IND. (Dot/full-time carried from the W6 list.)"
+      "fullTime": [],
+      "notes": "W8 (Woellert, Nov 2): Oluokun 93%->72%, Miller 85%->67%, Tavai 2%->28%. Neither clearly full-time W8 (one week; Woellert wants to see it again)."
     },
     {
       "team": "KC",
@@ -146,16 +138,16 @@
     {
       "team": "LAC",
       "greenDot": "Daiyan Henley",
-      "fullTime": [
-        "Daiyan Henley"
-      ],
-      "notes": "BYE W7. Season table lists Daiyan Henley as the dot, with Phillips volatile. W8 @ LAR. (Dot/full-time carried from the W6 list.) W8 update (Woellert, Nov 1): Henley questionable to return (shoulder); Troy Dye in with the green dot."
+      "fullTime": [],
+      "notes": "W8 (Woellert, Nov 2): Henley 72% (shoulder; Troy Dye wore dot while out, Henley returned). Phillips 62%, Wax 28%. Dot unchanged."
     },
     {
       "team": "LAR",
-      "greenDot": "Quentin Lake",
-      "fullTime": [],
-      "notes": "Landman out (concussion), still the dot holder. S Quentin Lake (EDDIES) wore the dot. Speights 37/64 (58%), 5 tkl (Woellert's X post says 40 snaps). Dolac 13 snaps (X). Kendricks 0. LAR 71.9% dime or heavier, and 29.7% 7+ DB. W8 vs LAC; if Landman returns, Woellert doesn't expect him to play every snap. No full-time LB in W7."
+      "greenDot": "Nate Landman",
+      "fullTime": [
+        "Nate Landman"
+      ],
+      "notes": "W8 (Woellert, Nov 2): File has S Quentin Lake (Eddies) as dot from W7 Landman absence. Landman back from concussion, wore dot, 42/59 (71%), 8 tkl; Speights 58%. Lake no longer dot."
     },
     {
       "team": "LV",
@@ -226,7 +218,7 @@
       "fullTime": [
         "Zack Baun"
       ],
-      "notes": "Updated Tue 6:30 AM PT after MNF: Baun has the dot. Campbell (55%) and Trotter (37%) rotate by series. W8 @ WSH."
+      "notes": "W8 (Woellert, Nov 2): Jeremiah Trotter Jr. LB2 with Jihaad Campbell out (10 tkl) - waiver look."
     },
     {
       "team": "PIT",
@@ -239,11 +231,9 @@
     },
     {
       "team": "SEA",
-      "greenDot": "Ernest Jones",
-      "fullTime": [
-        "Ernest Jones"
-      ],
-      "notes": "Drake Thomas (ankle) and Surratt (calf) inactive. Jones 50/50, 9 tkl. Knight (EDDIES) 86%->72% (36 snaps), 8 tkl, 1 TFL; he leaves the field in dime (SEA 30% dime). W8 vs CHI (MNF)."
+      "greenDot": null,
+      "fullTime": null,
+      "notes": "W8 (Woellert, Nov 2): Woellert: 'Updated after MNF'. Keep file as-is."
     },
     {
       "team": "SF",
@@ -269,7 +259,7 @@
       "fullTime": [
         "Anthony Hill"
       ],
-      "notes": "Hill 66/66, 12 tkl. Gray (EDDIES) 37 (56%), 5 tkl, outsnapped Barton 36 (55%), 2 tkl, for the first time in Woellert's W3-7 data. They split one LB2 spot. W8 @ CIN (12p 37%; may mean more base)."
+      "notes": "W8 (Woellert, Nov 2): Hill 97%; Barton 54% / Cedric Gray (Eddies) 47% split LB2. TEN BYE W9."
     },
     {
       "team": "WAS",
