@@ -2,7 +2,7 @@
   "teamId": "slumlords",
   "teamName": "Indian Trail Slumlords",
   "owner": "Ryan Towner",
-  "asOf": "2026-10-28 10:45 AM PT",
+  "asOf": "2026-11-04 10:18 AM PT",
   "faabLeft": 0,
   "startingQB": "Drake Maye",
   "roster": {
@@ -11,58 +11,56 @@
     ],
     "RB": [
       "Jahmyr Gibbs",
-      "Quinshon Judkins",
       "James Cook",
-      "Dameon Pierce"
+      "Quinshon Judkins"
     ],
     "WR": [
+      "Dohnte Meyers",
       "Demario Douglas",
+      "Keon Coleman",
       "Kalif Raymond",
-      "Wan'Dale Robinson",
-      "Kyle Williams"
+      "Wan'Dale Robinson"
     ],
     "TE": [
       "Harold Fannin"
     ],
     "DL": [
-      "Jeffery Simmons",
+      "Gregory Rousseau",
       "Maxx Crosby",
-      "Leonard Williams",
-      "Gregory Rousseau"
+      "Jeffery Simmons"
     ],
     "LB": [
-      "Anthony Hill",
       "Alex Anzalone",
+      "Anthony Hill",
       "Jaden Dugger"
     ],
     "DB": [
-      "Chamarri Conner",
+      "Budda Baker",
       "Devon Witherspoon",
-      "Budda Baker"
+      "Chamarri Conner"
     ],
     "IR": [
       "Isiah Pacheco",
-      "Talanoa Hufanga"
+      "Talanoa Hufanga",
+      "Leonard Williams"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Dameon Pierce — Q (reserve)",
     "Isiah Pacheco — IR (IR slot)",
-    "Talanoa Hufanga — Q (IR slot)"
+    "Talanoa Hufanga — Q (IR slot)",
+    "Leonard Williams — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
   "fantraxTeamId": "59frnthimsb3ulv4",
-  "lineupFlags": [
-    "Dameon Pierce — Q (reserve)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Dameon Pierce — Q (reserve)",
     "Isiah Pacheco — IR (IR slot)",
-    "Talanoa Hufanga — Q (IR slot)"
+    "Talanoa Hufanga — Q (IR slot)",
+    "Leonard Williams — Q (IR slot)"
   ],
-  "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "updated": "2026-11-04",
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }

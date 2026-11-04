@@ -2,72 +2,67 @@
   "teamId": "hyper",
   "teamName": "The Hypersecretors",
   "owner": "Jacob Crisp",
-  "asOf": "2026-10-28 10:45 AM PT",
+  "asOf": "2026-11-04 10:18 AM PT",
   "faabLeft": 12,
   "startingQB": "Kirk Cousins",
   "roster": {
     "QB": [
       "Kirk Cousins",
-      "Justin Herbert",
-      "Michael Penix Jr."
+      "Justin Herbert"
     ],
     "RB": [
       "Kenneth Walker III",
       "Rachaad White",
-      "Jacory Croskey-Merritt",
-      "Keaton Mitchell"
+      "Jaylen Wright",
+      "Jacory Croskey-Merritt"
     ],
     "WR": [
       "Amon-Ra St. Brown",
-      "Luther Burden",
-      "Emeka Egbuka",
-      "Jaylin Noel"
+      "Luther Burden"
     ],
     "TE": [
-      "Sam LaPorta"
+      "Sam LaPorta",
+      "Dalton Schultz"
     ],
     "DL": [
-      "Micah Parsons"
+      "Dexter Lawrence"
     ],
     "LB": [
       "Nick Bolton",
       "Blake Cashman",
+      "Shemar James",
       "Jacob Rodriguez",
-      "Payton Wilson",
       "Kaleb Elarms-Orr",
-      "Shemar James"
+      "Payton Wilson"
     ],
     "DB": [
       "Jeremy Chinn",
       "Kamren Curl"
     ],
     "IR": [
+      "Emeka Egbuka",
       "Travis Hunter",
       "Nick Bosa"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Amon-Ra St. Brown — Q (active)",
-    "Emeka Egbuka — Q (active)",
-    "Jaylin Noel — Q (reserve)",
+    "Jacory Croskey-Merritt — IR (reserve)",
+    "Emeka Egbuka — Q (IR slot)",
     "Nick Bosa — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
   "fantraxTeamId": "xz2uv87rmsb3ulv4",
   "lineupFlags": [
-    "Amon-Ra St. Brown — Q (active)",
-    "Emeka Egbuka — Q (active)",
-    "Jaylin Noel — Q (reserve)"
+    "Jacory Croskey-Merritt — IR (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Amon-Ra St. Brown — Q (active)",
-    "Emeka Egbuka — Q (active)",
-    "Jaylin Noel — Q (reserve)",
+    "Jacory Croskey-Merritt — IR (reserve)",
+    "Emeka Egbuka — Q (IR slot)",
     "Nick Bosa — Q (IR slot)"
   ],
-  "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "updated": "2026-11-04",
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }

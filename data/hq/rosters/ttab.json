@@ -2,66 +2,72 @@
   "teamId": "ttab",
   "teamName": "Towner Top Aga Bottom",
   "owner": "Chase Anderson",
-  "asOf": "2026-10-28 10:45 AM PT",
+  "asOf": "2026-11-04 10:18 AM PT",
   "faabLeft": 10,
-  "startingQB": "Josh Allen",
+  "startingQB": "Caleb Williams",
   "roster": {
     "QB": [
-      "Josh Allen"
+      "Caleb Williams"
     ],
     "RB": [
-      "Javonte Williams",
-      "Emanuel Wilson",
-      "Zonovan Knight"
+      "Javonte Williams"
     ],
     "WR": [
       "Christian Watson",
+      "Omar Cooper Jr.",
       "Stefon Diggs",
       "Jameson Williams",
       "Ryan Flournoy",
-      "Malik Washington",
-      "Omar Cooper Jr."
+      "Chris Godwin",
+      "Malik Washington"
     ],
     "TE": [
       "Dallas Goedert"
     ],
     "DL": [
-      "Nik Bonitto"
+      "Tuli Tuipulotu"
     ],
     "LB": [
       "Demario Davis",
+      "Micah McFadden",
       "Harold Perkins",
-      "Dorian Williams"
+      "Dorian Williams",
+      "Patrick Queen"
     ],
     "DB": [
-      "Caleb Downs",
       "Dillon Thieneman",
-      "Brian Branch",
-      "Javon Bullard",
-      "Bryan Cook"
+      "Andrew Wingard",
+      "Caleb Downs"
     ],
     "IR": [
       "DeVonta Smith",
-      "Divine Deablo",
-      "Andrew Wingard"
+      "Brian Branch",
+      "Divine Deablo"
     ]
   },
   "notes": "",
   "injuryFlags": [
+    "Christian Watson — Q (active)",
     "DeVonta Smith — Q (IR slot)",
-    "Divine Deablo — Q (IR slot)",
-    "Andrew Wingard — Q (IR slot)"
+    "Caleb Downs — Q (reserve)",
+    "Brian Branch — Q (IR slot)",
+    "Divine Deablo — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
   "fantraxTeamId": "4grk2ph6msb3ulv4",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Christian Watson — Q (active)",
+    "Caleb Downs — Q (reserve)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
+    "Christian Watson — Q (active)",
     "DeVonta Smith — Q (IR slot)",
-    "Divine Deablo — Q (IR slot)",
-    "Andrew Wingard — Q (IR slot)"
+    "Caleb Downs — Q (reserve)",
+    "Brian Branch — Q (IR slot)",
+    "Divine Deablo — Q (IR slot)"
   ],
-  "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "updated": "2026-11-04",
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }

@@ -2,64 +2,70 @@
   "teamId": "substation",
   "teamName": "Substation",
   "owner": "Nathan Kelly",
-  "asOf": "2026-10-28 10:45 AM PT",
+  "asOf": "2026-11-04 10:18 AM PT",
   "faabLeft": 5,
-  "startingQB": "Bryce Young",
+  "startingQB": "Brock Purdy",
   "roster": {
     "QB": [
-      "Bryce Young",
-      "Brock Purdy"
+      "Brock Purdy",
+      "Bryce Young"
     ],
     "RB": [
       "Kenneth Gainwell",
+      "Tyler Goodson",
       "Emmett Johnson"
     ],
     "WR": [
       "Ja'Marr Chase",
-      "Germie Bernard",
       "KC Concepcion",
-      "Chris Godwin",
-      "Makai Lemon",
+      "Malik Nabers",
       "Tre Tucker",
-      "Malik Nabers"
+      "Germie Bernard"
     ],
     "TE": [
       "Tucker Kraft"
     ],
     "DL": [
-      "Austin Booker"
+      "DeForest Buckner"
     ],
     "LB": [
-      "Jack Campbell",
       "Zack Baun",
-      "Kaden Elliss"
+      "Kaden Elliss",
+      "Henry To'oTo'o",
+      "Eric Wilson",
+      "Malcolm Rodriguez"
     ],
     "DB": [
       "Nick Emmanwori",
-      "Kevin Winston",
-      "DeShon Elliott",
-      "Tykee Smith"
+      "Tykee Smith",
+      "Jalen Pitre"
     ],
     "IR": [
       "Tyjae Spears",
       "Alec Pierce",
-      "Tyler Warren"
+      "Jack Campbell"
     ]
   },
   "notes": "",
   "injuryFlags": [
+    "Tyjae Spears — Q (IR slot)",
     "Alec Pierce — IR (IR slot)",
-    "Tyler Warren — Q (IR slot)"
+    "Jalen Pitre — Q (reserve)",
+    "Jack Campbell — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
   "fantraxTeamId": "bbdlo6fkmsb3ulv5",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Jalen Pitre — Q (reserve)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
+    "Tyjae Spears — Q (IR slot)",
     "Alec Pierce — IR (IR slot)",
-    "Tyler Warren — Q (IR slot)"
+    "Jalen Pitre — Q (reserve)",
+    "Jack Campbell — Q (IR slot)"
   ],
-  "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "updated": "2026-11-04",
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }

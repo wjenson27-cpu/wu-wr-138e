@@ -1,9 +1,9 @@
 {
   "teamId": "eddies",
-  "teamName": "Eagle Ridge Eddies",
-  "owner": "Bill Jenson",
-  "asOf": "2026-10-28 10:45 AM PT",
-  "faabLeft": 34,
+  "teamName": "Eagleridge Eddie's",
+  "owner": "",
+  "asOf": "2026-11-04 10:18 AM PT",
+  "faabLeft": 25,
   "startingQB": "Trevor Lawrence",
   "roster": {
     "QB": [
@@ -11,15 +11,16 @@
     ],
     "RB": [
       "Breece Hall",
-      "Zach Charbonnet"
+      "Zach Charbonnet",
+      "Devin Singletary"
     ],
     "WR": [
       "Garrett Wilson",
       "Jalen Coker",
-      "Chimere Dike",
       "George Pickens",
+      "Josh Downs",
       "Ja'Kobi Lane",
-      "Kendrick Bourne"
+      "Chimere Dike"
     ],
     "TE": [
       "Brock Bowers"
@@ -28,12 +29,11 @@
       "George Karlaftis"
     ],
     "LB": [
+      "Fred Warner",
       "Jordyn Brooks",
       "Frankie Luvu",
-      "Trenton Simpson",
       "Cedric Gray",
-      "Tyrice Knight",
-      "Fred Warner"
+      "Trenton Simpson"
     ],
     "DB": [
       "Quentin Lake",
@@ -41,34 +41,34 @@
       "Cole Bishop"
     ],
     "IR": [
-      "Cameron Skattebo",
       "Jordyn Tyson",
-      "Travis Etienne"
+      "Travis Etienne",
+      "Cameron Skattebo"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Breece Hall — Q (active)",
-    "Zach Charbonnet — Q (reserve)",
-    "Cameron Skattebo — Q (IR slot)",
+    "Garrett Wilson — Q (active)",
     "Jordyn Tyson — IR (IR slot)",
-    "Travis Etienne — IR (IR slot)"
+    "Travis Etienne — IR (IR slot)",
+    "Cameron Skattebo — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
   "fantraxTeamId": "xbvk9dpgmsb3ulv4",
   "lineupFlags": [
     "Breece Hall — Q (active)",
-    "Zach Charbonnet — Q (reserve)"
+    "Garrett Wilson — Q (active)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Breece Hall — Q (active)",
-    "Zach Charbonnet — Q (reserve)",
-    "Cameron Skattebo — Q (IR slot)",
+    "Garrett Wilson — Q (active)",
     "Jordyn Tyson — IR (IR slot)",
-    "Travis Etienne — IR (IR slot)"
+    "Travis Etienne — IR (IR slot)",
+    "Cameron Skattebo — Q (IR slot)"
   ],
-  "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "updated": "2026-11-04",
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }

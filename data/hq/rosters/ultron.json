@@ -2,66 +2,73 @@
   "teamId": "ultron",
   "teamName": "Ultron",
   "owner": "Brian Aga",
-  "asOf": "2026-10-28 10:45 AM PT",
-  "faabLeft": 2,
-  "startingQB": "Caleb Williams",
+  "asOf": "2026-11-04 10:18 AM PT",
+  "faabLeft": 7,
+  "startingQB": "Josh Allen",
   "roster": {
     "QB": [
-      "Caleb Williams"
+      "Josh Allen"
     ],
     "RB": [
-      "D'Andre Swift",
-      "Ashton Jeanty",
+      "Bijan Robinson",
+      "J.K. Dobbins",
       "Rhamondre Stevenson",
-      "Roschon Johnson"
+      "Chris Rodriguez Jr.",
+      "Omarion Hampton"
     ],
     "WR": [
       "Drake London",
       "Michael Wilson"
     ],
     "TE": [
-      "Pat Freiermuth",
-      "Jake Ferguson"
+      "AJ Barner",
+      "Pat Freiermuth"
     ],
     "DL": [
       "Dallas Turner"
     ],
     "LB": [
-      "Carson Schwesinger",
-      "Kendal Daniels",
       "Foyesade Oluokun",
-      "Patrick Queen",
       "CJ Allen",
+      "Kendal Daniels",
       "Mack Wilson",
-      "Micah McFadden",
       "Robert Spillane"
     ],
     "DB": [
+      "Kyle Hamilton",
       "Josh Metellus",
+      "Michael Taaffe",
       "Dante Trader"
     ],
     "IR": [
+      "Brian Robinson Jr.",
       "Terrance Ferguson",
-      "Kyle Monangai",
       "Myles Garrett"
     ]
   },
   "notes": "",
   "injuryFlags": [
+    "Michael Wilson — Q (active)",
+    "Chris Rodriguez Jr. — Q (reserve)",
+    "Brian Robinson Jr. — Q (IR slot)",
     "Terrance Ferguson — IR (IR slot)",
-    "Kyle Monangai — Q (IR slot)",
     "Myles Garrett — IR (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
   "fantraxTeamId": "k9i4qjrlmsb3ulv5",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Michael Wilson — Q (active)",
+    "Chris Rodriguez Jr. — Q (reserve)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
+    "Michael Wilson — Q (active)",
+    "Chris Rodriguez Jr. — Q (reserve)",
+    "Brian Robinson Jr. — Q (IR slot)",
     "Terrance Ferguson — IR (IR slot)",
-    "Kyle Monangai — Q (IR slot)",
     "Myles Garrett — IR (IR slot)"
   ],
-  "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "updated": "2026-11-04",
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }

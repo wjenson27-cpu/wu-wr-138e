@@ -2,7 +2,7 @@
   "teamId": "pocket",
   "teamName": "Pocket Agents",
   "owner": "Kellen Olson",
-  "asOf": "2026-10-28 10:45 AM PT",
+  "asOf": "2026-11-04 10:18 AM PT",
   "faabLeft": 85,
   "startingQB": "Jared Goff",
   "roster": {
@@ -16,8 +16,9 @@
       "Woody Marks"
     ],
     "WR": [
+      "Tetairoa McMillan",
       "CeeDee Lamb",
-      "Tetairoa McMillan"
+      "Jaylen Waddle"
     ],
     "TE": [
       "Trey McBride",
@@ -25,8 +26,8 @@
       "Chigoziem Okonkwo"
     ],
     "DL": [
-      "Josh Hines-Allen",
-      "Will Anderson Jr."
+      "Will Anderson Jr.",
+      "Josh Hines-Allen"
     ],
     "LB": [
       "Ernest Jones",
@@ -35,32 +36,29 @@
     ],
     "DB": [
       "Dane Belton",
-      "Brandon Jones",
-      "Amani Hooker",
-      "Cooper DeJean"
+      "Cooper DeJean",
+      "Amani Hooker"
     ],
     "IR": [
       "Saquon Barkley",
       "Rashid Shaheed",
-      "Jaylen Waddle"
+      "Brandon Jones"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Saquon Barkley — Q (IR slot)",
     "Rashid Shaheed — Q (IR slot)",
-    "Jaylen Waddle — Q (IR slot)"
+    "Brandon Jones — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
   "fantraxTeamId": "20zozmjgmsb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Saquon Barkley — Q (IR slot)",
     "Rashid Shaheed — Q (IR slot)",
-    "Jaylen Waddle — Q (IR slot)"
+    "Brandon Jones — Q (IR slot)"
   ],
-  "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "updated": "2026-11-04",
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }

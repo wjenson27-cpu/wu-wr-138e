@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-28",
-  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-10-28 10:45 AM PT roster sync.",
+  "updated": "2026-11-04",
+  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-11-04 10:18 AM PT roster sync.",
   "startingBudget": 115,
-  "note": "Week 8 FAAB clear (Wed Oct 28, 9:00 AM PT) \u2014 spend by team: Substation $21 (KC Concepcion $21); The Hypersecretors $13 (Jacory Croskey-Merritt $9, Micah Parsons $4); Mrs. Doubtpfizer $10 (Kyler Gordon $5, Kaelon Black $3, Nohl Williams $2); Saltese Slamm $6 (Dee Winters $4, Colby Parkinson $1, Ty Okada $1); Little Ass Boys $5 (Greg Dulcich $5); Eagle Ridge Eddies $4 (Cole Bishop $4); Pocket Agents $3 (Josh Hines-Allen $3); Newman Lake $3 (Grant Delpit $3). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 9:44 AM PT.",
+  "note": "Week 9 FAAB clear (Wed Nov 4, 9:00 AM PT) — spend by team: Eagle Ridge Eddie's $9 (Josh Downs $7, Devin Singletary $2); Valley Old Goats $4 (Mike Gesicki $4); Mrs. Doubtpfizer $3 (Malik Mustapha $3); Saltese Slamm $2 (Adonai Mitchell $1, Malik Willis $1). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 10:15 AM PT. Prior: Week 8 FAAB clear (Wed Oct 28, 9:00 AM PT) — spend by team: Substation $21 (KC Concepcion $21); The Hypersecretors $13 (Jacory Croskey-Merritt $9, Micah Parsons $4); Mrs. Doubtpfizer $10 (Kyler Gordon $5, Kaelon Black $3, Nohl Williams $2); Saltese Slamm $6 (Dee Winters $4, Colby Parkinson $1, Ty Okada $1); Little Ass Boys $5 (Greg Dulcich $5); Eagleridge Eddie's $4 (Cole Bishop $4); Pocket Agents $3 (Josh Hines-Allen $3); Newman Lake $3 (Grant Delpit $3). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 9:44 AM PT.",
   "excludeZeroBids": true,
   "teamBalances": [
     {
@@ -37,12 +37,12 @@
       "owner": "Luke Sahlberg",
       "abbrev": "SAL",
       "starting": 115,
-      "remaining": 10,
-      "spentClaims": 101,
+      "remaining": 3,
+      "spentClaims": 103,
       "tradeOut": 29,
       "tradeIn": 25,
-      "spentKnown": 130,
-      "remainingKnown": 10
+      "spentKnown": 132,
+      "remainingKnown": 3
     },
     {
       "id": "lab",
@@ -63,25 +63,25 @@
       "owner": "Kyle Weberg",
       "abbrev": "MDP",
       "starting": 115,
-      "remaining": 75,
-      "spentClaims": 40,
+      "remaining": 72,
+      "spentClaims": 43,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 40,
-      "remainingKnown": 75
+      "spentKnown": 43,
+      "remainingKnown": 72
     },
     {
       "id": "eddies",
-      "name": "Eagle Ridge Eddies",
-      "owner": "Bill Jenson",
+      "name": "Eagleridge Eddie's",
+      "owner": "",
       "abbrev": "ERE",
       "starting": 115,
-      "remaining": 34,
-      "spentClaims": 70,
-      "tradeOut": 11,
+      "remaining": 25,
+      "spentClaims": 79,
+      "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 81,
-      "remainingKnown": 34
+      "spentKnown": 79,
+      "remainingKnown": 25
     },
     {
       "id": "dongers",
@@ -105,7 +105,7 @@
       "remaining": 10,
       "spentClaims": 93,
       "tradeOut": 30,
-      "tradeIn": 18,
+      "tradeIn": 8,
       "spentKnown": 123,
       "remainingKnown": 10
     },
@@ -141,12 +141,12 @@
       "owner": "Brian Aga",
       "abbrev": "ULT",
       "starting": 115,
-      "remaining": 2,
+      "remaining": 7,
       "spentClaims": 110,
       "tradeOut": 50,
-      "tradeIn": 47,
+      "tradeIn": 52,
       "spentKnown": 160,
-      "remainingKnown": 2
+      "remainingKnown": 7
     },
     {
       "id": "goats",
@@ -154,12 +154,12 @@
       "owner": "Mike Heff",
       "abbrev": "VOG",
       "starting": 100,
-      "remaining": 64,
-      "spentClaims": 36,
+      "remaining": 60,
+      "spentClaims": 40,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 36,
-      "remainingKnown": 64,
+      "spentKnown": 40,
+      "remainingKnown": 60,
       "note": " | Started at $100: only team that did not pay dues by Aug 1 (no +$15 bonus), per Bill Oct 23 2026"
     },
     {
@@ -170,9 +170,9 @@
       "starting": 115,
       "remaining": 85,
       "spentClaims": 24,
-      "tradeOut": 20,
+      "tradeOut": 10,
       "tradeIn": 14,
-      "spentKnown": 44,
+      "spentKnown": 34,
       "remainingKnown": 85
     },
     {
@@ -184,12 +184,90 @@
       "remaining": 5,
       "spentClaims": 134,
       "tradeOut": 35,
-      "tradeIn": 21,
+      "tradeIn": 43,
       "spentKnown": 169,
       "remainingKnown": 5
     }
   ],
   "claims": [
+    {
+      "date": "2026-11-04",
+      "time": "9:00 AM PDT",
+      "player": "Adonai Mitchell",
+      "amount": 1,
+      "team": "Saltese Slamm",
+      "kind": "claim",
+      "teamId": "saltese",
+      "pos": "WR",
+      "dropped": null,
+      "note": "Week 9 claim",
+      "attribution": "fantrax-roster-sync-2026-11-04-am"
+    },
+    {
+      "date": "2026-11-04",
+      "time": "9:00 AM PDT",
+      "player": "Devin Singletary",
+      "amount": 2,
+      "team": "Eagle Ridge Eddies",
+      "kind": "claim",
+      "teamId": "eddies",
+      "pos": "RB",
+      "dropped": "Corey Kiner",
+      "note": "Week 9 claim; dropped Corey Kiner",
+      "attribution": "fantrax-roster-sync-2026-11-04-am"
+    },
+    {
+      "date": "2026-11-04",
+      "time": "9:00 AM PDT",
+      "player": "Malik Willis",
+      "amount": 1,
+      "team": "Saltese Slamm",
+      "kind": "claim",
+      "teamId": "saltese",
+      "pos": "QB",
+      "dropped": null,
+      "note": "Week 9 claim",
+      "attribution": "fantrax-roster-sync-2026-11-04-am"
+    },
+    {
+      "date": "2026-11-04",
+      "time": "9:00 AM PDT",
+      "player": "Mike Gesicki",
+      "amount": 4,
+      "team": "Valley Old Goats",
+      "kind": "claim",
+      "teamId": "goats",
+      "pos": "TE",
+      "dropped": null,
+      "note": "Week 9 claim",
+      "attribution": "fantrax-roster-sync-2026-11-04-am"
+    },
+    {
+      "date": "2026-11-04",
+      "time": "9:00 AM PDT",
+      "player": "Malik Mustapha",
+      "amount": 3,
+      "team": "Mrs. Doubtpfizer",
+      "kind": "claim",
+      "teamId": "doubtpfizer",
+      "pos": "DB",
+      "dropped": "Nohl Williams",
+      "note": "Week 9 claim; dropped Nohl Williams",
+      "attribution": "fantrax-roster-sync-2026-11-04-am"
+    },
+    {
+      "date": "2026-11-04",
+      "time": "9:00 AM PDT",
+      "player": "Josh Downs",
+      "amount": 7,
+      "team": "Eagle Ridge Eddies",
+      "kind": "claim",
+      "teamId": "eddies",
+      "pos": "WR",
+      "dropped": null,
+      "note": "Week 9 claim",
+      "attribution": "fantrax-roster-sync-2026-11-04-am"
+    },
     {
       "date": "2026-10-28",
       "time": "9:00 AM PDT",
@@ -286,7 +364,7 @@
       "time": "9:00 AM PDT",
       "player": "Cole Bishop",
       "amount": 4,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "DB",
@@ -364,7 +442,7 @@
       "time": "8:28 AM PDT",
       "player": "Cameron Skattebo",
       "amount": 6,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "RB",
@@ -468,7 +546,7 @@
       "time": "9:00 AM PDT",
       "player": "D.J. Reed",
       "amount": 5,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "DB",
@@ -793,7 +871,7 @@
       "time": "9:00 AM PDT",
       "player": "Mansoor Delane",
       "amount": 8,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "DB(R)",
@@ -889,7 +967,7 @@
       "teamId": "substation",
       "pos": "WR",
       "dropped": "Keenan Allen",
-      "note": "Week 5 claim Sat Oct 10 7:26 PM PT; dropped Keenan Allen; Substation FAAB $30\u2192$29",
+      "note": "Week 5 claim Sat Oct 10 7:26 PM PT; dropped Keenan Allen; Substation FAAB $30→$29",
       "attribution": "fantrax-scrape-2026-10-11-roster-sync"
     },
     {
@@ -902,7 +980,7 @@
       "teamId": "newman",
       "pos": "RB",
       "dropped": "Danny Stutsman",
-      "note": "Week 5 claim Sat Oct 10 9:28 PM PT; dropped Danny Stutsman; Newman FAAB $77\u2192$65",
+      "note": "Week 5 claim Sat Oct 10 9:28 PM PT; dropped Danny Stutsman; Newman FAAB $77→$65",
       "attribution": "fantrax-scrape-2026-10-11-roster-sync"
     },
     {
@@ -936,7 +1014,7 @@
       "time": "9:30 AM PDT",
       "player": "Cedric Gray",
       "amount": 3,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "LB",
@@ -1040,7 +1118,7 @@
       "time": "9:00 AM PDT",
       "player": "Tuli Tuipulotu",
       "amount": 6,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "DL,LB",
@@ -1079,7 +1157,7 @@
       "time": "9:00 AM PDT",
       "player": "Chimere Dike",
       "amount": 2,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "WR",
@@ -1263,7 +1341,7 @@
       "date": "2026-09-30",
       "player": "Trenton Simpson",
       "amount": 6,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "LB",
@@ -1309,7 +1387,7 @@
       "date": "2026-09-30",
       "player": "Brian Robinson Jr.",
       "amount": 6,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "pos": "RB",
@@ -1730,7 +1808,7 @@
       "date": "2026-09-16",
       "player": "Dorian Williams",
       "amount": 8,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "dropped": "Henry To'oTo'o",
@@ -1741,7 +1819,7 @@
       "date": "2026-09-16",
       "player": "Andrew Wingard",
       "amount": 6,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "dropped": "James Williams",
@@ -1867,7 +1945,7 @@
       "date": "2026-09-02",
       "player": "Henry To'oTo'o",
       "amount": 7,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "dropped": "Christian Harris",
@@ -1940,7 +2018,7 @@
       "date": "2026-09-02",
       "player": "Troy Dye",
       "amount": 3,
-      "team": "Eagle Ridge Eddies",
+      "team": "Eagleridge Eddie's",
       "kind": "claim",
       "teamId": "eddies",
       "note": ""
@@ -2011,6 +2089,23 @@
   ],
   "trades": [
     {
+      "date": "2026-10-29",
+      "amount": 5,
+      "fromTeam": "Saltese Slamm",
+      "fromTeamId": "saltese",
+      "toTeam": "Ultron",
+      "toTeamId": "ultron",
+      "for": [
+        "Ashton Jeanty (RB)",
+        "Carson Schwesinger (LB)",
+        "Kyle Monangai (RB)",
+        "D'Andre Swift (RB)"
+      ],
+      "summary": "Fantrax official — Saltese Slamm paid $5 FAAB to Ultron in Week 8 trade (Oct 29 12:41 PM PDT).",
+      "official": true,
+      "kind": "trade"
+    },
+    {
       "date": "2026-10-16",
       "amount": 5,
       "fromTeam": "Newman Lake Sleep Paralysis Demons",
@@ -2020,7 +2115,7 @@
       "for": [
         "Jordan Love (QB)"
       ],
-      "summary": "Fantrax official \u2014 Newman Lake Sleep Paralysis Demons paid $5 FAAB to Substation in Week 6 trade (Oct 16 10:20 AM PDT).",
+      "summary": "Fantrax official — Newman Lake Sleep Paralysis Demons paid $5 FAAB to Substation in Week 6 trade (Oct 16 10:20 AM PDT).",
       "official": true,
       "kind": "trade"
     },
@@ -2037,7 +2132,7 @@
         "Ja'Marr Chase (WR)",
         "Germie Bernard (WR)"
       ],
-      "summary": "Fantrax official \u2014 Substation paid $7 FAAB to Ultron in Week 6 trade (Oct 16 6:29 PM PDT).",
+      "summary": "Fantrax official — Substation paid $7 FAAB to Ultron in Week 6 trade (Oct 16 6:29 PM PDT).",
       "official": true,
       "kind": "trade"
     },
@@ -2052,7 +2147,7 @@
         "Amani Hooker (DB)",
         "Saquon Barkley (RB)"
       ],
-      "summary": "Fantrax official \u2014 Pocket Agents paid $10 FAAB to Ultron with Foyesade Oluokun for Amani Hooker and Saquon Barkley (Oct 8 4:34 PM PDT).",
+      "summary": "Fantrax official — Pocket Agents paid $10 FAAB to Ultron with Foyesade Oluokun for Amani Hooker and Saquon Barkley (Oct 8 4:34 PM PDT).",
       "official": true,
       "kind": "trade"
     },
@@ -2066,7 +2161,7 @@
       "for": [
         "Aaron Jones (RB)"
       ],
-      "summary": "Fantrax official \u2014 Newman paid $5 FAAB to Saltese with Aaron Jones for Nathan Landman (Oct 3 12:22 PM PDT).",
+      "summary": "Fantrax official — Newman paid $5 FAAB to Saltese with Aaron Jones for Nathan Landman (Oct 3 12:22 PM PDT).",
       "official": true,
       "kind": "trade"
     },
@@ -2080,7 +2175,7 @@
       "for": [
         "CJ Allen (LB)"
       ],
-      "summary": "Fantrax official \u2014 Dongers paid $3 FAAB to Substation with CJ Allen for Tony Pollard (Sep 27 8:58 AM PDT).",
+      "summary": "Fantrax official — Dongers paid $3 FAAB to Substation with CJ Allen for Tony Pollard (Sep 27 8:58 AM PDT).",
       "official": true,
       "kind": "trade"
     },
@@ -2095,7 +2190,7 @@
         "Drake London (WR)",
         "Kevin Winston (DB)"
       ],
-      "summary": "Fantrax official \u2014 Ultron paid $20 FAAB to Substation with London+Winston for Barkley+Bigsby (Sep 22 8:46 PM PDT).",
+      "summary": "Fantrax official — Ultron paid $20 FAAB to Substation with London+Winston for Barkley+Bigsby (Sep 22 8:46 PM PDT).",
       "official": true,
       "kind": "trade"
     },
@@ -2111,7 +2206,7 @@
         "Chris Godwin (WR)",
         "James Cook (RB)"
       ],
-      "summary": "Fantrax official \u2014 Ultron paid $15 FAAB to Slumlords with Anzalone+Godwin+Cook for London+Campbell+Pickens (Sep 22 10:20 AM PDT).",
+      "summary": "Fantrax official — Ultron paid $15 FAAB to Slumlords with Anzalone+Godwin+Cook for London+Campbell+Pickens (Sep 22 10:20 AM PDT).",
       "official": true,
       "kind": "trade"
     },
@@ -2125,7 +2220,7 @@
       "for": [
         "Terry McLaurin (WR)"
       ],
-      "summary": "Fantrax official \u2014 Ultron paid $15 FAAB to Substation with Emmett Johnson for Terry McLaurin (Sep 16).",
+      "summary": "Fantrax official — Ultron paid $15 FAAB to Substation with Emmett Johnson for Terry McLaurin (Sep 16).",
       "official": true,
       "kind": "trade"
     },
@@ -2140,7 +2235,7 @@
         "Dallas Goedert (TE)",
         "Antoine Winfield (DB)"
       ],
-      "summary": "Fantrax official \u2014 Substation paid $8 FAAB to TTAB with Goedert+Winfield for Pollard+Edmunds (Sep 16).",
+      "summary": "Fantrax official — Substation paid $8 FAAB to TTAB with Goedert+Winfield for Pollard+Edmunds (Sep 16).",
       "official": true,
       "kind": "trade"
     },
@@ -2154,7 +2249,7 @@
       "for": [
         "Bo Nix (QB)"
       ],
-      "summary": "Fantrax official \u2014 Pocket Agents traded Bo Nix to Substation for $10 FAAB (Sep 8). Jordan Love was not in the deal.",
+      "summary": "Fantrax official — Pocket Agents traded Bo Nix to Substation for $10 FAAB (Sep 8). Jordan Love was not in the deal.",
       "official": true,
       "kind": "trade"
     },
@@ -2168,7 +2263,7 @@
       "for": [
         "Kaleb Elarms-Orr (LB)"
       ],
-      "summary": "Fantrax official #2 \u2014 Larry buys Elarms-Orr from Aga for $20 FAAB.",
+      "summary": "Fantrax official #2 — Larry buys Elarms-Orr from Aga for $20 FAAB.",
       "official": true,
       "kind": "trade"
     },
@@ -2183,7 +2278,7 @@
         "Cameron Skattebo (RB)",
         "Caleb Downs (DB)"
       ],
-      "summary": "Fantrax official #3 \u2014 live Sep 3 player trade; Chase sends $10 FAAB to Aga. Related: Chase +Zavion Thomas \u2212Evan Williams; Aga +Bryce Boettcher \u2212Najee.",
+      "summary": "Fantrax official #3 — live Sep 3 player trade; Chase sends $10 FAAB to Aga. Related: Chase +Zavion Thomas −Evan Williams; Aga +Bryce Boettcher −Najee.",
       "official": true,
       "kind": "trade"
     },
@@ -2197,7 +2292,7 @@
       "for": [
         "R20 chair (Sadiq stays Jacob)"
       ],
-      "summary": "Handshake \u2014 Nate $10 FAAB to Jacob for R20 chairs; Branch stays Nate, Sadiq stays Jacob.",
+      "summary": "Handshake — Nate $10 FAAB to Jacob for R20 chairs; Branch stays Nate, Sadiq stays Jacob.",
       "official": false,
       "kind": "trade"
     },
@@ -2225,11 +2320,11 @@
       "for": [
         "Stefon Diggs (WR)"
       ],
-      "summary": "Fantrax official \u2014 TTAB paid $20 FAAB to Saltese Slamm in Week 6 trade (Oct 20 11:01 PM PDT).",
+      "summary": "Fantrax official — TTAB paid $20 FAAB to Saltese Slamm in Week 6 trade (Oct 20 11:01 PM PDT).",
       "official": true,
       "kind": "trade"
     }
   ],
   "incomplete": false,
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }

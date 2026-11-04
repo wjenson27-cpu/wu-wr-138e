@@ -2,7 +2,7 @@
   "teamId": "lab",
   "teamName": "Little Ass Boys",
   "owner": "Jesse Nicholson",
-  "asOf": "2026-10-28 10:45 AM PT",
+  "asOf": "2026-11-04 10:18 AM PT",
   "faabLeft": 56,
   "startingQB": "Jayden Daniels",
   "roster": {
@@ -12,29 +12,28 @@
     ],
     "RB": [
       "Kyren Williams",
-      "Jaylen Warren",
       "Tyler Allgeier",
-      "Dylan Sampson"
+      "Dylan Sampson",
+      "Jaylen Warren"
     ],
     "WR": [
       "Puka Nacua",
-      "Caleb Douglas",
-      "Carnell Tate",
-      "Khalil Shakir"
+      "Mike Evans",
+      "Khalil Shakir",
+      "Caleb Douglas"
     ],
     "TE": [
-      "Greg Dulcich",
       "Isaiah Likely"
     ],
     "DL": [
       "Aidan Hutchinson"
     ],
     "LB": [
-      "Roquan Smith",
+      "Jack Gibbens",
       "Akeem Davis-Gaither",
       "Drue Tranquill",
       "Quay Walker",
-      "Jihaad Campbell"
+      "Roquan Smith"
     ],
     "DB": [
       "Minkah Fitzpatrick",
@@ -42,23 +41,30 @@
     ],
     "IR": [
       "Jeremiyah Love",
-      "Mike Evans"
+      "Carnell Tate",
+      "Jihaad Campbell"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Jeremiyah Love — Q (IR slot)",
-    "Mike Evans — Q (IR slot)"
+    "Mike Evans — Q (active)",
+    "Jeremiyah Love — IR (IR slot)",
+    "Carnell Tate — Q (IR slot)",
+    "Jihaad Campbell — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-10-28 10:45 AM PT (/workspace/fantrax-raw-2026-10-28-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
   "fantraxTeamId": "a4q2ra3ymsb3ulv4",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Mike Evans — Q (active)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Jeremiyah Love — Q (IR slot)",
-    "Mike Evans — Q (IR slot)"
+    "Mike Evans — Q (active)",
+    "Jeremiyah Love — IR (IR slot)",
+    "Carnell Tate — Q (IR slot)",
+    "Jihaad Campbell — Q (IR slot)"
   ],
-  "updated": "2026-10-28",
-  "lastSynced": "2026-10-28 10:45 AM PT"
+  "updated": "2026-11-04",
+  "lastSynced": "2026-11-04 10:18 AM PT"
 }
