@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-03T15:15:00-08:00",
+  "asOf": "2026-11-04T15:10:00-08:00",
   "season": 2026,
   "week": 9,
   "opponent": {
@@ -9,27 +9,23 @@
     "name": "TTAB"
   },
   "freshness": {
-    "plan": "2026-11-03T15:15:00-08:00",
-    "roster": "2026-11-03T15:05:00-08:00",
-    "scores": "2026-11-03T15:05:00-08:00",
-    "waivers": "2026-11-03T15:05:00-08:00",
-    "news": "2026-11-03T14:53:00-08:00"
+    "plan": "2026-11-04T15:10:00-08:00",
+    "roster": "2026-11-04T15:00:00-08:00",
+    "scores": "2026-11-04T15:00:00-08:00",
+    "waivers": "2026-11-04T15:00:00-08:00",
+    "news": "2026-11-04T14:50:00-08:00"
   },
   "lockTimes": [
-    {
-      "label": "W9 claims run Wed Nov 4 9 AM PT",
-      "at": "2026-11-04T09:00:00-08:00"
-    },
     {
       "label": "TNF JAX@BAL Thu Nov 5 5:15 PM PT (Lawrence, Lane, Simpson)",
       "at": "2026-11-05T17:15:00-08:00"
     },
     {
-      "label": "Sun early games 10:00 AM PT (Hall, Wilson, Coker, Pickens, Skattebo, Karlaftis, Lake, Brooks, Luvu)",
+      "label": "Sun early games 10:00 AM PT (Hall, Wilson, Coker, Pickens, Downs, Singletary, Karlaftis, Lake, Brooks, Luvu)",
       "at": "2026-11-08T10:00:00-08:00"
     },
     {
-      "label": "Sun late 1:25 PM PT (Bowers, Charbonnet, Warner, E. Williams, Kiner)",
+      "label": "Sun late 1:25 PM PT (Bowers, Charbonnet, Warner, E. Williams)",
       "at": "2026-11-08T13:25:00-08:00"
     },
     {
@@ -44,9 +40,9 @@
       "pos": "QB",
       "nflTeam": "JAX",
       "verdict": "START",
-      "reason": "@BAL TNF. 25.1 / 32.0 FP/G, 81% snaps; BAL 13th vs QB.",
+      "reason": "@BAL TNF. 25.1 / 32.0 FP/G, 81% snaps. No designation on the final JAX report. Locks Thu 5:15 PM PT.",
       "injury": "",
-      "practice": ""
+      "practice": "Not listed"
     },
     {
       "slot": "RB",
@@ -54,19 +50,19 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "@KC. 17.3 FP/G, 0 last wk (missed 5 games); Rapoport: ready to return. Fallback Charbonnet.",
-      "injury": "INJURED tag",
-      "practice": ""
+      "reason": "@KC. 17.3 FP/G, 0 last wk (missed 5 games). Start if Friday is LP/FP and no worse than Q; else Singletary (7.5 / 8.5).",
+      "injury": "Q (quad)",
+      "practice": "LP Wed"
     },
     {
       "slot": "WR",
       "player": "Garrett Wilson",
       "pos": "WR",
       "nflTeam": "NYJ",
-      "verdict": "START",
-      "reason": "@KC (31st vs WR, tough). 15.1 / 8.7, 81%.",
-      "injury": "",
-      "practice": ""
+      "verdict": "WATCH",
+      "reason": "@KC. 15.1 / 8.7, 81%. Must clear concussion protocol; if out by Fri, Coker moves to WR and Singletary goes to flex.",
+      "injury": "Q (concussion)",
+      "practice": "DNP Wed"
     },
     {
       "slot": "TE",
@@ -74,7 +70,7 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "@SF. 27.9 / 22.0, 86%. Matchup-proof at TE premium.",
+      "reason": "@SF. 27.9 / 22.0, 86%. Matchup-proof.",
       "injury": "",
       "practice": ""
     },
@@ -83,10 +79,10 @@
       "player": "Jalen Coker",
       "pos": "WR",
       "nflTeam": "CAR",
-      "verdict": "START",
-      "reason": "vs DEN. 15.3 / 8.7, 86%.",
+      "verdict": "SWAP",
+      "reason": "vs DEN. 15.3 / 8.7, 86%. On the bench now: swap in for Charbonnet.",
       "injury": "",
-      "practice": ""
+      "practice": "CAR no practice Wed (estimate)"
     },
     {
       "slot": "FLEX",
@@ -94,19 +90,19 @@
       "pos": "WR",
       "nflTeam": "DAL",
       "verdict": "START",
-      "reason": "@IND. 13.6 / 12.0, 57%; hamstring tightens in games.",
-      "injury": "",
-      "practice": ""
+      "reason": "@IND. 13.6 / 12.0, 57%. Start unless ruled out.",
+      "injury": "Q (hamstring)",
+      "practice": "LP Wed"
     },
     {
       "slot": "FLEX",
-      "player": "Cameron Skattebo",
-      "pos": "RB",
-      "nflTeam": "NYG",
+      "player": "Josh Downs",
+      "pos": "WR",
+      "nflTeam": "IND",
       "verdict": "START",
-      "reason": "@PHI if he practices by Fri (11.6 / 13.5); else Adonai Mitchell if claimed, then Charbonnet.",
-      "injury": "Q hamstring (IR slot)",
-      "practice": ""
+      "reason": "vs DAL. 8.6 / 8.3, 14 in W8 (snaps unverified). Trade rumor is a fan account only.",
+      "injury": "",
+      "practice": "Not listed"
     },
     {
       "slot": "DL",
@@ -114,9 +110,9 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "vs NYJ (tough OL x0.93). 19.7 / 26.3, 76%. DL #5 wk / #5 ROS.",
+      "reason": "vs NYJ (tough OL x0.93). 19.7 / 26.3, 76%. DL #5.",
       "injury": "",
-      "practice": ""
+      "practice": "Not listed"
     },
     {
       "slot": "LB",
@@ -126,7 +122,7 @@
       "verdict": "START",
       "reason": "vs LV. 26.1 / 27.0, 100%, green dot. LB #6 / #3 ROS.",
       "injury": "",
-      "practice": ""
+      "practice": "Not listed"
     },
     {
       "slot": "DB",
@@ -134,9 +130,9 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "@NE (tough x0.93). 25.3 / 22.7, 100%. DB #5 / #3 ROS.",
+      "reason": "@NE. 25.3 / 22.7, 100%. DB #5.",
       "injury": "",
-      "practice": ""
+      "practice": "Not listed"
     },
     {
       "slot": "DB",
@@ -144,7 +140,7 @@
       "pos": "DB",
       "nflTeam": "LAR",
       "verdict": "START",
-      "reason": "@WAS (tough x0.88). 22.1 / 23.7, 100%. DB #11 / #8 ROS. Fan IR post is false.",
+      "reason": "@WAS. 22.1 / 23.7, 100%. DB #11. Viral posts are about a podcast quote, not an injury.",
       "injury": "",
       "practice": ""
     },
@@ -154,9 +150,9 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "vs DET (boost x1.07). 19.0 / 23.5, 100%, full-time. LB #16.",
+      "reason": "vs DET (66 plays/g, boost). 19.0 / 23.5, 100%, full-time. LB #16.",
       "injury": "",
-      "practice": ""
+      "practice": "Not listed"
     },
     {
       "slot": "IDP",
@@ -174,9 +170,19 @@
       "pos": "DB",
       "nflTeam": "BUF",
       "verdict": "START",
-      "reason": "@MIN MNF (tough x0.91). 16.0 / 18.0, 88%. DB #30; Quinnen Williams takes this spot if claimed.",
+      "reason": "@MIN MNF. 16.0 / 18.0, 88%. DB #30. Quinnen Williams takes this spot if added.",
       "injury": "",
       "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Devin Singletary",
+      "pos": "RB",
+      "nflTeam": "NYG",
+      "verdict": "WATCH",
+      "reason": "@PHI. 7.5 / 8.5. Fallback for Hall or G. Wilson; lead role if Skattebo sits.",
+      "injury": "",
+      "practice": "Not listed"
     },
     {
       "slot": "BN",
@@ -184,7 +190,7 @@
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "SIT",
-      "reason": "vs ARI. 5.0 in debut, 37% snaps behind Price.",
+      "reason": "vs ARI. 5.0, 37% snaps; Drew Lock starts at QB (Darnold out).",
       "injury": "",
       "practice": ""
     },
@@ -194,9 +200,19 @@
       "pos": "LB",
       "nflTeam": "BAL",
       "verdict": "SIT",
-      "reason": "vs JAX (tough). 17.75 / 11.0, 64%; BAL dot rotation. LB #60.",
+      "reason": "vs JAX TNF. 11.0 last-3; UDFA Joe Fagnano starts at QB.",
       "injury": "",
-      "practice": ""
+      "practice": "Not listed"
+    },
+    {
+      "slot": "BN",
+      "player": "Ja'Kobi Lane",
+      "pos": "WR",
+      "nflTeam": "BAL",
+      "verdict": "SIT",
+      "reason": "vs JAX TNF. 4.25 / 5.0, 65%; Fagnano at QB.",
+      "injury": "",
+      "practice": "Not listed"
     },
     {
       "slot": "BN",
@@ -219,24 +235,14 @@
       "practice": ""
     },
     {
-      "slot": "BN",
-      "player": "Ja'Kobi Lane",
-      "pos": "WR",
-      "nflTeam": "BAL",
-      "verdict": "SIT",
-      "reason": "vs JAX TNF. 4.25 / 5.0, 65%.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Corey Kiner",
+      "slot": "IR",
+      "player": "Cameron Skattebo",
       "pos": "RB",
-      "nflTeam": "NE",
+      "nflTeam": "NYG",
       "verdict": "SIT",
-      "reason": "vs GB. 5.3 / 10.0, 18%. Drop candidate when Skattebo activates.",
-      "injury": "",
-      "practice": ""
+      "reason": "Stays on IR. Hamstring, side work only.",
+      "injury": "IR slot (hamstring)",
+      "practice": "DNP Wed"
     },
     {
       "slot": "IR",
@@ -244,9 +250,9 @@
       "pos": "WR",
       "nflTeam": "NO",
       "verdict": "SIT",
-      "reason": "IR-R hamstring; Saints not disclosing practice return.",
-      "injury": "IR",
-      "practice": ""
+      "reason": "IR-R hamstring; 21-day practice window opened Wed. Must be activated to play.",
+      "injury": "IR-R",
+      "practice": "LP Wed"
     },
     {
       "slot": "IR",
@@ -254,47 +260,59 @@
       "pos": "RB",
       "nflTeam": "NO",
       "verdict": "SIT",
-      "reason": "IR hamstring; Saints claimed Estime (Yates: telling sign).",
+      "reason": "IR hamstring; window not opened. Nowak: \"not too far.\"",
       "injury": "IR",
-      "practice": ""
+      "practice": "Not practicing"
     }
   ],
   "injuryWatch": [
     {
-      "player": "Breece Hall",
-      "tag": "INJURED",
-      "practice": "",
-      "note": "Rapoport: ready to return; RotoWire: should play W9 @KC. Confirm Wed practice."
+      "player": "Garrett Wilson",
+      "tag": "Q",
+      "practice": "DNP Wed",
+      "note": "Concussion protocol; Glenn: day-to-day. Must clear to play @KC. Fallback: Coker to WR, Singletary to flex."
     },
     {
-      "player": "Cameron Skattebo",
+      "player": "Breece Hall",
       "tag": "Q",
-      "practice": "Side work Mon",
-      "note": "Hamstring, day-to-day; W9 @PHI in doubt (Dunleavy)."
+      "practice": "LP Wed",
+      "note": "Quad; first practice back. Glenn: \"trending in the right direction.\" Fallback: Singletary."
     },
     {
       "player": "George Pickens",
-      "tag": "",
-      "practice": "",
-      "note": "Hamstring tightens in games; 57-60% snaps last 2 (Castillo)."
+      "tag": "Q",
+      "practice": "LP Wed",
+      "note": "Hamstring; start unless ruled out."
+    },
+    {
+      "player": "Cameron Skattebo",
+      "tag": "IR slot",
+      "practice": "DNP Wed",
+      "note": "Hamstring, side work only. Stays on IR."
     },
     {
       "player": "Jordyn Tyson",
       "tag": "IR-R",
-      "practice": "",
-      "note": "Saints not disclosing practice date."
+      "practice": "LP Wed",
+      "note": "Practice window opened Wed Nov 4; game return TBD."
     },
     {
       "player": "Travis Etienne",
       "tag": "IR",
-      "practice": "",
-      "note": "Saints claimed Audric Estime; Yates reads it as Etienne not close."
+      "practice": "Not practicing",
+      "note": "Window not opened; Nowak: \"sounds like he's not too far.\""
     },
     {
-      "player": "Quentin Lake",
+      "player": "Jalen Coker",
       "tag": "",
-      "practice": "",
-      "note": "Fan post claiming IR is false; 100% snaps W8."
+      "practice": "CAR no practice Wed",
+      "note": "Estimated report; not listed."
+    },
+    {
+      "player": "Josh Downs",
+      "tag": "",
+      "practice": "Not listed",
+      "note": "Trade rumor from a fan account only (unverified)."
     }
   ],
   "byes": [
@@ -320,11 +338,11 @@
       "player": "Quinnen Williams",
       "pos": "DL",
       "nflTeam": "DAL",
-      "why": "MUST ROS. 28.0 last-3, 35 W8, 62% snaps; @IND OL 7.6% sack rate (x1.15). DL #1 wk / #8 ROS. Replaces Bishop (16.0 / 18.0). Hamstring report unverified (AI account only).",
-      "stats": "16.88 season, 28.0 last-3, 35 W8",
-      "faabMin": 6,
-      "faabMax": 17,
-      "bid": 11,
+      "why": "MUST ROS. Free add now ($0). Healthy, not on the DAL report. @IND boost (x1.15). DL #1 wk / #8 ROS. Beats Bishop (16.0 / 18.0) in the IDP flex.",
+      "stats": "16.88 season, 28.0 last-3, 35 W8, 62% snaps",
+      "faabMin": 0,
+      "faabMax": 0,
+      "bid": 0,
       "drop": "Cedric Gray",
       "tag": "ROS"
     },
@@ -333,91 +351,13 @@
       "player": "Carl Granderson",
       "pos": "DL",
       "nflTeam": "NO",
-      "why": "LIKE ROS. 0 last wk = NO bye. 70% snaps; CLE OL 10.6% sack rate (x1.11). DL #3 wk / #1 ROS.",
-      "stats": "18.0 season, 20.0 last-3, 0 W8 (bye)",
-      "faabMin": 4,
-      "faabMax": 17,
-      "bid": 6,
-      "drop": "Trenton Simpson",
-      "tag": "ROS"
-    },
-    {
-      "rank": 3,
-      "player": "Trent McDuffie",
-      "pos": "DB",
-      "nflTeam": "LAR",
-      "why": "LIKE ROS. Missed W6-7 (groin), 80% snaps W8, back sore but McVay \"better than expected\". @WAS. Upgrade over Bishop; claims clear before Wed practice.",
-      "stats": "16.83 season, 32.0 last-3 (1 GP), 32 W8",
-      "faabMin": 3,
-      "faabMax": 8,
-      "bid": 5,
-      "drop": "Ja'Kobi Lane",
-      "tag": "ROS"
-    },
-    {
-      "rank": 4,
-      "player": "Adonai Mitchell",
-      "pos": "WR",
-      "nflTeam": "NYJ",
-      "why": "LIKE ROS. 16.5 last-3, 33 W8 (snaps unverified); @KC tough. Flex 3 over Charbonnet (5.0).",
-      "stats": "13.5 season, 16.5 last-3, 33 W8",
-      "faabMin": 1,
-      "faabMax": 4,
-      "bid": 2,
-      "drop": "(open roster spot)",
-      "tag": "ROS"
-    },
-    {
-      "rank": 5,
-      "player": "Ja'Quan McMillian",
-      "pos": "DB",
-      "nflTeam": "DEN",
-      "why": "DART ROS. Snaps up to 81%; @CAR 44 dropbacks/g (neutral). DB #7 wk / #18 ROS.",
-      "stats": "12.38 season, 20.67 last-3, 6 W8",
-      "faabMin": 1,
-      "faabMax": 4,
-      "bid": 2,
-      "drop": "Ja'Kobi Lane",
-      "tag": "ROS"
-    },
-    {
-      "rank": 6,
-      "player": "Chase Young",
-      "pos": "DL",
-      "nflTeam": "NO",
-      "why": "DART ROS. 0 last wk = bye; 72% snaps; CLE OL boost (x1.13). DL #10 / #12 ROS.",
-      "stats": "15.29 season, 18.5 last-3, 0 W8 (bye)",
-      "faabMin": 1,
-      "faabMax": 5,
-      "bid": 2,
-      "drop": "Trenton Simpson",
-      "tag": "ROS"
-    },
-    {
-      "rank": 7,
-      "player": "Adetomiwa Adebawore",
-      "pos": "DL",
-      "nflTeam": "IND",
-      "why": "DART WEEKLY. Snaps up to 83%; DAL OL 3.3% sack rate (x0.97). DL #8.",
-      "stats": "10.5 season, 18.0 last-3, 11 W8",
+      "why": "LIKE ROS. Free add now ($0). 0 last wk = NO bye. 70% snaps; CLE OL 10.6% sack rate. DL #3 wk / #1 ROS; Woellert: start all of the NO line.",
+      "stats": "18.0 season, 20.0 last-3, 0 W8 (bye), 70% snaps",
       "faabMin": 0,
-      "faabMax": 2,
-      "bid": 1,
-      "drop": "Cedric Gray",
-      "tag": "WEEKLY"
-    },
-    {
-      "rank": 8,
-      "player": "Martin Emerson",
-      "pos": "DB",
-      "nflTeam": "NO",
-      "why": "DART WEEKLY. 0 last wk = bye; 95% snaps last game; CLE neutral.",
-      "stats": "12.17 season, 29.5 last-3, 0 W8 (bye)",
-      "faabMin": 0,
-      "faabMax": 1,
+      "faabMax": 0,
       "bid": 0,
-      "drop": "Cedric Gray",
-      "tag": "WEEKLY"
+      "drop": "Ja'Kobi Lane",
+      "tag": "ROS"
     }
   ],
   "drops": [
@@ -429,21 +369,9 @@
     },
     {
       "rank": 2,
-      "player": "Trenton Simpson",
-      "pos": "LB",
-      "reason": "11.0 last-3, 64% snaps, BAL dot rotation; LB #60 W9."
-    },
-    {
-      "rank": 3,
       "player": "Ja'Kobi Lane",
       "pos": "WR",
-      "reason": "4.25 / 5.0 FP/G."
-    },
-    {
-      "rank": 4,
-      "player": "Corey Kiner",
-      "pos": "RB",
-      "reason": "5.3 / 10.0, 18% snaps; drop when Skattebo activates."
+      "reason": "4.25 / 5.0 FP/G; Fagnano at QB, BAL bye W10."
     }
   ],
   "trades": [
@@ -530,131 +458,132 @@
   ],
   "news": [
     {
-      "source": "@RapSheet",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Breece Hall: Rapoport (GMFB): Jets played without Hall Sunday, \"though he's now ready to return to the field.\"",
-      "url": "https://x.com/RapSheet/status/2117275932520010188"
+      "source": "@AroundTheNFL",
+      "time": "2026-11-04T14:50:00-08:00",
+      "text": "George Pickens / Caleb Downs: Caleb Downs (concussion/ankle) did not practice; George Pickens (hamstring) limited.",
+      "url": "https://x.com/AroundTheNFL/status/2118113560916341064"
     },
     {
-      "source": "@RotoWireNFL",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Breece Hall: RotoWire news roundup: Breece Hall \"should play\" in Week 9.",
-      "url": "https://x.com/RotoWireNFL/status/2117434548048773177"
+      "source": "@Grimillionaire",
+      "time": "2026-11-04T14:39:00-08:00",
+      "text": "Jack Campbell: Lions sign LB Owen Pappoe to practice squad with Jack Campbell and Jimmy Rolder hurt.",
+      "url": "https://x.com/Grimillionaire/status/2118110802620330015"
     },
     {
-      "source": "@RichCimini",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Breece Hall: Aaron Glenn on trade talk: \"Breece is still a part of this team... we're in the business of keeping good players.\" (Hall missed 5 straight; Braelon Allen 147 yd",
-      "url": "https://x.com/RichCimini/status/2117266840476930357"
+      "source": "@sarahbarshop",
+      "time": "2026-11-04T14:18:00-08:00",
+      "text": "Trent McDuffie (waiver): McVay: CB Trent McDuffie (back), TE Colby Parkinson, S Kam Curl (foot), LS Joe Cardona won't practice; Stuard, Avila, Whittington limited.",
+      "url": "https://x.com/sarahbarshop/status/2118105530078306673"
     },
     {
-      "source": "@theGLgrind",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Breece Hall: Glenn says Hall gets starting job back when healthy, \"The role won't change\" (aggregator; quote not independently verified from beat source).",
-      "url": "https://x.com/theGLgrind/status/2117655146670813247"
+      "source": "@AroundTheNFL",
+      "time": "2026-11-04T14:10:00-08:00",
+      "text": "Christian Watson (TTAB): Micah Parsons (knee) officially limited in practice return, as was Christian Watson (rib).",
+      "url": "https://x.com/AroundTheNFL/status/2118103494716744164"
     },
     {
-      "source": "@SundayLeagueNFL",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Cam Skattebo: Giants RB Cam Skattebo (hamstring) considered day-to-day.",
-      "url": "https://x.com/SundayLeagueNFL/status/2117390807896588365"
+      "source": "@josephperson",
+      "time": "2026-11-04T14:06:00-08:00",
+      "text": "Jalen Coker (CAR report): Panthers did not practice Wed; report is an estimate. Bryce Young listed full (ankle).",
+      "url": "https://x.com/josephperson/status/2118102582065234403"
     },
     {
-      "source": "@rydunleavy",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Cam Skattebo: Beat writer: Skattebo worked with trainers during practice (Monday); hurt hamstring on last carry before bye. \"Will he play vs. Eagles?\"",
-      "url": "https://x.com/rydunleavy/status/2117610202195177655"
+      "source": "@BrianCoz",
+      "time": "2026-11-04T13:48:00-08:00",
+      "text": "Garrett Wilson / Breece Hall: Jets Wed report: DNP Garrett Wilson (concussion), Harrison Phillips (ankle), Demario Davis (rest); LP Breece Hall (quad), Bailey, Ossai, Mason Taylor, Trevin Wallace; FP ",
+      "url": "https://x.com/BrianCoz/status/2118098094424306078"
     },
     {
-      "source": "@NOLAnews",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Jordyn Tyson: NOLA.com: \"Will Saints WR Jordyn Tyson return to practice this week? Here's what Kellen Moore said\" (article; body not read).",
-      "url": "https://x.com/NOLAnews/status/2117398970301394945"
+      "source": "@by_JBH",
+      "time": "2026-11-04T13:48:00-08:00",
+      "text": "Packers report (Evan Williams): Packers Wed report: LIMITED Aaron Banks, Chris Brooks, Keisean Nixon, Micah Parsons, Christian Watson; DNP Zaire Franklin, Travis Glover, Sean Rhyan, Josh Whyle. (Evan Wi",
+      "url": "https://x.com/by_JBH/status/2118098052607304130"
     },
     {
-      "source": "@FF_Today",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Jordyn Tyson / Travis Etienne: FFToday headline: \"Saints not disclosing when Tyson, Etienne will practice.\"",
-      "url": "https://x.com/FF_Today/status/2117421979359928794"
+      "source": "@jonmachota",
+      "time": "2026-11-04T13:47:00-08:00",
+      "text": "George Pickens: Cowboys Wed: Caleb Downs and Jake Ferguson DNP; George Pickens and Tyler Smith limited.",
+      "url": "https://x.com/jonmachota/status/2118097760197242943"
     },
     {
-      "source": "@RossJacksonNOLA",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Jordyn Tyson: Ross Jackson: Tyson (and LB Jaylan Ford) carry a slightly different IR designation since he was placed on IR at roster cuts.",
-      "url": "https://x.com/RossJacksonNOLA/status/2117597479277367600"
+      "source": "@DKSports",
+      "time": "2026-11-04T13:42:00-08:00",
+      "text": "Zach Charbonnet (SEA QB): Recap: Drew Lock will start for the Seahawks vs. the Cardinals (Darnold out, quad).",
+      "url": "https://x.com/DKSports/status/2118096471018864875"
     },
     {
-      "source": "@FieldYates",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Travis Etienne: Field Yates: Saints claiming RB Audric Estime \"might be a telling sign\" on Etienne; he is eligible to return from IR but activation would put NO at 5 RBs.",
-      "url": "https://x.com/FieldYates/status/2117727374045569272"
+      "source": "@Saints",
+      "time": "2026-11-04T13:31:00-08:00",
+      "text": "Jordyn Tyson: Saints: Kelvin Banks Jr. and Jordyn Tyson were limited today (Kellen Moore injury update).",
+      "url": "https://x.com/Saints/status/2118093711066517932"
     },
     {
-      "source": "@NickCastillo",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "George Pickens: Pickens 57-60% snaps last 2 games (fewer than Flournoy); Stephen Jones says hamstring \"tightens up in games,\" they aren't pulling him.",
-      "url": "https://x.com/NickCastillo/status/2117622907375411674"
+      "source": "@Jeff_Nowak",
+      "time": "2026-11-04T13:25:00-08:00",
+      "text": "Travis Etienne: Beat: Tyson and Banks back at practice; \"Still no Travis Etienne (hamstring), but sounds like he's not too far.\"",
+      "url": "https://x.com/Jeff_Nowak/status/2118092187204239447"
     },
     {
-      "source": "@PFF_Fantasy",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "George Pickens: PFF: Cowboys WR offensive snaps last 3 weeks: Lamb 168, Flournoy 158, Pickens 141.",
-      "url": "https://x.com/PFF_Fantasy/status/2117697923232227487"
+      "source": "@Kat_Terrell",
+      "time": "2026-11-04T13:24:00-08:00",
+      "text": "Travis Etienne: Beat: \"I did not see Travis Etienne.\"",
+      "url": "https://x.com/Kat_Terrell/status/2118092139791880313"
     },
     {
-      "source": "@MichaelFFlorio",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Zach Charbonnet: Seahawks W8 RB usage: Jadarian Price 48% snaps, 10 car, 13 routes, 4 tgt; Charbonnet 36% snaps, 6 car, 7 routes, 4 tgt (29 yds).",
-      "url": "https://x.com/MichaelFFlorio/status/2117473244362281421"
+      "source": "@Dan_Salomone",
+      "time": "2026-11-04T13:21:00-08:00",
+      "text": "Cam Skattebo: Giants Wed report: DNP Abdul Carter (illness), Cam Skattebo (hamstring); LP Eluemunor, Malik Harrison, Colton Hood, Charlie Jones, Andrew Thomas.",
+      "url": "https://x.com/Dan_Salomone/status/2118091221486952733"
     },
     {
-      "source": "@loebsleads",
-      "time": "2026-11-03T15:15:00-08:00",
-      "text": "Zach Charbonnet: Price outsnapped Charbonnet 30-23 and out-touched him 12-9 (per Footballguys/SumerSports cited).",
-      "url": "https://x.com/loebsleads/status/2117631372768563689"
+      "source": "@PocketBookieNws",
+      "time": "2026-11-04T12:48:00-08:00",
+      "text": "Cam Skattebo: Skattebo DNP Wed, side work only; cites NY Post: unlikely Sunday at Philly (aggregator; NY Post claim not independently verified).",
+      "url": "https://x.com/PocketBookieNws/status/2118082948809490733"
     },
     {
-      "source": "Fantrax",
-      "time": "2026-11-01T14:38:00-08:00",
-      "text": "Live 2:38 PM PT: Eddies 226, Ultron 204 (proj 259.3-233.5). Eddies left: Kiner, Karlaftis, Brooks, Lake live; Luvu SNF."
+      "source": "@49ers_Access",
+      "time": "2026-11-04T12:42:00-08:00",
+      "text": "Fred Warner (49ers report): 49ers Wed report: DNP McCaffrey, Deebo Samuel, Mike Evans, Siran Neal; LP Wallow, Bosa, Sigle, Stout, D. Robinson, Hobbs. (Warner not listed.)",
+      "url": "https://x.com/49ers_Access/status/2118081502672191847"
     },
     {
-      "source": "X @mikehaim",
-      "time": "2026-11-01T14:26:00-08:00",
-      "text": "Cole Bishop: first career sack and forced fumble vs BAL.",
-      "url": "https://x.com/mikehaim/status/2117020406083113265"
+      "source": "@WNST",
+      "time": "2026-11-04T12:20:00-08:00",
+      "text": "Trevor Lawrence / JAX: Jaguars final TNF report: QUESTIONABLE RB Bhayshul Tuten (ankle/foot), DE Travon Walker (rib). Lawrence not listed.",
+      "url": "https://x.com/WNST/status/2118075882502037549"
     },
     {
-      "source": "X @Mike_Woellert",
-      "time": "2026-11-01T14:01:00-08:00",
-      "text": "IND green dot rotated; CJ Allen wore it all 4th quarter.",
-      "url": "https://x.com/Mike_Woellert/status/2117014115176911178"
+      "source": "@jeffzrebiec",
+      "time": "2026-11-04T12:12:00-08:00",
+      "text": "Ja'Kobi Lane / Trenton Simpson (BAL): Ravens TNF report: OUT S Jaylinn Hawkins (knee), QB Tyler Huntley (toe), QB Lamar Jackson (thumb); QUESTIONABLE RB Adam Randall (neck), CB Nate Wiggins (stinger/illness).",
+      "url": "https://x.com/jeffzrebiec/status/2118073821043323118"
     },
     {
-      "source": "X @JHWill",
-      "time": "2026-11-01T13:31:00-08:00",
-      "text": "Quentin Lake INT of Herbert with a 45-yd return.",
-      "url": "https://x.com/JHWill/status/2117006575055585526"
+      "source": "@jeffzrebiec",
+      "time": "2026-11-04T12:09:00-08:00",
+      "text": "Ja'Kobi Lane (BAL QB): UDFA QB Joe Fagnano starts Thu vs JAX; Austin Reed/Kedon Slovis back him up. Ravens don't play again until Nov 16 MNF vs LAC (BAL bye W10).",
+      "url": "https://x.com/jeffzrebiec/status/2118073278640144719"
     },
     {
-      "source": "X @Mike_Woellert",
-      "time": "2026-11-01T13:29:00-08:00",
-      "text": "LAC: Henley questionable to return (shoulder); Troy Dye in with the dot.",
-      "url": "https://x.com/Mike_Woellert/status/2117006234008363515"
+      "source": "@ThePoniExpress",
+      "time": "2026-11-04T11:57:00-08:00",
+      "text": "Josh Downs: UNVERIFIED trade rumor (fan/blog account citing unnamed Colts source): Colts likely to move Josh Downs for a 4th-round pick before deadline.",
+      "url": "https://x.com/ThePoniExpress/status/2118070069372534884"
     },
     {
-      "source": "X @SMHighlights1",
-      "time": "2026-11-01T12:35:00-08:00",
-      "text": "Jack Campbell (DET, Substation) carted off on a stretcher; injury unconfirmed.",
-      "url": "https://x.com/SMHighlights1/status/2116992571734200501"
+      "source": "@SleeperNFL",
+      "time": "2026-11-04T11:43:00-08:00",
+      "text": "Ja'Kobi Lane (BAL QB): Schefter (via Sleeper): Cardinals trading QB Jacoby Brissett to Ravens; Fagnano still starts TNF, with Brissett expected after the weekend.",
+      "url": "https://x.com/SleeperNFL/status/2118066713816424456"
     }
   ],
-  "lastUpdated": "2026-11-03T15:15:00-08:00",
+  "lastUpdated": "2026-11-04T15:10:00-08:00",
   "fantraxRaw": {
-    "file": "fantrax-scrape-2026-11-03-pm-newsletter.json",
-    "scraped": "2026-11-03 ~15:05 PST"
+    "file": "fantrax-scrape-2026-11-04-pm-newsletter.json",
+    "scraped": "2026-11-04 ~15:00 PST"
   },
   "refreshNotes": [
-    "Updated Tue Nov 3 3:15 PM PT from Eddie Daily: W8 final 269-227, W9 vs TTAB (proj 203.4-171.5), Tuesday bid sheet (Quinnen Williams, Granderson, McDuffie, Adonai Mitchell), Hall expected back, Skattebo in doubt."
+    "Updated Wed Nov 4 3:10 PM PT from Eddie Daily: W9 vs TTAB (proj 204.7-169.3), waivers cleared 9 AM PT, free-add watch Quinnen Williams and Granderson ($0), G. Wilson in concussion protocol, Hall LP."
   ]
 }
