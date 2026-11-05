@@ -28,8 +28,8 @@
         "label": "Nov 5–9"
       },
       "status": "pending",
-      "locked": false,
-      "robotLockedAt": null,
+      "locked": true,
+      "robotLockedAt": "2026-11-05T14:10:10-08:00",
       "result": null,
       "winner": null,
       "robotPoints": null,
