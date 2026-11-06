@@ -1,279 +1,279 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "updatedAt": "2026-11-05T18:31:00-08:00",
+  "updatedAt": "2026-11-05T20:06:00-08:00",
   "season": 2026,
   "week": 9,
-  "opponent": "ttab",
-  "source": "Fantrax read-only scrape fantrax-raw-2026-11-05-pm.json (game-day live)",
-  "dataNote": "Team score and projected final are Fantrax matchup totals. Eddies per-player points/projections/status from live scoring; opponent per-player live fields from matchup page when scraped.",
+  "opponent": "ultron",
+  "source": "Fantrax read-only scrape fantrax-raw-2026-11-05-pm.json (League HQ sync)",
+  "dataNote": "Team score and projected final are Fantrax matchup totals. Per-player points, projections and game status are not in the scrape and are left null.",
   "teams": [
     {
       "id": "eddies",
       "name": "Eagleridge Eddie's",
       "record": "6-2",
-      "score": 19.0,
-      "projection": 217.67,
+      "score": 21.0,
+      "projection": 201.96,
       "starters": [
         {
           "player": "Trevor Lawrence",
           "pos": "QB",
           "nflTeam": "JAX",
-          "status": "live",
-          "points": 19,
-          "projection": 36.71,
+          "status": null,
+          "points": null,
+          "projection": null,
           "injury": ""
         },
         {
           "player": "Breece Hall",
           "pos": "RB",
           "nflTeam": "NYJ",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 7.99,
+          "projection": null,
           "injury": "Q"
-        },
-        {
-          "player": "Garrett Wilson",
-          "pos": "WR",
-          "nflTeam": "NYJ",
-          "status": "not started",
-          "points": null,
-          "projection": 13.9,
-          "injury": "Q"
-        },
-        {
-          "player": "Brock Bowers",
-          "pos": "TE",
-          "nflTeam": "LV",
-          "status": "not started",
-          "points": null,
-          "projection": 23.36,
-          "injury": ""
         },
         {
           "player": "Zach Charbonnet",
           "pos": "RB",
           "nflTeam": "SEA",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 10.62,
+          "projection": null,
           "injury": ""
+        },
+        {
+          "player": "Garrett Wilson",
+          "pos": "WR",
+          "nflTeam": "NYJ",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": "Q"
         },
         {
           "player": "Josh Downs",
           "pos": "WR",
           "nflTeam": "IND",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 10.71,
+          "projection": null,
           "injury": ""
         },
         {
           "player": "George Pickens",
           "pos": "WR",
           "nflTeam": "DAL",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 13.26,
+          "projection": null,
           "injury": "Q"
+        },
+        {
+          "player": "Brock Bowers",
+          "pos": "TE",
+          "nflTeam": "LV",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
         },
         {
           "player": "George Karlaftis",
           "pos": "DL",
           "nflTeam": "KC",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 9.46,
+          "projection": null,
           "injury": ""
         },
         {
           "player": "Fred Warner",
           "pos": "LB",
           "nflTeam": "SF",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 19.73,
-          "injury": ""
-        },
-        {
-          "player": "Quentin Lake",
-          "pos": "DB",
-          "nflTeam": "LAR",
-          "status": "not started",
-          "points": null,
-          "projection": 16.13,
-          "injury": ""
-        },
-        {
-          "player": "Evan Williams",
-          "pos": "DB",
-          "nflTeam": "GB",
-          "status": "not started",
-          "points": null,
-          "projection": 16.03,
-          "injury": ""
-        },
-        {
-          "player": "Cole Bishop",
-          "pos": "DB",
-          "nflTeam": "BUF",
-          "status": "not started",
-          "points": null,
-          "projection": 14.69,
+          "projection": null,
           "injury": ""
         },
         {
           "player": "Jordyn Brooks",
           "pos": "LB",
           "nflTeam": "MIA",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 16.47,
+          "projection": null,
           "injury": ""
         },
         {
           "player": "Frankie Luvu",
           "pos": "LB",
           "nflTeam": "WAS",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 8.61,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Quentin Lake",
+          "pos": "DB",
+          "nflTeam": "LAR",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Evan Williams",
+          "pos": "DB",
+          "nflTeam": "GB",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Cole Bishop",
+          "pos": "DB",
+          "nflTeam": "BUF",
+          "status": null,
+          "points": null,
+          "projection": null,
           "injury": ""
         }
       ]
     },
     {
-      "id": "ttab",
-      "name": "TTAB",
-      "record": "4-4",
+      "id": "ultron",
+      "name": "Ultron",
+      "record": "3-5",
       "score": 0.0,
       "projection": 168.36,
       "starters": [
         {
-          "player": "Caleb Williams",
+          "player": "Josh Allen",
           "pos": "QB",
-          "nflTeam": "CHI",
-          "status": "not started",
+          "nflTeam": "BUF",
+          "status": null,
           "points": null,
-          "projection": 19.83,
+          "projection": null,
           "injury": ""
         },
         {
-          "player": "Javonte Williams",
+          "player": "Bijan Robinson",
           "pos": "RB",
-          "nflTeam": "DAL",
-          "status": "not started",
+          "nflTeam": "ATL",
+          "status": null,
           "points": null,
-          "projection": 19.81,
+          "projection": null,
           "injury": ""
         },
         {
-          "player": "Christian Watson",
-          "pos": "WR",
-          "nflTeam": "GB",
-          "status": "not started",
+          "player": "Chris Rodriguez Jr.",
+          "pos": "RB",
+          "nflTeam": "JAX",
+          "status": null,
           "points": null,
-          "projection": 15.41,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Rhamondre Stevenson",
+          "pos": "RB",
+          "nflTeam": "NE",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Drake London",
+          "pos": "WR",
+          "nflTeam": "ATL",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Michael Wilson",
+          "pos": "WR",
+          "nflTeam": "ARI",
+          "status": null,
+          "points": null,
+          "projection": null,
           "injury": "Q"
         },
         {
-          "player": "Dallas Goedert",
+          "player": "AJ Barner",
           "pos": "TE",
-          "nflTeam": "PHI",
-          "status": "not started",
+          "nflTeam": "SEA",
+          "status": null,
           "points": null,
-          "projection": 12,
+          "projection": null,
           "injury": ""
         },
         {
-          "player": "Omar Cooper Jr.",
-          "pos": "WR",
-          "nflTeam": "NYJ",
-          "status": "not started",
-          "points": null,
-          "projection": 9.05,
-          "injury": ""
-        },
-        {
-          "player": "Stefon Diggs",
-          "pos": "WR",
-          "nflTeam": "WAS",
-          "status": "not started",
-          "points": null,
-          "projection": 12.05,
-          "injury": ""
-        },
-        {
-          "player": "Jameson Williams",
-          "pos": "WR",
-          "nflTeam": "DET",
-          "status": "not started",
-          "points": null,
-          "projection": 12.36,
-          "injury": ""
-        },
-        {
-          "player": "Quinnen Williams",
+          "player": "Dallas Turner",
           "pos": "DL",
-          "nflTeam": "DAL",
-          "status": "not started",
+          "nflTeam": "MIN",
+          "status": null,
           "points": null,
-          "projection": 7.62,
+          "projection": null,
           "injury": ""
         },
         {
-          "player": "Demario Davis",
+          "player": "Foyesade Oluokun",
           "pos": "LB",
-          "nflTeam": "NYJ",
-          "status": "not started",
+          "nflTeam": "JAX",
+          "status": null,
           "points": null,
-          "projection": 13.36,
+          "projection": null,
           "injury": ""
         },
         {
-          "player": "Dillon Thieneman",
-          "pos": "DB",
-          "nflTeam": "CHI",
-          "status": "not started",
-          "points": null,
-          "projection": 17.39,
-          "injury": ""
-        },
-        {
-          "player": "Andrew Wingard",
-          "pos": "DB",
-          "nflTeam": "ARI",
-          "status": "not started",
-          "points": null,
-          "projection": 8.19,
-          "injury": ""
-        },
-        {
-          "player": "Micah McFadden",
+          "player": "CJ Allen",
           "pos": "LB",
-          "nflTeam": "NYG",
-          "status": "not started",
+          "nflTeam": "IND",
+          "status": null,
           "points": null,
-          "projection": 2.23,
+          "projection": null,
           "injury": ""
         },
         {
-          "player": "Harold Perkins",
+          "player": "Kendal Daniels",
           "pos": "LB",
           "nflTeam": "ATL",
-          "status": "not started",
+          "status": null,
           "points": null,
-          "projection": 5.53,
+          "projection": null,
           "injury": ""
         },
         {
-          "player": "Dorian Williams",
+          "player": "Mack Wilson",
           "pos": "LB",
-          "nflTeam": "BUF",
-          "status": "not started",
+          "nflTeam": "ARI",
+          "status": null,
           "points": null,
-          "projection": 13.53,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Kyle Hamilton",
+          "pos": "DB",
+          "nflTeam": "BAL",
+          "status": null,
+          "points": null,
+          "projection": null,
+          "injury": ""
+        },
+        {
+          "player": "Josh Metellus",
+          "pos": "DB",
+          "nflTeam": "MIN",
+          "status": null,
+          "points": null,
+          "projection": null,
           "injury": ""
         }
       ]
