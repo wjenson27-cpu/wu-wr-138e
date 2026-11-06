@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "updatedAt": "2026-11-05T17:40:55-08:00",
+  "updatedAt": "2026-11-05T18:12:00-08:00",
   "season": 2026,
   "week": 9,
   "opponent": "ttab",
@@ -12,16 +12,16 @@
       "id": "eddies",
       "name": "Eagleridge Eddie's",
       "record": "6-2",
-      "score": 3.0,
-      "projection": 202.17,
+      "score": 4.0,
+      "projection": 198.78,
       "starters": [
         {
           "player": "Trevor Lawrence",
           "pos": "QB",
           "nflTeam": "JAX",
           "status": "live",
-          "points": 3,
-          "projection": 21.21,
+          "points": 4,
+          "projection": 17.82,
           "injury": ""
         },
         {
