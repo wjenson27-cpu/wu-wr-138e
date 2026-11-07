@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-06T15:15:00-08:00",
-  "lastUpdated": "2026-11-06T15:15:00-08:00",
+  "asOf": "2026-11-07T15:05:00-08:00",
+  "lastUpdated": "2026-11-07T15:05:00-08:00",
   "season": 2026,
   "week": 9,
   "opponent": {
@@ -10,11 +10,11 @@
     "name": "TTAB"
   },
   "freshness": {
-    "plan": "2026-11-06T15:15:00-08:00",
-    "roster": "2026-11-06T15:08:58-08:00",
-    "scores": "2026-11-06T15:08:58-08:00",
-    "waivers": "2026-11-06T15:08:58-08:00",
-    "news": "2026-11-06T14:50:00-08:00"
+    "plan": "2026-11-07T15:05:00-08:00",
+    "roster": "2026-11-07T14:52:00-08:00",
+    "scores": "2026-11-07T14:52:00-08:00",
+    "waivers": "2026-11-07T15:05:00-08:00",
+    "news": "2026-11-07T15:00:00-08:00"
   },
   "lockTimes": [
     {
@@ -24,10 +24,6 @@
     {
       "label": "Sunday late",
       "at": "2026-11-08T13:25:00-08:00"
-    },
-    {
-      "label": "Sunday night",
-      "at": "2026-11-08T17:20:00-08:00"
     },
     {
       "label": "Monday",
@@ -41,7 +37,7 @@
       "pos": "QB",
       "nflTeam": "JAX",
       "verdict": "START",
-      "reason": "TNF done: 21 FP in JAX 33-10 BAL final. 24.6 / 32.0 FP/G.",
+      "reason": "TNF done: 21 FP (JAX 33-10 BAL). 24.6 / 32.0 FP/G.",
       "injury": "",
       "practice": "Played Thu"
     },
@@ -51,9 +47,9 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "@KC. 17.3 FP/G, 0 last wk (missed). Off report Fri; Glenn: Hall+Allen both play (committee). Still start.",
+      "reason": "@KC. 17.3 FP/G, ⚠ 0 last wk (missed). Cleared; Glenn: Hall+Allen mix. Still start. Snap W8: DNP unverified return share.",
       "injury": "",
-      "practice": "FP; off report"
+      "practice": "FP Fri; off report"
     },
     {
       "slot": "WR",
@@ -61,7 +57,7 @@
       "pos": "WR",
       "nflTeam": "CAR",
       "verdict": "SWAP",
-      "reason": "vs DEN. 15.3 / 8.7, ~86% W8. Wilson Out. Fantrax still starts Charbonnet — swap Coker in.",
+      "reason": "vs DEN. 15.3 / 8.7, ~86% W8 snaps. Wilson Out. Fantrax still starts Charbonnet — swap Coker into WR/FLEX.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -71,9 +67,9 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "@SF. 27.9 / 22.0, ~86% W8. TE lock.",
+      "reason": "@SF. 27.9 / 22.0, ~86% W8. TE lock. Fan rumor Out ignored.",
       "injury": "",
-      "practice": ""
+      "practice": "Not listed"
     },
     {
       "slot": "FLEX",
@@ -81,7 +77,7 @@
       "pos": "WR",
       "nflTeam": "DAL",
       "verdict": "START",
-      "reason": "@IND. 13.6 / 12.0. Official Q (hamstring). Start unless Sunday inactives rule him out (~90 min before 10:00 AM PT).",
+      "reason": "@IND. 13.6 seas / ~12 L3. Official Q (hamstring). RotoLegends Sat: Dallas expects him to play. If inactive before 10:00 AM PT lock, flex Charbonnet.",
       "injury": "Q (hamstring)",
       "practice": "LP Wed-Fri"
     },
@@ -101,7 +97,7 @@
       "pos": "RB",
       "nflTeam": "NYG",
       "verdict": "START",
-      "reason": "@PHI. 7.5 / 8.5, 0 last wk. Skattebo Doubtful — Singletary expected primary.",
+      "reason": "@PHI. 7.5 / 8.5, ⚠ 0 last wk. Skattebo Doubtful + Tracy IR — Singletary lead (sourced).",
       "injury": "",
       "practice": "Not listed"
     },
@@ -111,7 +107,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "vs NYJ. 19.7 / 26.3. Only Eddies DL.",
+      "reason": "vs NYJ. Fantrax 19.7 / 26.3; idp ~18.6 / 24.3, ~76–83% snaps. Only Eddies DL. Woellert Sat: tackles give him the edge.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -121,7 +117,7 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "vs LV. 26.1 / 27.0, green dot (W8 STALE).",
+      "reason": "vs LV. 26.1 / 27.0, ~95% snaps, green dot (W8 STALE). Weekly #5 / ROS #3.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -131,7 +127,7 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "@NE. 25.3 / 22.7. DB lock.",
+      "reason": "@NE. 25.3 / 22.7, ~100% W8. Weekly #4 / ROS #3.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -141,7 +137,7 @@
       "pos": "DB",
       "nflTeam": "LAR",
       "verdict": "START",
-      "reason": "@WAS. 22.1 / 23.7. DB lock.",
+      "reason": "@WAS. 22.1 / 23.7, 100% snaps; Woellert W8 called him new green-dot DB. Weekly #10 / ROS #8.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -151,7 +147,7 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "vs DET. 19.0 / 23.5, full-time (W8 STALE). Keep on merit.",
+      "reason": "vs DET. 19.0 / 23.5, ~93% / full-time (W8 STALE). Keep on merit; Bill keep. Weekly #15 / ROS #23.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -161,7 +157,7 @@
       "pos": "LB",
       "nflTeam": "WAS",
       "verdict": "START",
-      "reason": "vs LAR. 16.4 / 17.0, WAS green dot (W8 STALE).",
+      "reason": "vs LAR. 16.4 / 17.0, WAS green dot (W8 STALE), ~89% snaps. Weekly #23 / ROS #24.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -171,7 +167,7 @@
       "pos": "DB",
       "nflTeam": "BUF",
       "verdict": "START",
-      "reason": "@MIN MNF. 16.0 / 18.0. Hold pending a clear healthy DB upgrade.",
+      "reason": "@MIN MNF. 16.0 / 18.0, ~88–97% snaps. Weekly #29 / ROS #10. Hold until a clear healthy DB upgrade shows up.",
       "injury": "",
       "practice": "Not listed"
     },
@@ -181,19 +177,9 @@
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "SIT",
-      "reason": "vs ARI. 5.0 / 5.0. Price split; Darnold Out. Emergency only if Pickens inactive.",
+      "reason": "vs ARI. 5.0 / 5.0, ~37% W8. Price split (FBG). Emergency only if Pickens inactive.",
       "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Trenton Simpson",
-      "pos": "LB",
-      "nflTeam": "BAL",
-      "verdict": "SIT",
-      "reason": "TNF done. 17.0 / 11.0 last-3.",
-      "injury": "",
-      "practice": "Played Thu"
+      "practice": "Not listed"
     },
     {
       "slot": "BN",
@@ -201,19 +187,9 @@
       "pos": "WR",
       "nflTeam": "BAL",
       "verdict": "SIT",
-      "reason": "TNF done. 3.4 / 5.0. BAL bye W10.",
+      "reason": "TNF done; 3.4 / 5.0. BAL bye W10.",
       "injury": "",
       "practice": "Played Thu"
-    },
-    {
-      "slot": "BN",
-      "player": "Cedric Gray",
-      "pos": "LB",
-      "nflTeam": "TEN",
-      "verdict": "SIT",
-      "reason": "BYE W9. 11.4 / 9.3.",
-      "injury": "",
-      "practice": ""
     },
     {
       "slot": "BN",
@@ -223,7 +199,7 @@
       "verdict": "SIT",
       "reason": "BYE W9. 13.9 / 19.0.",
       "injury": "",
-      "practice": ""
+      "practice": "Bye"
     },
     {
       "slot": "BN",
@@ -231,9 +207,29 @@
       "pos": "WR",
       "nflTeam": "NO",
       "verdict": "WATCH",
-      "reason": "Official Q (IR-R LP Wed-Fri). Fantrax Reserve. Do not start W9.",
-      "injury": "IR-R / Q",
-      "practice": "LP Wed-Fri"
+      "reason": "Activated off IR Sat; still Q (hamstring). NFL debut — no snap history. Don't force over locked starters.",
+      "injury": "Q (hamstring)",
+      "practice": "LP Wed-Fri; activated Sat"
+    },
+    {
+      "slot": "BN",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "nflTeam": "TEN",
+      "verdict": "SIT",
+      "reason": "BYE W9. 11.4 / 9.3. First cut for any add.",
+      "injury": "",
+      "practice": "Bye"
+    },
+    {
+      "slot": "BN",
+      "player": "Trenton Simpson",
+      "pos": "LB",
+      "nflTeam": "BAL",
+      "verdict": "SIT",
+      "reason": "TNF done; 17.0 / 11.0. BAL bye W10.",
+      "injury": "",
+      "practice": "Played Thu"
     },
     {
       "slot": "IR",
@@ -241,19 +237,9 @@
       "pos": "WR",
       "nflTeam": "NYJ",
       "verdict": "SIT",
-      "reason": "Out (concussion). Fantrax IR.",
+      "reason": "OUT concussion. Stay IR.",
       "injury": "Out",
       "practice": "DNP Wed-Fri"
-    },
-    {
-      "slot": "IR",
-      "player": "Cameron Skattebo",
-      "pos": "RB",
-      "nflTeam": "NYG",
-      "verdict": "SIT",
-      "reason": "Doubtful (hamstring). Stay IR.",
-      "injury": "Doubtful",
-      "practice": "DNP Wed/Thu; LP Fri"
     },
     {
       "slot": "IR",
@@ -261,9 +247,19 @@
       "pos": "RB",
       "nflTeam": "NO",
       "verdict": "SIT",
-      "reason": "IR — will not play W9.",
+      "reason": "Still IR; will not play W9.",
       "injury": "IR",
       "practice": "Not practicing"
+    },
+    {
+      "slot": "IR",
+      "player": "Cameron Skattebo",
+      "pos": "RB",
+      "nflTeam": "NYG",
+      "verdict": "SIT",
+      "reason": "Doubtful hamstring; stay IR. Singletary covers.",
+      "injury": "Doubtful",
+      "practice": "DNP Wed/Thu; LP Fri"
     }
   ],
   "injuryWatch": [
@@ -271,7 +267,7 @@
       "player": "Garrett Wilson",
       "tag": "Out",
       "practice": "DNP Wed-Fri",
-      "note": "Concussion; ruled Out. Fantrax IR still shows Q text."
+      "note": "Concussion; ruled Out. Stay IR."
     },
     {
       "player": "Breece Hall",
@@ -283,7 +279,7 @@
       "player": "George Pickens",
       "tag": "Q",
       "practice": "LP Wed-Fri",
-      "note": "Hamstring; check Sunday inactives."
+      "note": "Hamstring; Dallas expects him to play (RotoLegends Sat). Check 10:00 AM PT inactives."
     },
     {
       "player": "Cameron Skattebo",
@@ -293,9 +289,9 @@
     },
     {
       "player": "Jordyn Tyson",
-      "tag": "Q / IR-R",
-      "practice": "LP Wed-Fri",
-      "note": "Fantrax Reserve; debut not locked."
+      "tag": "Q",
+      "practice": "LP Wed-Fri; activated Sat",
+      "note": "Activated off NFL IR; still Q. Debut not locked as a start."
     },
     {
       "player": "Travis Etienne",
@@ -348,8 +344,8 @@
       "player": "Nohl Williams",
       "pos": "DB",
       "nflTeam": "KC",
-      "why": "WEEKLY. 16.4 / 20.3. Delane Out may bump snaps vs NYJ — verify role. Beats Bishop only if role clears.",
-      "stats": "16.43 FP/G, 20.33 last-3, 6 last wk, 30% rostered; FA",
+      "why": "WEEKLY. Delane Out may bump snaps vs NYJ — verify role before using over Bishop.",
+      "stats": "16.43 FP/G, last3 20.33, 30.0% rostered; FA 2026-11-07T15:05:00-08:00",
       "faabMin": 0,
       "faabMax": 3,
       "bid": 0,
@@ -358,24 +354,11 @@
     },
     {
       "rank": 2,
-      "player": "Trent McDuffie",
-      "pos": "DB",
-      "nflTeam": "LAR",
-      "why": "WEEKLY caution. 16.8 / 32.0 last-3. Official Q (back, DNP Fri). Wait Sunday inactives.",
-      "stats": "16.83 FP/G, 32.0 last-3, 43% rostered; FA",
-      "faabMin": 0,
-      "faabMax": 8,
-      "bid": 0,
-      "drop": "Cedric Gray",
-      "tag": "LIKE"
-    },
-    {
-      "rank": 3,
       "player": "Jalen Carter",
       "pos": "DL",
       "nflTeam": "PHI",
-      "why": "ROS/WEEKLY. 14.9 / 12.7, 25 last wk. Still FA vs NYG. Clearer DL edge than Booker.",
-      "stats": "14.88 FP/G, 12.67 last-3, 25 last wk, 69% rostered; FA",
+      "why": "ROS. 14.9 / 12.7 last-3 carried; still FA vs NYG. Clearer DL edge than Booker.",
+      "stats": "14.88 FP/G, last3 12.67, 69.0% rostered; FA 2026-11-07T15:05:00-08:00",
       "faabMin": 0,
       "faabMax": 5,
       "bid": 0,
@@ -383,17 +366,56 @@
       "tag": "LIKE"
     },
     {
+      "rank": 3,
+      "player": "Jamel Dean",
+      "pos": "DB",
+      "nflTeam": "PIT",
+      "why": "WEEKLY. 15.1 / 21.3 last-3 carried; ~97% snaps. Stream if you want Bishop insurance.",
+      "stats": "15.14 FP/G, last3 21.33, 21.0% rostered; FA 2026-11-07T15:05:00-08:00",
+      "faabMin": 0,
+      "faabMax": 2,
+      "bid": 0,
+      "drop": "Cedric Gray",
+      "tag": "LIKE"
+    },
+    {
       "rank": 4,
-      "player": "Adetomiwa Adebawore",
-      "pos": "DL",
-      "nflTeam": "IND",
-      "why": "WEEKLY. 10.5 / 18.0 last-3 vs DAL. Streamer; Gray is the drop.",
-      "stats": "10.5 FP/G, 18.0 last-3, 11 last wk, 20% rostered; FA",
+      "player": "Elijah Ponder",
+      "pos": "LB",
+      "nflTeam": "NE",
+      "why": "WEEKLY. 15.5 FP/G today; last-3 soft (7.7 carried) but ~83% snaps. Only if chasing LB depth — Brooks/Luvu/Warner locked.",
+      "stats": "15.5 FP/G, last3 7.67, 44.0% rostered; FA 2026-11-07T15:05:00-08:00",
       "faabMin": 0,
       "faabMax": 1,
       "bid": 0,
       "drop": "Cedric Gray",
       "tag": "DART"
+    },
+    {
+      "rank": 5,
+      "player": "Adetomiwa Adebawore",
+      "pos": "DL",
+      "nflTeam": "IND",
+      "why": "WEEKLY. 10.5 / 18.0 last-3 carried vs DAL. Minimal FAAB streamer.",
+      "stats": "10.5 FP/G, last3 18.0, 20.0% rostered; FA 2026-11-07T15:05:00-08:00",
+      "faabMin": 0,
+      "faabMax": 1,
+      "bid": 0,
+      "drop": "Cedric Gray",
+      "tag": "DART"
+    },
+    {
+      "rank": 6,
+      "player": "Trent McDuffie",
+      "pos": "DB",
+      "nflTeam": "LAR",
+      "why": "WEEKLY. 16.8 / 32.0 last-3 but Official Q (back, DNP Fri). Wait Sunday inactives — do not blind-bid.",
+      "stats": "16.83 FP/G, last3 32.0, 43.0% rostered; FA 2026-11-07T15:05:00-08:00",
+      "faabMin": 0,
+      "faabMax": 0,
+      "bid": 0,
+      "drop": "Cedric Gray",
+      "tag": "WATCH"
     }
   ],
   "drops": [
@@ -415,236 +437,221 @@
       "with": "TTAB",
       "give": [],
       "get": [],
-      "why": "TTAB scooped Quinnen Williams. We lead 21-0 after Lawrence TNF. Standing goal: quality DB/LB with offense back if trading — no offer without Bill yes."
+      "why": "We lead 21-0 after Lawrence TNF; TTAB still holds Quinnen. Standing goal: quality DB/LB with offense back if trading Pickens/Hall/Coker — no offer without Bill yes."
     }
   ],
   "idp": [
     {
       "nflTeam": "ARI",
       "greenDot": "Mack Wilson",
-      "notes": "Wilson 56/56, 3 tkl (5.4%). Gibbens 88%->71% (40 snaps), 7 tkl, 99 yds allowed on 5 tgts. Cody Simon 21% and creeping (4/6/12/21%). Woellert treats it as a rotation. W8 @ DAL (nickel offense)."
+      "notes": "Wilson 56/56, 3 tkl (5.4%). Gibbens 88%->71% (40 snaps), 7 tkl, 99 yds allowed on 5 tgts. Cody Simon 21% and creeping (4/6/12/21%). Woellert treats it as a rotation. W8 @ DAL (nickel offense). [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "ATL",
       "greenDot": "Kendal Daniels",
-      "notes": "Deablo out. Daniels 65/65, 11 tkl, wore the dot. Perkins 52%->85% (55), 9 tkl. Josh Woods 58%->20%. If Deablo returns, Woods goes back to the bench. Woellert X: Deablo probably gets the dot back, but Daniels could keep it. W8 @ TB."
+      "notes": "Deablo out. Daniels 65/65, 11 tkl, wore the dot. Perkins 52%->85% (55), 9 tkl. Josh Woods 58%->20%. If Deablo returns, Woods goes back to the bench. Woellert X: Deablo probably gets the dot back, but Daniels could keep it. W8 @ TB. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "BAL",
       "greenDot": "Roquan Smith (Teddye Buchanan wore it in 4th)",
-      "notes": "W8 (Woellert, Nov 2): Smith 88%->64% (49), sat 3 stretches; Buchanan 18%->53%; Trenton Simpson (Eddies) 64%, 4 tkl. Possible dot rotation - watch W9."
+      "notes": "W8 (Woellert, Nov 2): Smith 88%->64% (49), sat 3 stretches; Buchanan 18%->53%; Trenton Simpson (Eddies) 64%, 4 tkl. Possible dot rotation - watch W9. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "BUF",
       "greenDot": "Terrel Bernard",
-      "notes": "BYE W7. W6 numbers: Bernard 96%->80%, Elarms-Orr 8%->30% (real rotation signal), D. Williams 79%->59%. Season table lists Bernard as the dot. W8 vs BAL. (Dot/full-time carried from the W6 list.)"
+      "notes": "BYE W7. W6 numbers: Bernard 96%->80%, Elarms-Orr 8%->30% (real rotation signal), D. Williams 79%->59%. Season table lists Bernard as the dot. W8 vs BAL. (Dot/full-time carried from the W6 list.) [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "CAR",
       "greenDot": "Devin Lloyd",
-      "notes": "Okereke 53 (88%), 10 tkl. Lloyd had the dot, 46 (77%), 4 tkl; he sat Q4 in the blowout, and Okereke wore the dot then. Dodson 13 snaps. CAR 51.7% base vs TB heavy sets. W8 @ GB (TNF)."
+      "notes": "Okereke 53 (88%), 10 tkl. Lloyd had the dot, 46 (77%), 4 tkl; he sat Q4 in the blowout, and Okereke wore the dot then. Dodson 13 snaps. CAR 51.7% base vs TB heavy sets. W8 @ GB (TNF). [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "CHI",
       "greenDot": null,
-      "notes": "W8 (Woellert, Nov 2): Woellert: 'Will update after MNF'. Keep file as-is."
+      "notes": "W8 (Woellert, Nov 2): Woellert: 'Will update after MNF'. Keep file as-is. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "CIN",
       "greenDot": "Barrett Carter",
-      "notes": "Carter 61 (94%), 9 tkl. Knight 48 (74%, his normal range), 8 tkl + INT. 3.1% dime. W8 vs TEN."
+      "notes": "Carter 61 (94%), 9 tkl. Knight 48 (74%, his normal range), 8 tkl + INT. 3.1% dime. W8 vs TEN. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "CLE",
       "greenDot": "Carson Schwesinger",
-      "notes": "Both played every snap (95.2% nickel, 0 base). Q. Williams 10 tkl, Schwesinger 8. W8 @ PIT."
+      "notes": "Both played every snap (95.2% nickel, 0 base). Q. Williams 10 tkl, Schwesinger 8. W8 @ PIT. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "DAL",
       "greenDot": "Shemar James",
-      "notes": "W8 (Woellert, Nov 2): James 96% (75/78); Overshown clear LB2 at 74%; Barham 18%. No dot change; consider adding Overshown note."
+      "notes": "W8 (Woellert, Nov 2): James 96% (75/78); Overshown clear LB2 at 74%; Barham 18%. No dot change; consider adding Overshown note. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "DEN",
       "greenDot": "Alex Singleton",
-      "notes": "Singleton 75/75, 19 tkl. Strnad 90%->73% (55), 6 tkl, comes off in dime (DEN dime 11%->25.3%). W8 vs KC (nickel look; Woellert expects Strnad back near 85-90%)."
+      "notes": "Singleton 75/75, 19 tkl. Strnad 90%->73% (55), 6 tkl, comes off in dime (DEN dime 11%->25.3%). W8 vs KC (nickel look; Woellert expects Strnad back near 85-90%). [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "DET",
       "greenDot": "Jack Campbell (Derrick Barnes took it in 4th)",
-      "notes": "W8 (Woellert, Nov 2): Campbell 78% before neck injury (hospital, positive update Mon). If out: Barnes takes dot, Malcolm Rodriguez likely LB2; Rolder (hamstring) 34%."
+      "notes": "W8 (Woellert, Nov 2): Campbell 78% before neck injury (hospital, positive update Mon). If out: Barnes takes dot, Malcolm Rodriguez likely LB2; Rolder (hamstring) 34%. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "GB",
       "greenDot": "Isaiah McDuffie",
-      "notes": "Zaire Franklin out (shin). RapSheet Mon: hairline leg fracture, not on IR, 'minimal games'; DNP on Mon estimated report. McDuffie 54%->100% (66), dot, 11 tkl, FF + FR. Hopper 44%->94%, 7 tkl. W8 vs CAR (TNF)."
+      "notes": "Zaire Franklin out (shin). RapSheet Mon: hairline leg fracture, not on IR, 'minimal games'; DNP on Mon estimated report. McDuffie 54%->100% (66), dot, 11 tkl, FF + FR. Hopper 44%->94%, 7 tkl. W8 vs CAR (TNF). [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "HOU",
       "greenDot": "Azeez Al-Shaair",
-      "notes": "Al-Shaair 65/65, 9 tkl. To'oTo'o 58 (89%), 10 tkl. Hansen 28% (drop). BYE W8."
+      "notes": "Al-Shaair 65/65, 9 tkl. To'oTo'o 58 (89%), 10 tkl. Hansen 28% (drop). BYE W8. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "IND",
       "greenDot": "Akeem Davis-Gaither (rotation w/ Ajiake and C.J. Allen)",
-      "notes": "W8 (Woellert, Nov 2): ADG 96%->68% (36), sat full 4th; C.J. Allen 44/53 (83%), 10 tkl, TFL, sack, wore dot in 4th - Woellert's waiver add of the week. ADG/Ajiake in danger."
+      "notes": "W8 (Woellert, Nov 2): ADG 96%->68% (36), sat full 4th; C.J. Allen 44/53 (83%), 10 tkl, TFL, sack, wore dot in 4th - Woellert's waiver add of the week. ADG/Ajiake in danger. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "JAX",
       "greenDot": "Foyesade Oluokun",
-      "notes": "W8 (Woellert, Nov 2): Oluokun 93%->72%, Miller 85%->67%, Tavai 2%->28%. Neither clearly full-time W8 (one week; Woellert wants to see it again)."
+      "notes": "W8 (Woellert, Nov 2): Oluokun 93%->72%, Miller 85%->67%, Tavai 2%->28%. Neither clearly full-time W8 (one week; Woellert wants to see it again). [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "KC",
       "greenDot": "Nick Bolton",
-      "notes": "Bolton 68/69, 11 tkl. Tranquill 63 (91%), 12 tkl. Cochrane 24%->41% (28 snaps, 23 vs the run), 6 tkl. KC base 47.8% vs SEA heavy sets. W8 @ DEN."
+      "notes": "Bolton 68/69, 11 tkl. Tranquill 63 (91%), 12 tkl. Cochrane 24%->41% (28 snaps, 23 vs the run), 6 tkl. KC base 47.8% vs SEA heavy sets. W8 @ DEN. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "LAC",
       "greenDot": "Daiyan Henley",
-      "notes": "W8 (Woellert, Nov 2): Henley 72% (shoulder; Troy Dye wore dot while out, Henley returned). Phillips 62%, Wax 28%. Dot unchanged."
+      "notes": "W8 (Woellert, Nov 2): Henley 72% (shoulder; Troy Dye wore dot while out, Henley returned). Phillips 62%, Wax 28%. Dot unchanged. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "LAR",
       "greenDot": "Nate Landman",
-      "notes": "W8 (Woellert, Nov 2): File has S Quentin Lake (Eddies) as dot from W7 Landman absence. Landman back from concussion, wore dot, 42/59 (71%), 8 tkl; Speights 58%. Lake no longer dot."
+      "notes": "W8 (Woellert, Nov 2): File has S Quentin Lake (Eddies) as dot from W7 Landman absence. Landman back from concussion, wore dot, 42/59 (71%), 8 tkl; Speights 58%. Lake no longer dot. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "LV",
       "greenDot": "Nakobe Dean",
-      "notes": "Dean 68/68, 12 tkl. Walker 65 (96%), 12 tkl. Eichenberg 9%->62% (42) because LV matched LAR 13 personnel with base; this is a matchup play. W8 @ NYJ."
+      "notes": "Dean 68/68, 12 tkl. Walker 65 (96%), 12 tkl. Eichenberg 9%->62% (42) because LV matched LAR 13 personnel with base; this is a matchup play. W8 @ NYJ. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "MIA",
       "greenDot": "Jacob Rodriguez",
-      "notes": "Willie Gay out (illness). Rodriguez 100%, 4 tkl. Brooks (EDDIES) 100%, 9 tkl, 8 targets for 27 yds. Woodard 27 snaps (51%). MIA 50.9% base vs NYJ 21 personnel. W8 vs NE."
+      "notes": "Willie Gay out (illness). Rodriguez 100%, 4 tkl. Brooks (EDDIES) 100%, 9 tkl, 8 targets for 27 yds. Woodard 27 snaps (51%). MIA 50.9% base vs NYJ 21 personnel. W8 vs NE. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "MIN",
       "greenDot": "Blake Cashman",
-      "notes": "Cashman 56 (95%), 12 tkl, 2 sacks. E. Wilson 54 (92%), 4 tkl. MIN 79.7% base, 85.2% blitz. W8 @ DET."
+      "notes": "Cashman 56 (95%), 12 tkl, 2 sacks. E. Wilson 54 (92%), 4 tkl. MIN 79.7% base, 85.2% blitz. W8 @ DET. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "NE",
       "greenDot": "Robert Spillane",
-      "notes": "Both 66/66. Elliss 13 tkl, 4 pressures. Spillane 5 tkl. Woellert: 'I might be sitting Spillane going forward.' W8 @ MIA."
+      "notes": "Both 66/66. Elliss 13 tkl, 4 pressures. Spillane 5 tkl. Woellert: 'I might be sitting Spillane going forward.' W8 @ MIA. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "NO",
       "greenDot": "Kaden Elliss",
-      "notes": "Elliss returned and took back the dot, 62/63. Werner 62/63, 8 tkl. Stutsman 0 snaps. BYE W8."
+      "notes": "Elliss returned and took back the dot, 62/63. Werner 62/63, 8 tkl. Stutsman 0 snaps. BYE W8. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "NYG",
       "greenDot": "Micah McFadden",
-      "notes": "Edmunds out for the year. McFadden has the dot for the foreseeable future (54/54, 10 tkl). Reese 54/54. BYE W8."
+      "notes": "Edmunds out for the year. McFadden has the dot for the foreseeable future (54/54, 10 tkl). Reese 54/54. BYE W8. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "NYJ",
       "greenDot": "Demario Davis",
-      "notes": "Davis 64/64, 3 tkl. Sherwood 63 (98%), 8 tkl. W8 vs LV."
+      "notes": "Davis 64/64, 3 tkl. Sherwood 63 (98%), 8 tkl. W8 vs LV. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "PHI",
       "greenDot": "Zack Baun",
-      "notes": "W8 (Woellert, Nov 2): Jeremiah Trotter Jr. LB2 with Jihaad Campbell out (10 tkl) - waiver look."
+      "notes": "W8 (Woellert, Nov 2): Jeremiah Trotter Jr. LB2 with Jihaad Campbell out (10 tkl) - waiver look. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "PIT",
       "greenDot": "Patrick Queen",
-      "notes": "Queen 57/57, 10 tkl. P. Wilson 52 (91%), 6 tkl. W8 vs CLE."
+      "notes": "Queen 57/57, 10 tkl. P. Wilson 52 (91%), 6 tkl. W8 vs CLE. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "SEA",
       "greenDot": null,
-      "notes": "W8 (Woellert, Nov 2): Woellert: 'Updated after MNF'. Keep file as-is."
+      "notes": "W8 (Woellert, Nov 2): Woellert: 'Updated after MNF'. Keep file as-is. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "SF",
       "greenDot": "Fred Warner",
-      "notes": "Warner (EDDIES) 63/63, 13 tkl, dot. Greenlaw back, 57 (90%), 12 tkl. Dugger 97%->48%. SF 60.3% base vs ATL heavy sets. BYE W8."
+      "notes": "Warner (EDDIES) 63/63, 13 tkl, dot. Greenlaw back, 57 (90%), 12 tkl. Dugger 97%->48%. SF 60.3% base vs ATL heavy sets. BYE W8. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "TB",
       "greenDot": "Alex Anzalone",
-      "notes": "Trotter 52 (96%), 10 tkl. Anzalone 50 (93%), 6 tkl. Rozeboom 0. W8 vs ATL (heavy sets, more base)."
+      "notes": "Trotter 52 (96%), 10 tkl. Anzalone 50 (93%), 6 tkl. Rozeboom 0. W8 vs ATL (heavy sets, more base). [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "TEN",
       "greenDot": "Anthony Hill",
-      "notes": "W8 (Woellert, Nov 2): Hill 97%; Barton 54% / Cedric Gray (Eddies) 47% split LB2. TEN BYE W9."
+      "notes": "W8 (Woellert, Nov 2): Hill 97%; Barton 54% / Cedric Gray (Eddies) 47% split LB2. TEN BYE W9. [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     },
     {
       "nflTeam": "WAS",
       "greenDot": "Frankie Luvu",
-      "notes": "BYE W7. Season table lists Frankie Luvu as the dot, with Sonny Styles also full-time in W6. W8 vs PHI. (Dot/full-time carried from the W6 list.)"
+      "notes": "BYE W7. Season table lists Frankie Luvu as the dot, with Sonny Styles also full-time in W6. W8 vs PHI. (Dot/full-time carried from the W6 list.) [W8 STALE; no W9 Woellert green-dot piece as of Sat Nov 7]"
     }
   ],
   "boxSafety": [
     {
       "player": "Quentin Lake",
       "nflTeam": "LAR",
-      "note": "High-snap LAR safety; Landman reclaimed LB green dot W8."
+      "note": "Woellert W8: new green-dot DB, 100% snaps (STALE W8 list)."
     },
     {
       "player": "Evan Williams",
       "nflTeam": "GB",
-      "note": "Every-down GB safety @NE."
+      "note": "Every-down DB; 100% W8 snaps."
     },
     {
       "player": "Cole Bishop",
       "nflTeam": "BUF",
-      "note": "~88% snaps prior; MNF @MIN."
+      "note": "High snap DB; MNF @MIN."
     }
   ],
   "news": [
     {
-      "player": "Garrett Wilson",
-      "note": "Out (concussion).",
-      "source": "https://x.com/AdamSchefter/status/2118735940482933217",
-      "asOf": "2026-11-06T14:50:00-08:00"
+      "source": "Nick Underhill / Underdog via X",
+      "time": "2026-11-07T10:28:00-08:00",
+      "text": "Jordyn Tyson activated off Saints IR for Sunday vs CLE; remains Questionable (hamstring). NFL debut."
     },
     {
-      "player": "Breece Hall",
-      "note": "Off report; committee with Allen.",
-      "source": "https://x.com/RichCimini/status/2118738206405664873",
-      "asOf": "2026-11-06T14:50:00-08:00"
+      "source": "RotoLegends",
+      "time": "2026-11-07T10:49:00-08:00",
+      "text": "Dallas expects George Pickens to play (@IND). Still official Q."
     },
     {
-      "player": "George Pickens",
-      "note": "Questionable (hamstring).",
-      "source": "https://x.com/jonmachota/status/2118798412728664080",
-      "asOf": "2026-11-06T14:50:00-08:00"
+      "source": "Aaron Glenn / Jets",
+      "time": "2026-11-06T00:00:00-08:00",
+      "text": "Breece Hall full practice / ready; mix with Braelon Allen. Garrett Wilson Out (concussion)."
     },
     {
-      "player": "Cam Skattebo",
-      "note": "Doubtful; Singletary primary.",
-      "source": "https://x.com/Dan_Salomone/status/2118811204575473903",
-      "asOf": "2026-11-06T14:50:00-08:00"
+      "source": "Giants / Raanan",
+      "time": "2026-11-06T13:05:00-08:00",
+      "text": "Cam Skattebo Doubtful; Singletary expected lead (Tracy IR)."
     },
     {
-      "player": "Jordyn Tyson",
-      "note": "Questionable (IR-R); debut TBD.",
-      "source": "https://x.com/Jeff_Nowak/status/2118781352199983368",
-      "asOf": "2026-11-06T14:50:00-08:00"
+      "source": "Mike Woellert X",
+      "time": "2026-11-07T14:00:00-08:00",
+      "text": "Karlaftis: tackles give him the edge. W9 green-dot piece still not out (W8 STALE)."
     },
     {
-      "player": "C.J. Allen",
-      "note": "Green dot W9 (ADG Out); rostered Ultron.",
-      "source": "https://x.com/Mike_Woellert/status/2118789137054736433",
-      "asOf": "2026-11-06T14:50:00-08:00"
-    },
-    {
-      "player": "Mansoor Delane",
-      "note": "Out (shoulder); skip W9 stream.",
-      "source": "Jets.com Fri dual KC report",
-      "asOf": "2026-11-06T14:50:00-08:00"
-    },
-    {
-      "player": "Carl Granderson",
-      "note": "Claimed by Slumlords Thu — gone.",
-      "source": "Fantrax txs",
-      "asOf": "2026-11-06T15:08:58-08:00"
+      "source": "Fantrax",
+      "time": "2026-11-07T14:52:00-08:00",
+      "text": "W9 Eddies 21–0 TTAB (proj 207.4–177.8); FAAB $25; Tyson now reserve (activated)."
     }
+  ],
+  "refreshNotes": [
+    "1 free-text sentence(s) about our own moves removed (structured records only)."
   ]
 }
