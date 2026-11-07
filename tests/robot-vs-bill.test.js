@@ -25,12 +25,15 @@ test("Week 9 lock time is labeled in PT", function () {
   assert.deepEqual(board.SLOTS.slice(0, 4), ["QB", "RB", "WR", "TE"]);
 });
 
-test("the published week is an empty not-yet-locked Week 9", function () {
+test("Week 9 is locked pending with null points", function () {
   assert.equal(week9.week, 9);
   assert.equal(week9.status, "pending");
-  assert.equal(week9.robotLockedAt, null);
-  assert.deepEqual(week9.robot, []);
+  assert.notEqual(week9.robotLockedAt, null);
+  assert.equal(week9.robot.length, 14);
   assert.deepEqual(week9.actual, []);
+  assert.equal(week9.totals.robot, null);
+  assert.equal(week9.result, null);
+  assert.equal(week9.robot.every(function (row) { return row.points === null; }), true);
   assert.equal(week9.window.start, "2026-11-05");
   assert.equal(week9.window.end, "2026-11-09");
   const model = board.buildModel(season, [week9]);
@@ -38,16 +41,28 @@ test("the published week is an empty not-yet-locked Week 9", function () {
   assert.equal(model.wins, 0);
   assert.equal(model.losses, 0);
   assert.equal(model.ties, 0);
-  assert.equal(model.current.locked, false);
-  assert.equal(model.current.statusLabel, "Not yet locked");
-  assert.equal(model.current.rows.length, 0);
+  assert.equal(model.current.locked, true);
+  assert.equal(model.current.status, "pending");
+  assert.notEqual(model.current.status, "final");
+  assert.equal(model.current.statusLabel, "Pending");
+  assert.equal(model.current.pointsCaption, "Live");
+  assert.equal(model.current.awaitingEddies, true);
+  assert.equal(model.current.rows.length, 14);
+  assert.equal(model.current.rows[0].robot.player, week9.robot[0].player);
+  model.current.rows.forEach(function (row) {
+    assert.equal(row.robot.pointsLabel, "\u2014");
+    assert.equal(row.eddies, null);
+  });
   assert.equal(model.history.length, 0);
   const html = board.render(model);
-  assert.match(html, /not locked a lineup/i);
+  assert.match(html, /Points stay blank until this week is final/);
+  assert.match(html, /not in yet/i);
   assert.match(html, /No finished weeks yet/);
   assert.match(html, /W 0 · L 0 · T 0/);
+  assert.equal(html.includes(week9.robot[0].player), true);
   assert.equal(html.includes("<table"), false);
   assert.equal(html.includes(NAME), false);
+  assert.equal(html.toLowerCase().includes(LAST.toLowerCase()), false);
 });
 
 test("a final week highlights differing slots and a pending week leaves points blank", function () {
