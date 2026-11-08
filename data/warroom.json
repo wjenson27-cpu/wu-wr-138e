@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-07T15:05:00-08:00",
-  "lastUpdated": "2026-11-07T15:05:00-08:00",
+  "asOf": "2026-11-08T15:10:00-08:00",
+  "lastUpdated": "2026-11-08T15:10:00-08:00",
   "season": 2026,
   "week": 9,
   "opponent": {
@@ -10,21 +10,13 @@
     "name": "TTAB"
   },
   "freshness": {
-    "plan": "2026-11-07T15:05:00-08:00",
-    "roster": "2026-11-07T14:52:00-08:00",
-    "scores": "2026-11-07T14:52:00-08:00",
-    "waivers": "2026-11-07T15:05:00-08:00",
-    "news": "2026-11-07T15:00:00-08:00"
+    "plan": "2026-11-08T15:10:00-08:00",
+    "roster": "2026-11-08T14:55:00-08:00",
+    "scores": "2026-11-08T14:55:00-08:00",
+    "waivers": "2026-11-08T14:55:00-08:00",
+    "news": "2026-11-08T14:45:00-08:00"
   },
   "lockTimes": [
-    {
-      "label": "Sunday early",
-      "at": "2026-11-08T10:00:00-08:00"
-    },
-    {
-      "label": "Sunday late",
-      "at": "2026-11-08T13:25:00-08:00"
-    },
     {
       "label": "Monday",
       "at": "2026-11-09T17:15:00-08:00"
@@ -37,7 +29,7 @@
       "pos": "QB",
       "nflTeam": "JAX",
       "verdict": "START",
-      "reason": "TNF done: 21 FP (JAX 33-10 BAL). 24.6 / 32.0 FP/G.",
+      "reason": "Final: 21 FP (TNF, JAX 33-10 BAL).",
       "injury": "",
       "practice": "Played Thu"
     },
@@ -47,19 +39,19 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "@KC. 17.3 FP/G, ⚠ 0 last wk (missed). Cleared; Glenn: Hall+Allen mix. Still start. Snap W8: DNP unverified return share.",
+      "reason": "Final: 13 FP @KC. Only 27 snaps to Braelon Allen's 36 (Cimini) — watch the split for W10.",
       "injury": "",
-      "practice": "FP Fri; off report"
+      "practice": "Played"
     },
     {
       "slot": "WR",
-      "player": "Jalen Coker",
+      "player": "Josh Downs",
       "pos": "WR",
-      "nflTeam": "CAR",
-      "verdict": "SWAP",
-      "reason": "vs DEN. 15.3 / 8.7, ~86% W8 snaps. Wilson Out. Fantrax still starts Charbonnet — swap Coker into WR/FLEX.",
+      "nflTeam": "IND",
+      "verdict": "START",
+      "reason": "Final: 5 FP vs DAL. Quiet day.",
       "injury": "",
-      "practice": "Not listed"
+      "practice": "Played"
     },
     {
       "slot": "TE",
@@ -67,29 +59,19 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "@SF. 27.9 / 22.0, ~86% W8. TE lock. Fan rumor Out ignored.",
+      "reason": "4 FP live @SF (~2:55 PM PT). Quiet day.",
       "injury": "",
-      "practice": "Not listed"
+      "practice": "Played"
     },
     {
       "slot": "FLEX",
-      "player": "George Pickens",
-      "pos": "WR",
-      "nflTeam": "DAL",
+      "player": "Zach Charbonnet",
+      "pos": "RB",
+      "nflTeam": "SEA",
       "verdict": "START",
-      "reason": "@IND. 13.6 seas / ~12 L3. Official Q (hamstring). RotoLegends Sat: Dallas expects him to play. If inactive before 10:00 AM PT lock, flex Charbonnet.",
-      "injury": "Q (hamstring)",
-      "practice": "LP Wed-Fri"
-    },
-    {
-      "slot": "FLEX",
-      "player": "Josh Downs",
-      "pos": "WR",
-      "nflTeam": "IND",
-      "verdict": "START",
-      "reason": "vs DAL. 8.6 / 8.3, ~75% W8. Healthy.",
+      "reason": "Started in Fantrax flex with Pickens inactive: 4 FP live vs ARI.",
       "injury": "",
-      "practice": "Not listed"
+      "practice": "Played"
     },
     {
       "slot": "FLEX",
@@ -97,9 +79,19 @@
       "pos": "RB",
       "nflTeam": "NYG",
       "verdict": "START",
-      "reason": "@PHI. 7.5 / 8.5, ⚠ 0 last wk. Skattebo Doubtful + Tracy IR — Singletary lead (sourced).",
+      "reason": "In Fantrax flex: 8 FP @PHI. 23 touches for 39 yds (Rotoworld) — volume, no efficiency.",
       "injury": "",
-      "practice": "Not listed"
+      "practice": "Played"
+    },
+    {
+      "slot": "FLEX",
+      "player": "Jordyn Tyson",
+      "pos": "WR",
+      "nflTeam": "NO",
+      "verdict": "START",
+      "reason": "In Fantrax flex: 4 FP vs CLE. NFL debut ~25% snaps, 4-30 + fumble at the 1 (Florio).",
+      "injury": "",
+      "practice": "Played; activated Sat"
     },
     {
       "slot": "DL",
@@ -107,9 +99,9 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "vs NYJ. Fantrax 19.7 / 26.3; idp ~18.6 / 24.3, ~76–83% snaps. Only Eddies DL. Woellert Sat: tackles give him the edge.",
+      "reason": "Final: 42 FP vs NYJ (2 sacks per fan reports; box score not checked).",
       "injury": "",
-      "practice": "Not listed"
+      "practice": "Played"
     },
     {
       "slot": "LB",
@@ -117,19 +109,9 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "vs LV. 26.1 / 27.0, ~95% snaps, green dot (W8 STALE). Weekly #5 / ROS #3.",
+      "reason": "4 FP live vs LV (~2:55 PM PT). Quiet day.",
       "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "DB",
-      "player": "Evan Williams",
-      "pos": "DB",
-      "nflTeam": "GB",
-      "verdict": "START",
-      "reason": "@NE. 25.3 / 22.7, ~100% W8. Weekly #4 / ROS #3.",
-      "injury": "",
-      "practice": "Not listed"
+      "practice": "Played"
     },
     {
       "slot": "DB",
@@ -137,29 +119,19 @@
       "pos": "DB",
       "nflTeam": "LAR",
       "verdict": "START",
-      "reason": "@WAS. 22.1 / 23.7, 100% snaps; Woellert W8 called him new green-dot DB. Weekly #10 / ROS #8.",
+      "reason": "16 FP @WAS. Woellert: Lake kept the dot in W9.",
       "injury": "",
-      "practice": "Not listed"
+      "practice": "Played"
     },
     {
-      "slot": "IDP",
-      "player": "Jordyn Brooks",
-      "pos": "LB",
-      "nflTeam": "MIA",
+      "slot": "DB",
+      "player": "Evan Williams",
+      "pos": "DB",
+      "nflTeam": "GB",
       "verdict": "START",
-      "reason": "vs DET. 19.0 / 23.5, ~93% / full-time (W8 STALE). Keep on merit; Bill keep. Weekly #15 / ROS #23.",
+      "reason": "11 FP @NE incl. late INT.",
       "injury": "",
-      "practice": "Not listed"
-    },
-    {
-      "slot": "IDP",
-      "player": "Frankie Luvu",
-      "pos": "LB",
-      "nflTeam": "WAS",
-      "verdict": "START",
-      "reason": "vs LAR. 16.4 / 17.0, WAS green dot (W8 STALE), ~89% snaps. Weekly #23 / ROS #24.",
-      "injury": "",
-      "practice": "Not listed"
+      "practice": "Played"
     },
     {
       "slot": "IDP",
@@ -167,19 +139,49 @@
       "pos": "DB",
       "nflTeam": "BUF",
       "verdict": "START",
-      "reason": "@MIN MNF. 16.0 / 18.0, ~88–97% snaps. Weekly #29 / ROS #10. Hold until a clear healthy DB upgrade shows up.",
+      "reason": "MNF @MIN Mon 5:15 PM PT, 0 so far (Fantrax proj 14.6). 16.0 / 18.0 FP/G, ~88–97% snaps. Only Eddie left to play; nobody on bench can still play.",
+      "injury": "",
+      "practice": "Plays Mon"
+    },
+    {
+      "slot": "IDP",
+      "player": "Jordyn Brooks",
+      "pos": "LB",
+      "nflTeam": "MIA",
+      "verdict": "START",
+      "reason": "Final: 28 FP vs DET.",
+      "injury": "",
+      "practice": "Played"
+    },
+    {
+      "slot": "IDP",
+      "player": "Frankie Luvu",
+      "pos": "LB",
+      "nflTeam": "WAS",
+      "verdict": "START",
+      "reason": "Final: 47 FP vs LAR. Live 207–174.5 vs TTAB (Fantrax ~2:55 PM PT).",
+      "injury": "",
+      "practice": "Played"
+    },
+    {
+      "slot": "BN",
+      "player": "Jalen Coker",
+      "pos": "WR",
+      "nflTeam": "CAR",
+      "verdict": "SIT",
+      "reason": "On Fantrax bench today (Saturday SWAP rec not made); Tyson/Charbonnet/Singletary filled flex.",
       "injury": "",
       "practice": "Not listed"
     },
     {
       "slot": "BN",
-      "player": "Zach Charbonnet",
-      "pos": "RB",
-      "nflTeam": "SEA",
+      "player": "George Pickens",
+      "pos": "WR",
+      "nflTeam": "DAL",
       "verdict": "SIT",
-      "reason": "vs ARI. 5.0 / 5.0, ~37% W8. Price split (FBG). Emergency only if Pickens inactive.",
-      "injury": "",
-      "practice": "Not listed"
+      "reason": "INACTIVE W9 @IND (hamstring; DraftSharks). Was benched, so no points lost. Shoulder talk unverified (X auto-summary only).",
+      "injury": "Out (inactive)",
+      "practice": "LP Wed-Fri"
     },
     {
       "slot": "BN",
@@ -203,21 +205,11 @@
     },
     {
       "slot": "BN",
-      "player": "Jordyn Tyson",
-      "pos": "WR",
-      "nflTeam": "NO",
-      "verdict": "WATCH",
-      "reason": "Activated off IR Sat; still Q (hamstring). NFL debut — no snap history. Don't force over locked starters.",
-      "injury": "Q (hamstring)",
-      "practice": "LP Wed-Fri; activated Sat"
-    },
-    {
-      "slot": "BN",
       "player": "Cedric Gray",
       "pos": "LB",
       "nflTeam": "TEN",
       "verdict": "SIT",
-      "reason": "BYE W9. 11.4 / 9.3. First cut for any add.",
+      "reason": "BYE W9. 11.4 / 9.3. First cut — Carter for Gray decision Tuesday.",
       "injury": "",
       "practice": "Bye"
     },
@@ -237,7 +229,7 @@
       "pos": "WR",
       "nflTeam": "NYJ",
       "verdict": "SIT",
-      "reason": "OUT concussion. Stay IR.",
+      "reason": "OUT concussion W9. Stay IR.",
       "injury": "Out",
       "practice": "DNP Wed-Fri"
     },
@@ -247,7 +239,7 @@
       "pos": "RB",
       "nflTeam": "NO",
       "verdict": "SIT",
-      "reason": "Still IR; will not play W9.",
+      "reason": "Still IR; did not play W9.",
       "injury": "IR",
       "practice": "Not practicing"
     },
@@ -257,53 +249,35 @@
       "pos": "RB",
       "nflTeam": "NYG",
       "verdict": "SIT",
-      "reason": "Doubtful hamstring; stay IR. Singletary covers.",
-      "injury": "Doubtful",
+      "reason": "INACTIVE W9 (warmed up in sneakers per @BannastandFF). Thursday return vs WAS unverified.",
+      "injury": "Out (inactive)",
       "practice": "DNP Wed/Thu; LP Fri"
     }
   ],
   "injuryWatch": [
     {
-      "player": "Garrett Wilson",
-      "tag": "Out",
-      "practice": "DNP Wed-Fri",
-      "note": "Concussion; ruled Out. Stay IR."
-    },
-    {
-      "player": "Breece Hall",
-      "tag": "",
-      "practice": "FP; off report",
-      "note": "Committee with Allen confirmed."
-    },
-    {
       "player": "George Pickens",
-      "tag": "Q",
+      "tag": "Out",
       "practice": "LP Wed-Fri",
-      "note": "Hamstring; Dallas expects him to play (RotoLegends Sat). Check 10:00 AM PT inactives."
+      "note": "Inactive W9 (hamstring). Shoulder issue unverified. Watch W10 practice."
     },
     {
       "player": "Cameron Skattebo",
-      "tag": "Doubtful",
+      "tag": "Out",
       "practice": "DNP Wed/Thu; LP Fri",
-      "note": "Singletary primary. Stay IR."
+      "note": "Inactive W9. Thursday return vs WAS unverified. Stay IR."
     },
     {
-      "player": "Jordyn Tyson",
-      "tag": "Q",
-      "practice": "LP Wed-Fri; activated Sat",
-      "note": "Activated off NFL IR; still Q. Debut not locked as a start."
+      "player": "Garrett Wilson",
+      "tag": "Out",
+      "practice": "DNP Wed-Fri",
+      "note": "Concussion; Out W9. Stay IR."
     },
     {
       "player": "Travis Etienne",
       "tag": "IR",
       "practice": "Not practicing",
-      "note": "Will not play W9."
-    },
-    {
-      "player": "Trent McDuffie",
-      "tag": "Q",
-      "practice": "DNP Fri",
-      "note": "FA watch only (back)."
+      "note": "IR; did not play W9."
     }
   ],
   "byes": [
@@ -341,26 +315,26 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "Nohl Williams",
-      "pos": "DB",
-      "nflTeam": "KC",
-      "why": "WEEKLY. Delane Out may bump snaps vs NYJ — verify role before using over Bishop.",
-      "stats": "16.43 FP/G, last3 20.33, 30.0% rostered; FA 2026-11-07T15:05:00-08:00",
+      "player": "Jalen Carter",
+      "pos": "DL",
+      "nflTeam": "PHI",
+      "why": "ROS. Still FA at 14.9 FP/G; a clearer DL2 than Booker. Matchup check in Tuesday's bid sheet.",
+      "stats": "14.89 FP/G, last3 12.67 (carried Nov 7), 69% rostered; FA 2026-11-08T14:55:00-08:00",
       "faabMin": 0,
-      "faabMax": 3,
+      "faabMax": 5,
       "bid": 0,
       "drop": "Cedric Gray",
       "tag": "LIKE"
     },
     {
       "rank": 2,
-      "player": "Jalen Carter",
-      "pos": "DL",
-      "nflTeam": "PHI",
-      "why": "ROS. 14.9 / 12.7 last-3 carried; still FA vs NYG. Clearer DL edge than Booker.",
-      "stats": "14.88 FP/G, last3 12.67, 69.0% rostered; FA 2026-11-07T15:05:00-08:00",
+      "player": "Nohl Williams",
+      "pos": "DB",
+      "nflTeam": "KC",
+      "why": "W10 look. W9 role bump (Delane Out) to be verified from snap counts before bidding over Bishop.",
+      "stats": "16.25 FP/G, last3 20.33 (carried Nov 7), 31% rostered; FA 2026-11-08T14:55:00-08:00",
       "faabMin": 0,
-      "faabMax": 5,
+      "faabMax": 3,
       "bid": 0,
       "drop": "Cedric Gray",
       "tag": "LIKE"
@@ -370,8 +344,8 @@
       "player": "Jamel Dean",
       "pos": "DB",
       "nflTeam": "PIT",
-      "why": "WEEKLY. 15.1 / 21.3 last-3 carried; ~97% snaps. Stream if you want Bishop insurance.",
-      "stats": "15.14 FP/G, last3 21.33, 21.0% rostered; FA 2026-11-07T15:05:00-08:00",
+      "why": "W10 look. 15.1 / 21.3 last-3 carried; ~97% snaps. Stream only if Bishop insurance is needed.",
+      "stats": "15.14 FP/G, last3 21.33 (carried Nov 7), 21% rostered; FA 2026-11-08T14:55:00-08:00",
       "faabMin": 0,
       "faabMax": 2,
       "bid": 0,
@@ -383,8 +357,8 @@
       "player": "Elijah Ponder",
       "pos": "LB",
       "nflTeam": "NE",
-      "why": "WEEKLY. 15.5 FP/G today; last-3 soft (7.7 carried) but ~83% snaps. Only if chasing LB depth — Brooks/Luvu/Warner locked.",
-      "stats": "15.5 FP/G, last3 7.67, 44.0% rostered; FA 2026-11-07T15:05:00-08:00",
+      "why": "W10 look. 15.1 FP/G; last-3 soft (7.7 carried) but ~83% snaps. Only if chasing LB depth — Brooks/Luvu/Warner locked.",
+      "stats": "15.11 FP/G, last3 7.67 (carried Nov 7), 45% rostered; FA 2026-11-08T14:55:00-08:00",
       "faabMin": 0,
       "faabMax": 1,
       "bid": 0,
@@ -393,24 +367,11 @@
     },
     {
       "rank": 5,
-      "player": "Adetomiwa Adebawore",
-      "pos": "DL",
-      "nflTeam": "IND",
-      "why": "WEEKLY. 10.5 / 18.0 last-3 carried vs DAL. Minimal FAAB streamer.",
-      "stats": "10.5 FP/G, last3 18.0, 20.0% rostered; FA 2026-11-07T15:05:00-08:00",
-      "faabMin": 0,
-      "faabMax": 1,
-      "bid": 0,
-      "drop": "Cedric Gray",
-      "tag": "DART"
-    },
-    {
-      "rank": 6,
       "player": "Trent McDuffie",
       "pos": "DB",
       "nflTeam": "LAR",
-      "why": "WEEKLY. 16.8 / 32.0 last-3 but Official Q (back, DNP Fri). Wait Sunday inactives — do not blind-bid.",
-      "stats": "16.83 FP/G, last3 32.0, 43.0% rostered; FA 2026-11-07T15:05:00-08:00",
+      "why": "W10 watch. 16.8 / 32.0 last-3 but was Q (back). Confirm health before any bid.",
+      "stats": "16.83 FP/G, last3 32.0 (carried Nov 7), 43% rostered; FA 2026-11-08T14:55:00-08:00",
       "faabMin": 0,
       "faabMax": 0,
       "bid": 0,
@@ -423,7 +384,7 @@
       "rank": 1,
       "player": "Cedric Gray",
       "pos": "LB",
-      "reason": "Bye W9; 11.4 / 9.3. First cut for any DB/DL add."
+      "reason": "Bye W9; 11.4 / 9.3. First cut for Carter (Tuesday decision)."
     },
     {
       "rank": 2,
@@ -437,7 +398,7 @@
       "with": "TTAB",
       "give": [],
       "get": [],
-      "why": "We lead 21-0 after Lawrence TNF; TTAB still holds Quinnen. Standing goal: quality DB/LB with offense back if trading Pickens/Hall/Coker — no offer without Bill yes."
+      "why": "We lead 207–174.5 with Bishop on MNF. Standing goal: quality DB/LB with offense back if trading Pickens/Hall/Coker — no offer without Bill yes."
     }
   ],
   "idp": [
@@ -621,37 +582,44 @@
   ],
   "news": [
     {
-      "source": "Nick Underhill / Underdog via X",
-      "time": "2026-11-07T10:28:00-08:00",
-      "text": "Jordyn Tyson activated off Saints IR for Sunday vs CLE; remains Questionable (hamstring). NFL debut."
+      "source": "Rich Cimini via X",
+      "time": "2026-11-08T14:45:00-08:00",
+      "text": "Breece Hall 27 snaps to Braelon Allen's 36. https://x.com/RichCimini/status/2119558544961782006"
     },
     {
-      "source": "RotoLegends",
-      "time": "2026-11-07T10:49:00-08:00",
-      "text": "Dallas expects George Pickens to play (@IND). Still official Q."
+      "source": "Rotoworld via X",
+      "time": "2026-11-08T14:45:00-08:00",
+      "text": "Devin Singletary 23 touches for 39 yards. https://x.com/rotoworld_fb/status/2119562174183956588"
     },
     {
-      "source": "Aaron Glenn / Jets",
-      "time": "2026-11-06T00:00:00-08:00",
-      "text": "Breece Hall full practice / ready; mix with Braelon Allen. Garrett Wilson Out (concussion)."
+      "source": "Mike Florio via X",
+      "time": "2026-11-08T14:45:00-08:00",
+      "text": "Jordyn Tyson debut: ~25% snaps, 4 catches for 30 yds, fumble at the 1. https://x.com/MichaelFFlorio/status/2119555946179711356"
     },
     {
-      "source": "Giants / Raanan",
-      "time": "2026-11-06T13:05:00-08:00",
-      "text": "Cam Skattebo Doubtful; Singletary expected lead (Tracy IR)."
+      "source": "Joey Dubois via X",
+      "time": "2026-11-08T14:45:00-08:00",
+      "text": "Evan Williams late INT. https://x.com/joeyduboistv/status/2119553480805470570"
     },
     {
-      "source": "Mike Woellert X",
-      "time": "2026-11-07T14:00:00-08:00",
-      "text": "Karlaftis: tackles give him the edge. W9 green-dot piece still not out (W8 STALE)."
+      "source": "Mike Woellert via X",
+      "time": "2026-11-08T14:45:00-08:00",
+      "text": "Quentin Lake kept the green dot in W9. https://x.com/Mike_Woellert/status/2119542023854133541"
+    },
+    {
+      "source": "DraftSharks via X",
+      "time": "2026-11-08T14:45:00-08:00",
+      "text": "George Pickens inactive W9 (hamstring). https://x.com/DraftSharks/status/2119473448808304806"
+    },
+    {
+      "source": "@BannastandFF via X",
+      "time": "2026-11-08T14:45:00-08:00",
+      "text": "Cam Skattebo inactive; warmed up in sneakers. https://x.com/BannastandFF/status/2119469676615127220"
     },
     {
       "source": "Fantrax",
-      "time": "2026-11-07T14:52:00-08:00",
-      "text": "W9 Eddies 21–0 TTAB (proj 207.4–177.8); FAAB $25; Tyson now reserve (activated)."
+      "time": "2026-11-08T14:55:00-08:00",
+      "text": "W9 live: Eddies 207–174.5 TTAB (proj 256.2–230.0); Bishop MNF left; FAAB $25."
     }
-  ],
-  "refreshNotes": [
-    "1 free-text sentence(s) about our own moves removed (structured records only)."
   ]
 }
