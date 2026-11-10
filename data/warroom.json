@@ -1,29 +1,33 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-09T15:10:00-08:00",
-  "lastUpdated": "2026-11-09T15:10:00-08:00",
+  "asOf": "2026-11-10T15:13:00-08:00",
+  "lastUpdated": "2026-11-10T15:13:00-08:00",
   "season": 2026,
-  "week": 9,
+  "week": 10,
   "opponent": {
-    "teamId": "ttab",
-    "name": "TTAB"
+    "teamId": "lab",
+    "name": "Little Ass Boys"
   },
   "freshness": {
-    "plan": "2026-11-09T15:10:00-08:00",
-    "roster": "2026-11-09T15:08:00-08:00",
-    "scores": "2026-11-09T15:08:00-08:00",
-    "waivers": "2026-11-09T15:08:00-08:00",
-    "news": "2026-11-09T14:50:00-08:00"
+    "plan": "2026-11-10T15:13:00-08:00",
+    "roster": "2026-11-10T15:10:00-08:00",
+    "scores": "2026-11-10T15:10:00-08:00",
+    "waivers": "2026-11-10T15:10:33-08:00",
+    "news": "2026-11-10T15:00:00-08:00"
   },
   "lockTimes": [
     {
-      "label": "Monday (Bishop MNF)",
-      "at": "2026-11-09T17:15:00-08:00"
+      "label": "W10 Thursday (WAS@NYG: Luvu, Skattebo)",
+      "at": "2026-11-12T17:15:00-08:00"
     },
     {
-      "label": "W10 Thursday (WAS@NYG: Luvu, Singletary/Skattebo)",
-      "at": "2026-11-12T17:15:00-08:00"
+      "label": "Waivers clear",
+      "at": "2026-11-11T09:00:00-08:00"
+    },
+    {
+      "label": "Sunday early (10:00 AM PT)",
+      "at": "2026-11-15T10:00:00-08:00"
     }
   ],
   "lineup": [
@@ -33,9 +37,9 @@
       "pos": "QB",
       "nflTeam": "JAX",
       "verdict": "START",
-      "reason": "W9 final 21. 24.62 / 22.5 FP/G season / last 3 (Fantrax 3:08 PM PT). W10 @TEN. 100% snaps W9.",
+      "reason": "24.62 / 22.5 FP/G season / last 3, 100% snaps W9. @TEN (Fantrax opp rank vs QB 22nd).",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
       "slot": "RB",
@@ -43,19 +47,19 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "W9 final 13. 16.25 / 13 FP/G season / last 3 (Fantrax 3:08 PM PT). 43% snaps vs Allen 58% (nflverse/PFR); 15 car + 4 tgt led the backfield. W10 vs BUF.",
+      "reason": "16.25 / 13.0, 43% snaps W9 but 19 opportunities to Allen's 10 (FantasyPtsData). vs BUF (25th).",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
       "slot": "WR",
-      "player": "Josh Downs",
+      "player": "Chimere Dike",
       "pos": "WR",
-      "nflTeam": "IND",
-      "verdict": "START",
-      "reason": "W9 final 5. 8.22 / 7.33 FP/G season / last 3 (Fantrax 3:08 PM PT). 77% snaps. W10 vs MIA.",
+      "nflTeam": "TEN",
+      "verdict": "SWAP",
+      "reason": "Fantrax shows the WR slot EMPTY at 3:10 PM PT. Move Dike in: 13.88 / 20.5, 82% W8 (TEN bye W9) plus KR/PR yards. vs JAX (20th).",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
       "slot": "TE",
@@ -63,39 +67,39 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "W9 final 33. 28.64 / 28.17 FP/G season / last 3 (Fantrax 3:08 PM PT). 100% snaps W9. W10 vs SEA.",
+      "reason": "28.64 / 28.17, 100% snaps. vs SEA (8th). Rookie Mendoza now starts at QB after the Cousins trade.",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
-      "slot": "FLEX",
+      "slot": "RWT",
+      "player": "Cameron Skattebo",
+      "pos": "RB",
+      "nflTeam": "NYG",
+      "verdict": "START",
+      "reason": "11.57 / 27.0; 0 W9 (inactive). Full practice Tue (Underdog NFL). vs WAS Thu.",
+      "injury": "",
+      "practice": "n/a"
+    },
+    {
+      "slot": "RWT",
       "player": "Zach Charbonnet",
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "START",
-      "reason": "W9 final 10. 7.5 / 7.5 FP/G season / last 3 (Fantrax 3:08 PM PT). 57% snaps W9. W10 @LV.",
+      "reason": "7.5 / 7.5, 57% W9. @LV (26th) soft run D.",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
-      "slot": "FLEX",
-      "player": "Devin Singletary",
-      "pos": "RB",
-      "nflTeam": "NYG",
-      "verdict": "START",
-      "reason": "W9 final 8. 7.6 / 11 FP/G season / last 3 (Fantrax 3:08 PM PT). Skattebo expected full go Thu vs WAS, which cuts this to a backup role.",
-      "injury": "",
-      "practice": "Played"
-    },
-    {
-      "slot": "FLEX",
-      "player": "Jordyn Tyson",
+      "slot": "RWT",
+      "player": "Josh Downs",
       "pos": "WR",
-      "nflTeam": "NO",
-      "verdict": "START",
-      "reason": "W9 final 4. 4 / 4 FP/G season / last 3 (Fantrax 3:08 PM PT). W10 vs CAR; ramp-up expected.",
+      "nflTeam": "KC",
+      "verdict": "SWAP",
+      "reason": "Traded IND->KC today (Schefter/Rapoport). 8.22 / 7.33, 77% W9 with IND. @ATL (24th). Fill the flex Dike leaves; Darren Waller if claimed.",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
       "slot": "DL",
@@ -103,9 +107,9 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "W9 final 42. 22.5 / 28.67 FP/G season / last 3 (Fantrax 3:08 PM PT). 83% snaps. W10 @ATL.",
+      "reason": "22.5 / 28.67, 83% W9. @ATL: OL tough (5.6% sack rate, x0.91).",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
       "slot": "LB",
@@ -113,9 +117,9 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "W9 final 21. 25.5 / 29 FP/G season / last 3 (Fantrax 3:08 PM PT). Green dot, 100% snaps (Woellert). 5 tkl, FF, FR. W10 @DAL.",
+      "reason": "25.5 / 29.0, 100%, green dot. @DAL neutral (65 plays/g).",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
       "slot": "DB",
@@ -123,9 +127,9 @@
       "pos": "DB",
       "nflTeam": "LAR",
       "verdict": "START",
-      "reason": "W9 final 16. 21.44 / 20.67 FP/G season / last 3 (Fantrax 3:08 PM PT). Wore the LAR green dot again W9, 58/58 snaps, 7 tkl (Woellert). W10 @ARI.",
+      "reason": "21.44 / 20.67, 100%, wore dot W9. @ARI boost (x1.10).",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
       "slot": "DB",
@@ -133,65 +137,65 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "W9 final 21. 24.78 / 21.33 FP/G season / last 3 (Fantrax 3:08 PM PT). 97% snaps, late INT. W10 vs MIN.",
+      "reason": "24.78 / 21.33, 97%. vs MIN tough (x0.89).",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
     },
     {
-      "slot": "IDP",
-      "player": "Cole Bishop",
-      "pos": "DB",
-      "nflTeam": "BUF",
-      "verdict": "START",
-      "reason": "W9: MNF tonight. 16 / 17 FP/G season / last 3 (Fantrax 3:08 PM PT). MNF @MIN 5:15 PM PT, the only Eddie left. 88% snaps W8.",
-      "injury": "",
-      "practice": "MNF tonight"
-    },
-    {
-      "slot": "IDP",
-      "player": "Jordyn Brooks",
-      "pos": "LB",
-      "nflTeam": "MIA",
-      "verdict": "START",
-      "reason": "W9 final 28. 20.12 / 25 FP/G season / last 3 (Fantrax 3:08 PM PT). 98% snaps, 12 tkl, 5 stops (Woellert); 28 FP live Sun. Full-time next to the dot.",
-      "injury": "",
-      "practice": "Played"
-    },
-    {
-      "slot": "IDP",
+      "slot": "ID",
       "player": "Frankie Luvu",
       "pos": "LB",
       "nflTeam": "WAS",
       "verdict": "START",
-      "reason": "W9 final 47. 21.5 / 30.5 FP/G season / last 3 (Fantrax 3:08 PM PT). Green dot, every snap, 15 tkl + sack (Woellert); 47 FP. W10 TNF @NYG.",
+      "reason": "21.5 / 30.5, 100%, green dot. @NYG Thu boost (x1.07).",
       "injury": "",
-      "practice": "Played"
+      "practice": "n/a"
+    },
+    {
+      "slot": "ID",
+      "player": "Jordyn Brooks",
+      "pos": "LB",
+      "nflTeam": "MIA",
+      "verdict": "START",
+      "reason": "20.12 / 25.0, 100% full-time. @IND neutral.",
+      "injury": "",
+      "practice": "n/a"
+    },
+    {
+      "slot": "ID",
+      "player": "Cole Bishop",
+      "pos": "DB",
+      "nflTeam": "BUF",
+      "verdict": "START",
+      "reason": "14.88 / 12.0, 96% L3. @NYJ neutral. Hooker trade: Woellert says good for Bishop.",
+      "injury": "",
+      "practice": "n/a"
     }
   ],
   "injuryWatch": [
     {
       "player": "Cameron Skattebo",
-      "tag": "Out (IR slot)",
-      "practice": "LP Fri W9",
-      "note": "Hamstring. Expected full go Thu vs WAS per HC (FantasySource/premefootball on X). Activate before Thu 5:15 PM PT lock if confirmed."
+      "tag": "",
+      "practice": "FP Tue",
+      "note": "Hamstring. Full practice Tue (Underdog NFL); HC Harbaugh: full go Thu."
     },
     {
       "player": "George Pickens",
-      "tag": "Out",
+      "tag": "IR slot",
       "practice": "n/a",
-      "note": "Missed W9 (hamstring). Schottenheimer: will try to work this week, see how he does (nfl_presserwire)."
+      "note": "Hamstring; missed W9. Now in Eddies IR slot on Fantrax."
+    },
+    {
+      "player": "Garrett Wilson",
+      "tag": "IR slot",
+      "practice": "n/a",
+      "note": "Concussion protocol, no clearance yet (Ribu18). Not traded at deadline (Schefter)."
     },
     {
       "player": "Travis Etienne",
       "tag": "IR",
       "practice": "n/a",
-      "note": "Kellen Moore: progressing well, return this week TBD (Tina Howell)."
-    },
-    {
-      "player": "Garrett Wilson",
-      "tag": "Out (IR slot)",
-      "practice": "n/a",
-      "note": "Out W9. Injury analyst projects a W10 return (unverified, SportMDAnalysis)."
+      "note": "Hamstring IR; practice window not opened. Estime led NO backfield W9."
     }
   ],
   "byes": [
@@ -226,39 +230,117 @@
       "player": "Nohl Williams",
       "pos": "DB",
       "nflTeam": "KC",
-      "why": "ROS. W11 DB cover (Lake and E. Williams both bye W11). 100% snaps W8-9 (nflverse). W10 @ATL.",
-      "stats": "16.25 FP/G, last3 20.0, 31% rostered (Fantrax 3:08 PM PT)",
-      "faabMin": 1,
-      "faabMax": 4,
-      "bid": 2,
+      "why": "ROS. W11 DB cover (Lake + E. Williams bye W11; KC plays). 100% snaps L3. @ATL neutral. IDP rank wk 26 / ROS 17.",
+      "stats": "16.25 FP/G season, 31%% rostered; FA as of 2026-11-10T15:10:33-08:00",
+      "faabMin": 2,
+      "faabMax": 5,
+      "bid": 3,
       "drop": "Cedric Gray",
-      "tag": "ROS"
+      "tag": "MUST"
     },
     {
       "rank": 2,
-      "player": "Zyon McCollum",
+      "player": "M.J. Stewart",
       "pos": "DB",
-      "nflTeam": "TB",
-      "why": "ROS; TB bye W10, plays W11. 100% snaps W6-9.",
-      "stats": "16.0 FP/G, last3 19.0, 32% rostered",
-      "faabMin": 0,
+      "nflTeam": "HOU",
+      "why": "ROS. ROS DB rank 4; 73% snaps; vs CLE neutral; HOU plays W11.",
+      "stats": "13.5 FP/G season, 3%% rostered; FA as of 2026-11-10T15:10:33-08:00",
+      "faabMin": 1,
       "faabMax": 3,
-      "bid": 1,
+      "bid": 2,
       "drop": "Ja'Kobi Lane",
-      "tag": "ROS"
+      "tag": "LIKE"
     },
     {
       "rank": 3,
-      "player": "Jalen Carter",
-      "pos": "DL",
-      "nflTeam": "PHI",
-      "why": "ROS DL depth behind Karlaftis; 87% snaps W9. PHI bye W10.",
-      "stats": "14.89 FP/G, last3 14.33, 69% rostered",
-      "faabMin": 0,
+      "player": "Darren Waller",
+      "pos": "TE",
+      "nflTeam": "CAR",
+      "why": "ROS. TE premium in a flex; open WR/flex after Downs trade. @NO. Snaps unverified.",
+      "stats": "12.62 FP/G season, 40%% rostered; FA as of 2026-11-10T15:10:33-08:00",
+      "faabMin": 1,
+      "faabMax": 4,
+      "bid": 2,
+      "drop": "Ja'Kobi Lane",
+      "tag": "LIKE"
+    },
+    {
+      "rank": 4,
+      "player": "Bryan Cook",
+      "pos": "DB",
+      "nflTeam": "CIN",
+      "why": "ROS. 97% snaps; vs PIT slight boost (x1.04); CIN plays W11. ROS rank 13.",
+      "stats": "13.86 FP/G season, 15%% rostered; FA as of 2026-11-10T15:10:33-08:00",
+      "faabMin": 1,
       "faabMax": 3,
       "bid": 1,
       "drop": "Cedric Gray",
-      "tag": "ROS"
+      "tag": "LIKE"
+    },
+    {
+      "rank": 5,
+      "player": "Zyon McCollum",
+      "pos": "DB",
+      "nflTeam": "TB",
+      "why": "ROS stash. TB bye W10 (no W10 points), back W11 for DB bye cover. 100% snaps.",
+      "stats": "16 FP/G season, 32%% rostered; FA as of 2026-11-10T15:10:33-08:00",
+      "faabMin": 1,
+      "faabMax": 3,
+      "bid": 1,
+      "drop": "Cedric Gray",
+      "tag": "LIKE"
+    },
+    {
+      "rank": 6,
+      "player": "Jacob Martin",
+      "pos": "DL",
+      "nflTeam": "TEN",
+      "why": "ROS. 0 W9 = TEN bye. ROS DL rank 6; vs JAX OL tough. Depth behind Karlaftis.",
+      "stats": "12.88 FP/G season, 20%% rostered; FA as of 2026-11-10T15:10:33-08:00",
+      "faabMin": 1,
+      "faabMax": 4,
+      "bid": 2,
+      "drop": "Ja'Kobi Lane",
+      "tag": "DART"
+    },
+    {
+      "rank": 7,
+      "player": "Sheldon Rankins",
+      "pos": "DL",
+      "nflTeam": "HOU",
+      "why": "WEEKLY. vs CLE OL boost (10.8% sack rate allowed, x1.15).",
+      "stats": "12.38 FP/G season, 11%% rostered; FA as of 2026-11-10T15:10:33-08:00",
+      "faabMin": 0,
+      "faabMax": 1,
+      "bid": 1,
+      "drop": "Ja'Kobi Lane",
+      "tag": "DART"
+    },
+    {
+      "rank": 8,
+      "player": "Barion Brown",
+      "pos": "WR",
+      "nflTeam": "NO",
+      "why": "WEEKLY. Returner (1 pt/10 KR/PR yds) vs CAR. Snaps unverified.",
+      "stats": "11.43 FP/G season, 12%% rostered; FA as of 2026-11-10T15:10:33-08:00",
+      "faabMin": 0,
+      "faabMax": 1,
+      "bid": 1,
+      "drop": "Ja'Kobi Lane",
+      "tag": "DART"
+    },
+    {
+      "rank": 9,
+      "player": "Troy Dye",
+      "pos": "LB",
+      "nflTeam": "LAC",
+      "why": "ROS dart. Woellert: Dye likely gets the LAC dot after Henley trade. 0 W9; role unconfirmed.",
+      "stats": "Not in the latest FA scrape; confirm availability",
+      "faabMin": 0,
+      "faabMax": 1,
+      "bid": 1,
+      "drop": "Ja'Kobi Lane",
+      "tag": "DART"
     }
   ],
   "drops": [
@@ -266,21 +348,31 @@
       "rank": 1,
       "player": "Cedric Gray",
       "pos": "LB",
-      "reason": "11.43 / 7.0 FP/G; LB2 split with Barton (Woellert W8)."
+      "reason": "11.43 / 7.0 FP/G; LB2 split with Barton."
     },
     {
       "rank": 2,
       "player": "Ja'Kobi Lane",
       "pos": "WR",
-      "reason": "3.4 / 2.33 FP/G; 57% snaps W9."
+      "reason": "3.4 / 2.33 FP/G; 0 W9."
+    },
+    {
+      "rank": 3,
+      "player": "Jordyn Tyson",
+      "pos": "WR",
+      "reason": "4.0 / 4.0 FP/G; 24% snaps W9."
     }
   ],
   "trades": [
     {
-      "with": "Little Ass Boys",
-      "give": [],
-      "get": [],
-      "why": "W10 opponent (5-3, $56 FAAB). Standing goal: quality DB/LB with offense back if trading Pickens/Hall/Coker. No offer without Bill yes."
+      "with": "Newman Lake Sleep Paralysis Demons",
+      "give": [
+        "George Pickens"
+      ],
+      "get": [
+        "Jeremiah Trotter"
+      ],
+      "why": "Trotter has the PHI dot (25.67 L3, 41 W9) while Baun's back is hurt; PHI bye W10. Must also bring an offensive player back (Bill's rule). Idea only."
     }
   ],
   "idp": [
@@ -302,7 +394,7 @@
     {
       "nflTeam": "BUF",
       "greenDot": null,
-      "notes": "W8 data (BUF played MNF W9): Bernard 76%, Dorian Williams 57%. Woellert updates dot after MNF."
+      "notes": "Nov 10: BUF traded for S Amani Hooker; Woellert: good for Bishop. MNF halftime LB snaps Bernard 13, D. Williams 11, Elarms-Orr 8."
     },
     {
       "nflTeam": "CAR",
@@ -332,7 +424,7 @@
     {
       "nflTeam": "DEN",
       "greenDot": "Alex Singleton",
-      "notes": "W9: Singleton 100% with dot; Strnad 72%->89%."
+      "notes": "W9: Singleton 100% with dot; Strnad 72%->89%. Nov 10: acquired Daiyan Henley."
     },
     {
       "nflTeam": "DET",
@@ -366,8 +458,8 @@
     },
     {
       "nflTeam": "LAC",
-      "greenDot": "Daiyan Henley",
-      "notes": "W9: Henley dot 86% (10 tkl, INT). Phillips 62%->47% as dime jumped."
+      "greenDot": "Troy Dye",
+      "notes": "Nov 10: Henley traded to DEN; Woellert: 'I think Dye gets the dot.' Projected."
     },
     {
       "nflTeam": "LAR",
@@ -449,44 +541,52 @@
     {
       "player": "Quentin Lake",
       "nflTeam": "LAR",
-      "note": "Woellert W9: wore the dot, 58/58 snaps, slot 36."
+      "note": "Dot W9, 100%. Rams going 7+ DB; he's their guy in zero-LB (Woellert)."
     },
     {
       "player": "Evan Williams",
       "nflTeam": "GB",
-      "note": "97% snaps W9; Woellert box-rate list notes EMW."
+      "note": "97% snaps W9."
     },
     {
       "player": "Cole Bishop",
       "nflTeam": "BUF",
-      "note": "MNF @MIN tonight."
+      "note": "Hooker arrives; Woellert: could let Bishop roam free."
     }
   ],
   "news": [
     {
-      "source": "Mike Woellert (Substack)",
-      "time": "2026-11-09T06:39:00-08:00",
-      "text": "W9 green dots: Lake, Warner, Luvu wore the dot; Brooks 98%. https://mikewoellert.substack.com/p/2026-week-9-green-dot-and-full-time-linebackers-idp-fantasy-football"
+      "source": "Adam Schefter (X)",
+      "time": "2026-11-10T12:36:00-08:00",
+      "text": "Colts trading WR Josh Downs to the Chiefs. https://x.com/AdamSchefter/status/2120254318490394919"
     },
     {
-      "source": "FantasySource via X",
-      "time": "2026-11-09T09:50:00-08:00",
-      "text": "Skattebo expected full go Thursday vs WAS. https://x.com/FantasySource_/status/2119850087362830763"
+      "source": "Mike Woellert (X)",
+      "time": "2026-11-10T12:17:00-08:00",
+      "text": "Chargers trade Henley; I think Dye gets the dot. https://x.com/Mike_Woellert/status/2120249589433503811"
     },
     {
-      "source": "NFL Presser Wire via X",
-      "time": "2026-11-09T14:06:00-08:00",
-      "text": "Pickens will try to work this week. https://x.com/nfl_presserwire/status/2119914513126543758"
+      "source": "Underdog NFL (X)",
+      "time": "2026-11-10T13:03:00-08:00",
+      "text": "Cam Skattebo (hamstring) fully practices Tuesday. https://x.com/UnderdogNFL/status/2120261072204493161"
     },
     {
-      "source": "Tina Howell via X",
-      "time": "2026-11-09T11:54:00-08:00",
-      "text": "Etienne progressing well; return this week TBD. https://x.com/TinaM_Howell/status/2119881255030575566"
+      "source": "Mike Woellert (X)",
+      "time": "2026-11-10T11:34:00-08:00",
+      "text": "Hooker to BUF: good for Bishop. https://x.com/Mike_Woellert/status/2120238746109178038"
     },
     {
-      "source": "JJ Zachariason via X",
-      "time": "2026-11-09T06:09:00-08:00",
-      "text": "Allen out-snapped Hall 36-27; Hall out-rushed him 15-8. https://x.com/LateRoundQB/status/2119794600374063193"
+      "source": "Adam Schefter (X)",
+      "time": "2026-11-10T11:37:00-08:00",
+      "text": "Raiders trade Cousins to MIN; Fernando Mendoza starts (Bowers' QB). https://x.com/AdamSchefter/status/2120239546331738563"
+    },
+    {
+      "source": "RotoWire (X)",
+      "time": "2026-11-09T17:47:00-08:00",
+      "text": "Puka Nacua likely IR (LAB's WR1). https://x.com/RotoWireNFL/status/2119970266881179929"
     }
+  ],
+  "refreshNotes": [
+    "Editorial plan was written for week 10; current week is 9. Re-run the newsletter routine."
   ]
 }

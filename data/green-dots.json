@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-09T15:05:00-08:00",
+  "asOf": "2026-11-10T15:20:00-08:00",
   "week": 9,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-9-green-dot-and-full-time-linebackers-idp-fantasy-football",
@@ -34,7 +34,7 @@
       "fullTime": [
         "Terrel Bernard"
       ],
-      "notes": "W8 data (BUF played MNF W9): Bernard 76%, Dorian Williams 57%. Woellert updates dot after MNF."
+      "notes": "MNF W9 halftime (Woellert X): Bernard 13, Dorian Williams 11, Elarms-Orr 8 of 19 snaps. Nov 10: BUF traded for S Amani Hooker; Woellert: good for Bishop, could let him roam free."
     },
     {
       "team": "CAR",
@@ -87,7 +87,7 @@
         "Alex Singleton",
         "Justin Strnad"
       ],
-      "notes": "W9: Singleton 100% with dot; Strnad 72%->89%."
+      "notes": "W9: Singleton 100% with dot; Strnad 72%->89%. Nov 10: DEN acquired Daiyan Henley from LAC; Woellert: bad for Strnad, not great for Henley."
     },
     {
       "team": "DET",
@@ -143,11 +143,11 @@
     },
     {
       "team": "LAC",
-      "greenDot": "Daiyan Henley",
+      "greenDot": "Troy Dye",
       "fullTime": [
-        "Daiyan Henley"
+        "Troy Dye"
       ],
-      "notes": "W9: Henley dot 86% (10 tkl, INT). Phillips 62%->47% as dime jumped."
+      "notes": "Nov 10: Henley traded to DEN. Woellert (X, 12:17 PM PT): 'I think Dye gets the dot'; Dye has worn it when on the field for Henley. Bad for Strnad. Projected, confirm after W10."
     },
     {
       "team": "LAR",
