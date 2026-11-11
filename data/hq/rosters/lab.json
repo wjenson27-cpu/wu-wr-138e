@@ -2,25 +2,25 @@
   "teamId": "lab",
   "teamName": "Little Ass Boys",
   "owner": "Jesse Nicholson",
-  "asOf": "2026-11-04 10:18 AM PT",
-  "faabLeft": 56,
+  "asOf": "2026-11-11 9:25 AM PT",
+  "faabLeft": 50,
   "startingQB": "Jayden Daniels",
   "roster": {
     "QB": [
       "Jayden Daniels",
-      "C.J. Stroud"
+      "Matthew Stafford"
     ],
     "RB": [
       "Kyren Williams",
-      "Tyler Allgeier",
-      "Dylan Sampson",
-      "Jaylen Warren"
+      "Ashton Jeanty",
+      "Jaylen Warren",
+      "Dylan Sampson"
     ],
     "WR": [
-      "Puka Nacua",
-      "Mike Evans",
+      "Carnell Tate",
       "Khalil Shakir",
-      "Caleb Douglas"
+      "Caleb Douglas",
+      "Mike Evans"
     ],
     "TE": [
       "Isaiah Likely"
@@ -29,42 +29,49 @@
       "Aidan Hutchinson"
     ],
     "LB": [
-      "Jack Gibbens",
-      "Akeem Davis-Gaither",
+      "Nathan Landman",
+      "Demetrius Knight",
       "Drue Tranquill",
       "Quay Walker",
-      "Roquan Smith"
+      "Akeem Davis-Gaither"
     ],
     "DB": [
       "Minkah Fitzpatrick",
-      "Jacob Parrish"
+      "Jacob Parrish",
+      "Marcus Jones"
     ],
     "IR": [
+      "Puka Nacua",
       "Jeremiyah Love",
-      "Carnell Tate",
       "Jihaad Campbell"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Mike Evans — Q (active)",
+    "Carnell Tate — Q (active)",
+    "Mike Evans — Q (reserve)",
+    "Puka Nacua — Q (IR slot)",
     "Jeremiyah Love — IR (IR slot)",
-    "Carnell Tate — Q (IR slot)",
+    "Akeem Davis-Gaither — Q (reserve)",
     "Jihaad Campbell — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
   "fantraxTeamId": "a4q2ra3ymsb3ulv4",
   "lineupFlags": [
-    "Mike Evans — Q (active)"
+    "Carnell Tate — Q (active)",
+    "Mike Evans — Q (reserve)",
+    "Akeem Davis-Gaither — Q (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Mike Evans — Q (active)",
+    "Carnell Tate — Q (active)",
+    "Mike Evans — Q (reserve)",
+    "Puka Nacua — Q (IR slot)",
     "Jeremiyah Love — IR (IR slot)",
-    "Carnell Tate — Q (IR slot)",
+    "Akeem Davis-Gaither — Q (reserve)",
     "Jihaad Campbell — Q (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 9:25 AM PT"
 }

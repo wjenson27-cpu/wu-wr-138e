@@ -2,8 +2,8 @@
   "teamId": "pocket",
   "teamName": "Pocket Agents",
   "owner": "Kellen Olson",
-  "asOf": "2026-11-04 10:18 AM PT",
-  "faabLeft": 85,
+  "asOf": "2026-11-11 9:25 AM PT",
+  "faabLeft": 69,
   "startingQB": "Jared Goff",
   "roster": {
     "QB": [
@@ -11,14 +11,14 @@
       "Tyler Shough"
     ],
     "RB": [
-      "Jonah Coleman",
+      "Woody Marks",
       "Mike Washington",
-      "Woody Marks"
+      "Jonah Coleman"
     ],
     "WR": [
       "Tetairoa McMillan",
       "CeeDee Lamb",
-      "Jaylen Waddle"
+      "Rashid Shaheed"
     ],
     "TE": [
       "Trey McBride",
@@ -26,39 +26,44 @@
       "Chigoziem Okonkwo"
     ],
     "DL": [
-      "Will Anderson Jr.",
-      "Josh Hines-Allen"
+      "Will Anderson Jr."
     ],
     "LB": [
-      "Ernest Jones",
       "Barrett Carter",
-      "Josiah Trotter"
+      "Ernest Jones",
+      "Josiah Trotter",
+      "Troy Dye"
     ],
     "DB": [
       "Dane Belton",
       "Cooper DeJean",
-      "Amani Hooker"
+      "Amani Hooker",
+      "Tony Adams"
     ],
     "IR": [
       "Saquon Barkley",
-      "Rashid Shaheed",
+      "Jaylen Waddle",
       "Brandon Jones"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Rashid Shaheed — Q (IR slot)",
+    "Rashid Shaheed — Q (reserve)",
+    "Jaylen Waddle — Q (IR slot)",
     "Brandon Jones — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
   "fantraxTeamId": "20zozmjgmsb3ulv4",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Rashid Shaheed — Q (reserve)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Rashid Shaheed — Q (IR slot)",
+    "Rashid Shaheed — Q (reserve)",
+    "Jaylen Waddle — Q (IR slot)",
     "Brandon Jones — Q (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 9:25 AM PT"
 }

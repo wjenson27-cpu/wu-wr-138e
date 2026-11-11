@@ -2,67 +2,71 @@
   "teamId": "hyper",
   "teamName": "The Hypersecretors",
   "owner": "Jacob Crisp",
-  "asOf": "2026-11-04 10:18 AM PT",
-  "faabLeft": 12,
+  "asOf": "2026-11-11 9:25 AM PT",
+  "faabLeft": 10,
   "startingQB": "Kirk Cousins",
   "roster": {
     "QB": [
       "Kirk Cousins",
-      "Justin Herbert"
+      "Bryce Young"
     ],
     "RB": [
       "Kenneth Walker III",
       "Rachaad White",
-      "Jaylen Wright",
-      "Jacory Croskey-Merritt"
+      "Jaylen Wright"
     ],
     "WR": [
       "Amon-Ra St. Brown",
-      "Luther Burden"
+      "Luther Burden",
+      "Emeka Egbuka",
+      "Travis Hunter",
+      "De'Zhaun Stribling"
     ],
     "TE": [
       "Sam LaPorta",
       "Dalton Schultz"
     ],
     "DL": [
-      "Dexter Lawrence"
+      "Chase Young",
+      "Nick Bosa"
     ],
     "LB": [
+      "Jacob Rodriguez",
       "Nick Bolton",
       "Blake Cashman",
-      "Shemar James",
-      "Jacob Rodriguez",
-      "Kaleb Elarms-Orr",
-      "Payton Wilson"
+      "Payton Wilson",
+      "Shemar James"
     ],
     "DB": [
       "Jeremy Chinn",
       "Kamren Curl"
     ],
     "IR": [
-      "Emeka Egbuka",
-      "Travis Hunter",
-      "Nick Bosa"
+      "Jacory Croskey-Merritt",
+      "Micah Parsons"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Jacory Croskey-Merritt — IR (reserve)",
-    "Emeka Egbuka — Q (IR slot)",
-    "Nick Bosa — Q (IR slot)"
+    "Luther Burden — Q (active)",
+    "Jaylen Wright — Q (active)",
+    "Jacory Croskey-Merritt — IR (IR slot)",
+    "Micah Parsons — IR (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
   "fantraxTeamId": "xz2uv87rmsb3ulv4",
   "lineupFlags": [
-    "Jacory Croskey-Merritt — IR (reserve)"
+    "Luther Burden — Q (active)",
+    "Jaylen Wright — Q (active)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Jacory Croskey-Merritt — IR (reserve)",
-    "Emeka Egbuka — Q (IR slot)",
-    "Nick Bosa — Q (IR slot)"
+    "Luther Burden — Q (active)",
+    "Jaylen Wright — Q (active)",
+    "Jacory Croskey-Merritt — IR (IR slot)",
+    "Micah Parsons — IR (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 9:25 AM PT"
 }

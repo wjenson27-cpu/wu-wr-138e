@@ -2,70 +2,66 @@
   "teamId": "substation",
   "teamName": "Substation",
   "owner": "Nathan Kelly",
-  "asOf": "2026-11-04 10:18 AM PT",
+  "asOf": "2026-11-11 9:25 AM PT",
   "faabLeft": 5,
   "startingQB": "Brock Purdy",
   "roster": {
     "QB": [
-      "Brock Purdy",
-      "Bryce Young"
+      "Brock Purdy"
     ],
     "RB": [
+      "Emmett Johnson",
       "Kenneth Gainwell",
-      "Tyler Goodson",
-      "Emmett Johnson"
+      "Justice Hill"
     ],
     "WR": [
       "Ja'Marr Chase",
+      "Germie Bernard",
       "KC Concepcion",
       "Malik Nabers",
       "Tre Tucker",
-      "Germie Bernard"
+      "Jakobi Meyers"
     ],
     "TE": [
       "Tucker Kraft"
     ],
     "DL": [
-      "DeForest Buckner"
+      "Dexter Lawrence"
     ],
     "LB": [
-      "Zack Baun",
+      "Malcolm Rodriguez",
       "Kaden Elliss",
       "Henry To'oTo'o",
-      "Eric Wilson",
-      "Malcolm Rodriguez"
+      "Eric Wilson"
     ],
     "DB": [
       "Nick Emmanwori",
+      "Jalen Pitre",
       "Tykee Smith",
-      "Jalen Pitre"
+      "DeShon Elliott"
     ],
     "IR": [
       "Tyjae Spears",
-      "Alec Pierce",
+      "Zack Baun",
       "Jack Campbell"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Tyjae Spears — Q (IR slot)",
-    "Alec Pierce — IR (IR slot)",
-    "Jalen Pitre — Q (reserve)",
-    "Jack Campbell — Q (IR slot)"
+    "Zack Baun — Q (IR slot)",
+    "Jack Campbell — IR (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
   "fantraxTeamId": "bbdlo6fkmsb3ulv5",
-  "lineupFlags": [
-    "Jalen Pitre — Q (reserve)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Tyjae Spears — Q (IR slot)",
-    "Alec Pierce — IR (IR slot)",
-    "Jalen Pitre — Q (reserve)",
-    "Jack Campbell — Q (IR slot)"
+    "Zack Baun — Q (IR slot)",
+    "Jack Campbell — IR (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 9:25 AM PT"
 }

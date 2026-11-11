@@ -2,7 +2,7 @@
   "teamId": "ttab",
   "teamName": "Towner Top Aga Bottom",
   "owner": "Chase Anderson",
-  "asOf": "2026-11-04 10:18 AM PT",
+  "asOf": "2026-11-11 6:24 AM PT",
   "faabLeft": 10,
   "startingQB": "Caleb Williams",
   "roster": {
@@ -13,61 +13,49 @@
       "Javonte Williams"
     ],
     "WR": [
-      "Christian Watson",
-      "Omar Cooper Jr.",
-      "Stefon Diggs",
       "Jameson Williams",
       "Ryan Flournoy",
-      "Chris Godwin",
-      "Malik Washington"
+      "Malik Washington",
+      "Christian Watson",
+      "Omar Cooper Jr.",
+      "Stefon Diggs"
     ],
     "TE": [
       "Dallas Goedert"
     ],
     "DL": [
-      "Tuli Tuipulotu"
+      "Quinnen Williams"
     ],
     "LB": [
       "Demario Davis",
       "Micah McFadden",
+      "Patrick Queen",
+      "Divine Deablo",
       "Harold Perkins",
-      "Dorian Williams",
-      "Patrick Queen"
+      "Dorian Williams"
     ],
     "DB": [
-      "Dillon Thieneman",
+      "Caleb Downs",
       "Andrew Wingard",
-      "Caleb Downs"
+      "Brian Branch",
+      "Dillon Thieneman"
     ],
     "IR": [
-      "DeVonta Smith",
-      "Brian Branch",
-      "Divine Deablo"
+      "DeVonta Smith"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Christian Watson — Q (active)",
-    "DeVonta Smith — Q (IR slot)",
-    "Caleb Downs — Q (reserve)",
-    "Brian Branch — Q (IR slot)",
-    "Divine Deablo — Q (IR slot)"
+    "DeVonta Smith — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-11 6:24 AM PT (/workspace/fantrax-raw-2026-11-11-am-normalized.json)",
   "fantraxTeamId": "4grk2ph6msb3ulv4",
-  "lineupFlags": [
-    "Christian Watson — Q (active)",
-    "Caleb Downs — Q (reserve)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Christian Watson — Q (active)",
-    "DeVonta Smith — Q (IR slot)",
-    "Caleb Downs — Q (reserve)",
-    "Brian Branch — Q (IR slot)",
-    "Divine Deablo — Q (IR slot)"
+    "DeVonta Smith — Q (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 6:24 AM PT"
 }

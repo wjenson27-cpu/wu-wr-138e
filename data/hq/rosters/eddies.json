@@ -2,7 +2,7 @@
   "teamId": "eddies",
   "teamName": "Eagleridge Eddie's",
   "owner": "",
-  "asOf": "2026-11-04 10:18 AM PT",
+  "asOf": "2026-11-11 6:24 AM PT",
   "faabLeft": 25,
   "startingQB": "Trevor Lawrence",
   "roster": {
@@ -12,15 +12,15 @@
     "RB": [
       "Breece Hall",
       "Zach Charbonnet",
+      "Cameron Skattebo",
       "Devin Singletary"
     ],
     "WR": [
-      "Garrett Wilson",
       "Jalen Coker",
-      "George Pickens",
+      "Chimere Dike",
       "Josh Downs",
       "Ja'Kobi Lane",
-      "Chimere Dike"
+      "Jordyn Tyson"
     ],
     "TE": [
       "Brock Bowers"
@@ -41,34 +41,27 @@
       "Cole Bishop"
     ],
     "IR": [
-      "Jordyn Tyson",
       "Travis Etienne",
-      "Cameron Skattebo"
+      "Garrett Wilson",
+      "Kyle Hamilton"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Breece Hall — Q (active)",
-    "Garrett Wilson — Q (active)",
-    "Jordyn Tyson — IR (IR slot)",
     "Travis Etienne — IR (IR slot)",
-    "Cameron Skattebo — Q (IR slot)"
+    "Garrett Wilson — Q (IR slot)",
+    "Kyle Hamilton — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-11 6:24 AM PT (/workspace/fantrax-raw-2026-11-11-am-normalized.json)",
   "fantraxTeamId": "xbvk9dpgmsb3ulv4",
-  "lineupFlags": [
-    "Breece Hall — Q (active)",
-    "Garrett Wilson — Q (active)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Breece Hall — Q (active)",
-    "Garrett Wilson — Q (active)",
-    "Jordyn Tyson — IR (IR slot)",
     "Travis Etienne — IR (IR slot)",
-    "Cameron Skattebo — Q (IR slot)"
+    "Garrett Wilson — Q (IR slot)",
+    "Kyle Hamilton — Q (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 6:24 AM PT"
 }

@@ -2,7 +2,7 @@
   "teamId": "dongers",
   "teamName": "Drummond Dongers",
   "owner": "Gavin Heaton",
-  "asOf": "2026-11-04 10:18 AM PT",
+  "asOf": "2026-11-11 6:24 AM PT",
   "faabLeft": 1,
   "startingQB": "Joe Burrow",
   "roster": {
@@ -10,62 +10,55 @@
       "Joe Burrow"
     ],
     "RB": [
-      "Kendre Miller",
-      "Tony Pollard"
+      "Tony Pollard",
+      "Audric Estime"
     ],
     "WR": [
       "Parker Washington",
-      "Ladd McConkey",
+      "D.J. Moore",
       "Chris Olave",
       "Jaxon Smith-Njigba",
-      "D.J. Moore"
+      "Ladd McConkey"
     ],
     "TE": [
       "T.J. Hockenson",
       "Brenton Strange"
     ],
     "DL": [
-      "Zach Allen",
-      "Mason Graham"
+      "David Bailey",
+      "Zach Allen"
     ],
     "LB": [
       "Christian Elliss",
-      "Isaiah McDuffie",
-      "T.J. Edwards"
+      "Isaiah McDuffie"
     ],
     "DB": [
       "Chuck Clark",
-      "Xavier McKinney",
+      "Jalen Ramsey",
       "Nick Cross",
-      "Quinyon Mitchell",
-      "Jalen Ramsey"
+      "Xavier McKinney",
+      "Jevon Holland"
     ],
     "IR": [
-      "KaVontae Turpin",
-      "David Bailey",
-      "Jevon Holland"
+      "KaVontae Turpin"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "D.J. Moore — Q (reserve)",
-    "KaVontae Turpin — Q (IR slot)",
-    "David Bailey — Q (IR slot)",
-    "Jevon Holland — Q (IR slot)"
+    "Ladd McConkey — Q (reserve)",
+    "KaVontae Turpin — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax roster sync 2026-11-11 6:24 AM PT (/workspace/fantrax-raw-2026-11-11-am-normalized.json)",
   "fantraxTeamId": "lreem0zbmsb3ulv5",
   "lineupFlags": [
-    "D.J. Moore — Q (reserve)"
+    "Ladd McConkey — Q (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "D.J. Moore — Q (reserve)",
-    "KaVontae Turpin — Q (IR slot)",
-    "David Bailey — Q (IR slot)",
-    "Jevon Holland — Q (IR slot)"
+    "Ladd McConkey — Q (reserve)",
+    "KaVontae Turpin — Q (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 6:24 AM PT"
 }

@@ -2,8 +2,8 @@
   "teamId": "doubtpfizer",
   "teamName": "Mrs. Doubtpfizer",
   "owner": "Kyle Weberg",
-  "asOf": "2026-11-04 10:18 AM PT",
-  "faabLeft": 72,
+  "asOf": "2026-11-11 9:25 AM PT",
+  "faabLeft": 70,
   "startingQB": "Dak Prescott",
   "roster": {
     "QB": [
@@ -11,11 +11,10 @@
     ],
     "RB": [
       "Christian McCaffrey",
+      "Blake Corum",
       "Chuba Hubbard",
       "Kaelon Black",
-      "Braelon Allen",
-      "Blake Corum",
-      "Seth McGowan"
+      "Braelon Allen"
     ],
     "WR": [
       "Nico Collins",
@@ -23,6 +22,7 @@
       "Rome Odunze"
     ],
     "TE": [
+      "Hunter Henry",
       "Colston Loveland",
       "Kyle Pitts"
     ],
@@ -31,38 +31,34 @@
     ],
     "LB": [
       "Nakobe Dean",
-      "DeMarvion Overshown",
       "Alex Singleton",
       "Sonny Styles"
     ],
     "DB": [
       "Kamari Lassiter",
       "Malik Mustapha",
-      "Kyler Gordon"
+      "Ji'Ayir Brown",
+      "Hunter Wohler"
     ],
     "IR": [
-      "Hunter Henry",
-      "Reed Blankenship"
+      "Reed Blankenship",
+      "DeMarvion Overshown"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Christian McCaffrey — Q (active)",
-    "Hunter Henry — Q (IR slot)",
-    "Reed Blankenship — Q (IR slot)"
+    "Reed Blankenship — Q (IR slot)",
+    "DeMarvion Overshown — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
   "fantraxTeamId": "xg1akj6omsb3ulv5",
-  "lineupFlags": [
-    "Christian McCaffrey — Q (active)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Christian McCaffrey — Q (active)",
-    "Hunter Henry — Q (IR slot)",
-    "Reed Blankenship — Q (IR slot)"
+    "Reed Blankenship — Q (IR slot)",
+    "DeMarvion Overshown — Q (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 9:25 AM PT"
 }

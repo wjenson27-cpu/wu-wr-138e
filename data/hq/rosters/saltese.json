@@ -2,28 +2,28 @@
   "teamId": "saltese",
   "teamName": "Saltese Slamm",
   "owner": "Luke Sahlberg",
-  "asOf": "2026-11-04 10:18 AM PT",
+  "asOf": "2026-11-11 9:25 AM PT",
   "faabLeft": 3,
-  "startingQB": "Matthew Stafford",
+  "startingQB": "C.J. Stroud",
   "roster": {
     "QB": [
-      "Matthew Stafford",
-      "Malik Willis"
+      "C.J. Stroud",
+      "Aaron Rodgers"
     ],
     "RB": [
       "Bhayshul Tuten",
-      "Ashton Jeanty",
+      "Tyler Allgeier",
+      "Rico Dowdle",
       "Aaron Jones",
-      "D'Andre Swift",
       "Kyle Monangai",
-      "Rico Dowdle"
+      "D'Andre Swift"
     ],
     "WR": [
-      "Antonio Williams",
-      "Adonai Mitchell"
+      "Adonai Mitchell",
+      "Antonio Williams"
     ],
     "TE": [
-      "Mason Taylor"
+      "Darnell Washington"
     ],
     "DL": [
       "Boye Mafe"
@@ -31,14 +31,12 @@
     "LB": [
       "Jamien Sherwood",
       "Dre Greenlaw",
-      "Demetrius Knight",
       "Carson Schwesinger",
       "Dee Winters"
     ],
     "DB": [
-      "Ty Okada",
-      "Antoine Winfield",
-      "Jonas Sanker"
+      "Jonas Sanker",
+      "Jaquan Brisker"
     ],
     "IR": [
       "Jonathon Brooks",
@@ -48,33 +46,24 @@
   },
   "notes": "",
   "injuryFlags": [
-    "Matthew Stafford — Q (active)",
-    "Bhayshul Tuten — Q (active)",
     "Kyle Monangai — Q (reserve)",
     "Jonathon Brooks — IR (IR slot)",
     "RJ Harvey — IR (IR slot)",
-    "David Montgomery — Q (IR slot)",
-    "Dee Winters — Q (reserve)"
+    "David Montgomery — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-04 10:18 AM PT (/workspace/fantrax-raw-2026-11-04-postwaiver.json)",
+  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
   "fantraxTeamId": "xdx6ngm2msb3ulv5",
   "lineupFlags": [
-    "Matthew Stafford — Q (active)",
-    "Bhayshul Tuten — Q (active)",
-    "Kyle Monangai — Q (reserve)",
-    "Dee Winters — Q (reserve)"
+    "Kyle Monangai — Q (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Matthew Stafford — Q (active)",
-    "Bhayshul Tuten — Q (active)",
     "Kyle Monangai — Q (reserve)",
     "Jonathon Brooks — IR (IR slot)",
     "RJ Harvey — IR (IR slot)",
-    "David Montgomery — Q (IR slot)",
-    "Dee Winters — Q (reserve)"
+    "David Montgomery — Q (IR slot)"
   ],
-  "updated": "2026-11-04",
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "updated": "2026-11-11",
+  "lastSynced": "2026-11-11 9:25 AM PT"
 }

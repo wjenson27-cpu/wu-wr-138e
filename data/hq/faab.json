@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-04",
-  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-11-04 10:18 AM PT roster sync.",
+  "updated": "2026-11-11",
+  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-11-11 ~9:25 AM PT (after Week 10 waivers).",
   "startingBudget": 115,
-  "note": "Week 9 FAAB clear (Wed Nov 4, 9:00 AM PT) — spend by team: Eagle Ridge Eddie's $9 (Josh Downs $7, Devin Singletary $2); Valley Old Goats $4 (Mike Gesicki $4); Mrs. Doubtpfizer $3 (Malik Mustapha $3); Saltese Slamm $2 (Adonai Mitchell $1, Malik Willis $1). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 10:15 AM PT. Prior: Week 8 FAAB clear (Wed Oct 28, 9:00 AM PT) — spend by team: Substation $21 (KC Concepcion $21); The Hypersecretors $13 (Jacory Croskey-Merritt $9, Micah Parsons $4); Mrs. Doubtpfizer $10 (Kyler Gordon $5, Kaelon Black $3, Nohl Williams $2); Saltese Slamm $6 (Dee Winters $4, Colby Parkinson $1, Ty Okada $1); Little Ass Boys $5 (Greg Dulcich $5); Eagleridge Eddie's $4 (Cole Bishop $4); Pocket Agents $3 (Josh Hines-Allen $3); Newman Lake $3 (Grant Delpit $3). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 9:44 AM PT.",
+  "note": "Week 10 FAAB clear (Wed Nov 11, 9:00 AM PT) — spend by team: Valley Old Goats $42 (Tank Dell $26, Corey Kiner $16); Pocket Agents $16 (Troy Dye $8, Tony Adams $8); Ultron $7 (DeMarcco Hellams $6, Barion Brown $1); Little Ass Boys $6 (Marcus Jones $6); The Hypersecretors $2 (Bryce Young $2); Mrs. Doubtpfizer $2 (Hunter Wohler $2). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at ~9:25 AM PT; all 14 reconcile exactly. Prior: Week 9 FAAB clear (Wed Nov 4, 9:00 AM PT) — spend by team: Eagle Ridge Eddie's $9 (Josh Downs $7, Devin Singletary $2); Valley Old Goats $4 (Mike Gesicki $4); Mrs. Doubtpfizer $3 (Malik Mustapha $3); Saltese Slamm $2 (Adonai Mitchell $1, Malik Willis $1). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 10:15 AM PT. Prior: Week 8 FAAB clear (Wed Oct 28, 9:00 AM PT) — spend by team: Substation $21 (KC Concepcion $21); The Hypersecretors $13 (Jacory Croskey-Merritt $9, Micah Parsons $4); Mrs. Doubtpfizer $10 (Kyler Gordon $5, Kaelon Black $3, Nohl Williams $2); Saltese Slamm $6 (Dee Winters $4, Colby Parkinson $1, Ty Okada $1); Little Ass Boys $5 (Greg Dulcich $5); Eagleridge Eddie's $4 (Cole Bishop $4); Pocket Agents $3 (Josh Hines-Allen $3); Newman Lake $3 (Grant Delpit $3). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 9:44 AM PT.",
   "excludeZeroBids": true,
   "teamBalances": [
     {
@@ -50,12 +50,12 @@
       "owner": "Jesse Nicholson",
       "abbrev": "LAB",
       "starting": 115,
-      "remaining": 56,
-      "spentClaims": 59,
+      "remaining": 50,
+      "spentClaims": 65,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 59,
-      "remainingKnown": 56
+      "spentKnown": 65,
+      "remainingKnown": 50
     },
     {
       "id": "doubtpfizer",
@@ -63,12 +63,12 @@
       "owner": "Kyle Weberg",
       "abbrev": "MDP",
       "starting": 115,
-      "remaining": 72,
-      "spentClaims": 43,
+      "remaining": 70,
+      "spentClaims": 45,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 43,
-      "remainingKnown": 72
+      "spentKnown": 45,
+      "remainingKnown": 70
     },
     {
       "id": "eddies",
@@ -115,12 +115,12 @@
       "owner": "Jacob Crisp",
       "abbrev": "HYP",
       "starting": 115,
-      "remaining": 12,
-      "spentClaims": 113,
+      "remaining": 10,
+      "spentClaims": 115,
       "tradeOut": 0,
       "tradeIn": 10,
-      "spentKnown": 113,
-      "remainingKnown": 12
+      "spentKnown": 115,
+      "remainingKnown": 10
     },
     {
       "id": "morningside",
@@ -141,12 +141,12 @@
       "owner": "Brian Aga",
       "abbrev": "ULT",
       "starting": 115,
-      "remaining": 7,
-      "spentClaims": 110,
+      "remaining": 0,
+      "spentClaims": 117,
       "tradeOut": 50,
       "tradeIn": 52,
-      "spentKnown": 160,
-      "remainingKnown": 7
+      "spentKnown": 167,
+      "remainingKnown": 0
     },
     {
       "id": "goats",
@@ -154,12 +154,12 @@
       "owner": "Mike Heff",
       "abbrev": "VOG",
       "starting": 100,
-      "remaining": 60,
-      "spentClaims": 40,
+      "remaining": 18,
+      "spentClaims": 82,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 40,
-      "remainingKnown": 60,
+      "spentKnown": 82,
+      "remainingKnown": 18,
       "note": " | Started at $100: only team that did not pay dues by Aug 1 (no +$15 bonus), per Bill Oct 23 2026"
     },
     {
@@ -168,12 +168,12 @@
       "owner": "Kellen Olson",
       "abbrev": "PKT",
       "starting": 115,
-      "remaining": 85,
-      "spentClaims": 24,
+      "remaining": 69,
+      "spentClaims": 40,
       "tradeOut": 10,
       "tradeIn": 14,
-      "spentKnown": 34,
-      "remainingKnown": 85
+      "spentKnown": 50,
+      "remainingKnown": 69
     },
     {
       "id": "substation",
@@ -190,6 +190,123 @@
     }
   ],
   "claims": [
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "Barion Brown",
+      "amount": 1,
+      "team": "Ultron",
+      "kind": "claim",
+      "teamId": "ultron",
+      "pos": "WR",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "DeMarcco Hellams",
+      "amount": 6,
+      "team": "Ultron",
+      "kind": "claim",
+      "teamId": "ultron",
+      "pos": "DB",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "Troy Dye",
+      "amount": 8,
+      "team": "Pocket Agents",
+      "kind": "claim",
+      "teamId": "pocket",
+      "pos": "LB",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "Bryce Young",
+      "amount": 2,
+      "team": "The Hypersecretors",
+      "kind": "claim",
+      "teamId": "hyper",
+      "pos": "QB",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "Tony Adams",
+      "amount": 8,
+      "team": "Pocket Agents",
+      "kind": "claim",
+      "teamId": "pocket",
+      "pos": "DB",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "Corey Kiner",
+      "amount": 16,
+      "team": "Valley Old Goats",
+      "kind": "claim",
+      "teamId": "goats",
+      "pos": "RB",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "Marcus Jones",
+      "amount": 6,
+      "team": "Little Ass Boys",
+      "kind": "claim",
+      "teamId": "lab",
+      "pos": "DB",
+      "dropped": "Jack Gibbens",
+      "note": "Week 10 claim; dropped Jack Gibbens",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "Tank Dell",
+      "amount": 26,
+      "team": "Valley Old Goats",
+      "kind": "claim",
+      "teamId": "goats",
+      "pos": "WR",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:00 AM PT",
+      "player": "Hunter Wohler",
+      "amount": 2,
+      "team": "Mrs. Doubtpfizer",
+      "kind": "claim",
+      "teamId": "doubtpfizer",
+      "pos": "DB",
+      "dropped": "Seth McGowan",
+      "note": "Week 10 claim; dropped Seth McGowan",
+      "attribution": "fantrax-waivers-2026-11-11"
+    },
     {
       "date": "2026-11-04",
       "time": "9:00 AM PDT",
@@ -2326,5 +2443,5 @@
     }
   ],
   "incomplete": false,
-  "lastSynced": "2026-11-04 10:18 AM PT"
+  "lastSynced": "2026-11-11 9:25 AM PT"
 }

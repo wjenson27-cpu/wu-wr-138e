@@ -1,352 +1,86 @@
 {
-  "updated": "2026-11-03",
-  "asOf": "2026-11-03",
-  "week": 8,
+  "updated": "2026-11-10",
+  "asOf": "2026-11-10",
+  "week": 9,
   "season": 2026,
   "weekStatus": "final",
   "complete": true,
   "source": "Fantrax",
-  "note": "Week 8 FINAL from Fantrax livescoring scrape Tue Nov 3 (MNF complete). All 7 games locked. Kitty Newman Lake Sleep Paralysis Demons 317.5; survivor-low Substation 203.5 (alive pool).",
+  "note": "Week 9 FINAL from Fantrax standings scrape Tue Nov 10 approximately 1:11 PM PT (MNF complete; all 14 scores recounted vs awards.json). Kitty The Hypersecretors 296.5; survivor-low Little Ass Boys 214.5 (alive pool).",
   "kitty": {
-    "team": "SPD's",
-    "teamFull": "Newman Lake Sleep Paralysis Demons",
-    "teamId": "newman",
-    "score": 317.5
+    "team": "Hyper",
+    "teamFull": "The Hypersecretors",
+    "teamId": "hyper",
+    "score": 296.5
   },
   "survivorLowest": {
-    "team": "Substation",
-    "teamId": "substation",
-    "score": 203.5
+    "team": "Little Ass Boys",
+    "teamId": "lab",
+    "score": 214.5
   },
   "matchups": [
     {
-      "home": "Indian Trail Slumlords",
-      "away": "Mrs. Doubtpfizer",
-      "homeScore": 305,
-      "awayScore": 235.5,
+      "home": "Eagle Ridge Eddies",
+      "away": "Towner Top Aga Bottom",
+      "homeScore": 276,
+      "awayScore": 239.5,
+      "winner": "Eagle Ridge Eddies",
+      "status": "final",
+      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+    },
+    {
+      "home": "Morningside Muff Divers",
+      "away": "Drummond Dongers",
+      "homeScore": 231.5,
+      "awayScore": 253.5,
+      "winner": "Drummond Dongers",
+      "status": "final",
+      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+    },
+    {
+      "home": "Saltese Slamm",
+      "away": "Indian Trail Slumlords",
+      "homeScore": 188.5,
+      "awayScore": 271.5,
       "winner": "Indian Trail Slumlords",
       "status": "final",
-      "topScorers": [
-        {
-          "team": "Indian Trail Slumlords",
-          "player": "Harold Fannin",
-          "pos": "TE",
-          "pts": 36.0
-        },
-        {
-          "team": "Indian Trail Slumlords",
-          "player": "Jahmyr Gibbs",
-          "pos": "RWT",
-          "pts": 33.0
-        },
-        {
-          "team": "Indian Trail Slumlords",
-          "player": "Anthony Hill",
-          "pos": "LB",
-          "pts": 30.0
-        },
-        {
-          "team": "Mrs. Doubtpfizer",
-          "player": "Alex Singleton",
-          "pos": "ID",
-          "pts": 39.0
-        },
-        {
-          "team": "Mrs. Doubtpfizer",
-          "player": "Braelon Allen",
-          "pos": "RWT",
-          "pts": 31.0
-        },
-        {
-          "team": "Mrs. Doubtpfizer",
-          "player": "Chuba Hubbard",
-          "pos": "RB",
-          "pts": 27.0
-        }
-      ],
-      "notes": "Fantrax Week 8 final · livescoring scrape Tue Nov 3 ~9:05 AM PT (all games F; starter sums verified)."
+      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+    },
+    {
+      "home": "The Hypersecretors",
+      "away": "Newman Lake Sleep Paralysis Demons",
+      "homeScore": 296.5,
+      "awayScore": 252,
+      "winner": "The Hypersecretors",
+      "status": "final",
+      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
     },
     {
       "home": "Ultron",
-      "away": "Eagle Ridge Eddies",
-      "homeScore": 227,
-      "awayScore": 269,
-      "winner": "Eagle Ridge Eddies",
-      "status": "final",
-      "topScorers": [
-        {
-          "team": "Ultron",
-          "player": "Michael Wilson",
-          "pos": "RWT",
-          "pts": 32.0
-        },
-        {
-          "team": "Ultron",
-          "player": "Foyesade Oluokun",
-          "pos": "LB",
-          "pts": 31.0
-        },
-        {
-          "team": "Ultron",
-          "player": "Josh Allen",
-          "pos": "QB",
-          "pts": 30.0
-        },
-        {
-          "team": "Eagle Ridge Eddies",
-          "player": "Brock Bowers",
-          "pos": "TE",
-          "pts": 34.0
-        },
-        {
-          "team": "Eagle Ridge Eddies",
-          "player": "Chimere Dike",
-          "pos": "RWT",
-          "pts": 34.0
-        },
-        {
-          "team": "Eagle Ridge Eddies",
-          "player": "George Karlaftis",
-          "pos": "DL",
-          "pts": 30.0
-        }
-      ],
-      "notes": "Fantrax Week 8 final · livescoring scrape Tue Nov 3 ~9:05 AM PT (all games F; starter sums verified)."
-    },
-    {
-      "home": "Towner Top Aga Bottom",
-      "away": "Morningside Muff Divers",
-      "homeScore": 213.5,
-      "awayScore": 172.5,
-      "winner": "Towner Top Aga Bottom",
-      "status": "final",
-      "topScorers": [
-        {
-          "team": "Towner Top Aga Bottom",
-          "player": "Patrick Queen",
-          "pos": "ID",
-          "pts": 42.0
-        },
-        {
-          "team": "Towner Top Aga Bottom",
-          "player": "Harold Perkins",
-          "pos": "ID",
-          "pts": 26.0
-        },
-        {
-          "team": "Towner Top Aga Bottom",
-          "player": "Christian Watson",
-          "pos": "WR",
-          "pts": 22.0
-        },
-        {
-          "team": "Morningside Muff Divers",
-          "player": "Lukas Van Ness",
-          "pos": "DL",
-          "pts": 27.0
-        },
-        {
-          "team": "Morningside Muff Divers",
-          "player": "Malaki Starks",
-          "pos": "DB",
-          "pts": 25.0
-        },
-        {
-          "team": "Morningside Muff Divers",
-          "player": "Jessie Bates",
-          "pos": "DB",
-          "pts": 17.0
-        }
-      ],
-      "notes": "Fantrax Week 8 final · livescoring scrape Tue Nov 3 ~9:05 AM PT (all games F; starter sums verified)."
-    },
-    {
-      "home": "Substation",
-      "away": "The Hypersecretors",
-      "homeScore": 203.5,
-      "awayScore": 257,
-      "winner": "The Hypersecretors",
-      "status": "final",
-      "topScorers": [
-        {
-          "team": "Substation",
-          "player": "Emmett Johnson",
-          "pos": "RB",
-          "pts": 41.0
-        },
-        {
-          "team": "Substation",
-          "player": "Ja'Marr Chase",
-          "pos": "WR",
-          "pts": 39.0
-        },
-        {
-          "team": "Substation",
-          "player": "Tucker Kraft",
-          "pos": "TE",
-          "pts": 22.0
-        },
-        {
-          "team": "The Hypersecretors",
-          "player": "Kirk Cousins",
-          "pos": "QB",
-          "pts": 33.0
-        },
-        {
-          "team": "The Hypersecretors",
-          "player": "Dexter Lawrence",
-          "pos": "DL",
-          "pts": 30.0
-        },
-        {
-          "team": "The Hypersecretors",
-          "player": "Jeremy Chinn",
-          "pos": "DB",
-          "pts": 29.0
-        }
-      ],
-      "notes": "Fantrax Week 8 final · livescoring scrape Tue Nov 3 ~9:05 AM PT (all games F; starter sums verified)."
-    },
-    {
-      "home": "Newman Lake Sleep Paralysis Demons",
       "away": "Pocket Agents",
-      "homeScore": 317.5,
-      "awayScore": 268,
-      "winner": "Newman Lake Sleep Paralysis Demons",
+      "homeScore": 261.5,
+      "awayScore": 237,
+      "winner": "Ultron",
       "status": "final",
-      "topScorers": [
-        {
-          "team": "Newman Lake Sleep Paralysis Demons",
-          "player": "Tee Higgins",
-          "pos": "RWT",
-          "pts": 43.0
-        },
-        {
-          "team": "Newman Lake Sleep Paralysis Demons",
-          "player": "Ty'Ron Hopper",
-          "pos": "LB",
-          "pts": 40.0
-        },
-        {
-          "team": "Newman Lake Sleep Paralysis Demons",
-          "player": "Eric Wilson",
-          "pos": "ID",
-          "pts": 40.0
-        },
-        {
-          "team": "Pocket Agents",
-          "player": "Amani Hooker",
-          "pos": "ID",
-          "pts": 42.0
-        },
-        {
-          "team": "Pocket Agents",
-          "player": "Dane Belton",
-          "pos": "DB",
-          "pts": 36.0
-        },
-        {
-          "team": "Pocket Agents",
-          "player": "Ernest Jones",
-          "pos": "LB",
-          "pts": 27.0
-        }
-      ],
-      "notes": "Fantrax Week 8 final · livescoring scrape Tue Nov 3 ~9:05 AM PT (all games F; starter sums verified)."
+      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
     },
     {
-      "home": "Drummond Dongers",
-      "away": "Saltese Slamm",
-      "homeScore": 268,
-      "awayScore": 232.5,
-      "winner": "Drummond Dongers",
+      "home": "Little Ass Boys",
+      "away": "Substation",
+      "homeScore": 214.5,
+      "awayScore": 280.5,
+      "winner": "Substation",
       "status": "final",
-      "topScorers": [
-        {
-          "team": "Drummond Dongers",
-          "player": "Joe Burrow",
-          "pos": "QB",
-          "pts": 58.0
-        },
-        {
-          "team": "Drummond Dongers",
-          "player": "Tony Pollard",
-          "pos": "RB",
-          "pts": 43.0
-        },
-        {
-          "team": "Drummond Dongers",
-          "player": "Jaxon Smith-Njigba",
-          "pos": "RWT",
-          "pts": 29.0
-        },
-        {
-          "team": "Saltese Slamm",
-          "player": "Bhayshul Tuten",
-          "pos": "RB",
-          "pts": 37.0
-        },
-        {
-          "team": "Saltese Slamm",
-          "player": "D'Andre Swift",
-          "pos": "RWT",
-          "pts": 30.0
-        },
-        {
-          "team": "Saltese Slamm",
-          "player": "Jamien Sherwood",
-          "pos": "LB",
-          "pts": 25.0
-        }
-      ],
-      "notes": "Fantrax Week 8 final · livescoring scrape Tue Nov 3 ~9:05 AM PT (all games F; starter sums verified)."
+      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
     },
     {
-      "home": "Valley Old Goats",
-      "away": "Little Ass Boys",
-      "homeScore": 253,
-      "awayScore": 245,
-      "winner": "Valley Old Goats",
+      "home": "Mrs. Doubtpfizer",
+      "away": "Valley Old Goats",
+      "homeScore": 236,
+      "awayScore": 195.5,
+      "winner": "Mrs. Doubtpfizer",
       "status": "final",
-      "topScorers": [
-        {
-          "team": "Valley Old Goats",
-          "player": "Patrick Mahomes",
-          "pos": "QB",
-          "pts": 42.0
-        },
-        {
-          "team": "Valley Old Goats",
-          "player": "Bucky Irving",
-          "pos": "RWT",
-          "pts": 29.0
-        },
-        {
-          "team": "Valley Old Goats",
-          "player": "T.J. Watt",
-          "pos": "DL",
-          "pts": 29.0
-        },
-        {
-          "team": "Little Ass Boys",
-          "player": "Roquan Smith",
-          "pos": "LB",
-          "pts": 33.0
-        },
-        {
-          "team": "Little Ass Boys",
-          "player": "Jacob Parrish",
-          "pos": "DB",
-          "pts": 31.0
-        },
-        {
-          "team": "Little Ass Boys",
-          "player": "Jaylen Warren",
-          "pos": "RWT",
-          "pts": 29.0
-        }
-      ],
-      "notes": "Fantrax Week 8 final · livescoring scrape Tue Nov 3 ~9:05 AM PT (all games F; starter sums verified)."
+      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
     }
   ]
 }
