@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-11T15:04:00-08:00",
-  "lastUpdated": "2026-11-11T15:04:00-08:00",
+  "asOf": "2026-11-11T15:05:00-08:00",
+  "lastUpdated": "2026-11-11T15:05:00-08:00",
   "season": 2026,
   "week": 10,
   "opponent": {
@@ -10,7 +10,7 @@
     "name": "Little Ass Boys"
   },
   "freshness": {
-    "plan": "2026-11-11T15:04:00-08:00",
+    "plan": "2026-11-11T15:05:00-08:00",
     "roster": "2026-11-11T15:02:00-08:00",
     "scores": "2026-11-11T15:02:00-08:00",
     "waivers": "2026-11-11T15:02:00-08:00",
@@ -167,7 +167,7 @@
       "pos": "DB",
       "nflTeam": "BUF",
       "verdict": "START",
-      "reason": "14.88 / 12.0, 100% W9. @NYJ (15th).",
+      "reason": "14.88 / 12.0, 100% W9. @NYJ (15th). Swap to Kyle Hamilton (vs LAC 32nd, MNF; 21.11 / 14.33) if he is activated from IR and clears.",
       "injury": "",
       "practice": "n/a"
     },
@@ -223,6 +223,12 @@
     }
   ],
   "injuryWatch": [
+    {
+      "player": "Kyle Hamilton",
+      "tag": "Q (IR slot)",
+      "practice": "Practiced Wed",
+      "note": "Hip. Practiced Wednesday (Jamison Hensley via RapSheet); Minter hopes he won't miss time. MNF vs LAC."
+    },
     {
       "player": "Garrett Wilson",
       "tag": "Q (IR slot)",
@@ -489,9 +495,19 @@
       "player": "Cole Bishop",
       "nflTeam": "BUF",
       "note": "100% W9; Hooker arrival may free him to roam (Woellert)."
+    },
+    {
+      "player": "Kyle Hamilton",
+      "nflTeam": "BAL",
+      "note": "Hip; practiced Wed. 21.11 FP/G."
     }
   ],
   "news": [
+    {
+      "source": "Jamison Hensley (X, via RapSheet)",
+      "time": "2026-11-11T09:59:00-08:00",
+      "text": "Kyle Hamilton is practicing Wednesday. https://x.com/RapSheet/status/2120577256036728909"
+    },
     {
       "source": "Jamison Hensley (X, via RapSheet)",
       "time": "2026-11-11T09:59:00-08:00",
