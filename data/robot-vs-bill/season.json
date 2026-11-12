@@ -9,14 +9,14 @@
   "firstWeek": 9,
   "record": {
     "wins": 0,
-    "losses": 0,
+    "losses": 1,
     "ties": 0,
-    "label": "0-0-0"
+    "label": "0-1-0"
   },
   "points": {
-    "robot": 0.0,
-    "eddies": 0.0,
-    "margin": 0.0
+    "robot": 268.0,
+    "eddies": 276.0,
+    "margin": -8.0
   },
   "weeks": [
     {
@@ -27,15 +27,133 @@
         "end": "2026-11-09",
         "label": "Nov 5–9"
       },
-      "status": "pending",
+      "status": "final",
       "locked": true,
       "robotLockedAt": "2026-11-05T14:10:10-08:00",
-      "result": null,
-      "winner": null,
-      "robotPoints": null,
-      "eddiesPoints": null,
-      "margin": null,
-      "decisions": []
+      "result": "L",
+      "winner": "Eddies",
+      "robotPoints": 268.0,
+      "eddiesPoints": 276.0,
+      "margin": -8.0,
+      "decisions": [
+        {
+          "slot": "WR",
+          "index": 2,
+          "robotPlayer": "Jalen Coker",
+          "robotPos": "WR",
+          "robotTeam": "CAR",
+          "robotPoints": 6.0,
+          "eddiesPlayer": "Josh Downs",
+          "eddiesPos": "WR",
+          "eddiesTeam": "IND",
+          "eddiesPoints": 5.0,
+          "swing": 1.0
+        },
+        {
+          "slot": "FLEX",
+          "index": 4,
+          "robotPlayer": "George Pickens",
+          "robotPos": "WR",
+          "robotTeam": "DAL",
+          "robotPoints": 0.0,
+          "eddiesPlayer": "Zach Charbonnet",
+          "eddiesPos": "RB",
+          "eddiesTeam": "SEA",
+          "eddiesPoints": 10.0,
+          "swing": -10.0
+        },
+        {
+          "slot": "FLEX",
+          "index": 5,
+          "robotPlayer": "Josh Downs",
+          "robotPos": "WR",
+          "robotTeam": "IND",
+          "robotPoints": 5.0,
+          "eddiesPlayer": "Devin Singletary",
+          "eddiesPos": "RB",
+          "eddiesTeam": "NYG",
+          "eddiesPoints": 8.0,
+          "swing": -3.0
+        },
+        {
+          "slot": "FLEX",
+          "index": 6,
+          "robotPlayer": "Devin Singletary",
+          "robotPos": "RB",
+          "robotTeam": "NYG",
+          "robotPoints": 8.0,
+          "eddiesPlayer": "Jordyn Tyson",
+          "eddiesPos": "WR",
+          "eddiesTeam": "NO",
+          "eddiesPoints": 4.0,
+          "swing": 4.0
+        },
+        {
+          "slot": "DB",
+          "index": 9,
+          "robotPlayer": "Evan Williams",
+          "robotPos": "DB",
+          "robotTeam": "GB",
+          "robotPoints": 21.0,
+          "eddiesPlayer": "Quentin Lake",
+          "eddiesPos": "DB",
+          "eddiesTeam": "LAR",
+          "eddiesPoints": 16.0,
+          "swing": 5.0
+        },
+        {
+          "slot": "DB",
+          "index": 10,
+          "robotPlayer": "Quentin Lake",
+          "robotPos": "DB",
+          "robotTeam": "LAR",
+          "robotPoints": 16.0,
+          "eddiesPlayer": "Evan Williams",
+          "eddiesPos": "DB",
+          "eddiesTeam": "GB",
+          "eddiesPoints": 21.0,
+          "swing": -5.0
+        },
+        {
+          "slot": "IDP",
+          "index": 11,
+          "robotPlayer": "Jordyn Brooks",
+          "robotPos": "LB",
+          "robotTeam": "MIA",
+          "robotPoints": 28.0,
+          "eddiesPlayer": "Cole Bishop",
+          "eddiesPos": "DB",
+          "eddiesTeam": "BUF",
+          "eddiesPoints": 7.0,
+          "swing": 21.0
+        },
+        {
+          "slot": "IDP",
+          "index": 12,
+          "robotPlayer": "Frankie Luvu",
+          "robotPos": "LB",
+          "robotTeam": "WAS",
+          "robotPoints": 47.0,
+          "eddiesPlayer": "Jordyn Brooks",
+          "eddiesPos": "LB",
+          "eddiesTeam": "MIA",
+          "eddiesPoints": 28.0,
+          "swing": 19.0
+        },
+        {
+          "slot": "IDP",
+          "index": 13,
+          "robotPlayer": "Cole Bishop",
+          "robotPos": "DB",
+          "robotTeam": "BUF",
+          "robotPoints": 7.0,
+          "eddiesPlayer": "Frankie Luvu",
+          "eddiesPos": "LB",
+          "eddiesTeam": "WAS",
+          "eddiesPoints": 47.0,
+          "swing": -40.0
+        }
+      ]
     }
   ]
 }
