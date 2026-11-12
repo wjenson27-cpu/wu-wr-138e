@@ -1,8 +1,24 @@
 {
   "sample": false,
-  "asOf": "2026-11-11T15:02:00-08:00",
+  "asOf": "2026-11-12T15:00:00-08:00",
   "source": "Fantrax",
   "players": [
+    {
+      "player": "Edgerrin Cooper",
+      "pos": "LB",
+      "team": "GB",
+      "fpg": 28.75,
+      "last3Fpg": 0.0,
+      "rosteredPct": 65.0
+    },
+    {
+      "player": "Tremaine Edmunds",
+      "pos": "LB",
+      "team": "NYG",
+      "fpg": 22.67,
+      "last3Fpg": 0.0,
+      "rosteredPct": 70.0
+    },
     {
       "player": "Kyler Gordon",
       "pos": "DB",
@@ -117,7 +133,7 @@
     },
     {
       "player": "Tuli Tuipulotu",
-      "pos": "DL",
+      "pos": "DL,LB,ID",
       "team": "LAC",
       "fpg": 16.0,
       "last3Fpg": 10.5,
@@ -156,14 +172,6 @@
       "rosteredPct": 32.0
     },
     {
-      "player": "Ronnie Hickman",
-      "pos": "DB",
-      "team": "CLE",
-      "fpg": 15.33,
-      "last3Fpg": 20.0,
-      "rosteredPct": 43.0
-    },
-    {
       "player": "Michael Penix Jr.",
       "pos": "QB",
       "team": "ATL",
@@ -189,7 +197,7 @@
     },
     {
       "player": "Boye Mafe",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "CIN",
       "fpg": 15.0,
       "last3Fpg": 17.0,
@@ -213,7 +221,7 @@
     },
     {
       "player": "Josh Uche",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "MIA",
       "fpg": 14.75,
       "last3Fpg": 19.67,
@@ -629,7 +637,7 @@
     },
     {
       "player": "D.J. Wonnum",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "DET",
       "fpg": 12.14,
       "last3Fpg": 6.0,
@@ -661,7 +669,7 @@
     },
     {
       "player": "Nick Herbig",
-      "pos": "DL",
+      "pos": "DL,LB,ID",
       "team": "PIT",
       "fpg": 12.0,
       "last3Fpg": 9.0,
@@ -749,7 +757,7 @@
     },
     {
       "player": "K'Lavon Chaisson",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "WAS",
       "fpg": 11.38,
       "last3Fpg": 15.0,
@@ -765,7 +773,7 @@
     },
     {
       "player": "Kingsley Enagbare",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "NYJ",
       "fpg": 11.25,
       "last3Fpg": 9.67,
@@ -789,7 +797,7 @@
     },
     {
       "player": "Nik Bonitto",
-      "pos": "DL",
+      "pos": "DL,LB,ID",
       "team": "DEN",
       "fpg": 11.11,
       "last3Fpg": 10.0,
@@ -853,7 +861,7 @@
     },
     {
       "player": "YaYa Diaby",
-      "pos": "DL",
+      "pos": "DL,LB,ID",
       "team": "TB",
       "fpg": 10.88,
       "last3Fpg": 18.0,
@@ -877,7 +885,7 @@
     },
     {
       "player": "Nolan Smith",
-      "pos": "DL",
+      "pos": "DL,LB,ID",
       "team": "PHI",
       "fpg": 10.75,
       "last3Fpg": 14.5,
@@ -893,7 +901,7 @@
     },
     {
       "player": "Gabe Jacas",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "NE",
       "fpg": 10.67,
       "last3Fpg": 8.67,
@@ -1029,19 +1037,11 @@
     },
     {
       "player": "Akheem Mesidor",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "LAC",
       "fpg": 10.25,
       "last3Fpg": 6.0,
       "rosteredPct": 53.0
-    },
-    {
-      "player": "A.J. Haulcy",
-      "pos": "DB",
-      "team": "IND",
-      "fpg": 10.25,
-      "last3Fpg": 12.5,
-      "rosteredPct": 47.0
     },
     {
       "player": "Dylan Laube",
@@ -1061,7 +1061,7 @@
     },
     {
       "player": "Donovan Ezeiruaku",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "DAL",
       "fpg": 10.0,
       "last3Fpg": 9.67,
@@ -1109,7 +1109,7 @@
     },
     {
       "player": "Jaishawn Barham",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "DAL",
       "fpg": 9.89,
       "last3Fpg": 1.67,
@@ -1189,7 +1189,7 @@
     },
     {
       "player": "Demarcus Lawrence",
-      "pos": "DL",
+      "pos": "DL,LB",
       "team": "SEA",
       "fpg": 9.33,
       "last3Fpg": 12.33,
@@ -1261,7 +1261,7 @@
     },
     {
       "player": "Josh Sweat",
-      "pos": "DL",
+      "pos": "DL,LB,ID",
       "team": "ARI",
       "fpg": 8.89,
       "last3Fpg": 9.33,
@@ -1634,14 +1634,6 @@
       "fpg": 5.0,
       "last3Fpg": 8.67,
       "rosteredPct": 13.0
-    },
-    {
-      "player": "Kaleb Johnson",
-      "pos": "RB",
-      "team": "GB",
-      "fpg": 4.29,
-      "last3Fpg": 14.0,
-      "rosteredPct": 26.0
     },
     {
       "player": "Sione Vaki",

@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-10T15:20:00-08:00",
+  "asOf": "2026-11-12T15:10:00-08:00",
   "week": 9,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-9-green-dot-and-full-time-linebackers-idp-fantasy-football",
@@ -87,7 +87,7 @@
         "Alex Singleton",
         "Justin Strnad"
       ],
-      "notes": "W9: Singleton 100% with dot; Strnad 72%->89%. Nov 10: DEN acquired Daiyan Henley from LAC; Woellert: bad for Strnad, not great for Henley."
+      "notes": "W9: Singleton 100% with dot; Strnad 72%->89%. Nov 11: Henley trade voided (failed physical), so Strnad's role is safe again."
     },
     {
       "team": "DET",
@@ -143,11 +143,9 @@
     },
     {
       "team": "LAC",
-      "greenDot": "Troy Dye",
-      "fullTime": [
-        "Troy Dye"
-      ],
-      "notes": "Nov 10: Henley traded to DEN. Woellert (X, 12:17 PM PT): 'I think Dye gets the dot'; Dye has worn it when on the field for Henley. Bad for Strnad. Projected, confirm after W10."
+      "greenDot": null,
+      "fullTime": [],
+      "notes": "Nov 11 late: DEN called off the Henley trade (failed physical); Henley stays LAC. Woellert (X, Nov 12 2:52 AM PT): 'screwed a bunch of IDP owners who dropped Henley.' Dye had the dot W9; dot owner for W10 unsettled until Henley's status is clear."
     },
     {
       "team": "LAR",
@@ -179,7 +177,7 @@
       "team": "MIN",
       "greenDot": null,
       "fullTime": [],
-      "notes": "W9 (MNF): Woellert updates after MNF."
+      "notes": "Nov 12: Cashman (concussion) unlikely vs GB (Wolfson via SKOR North). Woellert (X, 2:27 PM PT): 'Add Ivan Pace from waivers'; Eric Wilson gets priority if available."
     },
     {
       "team": "NE",
