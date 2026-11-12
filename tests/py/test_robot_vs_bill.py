@@ -5,6 +5,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -58,6 +59,61 @@ def season(data):
 
 def scrub(text):
     return text.replace("robot-vs-bill", "FEATURE").replace("score_robot_vs_bill", "SCORE")
+
+
+def round1(value):
+    return float(Decimal(str(value)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
+
+
+def published_weeks():
+    folder = ROOT / "data" / "robot-vs-bill"
+    docs = []
+    for path in sorted(folder.glob("w[0-9][0-9].json")):
+        docs.append((path.name, json.loads(path.read_text())))
+    docs.sort(key=lambda item: item[1]["week"])
+    tally = json.loads((folder / "season.json").read_text())
+    return tally, docs
+
+
+def assert_week_points(test, name, doc):
+    """A week is pending with null points, or final with numeric points that add up."""
+    rows = list(doc.get("robot") or []) + list(doc.get("actual") or [])
+    if doc["status"] == "pending":
+        for row in rows:
+            test.assertIsNone(row["points"], name)
+        test.assertIsNone(doc["totals"]["robot"], name)
+        test.assertIsNone(doc["totals"]["eddies"], name)
+        test.assertIsNone(doc["margin"], name)
+        test.assertIsNone(doc["result"], name)
+        test.assertIsNone(doc["winner"], name)
+        for decision in doc.get("decisions") or []:
+            test.assertIsNone(decision["swing"], name)
+        return
+    test.assertEqual(doc["status"], "final", name)
+    test.assertEqual(len(doc["robot"]), 14, name)
+    test.assertEqual(len(doc["actual"]), 14, name)
+    test.assertIsInstance(doc.get("robotLockedAt"), str, name)
+    for row in rows:
+        test.assertIsInstance(row["points"], (int, float), name)
+        test.assertNotIsInstance(row["points"], bool, name)
+    robot_total = round1(sum(row["points"] for row in doc["robot"]))
+    eddies_total = round1(sum(row["points"] for row in doc["actual"]))
+    test.assertEqual(doc["totals"]["robot"], robot_total, name)
+    test.assertEqual(doc["totals"]["eddies"], eddies_total, name)
+    test.assertEqual(doc["margin"], round1(robot_total - eddies_total), name)
+    if doc["margin"] > 0:
+        test.assertEqual((doc["result"], doc["winner"]), ("W", "Robot"), name)
+    elif doc["margin"] < 0:
+        test.assertEqual((doc["result"], doc["winner"]), ("L", "Eddies"), name)
+    else:
+        test.assertEqual((doc["result"], doc["winner"]), ("T", "tie"), name)
+    swing = Decimal("0")
+    for decision in doc["decisions"]:
+        test.assertIsInstance(decision["swing"], (int, float), name)
+        test.assertNotIsInstance(decision["swing"], bool, name)
+        test.assertEqual(decision["swing"], round1(decision["robotPoints"] - decision["eddiesPoints"]), name)
+        swing += Decimal(str(decision["swing"]))
+    test.assertEqual(round1(swing), doc["margin"], name)
 
 
 class Lock(unittest.TestCase):
@@ -249,7 +305,12 @@ class Tally(unittest.TestCase):
 
 class Privacy(unittest.TestCase):
     def test_public_files_do_not_name_a_person_or_carry_league_money(self):
-        for rel in PUBLIC:
+        files = list(PUBLIC)
+        for path in sorted((ROOT / "data" / "robot-vs-bill").glob("*.json")):
+            rel = path.relative_to(ROOT).as_posix()
+            if rel not in files:
+                files.append(rel)
+        for rel in files:
             text = (ROOT / rel).read_text()
             cleaned = scrub(text)
             self.assertIsNone(
@@ -286,20 +347,55 @@ class Privacy(unittest.TestCase):
         self.assertIn(">Eddies<", script)
         home = (ROOT / "index.html").read_text()
         self.assertNotIn("robot-vs-bill.html", home)
-        live = json.loads((ROOT / "data" / "robot-vs-bill" / "w09.json").read_text())
-        self.assertEqual(live["week"], 9)
-        self.assertEqual(live["status"], "pending")
-        self.assertIsNone(live["robotLockedAt"])
-        self.assertEqual(live["robot"], [])
-        self.assertEqual(live["actual"], [])
-        self.assertIsNone(live["totals"]["robot"])
-        self.assertIsNone(live["result"])
-        tally = json.loads((ROOT / "data" / "robot-vs-bill" / "season.json").read_text())
-        self.assertEqual(tally["record"]["label"], "0-0-0")
+        tally, weeks = published_weeks()
+        self.assertGreaterEqual(len(weeks), 1)
+        by_week = {}
+        for name, doc in weeks:
+            self.assertGreaterEqual(doc["week"], 9, name)
+            self.assertEqual(name, f"w{doc['week']:02d}.json", name)
+            self.assertNotIn("sample", doc, name)
+            by_week[doc["week"]] = doc
+            assert_week_points(self, name, doc)
+        self.assertIn(9, by_week)
+        live = by_week[9]
+        self.assertEqual(live["status"], "final")
+        self.assertIsInstance(live["robotLockedAt"], str)
+        self.assertEqual(len(live["robot"]), 14)
+        self.assertTrue(all(
+            isinstance(row["points"], (int, float)) and not isinstance(row["points"], bool)
+            for row in live["robot"] + live["actual"]
+        ))
+        finals = [doc for _, doc in weeks if doc["status"] == "final"]
+        wins = sum(doc["result"] == "W" for doc in finals)
+        losses = sum(doc["result"] == "L" for doc in finals)
+        ties = sum(doc["result"] == "T" for doc in finals)
+        self.assertEqual(tally["record"], {
+            "wins": wins,
+            "losses": losses,
+            "ties": ties,
+            "label": f"{wins}-{losses}-{ties}",
+        })
+        robot_points = round1(sum(doc["totals"]["robot"] for doc in finals)) if finals else 0.0
+        eddies_points = round1(sum(doc["totals"]["eddies"] for doc in finals)) if finals else 0.0
+        self.assertEqual(tally["points"], {
+            "robot": robot_points,
+            "eddies": eddies_points,
+            "margin": round1(robot_points - eddies_points),
+        })
         self.assertEqual(tally["firstWeek"], 9)
         self.assertEqual(tally["sides"], {"robot": "Robot", "eddies": "Eddies"})
-        self.assertNotIn("sample", live)
         self.assertNotIn("sample", tally)
+        self.assertEqual([row["week"] for row in tally["weeks"]], [doc["week"] for _, doc in weeks])
+        for summary, (name, doc) in zip(tally["weeks"], weeks):
+            locked = bool(doc.get("robotLockedAt") or doc.get("robot"))
+            self.assertEqual(summary["file"], name)
+            self.assertEqual(summary["status"], doc["status"])
+            self.assertEqual(summary["locked"], locked)
+            self.assertEqual(summary["result"], doc["result"])
+            self.assertEqual(summary["winner"], doc.get("winner"))
+            self.assertEqual(summary["robotPoints"], doc["totals"]["robot"])
+            self.assertEqual(summary["eddiesPoints"], doc["totals"]["eddies"])
+            self.assertEqual(summary["margin"], doc["margin"])
 
 
 if __name__ == "__main__":
