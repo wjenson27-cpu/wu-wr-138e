@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "season": 2026,
+  "week": 10,
+  "window": {
+    "start": "2026-11-12",
+    "end": "2026-11-16",
+    "label": "Nov 12–16"
+  },
+  "status": "pending",
+  "robotLockedAt": "2026-11-12T13:56:15-08:00",
+  "firstKickoff": "2026-11-12T17:15:00-08:00",
+  "robot": [
+    {
+      "slot": "QB",
+      "player": "Brock Purdy",
+      "pos": "QB",
+      "team": "SF",
+      "points": null
+    },
+    {
+      "slot": "RB",
+      "player": "Breece Hall",
+      "pos": "RB",
+      "team": "NYJ",
+      "points": null
+    },
+    {
+      "slot": "WR",
+      "player": "Malik Nabers",
+      "pos": "WR",
+      "team": "NYG",
+      "points": null
+    },
+    {
+      "slot": "TE",
+      "player": "Brock Bowers",
+      "pos": "TE",
+      "team": "LV",
+      "points": null
+    },
+    {
+      "slot": "FLEX",
+      "player": "Jalen Coker",
+      "pos": "WR",
+      "team": "CAR",
+      "points": null
+    },
+    {
+      "slot": "FLEX",
+      "player": "Chimere Dike",
+      "pos": "WR",
+      "team": "TEN",
+      "points": null
+    },
+    {
+      "slot": "FLEX",
+      "player": "Devin Singletary",
+      "pos": "RB",
+      "team": "NYG",
+      "points": null
+    },
+    {
+      "slot": "DL",
+      "player": "George Karlaftis",
+      "pos": "DL",
+      "team": "KC",
+      "points": null
+    },
+    {
+      "slot": "LB",
+      "player": "Fred Warner",
+      "pos": "LB",
+      "team": "SF",
+      "points": null
+    },
+    {
+      "slot": "DB",
+      "player": "Quentin Lake",
+      "pos": "DB",
+      "team": "LAR",
+      "points": null
+    },
+    {
+      "slot": "DB",
+      "player": "Evan Williams",
+      "pos": "DB",
+      "team": "GB",
+      "points": null
+    },
+    {
+      "slot": "IDP",
+      "player": "Frankie Luvu",
+      "pos": "LB",
+      "team": "WAS",
+      "points": null
+    },
+    {
+      "slot": "IDP",
+      "player": "Jordyn Brooks",
+      "pos": "LB",
+      "team": "MIA",
+      "points": null
+    },
+    {
+      "slot": "IDP",
+      "player": "Cole Bishop",
+      "pos": "DB",
+      "team": "BUF",
+      "points": null
+    }
+  ],
+  "actual": [],
+  "totals": {
+    "robot": null,
+    "eddies": null
+  },
+  "margin": null,
+  "result": null,
+  "winner": null,
+  "decisions": []
+}
