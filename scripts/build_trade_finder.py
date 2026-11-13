@@ -3,25 +3,30 @@
 
 Recommend-only. This script reads league files that are already in the repo
 and writes a ranked list. It does not send, propose, or enter a trade, and it
-does not contact Fantrax.
+does not contact Fantrax. Pending bids and pending trades on the scrape are
+not copied into the output.
 
 Run from the repo root:
 
     python3 scripts/build_trade_finder.py
+    python3 scripts/build_trade_finder.py --scrape data/sources/fantrax-raw-2026-11-12-pm-normalized.json
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 import unicodedata
+import warnings
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import warroom_common as wc  # noqa: E402
 
-SCRAPE_PATH = ROOT / "data" / "sources" / "fantrax-raw-2026-10-30-am.json"
+DEFAULT_SCRAPE = ROOT / "data" / "sources" / "fantrax-raw-2026-11-12-pm-normalized.json"
+SCRAPE_PATH = DEFAULT_SCRAPE
 IDP_PATH = ROOT / "data" / "idp-rankings.json"
 RANK_DIR = ROOT / "data" / "rankings"
 VALUES_PATH = ROOT / "data" / "player-values.json"
@@ -70,20 +75,33 @@ FIRST = {token: group[0] for group in _NICK_GROUPS for token in group}
 
 # Keeps. The LB room is deep because these two stay.
 KEEPS = ("Jordyn Brooks", "Cedric Gray")
-# Surplus Bill said we can move. Brooks and Gray are listed in the room and are not here.
-LB_OUT = ("Fred Warner", "Frankie Luvu", "Trenton Simpson", "Tyrice Knight")
-WR_OUT = ("Ja'Kobi Lane", "Kendrick Bourne", "Chimere Dike")
+# Upside holds. Never outgoing, even if a surplus list or the trade block names them.
+HOLDS = ("Josh Downs",)
+# Surplus the club can move. Brooks, Gray, and Downs are not here.
+# A name that is not on the roster is warned and skipped, not fatal.
+LB_OUT = ("Fred Warner", "Frankie Luvu", "Trenton Simpson")
+WR_OUT = ("Jalen Coker",)
+# Incoming spots. RB and DL stay. LB and DB are in because the club wants one more quality IDP.
+INCOMING = ("RB", "DL", "LB", "DB")
 
 # Playable = would start on a thin roster. Usable = real surplus / a back we'd want.
-# Bars are rest-of-season points on the week-8 scale (about 10 games left).
+# Bars are absolute rest-of-season points, set on the week-8 board (about 10 games).
+# They are not rescaled when the scrape week moves.
 PLAYABLE = {"QB": 120, "RB": 80, "WR": 70, "TE": 70, "DL": 80, "LB": 80, "DB": 80}
 USABLE = {"QB": 160, "RB": 90, "WR": 100, "TE": 90, "DL": 120, "LB": 120, "DB": 120}
 THIN_AT = {"LB": 2, "DL": 2, "DB": 3, "WR": 3, "RB": 2}
+# A partner is deep enough to give this spot. Never their best, and at least two usable stay.
+DEEP_AT = {"RB": 3, "DL": 3, "LB": 3, "DB": 3}
+# Dedicated starters. Flex spots are covered by the depth bars, not by these counts.
+STARTERS = {"QB": 1, "RB": 1, "WR": 1, "TE": 1, "DL": 1, "LB": 1, "DB": 2}
+KIND = {"RB": "back", "DL": "lineman", "LB": "linebacker", "DB": "defensive back"}
 # Lineup value is mostly the healthy roster, plus weight for the two thin spots
 # (Hall's quad, and Karlaftis as the only DL) sitting.
 HEALTHY_W, HALL_W, DL_W = 0.65, 0.25, 0.10
 MIN_DELTA = 3.0
-MIN_PARTNER_DELTA = -8.0
+# A deep room, or a real hole, can give this many lineup points and still be a fit.
+# Tuned so a third DL or a spare linebacker is not dropped for a one-point miss.
+MIN_PARTNER_DELTA = -12.0
 TARGET_IDEAS = 10
 PV_SCALE = 0.90  # median week-8 board pts / player-values ppg, players over 8 ppg
 
@@ -346,9 +364,146 @@ def team_id_map(teams_doc: dict) -> dict[str, str]:
     return out
 
 
-def give_packages(by_name: dict[str, Player]) -> list[list[Player]]:
-    lbs = [by_name[n] for n in LB_OUT if n in by_name]
-    wrs = [by_name[n] for n in WR_OUT if n in by_name]
+def _player_named(by_name: dict, name: str):
+    if name in by_name:
+        return by_name[name]
+    key = norm_name(name)
+    for roster_name, player in by_name.items():
+        if norm_name(roster_name) == key:
+            return player
+    return None
+
+
+def _blocked_names() -> dict[str, str]:
+    """Normalized name -> the list it came from. Keeps and holds are never outgoing."""
+    out = {}
+    for name in list(KEEPS) + list(HOLDS):
+        out[norm_name(name)] = name
+    return out
+
+
+def resolve_surplus(names, by_name: dict) -> list:
+    """Rostered surplus players, in list order. Missing names warn and are skipped.
+    A keep or a hold is never returned, even if the surplus list names them."""
+    blocked = _blocked_names()
+    found = []
+    missing = []
+    held = []
+    for name in names:
+        if norm_name(name) in blocked:
+            held.append(name)
+            continue
+        player = _player_named(by_name, name)
+        if player is None:
+            missing.append(name)
+            continue
+        found.append(player)
+    if held:
+        warnings.warn(
+            "surplus names are holds or keeps and are not outgoing: " + ", ".join(held),
+            RuntimeWarning,
+            stacklevel=2,
+        )
+    if missing:
+        warnings.warn(
+            "surplus names not on the Eddies roster, skipped: " + ", ".join(missing),
+            RuntimeWarning,
+            stacklevel=2,
+        )
+    return found
+
+
+def rostered_holds(by_name: dict) -> list[str]:
+    """Hold names that are actually on the roster. A dropped hold warns and is skipped."""
+    found = []
+    missing = []
+    for name in HOLDS:
+        player = _player_named(by_name, name)
+        if player is None:
+            missing.append(name)
+        else:
+            found.append(player.name)
+    if missing:
+        warnings.warn(
+            "hold names not on the Eddies roster, skipped: " + ", ".join(missing),
+            RuntimeWarning,
+            stacklevel=2,
+        )
+    return found
+
+
+def depth_count(pos: str, usable: dict, playable: dict) -> int:
+    """WR depth uses playable bodies. Every other spot uses the usable bar."""
+    if pos == "WR":
+        return int(playable.get(pos, 0))
+    return int(usable.get(pos, 0))
+
+
+def needs_line(players: list, usable: dict, playable: dict) -> str:
+    """Healthy/usable counts against the dedicated starting slots, plus any depth-bar miss."""
+    parts = []
+    for pos in ("QB", "RB", "WR", "TE", "DL", "LB", "DB"):
+        n = int(usable.get(pos, 0))
+        slots = STARTERS[pos]
+        who = [
+            p.name for p in sorted(players, key=lambda p: (-p.ros, p.name))
+            if p.pos == pos and p.usable()
+        ]
+        slot_word = "slot" if slots == 1 else "slots"
+        if n <= 2 and who:
+            parts.append(f"{n} usable {pos} ({', '.join(who)}) for {slots} starting {slot_word}")
+        else:
+            parts.append(f"{n} usable {pos} for {slots} starting {slot_word}")
+    text = "; ".join(parts) + "."
+    short = []
+    for pos in ("RB", "WR", "DL", "LB", "DB"):
+        n = depth_count(pos, usable, playable)
+        bar = THIN_AT[pos]
+        if n < bar:
+            kind = "playable" if pos == "WR" else "usable"
+            short.append(f"{pos} is short of the depth bar ({n} {kind}, bar {bar})")
+    if short:
+        text += " " + ". ".join(short) + "."
+    return text
+
+
+def repo_rel(path: Path) -> str:
+    path = path.resolve()
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+_SLOT_RANK = {"active": 0, "reserve": 1, "ir": 2}
+
+
+def dedupe_rows(rows: list) -> list:
+    """One row per player. Fantrax sometimes lists the same name on two slots."""
+    best = {}
+    order = []
+    for raw in rows or []:
+        key = norm_name(raw.get("name") or "")
+        if not key:
+            continue
+        prev = best.get(key)
+        if prev is None:
+            best[key] = raw
+            order.append(key)
+            continue
+        prev_rank = _SLOT_RANK.get(prev.get("slot") or "active", 9)
+        raw_rank = _SLOT_RANK.get(raw.get("slot") or "active", 9)
+        if raw_rank < prev_rank:
+            best[key] = raw
+    return [best[key] for key in order]
+
+
+def give_packages(lbs: list[Player], wrs: list[Player]) -> list[list[Player]]:
+    """Singles, plus an offense-for-IDP 2-for-1 (one surplus LB and one surplus WR).
+
+    A WR sent for an RB is offense for offense. That is allowed when the other
+    fit bars clear. It is not a separate filter.
+    """
     packages = [[p] for p in lbs + wrs]
     for lb in lbs:
         for wr in wrs:
@@ -392,24 +547,24 @@ def need_points(pos: str, usable: dict, playable: dict) -> int:
     return 0
 
 
-def fit_score(give, get, eddies_delta, partner_delta, healthy_delta, playable, usable, block_get, block_give, surplus_piece, starts_for_them, gives_starter) -> int | None:
+def fit_score(give, get, eddies_delta, partner_delta, healthy_delta, playable, usable, block_get, block_give, surplus_piece, starts_for_them, gives_starter, our_usable=None, our_playable=None) -> int | None:
     got = get[0]
+    deep_need = DEEP_AT.get(got.pos)
+    if deep_need is None or usable.get(got.pos, 0) < deep_need:
+        return None
     holes = sent_holes(give, usable, playable)
     if max(p.ros for p in give) < 70 and not any(p.pos == "LB" for p in give):
         return None
     # A piece that would not start, sent at a position they are not thin at, does nothing for them.
     if not holes and not starts_for_them:
         return None
-    if got.pos == "RB":
-        if usable.get("RB", 0) < 3:
-            return None
-        score = 22 + (10 if usable["RB"] >= 4 else 6)
-    elif got.pos == "DL":
-        if usable.get("DL", 0) < 3:
-            return None
-        score = 14 + (10 if usable["DL"] >= 4 else 6)
-    else:
-        return None
+    base = {"RB": 22, "DL": 14, "LB": 16, "DB": 16}[got.pos]
+    deep_n = usable.get(got.pos, 0)
+    score = base + (10 if deep_n >= deep_need + 1 else 6)
+    if our_usable is not None and got.pos in THIN_AT:
+        ours = depth_count(got.pos, our_usable, our_playable or {})
+        if ours < THIN_AT[got.pos]:
+            score += 8
     if holes:
         score += max(need_points(pos, usable, playable) for pos in holes)
     else:
@@ -420,9 +575,7 @@ def fit_score(give, get, eddies_delta, partner_delta, healthy_delta, playable, u
         return None
     if partner_delta >= 0:
         score += 18
-    elif holes and partner_delta >= MIN_PARTNER_DELTA:
-        score += 8
-    elif starts_for_them and partner_delta >= -4:
+    elif partner_delta >= MIN_PARTNER_DELTA:
         score += 8
     else:
         return None
@@ -441,10 +594,15 @@ def why_for_them(partner: str, give: list[Player], get: Player, playable: dict, 
     got = get.name
     sent = " and ".join(f"{p.name} ({p.pos})" for p in give)
     holes = sent_holes(give, usable, playable)
-    deep = usable.get("RB", 0) if get.pos == "RB" else usable.get("DL", 0)
-    kind = "back" if get.pos == "RB" else "lineman"
-    room = "RB" if get.pos == "RB" else "DL"
-    even = " Their lineup stays about even." if partner_delta < 1 else ""
+    deep = usable.get(get.pos, 0)
+    kind = KIND.get(get.pos, get.pos)
+    room = get.pos
+    if partner_delta >= 1:
+        even = ""
+    elif partner_delta >= -1:
+        even = " Their lineup stays about even."
+    else:
+        even = " Their lineup gives up a few points to make the deal."
     if holes:
         bits = []
         for pos in holes:
@@ -463,28 +621,30 @@ def why_for_them(partner: str, give: list[Player], get: Player, playable: dict, 
 
 def spare_candidates(players: list[Player], pos: str) -> list[Player]:
     """Usable players at pos, never their best, and at least two usable stay if he leaves."""
+    deep = DEEP_AT.get(pos, 3)
     usable = [
         p for p in players
         if p.pos == pos and p.usable() and not p.assumed and p.mult >= 0.85 and p.slot != "ir"
     ]
     usable.sort(key=lambda p: (-p.ros, p.name))
-    if len(usable) < 3:
+    if len(usable) < deep or len(usable) - 1 < 2:
         return []
     best = usable[0].name
-    out = []
-    for p in usable:
-        if p.name == best:
-            continue
-        if len(usable) - 1 < 2:
-            continue
-        out.append(p)
-    return out
+    return [p for p in usable if p.name != best]
 
 
-def consider(eddies, partner_players, give, get, playable, usable, eddies_starters, their_block, our_block):
+def incoming_players(players: list[Player]) -> list[Player]:
+    found = []
+    for pos in INCOMING:
+        found.extend(spare_candidates(players, pos))
+    return found
+
+
+def consider(eddies, partner_players, give, get, playable, usable, eddies_starters, their_block, our_block, our_usable=None, our_playable=None):
     if get.season_ending or any(p.season_ending for p in give):
         return None
-    if any(p.name in KEEPS for p in give):
+    blocked = _blocked_names()
+    if any(norm_name(p.name) in blocked for p in give):
         return None
     give_names = {p.name for p in give}
     e_before, e_healthy_before = blend(eddies)
@@ -503,6 +663,8 @@ def consider(eddies, partner_players, give, get, playable, usable, eddies_starte
         surplus,
         starts,
         any(p.name in eddies_starters for p in give),
+        our_usable,
+        our_playable,
     )
     if score is None:
         return None
@@ -569,15 +731,18 @@ def idea_record(rank: int, row: dict, playable: dict, usable: dict) -> dict:
     }
 
 
-def build() -> dict:
-    scrape = load_json(SCRAPE_PATH)
+def build(scrape_path: Path | None = None, lb_out=None, wr_out=None) -> dict:
+    scrape_path = Path(scrape_path) if scrape_path else DEFAULT_SCRAPE
+    lb_out = LB_OUT if lb_out is None else tuple(lb_out)
+    wr_out = WR_OUT if wr_out is None else tuple(wr_out)
+    scrape = load_json(scrape_path)
     idp = load_json(IDP_PATH)
     latest = load_json(RANK_DIR / "latest.json")
     board = load_json(RANK_DIR / latest["file"])
     values = load_json(VALUES_PATH)
     teams_doc = load_json(TEAMS_PATH)
     season = wc.season_ending(ROOT / "data")
-    week = int(idp.get("week") or latest.get("week") or 8)
+    week = int(idp.get("week") or latest.get("week") or scrape.get("week") or 8)
     ids = team_id_map(teams_doc)
 
     idp_rows = []
@@ -598,7 +763,7 @@ def build() -> dict:
     for entry in scrape.get("rosters") or []:
         full = entry["team"]
         players = []
-        for raw in entry.get("players") or []:
+        for raw in dedupe_rows(entry.get("players") or []):
             player = build_player(raw, week, idp_idx, rank_idx, pv_idx, season)
             if player.source == "unvalued" and not player.season_ending and player.slot != "ir":
                 unmatched.append(f"{full}: {player.name} ({player.pos})")
@@ -615,15 +780,17 @@ def build() -> dict:
 
     eddies = next(t for t in rosters if t["id"] == "eddies" or t["full"] == "Eagle Ridge Eddies")
     by_name = {p.name: p for p in eddies["players"]}
-    missing = [n for n in list(LB_OUT) + list(WR_OUT) if n not in by_name]
-    if missing:
-        raise SystemExit(f"Eddies surplus names missing from the scrape: {missing}")
     for keep in KEEPS:
-        if keep not in by_name:
+        if _player_named(by_name, keep) is None:
             raise SystemExit(f"Keep {keep} is not on the Eddies roster")
+    lbs = resolve_surplus(lb_out, by_name)
+    wrs = resolve_surplus(wr_out, by_name)
+    holds = rostered_holds(by_name)
 
     _, starters = optimize(eddies["players"])
-    packages = give_packages(by_name)
+    packages = give_packages(lbs, wrs)
+    our_playable = count_pos(eddies["players"], lambda p: p.playable())
+    our_usable = count_pos(eddies["players"], lambda p: p.usable())
     candidates = []
     depth = []
     for team in rosters:
@@ -638,12 +805,12 @@ def build() -> dict:
         })
         if team["id"] == "eddies":
             continue
-        gets = spare_candidates(team["players"], "RB") + spare_candidates(team["players"], "DL")
+        gets = incoming_players(team["players"])
         for get in gets:
             for give in packages:
                 row = consider(
                     eddies["players"], team["players"], give, get, playable, usable,
-                    starters, team["block"], our_block,
+                    starters, team["block"], our_block, our_usable, our_playable,
                 )
                 if row is None:
                     continue
@@ -662,13 +829,19 @@ def build() -> dict:
     notes = [
         "Each idea stands on its own. Making one would change the rest of the board.",
     ]
-    if not any(p["pos"] == "DL" for idea in ideas for p in idea["get"]):
+    for pos, label in (("DL", "defensive lineman"), ("LB", "linebacker"), ("DB", "defensive back")):
+        if any(p["pos"] == pos for idea in ideas for p in idea["get"]):
+            continue
         notes.append(
-            "No club has three usable DLs to spare, so none of these ideas bring back a second defensive lineman."
+            f"No idea brings back a {label}. No spare {pos} cleared the fit bar "
+            "(a deep room, not their best player, and both lineups)."
         )
 
-    e_play = count_pos(eddies["players"], lambda p: p.playable())
-    e_use = count_pos(eddies["players"], lambda p: p.usable())
+    e_play = our_playable
+    e_use = our_usable
+    partner_cap = abs(MIN_PARTNER_DELTA)
+    idp_week = idp.get("week")
+    idp_horizon = f"week {idp_week}" if idp_week else "the file's week"
     doc = {
         "generatedAt": wc.iso_pt(),
         "recommendOnly": True,
@@ -679,27 +852,28 @@ def build() -> dict:
         "record": eddies["record"],
         "faab": eddies["faab"],
         "keeps": list(KEEPS),
+        "holds": holds,
         "excludedSeasonEnding": ["Edgerrin Cooper", "Tremaine Edmunds"],
         "displayNames": {DISPLAY_FULL: "TTAB"},
         "eddied": {
-            "needs": "RB depth (Hall is the only healthy back; Charbonnet is an ACL tag) and a second DL behind Karlaftis.",
+            "needs": needs_line(eddies["players"], e_use, e_play),
             "surplus": {
-                "LB": list(LB_OUT),
-                "WR": list(WR_OUT),
+                "LB": [p.name for p in lbs],
+                "WR": [p.name for p in wrs],
             },
             "playable": {k: e_play[k] for k in ("RB", "WR", "DL", "LB", "DB")},
             "usable": {k: e_use[k] for k in ("RB", "WR", "DL", "LB", "DB")},
         },
         "method": {
             "offense": (
-                "Offensive ROS points = per-game rate times games left from this week through week 17, "
+                f"Offensive ROS points = per-game rate times games left from week {week} through week 17, "
                 "minus one if that NFL bye is still ahead. The rate is the week-board consensus in "
                 "data/rankings (Wheels Up points). A bye or a blank consensus uses last-3 actuals from that "
                 "file. If the player is missing there, the rate is data/player-values.json ppg times 0.90, "
                 "the median ratio of the week-8 board to that older file. There is no separate offensive ROS rank file."
             ),
             "idp": (
-                "IDP ROS points are rosPts from data/idp-rankings.json (weeks 8-17, byes already zeroed). "
+                f"IDP ROS points are rosPts from data/idp-rankings.json ({idp_horizon}, byes already zeroed in that file). "
                 "That file is a top cut, so a rostered IDP missing from it uses player-values ppg times 0.90 "
                 "times games left when that rate is at least 8. An active IDP in neither file is a flat "
                 "100 ROS (a body, so a missing rank is not an empty room). A reserve IDP in neither file is 50."
@@ -716,20 +890,23 @@ def build() -> dict:
                 "partnerDelta is the other club's healthy lineup, same slots, no injury-risk weight."
             ),
             "fit": (
-                "Fit is 0-100. The other club must be deep at the spot they give (3+ usable RBs, or 3+ usable DLs) "
-                "and we do not ask for their best one. The piece the Eddies send has to be a fit: it fills a thin "
-                "IDP spot (fewer than 2 usable LBs or DLs, or fewer than 3 usable DBs) or a thin WR room, or it "
-                "would actually start for them. Their lineup can drop at most 8 points in a real hole, or 4 when "
-                "it is an upgrade rather than a hole. Eddies need at least 3 blended points, and giving up someone "
-                "who is in the healthy lineup has to leave that healthy lineup ahead too. Bench surplus scores a "
-                "bit higher than a starter. A name already on a trade block scores higher. "
-                "Jordyn Brooks and Cedric Gray are never outgoing."
+                "Fit is 0-100. Incoming targets are RB, DL, LB, and DB. The other club must be deep at that spot "
+                f"({', '.join(f'{n}+ usable {pos}s' for pos, n in DEEP_AT.items())}) "
+                "and the idea never asks for their best one. An offense-for-IDP 2-for-1 is allowed. "
+                "Giving offense back for offense is allowed when the other bars clear; it is a guideline, not a filter. "
+                "The piece the Eddies send has to fill a thin IDP spot (fewer than 2 usable LBs or DLs, or fewer than "
+                "3 usable DBs) or a thin WR room, or it has to start for them. Their lineup can drop at most "
+                f"{partner_cap:.0f} points when that piece starts for them or fills a real hole. "
+                f"Eddies need at least {MIN_DELTA:.0f} blended points, and giving up someone who is in the healthy "
+                "lineup has to leave that healthy lineup ahead too. A spot where the Eddies are under the depth bar "
+                "scores a bit higher. Bench surplus scores a bit higher than a starter. A name already on a trade "
+                "block scores higher. Jordyn Brooks, Cedric Gray, and Josh Downs are never outgoing."
             ),
             "bars": {"playable": PLAYABLE, "usable": USABLE, "thinIfFewerThan": THIN_AT},
             "lineup": "1 QB, 1 RB, 1 WR, 1 TE, 3 RB/WR/TE, 1 DL, 1 LB, 2 DB, 3 IDP. Greedy, same slots as the trade tab.",
         },
         "sources": {
-            "rosters": "data/sources/fantrax-raw-2026-10-30-am.json",
+            "rosters": repo_rel(scrape_path),
             "scraped": scrape.get("scraped"),
             "idp": "data/idp-rankings.json",
             "idpGeneratedAt": idp.get("generatedAt"),
@@ -747,10 +924,19 @@ def build() -> dict:
     return doc
 
 
-def main() -> None:
-    doc = build()
-    OUT_PATH.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
-    print(f"Wrote {OUT_PATH} ({len(doc['ideas'])} ideas)")
+def main(argv=None) -> None:
+    parser = argparse.ArgumentParser(description="Build data/trade-finder.json from a Fantrax roster scrape.")
+    parser.add_argument(
+        "--scrape",
+        default=str(DEFAULT_SCRAPE),
+        help="Fantrax roster scrape JSON. Default: data/sources/fantrax-raw-2026-11-12-pm-normalized.json",
+    )
+    parser.add_argument("--out", default=str(OUT_PATH), help="Where to write the trade-finder JSON")
+    args = parser.parse_args(argv)
+    doc = build(Path(args.scrape))
+    out = Path(args.out)
+    out.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
+    print(f"Wrote {out} ({len(doc['ideas'])} ideas)")
     for idea in doc["ideas"]:
         give = ", ".join(p["name"] for p in idea["give"])
         get = ", ".join(p["name"] for p in idea["get"])

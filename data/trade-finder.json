@@ -1,15 +1,18 @@
 {
-  "generatedAt": "2026-10-30T08:59:00-07:00",
+  "generatedAt": "2026-11-12T17:37:00-08:00",
   "recommendOnly": true,
   "label": "Recommend-only rest-of-season ideas. Nothing here is sent.",
-  "week": 8,
-  "asOfRoster": "2026-10-30 06:50 PDT",
+  "week": 10,
+  "asOfRoster": "2026-11-12 approximately 4:07 PM PT",
   "team": "Eagle Ridge Eddies",
-  "record": "5-2-0",
-  "faab": 34,
+  "record": "7-2-0",
+  "faab": 25,
   "keeps": [
     "Jordyn Brooks",
     "Cedric Gray"
+  ],
+  "holds": [
+    "Josh Downs"
   ],
   "excludedSeasonEnding": [
     "Edgerrin Cooper",
@@ -19,41 +22,38 @@
     "Towner Top Aga Bottom": "TTAB"
   },
   "eddied": {
-    "needs": "RB depth (Hall is the only healthy back; Charbonnet is an ACL tag) and a second DL behind Karlaftis.",
+    "needs": "1 usable QB (Brock Purdy) for 1 starting slot; 2 usable RB (Zach Charbonnet, Breece Hall) for 1 starting slot; 1 usable WR (Malik Nabers) for 1 starting slot; 1 usable TE (Brock Bowers) for 1 starting slot; 1 usable DL (George Karlaftis) for 1 starting slot; 4 usable LB for 1 starting slot; 3 usable DB for 2 starting slots. DL is short of the depth bar (1 usable, bar 2).",
     "surplus": {
       "LB": [
         "Fred Warner",
         "Frankie Luvu",
-        "Trenton Simpson",
-        "Tyrice Knight"
+        "Trenton Simpson"
       ],
       "WR": [
-        "Ja'Kobi Lane",
-        "Kendrick Bourne",
-        "Chimere Dike"
+        "Jalen Coker"
       ]
     },
     "playable": {
-      "RB": 1,
-      "WR": 4,
+      "RB": 2,
+      "WR": 3,
       "DL": 1,
-      "LB": 6,
-      "DB": 3
+      "LB": 4,
+      "DB": 4
     },
     "usable": {
-      "RB": 1,
-      "WR": 3,
+      "RB": 2,
+      "WR": 1,
       "DL": 1,
       "LB": 4,
       "DB": 3
     }
   },
   "method": {
-    "offense": "Offensive ROS points = per-game rate times games left from this week through week 17, minus one if that NFL bye is still ahead. The rate is the week-board consensus in data/rankings (Wheels Up points). A bye or a blank consensus uses last-3 actuals from that file. If the player is missing there, the rate is data/player-values.json ppg times 0.90, the median ratio of the week-8 board to that older file. There is no separate offensive ROS rank file.",
-    "idp": "IDP ROS points are rosPts from data/idp-rankings.json (weeks 8-17, byes already zeroed). That file is a top cut, so a rostered IDP missing from it uses player-values ppg times 0.90 times games left when that rate is at least 8. An active IDP in neither file is a flat 100 ROS (a body, so a missing rank is not an empty room). A reserve IDP in neither file is 50.",
+    "offense": "Offensive ROS points = per-game rate times games left from week 10 through week 17, minus one if that NFL bye is still ahead. The rate is the week-board consensus in data/rankings (Wheels Up points). A bye or a blank consensus uses last-3 actuals from that file. If the player is missing there, the rate is data/player-values.json ppg times 0.90, the median ratio of the week-8 board to that older file. There is no separate offensive ROS rank file.",
+    "idp": "IDP ROS points are rosPts from data/idp-rankings.json (week 10, byes already zeroed in that file). That file is a top cut, so a rostered IDP missing from it uses player-values ppg times 0.90 times games left when that rate is at least 8. An active IDP in neither file is a flat 100 ROS (a body, so a missing rank is not an empty room). A reserve IDP in neither file is 50.",
     "injury": "IR, Out, PUP, NFI, and suspended are 0. Achilles or ACL text is 0.15. Doubtful is 0.35. Questionable is 0.90. An IDP the rankings file already tagged is not discounted twice. Edgerrin Cooper and Tremaine Edmunds are season-ending and are left out of every side.",
     "valueDelta": "Eddies' optimized lineup rest-of-season points after the swap, minus before. The lineup is 65% healthy, 25% with Breece Hall sitting, 10% with George Karlaftis sitting, so RB depth and a second DL count even when the healthy lineup is already full. partnerDelta is the other club's healthy lineup, same slots, no injury-risk weight.",
-    "fit": "Fit is 0-100. The other club must be deep at the spot they give (3+ usable RBs, or 3+ usable DLs) and we do not ask for their best one. The piece the Eddies send has to be a fit: it fills a thin IDP spot (fewer than 2 usable LBs or DLs, or fewer than 3 usable DBs) or a thin WR room, or it would actually start for them. Their lineup can drop at most 8 points in a real hole, or 4 when it is an upgrade rather than a hole. Eddies need at least 3 blended points, and giving up someone who is in the healthy lineup has to leave that healthy lineup ahead too. Bench surplus scores a bit higher than a starter. A name already on a trade block scores higher. Jordyn Brooks and Cedric Gray are never outgoing.",
+    "fit": "Fit is 0-100. Incoming targets are RB, DL, LB, and DB. The other club must be deep at that spot (3+ usable RBs, 3+ usable DLs, 3+ usable LBs, 3+ usable DBs) and the idea never asks for their best one. An offense-for-IDP 2-for-1 is allowed. Giving offense back for offense is allowed when the other bars clear; it is a guideline, not a filter. The piece the Eddies send has to fill a thin IDP spot (fewer than 2 usable LBs or DLs, or fewer than 3 usable DBs) or a thin WR room, or it has to start for them. Their lineup can drop at most 12 points when that piece starts for them or fills a real hole. Eddies need at least 3 blended points, and giving up someone who is in the healthy lineup has to leave that healthy lineup ahead too. A spot where the Eddies are under the depth bar scores a bit higher. Bench surplus scores a bit higher than a starter. A name already on a trade block scores higher. Jordyn Brooks, Cedric Gray, and Josh Downs are never outgoing.",
     "bars": {
       "playable": {
         "QB": 120,
@@ -84,12 +84,12 @@
     "lineup": "1 QB, 1 RB, 1 WR, 1 TE, 3 RB/WR/TE, 1 DL, 1 LB, 2 DB, 3 IDP. Greedy, same slots as the trade tab."
   },
   "sources": {
-    "rosters": "data/sources/fantrax-raw-2026-10-30-am.json",
-    "scraped": "2026-10-30 06:50 PDT",
+    "rosters": "data/sources/fantrax-raw-2026-11-12-pm-normalized.json",
+    "scraped": "2026-11-12 approximately 4:07 PM PT",
     "idp": "data/idp-rankings.json",
-    "idpGeneratedAt": "2026-10-28T08:51-07:00",
-    "offenseBoard": "data/rankings/2026-wk8.json",
-    "offenseBoardAsOf": "2026-10-29T20:07:11.312Z",
+    "idpGeneratedAt": "2026-11-10T07:46-08:00",
+    "offenseBoard": "data/rankings/2026-wk10.json",
+    "offenseBoardAsOf": "2026-11-12T21:47:17.704Z",
     "playerValues": "data/player-values.json",
     "playerValuesAsOf": "2026-10-08",
     "seasonEnding": "data/season-ending.json"
@@ -99,42 +99,42 @@
   ],
   "notes": [
     "Each idea stands on its own. Making one would change the rest of the board.",
-    "No club has three usable DLs to spare, so none of these ideas bring back a second defensive lineman."
+    "No idea brings back a defensive back. No spare DB cleared the fit bar (a deep room, not their best player, and both lineups)."
   ],
   "leagueDepth": [
     {
       "team": "Drummond Dongers",
       "teamId": "dongers",
-      "record": "1-6-0",
+      "record": "3-6-0",
       "playable": {
-        "RB": 1,
+        "RB": 2,
         "WR": 5,
         "DL": 2,
-        "LB": 4,
+        "LB": 3,
         "DB": 5
       },
       "usable": {
         "RB": 1,
         "WR": 4,
-        "DL": 2,
+        "DL": 1,
         "LB": 3,
-        "DB": 4
+        "DB": 2
       }
     },
     {
       "team": "Eagle Ridge Eddies",
-      "teamId": "eddies",
-      "record": "5-2-0",
+      "teamId": "eagle-ridge-eddies",
+      "record": "7-2-0",
       "playable": {
-        "RB": 1,
-        "WR": 4,
+        "RB": 2,
+        "WR": 3,
         "DL": 1,
-        "LB": 6,
-        "DB": 3
+        "LB": 4,
+        "DB": 4
       },
       "usable": {
-        "RB": 1,
-        "WR": 3,
+        "RB": 2,
+        "WR": 1,
         "DL": 1,
         "LB": 4,
         "DB": 3
@@ -143,94 +143,94 @@
     {
       "team": "Indian Trail Slumlords",
       "teamId": "slumlords",
-      "record": "3-4-0",
+      "record": "5-4-0",
       "playable": {
         "RB": 3,
-        "WR": 3,
+        "WR": 1,
         "DL": 4,
-        "LB": 4,
+        "LB": 3,
         "DB": 3
       },
       "usable": {
-        "RB": 3,
+        "RB": 2,
         "WR": 0,
-        "DL": 2,
+        "DL": 3,
         "LB": 3,
-        "DB": 2
+        "DB": 0
       }
     },
     {
       "team": "Little Ass Boys",
       "teamId": "lab",
-      "record": "5-2-0",
+      "record": "5-4-0",
       "playable": {
         "RB": 3,
-        "WR": 3,
+        "WR": 4,
         "DL": 1,
-        "LB": 6,
-        "DB": 2
+        "LB": 5,
+        "DB": 3
       },
       "usable": {
         "RB": 3,
         "WR": 1,
-        "DL": 1,
-        "LB": 6,
+        "DL": 0,
+        "LB": 4,
         "DB": 2
       }
     },
     {
       "team": "Morningside Muff Divers",
       "teamId": "morningside",
-      "record": "3-4-0",
+      "record": "3-6-0",
       "playable": {
         "RB": 1,
-        "WR": 4,
-        "DL": 1,
-        "LB": 6,
+        "WR": 3,
+        "DL": 0,
+        "LB": 5,
         "DB": 2
       },
       "usable": {
         "RB": 1,
         "WR": 1,
         "DL": 0,
-        "LB": 6,
-        "DB": 2
+        "LB": 3,
+        "DB": 1
       }
     },
     {
       "team": "Mrs. Doubtpfizer",
       "teamId": "doubtpfizer",
-      "record": "3-4-0",
+      "record": "4-5-0",
       "playable": {
         "RB": 3,
         "WR": 3,
         "DL": 1,
-        "LB": 5,
+        "LB": 4,
         "DB": 3
       },
       "usable": {
-        "RB": 3,
-        "WR": 0,
-        "DL": 1,
-        "LB": 5,
-        "DB": 3
+        "RB": 2,
+        "WR": 2,
+        "DL": 0,
+        "LB": 3,
+        "DB": 1
       }
     },
     {
       "team": "Newman Lake Sleep Paralysis Demons",
       "teamId": "newman",
-      "record": "3-4-0",
+      "record": "4-5-0",
       "playable": {
         "RB": 2,
         "WR": 4,
         "DL": 1,
-        "LB": 7,
+        "LB": 6,
         "DB": 3
       },
       "usable": {
-        "RB": 2,
-        "WR": 4,
-        "DL": 0,
+        "RB": 1,
+        "WR": 3,
+        "DL": 1,
         "LB": 5,
         "DB": 2
       }
@@ -238,389 +238,305 @@
     {
       "team": "Pocket Agents",
       "teamId": "pocket",
-      "record": "5-2-0",
+      "record": "5-4-0",
       "playable": {
         "RB": 2,
         "WR": 2,
-        "DL": 2,
-        "LB": 3,
+        "DL": 1,
+        "LB": 4,
         "DB": 4
       },
       "usable": {
-        "RB": 1,
+        "RB": 2,
         "WR": 2,
         "DL": 1,
         "LB": 3,
-        "DB": 4
+        "DB": 2
       }
     },
     {
       "team": "Saltese Slamm",
       "teamId": "saltese",
-      "record": "3-4-0",
+      "record": "3-6-0",
       "playable": {
-        "RB": 4,
-        "WR": 2,
+        "RB": 3,
+        "WR": 0,
         "DL": 1,
-        "LB": 7,
+        "LB": 3,
         "DB": 3
       },
       "usable": {
-        "RB": 4,
+        "RB": 2,
         "WR": 0,
         "DL": 1,
-        "LB": 6,
-        "DB": 3
+        "LB": 3,
+        "DB": 1
       }
     },
     {
       "team": "Substation",
       "teamId": "substation",
-      "record": "4-3-0",
+      "record": "5-4-0",
       "playable": {
-        "RB": 0,
-        "WR": 5,
+        "RB": 3,
+        "WR": 3,
         "DL": 1,
         "LB": 4,
-        "DB": 4
+        "DB": 3
       },
       "usable": {
-        "RB": 0,
-        "WR": 2,
+        "RB": 3,
+        "WR": 1,
         "DL": 1,
-        "LB": 3,
-        "DB": 4
+        "LB": 4,
+        "DB": 1
       }
     },
     {
       "team": "The Hypersecretors",
       "teamId": "hyper",
-      "record": "3-4-0",
+      "record": "5-4-0",
       "playable": {
-        "RB": 2,
-        "WR": 3,
-        "DL": 1,
+        "RB": 1,
+        "WR": 4,
+        "DL": 2,
         "LB": 4,
-        "DB": 1
+        "DB": 2
       },
       "usable": {
-        "RB": 2,
+        "RB": 1,
         "WR": 2,
-        "DL": 0,
-        "LB": 4,
-        "DB": 1
+        "DL": 2,
+        "LB": 3,
+        "DB": 0
       }
     },
     {
       "team": "TTAB",
       "teamId": "ttab",
-      "record": "3-4-0",
+      "record": "4-5-0",
       "playable": {
         "RB": 1,
-        "WR": 7,
+        "WR": 4,
         "DL": 1,
         "LB": 5,
         "DB": 3
       },
       "usable": {
         "RB": 1,
-        "WR": 3,
-        "DL": 0,
+        "WR": 1,
+        "DL": 1,
         "LB": 3,
-        "DB": 2
+        "DB": 0
       }
     },
     {
       "team": "Ultron",
       "teamId": "ultron",
-      "record": "3-4-0",
+      "record": "4-5-0",
       "playable": {
-        "RB": 3,
+        "RB": 1,
         "WR": 2,
-        "DL": 1,
-        "LB": 5,
-        "DB": 3
+        "DL": 2,
+        "LB": 7,
+        "DB": 2
       },
       "usable": {
-        "RB": 3,
-        "WR": 2,
+        "RB": 1,
+        "WR": 1,
         "DL": 1,
         "LB": 4,
-        "DB": 3
+        "DB": 2
       }
     },
     {
       "team": "Valley Old Goats",
       "teamId": "goats",
-      "record": "5-2-0",
+      "record": "6-3-0",
       "playable": {
-        "RB": 5,
-        "WR": 3,
+        "RB": 3,
+        "WR": 1,
         "DL": 2,
-        "LB": 5,
-        "DB": 2
+        "LB": 6,
+        "DB": 1
       },
       "usable": {
-        "RB": 4,
-        "WR": 1,
+        "RB": 3,
+        "WR": 0,
         "DL": 1,
-        "LB": 5,
-        "DB": 2
+        "LB": 6,
+        "DB": 0
       }
     }
   ],
   "ideas": [
     {
       "rank": 1,
-      "partner": "Ultron",
-      "partnerId": "ultron",
-      "record": "3-4-0",
-      "faab": 7,
+      "partner": "Substation",
+      "partnerId": "substation",
+      "record": "5-4-0",
+      "faab": 5,
       "shape": "1-for-1",
       "give": [
         {
           "name": "Trenton Simpson",
           "pos": "LB",
           "nfl": "BAL",
-          "ros": 157.3
+          "ros": 136.7
         }
       ],
       "get": [
         {
-          "name": "Rhamondre Stevenson",
+          "name": "Kenneth Gainwell",
           "pos": "RB",
-          "nfl": "NE",
-          "ros": 115.2
+          "nfl": "TB",
+          "ros": 110.6
         }
       ],
-      "valueDelta": 54.5,
-      "partnerDelta": 7.7,
-      "fitScore": 83,
-      "whyItWorksForThem": "Ultron is deep at RB (3 usable), so Rhamondre Stevenson is a back they can move, and Trenton Simpson (LB) would step into their lineup."
+      "valueDelta": 24.2,
+      "partnerDelta": 4.5,
+      "fitScore": 79,
+      "whyItWorksForThem": "Substation is deep at RB (3 usable), so Kenneth Gainwell is a back they can move, and Trenton Simpson (LB) would step into their lineup."
     },
     {
       "rank": 2,
-      "partner": "Ultron",
-      "partnerId": "ultron",
-      "record": "3-4-0",
-      "faab": 7,
+      "partner": "Little Ass Boys",
+      "partnerId": "lab",
+      "record": "5-4-0",
+      "faab": 50,
       "shape": "1-for-1",
       "give": [
         {
           "name": "Trenton Simpson",
           "pos": "LB",
           "nfl": "BAL",
-          "ros": 157.3
+          "ros": 136.7
         }
       ],
       "get": [
         {
-          "name": "Omarion Hampton",
+          "name": "Ashton Jeanty",
           "pos": "RB",
-          "nfl": "LAC",
-          "ros": 101.0
+          "nfl": "LV",
+          "ros": 95.9
         }
       ],
-      "valueDelta": 40.2,
-      "partnerDelta": 21.9,
-      "fitScore": 83,
-      "whyItWorksForThem": "Ultron is deep at RB (3 usable), so Omarion Hampton is a back they can move, and Trenton Simpson (LB) would step into their lineup."
+      "valueDelta": 9.5,
+      "partnerDelta": 1.6,
+      "fitScore": 75,
+      "whyItWorksForThem": "Little Ass Boys is deep at RB (3 usable), so Ashton Jeanty is a back they can move, and Trenton Simpson (LB) would step into their lineup."
     },
     {
       "rank": 3,
-      "partner": "Mrs. Doubtpfizer",
-      "partnerId": "doubtpfizer",
-      "record": "3-4-0",
-      "faab": 75,
+      "partner": "Substation",
+      "partnerId": "substation",
+      "record": "5-4-0",
+      "faab": 5,
       "shape": "1-for-1",
       "give": [
         {
           "name": "Trenton Simpson",
           "pos": "LB",
           "nfl": "BAL",
-          "ros": 157.3
+          "ros": 136.7
         }
       ],
       "get": [
         {
-          "name": "Blake Corum",
+          "name": "Rachaad White",
           "pos": "RB",
-          "nfl": "LAR",
-          "ros": 93.6
+          "nfl": "WAS",
+          "ros": 94.4
         }
       ],
-      "valueDelta": 32.8,
-      "partnerDelta": 0.1,
-      "fitScore": 81,
-      "whyItWorksForThem": "Mrs. Doubtpfizer is deep at RB (3 usable), so Blake Corum is a back they can move, and Trenton Simpson (LB) would step into their lineup. Their lineup stays about even."
+      "valueDelta": 8.0,
+      "partnerDelta": 20.7,
+      "fitScore": 75,
+      "whyItWorksForThem": "Substation is deep at RB (3 usable), so Rachaad White is a back they can move, and Trenton Simpson (LB) would step into their lineup."
     },
     {
       "rank": 4,
-      "partner": "Valley Old Goats",
-      "partnerId": "goats",
-      "record": "5-2-0",
-      "faab": 64,
+      "partner": "Newman Lake Sleep Paralysis Demons",
+      "partnerId": "newman",
+      "record": "4-5-0",
+      "faab": 44,
       "shape": "1-for-1",
       "give": [
         {
-          "name": "Frankie Luvu",
+          "name": "Trenton Simpson",
           "pos": "LB",
-          "nfl": "WAS",
-          "ros": 184.5
+          "nfl": "BAL",
+          "ros": 136.7
         }
       ],
       "get": [
         {
-          "name": "Josh Jacobs",
-          "pos": "RB",
-          "nfl": "GB",
-          "ros": 157.5
+          "name": "Azeez Al-Shaair",
+          "pos": "LB",
+          "nfl": "HOU",
+          "ros": 147.6
         }
       ],
-      "valueDelta": 69.5,
-      "partnerDelta": 5.2,
-      "fitScore": 80,
-      "whyItWorksForThem": "Valley Old Goats is deep at RB (4 usable), so Josh Jacobs is a back they can move, and Frankie Luvu (LB) would step into their lineup."
+      "valueDelta": 7.1,
+      "partnerDelta": -10.9,
+      "fitScore": 69,
+      "whyItWorksForThem": "Newman Lake Sleep Paralysis Demons is deep at LB (5 usable), so Azeez Al-Shaair is a linebacker they can move, and Trenton Simpson (LB) would step into their lineup. Their lineup gives up a few points to make the deal."
     },
     {
       "rank": 5,
-      "partner": "Valley Old Goats",
-      "partnerId": "goats",
-      "record": "5-2-0",
-      "faab": 64,
+      "partner": "Indian Trail Slumlords",
+      "partnerId": "slumlords",
+      "record": "5-4-0",
+      "faab": 0,
       "shape": "1-for-1",
       "give": [
         {
-          "name": "Fred Warner",
+          "name": "Trenton Simpson",
           "pos": "LB",
-          "nfl": "SF",
-          "ros": 239.3
+          "nfl": "BAL",
+          "ros": 136.7
         }
       ],
       "get": [
         {
-          "name": "Derrick Henry",
-          "pos": "RB",
-          "nfl": "BAL",
-          "ros": 172.8
+          "name": "Jeffery Simmons",
+          "pos": "DL",
+          "nfl": "CHI",
+          "ros": 145.8
         }
       ],
-      "valueDelta": 30.1,
-      "partnerDelta": 44.7,
-      "fitScore": 78,
-      "whyItWorksForThem": "Valley Old Goats is deep at RB (4 usable), so Derrick Henry is a back they can move, and Fred Warner (LB) would step into their lineup."
+      "valueDelta": 19.3,
+      "partnerDelta": -9.1,
+      "fitScore": 68,
+      "whyItWorksForThem": "Indian Trail Slumlords is deep at DL (3 usable), so Jeffery Simmons is a lineman they can move, and Trenton Simpson (LB) would step into their lineup. Their lineup gives up a few points to make the deal."
     },
     {
       "rank": 6,
-      "partner": "Valley Old Goats",
-      "partnerId": "goats",
-      "record": "5-2-0",
-      "faab": 64,
+      "partner": "Mrs. Doubtpfizer",
+      "partnerId": "doubtpfizer",
+      "record": "4-5-0",
+      "faab": 70,
       "shape": "1-for-1",
       "give": [
         {
           "name": "Fred Warner",
           "pos": "LB",
           "nfl": "SF",
-          "ros": 239.3
+          "ros": 197.6
         }
       ],
       "get": [
         {
-          "name": "Bucky Irving",
-          "pos": "RB",
-          "nfl": "TB",
-          "ros": 170.1
-        }
-      ],
-      "valueDelta": 27.4,
-      "partnerDelta": 47.4,
-      "fitScore": 77,
-      "whyItWorksForThem": "Valley Old Goats is deep at RB (4 usable), so Bucky Irving is a back they can move, and Fred Warner (LB) would step into their lineup."
-    },
-    {
-      "rank": 7,
-      "partner": "Indian Trail Slumlords",
-      "partnerId": "slumlords",
-      "record": "3-4-0",
-      "faab": 0,
-      "shape": "1-for-1",
-      "give": [
-        {
-          "name": "Trenton Simpson",
+          "name": "Nakobe Dean",
           "pos": "LB",
-          "nfl": "BAL",
-          "ros": 157.3
+          "nfl": "LV",
+          "ros": 203.4
         }
       ],
-      "get": [
-        {
-          "name": "Quinshon Judkins",
-          "pos": "RB",
-          "nfl": "CLE",
-          "ros": 113.4
-        }
-      ],
-      "valueDelta": 52.7,
-      "partnerDelta": -3.9,
-      "fitScore": 73,
-      "whyItWorksForThem": "Indian Trail Slumlords is deep at RB (3 usable), so Quinshon Judkins is a back they can move, and Trenton Simpson (LB) would step into their lineup. Their lineup stays about even."
-    },
-    {
-      "rank": 8,
-      "partner": "Little Ass Boys",
-      "partnerId": "lab",
-      "record": "5-2-0",
-      "faab": 56,
-      "shape": "1-for-1",
-      "give": [
-        {
-          "name": "Trenton Simpson",
-          "pos": "LB",
-          "nfl": "BAL",
-          "ros": 157.3
-        }
-      ],
-      "get": [
-        {
-          "name": "Jeremiyah Love",
-          "pos": "RB",
-          "nfl": "ARI",
-          "ros": 93.2
-        }
-      ],
-      "valueDelta": 32.4,
-      "partnerDelta": -3.5,
-      "fitScore": 71,
-      "whyItWorksForThem": "Little Ass Boys is deep at RB (3 usable), so Jeremiyah Love is a back they can move, and Trenton Simpson (LB) would step into their lineup. Their lineup stays about even."
-    },
-    {
-      "rank": 9,
-      "partner": "Indian Trail Slumlords",
-      "partnerId": "slumlords",
-      "record": "3-4-0",
-      "faab": 0,
-      "shape": "1-for-1",
-      "give": [
-        {
-          "name": "Fred Warner",
-          "pos": "LB",
-          "nfl": "SF",
-          "ros": 239.3
-        }
-      ],
-      "get": [
-        {
-          "name": "James Cook",
-          "pos": "RB",
-          "nfl": "BUF",
-          "ros": 194.0
-        }
-      ],
-      "valueDelta": 51.3,
-      "partnerDelta": -2.5,
-      "fitScore": 66,
-      "whyItWorksForThem": "Indian Trail Slumlords is deep at RB (3 usable), so James Cook is a back they can move, and Fred Warner (LB) would step into their lineup. Their lineup stays about even."
+      "valueDelta": 5.8,
+      "partnerDelta": -5.8,
+      "fitScore": 51,
+      "whyItWorksForThem": "Mrs. Doubtpfizer is deep at LB (3 usable), so Nakobe Dean is a linebacker they can move, and Fred Warner (LB) would step into their lineup. Their lineup gives up a few points to make the deal."
     }
   ]
 }

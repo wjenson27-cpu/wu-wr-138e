@@ -45,15 +45,26 @@ function side(list){
       '<div class="sub">'+e(p.nfl||'')+(p.ros!=null?' · '+Number(p.ros).toFixed(1)+' ROS':'')+'</div>';
   }).join('');
 }
+function names(list){return (list&&list.length)?list.join(', '):'none'}
 fetch('data/trade-finder.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
-  document.getElementById('strip').innerHTML='Week <span>'+e(d.week)+'</span> · roster <span>'+e(d.asOfRoster)+'</span> · FAAB <span>$'+e(d.faab)+'</span> · <span>'+d.ideas.length+' ideas</span>';
+  var ideas=(d&&d.ideas)||[];
+  var ed=(d&&d.eddied)||{};
+  var surplus=ed.surplus||{};
+  var keeps=d.keeps||[];
+  var ending=d.excludedSeasonEnding||[];
+  var holds=d.holds||[];
+  document.getElementById('strip').innerHTML='Week <span>'+e(d.week)+'</span> · roster <span>'+e(d.asOfRoster)+'</span> · FAAB <span>$'+e(d.faab)+'</span> · <span>'+ideas.length+' ideas</span>';
   var h='<div class="banner">Recommend-only. Bill decides what to do with these. Nothing on this page is sent anywhere.</div>';
   h+='<div class="card"><h2>What the Eddies are shopping</h2>';
-  h+='<p>'+e(d.eddied.needs)+'</p>';
-  h+='<p>LB surplus: <b>'+e(d.eddied.surplus.LB.join(', '))+'</b>. Bench WRs: <b>'+e(d.eddied.surplus.WR.join(', '))+'</b>.</p>';
-  h+='<p>Keeps, never outgoing: <b>'+e(d.keeps.join(', '))+'</b>. Season-ending and left out: <b>'+e(d.excludedSeasonEnding.join(', '))+'</b>.</p></div>';
+  h+='<p>'+e(ed.needs||'')+'</p>';
+  h+='<p>LB surplus: <b>'+e(names(surplus.LB))+'</b>. Bench WRs: <b>'+e(names(surplus.WR))+'</b>.</p>';
+  if(holds.length) h+='<p>Upside holds, never outgoing: <b>'+e(holds.join(', '))+'</b>.</p>';
+  h+='<p>Keeps, never outgoing: <b>'+e(names(keeps))+'</b>. Season-ending and left out: <b>'+e(names(ending))+'</b>.</p></div>';
   h+='<div class="sec">Ranked ideas</div>';
-  d.ideas.forEach(function(idea){
+  if(!ideas.length){
+    h+='<div class="card"><h3>No ideas</h3><p>No ideas on this roster. Nothing cleared the fit bar. The depth table below is still the board.</p></div>';
+  }
+  ideas.forEach(function(idea){
     var tone=idea.valueDelta>0?'':' flat';
     h+='<div class="card idea"><h3><span>'+idea.rank+'. '+e(club(idea.partner))+'</span><span class="fit">fit '+idea.fitScore+'</span></h3>';
     h+='<p class="tiny">'+e(idea.record)+(idea.faab!=null?' · FAAB $'+e(idea.faab):'')+' · '+e(idea.shape)+'</p>';
@@ -69,7 +80,7 @@ fetch('data/trade-finder.json',{cache:'no-store'}).then(function(r){return r.jso
     h+='</div>';
   }
   h+='<div class="sec">Usable pieces around the league</div>';
-  h+='<p class="tiny">Usable means above the ROS bar in the method note (about 9 points a game at RB, 12 at LB/DL/DB). TTAB is Towner Top Aga Bottom.</p>';
+  h+='<p class="tiny">Usable means above the ROS bar in the method note. TTAB is Towner Top Aga Bottom.</p>';
   h+='<div class="scroll"><table class="sheet"><thead><tr><th>Club</th><th class="num">RB</th><th class="num">WR</th><th class="num">DL</th><th class="num">LB</th><th class="num">DB</th></tr></thead><tbody>';
   (d.leagueDepth||[]).forEach(function(t){
     var u=t.usable||{};
