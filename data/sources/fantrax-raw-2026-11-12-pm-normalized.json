@@ -1,0 +1,3924 @@
+{
+ "league": "Wheels Up Collective",
+ "url": "https://www.fantrax.com/fantasy/league/hms8onqvmsb3ulsx/home",
+ "signed_in_as": "Eagle Ridge Eddies",
+ "stale": false,
+ "scraped": "2026-11-12 approximately 4:07 PM PT",
+ "week": 10,
+ "fantrax_week_confirmed": 10,
+ "week_header_now": {
+  "week": "Week 10 (Nov 12, 2026 - Nov 18, 2026)",
+  "eddies_home_or_away": "home",
+  "opponent": "Little Ass Boys",
+  "eddies_proj": 208.9,
+  "opp_proj": 205.5,
+  "score": "0-0",
+  "records": "Eagle Ridge Eddies 7-2-0; Little Ass Boys 5-4-0",
+  "status": "Week 10 matchup; both teams at 0 points (TNF not final)."
+ },
+ "source_timestamps_pt": {
+  "home_header_and_matchup": "2026-11-12 approximately 4:01 PM PT",
+  "rosters_and_icons": "2026-11-12 approximately 4:03 PM PT",
+  "faab_team_info": "2026-11-12 approximately 4:03 PM PT",
+  "transaction_history": "2026-11-12 approximately 4:03 PM PT",
+  "completed_trades_history": "2026-11-12 approximately 4:04 PM PT",
+  "trade_block_all": "2026-11-12 approximately 4:04 PM PT",
+  "pending_counts_only": "2026-11-12 approximately 4:04 PM PT"
+ },
+ "faab_remaining": {
+  "Drummond Dongers": 1,
+  "Eagle Ridge Eddies": 25,
+  "Indian Trail Slumlords": 0,
+  "Little Ass Boys": 50,
+  "Morningside Muff Divers": 8,
+  "Mrs. Doubtpfizer": 70,
+  "Newman Lake Sleep Paralysis Demons": 44,
+  "Pocket Agents": 69,
+  "Saltese Slamm": 3,
+  "Substation": 5,
+  "The Hypersecretors": 17,
+  "Towner Top Aga Bottom": 3,
+  "Ultron": 0,
+  "Valley Old Goats": 18
+ },
+ "records": {
+  "Drummond Dongers": "3-6-0",
+  "Eagle Ridge Eddies": "7-2-0",
+  "Indian Trail Slumlords": "5-4-0",
+  "Little Ass Boys": "5-4-0",
+  "Morningside Muff Divers": "3-6-0",
+  "Mrs. Doubtpfizer": "4-5-0",
+  "Newman Lake Sleep Paralysis Demons": "4-5-0",
+  "Pocket Agents": "5-4-0",
+  "Saltese Slamm": "3-6-0",
+  "Substation": "5-4-0",
+  "The Hypersecretors": "5-4-0",
+  "Towner Top Aga Bottom": "4-5-0",
+  "Ultron": "4-5-0",
+  "Valley Old Goats": "6-3-0"
+ },
+ "rosters": [
+  {
+   "team": "Drummond Dongers",
+   "player_count": 20,
+   "players": [
+    {
+     "name": "Joe Burrow",
+     "pos": "QB",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tony Pollard",
+     "pos": "RB",
+     "nfl": "TEN",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Parker Washington",
+     "pos": "WR",
+     "nfl": "JAX",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "T.J. Hockenson",
+     "pos": "TE",
+     "nfl": "MIN",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "D.J. Moore",
+     "pos": "WR",
+     "nfl": "BUF",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chris Olave",
+     "pos": "WR",
+     "nfl": "NO",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "nfl": "SEA",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Audric Estime",
+     "pos": "RB",
+     "nfl": "NO",
+     "slot": "reserve",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ladd McConkey",
+     "pos": "WR",
+     "nfl": "LAC",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Brenton Strange",
+     "pos": "TE",
+     "nfl": "JAX",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "KaVontae Turpin",
+     "pos": "WR",
+     "nfl": "DAL",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "David Bailey",
+     "pos": "DL,LB",
+     "nfl": "NYJ",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Christian Elliss",
+     "pos": "LB",
+     "nfl": "NE",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chuck Clark",
+     "pos": "DB",
+     "nfl": "DET",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jalen Ramsey",
+     "pos": "DB",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Nick Cross",
+     "pos": "DB",
+     "nfl": "WAS",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Isaiah McDuffie",
+     "pos": "LB",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Xavier McKinney",
+     "pos": "DB",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Zach Allen",
+     "pos": "DL",
+     "nfl": "DEN",
+     "slot": "reserve",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jevon Holland",
+     "pos": "DB",
+     "nfl": "NYG",
+     "slot": "reserve",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "Eagle Ridge Eddies",
+   "player_count": 22,
+   "players": [
+    {
+     "name": "Brock Purdy",
+     "pos": "QB",
+     "nfl": "SF",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Breece Hall",
+     "pos": "RB",
+     "nfl": "NYJ",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Malik Nabers",
+     "pos": "WR",
+     "nfl": "NYG",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Brock Bowers",
+     "pos": "TE",
+     "nfl": "LV",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Zach Charbonnet",
+     "pos": "RB",
+     "nfl": "SEA",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chimere Dike",
+     "pos": "WR",
+     "nfl": "TEN",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Garrett Wilson",
+     "pos": "WR",
+     "nfl": "NYJ",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Josh Downs",
+     "pos": "WR",
+     "nfl": "KC",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Ja'Kobi Lane",
+     "pos": "WR",
+     "nfl": "BAL",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Jalen Coker",
+     "pos": "WR",
+     "nfl": "CAR",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Colby Parkinson",
+     "pos": "TE",
+     "nfl": "LAR",
+     "slot": "ir",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Travis Etienne",
+     "pos": "RB",
+     "nfl": "NO",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "George Karlaftis",
+     "pos": "DL",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Fred Warner",
+     "pos": "LB",
+     "nfl": "SF",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kyle Hamilton",
+     "pos": "DB",
+     "nfl": "BAL",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Quentin Lake",
+     "pos": "DB",
+     "nfl": "LAR",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jordyn Brooks",
+     "pos": "LB",
+     "nfl": "MIA",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Frankie Luvu",
+     "pos": "LB",
+     "nfl": "WAS",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Evan Williams",
+     "pos": "DB",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Cole Bishop",
+     "pos": "DB",
+     "nfl": "BUF",
+     "slot": "reserve",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Cedric Gray",
+     "pos": "LB",
+     "nfl": "TEN",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Trenton Simpson",
+     "pos": "LB",
+     "nfl": "BAL",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    }
+   ]
+  },
+  {
+   "team": "Indian Trail Slumlords",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Drake Maye",
+     "pos": "QB",
+     "nfl": "NE",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jahmyr Gibbs",
+     "pos": "RB",
+     "nfl": "DET",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dohnte Meyers",
+     "pos": "WR",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Harold Fannin",
+     "pos": "TE",
+     "nfl": "CLE",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "James Cook",
+     "pos": "RB",
+     "nfl": "BUF",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Demario Douglas",
+     "pos": "WR",
+     "nfl": "NE",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Quinshon Judkins",
+     "pos": "RB",
+     "nfl": "CLE",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tutu Atwell",
+     "pos": "WR",
+     "nfl": "LAR",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Devin Duvernay",
+     "pos": "WR",
+     "nfl": "ARI",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Wan'Dale Robinson",
+     "pos": "WR",
+     "nfl": "TEN",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Isiah Pacheco",
+     "pos": "RB",
+     "nfl": "DET",
+     "slot": "ir",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Gregory Rousseau",
+     "pos": "DL,LB",
+     "nfl": "BUF",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Anthony Hill",
+     "pos": "LB",
+     "nfl": "TEN",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": true,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Budda Baker",
+     "pos": "DB",
+     "nfl": "ARI",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Devon Witherspoon",
+     "pos": "DB",
+     "nfl": "SEA",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chamarri Conner",
+     "pos": "DB",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Maxx Crosby",
+     "pos": "DL",
+     "nfl": "LV",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Carl Granderson",
+     "pos": "DL",
+     "nfl": "NO",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Alex Anzalone",
+     "pos": "LB",
+     "nfl": "TB",
+     "slot": "reserve",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jaden Dugger",
+     "pos": "LB",
+     "nfl": "SF",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jeffery Simmons",
+     "pos": "DL",
+     "nfl": "CHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Talanoa Hufanga",
+     "pos": "DB",
+     "nfl": "DEN",
+     "slot": "ir",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Leonard Williams",
+     "pos": "DL",
+     "nfl": "SEA",
+     "slot": "ir",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "Little Ass Boys",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Jayden Daniels",
+     "pos": "QB",
+     "nfl": "WAS",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kyren Williams",
+     "pos": "RB",
+     "nfl": "LAR",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Carnell Tate",
+     "pos": "WR",
+     "nfl": "TEN",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": true,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Isaiah Likely",
+     "pos": "TE",
+     "nfl": "NYG",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ashton Jeanty",
+     "pos": "RB",
+     "nfl": "LV",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Khalil Shakir",
+     "pos": "WR",
+     "nfl": "BUF",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jaylen Warren",
+     "pos": "RB",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "nfl": "LAR",
+     "slot": "reserve",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Caleb Douglas",
+     "pos": "WR",
+     "nfl": "MIA",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Mike Evans",
+     "pos": "WR",
+     "nfl": "SF",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dylan Sampson",
+     "pos": "RB",
+     "nfl": "CLE",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Puka Nacua",
+     "pos": "WR",
+     "nfl": "LAR",
+     "slot": "ir",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED_OUT"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jeremiyah Love",
+     "pos": "RB",
+     "nfl": "ARI",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Aidan Hutchinson",
+     "pos": "DL",
+     "nfl": "DET",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Nathan Landman",
+     "pos": "LB",
+     "nfl": "LAR",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Minkah Fitzpatrick",
+     "pos": "DB",
+     "nfl": "NYJ",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Marcus Jones",
+     "pos": "DB",
+     "nfl": "NE",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Demetrius Knight",
+     "pos": "LB",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Drue Tranquill",
+     "pos": "LB",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Quay Walker",
+     "pos": "LB",
+     "nfl": "LV",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jacob Parrish",
+     "pos": "DB",
+     "nfl": "TB",
+     "slot": "reserve",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Akeem Davis-Gaither",
+     "pos": "LB",
+     "nfl": "IND",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jihaad Campbell",
+     "pos": "LB",
+     "nfl": "PHI",
+     "slot": "ir",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "Morningside Muff Divers",
+   "player_count": 21,
+   "players": [
+    {
+     "name": "Drew Lock",
+     "pos": "QB",
+     "nfl": "SEA",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ollie Gordon",
+     "pos": "RB",
+     "nfl": "MIA",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Justin Jefferson",
+     "pos": "WR",
+     "nfl": "MIN",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Travis Kelce",
+     "pos": "TE",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Denzel Boston",
+     "pos": "WR",
+     "nfl": "CLE",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jadarian Price",
+     "pos": "RB",
+     "nfl": "SEA",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Xavier Worthy",
+     "pos": "WR",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jordan Addison",
+     "pos": "WR",
+     "nfl": "MIN",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Keenan Allen",
+     "pos": "WR",
+     "nfl": "SF",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kimani Vidal",
+     "pos": "RB",
+     "nfl": "LAC",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Deebo Samuel",
+     "pos": "WR",
+     "nfl": "SF",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Lukas Van Ness",
+     "pos": "DL",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ventrell Miller",
+     "pos": "LB",
+     "nfl": "JAX",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jessie Bates",
+     "pos": "DB",
+     "nfl": "JAX",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Malaki Starks",
+     "pos": "DB",
+     "nfl": "BAL",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Terrel Bernard",
+     "pos": "LB",
+     "nfl": "BUF",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Daiyan Henley",
+     "pos": "LB",
+     "nfl": "LAC",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Pete Werner",
+     "pos": "LB",
+     "nfl": "NO",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Derrick Barnes",
+     "pos": "LB",
+     "nfl": "DET",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Derwin James",
+     "pos": "DB",
+     "nfl": "LAC",
+     "slot": "ir",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Bobby Okereke",
+     "pos": "LB",
+     "nfl": "CAR",
+     "slot": "ir",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    }
+   ]
+  },
+  {
+   "team": "Mrs. Doubtpfizer",
+   "player_count": 21,
+   "players": [
+    {
+     "name": "Dak Prescott",
+     "pos": "QB",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Christian McCaffrey",
+     "pos": "RB",
+     "nfl": "SF",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Nico Collins",
+     "pos": "WR",
+     "nfl": "HOU",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Hunter Henry",
+     "pos": "TE",
+     "nfl": "NE",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Blake Corum",
+     "pos": "RB",
+     "nfl": "LAR",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chuba Hubbard",
+     "pos": "RB",
+     "nfl": "CAR",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Rashee Rice",
+     "pos": "WR",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kaelon Black",
+     "pos": "RB",
+     "nfl": "SF",
+     "slot": "reserve",
+     "rosterSlotPosition": "RB",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Braelon Allen",
+     "pos": "RB",
+     "nfl": "NYJ",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Colston Loveland",
+     "pos": "TE",
+     "nfl": "CHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Rome Odunze",
+     "pos": "WR",
+     "nfl": "CHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kyle Pitts",
+     "pos": "TE",
+     "nfl": "ATL",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Byron Young",
+     "pos": "DL,LB,ID",
+     "nfl": "LAR",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Nakobe Dean",
+     "pos": "LB",
+     "nfl": "LV",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kamari Lassiter",
+     "pos": "DB",
+     "nfl": "HOU",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Malik Mustapha",
+     "pos": "DB",
+     "nfl": "SF",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ji'Ayir Brown",
+     "pos": "DB",
+     "nfl": "SF",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "DeMarvion Overshown",
+     "pos": "LB",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Sonny Styles",
+     "pos": "LB",
+     "nfl": "WAS",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Alex Singleton",
+     "pos": "LB",
+     "nfl": "DEN",
+     "slot": "reserve",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Reed Blankenship",
+     "pos": "DB",
+     "nfl": "HOU",
+     "slot": "ir",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "Newman Lake Sleep Paralysis Demons",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Jordan Love",
+     "pos": "QB",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Jonathan Taylor",
+     "pos": "RB",
+     "nfl": "IND",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Zay Flowers",
+     "pos": "WR",
+     "nfl": "BAL",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Tyler Warren",
+     "pos": "TE",
+     "nfl": "IND",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "A.J. Brown",
+     "pos": "WR",
+     "nfl": "NE",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Matthew Golden",
+     "pos": "WR",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Tee Higgins",
+     "pos": "WR",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Myles Price",
+     "pos": "WR",
+     "nfl": "MIN",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Juwan Johnson",
+     "pos": "TE",
+     "nfl": "NO",
+     "slot": "reserve",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Jordan Mason",
+     "pos": "RB",
+     "nfl": "MIN",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Michael Mayer",
+     "pos": "TE",
+     "nfl": "LV",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Davante Adams",
+     "pos": "WR",
+     "nfl": "LAR",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "TreVeyon Henderson",
+     "pos": "RB",
+     "nfl": "NE",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED_OUT"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Andrew Van Ginkel",
+     "pos": "DL,LB,ID",
+     "nfl": "MIN",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Roquan Smith",
+     "pos": "LB",
+     "nfl": "BAL",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jordan Battle",
+     "pos": "DB",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Kevin Winston",
+     "pos": "DB",
+     "nfl": "TEN",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Azeez Al-Shaair",
+     "pos": "LB",
+     "nfl": "HOU",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Tyrel Dodson",
+     "pos": "LB",
+     "nfl": "CAR",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ty'Ron Hopper",
+     "pos": "LB",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Jeremiah Trotter",
+     "pos": "LB",
+     "nfl": "PHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Xavier Watts",
+     "pos": "DB",
+     "nfl": "ATL",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Zaire Franklin",
+     "pos": "LB",
+     "nfl": "GB",
+     "slot": "ir",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    }
+   ]
+  },
+  {
+   "team": "Pocket Agents",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Jared Goff",
+     "pos": "QB",
+     "nfl": "DET",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Woody Marks",
+     "pos": "RB",
+     "nfl": "HOU",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tetairoa McMillan",
+     "pos": "WR",
+     "nfl": "CAR",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chigoziem Okonkwo",
+     "pos": "TE",
+     "nfl": "WAS",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dalton Kincaid",
+     "pos": "TE",
+     "nfl": "BUF",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "CeeDee Lamb",
+     "pos": "WR",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Trey McBride",
+     "pos": "TE",
+     "nfl": "ARI",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tyler Shough",
+     "pos": "QB",
+     "nfl": "NO",
+     "slot": "reserve",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Mike Washington",
+     "pos": "RB",
+     "nfl": "LV",
+     "slot": "reserve",
+     "rosterSlotPosition": "RB",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Rashid Shaheed",
+     "pos": "WR",
+     "nfl": "SEA",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jonah Coleman",
+     "pos": "RB",
+     "nfl": "DEN",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Saquon Barkley",
+     "pos": "RB",
+     "nfl": "PHI",
+     "slot": "ir",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jaylen Waddle",
+     "pos": "WR",
+     "nfl": "DEN",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Will Anderson Jr.",
+     "pos": "DL",
+     "nfl": "HOU",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Barrett Carter",
+     "pos": "LB",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tony Adams",
+     "pos": "DB",
+     "nfl": "TEN",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dane Belton",
+     "pos": "DB",
+     "nfl": "NYJ",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Troy Dye",
+     "pos": "LB",
+     "nfl": "LAC",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Amani Hooker",
+     "pos": "DB",
+     "nfl": "BUF",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ernest Jones",
+     "pos": "LB",
+     "nfl": "SEA",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Cooper DeJean",
+     "pos": "DB",
+     "nfl": "PHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Josiah Trotter",
+     "pos": "LB",
+     "nfl": "TB",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Brandon Jones",
+     "pos": "DB",
+     "nfl": "DEN",
+     "slot": "ir",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "Saltese Slamm",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Aaron Rodgers",
+     "pos": "QB",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Bhayshul Tuten",
+     "pos": "RB",
+     "nfl": "JAX",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Adonai Mitchell",
+     "pos": "WR",
+     "nfl": "NYJ",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Darnell Washington",
+     "pos": "TE",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "nfl": "ARI",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Rico Dowdle",
+     "pos": "RB",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Aaron Jones",
+     "pos": "RB",
+     "nfl": "MIN",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "C.J. Stroud",
+     "pos": "QB",
+     "nfl": "HOU",
+     "slot": "reserve",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chris Rodriguez Jr.",
+     "pos": "RB",
+     "nfl": "JAX",
+     "slot": "reserve",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jonathon Brooks",
+     "pos": "RB",
+     "nfl": "CAR",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "D'Andre Swift",
+     "pos": "RB",
+     "nfl": "CHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Kyle Monangai",
+     "pos": "RB",
+     "nfl": "CHI",
+     "slot": "ir",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "RJ Harvey",
+     "pos": "RB",
+     "nfl": "DEN",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "David Montgomery",
+     "pos": "RB",
+     "nfl": "HOU",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Mason Graham",
+     "pos": "DL",
+     "nfl": "CLE",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jamien Sherwood",
+     "pos": "LB",
+     "nfl": "NYJ",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jaquan Brisker",
+     "pos": "DB",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jonas Sanker",
+     "pos": "DB",
+     "nfl": "NO",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Bryan Cook",
+     "pos": "DB",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dre Greenlaw",
+     "pos": "LB",
+     "nfl": "SF",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Carson Schwesinger",
+     "pos": "LB",
+     "nfl": "CLE",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Nick Niemann",
+     "pos": "LB",
+     "nfl": "GB",
+     "slot": "reserve",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dee Winters",
+     "pos": "LB",
+     "nfl": "DAL",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    }
+   ]
+  },
+  {
+   "team": "Substation",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Trevor Lawrence",
+     "pos": "QB",
+     "nfl": "JAX",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Cameron Skattebo",
+     "pos": "RB",
+     "nfl": "NYG",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ja'Marr Chase",
+     "pos": "WR",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tucker Kraft",
+     "pos": "TE",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Germie Bernard",
+     "pos": "WR",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "KC Concepcion",
+     "pos": "WR",
+     "nfl": "CLE",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jordyn Tyson",
+     "pos": "WR",
+     "nfl": "NO",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kenneth Gainwell",
+     "pos": "RB",
+     "nfl": "TB",
+     "slot": "reserve",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Justice Hill",
+     "pos": "RB",
+     "nfl": "BAL",
+     "slot": "reserve",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Rachaad White",
+     "pos": "RB",
+     "nfl": "WAS",
+     "slot": "reserve",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Brevyn Spann-Ford",
+     "pos": "TE",
+     "nfl": "DAL",
+     "slot": "reserve",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tre Tucker",
+     "pos": "WR",
+     "nfl": "LV",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jakobi Meyers",
+     "pos": "WR",
+     "nfl": "JAX",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dexter Lawrence",
+     "pos": "DL",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Malcolm Rodriguez",
+     "pos": "LB",
+     "nfl": "DET",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jeremy Chinn",
+     "pos": "DB",
+     "nfl": "LV",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jalen Pitre",
+     "pos": "DB",
+     "nfl": "HOU",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kaden Elliss",
+     "pos": "LB",
+     "nfl": "NO",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Henry To'oTo'o",
+     "pos": "LB",
+     "nfl": "HOU",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Eric Wilson",
+     "pos": "LB",
+     "nfl": "MIN",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tykee Smith",
+     "pos": "DB",
+     "nfl": "TB",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Zack Baun",
+     "pos": "LB",
+     "nfl": "PHI",
+     "slot": "ir",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jack Campbell",
+     "pos": "LB",
+     "nfl": "DET",
+     "slot": "ir",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "The Hypersecretors",
+   "player_count": 24,
+   "players": [
+    {
+     "name": "Josh Allen",
+     "pos": "QB",
+     "nfl": "BUF",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kenneth Walker III",
+     "pos": "RB",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Drake London",
+     "pos": "WR",
+     "nfl": "ATL",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Sam LaPorta",
+     "pos": "TE",
+     "nfl": "DET",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Emmett Johnson",
+     "pos": "RB",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Konata Mumpfield",
+     "pos": "WR",
+     "nfl": "LAR",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jaylen Wright",
+     "pos": "RB",
+     "nfl": "MIA",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Luther Burden",
+     "pos": "WR",
+     "nfl": "CHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Emeka Egbuka",
+     "pos": "WR",
+     "nfl": "TB",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dalton Schultz",
+     "pos": "TE",
+     "nfl": "HOU",
+     "slot": "reserve",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jacory Croskey-Merritt",
+     "pos": "RB",
+     "nfl": "WAS",
+     "slot": "ir",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "De'Zhaun Stribling",
+     "pos": "WR",
+     "nfl": "SF",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Travis Hunter",
+     "pos": "WR,DB",
+     "nfl": "JAX",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chase Young",
+     "pos": "DL",
+     "nfl": "NO",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Jacob Rodriguez",
+     "pos": "LB",
+     "nfl": "MIA",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kamren Curl",
+     "pos": "DB",
+     "nfl": "LAR",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Nick Emmanwori",
+     "pos": "DB",
+     "nfl": "SEA",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Nick Bosa",
+     "pos": "DL",
+     "nfl": "SF",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Shemar James",
+     "pos": "LB",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Payton Wilson",
+     "pos": "LB",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "A.J. Haulcy",
+     "pos": "DB",
+     "nfl": "IND",
+     "slot": "reserve",
+     "rosterSlotPosition": "DB",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Blake Cashman",
+     "pos": "LB",
+     "nfl": "MIN",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Travis Hunter",
+     "pos": "WR,DB",
+     "nfl": "JAX",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Micah Parsons",
+     "pos": "DL,LB",
+     "nfl": "GB",
+     "slot": "ir",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "Towner Top Aga Bottom",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Bryce Young",
+     "pos": "QB",
+     "nfl": "CAR",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Javonte Williams",
+     "pos": "RB",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Jameson Williams",
+     "pos": "WR",
+     "nfl": "DET",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Mark Andrews",
+     "pos": "TE",
+     "nfl": "BAL",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ryan Flournoy",
+     "pos": "WR",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Malik Washington",
+     "pos": "WR",
+     "nfl": "MIA",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Christian Watson",
+     "pos": "WR",
+     "nfl": "GB",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Caleb Williams",
+     "pos": "QB",
+     "nfl": "CHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dallas Goedert",
+     "pos": "TE",
+     "nfl": "PHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Stefon Diggs",
+     "pos": "WR",
+     "nfl": "WAS",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Omar Cooper Jr.",
+     "pos": "WR",
+     "nfl": "NYJ",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "DeVonta Smith",
+     "pos": "WR",
+     "nfl": "PHI",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Quinnen Williams",
+     "pos": "DL",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Demario Davis",
+     "pos": "LB",
+     "nfl": "NYJ",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Caleb Downs",
+     "pos": "DB",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Andrew Wingard",
+     "pos": "DB",
+     "nfl": "ARI",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Micah McFadden",
+     "pos": "LB",
+     "nfl": "NYG",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Harold Perkins",
+     "pos": "LB",
+     "nfl": "ATL",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Patrick Queen",
+     "pos": "LB",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Divine Deablo",
+     "pos": "LB",
+     "nfl": "ATL",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Dillon Thieneman",
+     "pos": "DB",
+     "nfl": "CHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dorian Williams",
+     "pos": "LB",
+     "nfl": "BUF",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": true
+    },
+    {
+     "name": "Brian Branch",
+     "pos": "DB",
+     "nfl": "DET",
+     "slot": "ir",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "Ultron",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Kirk Cousins",
+     "pos": "QB",
+     "nfl": "MIN",
+     "slot": "active",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Bijan Robinson",
+     "pos": "RB",
+     "nfl": "ATL",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Amon-Ra St. Brown",
+     "pos": "WR",
+     "nfl": "DET",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Pat Freiermuth",
+     "pos": "TE",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Barion Brown",
+     "pos": "WR",
+     "nfl": "NO",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Khalil Herbert",
+     "pos": "RB",
+     "nfl": "ATL",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "George Pickens",
+     "pos": "WR",
+     "nfl": "DAL",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "CJ Daniels",
+     "pos": "WR",
+     "nfl": "LAR",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Antonio Williams",
+     "pos": "WR",
+     "nfl": "WAS",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Omarion Hampton",
+     "pos": "RB",
+     "nfl": "LAC",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Terrance Ferguson",
+     "pos": "TE",
+     "nfl": "LAR",
+     "slot": "ir",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [
+      "INJURY_LIST"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Rhamondre Stevenson",
+     "pos": "RB",
+     "nfl": "NE",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Myles Garrett",
+     "pos": "DL,LB",
+     "nfl": "LAR",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Foyesade Oluokun",
+     "pos": "LB",
+     "nfl": "JAX",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "DeMarcco Hellams",
+     "pos": "DB",
+     "nfl": "ATL",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Josh Metellus",
+     "pos": "DB",
+     "nfl": "MIN",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "CJ Allen",
+     "pos": "LB",
+     "nfl": "IND",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Nick Bolton",
+     "pos": "LB",
+     "nfl": "KC",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kendal Daniels",
+     "pos": "LB",
+     "nfl": "ATL",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": true,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Dallas Turner",
+     "pos": "DL,LB,ID",
+     "nfl": "MIN",
+     "slot": "reserve",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ivan Pace",
+     "pos": "LB",
+     "nfl": "MIN",
+     "slot": "reserve",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Mack Wilson",
+     "pos": "LB",
+     "nfl": "ARI",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Ronnie Hickman",
+     "pos": "DB",
+     "nfl": "CLE",
+     "slot": "ir",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  },
+  {
+   "team": "Valley Old Goats",
+   "player_count": 23,
+   "players": [
+    {
+     "name": "Derrick Henry",
+     "pos": "RB",
+     "nfl": "BAL",
+     "slot": "active",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Tank Dell",
+     "pos": "WR",
+     "nfl": "HOU",
+     "slot": "active",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "George Kittle",
+     "pos": "TE",
+     "nfl": "SF",
+     "slot": "active",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Chase Brown",
+     "pos": "RB",
+     "nfl": "CIN",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Corey Kiner",
+     "pos": "RB",
+     "nfl": "NE",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "DK Metcalf",
+     "pos": "WR",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Samaje Perine",
+     "pos": "RB",
+     "nfl": "CIN",
+     "slot": "reserve",
+     "rosterSlotPosition": "RB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Devaughn Vele",
+     "pos": "WR",
+     "nfl": "NO",
+     "slot": "reserve",
+     "rosterSlotPosition": "WR",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Mike Gesicki",
+     "pos": "TE",
+     "nfl": "CIN",
+     "slot": "reserve",
+     "rosterSlotPosition": "TE",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Marvin Harrison",
+     "pos": "WR",
+     "nfl": "HOU",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Bucky Irving",
+     "pos": "RB",
+     "nfl": "TB",
+     "slot": "reserve",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Patrick Mahomes",
+     "pos": "QB",
+     "nfl": "KC",
+     "slot": "ir",
+     "rosterSlotPosition": "QB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Josh Jacobs",
+     "pos": "RB",
+     "nfl": "GB",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED_OUT"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Alvin Kamara",
+     "pos": "RB",
+     "nfl": "NO",
+     "slot": "ir",
+     "rosterSlotPosition": "R W T",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "T.J. Watt",
+     "pos": "DL,LB,ID",
+     "nfl": "PIT",
+     "slot": "active",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Devin Lloyd",
+     "pos": "LB",
+     "nfl": "CAR",
+     "slot": "active",
+     "rosterSlotPosition": "LB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Kevin Byard",
+     "pos": "DB",
+     "nfl": "NE",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Amik Robertson",
+     "pos": "DB",
+     "nfl": "WAS",
+     "slot": "active",
+     "rosterSlotPosition": "DB",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Arvell Reese",
+     "pos": "LB",
+     "nfl": "NYG",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": true,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Drake Thomas",
+     "pos": "LB",
+     "nfl": "SEA",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Quincy Williams",
+     "pos": "LB",
+     "nfl": "CLE",
+     "slot": "active",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Danielle Hunter",
+     "pos": "DL",
+     "nfl": "HOU",
+     "slot": "reserve",
+     "rosterSlotPosition": "DL",
+     "rookie": false,
+     "injury_tags": [
+      "INJURED"
+     ],
+     "injury_text": null,
+     "trade_block_icon": false
+    },
+    {
+     "name": "Devin Bush",
+     "pos": "LB",
+     "nfl": "CHI",
+     "slot": "reserve",
+     "rosterSlotPosition": "ID",
+     "rookie": false,
+     "injury_tags": [],
+     "injury_text": null,
+     "trade_block_icon": false
+    }
+   ]
+  }
+ ],
+ "deleted_rows": [],
+ "completed_trades_new": [],
+ "transactions_since_nov11_1512": [
+  {
+   "datetime_pdt": "2026-11-12 15:33",
+   "team": "Eagle Ridge Eddies",
+   "action": "add Colby Parkinson TE LAR",
+   "faab_bid": null
+  },
+  {
+   "datetime_pdt": "2026-11-12 15:26",
+   "team": "Eagle Ridge Eddies",
+   "action": "drop Devin Singletary RB NYG",
+   "faab_bid": null
+  },
+  {
+   "datetime_pdt": "2026-11-12 14:56",
+   "team": "Mrs. Doubtpfizer",
+   "action": "drop Kaleb Johnson RB GB",
+   "faab_bid": null
+  },
+  {
+   "datetime_pdt": "2026-11-12 13:35",
+   "team": "Mrs. Doubtpfizer",
+   "action": "add Kaleb Johnson RB GB",
+   "faab_bid": null
+  },
+  {
+   "datetime_pdt": "2026-11-12 13:35",
+   "team": "Mrs. Doubtpfizer",
+   "action": "drop Hunter Wohler DB IND",
+   "faab_bid": null
+  },
+  {
+   "datetime_pdt": "2026-11-12 10:27",
+   "team": "The Hypersecretors",
+   "action": "add A.J. Haulcy DB IND",
+   "faab_bid": null
+  },
+  {
+   "datetime_pdt": "2026-11-12 10:23",
+   "team": "The Hypersecretors",
+   "action": "add Konata Mumpfield WR LAR",
+   "faab_bid": null
+  },
+  {
+   "datetime_pdt": "2026-11-12 10:23",
+   "team": "The Hypersecretors",
+   "action": "drop A.J. Haulcy DB IND",
+   "faab_bid": null
+  }
+ ],
+ "trade_rows_excluded_from_transactions": [],
+ "trades": {
+  "pending_trades_count": 0,
+  "pending_claims_count": 0,
+  "most_recent_completed": "Wed Nov 11, 2026, 5:13 PM PST \u2014 The Hypersecretors and Towner Top Aga Bottom completed a trade exchanging Bryce Young for $7 FAAB (the only player-side asset shown was Bryce Young).",
+  "trade_block": {
+   "Eagle Ridge Eddies": {
+    "updated": "Nov 10 6:07 PM",
+    "players": [
+     "Jalen Coker WR CAR",
+     "Josh Downs WR KC",
+     "Ja'Kobi Lane WR BAL",
+     "Trenton Simpson LB BAL"
+    ],
+    "note": null,
+    "positions_offered": [],
+    "positions_needed": []
+   },
+   "Morningside Muff Divers": {
+    "updated": "Oct 7 9:30 AM",
+    "players": [
+     "Derrick Barnes LB DET",
+     "Bobby Okereke LB CAR",
+     "Pete Werner LB NO"
+    ],
+    "note": null,
+    "positions_offered": [
+     "LB"
+    ],
+    "positions_needed": [
+     "RB"
+    ]
+   },
+   "Newman Lake Sleep Paralysis Demons": {
+    "updated": "Nov 10 1:27 PM",
+    "players": [
+     "Jordan Love QB GB",
+     "TreVeyon Henderson RB NE",
+     "Jordan Mason RB MIN",
+     "Jonathan Taylor RB IND",
+     "Davante Adams WR LAR",
+     "A.J. Brown WR NE",
+     "Zay Flowers WR BAL",
+     "Matthew Golden WR GB",
+     "Tee Higgins WR CIN",
+     "Myles Price WR MIN",
+     "Juwan Johnson TE NO",
+     "Michael Mayer TE LV",
+     "Andrew Van Ginkel DL,LB,ID MIN",
+     "Azeez Al-Shaair LB HOU",
+     "Zaire Franklin LB GB",
+     "Ty'Ron Hopper LB GB",
+     "Jeremiah Trotter LB PHI",
+     "Jordan Battle DB CIN",
+     "Xavier Watts DB ATL"
+    ],
+    "note": null,
+    "positions_offered": [],
+    "positions_needed": []
+   },
+   "Pocket Agents": {
+    "updated": "Oct 2 4:24 PM",
+    "players": [
+     "Jared Goff QB DET",
+     "Tyler Shough QB NO"
+    ],
+    "note": "Goff & Shough both top 5 QBs through 3 weeks. Looking to potentially trade 1 for a running back.",
+    "positions_offered": [],
+    "positions_needed": []
+   },
+   "Saltese Slamm": {
+    "updated": "Nov 10 2:17 PM",
+    "players": [
+     "D'Andre Swift RB CHI",
+     "Carson Schwesinger LB CLE",
+     "Dee Winters LB DAL"
+    ],
+    "note": null,
+    "positions_offered": [],
+    "positions_needed": []
+   },
+   "Substation": {
+    "updated": "Sep 30 8:25 AM",
+    "players": [],
+    "note": null,
+    "positions_offered": [],
+    "positions_needed": []
+   },
+   "Towner Top Aga Bottom": {
+    "updated": "Nov 3 7:21 AM",
+    "players": [
+     "Javonte Williams RB DAL",
+     "Christian Watson WR GB",
+     "Jameson Williams WR DET",
+     "Dallas Goedert TE PHI",
+     "Divine Deablo LB ATL",
+     "Harold Perkins LB ATL",
+     "Dorian Williams LB BUF"
+    ],
+    "note": null,
+    "positions_offered": [],
+    "positions_needed": []
+   }
+  }
+ },
+ "eddies_pending_trades_private": [],
+ "eddies_injuries_flag": {
+  "active_starter_out_or_doubtful": false,
+  "details": "Eagle Ridge Eddies roster at ~4:02 PM PT: active Garrett Wilson (R W T slot) shows a generic INJURED icon (not OUT/INACTIVE/SUSPENDED); Colby Parkinson (IR slot) INJURED; Travis Etienne (IR slot) INJURY_LIST. No active Eddies starter shows INJURED_OUT, INACTIVE or SUSPENDED."
+ },
+ "notes": [
+  "Live home header showed Week 10 (Nov 12, 2026 - Nov 18, 2026); Eagle Ridge Eddies home vs Little Ass Boys, 0-0, projections 208.9-205.5 (~4:01 PM PT).",
+  "Records for all 14 teams read from each roster page header; FAAB read from each roster page Claim Budget Remaining.",
+  "Pending counts at ~4:04 PM PT: 0 pending trades and 0 pending claims; no Eddies pending offers.",
+  "Trade Block ALL view ~4:04 PM PT: 7 visible cards, including empty Substation card; unchanged from the am capture.",
+  "All 14 team rosters captured live one team at a time (~4:02-4:03 PM PT); every visible active, reserve and IR player row is included; reserve/IR rosterSlotPosition reused from am file when same player/slot, else bench/IR label or eligibility.",
+  "Transaction History Claim/Drop captured with Include Deleted ON and Executed Only OFF; 8 Add/Drop rows newer than Thu Nov 12, 2026, 6:50 AM PT; all done, no deleted rows.",
+  "Trade History: no completed trade newer than Wed Nov 11, 2026, 5:13 PM PST; completed_trades_new is empty (both 5:13 PM trades already in the am file)."
+ ]
+}

@@ -18,7 +18,7 @@ To rebuild trade prices from the season's stat lines, run `python3 scripts/build
 
 To rebuild the weekly rankings board, run `node scripts/build_rankings.js` from this folder. A scheduled action does that through the week and commits `data/rankings/`.
 
-To rebuild the ROS trade ideas, run `python3 scripts/build_trade_finder.py` from this folder. It writes `data/trade-finder.json` for `trade-finder.html`. The list is ideas only. It does not send trades or contact Fantrax.
+To rebuild the ROS trade ideas, run `python3 scripts/build_trade_finder.py` from this folder. It reads `data/sources/fantrax-raw-2026-11-12-pm-normalized.json` unless you pass `--scrape PATH`, and writes `data/trade-finder.json` for `trade-finder.html`. A later refresh can be a new scrape file plus that flag. The list is ideas only. It does not send trades or contact Fantrax, and it does not publish pending bids or pending trades.
 
 `sunday.html` is the phone page for Sunday. It reads `data/sunday/config.json`, `data/sunday/live.json`, and `data/td-parlay.json`. A separate job is meant to refresh the live file about every 30 minutes. The page refetches every 5 minutes. It does not scrape.
 
