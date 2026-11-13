@@ -75,7 +75,7 @@ class TradeFinder(unittest.TestCase):
             [player("Josh Downs", "WR", 64, "reserve")],
             [player("Spare Back", "RB", 140)],
             eddies_delta=6,
-            partner_delta=-3,
+            partner_delta=4,
             healthy_delta=2,
             playable={pos: 4 for pos in tf.INCOMING},
             usable={pos: 4 for pos in tf.INCOMING},
@@ -188,7 +188,7 @@ class TradeFinder(unittest.TestCase):
             return tf.fit_score(
                 give, [get],
                 eddies_delta=delta,
-                partner_delta=-4,
+                partner_delta=4,
                 healthy_delta=2,
                 playable=full,
                 usable=full,
@@ -226,7 +226,7 @@ class TradeFinder(unittest.TestCase):
             [player("Trenton Simpson", "LB", 130, "reserve")],
             [spare[0]],
             eddies_delta=12,
-            partner_delta=-6,
+            partner_delta=6,
             healthy_delta=8,
             playable={"DB": 4, "LB": 4, "WR": 4, "RB": 4, "DL": 4},
             usable={"DB": 4, "LB": 4, "WR": 4, "RB": 4, "DL": 4},
@@ -243,7 +243,7 @@ class TradeFinder(unittest.TestCase):
             [player("Jalen Coker", "WR", 98, "reserve")],
             [player("Spare Back", "RB", 140)],
             eddies_delta=10,
-            partner_delta=-4,
+            partner_delta=4,
             healthy_delta=6,
             playable={"RB": 4, "WR": 2, "DL": 3, "LB": 3, "DB": 3},
             usable={"RB": 4, "WR": 2, "DL": 3, "LB": 3, "DB": 3},
@@ -260,7 +260,7 @@ class TradeFinder(unittest.TestCase):
             [player("Trenton Simpson", "LB", 130, "reserve"), player("Jalen Coker", "WR", 98, "reserve")],
             [spare[0]],
             eddies_delta=9,
-            partner_delta=-5,
+            partner_delta=5,
             healthy_delta=4,
             playable={"DB": 4, "LB": 2, "WR": 4, "RB": 3, "DL": 3},
             usable={"DB": 4, "LB": 2, "WR": 3, "RB": 3, "DL": 3},
@@ -294,6 +294,45 @@ class TradeFinder(unittest.TestCase):
         walk(self.doc)
         for key in keys:
             self.assertIsNone(PENDING_KEY.search(key), key)
+
+    def test_market_band_and_partner_gain(self):
+        market = tf.load_market(
+            tf.load_json(tf.IDP_PATH),
+            tf.load_json(tf.RANK_DIR / tf.load_json(tf.RANK_DIR / "latest.json")["file"]),
+            tf.load_json(tf.VALUES_PATH),
+        )
+        self.assertFalse(market.fair(1.0, 2.0))
+        self.assertTrue(market.fair(1.0, 1.05))
+        simpson = market.quote("LB", tf.norm_name("Trenton Simpson"))[0]
+        washington = market.quote("WR", tf.norm_name("Parker Washington"))[0]
+        moore = market.quote("WR", tf.norm_name("D.J. Moore"))[0]
+        bishop = market.quote("DB", tf.norm_name("Cole Bishop"))[0]
+        brown = market.quote("RB", tf.norm_name("Chase Brown"))[0]
+        self.assertIsNotNone(simpson)
+        self.assertFalse(market.fair(simpson, washington))
+        self.assertFalse(market.fair(simpson, moore))
+        self.assertFalse(market.fair(bishop, brown))
+        for idea in self.doc["ideas"]:
+            self.assertGreater(idea["partnerDelta"], 0)
+            self.assertGreater(idea["valueDelta"], 0)
+            self.assertTrue(market.fair(idea["marketGive"], idea["marketGet"]))
+            text = idea["whyItWorksForThem"]
+            self.assertTrue(
+                "said yes to this shape before" in text or "No completed trade" in text,
+                text,
+            )
+
+    def test_unrealistic_one_for_ones_are_not_offered(self):
+        blocked_get = {"Chase Brown", "Parker Washington", "D.J. Moore"}
+        for idea in self.doc["ideas"]:
+            gave = {p["name"] for p in idea["give"]}
+            got = {p["name"] for p in idea["get"]}
+            self.assertFalse(gave == {"Cole Bishop"} and got == {"Chase Brown"})
+            self.assertFalse(gave == {"Trenton Simpson"} and got <= {"Parker Washington", "D.J. Moore"})
+            # A part-time LB or a DB room, with no starting-caliber skill player, does not buy those receivers or Brown.
+            skill = [p for p in idea["give"] if p["pos"] in ("QB", "RB", "WR", "TE") and (p.get("posRank") or 99) <= 24]
+            if not skill and got & blocked_get:
+                self.fail(idea)
 
     def test_written_file_matches_the_builder(self):
         path = ROOT / "data" / "trade-finder.json"

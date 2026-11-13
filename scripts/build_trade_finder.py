@@ -16,8 +16,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
+import re
 import sys
 import unicodedata
+from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -95,9 +98,14 @@ KIND = {
 # (Hall's quad, and Karlaftis as the only DL) sitting.
 HEALTHY_W, HALL_W, DL_W = 0.65, 0.25, 0.10
 # The Eddies' blended lineup has to go up. Zero is not an idea.
-# A deep room, or a real hole, can give this many lineup points and still be a fit.
-# Tuned so a third DL or a spare linebacker is not dropped for a one-point miss.
-MIN_PARTNER_DELTA = -12.0
+# The other club's healthy lineup has to go up too. A loss is not a deal they take.
+# Market value the Eddies send must sit within this fraction of the value they get.
+FAIR_BAND = 0.15
+CURRENT_MARKET: "Market | None" = None
+# Rank-curve width and the pull that keeps a thin position from running to 0 or 6
+# when the completed trades do not identify it. The fit still chooses the numbers.
+RANK_TAUS = (12, 16, 20, 24, 30, 40)
+MARKET_PRIOR = 0.02
 TARGET_IDEAS = 10
 PV_SCALE = 0.90  # median week-8 board pts / player-values ppg, players over 8 ppg
 
@@ -187,6 +195,407 @@ def index_by_name(rows, name_key: str, better_key: str | None = None) -> dict:
     return out
 
 
+_ASSET_POS = {"QB", "RB", "WR", "TE", "DL", "LB", "DB"}
+_SNAP_NOTE = re.compile(
+    r"([A-Z][A-Za-z'.]+(?:\s+[A-Z][A-Za-z'.]+){0,2})(?:\s*\([^)]*\))?\s+(\d{2,3})%"
+)
+
+
+def _walk_idp(node, visit):
+    if isinstance(node, dict):
+        if node.get("player") and node.get("pos"):
+            visit(node)
+        for value in node.values():
+            _walk_idp(value, visit)
+    elif isinstance(node, list):
+        for value in node:
+            _walk_idp(value, visit)
+
+
+def _parse_assets(lines):
+    """Players and FAAB on one side of a completed trade. None if a token is not a player or FAAB."""
+    out = []
+    for line in lines or []:
+        text = str(line).strip()
+        if not text:
+            continue
+        money = re.search(r"\$(\d+)", text)
+        if money and "FAAB" in text.upper():
+            out.append({"kind": "FAAB", "dollars": int(money.group(1))})
+            continue
+        match = re.match(r"(.+?)\s*\(([A-Z,/ ]+)\)\s*$", text)
+        if not match:
+            return None
+        pos = match.group(2).split(",")[0].strip()
+        if pos not in _ASSET_POS:
+            return None
+        out.append({"kind": "player", "name": match.group(1).strip(), "pos": pos})
+    return out or None
+
+
+def _trade_key(side_a, side_b):
+    def bag(side):
+        names = []
+        for asset in side:
+            if asset["kind"] == "FAAB":
+                names.append(f"${asset['dollars']}")
+            else:
+                names.append(norm_name(asset["name"]) + "|" + asset["pos"])
+        return tuple(sorted(names))
+
+    left, right = bag(side_a), bag(side_b)
+    return tuple(sorted((left, right)))
+
+
+def load_completed_trades() -> list[dict]:
+    """Completed player trades from HQ, plus any transaction-log trade that is not already there.
+
+    Draft-pick handshakes are left out. They have no player price in the ranking files.
+    """
+    found = []
+    seen = set()
+    trades_doc = load_json(ROOT / "data" / "hq" / "trades.json")
+    for row in trades_doc.get("trades") or []:
+        if row.get("status") != "completed":
+            continue
+        side_a = _parse_assets(row.get("givesA"))
+        side_b = _parse_assets(row.get("givesB"))
+        if not side_a or not side_b:
+            continue
+        key = _trade_key(side_a, side_b)
+        if key in seen:
+            continue
+        seen.add(key)
+        found.append({
+            "date": row.get("date") or "",
+            "summary": row.get("summary") or "",
+            "a": side_a,
+            "b": side_b,
+        })
+    tx_path = ROOT / "data" / "hq" / "transactions.json"
+    if tx_path.exists():
+        for item in (load_json(tx_path).get("items") or []):
+            if item.get("type") != "TRADE":
+                continue
+            summary = item.get("summary") or ""
+            match = re.search(r"sent (.+) for (.+)$", summary)
+            if not match:
+                continue
+            side_a = _parse_assets([part.strip() for part in match.group(1).split(",")])
+            side_b = _parse_assets([part.strip() for part in match.group(2).split(",")])
+            # The summary is one sentence, so commas inside it are separators only when
+            # the structured HQ file did not already record the trade.
+            if not side_a or not side_b:
+                side_a = _parse_assets([match.group(1).strip()])
+                side_b = _parse_assets([match.group(2).strip()])
+            if not side_a or not side_b:
+                continue
+            key = _trade_key(side_a, side_b)
+            if key in seen:
+                continue
+            seen.add(key)
+            found.append({"date": item.get("date") or "", "summary": summary, "a": side_a, "b": side_b})
+    return found
+
+
+class Market:
+    """Positional-rank prices, snap-weighted for IDP, with position rates fit to completed trades."""
+
+    def __init__(self, rank, snap, refs, pv, mult, tau, faab, trades, fitted):
+        self.rank = rank
+        self.snap = snap
+        self.refs = refs
+        self.pv = pv
+        self.mult = mult
+        self.tau = tau
+        self.faab = faab
+        self.trades = trades
+        self.fitted = fitted
+        scales = []
+        for (pos, key), row in rank.items():
+            raw = self._base(row) * mult.get(pos, 1.0) * self.snap_factor(pos, key)
+            dollars = pv.get(key)
+            if dollars and raw > 0:
+                scales.append(raw / dollars)
+        scales.sort()
+        self.pv_scale = scales[len(scales) // 2] if scales else None
+
+    def _base(self, rank: float) -> float:
+        return math.exp(-(float(rank) - 1.0) / self.tau)
+
+    def snap_factor(self, pos: str, key: str) -> float:
+        if pos not in ("DL", "LB", "DB"):
+            return 1.0
+        share = self.snap.get(key)
+        if not share:
+            return 1.0
+        ref = self.refs.get(pos) or 1.0
+        if ref <= 0:
+            return 1.0
+        return min(1.0, share / ref)
+
+    def quote(self, pos: str, key: str):
+        """(market, posRank or None, snap or None, source)."""
+        row = self.rank.get((pos, key))
+        share = self.snap.get(key) if pos in ("DL", "LB", "DB") else None
+        if row is not None:
+            value = self._base(row) * self.mult.get(pos, 1.0) * self.snap_factor(pos, key)
+            return value, int(row), share, "rank"
+        dollars = self.pv.get(key)
+        if dollars and self.pv_scale:
+            value = dollars * self.pv_scale * self.mult.get(pos, 1.0) * self.snap_factor(pos, key)
+            return value, None, share, "player-values"
+        return None, None, share, "unpriced"
+
+    def price_assets(self, assets) -> float | None:
+        total = 0.0
+        for asset in assets:
+            if asset["kind"] == "FAAB":
+                total += self.faab * asset["dollars"]
+                continue
+            value, _, _, _ = self.quote(asset["pos"], norm_name(asset["name"]))
+            if value is None:
+                return None
+            total += value
+        return total
+
+    def fair(self, sent: float, received: float) -> bool:
+        if sent <= 0 or received <= 0:
+            return False
+        ratio = sent / received
+        return (1.0 - FAIR_BAND) <= ratio <= (1.0 + FAIR_BAND)
+
+    def nearest(self, give_pos: list[str], get_pos: list[str], limit: int = 2) -> list[dict]:
+        def sim(left, right) -> float:
+            have, need = Counter(left), Counter(right)
+            overlap = sum(min(have[key], need[key]) for key in have)
+            return overlap / max(len(left), len(right), 1)
+
+        scored = []
+        for trade in self.trades:
+            side_a = [a["pos"] for a in trade["a"] if a["kind"] == "player"]
+            side_b = [a["pos"] for a in trade["b"] if a["kind"] == "player"]
+            score = max(sim(give_pos, side_a) + sim(get_pos, side_b), sim(give_pos, side_b) + sim(get_pos, side_a))
+            if score > 0:
+                scored.append((score, trade))
+        scored.sort(key=lambda item: (-item[0], item[1]["date"]))
+        return [trade for _, trade in scored[:limit]]
+
+    def label(self, trade: dict) -> str:
+        def fmt(side):
+            parts = []
+            for asset in side:
+                if asset["kind"] == "FAAB":
+                    parts.append(f"${asset['dollars']} FAAB")
+                else:
+                    parts.append(f"{asset['name']} ({asset['pos']})")
+            return ", ".join(parts)
+
+        when = trade["date"] or "a completed trade"
+        return f"{when} — {fmt(trade['a'])} for {fmt(trade['b'])}"
+
+    def rank12(self) -> dict:
+        """Full-snap value of the 12th player at each position, in WR-anchored units."""
+        out = {}
+        for pos, mult in self.mult.items():
+            out[pos] = round1(self._base(12) * mult)
+        return out
+
+
+def _collect_ranks_and_snaps(idp: dict, board: dict, warroom: dict, values: dict):
+    rank = {}
+    for player in board.get("players") or []:
+        pos = player.get("pos")
+        if pos not in _ASSET_POS:
+            continue
+        key = norm_name(player.get("name") or "")
+        fp = ((player.get("sources") or {}).get("fantasypros") or {}).get("rank")
+        number = fp if isinstance(fp, (int, float)) else player.get("rank")
+        if key and isinstance(number, (int, float)) and number > 0:
+            prev = rank.get((pos, key))
+            if prev is None or number < prev:
+                rank[(pos, key)] = float(number)
+
+    def take_idp(row):
+        pos = row.get("pos")
+        key = norm_name(row.get("player") or "")
+        number = row.get("rosRank")
+        if pos in ("DL", "LB", "DB") and key and isinstance(number, (int, float)) and number > 0:
+            prev = rank.get((pos, key))
+            if prev is None or number < prev:
+                rank[(pos, key)] = float(number)
+
+    _walk_idp(idp, take_idp)
+    snap = {}
+
+    def take_snap(row):
+        key = norm_name(row.get("player") or "")
+        if not key:
+            return
+        for field in ("snapShare", "snapShareL3", "snapShareLast"):
+            share = row.get(field)
+            if isinstance(share, (int, float)) and 0 < share <= 1:
+                snap.setdefault(key, float(share))
+                return
+
+    _walk_idp(idp, take_snap)
+    for row in warroom.get("idp") or []:
+        for match in _SNAP_NOTE.finditer(row.get("notes") or ""):
+            snap.setdefault(norm_name(match.group(1)), int(match.group(2)) / 100.0)
+    refs = {}
+    bucket = defaultdict(list)
+
+    def take_ref(row):
+        number = row.get("rosRank")
+        if not isinstance(number, (int, float)) or number > 12:
+            return
+        share = row.get("snapShare") or row.get("snapShareL3")
+        if isinstance(share, (int, float)) and 0 < share <= 1 and row.get("pos"):
+            bucket[row["pos"]].append(float(share))
+
+    _walk_idp(idp, take_ref)
+    for pos, shares in bucket.items():
+        shares.sort()
+        refs[pos] = shares[len(shares) // 2]
+    pv = {}
+    for player in values.get("players") or []:
+        key = norm_name(player.get("name") or "")
+        number = player.get("value")
+        if key and isinstance(number, (int, float)) and number > 0:
+            prev = pv.get(key)
+            if prev is None or number > prev:
+                pv[key] = float(number)
+    return rank, snap, refs, pv
+
+
+def _fit_market(rank, snap, refs, trades):
+    """WR is the anchor (1.0). Other position rates and the FAAB rate minimize trade imbalance."""
+    positions = ["QB", "RB", "WR", "TE", "DL", "LB", "DB"]
+
+    def snap_factor(pos, key):
+        if pos not in ("DL", "LB", "DB"):
+            return 1.0
+        share = snap.get(key)
+        if not share:
+            return 1.0
+        ref = refs.get(pos) or 1.0
+        return min(1.0, share / ref) if ref else 1.0
+
+    priced = []
+    for trade in trades:
+        ok = True
+        for side in (trade["a"], trade["b"]):
+            for asset in side:
+                if asset["kind"] == "player" and (asset["pos"], norm_name(asset["name"])) not in rank:
+                    ok = False
+        if ok:
+            priced.append(trade)
+
+    def base(number, tau):
+        return math.exp(-(number - 1.0) / tau)
+
+    def side_value(assets, mult, tau, faab):
+        total = 0.0
+        for asset in assets:
+            if asset["kind"] == "FAAB":
+                total += faab * asset["dollars"]
+                continue
+            key = norm_name(asset["name"])
+            total += base(rank[(asset["pos"], key)], tau) * mult[asset["pos"]] * snap_factor(asset["pos"], key)
+        return total
+
+    def loss(mult, tau, faab):
+        total = weight = 0.0
+        for trade in priced:
+            left = side_value(trade["a"], mult, tau, faab)
+            right = side_value(trade["b"], mult, tau, faab)
+            if left + right <= 0:
+                continue
+            size = sum(1 for asset in trade["a"] + trade["b"] if asset["kind"] == "player")
+            trade_weight = 1.0 if size <= 3 else 0.45
+            gap = (left - right) / (left + right)
+            total += trade_weight * gap * gap
+            weight += trade_weight
+        for value in mult.values():
+            total += MARKET_PRIOR * (math.log(value) ** 2)
+        return total / max(weight, 1.0)
+
+    best = None
+    for tau in RANK_TAUS:
+        mult = {pos: 1.0 for pos in positions}
+        faab = 0.02
+        for _ in range(4):
+            for pos in positions:
+                if pos == "WR":
+                    continue
+                chosen = None
+                for step in range(2, 50):
+                    mult[pos] = step / 10
+                    score = loss(mult, tau, faab)
+                    if chosen is None or score < chosen[0]:
+                        chosen = (score, mult[pos])
+                mult[pos] = chosen[1]
+            chosen = None
+            for step in range(0, 60):
+                trial = step / 1000
+                score = loss(mult, tau, trial)
+                if chosen is None or score < chosen[0]:
+                    chosen = (score, trial)
+            faab = chosen[1]
+        score = loss(mult, tau, faab)
+        if best is None or score < best[0]:
+            best = (score, tau, dict(mult), faab, len(priced))
+    return best
+
+
+def load_market(idp: dict, board: dict, values: dict) -> Market:
+    warroom_path = ROOT / "data" / "warroom.json"
+    warroom = load_json(warroom_path) if warroom_path.exists() else {}
+    rank, snap, refs, pv = _collect_ranks_and_snaps(idp, board, warroom, values)
+    trades = load_completed_trades()
+    _score, tau, mult, faab, fitted = _fit_market(rank, snap, refs, trades)
+    return Market(rank, snap, refs, pv, mult, tau, faab, trades, fitted)
+
+
+def annotate_market(player: Player, market: Market) -> None:
+    value, pos_rank, share, source = market.quote(player.pos, norm_name(player.name))
+    player.market = value
+    player.pos_rank = pos_rank
+    player.snap = share
+    player.market_source = source
+
+
+def scarce_skill(player: Player) -> bool:
+    """Top-24 RB/WR or top-12 QB/TE on the consensus board. That is a starter-caliber skill player."""
+    rank = getattr(player, "pos_rank", None)
+    if rank is None:
+        return False
+    if player.pos in ("RB", "WR"):
+        return rank <= 24
+    if player.pos in ("QB", "TE"):
+        return rank <= 12
+    return False
+
+
+def accept_score(give, get, partner_delta, eddies_starters, gave_starter, starter_back) -> int:
+    """0-100. Closeness of market value first, then whether the partner's lineup gains."""
+    sent = sum(p.market or 0 for p in give)
+    received = get.market or 0
+    if received <= 0:
+        return 0
+    closeness = 1.0 - abs(sent / received - 1.0) / FAIR_BAND
+    score = 45.0 * max(0.0, closeness)
+    score += min(20.0, max(0.0, partner_delta))
+    score += {1: 15, 2: 12}.get(len(give), 6)
+    if all(p.name not in eddies_starters for p in give):
+        score += 8
+    if scarce_skill(get) and not any(scarce_skill(p) for p in give):
+        score -= 15
+    if gave_starter and not starter_back:
+        score -= 20
+    return max(0, min(100, round(score)))
+
+
 class Player:
     def __init__(self, name, pos, eligible, nfl, slot, ros, mult, source, season_ending):
         self.name = name
@@ -213,12 +622,19 @@ class Player:
         return self.lineup_ok and (self.assumed or self.ros >= USABLE.get(self.pos, 95))
 
     def public(self) -> dict:
-        return {
+        out = {
             "name": self.name,
             "pos": self.pos,
             "nfl": self.nfl,
             "ros": round1(self.ros),
         }
+        if getattr(self, "market", None) is not None:
+            out["market"] = round1(self.market)
+        if getattr(self, "pos_rank", None) is not None:
+            out["posRank"] = self.pos_rank
+        if getattr(self, "snap", None) is not None:
+            out["snap"] = round(self.snap, 2)
+        return out
 
 
 def optimize(players: list[Player]) -> tuple[float, set[str]]:
@@ -439,16 +855,21 @@ def outgoing_players(players: list[Player]) -> list[Player]:
     return found
 
 
-def give_packages(players: list[Player]) -> list[list[Player]]:
-    """1-for-1 for every eligible player, plus every 2-for-1 pair.
+def give_packages(players: list[Player], starters: set[str] | None = None) -> list[list[Player]]:
+    """1-for-1, every 2-for-1, and 3-for-1 packages built only from players who are not starting.
 
-    Offense-for-offense, IDP-for-IDP, and cross-position trades are the same path.
+    The 3-for-1s are how depth consolidates into one upgrade. Starters are not stacked three deep.
     """
     people = outgoing_players(players)
     packages = [[p] for p in people]
     for i, left in enumerate(people):
         for right in people[i + 1:]:
             packages.append([left, right])
+    depth = [p for p in people if not starters or p.name not in starters]
+    for i, first in enumerate(depth):
+        for j in range(i + 1, len(depth)):
+            for k in range(j + 1, len(depth)):
+                packages.append([first, depth[j], depth[k]])
     return packages
 
 
@@ -524,14 +945,9 @@ def fit_score(give, get, eddies_delta, partner_delta, healthy_delta, playable, u
         score += max(need_points(pos, usable, playable) for pos in holes)
     else:
         score += 12
-    if round1(eddies_delta) <= 0:
+    if round1(eddies_delta) <= 0 or partner_delta <= 0:
         return None
-    if partner_delta >= 0:
-        score += 18
-    elif partner_delta >= MIN_PARTNER_DELTA:
-        score += 8
-    else:
-        return None
+    score += 18 if partner_delta >= 1 else 8
     score += 8 if len(give) == 1 else 4
     if surplus_piece:
         score += 4
@@ -541,6 +957,15 @@ def fit_score(give, get, eddies_delta, partner_delta, healthy_delta, playable, u
         score += 3
     score += min(10.0, eddies_delta / 4.0)
     return max(0, min(100, round(score)))
+
+
+def why_they_say_yes(partner: str, give: list[Player], get: Player, playable: dict, usable: dict, partner_delta: float, market: Market) -> str:
+    reason = why_for_them(partner, give, get, playable, usable, partner_delta)
+    comps = market.nearest([p.pos for p in give], [get.pos])
+    if not comps:
+        return reason + " No completed trade in the file matches this position shape."
+    cited = "; ".join(market.label(trade) for trade in comps[:2])
+    return reason + " They have said yes to this shape before: " + cited + "."
 
 
 def why_for_them(partner: str, give: list[Player], get: Player, playable: dict, usable: dict, partner_delta: float) -> str:
@@ -564,7 +989,7 @@ def why_for_them(partner: str, give: list[Player], get: Player, playable: dict, 
             bits.append(f"{n} {word} {pos}{'s' if n != 1 else ''}")
         return (
             f"{partner} is deep at {room} ({deep} usable) and short ({', '.join(bits)}), "
-            f"so {got} is a {kind} they can move and {sent} fills the hole.{even}"
+            f"so {got} is a {kind} they can move and {sent} {'fill' if len(give) != 1 else 'fills'} the hole.{even}"
         )
     return (
         f"{partner} is deep at {room} ({deep} usable), so {got} is a {kind} they can move, "
@@ -598,10 +1023,19 @@ def consider(eddies, partner_players, give, get, playable, usable, eddies_starte
         return None
     if get.pos not in INCOMING:
         return None
+    if any(getattr(p, "market", None) is None for p in give) or getattr(get, "market", None) is None:
+        return None
     give_names = {p.name for p in give}
     after = [p for p in eddies if p.name not in give_names] + [get]
     if starter_holes(after):
         return None
+    sent_market = sum(p.market for p in give)
+    if CURRENT_MARKET is None or not CURRENT_MARKET.fair(sent_market, get.market):
+        return None
+    # A starting-caliber skill player does not come back for IDP and end-of-roster pieces.
+    if scarce_skill(get) and not any(scarce_skill(p) for p in give):
+        return None
+    _, their_before = optimize(partner_players)
     e_before, e_healthy_before = blend(eddies)
     e_after, e_healthy_after = blend(after)
     p_before, _ = optimize(partner_players)
@@ -623,6 +1057,9 @@ def consider(eddies, partner_players, give, get, playable, usable, eddies_starte
     )
     if score is None:
         return None
+    gave_starter = get.name in their_before
+    starter_back = any(p.name in p_starters for p in give)
+    score = accept_score(give, get, partner_delta, eddies_starters, gave_starter, starter_back)
     return {
         "give": give,
         "get": get,
@@ -630,6 +1067,8 @@ def consider(eddies, partner_players, give, get, playable, usable, eddies_starte
         "healthyDelta": healthy_delta,
         "partnerDelta": partner_delta,
         "fitScore": score,
+        "marketGive": sent_market,
+        "marketGet": get.market,
     }
 
 
@@ -642,9 +1081,9 @@ def select(candidates: list[dict], limit: int = TARGET_IDEAS) -> list[dict]:
         if prev is None:
             best[key] = row
             continue
-        # Same incoming player: keep the package that helps the Eddies more, then the smaller one.
-        rank = (row["valueDelta"], -len(row["give"]), row["fitScore"])
-        old = (prev["valueDelta"], -len(prev["give"]), prev["fitScore"])
+        # Same incoming player: keep the package a manager is more likely to accept, then the Eddies gain.
+        rank = (row["fitScore"], row["valueDelta"], -len(row["give"]))
+        old = (prev["fitScore"], prev["valueDelta"], -len(prev["give"]))
         if rank > old:
             best[key] = row
     ordered = sorted(
@@ -669,7 +1108,7 @@ def select(candidates: list[dict], limit: int = TARGET_IDEAS) -> list[dict]:
 def idea_record(rank: int, row: dict, playable: dict, usable: dict) -> dict:
     give = row["give"]
     get = row["get"]
-    shape = "1-for-1" if len(give) == 1 else "2-for-1"
+    shape = {1: "1-for-1", 2: "2-for-1"}.get(len(give), f"{len(give)}-for-1")
     return {
         "rank": rank,
         "partner": row["partner"],
@@ -679,14 +1118,19 @@ def idea_record(rank: int, row: dict, playable: dict, usable: dict) -> dict:
         "shape": shape,
         "give": [p.public() for p in give],
         "get": [get.public()],
+        "marketGive": round1(row["marketGive"]),
+        "marketGet": round1(row["marketGet"]),
         "valueDelta": round1(row["valueDelta"]),
         "partnerDelta": round1(row["partnerDelta"]),
         "fitScore": row["fitScore"],
-        "whyItWorksForThem": why_for_them(row["partner"], give, get, playable, usable, row["partnerDelta"]),
+        "whyItWorksForThem": why_they_say_yes(
+            row["partner"], give, get, playable, usable, row["partnerDelta"], CURRENT_MARKET
+        ),
     }
 
 
 def build(scrape_path: Path | None = None) -> dict:
+    global CURRENT_MARKET
     scrape_path = Path(scrape_path) if scrape_path else DEFAULT_SCRAPE
     scrape = load_json(scrape_path)
     idp = load_json(IDP_PATH)
@@ -696,6 +1140,7 @@ def build(scrape_path: Path | None = None) -> dict:
     teams_doc = load_json(TEAMS_PATH)
     season = wc.season_ending(ROOT / "data")
     week = int(idp.get("week") or latest.get("week") or scrape.get("week") or 8)
+    CURRENT_MARKET = load_market(idp, board, values)
     ids = team_id_map(teams_doc)
 
     idp_rows = []
@@ -718,6 +1163,7 @@ def build(scrape_path: Path | None = None) -> dict:
         players = []
         for raw in dedupe_rows(entry.get("players") or []):
             player = build_player(raw, week, idp_idx, rank_idx, pv_idx, season)
+            annotate_market(player, CURRENT_MARKET)
             if player.source == "unvalued" and not player.season_ending and player.slot != "ir":
                 unmatched.append(f"{full}: {player.name} ({player.pos})")
             players.append(player)
@@ -737,7 +1183,7 @@ def build(scrape_path: Path | None = None) -> dict:
     outgoing = outgoing_players(eddies["players"])
 
     _, starters = optimize(eddies["players"])
-    packages = give_packages(eddies["players"])
+    packages = give_packages(eddies["players"], starters)
     our_playable = count_pos(eddies["players"], lambda p: p.playable())
     our_usable = count_pos(eddies["players"], lambda p: p.usable())
     candidates = []
@@ -789,7 +1235,6 @@ def build(scrape_path: Path | None = None) -> dict:
 
     e_play = our_playable
     e_use = our_usable
-    partner_cap = abs(MIN_PARTNER_DELTA)
     idp_week = idp.get("week")
     idp_horizon = f"week {idp_week}" if idp_week else "the file's week"
     doc = {
@@ -835,19 +1280,28 @@ def build(scrape_path: Path | None = None) -> dict:
                 "partnerDelta is the other club's healthy lineup, same slots, no injury-risk weight."
             ),
             "fit": (
-                "Fit is 0-100. Incoming targets are QB, RB, WR, TE, DL, LB, and DB. Any Eddies player who can "
-                "still play can be the outgoing piece, including a 2-for-1. Offense-for-offense, IDP-for-IDP, and "
-                "cross-position trades use the same bars. The other club must be deep at the spot they give "
-                f"({', '.join(f'{n}+ usable {pos}s' for pos, n in DEEP_AT.items())}) "
-                "and the idea never asks for their best one. The piece the Eddies send has to fill a thin "
-                "IDP spot (fewer than 2 usable LBs or DLs, or fewer than 3 usable DBs) or a thin WR room, or it "
-                "has to start for them. Their lineup can drop at most "
-                f"{partner_cap:.0f} points when that piece starts for them or fills a real hole. "
-                "The Eddies' blended lineup has to go up, and the swap cannot leave a dedicated starter slot "
-                "under the same usable count the needs line uses (playable bodies at WR). A spot where the Eddies "
-                "are under the depth bar scores a bit higher. Bench surplus scores a bit higher than a starter. "
-                "A name already on a trade block scores higher."
+                "Fit is 0-100 and is mostly how likely the other manager is to say yes, then how much the Eddies gain. "
+                "Any Eddies player who can still play can go out, and any position can come back, including a 2-for-1 "
+                "or a 3-for-1 of bench players. Market value is a rest-of-season positional rank "
+                "(FantasyPros on the week board, IDP rosRank when that file has one), times a position rate fit to "
+                f"the {CURRENT_MARKET.fitted} completed trades both sides could be priced, times snap share for IDP "
+                "divided by the median snap share of the top 12 at that position. player-values.json is only the fallback "
+                "when a player has no rank. The value sent has to be within "
+                f"{FAIR_BAND:.0%} of the value received. Their healthy lineup has to gain. "
+                "Giving them a top-24 RB/WR or a top-12 QB/TE, or one of their starters, without a starter coming back, "
+                "scores lower. The other club still has to be deep at the spot they give and we never ask for their best one."
             ),
+            "market": {
+                "band": FAIR_BAND,
+                "anchor": "WR = 1",
+                "tau": CURRENT_MARKET.tau,
+                "faabPerDollar": round(CURRENT_MARKET.faab, 4),
+                "positionRate": {pos: round(CURRENT_MARKET.mult[pos], 2) for pos in ("QB", "RB", "WR", "TE", "DL", "LB", "DB")},
+                "rank12FullSnap": CURRENT_MARKET.rank12(),
+                "snapReference": {pos: round(share, 3) for pos, share in sorted(CURRENT_MARKET.refs.items())},
+                "tradesPriced": CURRENT_MARKET.fitted,
+                "tradesRead": len(CURRENT_MARKET.trades),
+            },
             "bars": {"playable": PLAYABLE, "usable": USABLE, "thinIfFewerThan": THIN_AT},
             "lineup": "1 QB, 1 RB, 1 WR, 1 TE, 3 RB/WR/TE, 1 DL, 1 LB, 2 DB, 3 IDP. Greedy, same slots as the trade tab.",
         },
