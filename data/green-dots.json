@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-12T15:10:00-08:00",
+  "asOf": "2026-11-13T15:10:00-08:00",
   "week": 9,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/2026-week-9-green-dot-and-full-time-linebackers-idp-fantasy-football",
@@ -105,16 +105,15 @@
         "Isaiah McDuffie",
         "Nick Niemann"
       ],
-      "notes": "W9: McDuffie dot 95% (9 tkl, sack) but got hurt; Niemann 94% took the dot after. Hopper chest injury (2 snaps)."
+      "notes": "Nov 13: Zaire Franklin DOUBTFUL; Woellert: Franklin probably not playing, Hopper has no designation. W9: McDuffie dot 95% (9 tkl, sack) but got hurt; Niemann 94% took the dot after. Hopper chest injury (2 snaps)."
     },
     {
       "team": "HOU",
-      "greenDot": "Azeez Al-Shaair",
+      "greenDot": "Jake Hansen",
       "fullTime": [
-        "Azeez Al-Shaair",
         "Henry To'oTo'o"
       ],
-      "notes": "W9: Al-Shaair dot 96%, To'oTo'o 96%. Hansen base-only (18 snaps)."
+      "notes": "Nov 13: Al-Shaair + Danielle Hunter OUT. Woellert: 'Jake Hansen should get the dot'; Clowney should start (x.com/Mike_Woellert/status/2121348553146867727)."
     },
     {
       "team": "IND",
@@ -175,9 +174,11 @@
     },
     {
       "team": "MIN",
-      "greenDot": null,
-      "fullTime": [],
-      "notes": "Nov 12: Cashman (concussion) unlikely vs GB (Wolfson via SKOR North). Woellert (X, 2:27 PM PT): 'Add Ivan Pace from waivers'; Eric Wilson gets priority if available."
+      "greenDot": "Eric Wilson",
+      "fullTime": [
+        "Eric Wilson"
+      ],
+      "notes": "Nov 13: Cashman officially OUT. Woellert: 'Wilson should wear the dot; Pace gets the bump and should be the LB2' (x.com/Mike_Woellert/status/2121351634416742654)."
     },
     {
       "team": "NE",
@@ -260,11 +261,11 @@
     },
     {
       "team": "TEN",
-      "greenDot": "Anthony Hill",
+      "greenDot": null,
       "fullTime": [
-        "Anthony Hill"
+        "Cedric Gray"
       ],
-      "notes": "Bye W9; W8 data: Hill dot 96%; Barton 54% / Cedric Gray (Eddies) 46%."
+      "notes": "Nov 13: Barton (concussion) + Anthony Hill (neck) OUT vs JAX. Saleh: Gray 'going to get an opportunity to play the entire game'. Woellert: Gray has top-10 LB upside this week (x.com/Mike_Woellert/status/2121314887192248487)."
     },
     {
       "team": "WAS",
