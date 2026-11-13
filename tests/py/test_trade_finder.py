@@ -1,16 +1,14 @@
-"""ROS trade finder: ideas only, keeps stay, season-ending players stay out."""
+"""ROS trade finder: any Eddies player out, any position in, season-ending stays out."""
 import json
 import re
 import sys
 import unittest
-import warnings
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 import build_trade_finder as tf  # noqa: E402
 
-KEEPS = {"jordyn brooks", "cedric gray"}
 SEASON_ENDING = {"edgerrin cooper", "tremaine edmunds"}
 FULL_TTAB = "Towner Top Aga Bottom"
 PENDING_KEY = re.compile(r"pending|bids?$|claims?$", re.I)
@@ -24,6 +22,8 @@ class TradeFinder(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.doc = tf.build()
+        cls.eddies = list(tf.build.last_eddies)
+        cls.rosters = list(tf.build.last_rosters)
 
     def test_display_name_is_ttab(self):
         self.assertEqual(tf.display_name(FULL_TTAB), "TTAB")
@@ -55,16 +55,52 @@ class TradeFinder(unittest.TestCase):
             self.assertIsInstance(idea["partnerDelta"], (int, float))
             self.assertTrue(idea["whyItWorksForThem"])
             for player_row in idea["get"]:
-                self.assertIn(player_row["pos"], ("RB", "DL", "LB", "DB"))
+                self.assertIn(player_row["pos"], tf.INCOMING)
 
-    def test_keeps_and_season_ending_never_appear(self):
+    def test_any_rostered_player_may_be_outgoing(self):
+        eligible = self.doc["eddied"]["eligible"]
+        self.assertIn("Josh Downs", eligible)
+        self.assertIn("Jordyn Brooks", eligible)
+        self.assertIn("Cedric Gray", eligible)
+        self.assertIn("Jalen Coker", eligible)
+        self.assertNotIn("Travis Etienne", eligible)
+        src = (ROOT / "scripts" / "build_trade_finder.py").read_text()
+        self.assertNotIn("HOLDS", src)
+        self.assertNotIn("LB_OUT", src)
+        self.assertNotIn("WR_OUT", src)
+        for idea in self.doc["ideas"]:
+            for player_row in idea["give"]:
+                self.assertIn(player_row["name"], eligible)
+        downs = tf.fit_score(
+            [player("Josh Downs", "WR", 64, "reserve")],
+            [player("Spare Back", "RB", 140)],
+            eddies_delta=6,
+            partner_delta=-3,
+            healthy_delta=2,
+            playable={pos: 4 for pos in tf.INCOMING},
+            usable={pos: 4 for pos in tf.INCOMING},
+            block_get=False,
+            block_give=False,
+            surplus_piece=True,
+            starts_for_them=True,
+            gives_starter=False,
+        )
+        self.assertIsInstance(downs, int)
+
+    def test_every_idea_gains_value_and_leaves_starters_filled(self):
+        for idea in self.doc["ideas"]:
+            self.assertGreater(idea["valueDelta"], 0)
+            team = next(row for row in self.rosters if row["id"] == idea["partnerId"])
+            get = next(person for person in team["players"] if person.name == idea["get"][0]["name"])
+            give_names = {row["name"] for row in idea["give"]}
+            after = [person for person in self.eddies if person.name not in give_names] + [get]
+            self.assertEqual(tf.starter_holes(after), [], idea["partner"])
+
+    def test_season_ending_never_appear(self):
         for idea in self.doc["ideas"]:
             for side in ("give", "get"):
                 for player_row in idea[side]:
-                    name = player_row["name"].lower()
-                    self.assertNotIn(name, SEASON_ENDING)
-                    if side == "give":
-                        self.assertNotIn(name, KEEPS)
+                    self.assertNotIn(player_row["name"].lower(), SEASON_ENDING)
 
     def test_ttab_is_never_shown_under_the_long_name(self):
         for idea in self.doc["ideas"]:
@@ -123,42 +159,57 @@ class TradeFinder(unittest.TestCase):
         self.assertNotIn("ACL", needs)
         self.assertIn("starting", needs)
 
-    def test_missing_surplus_names_are_skipped(self):
-        by_name = {"Jalen Coker": player("Jalen Coker", "WR", 98)}
-        with self.assertWarns(RuntimeWarning) as caught:
-            found = tf.resolve_surplus(("Jalen Coker", "Kendrick Bourne", "Tyrice Knight"), by_name)
-        self.assertEqual([p.name for p in found], ["Jalen Coker"])
-        message = str(caught.warning)
-        self.assertIn("Kendrick Bourne", message)
-        self.assertIn("Tyrice Knight", message)
-        with warnings.catch_warnings(record=True) as caught_build:
-            warnings.simplefilter("always")
-            doc = tf.build(
-                lb_out=tf.LB_OUT + ("Tyrice Knight",),
-                wr_out=tf.WR_OUT + ("Kendrick Bourne",),
-            )
-        text = " ".join(str(item.message) for item in caught_build)
-        self.assertIn("Tyrice Knight", text)
-        self.assertIn("Kendrick Bourne", text)
-        self.assertNotIn("Tyrice Knight", doc["eddied"]["surplus"]["LB"])
-        self.assertNotIn("Kendrick Bourne", doc["eddied"]["surplus"]["WR"])
-        self.assertIn("Jalen Coker", doc["eddied"]["surplus"]["WR"])
-        self.assertNotIn("Tyrice Knight", doc["eddied"]["surplus"]["LB"])
+    def test_starter_hole_uses_the_needs_count(self):
+        room = [
+            player("QB", "QB", 180),
+            player("RB1", "RB", 110),
+            player("RB2", "RB", 100),
+            player("WR1", "WR", 130),
+            player("WR2", "WR", 90),
+            player("WR3", "WR", 80),
+            player("TE", "TE", 120),
+            player("DL", "DL", 170),
+            player("LB", "LB", 160),
+            player("DB1", "DB", 140),
+            player("DB2", "DB", 130),
+            player("DB3", "DB", 125),
+        ]
+        self.assertEqual(tf.starter_holes(room), [])
+        traded_dl = [p for p in room if p.name != "DL"] + [player("New RB", "RB", 150)]
+        self.assertIn("DL", tf.starter_holes(traded_dl))
+        traded_one_rb = [p for p in room if p.name != "RB1"] + [player("New WR", "WR", 140)]
+        self.assertEqual(tf.starter_holes(traded_one_rb), [])
 
-    def test_josh_downs_is_never_outgoing(self):
-        for idea in self.doc["ideas"]:
-            for player_row in idea["give"]:
-                self.assertNotEqual(player_row["name"], "Josh Downs")
-        for names in self.doc["eddied"]["surplus"].values():
-            self.assertNotIn("Josh Downs", names)
-        self.assertIn("Josh Downs", self.doc["holds"])
-        with warnings.catch_warnings(record=True):
-            warnings.simplefilter("always")
-            doc = tf.build(wr_out=("Josh Downs", "Jalen Coker"))
-        self.assertNotIn("Josh Downs", doc["eddied"]["surplus"]["WR"])
-        self.assertIn("Jalen Coker", doc["eddied"]["surplus"]["WR"])
-        for idea in doc["ideas"]:
-            self.assertNotIn("Josh Downs", [p["name"] for p in idea["give"]])
+    def test_every_position_and_trade_shape_can_score(self):
+        self.assertEqual(tf.INCOMING, ("QB", "RB", "WR", "TE", "DL", "LB", "DB"))
+        full = {pos: 4 for pos in tf.INCOMING}
+
+        def score(give, get, delta=8):
+            return tf.fit_score(
+                give, [get],
+                eddies_delta=delta,
+                partner_delta=-4,
+                healthy_delta=2,
+                playable=full,
+                usable=full,
+                block_get=False,
+                block_give=False,
+                surplus_piece=True,
+                starts_for_them=True,
+                gives_starter=False,
+            )
+
+        offense = score([player("Wideout", "WR", 90)], player("Other WR", "WR", 140))
+        idp = score([player("Backer", "LB", 130)], player("Other LB", "LB", 150))
+        cross = score(
+            [player("Wideout", "WR", 90), player("Backer", "LB", 130)],
+            player("Lineman", "DL", 150),
+        )
+        quarterback = score([player("Signal", "QB", 170)], player("Other QB", "QB", 180))
+        tight = score([player("End", "TE", 100)], player("Other TE", "TE", 120))
+        for deal in (offense, idp, cross, quarterback, tight):
+            self.assertIsInstance(deal, int)
+        self.assertIsNone(score([player("Wideout", "WR", 90)], player("Other WR", "WR", 140), delta=0))
 
     def test_lb_and_db_incoming_ideas_appear(self):
         positions = {p["pos"] for idea in self.doc["ideas"] for p in idea["get"]}

@@ -49,17 +49,13 @@ function names(list){return (list&&list.length)?list.join(', '):'none'}
 fetch('data/trade-finder.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
   var ideas=(d&&d.ideas)||[];
   var ed=(d&&d.eddied)||{};
-  var surplus=ed.surplus||{};
-  var keeps=d.keeps||[];
   var ending=d.excludedSeasonEnding||[];
-  var holds=d.holds||[];
   document.getElementById('strip').innerHTML='Week <span>'+e(d.week)+'</span> · roster <span>'+e(d.asOfRoster)+'</span> · FAAB <span>$'+e(d.faab)+'</span> · <span>'+ideas.length+' ideas</span>';
   var h='<div class="banner">Recommend-only. Bill decides what to do with these. Nothing on this page is sent anywhere.</div>';
   h+='<div class="card"><h2>What the Eddies are shopping</h2>';
   h+='<p>'+e(ed.needs||'')+'</p>';
-  h+='<p>LB surplus: <b>'+e(names(surplus.LB))+'</b>. Bench WRs: <b>'+e(names(surplus.WR))+'</b>.</p>';
-  if(holds.length) h+='<p>Upside holds, never outgoing: <b>'+e(holds.join(', '))+'</b>.</p>';
-  h+='<p>Keeps, never outgoing: <b>'+e(names(keeps))+'</b>. Season-ending and left out: <b>'+e(names(ending))+'</b>.</p></div>';
+  h+='<p>Any player who can still play can be offered. Incoming can be QB, RB, WR, TE, DL, LB, or DB. A deal has to raise the Eddies lineup and leave every starter slot fillable.</p>';
+  h+='<p>Season-ending and left out: <b>'+e(names(ending))+'</b>.</p></div>';
   h+='<div class="sec">Ranked ideas</div>';
   if(!ideas.length){
     h+='<div class="card"><h3>No ideas</h3><p>No ideas on this roster. Nothing cleared the fit bar. The depth table below is still the board.</p></div>';
