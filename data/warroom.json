@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-14T15:01:00-08:00",
-  "lastUpdated": "2026-11-14T15:01:00-08:00",
+  "asOf": "2026-11-15T14:58:00-08:00",
+  "lastUpdated": "2026-11-15T14:58:00-08:00",
   "season": 2026,
   "week": 10,
   "opponent": {
@@ -10,24 +10,24 @@
     "name": "Little Ass Boys"
   },
   "freshness": {
-    "plan": "2026-11-14T15:01:00-08:00",
-    "roster": "2026-11-14T14:58:00-08:00",
-    "scores": "2026-11-14T15:05:00-08:00",
-    "waivers": "2026-11-14T15:05:00-08:00",
-    "news": "2026-11-14T14:52:00-08:00"
+    "plan": "2026-11-15T14:58:00-08:00",
+    "roster": "2026-11-15T14:55:00-08:00",
+    "scores": "2026-11-15T14:55:00-08:00",
+    "waivers": "2026-11-15T14:55:00-08:00",
+    "news": "2026-11-15T14:51:00-08:00"
   },
   "lockTimes": [
     {
-      "label": "Sunday early (10:00 AM PT)",
-      "at": "2026-11-15T10:00:00-08:00"
-    },
-    {
-      "label": "MNF BAL vs LAC (Hamilton, Simpson, Lane) 5:15 PM PT",
+      "label": "MNF BAL vs LAC (Hamilton, Simpson on bench) 5:15 PM PT",
       "at": "2026-11-16T17:15:00-08:00"
     },
     {
       "label": "Waivers clear",
       "at": "2026-11-18T09:00:00-08:00"
+    },
+    {
+      "label": "W11 TNF IND @ HOU 5:15 PM PT",
+      "at": "2026-11-19T17:15:00-08:00"
     }
   ],
   "lineup": [
@@ -37,7 +37,7 @@
       "pos": "QB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "25.75 / 20.0, 92%. @DAL (28th vs QB). Deebo back, Keenan Allen debuts; Evans OUT.",
+      "reason": "W10 27 live (Fantrax ~2:55 PM PT). @DAL (28th vs QB). Deebo back, Keenan Allen debuts; Evans OUT.",
       "injury": "",
       "practice": "n/a"
     },
@@ -47,7 +47,7 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "16.25 / 13.0, 43%. vs BUF (25th).",
+      "reason": "W10 15 F (Fantrax ~2:55 PM PT). vs BUF (25th).",
       "injury": "",
       "practice": "n/a"
     },
@@ -56,8 +56,8 @@
       "player": "Malik Nabers",
       "pos": "WR",
       "nflTeam": "NYG",
-      "verdict": "PLAYED",
-      "reason": "8 pts TNF (lost a fumble to Luvu's FF).",
+      "verdict": "START",
+      "reason": "W10 8 F (Fantrax ~2:55 PM PT). 8 pts TNF (lost a fumble to Luvu's FF).",
       "injury": "",
       "practice": "n/a"
     },
@@ -67,7 +67,7 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "28.64 / 28.17, 100%. Lock.",
+      "reason": "W10 5, left with ankle, ruled OUT for game (Fantrax ~2:55 PM PT). Lock.",
       "injury": "",
       "practice": "n/a"
     },
@@ -77,7 +77,7 @@
       "pos": "WR",
       "nflTeam": "TEN",
       "verdict": "START",
-      "reason": "13.88 / 20.5, 82%. vs JAX. Carnell Tate OUT = more targets; Bloom 'supersleeper week'. ⚠ 0 W9 = TEN bye.",
+      "reason": "W10 18 F (Fantrax ~2:55 PM PT). vs JAX. Carnell Tate OUT = more targets; Bloom 'supersleeper week'. ⚠ 0 W9 = TEN bye.",
       "injury": "",
       "practice": "n/a"
     },
@@ -87,7 +87,7 @@
       "pos": "WR",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "15.12 / 9.0. vs BUF. Q (concussion) after FP Fri; expected to play pending protocol clearance (Tom Christ PT). ⚠ 0 W9 = concussion DNP.",
+      "reason": "W10 20 F (Fantrax ~2:55 PM PT). vs BUF. Q (concussion) after FP Fri; expected to play pending protocol clearance (Tom Christ PT). ⚠ 0 W9 = concussion DNP.",
       "injury": "Q",
       "practice": "FP Fri"
     },
@@ -97,7 +97,7 @@
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "START",
-      "reason": "7.5 / 7.5, 57%. @LV (26th vs RB). Pivot: Etienne vs CAR (32nd) if activated to bench, but ⚠ 0 last wk, first game back from hamstring.",
+      "reason": "W10 6 live (Fantrax ~2:55 PM PT). @LV (26th vs RB). Pivot: Etienne vs CAR (32nd) if activated to bench, but ⚠ 0 last wk, first game back from hamstring.",
       "injury": "",
       "practice": "n/a"
     },
@@ -107,7 +107,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "22.5 / 28.67, 83%. @ATL. Lock.",
+      "reason": "W10 21 F (Fantrax ~2:55 PM PT). @ATL. Lock.",
       "injury": "",
       "practice": "n/a"
     },
@@ -117,7 +117,7 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "25.5 / 29.0, 100%, green dot. @DAL.",
+      "reason": "W10 10 live (Fantrax ~2:55 PM PT). @DAL.",
       "injury": "",
       "practice": "n/a"
     },
@@ -127,7 +127,7 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "24.78 / 21.33, 97%. vs MIN. Slides from IDP flex to DB so Gray can start.",
+      "reason": "W10 16 F (Fantrax ~2:55 PM PT). vs MIN. Slides from IDP flex to DB so Gray can start.",
       "injury": "",
       "practice": "n/a"
     },
@@ -137,7 +137,7 @@
       "pos": "DB",
       "nflTeam": "LAR",
       "verdict": "START",
-      "reason": "21.44 / 20.67, 100%, dot. @ARI.",
+      "reason": "W10 3 live (Fantrax ~2:55 PM PT). @ARI.",
       "injury": "",
       "practice": "n/a"
     },
@@ -147,7 +147,7 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "20.12 / 25.0, 100%. @IND.",
+      "reason": "W10 27 F (Fantrax ~2:55 PM PT). @IND.",
       "injury": "",
       "practice": "n/a"
     },
@@ -156,8 +156,8 @@
       "player": "Frankie Luvu",
       "pos": "LB",
       "nflTeam": "WAS",
-      "verdict": "PLAYED",
-      "reason": "14 pts TNF (6 tkl, FF).",
+      "verdict": "START",
+      "reason": "W10 14 F (Fantrax ~2:55 PM PT). 14 pts TNF (6 tkl, FF).",
       "injury": "",
       "practice": "n/a"
     },
@@ -167,42 +167,26 @@
       "pos": "LB",
       "nflTeam": "TEN",
       "verdict": "START",
-      "reason": "11.43 / 7.0, snaps unverified. vs JAX. Barton + Hill OUT, Saleh: plays entire game; Woellert ranks him LB6 this week. ⚠ 0 W9 = TEN bye. Recommended over Hamilton (BAL, 57% last game, MNF) while chasing 47.",
+      "reason": "W10 39 F (Fantrax ~2:55 PM PT). vs JAX. Barton + Hill OUT, Saleh: plays entire game; Woellert ranks him LB6 this week. ⚠ 0 W9 = TEN bye. Recommended over Hamilton (BAL, 57% last game, MNF) whi",
       "injury": "",
       "practice": "n/a"
     }
   ],
   "injuryWatch": [
     {
-      "player": "Garrett Wilson",
-      "tag": "Q",
-      "practice": "LP Wed, LP Thu, FP Fri",
-      "note": "Concussion; expected to play, needs final protocol clearance."
+      "player": "Brock Bowers",
+      "tag": "Ankle, ruled out of W10 game",
+      "practice": "n/a",
+      "note": "Hurt 1st qtr vs SEA, briefly returned, ruled out (Mike Garafolo, Sam Gordon). W11 status unknown; Eddies roster has no backup TE (Parkinson dropped Sat)."
     },
     {
-      "player": "Travis Etienne",
-      "tag": "Q (activated off IR Sat)",
-      "practice": "FP Fri",
-      "note": "Saints activated him Nov 14; expected to play vs CAR. Still in Fantrax IR slot; move to bench needs a drop (Lane)."
-    },
-    {
-      "player": "Kyle Hamilton",
-      "tag": "none",
-      "practice": "FP Thu",
-      "note": "57% snaps last game; recommended bench this week for Gray."
-    },
-    {
-      "player": "Colby Parkinson",
-      "tag": "none (IR slot)",
-      "practice": "Off injury report",
-      "note": "Healthy player sitting in IR slot."
+      "player": "De'Zhaun Stribling",
+      "tag": "IR",
+      "practice": "n/a",
+      "note": "In Eddies IR slot."
     }
   ],
   "byes": [
-    {
-      "week": 10,
-      "players": []
-    },
     {
       "week": 11,
       "players": [
@@ -227,32 +211,38 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "Bryce Boettcher",
-      "pos": "LB",
-      "nflTeam": "IND",
-      "why": "ROS. FA now (no claim needed). Davis-Gaither to IR; Woellert: good pickup. vs MIA. Would replace Simpson (17.0 / 9.33); uses the held spot, Bill's call.",
-      "stats": "9.43 FP/G season, 18% rostered; FA as of 2026-11-14T15:05:00-08:00",
+      "player": "Michael Mayer",
+      "pos": "TE",
+      "nflTeam": "LV",
+      "why": "WEEKLY, only if Bowers misses W11. 11.25 FP/G season; he'd inherit Bowers' LV role. W11 @DEN. On waivers until Wed 9 AM PT. Fills the open roster spot.",
+      "stats": "11.25 FP/G, last-3 n/a, 45% rostered; Fantrax 2026-11-15T14:55:00-08:00",
       "faabMin": 0,
-      "faabMax": 0,
-      "bid": 0,
-      "drop": "Trenton Simpson",
+      "faabMax": 3,
+      "bid": 2,
+      "drop": "(open spot)",
       "tag": "LIKE"
-    }
-  ],
-  "drops": [
+    },
     {
-      "rank": 1,
-      "player": "Ja'Kobi Lane",
-      "pos": "WR",
-      "reason": "3.4 / 2.33 FP/G; 0 W9. Cut to move activated Etienne to bench."
+      "rank": 2,
+      "player": "Dalton Schultz",
+      "pos": "TE",
+      "nflTeam": "HOU",
+      "why": "WEEKLY backup to Mayer if Bowers is out. 12.5 FP/G season. W11 vs IND on TNF.",
+      "stats": "12.5 FP/G, last-3 n/a, 65% rostered; Fantrax 2026-11-15T14:55:00-08:00",
+      "faabMin": 0,
+      "faabMax": 3,
+      "bid": 1,
+      "drop": "(open spot)",
+      "tag": "DART"
     }
   ],
+  "drops": [],
   "trades": [
     {
       "with": "any",
       "give": [],
       "get": [],
-      "why": "No new idea today; focus is Sunday lineup."
+      "why": "No new idea today; W10 nearly locked."
     }
   ],
   "idp": [
@@ -441,6 +431,21 @@
   ],
   "news": [
     {
+      "source": "Mike Garafolo (X)",
+      "time": "2026-11-15T14:35:00-08:00",
+      "text": "Raiders ruled out TE Brock Bowers (ankle). https://x.com/MikeGarafolo/status/2122096100412969354"
+    },
+    {
+      "source": "Mike Woellert (X)",
+      "time": "2026-11-15T11:14:00-08:00",
+      "text": "Cedric Gray 6 tkl (5 solo), TFL, INT. https://x.com/Mike_Woellert/status/2122045540418367499"
+    },
+    {
+      "source": "Randy Lange (X)",
+      "time": "2026-11-15T13:11:00-08:00",
+      "text": "Jets lose 31-12 to BUF; Hall 108 YFS, G. Wilson 7-106. Geno Smith hurt, Klubnik finished. https://x.com/rlangejets/status/2122075078011875540"
+    },
+    {
       "source": "Matt Manley (X)",
       "time": "2026-11-14T14:00:00-08:00",
       "text": "Saints activated RB Travis Etienne from IR. https://x.com/MattManley1/status/2121725006140805175"
@@ -454,16 +459,6 @@
       "source": "Mike Woellert (X)",
       "time": "2026-11-14T11:17:00-08:00",
       "text": "W10 LB ranks: Eric Wilson LB5, Cedric Gray LB6. https://x.com/Mike_Woellert/status/2121683852540227673"
-    },
-    {
-      "source": "Mike Woellert (X)",
-      "time": "2026-11-14T11:48:00-08:00",
-      "text": "Davis-Gaither to IR; Boettcher is a good pickup. https://x.com/Mike_Woellert/status/2121691666260087216"
-    },
-    {
-      "source": "Frank Ammirante (X)",
-      "time": "2026-11-14T11:10:00-08:00",
-      "text": "Carnell Tate OUT again; Dike's role grows. https://x.com/FAmmiranteTFJ/status/2121682193529405756"
     }
   ]
 }
