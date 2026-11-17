@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-16T15:10:00-08:00",
+  "asOf": "2026-11-17T14:40:00-08:00",
   "week": 10,
   "source": "Mike Woellert",
   "sourceUrl": "https://mikewoellert.substack.com/p/week-10-green-dot-and-full-time-linebackers-idp-fantasy-football",
@@ -24,9 +24,10 @@
       "team": "BAL",
       "greenDot": "Roquan Smith",
       "fullTime": [
-        "Roquan Smith"
+        "Roquan Smith",
+        "Trenton Simpson"
       ],
-      "notes": "W10: Woellert will update after MNF. W9: Smith back to 95% with dot. Trenton Simpson (Eddies) 57%, 6 tkl; Buchanan 53%->30%."
+      "notes": "W10 (MNF update): Roquan Smith wore the dot, 100% (54 snaps), 8 tkl. Trenton Simpson (Eddies) 83%, 8 tkl, 17.8% tackle rate; off the field some in 12 personnel. Woellert: 'Roquan and Simpson were both over 80% of the snaps, and I'm comfortable starting both.'"
     },
     {
       "team": "BUF",
@@ -114,7 +115,7 @@
         "Henry To’oTo’o",
         "Henry To'oTo'o"
       ],
-      "notes": "W10: Azeez Al-Shaair was inactive. Henry To’oTo’o wore the green dot and Jake Hansen was the LB2. Houston was a 2-LB defense in Week 10, and it was in base on just 2% of its snaps. To’oTo’o was on the field for 100% of the snaps and had 7 tackles and a 10.4%…"
+      "notes": "W10: Azeez Al-Shaair was inactive. Henry To’oTo’o wore the green dot and Jake Hansen was the LB2. Houston was a 2-LB defense in Week 10, and it was in base on just 2% of its snaps. To’oTo’o was on the field for 100% of the snaps and had 7 tackles and a 10.4%… Nov 17: Al-Shaair placed on IR (4+ games, Meirov); Woellert: To'oTo'o stays the dot, Jake Hansen full-time beside him."
     },
     {
       "team": "IND",
@@ -122,7 +123,7 @@
       "fullTime": [
         "C.J. Allen"
       ],
-      "notes": "W10: Akeem Davis-Gaither landed on IR this week and Jaylon Carlies was inactive. C.J. Allen is the green dot going forward, and Bryce Boettcher was the LB2. Allen was on the field for 100% of the snaps with 9 tackles and 2 TFLs. He had 29 tackles and a 16.3%…"
+      "notes": "W10: Akeem Davis-Gaither landed on IR this week and Jaylon Carlies was inactive. C.J. Allen is the green dot going forward, and Bryce Boettcher was the LB2. Allen was on the field for 100% of the snaps with 9 tackles and 2 TFLs. He had 29 tackles and a 16.3%… Nov 17 waiver piece: Bryce Boettcher LB2, 70%+ snaps two straight weeks with Davis-Gaither on IR."
     },
     {
       "team": "JAX",
@@ -143,9 +144,11 @@
     },
     {
       "team": "LAC",
-      "greenDot": null,
-      "fullTime": [],
-      "notes": "W10: Woellert will update after MNF. Nov 11 late: DEN called off the Henley trade (failed physical); Henley stays LAC. Woellert (X, Nov 12 2:52 AM PT): 'screwed a bunch of IDP owners who dropped Henley.' Dye had the dot W9; dot owner for W10 unsettled until Henley's status is clear."
+      "greenDot": "Daiyan Henley",
+      "fullTime": [
+        "Daiyan Henley"
+      ],
+      "notes": "W10 (MNF update): Henley wore the dot, 88% (58 of 66), 11 tkl; Marlowe Wax wore it when he sat. Del'Shawn Phillips 39%, 8 tkl + INT; Woellert says Phillips is a bye-week add only."
     },
     {
       "team": "LAR",
