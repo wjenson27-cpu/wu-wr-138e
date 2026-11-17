@@ -7,7 +7,7 @@
     "end": "2026-11-16",
     "label": "Nov 12–16"
   },
-  "status": "pending",
+  "status": "final",
   "robotLockedAt": "2026-11-12T13:56:15-08:00",
   "firstKickoff": "2026-11-12T17:15:00-08:00",
   "robot": [
@@ -16,107 +16,272 @@
       "player": "Brock Purdy",
       "pos": "QB",
       "team": "SF",
-      "points": null
+      "points": 55.0
     },
     {
       "slot": "RB",
       "player": "Breece Hall",
       "pos": "RB",
       "team": "NYJ",
-      "points": null
+      "points": 15.0
     },
     {
       "slot": "WR",
       "player": "Malik Nabers",
       "pos": "WR",
       "team": "NYG",
-      "points": null
+      "points": 8.0
     },
     {
       "slot": "TE",
       "player": "Brock Bowers",
       "pos": "TE",
       "team": "LV",
-      "points": null
+      "points": 5.0
     },
     {
       "slot": "FLEX",
       "player": "Jalen Coker",
       "pos": "WR",
       "team": "CAR",
-      "points": null
+      "points": 0.0
     },
     {
       "slot": "FLEX",
       "player": "Chimere Dike",
       "pos": "WR",
       "team": "TEN",
-      "points": null
+      "points": 18.0
     },
     {
       "slot": "FLEX",
       "player": "Devin Singletary",
       "pos": "RB",
       "team": "NYG",
-      "points": null
+      "points": 2.0
     },
     {
       "slot": "DL",
       "player": "George Karlaftis",
       "pos": "DL",
       "team": "KC",
-      "points": null
+      "points": 21.0
     },
     {
       "slot": "LB",
       "player": "Fred Warner",
       "pos": "LB",
       "team": "SF",
-      "points": null
+      "points": 20.0
     },
     {
       "slot": "DB",
       "player": "Quentin Lake",
       "pos": "DB",
       "team": "LAR",
-      "points": null
+      "points": 3.0
     },
     {
       "slot": "DB",
       "player": "Evan Williams",
       "pos": "DB",
       "team": "GB",
-      "points": null
+      "points": 16.0
     },
     {
       "slot": "IDP",
       "player": "Frankie Luvu",
       "pos": "LB",
       "team": "WAS",
-      "points": null
+      "points": 14.0
     },
     {
       "slot": "IDP",
       "player": "Jordyn Brooks",
       "pos": "LB",
       "team": "MIA",
-      "points": null
+      "points": 27.0
     },
     {
       "slot": "IDP",
       "player": "Cole Bishop",
       "pos": "DB",
       "team": "BUF",
-      "points": null
+      "points": 16.0
     }
   ],
-  "actual": [],
+  "actual": [
+    {
+      "slot": "QB",
+      "player": "Brock Purdy",
+      "pos": "QB",
+      "team": "SF",
+      "points": 55.0
+    },
+    {
+      "slot": "RB",
+      "player": "Breece Hall",
+      "pos": "RB",
+      "team": "NYJ",
+      "points": 15.0
+    },
+    {
+      "slot": "WR",
+      "player": "Malik Nabers",
+      "pos": "WR",
+      "team": "NYG",
+      "points": 8.0
+    },
+    {
+      "slot": "TE",
+      "player": "Brock Bowers",
+      "pos": "TE",
+      "team": "LV",
+      "points": 5.0
+    },
+    {
+      "slot": "FLEX",
+      "player": "Zach Charbonnet",
+      "pos": "RB",
+      "team": "SEA",
+      "points": 11.0
+    },
+    {
+      "slot": "FLEX",
+      "player": "Chimere Dike",
+      "pos": "WR",
+      "team": "TEN",
+      "points": 18.0
+    },
+    {
+      "slot": "FLEX",
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "team": "NYJ",
+      "points": 20.0
+    },
+    {
+      "slot": "DL",
+      "player": "George Karlaftis",
+      "pos": "DL",
+      "team": "KC",
+      "points": 21.0
+    },
+    {
+      "slot": "LB",
+      "player": "Fred Warner",
+      "pos": "LB",
+      "team": "SF",
+      "points": 20.0
+    },
+    {
+      "slot": "DB",
+      "player": "Quentin Lake",
+      "pos": "DB",
+      "team": "LAR",
+      "points": 3.0
+    },
+    {
+      "slot": "DB",
+      "player": "Evan Williams",
+      "pos": "DB",
+      "team": "GB",
+      "points": 16.0
+    },
+    {
+      "slot": "IDP",
+      "player": "Jordyn Brooks",
+      "pos": "LB",
+      "team": "MIA",
+      "points": 27.0
+    },
+    {
+      "slot": "IDP",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "team": "TEN",
+      "points": 39.0
+    },
+    {
+      "slot": "IDP",
+      "player": "Frankie Luvu",
+      "pos": "LB",
+      "team": "WAS",
+      "points": 14.0
+    }
+  ],
   "totals": {
-    "robot": null,
-    "eddies": null
+    "robot": 220.0,
+    "eddies": 272.0
   },
-  "margin": null,
-  "result": null,
-  "winner": null,
-  "decisions": []
+  "margin": -52.0,
+  "result": "L",
+  "winner": "Eddies",
+  "decisions": [
+    {
+      "slot": "FLEX",
+      "index": 4,
+      "robotPlayer": "Jalen Coker",
+      "robotPos": "WR",
+      "robotTeam": "CAR",
+      "robotPoints": 0.0,
+      "eddiesPlayer": "Zach Charbonnet",
+      "eddiesPos": "RB",
+      "eddiesTeam": "SEA",
+      "eddiesPoints": 11.0,
+      "swing": -11.0
+    },
+    {
+      "slot": "FLEX",
+      "index": 6,
+      "robotPlayer": "Devin Singletary",
+      "robotPos": "RB",
+      "robotTeam": "NYG",
+      "robotPoints": 2.0,
+      "eddiesPlayer": "Garrett Wilson",
+      "eddiesPos": "WR",
+      "eddiesTeam": "NYJ",
+      "eddiesPoints": 20.0,
+      "swing": -18.0
+    },
+    {
+      "slot": "IDP",
+      "index": 11,
+      "robotPlayer": "Frankie Luvu",
+      "robotPos": "LB",
+      "robotTeam": "WAS",
+      "robotPoints": 14.0,
+      "eddiesPlayer": "Jordyn Brooks",
+      "eddiesPos": "LB",
+      "eddiesTeam": "MIA",
+      "eddiesPoints": 27.0,
+      "swing": -13.0
+    },
+    {
+      "slot": "IDP",
+      "index": 12,
+      "robotPlayer": "Jordyn Brooks",
+      "robotPos": "LB",
+      "robotTeam": "MIA",
+      "robotPoints": 27.0,
+      "eddiesPlayer": "Cedric Gray",
+      "eddiesPos": "LB",
+      "eddiesTeam": "TEN",
+      "eddiesPoints": 39.0,
+      "swing": -12.0
+    },
+    {
+      "slot": "IDP",
+      "index": 13,
+      "robotPlayer": "Cole Bishop",
+      "robotPos": "DB",
+      "robotTeam": "BUF",
+      "robotPoints": 16.0,
+      "eddiesPlayer": "Frankie Luvu",
+      "eddiesPos": "LB",
+      "eddiesTeam": "WAS",
+      "eddiesPoints": 14.0,
+      "swing": 2.0
+    }
+  ]
 }
