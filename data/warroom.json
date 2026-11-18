@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-17T15:15:00-08:00",
-  "lastUpdated": "2026-11-17T15:15:00-08:00",
+  "asOf": "2026-11-18T15:00:00-08:00",
+  "lastUpdated": "2026-11-18T15:00:00-08:00",
   "season": 2026,
   "week": 11,
   "opponent": {
@@ -10,27 +10,23 @@
     "name": "Newman Lake Sleep Paralysis Demons"
   },
   "freshness": {
-    "plan": "2026-11-17T15:15:00-08:00",
-    "roster": "2026-11-17T15:05:00-08:00",
-    "scores": "2026-11-17T15:07:00-08:00",
-    "waivers": "2026-11-17T14:55:00-08:00",
-    "news": "2026-11-17T14:45:00-08:00"
+    "plan": "2026-11-18T15:00:00-08:00",
+    "roster": "2026-11-18T14:45:00-08:00",
+    "scores": "2026-11-18T14:50:00-08:00",
+    "waivers": "2026-11-18T14:50:00-08:00",
+    "news": "2026-11-18T14:45:00-08:00"
   },
   "lockTimes": [
     {
-      "label": "Waivers clear",
-      "at": "2026-11-18T09:00:00-08:00"
-    },
-    {
-      "label": "TNF IND @ HOU 5:15 PM PT (no Eddies; Stewart/Clowney/Walley targets play)",
+      "label": "TNF IND @ HOU 5:15 PM PT (no Eddies; Walley FA plays)",
       "at": "2026-11-19T17:15:00-08:00"
     },
     {
-      "label": "W11 first Eddies kickoffs (Dike, Downs, Karlaftis, Bishop, Hamilton, Brooks, Gray) 10:00 AM PT",
+      "label": "W11 first Eddies kickoffs (Dike, Downs, Karlaftis, McCollum, Hamilton, Brooks, Gray) 10:00 AM PT",
       "at": "2026-11-22T10:00:00-08:00"
     },
     {
-      "label": "W11 Hall/G. Wilson @LAC 1:05 PM PT; Nabers, Bowers 1:25 PM PT",
+      "label": "W11 Hall/G. Wilson @LAC 1:05 PM PT; Nabers, Mayer 1:25 PM PT",
       "at": "2026-11-22T13:05:00-08:00"
     },
     {
@@ -59,7 +55,7 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "@LAC. 16.0 / 14.0, 58%. Geno MRI no major damage.",
+      "reason": "@LAC. 16.0 / 14.0, 58%.",
       "injury": "",
       "practice": ""
     },
@@ -71,45 +67,45 @@
       "verdict": "START",
       "reason": "vs JAX. 17.89 / 8.5, 80%.",
       "injury": "",
-      "practice": ""
+      "practice": "Drills Wed (SNY); official status not seen"
     },
     {
       "slot": "TE",
-      "player": "Brock Bowers",
+      "player": "Michael Mayer",
       "pos": "TE",
       "nflTeam": "LV",
-      "verdict": "WATCH",
-      "reason": "@DEN (30th). 25.69 / 24.0. Q ankle, Fantrax exp. return Nov 22; if out add FA Mayer for Etienne before 1:25 PM PT Sun.",
-      "injury": "Q",
-      "practice": "TBD Wed"
+      "verdict": "START",
+      "reason": "@DEN (30th, soft). 11.55 / 7.67, 83%. Bowers fill-in.",
+      "injury": "",
+      "practice": ""
     },
     {
-      "slot": "FLEX",
+      "slot": "RWT",
       "player": "Chimere Dike",
       "pos": "WR",
       "nflTeam": "TEN",
       "verdict": "START",
-      "reason": "@DAL (25th). 14.33 / 26.0, 95%; Wan'Dale Robinson ankle.",
+      "reason": "@DAL (25th). 14.33 / 26.0, 95%. Wan'Dale on IR.",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "FLEX",
+      "slot": "RWT",
       "player": "Garrett Wilson",
       "pos": "WR",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "@LAC (13th). 15.67 / 17.0, 94%.",
+      "reason": "@LAC. 15.67 / 17.0, 94%.",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "FLEX",
+      "slot": "RWT",
       "player": "Josh Downs",
       "pos": "WR",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "vs ARI (13th). 9.0 / 11.67; covers Charbonnet bye.",
+      "reason": "vs ARI. 9.0 / 11.67, 17% debut. Covers Charbonnet bye.",
       "injury": "",
       "practice": ""
     },
@@ -119,7 +115,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "vs ARI (18th). 22.33 / 31.0, 82%; ARI OL boost. Weekly DL #1.",
+      "reason": "vs ARI OL 6.8% sack rate (boost). 22.33 / 31.0, 82%. Weekly DL #1.",
       "injury": "",
       "practice": ""
     },
@@ -129,17 +125,7 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "vs MIN (3rd). 24.89 / 20.5, 100%, green dot.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "DB",
-      "player": "Cole Bishop",
-      "pos": "DB",
-      "nflTeam": "BUF",
-      "verdict": "START",
-      "reason": "vs MIA (11th). 15.0 / 13.33, 96%; Lake bye.",
+      "reason": "vs MIN. 24.89 / 20.5, 100%, green dot.",
       "injury": "",
       "practice": ""
     },
@@ -149,22 +135,32 @@
       "pos": "DB",
       "nflTeam": "BAL",
       "verdict": "START",
-      "reason": "@CAR (15th). 21.3 / 18.33, 98%; 23 on MNF. E. Williams bye.",
+      "reason": "@CAR. 21.3 / 18.33, 98%. Weekly DB #7.",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "IDP",
+      "slot": "DB",
+      "player": "Zyon McCollum",
+      "pos": "DB",
+      "nflTeam": "TB",
+      "verdict": "START",
+      "reason": "@DET (21st). 16.0 / 22.0, 100% 3-wk. 0 last wk = TB bye W10. Weekly DB #32, ROS #25.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "ID",
       "player": "Jordyn Brooks",
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "@BUF (12th). 20.89 / 26.33, 100% full-time.",
+      "reason": "@BUF. 20.89 / 26.33, 100% full-time.",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "IDP",
+      "slot": "ID",
       "player": "Frankie Luvu",
       "pos": "LB",
       "nflTeam": "WAS",
@@ -174,72 +170,12 @@
       "practice": ""
     },
     {
-      "slot": "IDP",
+      "slot": "ID",
       "player": "Cedric Gray",
       "pos": "LB",
       "nflTeam": "TEN",
-      "verdict": "START",
-      "reason": "@DAL (7th). 14.88 / 21.5, 92% three-down.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Trenton Simpson",
-      "pos": "LB",
-      "nflTeam": "BAL",
-      "verdict": "SIT",
-      "reason": "@CAR (5th). 17.4 / 13.0, 82%; close call with Gray.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Jalen Coker",
-      "pos": "WR",
-      "nflTeam": "CAR",
-      "verdict": "SIT",
-      "reason": "12.25 / 5.33.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Travis Etienne",
-      "pos": "RB",
-      "nflTeam": "NO",
-      "verdict": "SIT",
-      "reason": "9.5 / 7.0; first drop.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Zach Charbonnet",
-      "pos": "RB",
-      "nflTeam": "SEA",
-      "verdict": "SIT",
-      "reason": "Bye W11.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Quentin Lake",
-      "pos": "DB",
-      "nflTeam": "LAR",
-      "verdict": "SIT",
-      "reason": "Bye W11.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "BN",
-      "player": "Evan Williams",
-      "pos": "DB",
-      "nflTeam": "GB",
-      "verdict": "SIT",
-      "reason": "Bye W11.",
+      "verdict": "WATCH",
+      "reason": "@DAL. 14.88 / 21.5, 92% W10 / 68% 3-wk. Barton FULL Wed; Woellert: riskier. Lean swap to Simpson (17.4 / 13.0, 82%, @CAR) at the Sun 10 AM PT lock.",
       "injury": "",
       "practice": ""
     }
@@ -247,9 +183,21 @@
   "injuryWatch": [
     {
       "player": "Brock Bowers",
-      "tag": "Ankle, Q",
-      "practice": "TBD Wed",
-      "note": "Fantrax Q, expected return Nov 22. FBG source: should be good to go; FBG injury analyst projects W14 (suspected high ankle)."
+      "tag": "Ankle, Q (IR slot)",
+      "practice": "DNP Wed",
+      "note": "Kubiak: progressing, day-to-day (Sam Warren, ESPN McFadden). Mayer starts."
+    },
+    {
+      "player": "Cole Bishop",
+      "tag": "Shoulder, Q (IR slot)",
+      "practice": "Unverified Wed",
+      "note": "Fantrax expected return Nov 22. Moved to IR; McCollum added 2:34 PM PT."
+    },
+    {
+      "player": "Cedric Gray",
+      "tag": "Role risk",
+      "practice": "n/a",
+      "note": "Cody Barton FULL Wed; Anthony Hill Jr. limited (Davenport)."
     },
     {
       "player": "De'Zhaun Stribling",
@@ -287,107 +235,16 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "M.J. Stewart",
+      "player": "Alontae Taylor",
       "pos": "DB",
-      "nflTeam": "HOU",
-      "why": "ROS. TNF vs IND (27th) soft; model weekly+ROS DB #1; 96% snaps.",
-      "stats": "16.0 FP/G, last-3 22.0, 26 last wk, 4% rostered; Fantrax 2026-11-17T14:55:00-08:00",
-      "faabMin": 5,
-      "faabMax": 12,
-      "bid": 8,
-      "drop": "Travis Etienne",
-      "tag": "MUST"
-    },
-    {
-      "rank": 2,
-      "player": "Jadeveon Clowney",
-      "pos": "DL",
-      "nflTeam": "HOU",
-      "why": "ROS. vs IND OL 7.1% sack rate (boost); DL2 depth; weekly #7 ROS #12.",
-      "stats": "11.57 FP/G, last-3 21.0, 17 last wk, 76% snaps; Fantrax 2026-11-17T14:55:00-08:00",
-      "faabMin": 2,
-      "faabMax": 6,
-      "bid": 3,
-      "drop": "Travis Etienne (if #1 fails) else Zach Charbonnet",
-      "tag": "LIKE"
-    },
-    {
-      "rank": 3,
-      "player": "Zyon McCollum",
-      "pos": "DB",
-      "nflTeam": "TB",
-      "why": "ROS. @DET (21st) neutral; 100% snaps; 0 last wk = TB bye W10.",
-      "stats": "16.0 FP/G, last-3 22.0, 0 last wk (bye); Fantrax 2026-11-17T14:55:00-08:00",
-      "faabMin": 1,
-      "faabMax": 2,
-      "bid": 1,
-      "drop": "Travis Etienne",
-      "tag": "LIKE"
-    },
-    {
-      "rank": 4,
-      "player": "Justin Walley",
-      "pos": "DB",
-      "nflTeam": "IND",
-      "why": "ROS dart. @HOU (8th) tough.",
-      "stats": "16.12 FP/G, last-3 33.0, 33 last wk, 78% snaps; Fantrax 2026-11-17T14:55:00-08:00",
-      "faabMin": 1,
-      "faabMax": 1,
-      "bid": 1,
-      "drop": "Travis Etienne",
-      "tag": "DART"
-    },
-    {
-      "rank": 5,
-      "player": "Ashton Gillotte",
-      "pos": "DL",
-      "nflTeam": "KC",
-      "why": "ROS dart. vs ARI OL boost.",
-      "stats": "10.89 FP/G, last-3 17.67, 28 last wk, 75% snaps; Fantrax 2026-11-17T14:55:00-08:00",
-      "faabMin": 1,
-      "faabMax": 1,
-      "bid": 1,
-      "drop": "Travis Etienne",
-      "tag": "DART"
-    },
-    {
-      "rank": 6,
-      "player": "Derrick Moore",
-      "pos": "DL",
-      "nflTeam": "DET",
-      "why": "ROS dart. TB OL 9.2% sack rate.",
-      "stats": "6.78 FP/G, last-3 17.67, 24 last wk, 68% snaps; Fantrax 2026-11-17T14:55:00-08:00",
-      "faabMin": 1,
-      "faabMax": 1,
-      "bid": 1,
-      "drop": "Travis Etienne",
-      "tag": "DART"
-    },
-    {
-      "rank": 7,
-      "player": "Ar'Darius Washington",
-      "pos": "DB",
-      "nflTeam": "NYG",
-      "why": "WEEKLY. vs JAX neutral.",
-      "stats": "9.75 FP/G, last-3 19.0, 27 last wk, 78% snaps; Fantrax 2026-11-17T14:55:00-08:00",
-      "faabMin": 0,
-      "faabMax": 1,
-      "bid": 0,
-      "drop": "Travis Etienne",
-      "tag": "DART"
-    },
-    {
-      "rank": 8,
-      "player": "Michael Mayer",
-      "pos": "TE",
-      "nflTeam": "LV",
-      "why": "WEEKLY. Only if Bowers out; free FA after claims. DEN allows 3rd-most TE pts.",
-      "stats": "11.55 FP/G, last-3 7.67, 4.5 last wk, 83% snaps, 45% rostered; Fantrax 2026-11-17T14:55:00-08:00",
+      "nflTeam": "TEN",
+      "why": "WEEKLY. @DAL (28th, soft). Only if a DB starter pops up on a report.",
+      "stats": "15.86 FP/G, last-3 18.0, 15 last wk, 84% snaps; Fantrax 2026-11-18T14:50:00-08:00",
       "faabMin": 0,
       "faabMax": 0,
       "bid": 0,
       "drop": "Travis Etienne",
-      "tag": "DART"
+      "tag": "WEEKLY"
     }
   ],
   "drops": [
@@ -396,28 +253,9 @@
       "player": "Travis Etienne",
       "pos": "RB",
       "reason": "9.5 / 7.0 FP/G, 33% snaps W10."
-    },
-    {
-      "rank": 2,
-      "player": "Zach Charbonnet",
-      "pos": "RB",
-      "reason": "8.67 FP/G, bye W11; leaves Hall as only RB."
     }
   ],
-  "trades": [
-    {
-      "with": "Ultron",
-      "give": [
-        "Malik Nabers",
-        "Trenton Simpson"
-      ],
-      "get": [
-        "Bijan Robinson",
-        "Mack Wilson"
-      ],
-      "why": "Idea: our WR + an 83%-snap LB for an RB1 + a green-dot LB. Bijan is +5.8 FP/G over Nabers; ATL bye W11."
-    }
-  ],
+  "trades": [],
   "idp": [
     {
       "nflTeam": "ARI",
@@ -584,17 +422,22 @@
     {
       "player": "Kyle Hamilton",
       "nflTeam": "BAL",
-      "note": "98% MNF, 23 pts; W11 starter."
+      "note": "98% W10; W11 starter @CAR."
+    },
+    {
+      "player": "Zyon McCollum",
+      "nflTeam": "TB",
+      "note": "Added 2:34 PM PT Nov 18; W11 starter @DET."
     },
     {
       "player": "Cole Bishop",
       "nflTeam": "BUF",
-      "note": "96%; W11 starter vs MIA."
+      "note": "Q shoulder, IR slot."
     },
     {
       "player": "Quentin Lake",
       "nflTeam": "LAR",
-      "note": "LAR dot; W11 bye."
+      "note": "W11 bye."
     },
     {
       "player": "Evan Williams",
@@ -603,6 +446,31 @@
     }
   ],
   "news": [
+    {
+      "source": "Sam Warren (X)",
+      "time": "2026-11-18T12:53:00-08:00",
+      "text": "Bowers DNP Wed; progressing, day-to-day. https://x.com/samwarren83/status/2123157626271957417"
+    },
+    {
+      "source": "Mike Woellert (X)",
+      "time": "2026-11-18T10:51:00-08:00",
+      "text": "Barton returning; Gray becomes a riskier play. https://x.com/Mike_Woellert/status/2123126886599459253"
+    },
+    {
+      "source": "Turron Davenport (X)",
+      "time": "2026-11-18T13:00:00-08:00",
+      "text": "Titans Wed report: Barton FULL, Hill Jr. limited. https://x.com/TDavenport_NFL/status/2123159505840263510"
+    },
+    {
+      "source": "PFT (X)",
+      "time": "2026-11-18T14:40:00-08:00",
+      "text": "Van Ginkel (Newman) limited Wed. https://x.com/ProFootballTalk/status/2123184606622974282"
+    },
+    {
+      "source": "96.5 The Fan (X)",
+      "time": "2026-11-18T11:31:00-08:00",
+      "text": "Downs at practice, 2nd week with KC. https://x.com/TheFan965/status/2123136984096915482"
+    },
     {
       "source": "Mike Woellert (Substack)",
       "time": "2026-11-17T13:37:00-08:00",
@@ -617,21 +485,6 @@
       "source": "Justin M (X)",
       "time": "2026-11-17T13:37:00-08:00",
       "text": "Wan'Dale Robinson injury opens TEN WR targets for Dike. https://x.com/JustinM_NFL/status/2122806412224921835"
-    },
-    {
-      "source": "Mike Woellert (X)",
-      "time": "2026-11-17T08:44:00-08:00",
-      "text": "HOU: To'oTo'o keeps dot, Hansen full-time; Al-Shaair IR. https://x.com/Mike_Woellert/status/2122732670342107266"
-    },
-    {
-      "source": "Mike Giarraputo (X)",
-      "time": "2026-11-16T17:12:00-08:00",
-      "text": "Geno Smith MRI: no major damage. https://x.com/mikegiarraputo/status/2122498160669208989"
-    },
-    {
-      "source": "Footballguys (email)",
-      "time": "2026-11-16T19:21:00-08:00",
-      "text": "Bowers source: should be good to go at DEN; FBG injury analyst projects W14."
     }
   ]
 }
