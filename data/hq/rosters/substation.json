@@ -2,66 +2,64 @@
   "teamId": "substation",
   "teamName": "Substation",
   "owner": "Nathan Kelly",
-  "asOf": "2026-11-11 9:25 AM PT",
-  "faabLeft": 5,
-  "startingQB": "Brock Purdy",
+  "asOf": "2026-11-18 10:16 AM PT",
+  "faabLeft": 4,
+  "startingQB": "Trevor Lawrence",
   "roster": {
     "QB": [
-      "Brock Purdy"
+      "Trevor Lawrence"
     ],
     "RB": [
-      "Emmett Johnson",
-      "Kenneth Gainwell",
-      "Justice Hill"
+      "Cameron Skattebo",
+      "Kenneth Gainwell"
     ],
     "WR": [
       "Ja'Marr Chase",
       "Germie Bernard",
-      "KC Concepcion",
-      "Malik Nabers",
-      "Tre Tucker",
-      "Jakobi Meyers"
+      "Jakobi Meyers",
+      "Jordyn Tyson",
+      "Makai Lemon",
+      "KC Concepcion"
     ],
     "TE": [
-      "Tucker Kraft"
+      "Brevyn Spann-Ford",
+      "David Njoku"
     ],
     "DL": [
-      "Dexter Lawrence"
+      "Jaelan Phillips"
     ],
     "LB": [
       "Malcolm Rodriguez",
       "Kaden Elliss",
-      "Henry To'oTo'o",
-      "Eric Wilson"
+      "Dre Greenlaw",
+      "K.J. Britt",
+      "Carson Schwesinger"
     ],
     "DB": [
-      "Nick Emmanwori",
-      "Jalen Pitre",
+      "Jeremy Chinn",
       "Tykee Smith",
-      "DeShon Elliott"
+      "Jalen Pitre"
     ],
     "IR": [
-      "Tyjae Spears",
-      "Zack Baun",
+      "Tank Bigsby",
+      "Keaton Mitchell",
       "Jack Campbell"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Tyjae Spears — Q (IR slot)",
-    "Zack Baun — Q (IR slot)",
+    "Tank Bigsby — IR (IR slot)",
     "Jack Campbell — IR (IR slot)"
   ],
-  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "fantraxTeamId": "bbdlo6fkmsb3ulv5",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Tyjae Spears — Q (IR slot)",
-    "Zack Baun — Q (IR slot)",
+    "Tank Bigsby — IR (IR slot)",
     "Jack Campbell — IR (IR slot)"
   ],
-  "updated": "2026-11-11",
-  "lastSynced": "2026-11-11 9:25 AM PT"
+  "updated": "2026-11-18",
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

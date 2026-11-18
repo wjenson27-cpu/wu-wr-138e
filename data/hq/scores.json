@@ -1,86 +1,86 @@
 {
-  "updated": "2026-11-10",
-  "asOf": "2026-11-10",
-  "week": 9,
+  "updated": "2026-11-17",
+  "asOf": "2026-11-17",
+  "week": 10,
   "season": 2026,
   "weekStatus": "final",
   "complete": true,
   "source": "Fantrax",
-  "note": "Week 9 FINAL from Fantrax standings scrape Tue Nov 10 approximately 1:11 PM PT (MNF complete; all 14 scores recounted vs awards.json). Kitty The Hypersecretors 296.5; survivor-low Little Ass Boys 214.5 (alive pool).",
+  "note": "Week 10 FINAL from Fantrax standings page Tue Nov 17 7:36 AM PT (MNF complete; all 14 scores and official PF/PA recounted from the Standings page). Kitty Mrs. Doubtpfizer 341.5; survivor-low Newman Lake Sleep Paralysis Demons 201 (alive pool).",
   "kitty": {
-    "team": "Hyper",
-    "teamFull": "The Hypersecretors",
-    "teamId": "hyper",
-    "score": 296.5
+    "team": "Doubtpfizer",
+    "teamFull": "Mrs. Doubtpfizer",
+    "teamId": "doubtpfizer",
+    "score": 341.5
   },
   "survivorLowest": {
-    "team": "Little Ass Boys",
-    "teamId": "lab",
-    "score": 214.5
+    "team": "Newman Lake Sleep Paralysis Demons",
+    "teamId": "newman",
+    "score": 201
   },
   "matchups": [
     {
+      "home": "Newman Lake Sleep Paralysis Demons",
+      "away": "Morningside Muff Divers",
+      "homeScore": 201,
+      "awayScore": 194.5,
+      "winner": "Newman Lake Sleep Paralysis Demons",
+      "status": "final",
+      "notes": "Fantrax Week 10 final · standings page Tue Nov 17 7:36 AM PT"
+    },
+    {
       "home": "Eagle Ridge Eddies",
-      "away": "Towner Top Aga Bottom",
-      "homeScore": 276,
-      "awayScore": 239.5,
+      "away": "Little Ass Boys",
+      "homeScore": 272,
+      "awayScore": 198,
       "winner": "Eagle Ridge Eddies",
       "status": "final",
-      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+      "notes": "Fantrax Week 10 final · standings page Tue Nov 17 7:36 AM PT"
     },
     {
-      "home": "Morningside Muff Divers",
+      "home": "Substation",
       "away": "Drummond Dongers",
-      "homeScore": 231.5,
-      "awayScore": 253.5,
-      "winner": "Drummond Dongers",
+      "homeScore": 294,
+      "awayScore": 289.5,
+      "winner": "Substation",
       "status": "final",
-      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+      "notes": "Fantrax Week 10 final · standings page Tue Nov 17 7:36 AM PT"
     },
     {
-      "home": "Saltese Slamm",
-      "away": "Indian Trail Slumlords",
-      "homeScore": 188.5,
-      "awayScore": 271.5,
-      "winner": "Indian Trail Slumlords",
+      "home": "Indian Trail Slumlords",
+      "away": "Valley Old Goats",
+      "homeScore": 255.5,
+      "awayScore": 298,
+      "winner": "Valley Old Goats",
       "status": "final",
-      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
-    },
-    {
-      "home": "The Hypersecretors",
-      "away": "Newman Lake Sleep Paralysis Demons",
-      "homeScore": 296.5,
-      "awayScore": 252,
-      "winner": "The Hypersecretors",
-      "status": "final",
-      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+      "notes": "Fantrax Week 10 final · standings page Tue Nov 17 7:36 AM PT"
     },
     {
       "home": "Ultron",
-      "away": "Pocket Agents",
-      "homeScore": 261.5,
-      "awayScore": 237,
+      "away": "The Hypersecretors",
+      "homeScore": 265,
+      "awayScore": 221,
       "winner": "Ultron",
       "status": "final",
-      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+      "notes": "Fantrax Week 10 final · standings page Tue Nov 17 7:36 AM PT"
     },
     {
-      "home": "Little Ass Boys",
-      "away": "Substation",
-      "homeScore": 214.5,
-      "awayScore": 280.5,
-      "winner": "Substation",
+      "home": "Pocket Agents",
+      "away": "Towner Top Aga Bottom",
+      "homeScore": 230,
+      "awayScore": 262.5,
+      "winner": "Towner Top Aga Bottom",
       "status": "final",
-      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+      "notes": "Fantrax Week 10 final · standings page Tue Nov 17 7:36 AM PT"
     },
     {
       "home": "Mrs. Doubtpfizer",
-      "away": "Valley Old Goats",
-      "homeScore": 236,
-      "awayScore": 195.5,
+      "away": "Saltese Slamm",
+      "homeScore": 341.5,
+      "awayScore": 179.5,
       "winner": "Mrs. Doubtpfizer",
       "status": "final",
-      "notes": "Fantrax Week 9 final · standings scrape Tue Nov 10 approximately 1:11 PM PT (all 14 scores recounted vs awards.json weekScores)."
+      "notes": "Fantrax Week 10 final · standings page Tue Nov 17 7:36 AM PT"
     }
   ]
 }

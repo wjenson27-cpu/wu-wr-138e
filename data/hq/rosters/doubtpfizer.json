@@ -2,8 +2,8 @@
   "teamId": "doubtpfizer",
   "teamName": "Mrs. Doubtpfizer",
   "owner": "Kyle Weberg",
-  "asOf": "2026-11-11 9:25 AM PT",
-  "faabLeft": 70,
+  "asOf": "2026-11-18 10:16 AM PT",
+  "faabLeft": 68,
   "startingQB": "Dak Prescott",
   "roster": {
     "QB": [
@@ -11,54 +11,54 @@
     ],
     "RB": [
       "Christian McCaffrey",
-      "Blake Corum",
       "Chuba Hubbard",
       "Kaelon Black",
-      "Braelon Allen"
+      "Braelon Allen",
+      "Blake Corum"
     ],
     "WR": [
       "Nico Collins",
-      "Rashee Rice",
-      "Rome Odunze"
+      "Rome Odunze",
+      "Rashee Rice"
     ],
     "TE": [
-      "Hunter Henry",
       "Colston Loveland",
+      "Hunter Henry",
       "Kyle Pitts"
     ],
     "DL": [
+      "Jalen Carter",
       "Byron Young"
     ],
     "LB": [
       "Nakobe Dean",
+      "DeMarvion Overshown",
       "Alex Singleton",
       "Sonny Styles"
     ],
     "DB": [
-      "Kamari Lassiter",
-      "Malik Mustapha",
-      "Ji'Ayir Brown",
-      "Hunter Wohler"
+      "Reed Blankenship",
+      "Malik Mustapha"
     ],
     "IR": [
-      "Reed Blankenship",
-      "DeMarvion Overshown"
+      "TreVeyon Henderson",
+      "Kamari Lassiter"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Reed Blankenship — Q (IR slot)",
-    "DeMarvion Overshown — Q (IR slot)"
+    "TreVeyon Henderson — IR (IR slot)",
+    "Kamari Lassiter — Q (IR slot)"
   ],
-  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "fantraxTeamId": "xg1akj6omsb3ulv5",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Reed Blankenship — Q (IR slot)",
-    "DeMarvion Overshown — Q (IR slot)"
+    "TreVeyon Henderson — IR (IR slot)",
+    "Kamari Lassiter — Q (IR slot)"
   ],
-  "updated": "2026-11-11",
-  "lastSynced": "2026-11-11 9:25 AM PT"
+  "updated": "2026-11-18",
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

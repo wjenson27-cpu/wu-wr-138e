@@ -2,7 +2,7 @@
   "teamId": "dongers",
   "teamName": "Drummond Dongers",
   "owner": "Gavin Heaton",
-  "asOf": "2026-11-11 6:24 AM PT",
+  "asOf": "2026-11-18 10:16 AM PT",
   "faabLeft": 1,
   "startingQB": "Joe Burrow",
   "roster": {
@@ -18,11 +18,11 @@
       "D.J. Moore",
       "Chris Olave",
       "Jaxon Smith-Njigba",
-      "Ladd McConkey"
+      "KaVontae Turpin"
     ],
     "TE": [
-      "T.J. Hockenson",
-      "Brenton Strange"
+      "Brenton Strange",
+      "Mike Gesicki"
     ],
     "DL": [
       "David Bailey",
@@ -40,25 +40,24 @@
       "Jevon Holland"
     ],
     "IR": [
-      "KaVontae Turpin"
+      "T.J. Hockenson",
+      "Ladd McConkey"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Ladd McConkey — Q (reserve)",
-    "KaVontae Turpin — Q (IR slot)"
+    "T.J. Hockenson — Q (IR slot)",
+    "Ladd McConkey — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-11 6:24 AM PT (/workspace/fantrax-raw-2026-11-11-am-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "fantraxTeamId": "lreem0zbmsb3ulv5",
-  "lineupFlags": [
-    "Ladd McConkey — Q (reserve)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Ladd McConkey — Q (reserve)",
-    "KaVontae Turpin — Q (IR slot)"
+    "T.J. Hockenson — Q (IR slot)",
+    "Ladd McConkey — Q (IR slot)"
   ],
-  "updated": "2026-11-11",
-  "lastSynced": "2026-11-11 6:24 AM PT"
+  "updated": "2026-11-18",
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

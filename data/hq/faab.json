@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11",
-  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-11-11 ~9:25 AM PT (after Week 10 waivers).",
+  "updated": "2026-11-18",
+  "source": "Fantrax Claim Budget Remaining verified live, all 14 teams, 2026-11-18 10:16 AM PT roster sync.",
   "startingBudget": 115,
   "note": "Week 10 FAAB clear (Wed Nov 11, 9:00 AM PT) — spend by team: Valley Old Goats $42 (Tank Dell $26, Corey Kiner $16); Pocket Agents $16 (Troy Dye $8, Tony Adams $8); Ultron $7 (DeMarcco Hellams $6, Barion Brown $1); Little Ass Boys $6 (Marcus Jones $6); The Hypersecretors $2 (Bryce Young $2); Mrs. Doubtpfizer $2 (Hunter Wohler $2). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at ~9:25 AM PT; all 14 reconcile exactly. Prior: Week 9 FAAB clear (Wed Nov 4, 9:00 AM PT) — spend by team: Eagle Ridge Eddie's $9 (Josh Downs $7, Devin Singletary $2); Valley Old Goats $4 (Mike Gesicki $4); Mrs. Doubtpfizer $3 (Malik Mustapha $3); Saltese Slamm $2 (Adonai Mitchell $1, Malik Willis $1). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 10:15 AM PT. Prior: Week 8 FAAB clear (Wed Oct 28, 9:00 AM PT) — spend by team: Substation $21 (KC Concepcion $21); The Hypersecretors $13 (Jacory Croskey-Merritt $9, Micah Parsons $4); Mrs. Doubtpfizer $10 (Kyler Gordon $5, Kaelon Black $3, Nohl Williams $2); Saltese Slamm $6 (Dee Winters $4, Colby Parkinson $1, Ty Okada $1); Little Ass Boys $5 (Greg Dulcich $5); Eagleridge Eddie's $4 (Cole Bishop $4); Pocket Agents $3 (Josh Hines-Allen $3); Newman Lake $3 (Grant Delpit $3). $0 executed claims excluded from claims[]. Balances verified live against Fantrax Claim Budget Remaining at 9:44 AM PT.",
   "excludeZeroBids": true,
@@ -24,12 +24,12 @@
       "owner": "Ryan McCallum",
       "abbrev": "NLS",
       "starting": 115,
-      "remaining": 44,
-      "spentClaims": 61,
+      "remaining": 40,
+      "spentClaims": 65,
       "tradeOut": 10,
       "tradeIn": 0,
-      "spentKnown": 71,
-      "remainingKnown": 44
+      "spentKnown": 75,
+      "remainingKnown": 40
     },
     {
       "id": "saltese",
@@ -37,12 +37,12 @@
       "owner": "Luke Sahlberg",
       "abbrev": "SAL",
       "starting": 115,
-      "remaining": 3,
-      "spentClaims": 103,
-      "tradeOut": 29,
+      "remaining": 2,
+      "spentClaims": 104,
+      "tradeOut": 34,
       "tradeIn": 25,
-      "spentKnown": 132,
-      "remainingKnown": 3
+      "spentKnown": 138,
+      "remainingKnown": 2
     },
     {
       "id": "lab",
@@ -50,12 +50,12 @@
       "owner": "Jesse Nicholson",
       "abbrev": "LAB",
       "starting": 115,
-      "remaining": 50,
-      "spentClaims": 65,
+      "remaining": 44,
+      "spentClaims": 71,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 65,
-      "remainingKnown": 50
+      "spentKnown": 71,
+      "remainingKnown": 44
     },
     {
       "id": "doubtpfizer",
@@ -63,12 +63,12 @@
       "owner": "Kyle Weberg",
       "abbrev": "MDP",
       "starting": 115,
-      "remaining": 70,
-      "spentClaims": 45,
+      "remaining": 68,
+      "spentClaims": 47,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 45,
-      "remainingKnown": 70
+      "spentKnown": 47,
+      "remainingKnown": 68
     },
     {
       "id": "eddies",
@@ -78,9 +78,9 @@
       "starting": 115,
       "remaining": 25,
       "spentClaims": 79,
-      "tradeOut": 0,
+      "tradeOut": 11,
       "tradeIn": 0,
-      "spentKnown": 79,
+      "spentKnown": 90,
       "remainingKnown": 25
     },
     {
@@ -102,12 +102,12 @@
       "owner": "Chase Anderson",
       "abbrev": "TTA",
       "starting": 115,
-      "remaining": 10,
+      "remaining": 3,
       "spentClaims": 93,
-      "tradeOut": 30,
-      "tradeIn": 8,
-      "spentKnown": 123,
-      "remainingKnown": 10
+      "tradeOut": 37,
+      "tradeIn": 18,
+      "spentKnown": 130,
+      "remainingKnown": 3
     },
     {
       "id": "hyper",
@@ -115,12 +115,12 @@
       "owner": "Jacob Crisp",
       "abbrev": "HYP",
       "starting": 115,
-      "remaining": 10,
-      "spentClaims": 115,
+      "remaining": 13,
+      "spentClaims": 119,
       "tradeOut": 0,
-      "tradeIn": 10,
-      "spentKnown": 115,
-      "remainingKnown": 10
+      "tradeIn": 17,
+      "spentKnown": 119,
+      "remainingKnown": 13
     },
     {
       "id": "morningside",
@@ -128,12 +128,12 @@
       "owner": "Tim Brandle",
       "abbrev": "MMD",
       "starting": 115,
-      "remaining": 8,
-      "spentClaims": 107,
+      "remaining": 6,
+      "spentClaims": 109,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 107,
-      "remainingKnown": 8
+      "spentKnown": 109,
+      "remainingKnown": 6
     },
     {
       "id": "ultron",
@@ -154,12 +154,12 @@
       "owner": "Mike Heff",
       "abbrev": "VOG",
       "starting": 100,
-      "remaining": 18,
-      "spentClaims": 82,
+      "remaining": 16,
+      "spentClaims": 84,
       "tradeOut": 0,
       "tradeIn": 0,
-      "spentKnown": 82,
-      "remainingKnown": 18,
+      "spentKnown": 84,
+      "remainingKnown": 16,
       "note": " | Started at $100: only team that did not pay dues by Aug 1 (no +$15 bonus), per Bill Oct 23 2026"
     },
     {
@@ -168,12 +168,12 @@
       "owner": "Kellen Olson",
       "abbrev": "PKT",
       "starting": 115,
-      "remaining": 69,
-      "spentClaims": 40,
-      "tradeOut": 10,
+      "remaining": 66,
+      "spentClaims": 43,
+      "tradeOut": 20,
       "tradeIn": 14,
-      "spentKnown": 50,
-      "remainingKnown": 69
+      "spentKnown": 63,
+      "remainingKnown": 66
     },
     {
       "id": "substation",
@@ -181,15 +181,184 @@
       "owner": "Nathan Kelly",
       "abbrev": "SUB",
       "starting": 115,
-      "remaining": 5,
-      "spentClaims": 134,
+      "remaining": 4,
+      "spentClaims": 135,
       "tradeOut": 35,
-      "tradeIn": 43,
-      "spentKnown": 169,
-      "remainingKnown": 5
+      "tradeIn": 59,
+      "spentKnown": 170,
+      "remainingKnown": 4
     }
   ],
   "claims": [
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "M.J. Stewart",
+      "amount": 1,
+      "team": "Saltese Slamm",
+      "kind": "claim",
+      "teamId": "saltese",
+      "pos": "DB",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Jaelan Phillips",
+      "amount": 1,
+      "team": "Substation",
+      "kind": "claim",
+      "teamId": "substation",
+      "pos": "DL",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Jalen Carter",
+      "amount": 1,
+      "team": "Mrs. Doubtpfizer",
+      "kind": "claim",
+      "teamId": "doubtpfizer",
+      "pos": "DL",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Dee Winters",
+      "amount": 4,
+      "team": "Little Ass Boys",
+      "kind": "claim",
+      "teamId": "lab",
+      "pos": "LB",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Shaun Dolac",
+      "amount": 1,
+      "team": "The Hypersecretors",
+      "kind": "claim",
+      "teamId": "hyper",
+      "pos": "LB",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Danny Stutsman",
+      "amount": 4,
+      "team": "Newman Lake Sleep Paralysis Demons",
+      "kind": "claim",
+      "teamId": "newman",
+      "pos": "LB",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Elic Ayomanor",
+      "amount": 1,
+      "team": "Morningside Muff Divers",
+      "kind": "claim",
+      "teamId": "morningside",
+      "pos": "WR",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Nohl Williams",
+      "amount": 2,
+      "team": "Valley Old Goats",
+      "kind": "claim",
+      "teamId": "goats",
+      "pos": "DB",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Kaleb Elarms-Orr",
+      "amount": 3,
+      "team": "The Hypersecretors",
+      "kind": "claim",
+      "teamId": "hyper",
+      "pos": "LB",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "Austin Booker",
+      "amount": 2,
+      "team": "Little Ass Boys",
+      "kind": "claim",
+      "teamId": "lab",
+      "pos": "DL",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "9:00 AM PT",
+      "player": "TreVeyon Henderson",
+      "amount": 1,
+      "team": "Mrs. Doubtpfizer",
+      "kind": "claim",
+      "teamId": "doubtpfizer",
+      "pos": "RB",
+      "dropped": null,
+      "note": "Week 11 claim",
+      "attribution": "fantrax-roster-sync-2026-11-18-am"
+    },
+    {
+      "date": "2026-11-13",
+      "time": "10:05 AM PT",
+      "player": "Boye Mafe",
+      "amount": 1,
+      "team": "Morningside Muff Divers",
+      "kind": "claim",
+      "teamId": "morningside",
+      "pos": "DL",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-roster-sync-2026-11-13-am"
+    },
+    {
+      "date": "2026-11-13",
+      "time": "9:58 AM PT",
+      "player": "Robert Spillane",
+      "amount": 3,
+      "team": "Pocket Agents",
+      "kind": "claim",
+      "teamId": "pocket",
+      "pos": "LB",
+      "dropped": null,
+      "note": "Week 10 claim",
+      "attribution": "fantrax-roster-sync-2026-11-13-am"
+    },
     {
       "date": "2026-11-11",
       "time": "9:00 AM PT",
@@ -2206,6 +2375,20 @@
   ],
   "trades": [
     {
+      "date": "2026-11-11",
+      "amount": 7,
+      "fromTeam": "Towner Top Aga Bottom",
+      "fromTeamId": "ttab",
+      "toTeam": "The Hypersecretors",
+      "toTeamId": "hyper",
+      "for": [
+        "Bryce Young (QB)"
+      ],
+      "summary": "Fantrax official — Towner Top Aga Bottom paid $7 FAAB to The Hypersecretors in Week 9 trade (Nov 11 5:13 PM PT).",
+      "official": true,
+      "kind": "trade"
+    },
+    {
       "date": "2026-10-29",
       "amount": 5,
       "fromTeam": "Saltese Slamm",
@@ -2219,6 +2402,49 @@
         "D'Andre Swift (RB)"
       ],
       "summary": "Fantrax official — Saltese Slamm paid $5 FAAB to Ultron in Week 8 trade (Oct 29 12:41 PM PDT).",
+      "official": true,
+      "kind": "trade"
+    },
+    {
+      "date": "2026-10-28",
+      "amount": 5,
+      "fromTeam": "Saltese Slamm",
+      "fromTeamId": "saltese",
+      "toTeam": "Substation",
+      "toTeamId": "substation",
+      "for": [
+        "RJ Harvey (RB)"
+      ],
+      "summary": "Fantrax official — Saltese Slamm paid $5 FAAB to Substation in Week 8 trade (Oct 28 9:46 AM PT).",
+      "official": true,
+      "kind": "trade"
+    },
+    {
+      "date": "2026-10-27",
+      "amount": 11,
+      "fromTeam": "Eagleridge Eddie's",
+      "fromTeamId": "eddies",
+      "toTeam": "Substation",
+      "toTeamId": "substation",
+      "for": [
+        "George Pickens (WR)",
+        "Frankie Luvu (LB)"
+      ],
+      "summary": "Fantrax official — Eagleridge Eddie's paid $11 FAAB to Substation in Week 8 trade (Oct 27 6:16 PM PT).",
+      "official": true,
+      "kind": "trade"
+    },
+    {
+      "date": "2026-10-26",
+      "amount": 10,
+      "fromTeam": "Pocket Agents",
+      "fromTeamId": "pocket",
+      "toTeam": "Towner Top Aga Bottom",
+      "toTeamId": "ttab",
+      "for": [
+        "Dane Belton (DB)"
+      ],
+      "summary": "Fantrax official — Pocket Agents paid $10 FAAB to Towner Top Aga Bottom in Week 7 trade (Oct 26 9:51 PM PT).",
       "official": true,
       "kind": "trade"
     },
@@ -2443,5 +2669,5 @@
     }
   ],
   "incomplete": false,
-  "lastSynced": "2026-11-11 9:25 AM PT"
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

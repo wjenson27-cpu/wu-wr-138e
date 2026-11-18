@@ -2,29 +2,27 @@
   "teamId": "hyper",
   "teamName": "The Hypersecretors",
   "owner": "Jacob Crisp",
-  "asOf": "2026-11-11 9:25 AM PT",
-  "faabLeft": 10,
-  "startingQB": "Kirk Cousins",
+  "asOf": "2026-11-18 10:16 AM PT",
+  "faabLeft": 13,
+  "startingQB": "Josh Allen",
   "roster": {
     "QB": [
-      "Kirk Cousins",
-      "Bryce Young"
+      "Josh Allen"
     ],
     "RB": [
       "Kenneth Walker III",
-      "Rachaad White",
-      "Jaylen Wright"
+      "Seth McGowan",
+      "Jaylen Wright",
+      "Emmett Johnson"
     ],
     "WR": [
-      "Amon-Ra St. Brown",
       "Luther Burden",
       "Emeka Egbuka",
-      "Travis Hunter",
-      "De'Zhaun Stribling"
+      "Drake London",
+      "Travis Hunter"
     ],
     "TE": [
-      "Sam LaPorta",
-      "Dalton Schultz"
+      "Sam LaPorta"
     ],
     "DL": [
       "Chase Young",
@@ -32,41 +30,41 @@
     ],
     "LB": [
       "Jacob Rodriguez",
-      "Nick Bolton",
-      "Blake Cashman",
+      "Kaleb Elarms-Orr",
+      "Shemar James",
       "Payton Wilson",
-      "Shemar James"
+      "Shaun Dolac"
     ],
     "DB": [
-      "Jeremy Chinn",
-      "Kamren Curl"
+      "A.J. Haulcy",
+      "Nick Emmanwori"
     ],
     "IR": [
       "Jacory Croskey-Merritt",
-      "Micah Parsons"
+      "Micah Parsons",
+      "Blake Cashman"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Luther Burden — Q (active)",
-    "Jaylen Wright — Q (active)",
+    "Kenneth Walker III — Q (active)",
     "Jacory Croskey-Merritt — IR (IR slot)",
-    "Micah Parsons — IR (IR slot)"
+    "Micah Parsons — IR (IR slot)",
+    "Blake Cashman — Q (IR slot)"
   ],
-  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "fantraxTeamId": "xz2uv87rmsb3ulv4",
   "lineupFlags": [
-    "Luther Burden — Q (active)",
-    "Jaylen Wright — Q (active)"
+    "Kenneth Walker III — Q (active)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Luther Burden — Q (active)",
-    "Jaylen Wright — Q (active)",
+    "Kenneth Walker III — Q (active)",
     "Jacory Croskey-Merritt — IR (IR slot)",
-    "Micah Parsons — IR (IR slot)"
+    "Micah Parsons — IR (IR slot)",
+    "Blake Cashman — Q (IR slot)"
   ],
-  "updated": "2026-11-11",
-  "lastSynced": "2026-11-11 9:25 AM PT"
+  "updated": "2026-11-18",
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

@@ -1,8 +1,116 @@
 {
-  "updated": "2026-11-11",
-  "source": "Fantrax roster sync 2026-11-11 6:24 AM PT (/workspace/fantrax-raw-2026-11-11-am-normalized.json)",
+  "updated": "2026-11-18",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "season": 2026,
   "trades": [
+    {
+      "date": "2026-11-13",
+      "time": "2:44 PM PST",
+      "week": 10,
+      "status": "completed",
+      "official": true,
+      "teamA": "Saltese Slamm",
+      "teamB": "Substation",
+      "givesA": [
+        "Carson Schwesinger (LB)",
+        "Dre Greenlaw (LB)"
+      ],
+      "givesB": [
+        "Eric Wilson (LB)",
+        "Henry To'oTo'o (LB)",
+        "Zack Baun (LB)",
+        "Tucker Kraft (TE)"
+      ],
+      "summary": "Week 10 — Saltese Slamm sent Carson Schwesinger (LB), Dre Greenlaw (LB) to Substation for Eric Wilson (LB), Henry To'oTo'o (LB), Zack Baun (LB), Tucker Kraft (TE) (Nov 13 2:44 PM PST)."
+    },
+    {
+      "date": "2026-11-11",
+      "time": "5:13 PM PST",
+      "week": 9,
+      "status": "completed",
+      "official": true,
+      "teamA": "Saltese Slamm",
+      "teamB": "Ultron",
+      "givesA": [
+        "Antonio Williams (WR)"
+      ],
+      "givesB": [
+        "Chris Rodriguez Jr. (RB)"
+      ],
+      "summary": "Week 9 — Saltese Slamm sent Antonio Williams (WR) to Ultron for Chris Rodriguez Jr. (RB) (Nov 11 5:13 PM PST)."
+    },
+    {
+      "date": "2026-11-11",
+      "time": "5:13 PM PST",
+      "week": 9,
+      "status": "completed",
+      "official": true,
+      "teamA": "The Hypersecretors",
+      "teamB": "Towner Top Aga Bottom",
+      "givesA": [
+        "Bryce Young (QB)"
+      ],
+      "givesB": [
+        "$7 FAAB"
+      ],
+      "summary": "Week 9 — The Hypersecretors sent Bryce Young (QB) to TTAB for $7 FAAB (Nov 11 5:13 PM PST)."
+    },
+    {
+      "date": "2026-11-11",
+      "time": "2:54 PM PST",
+      "week": 9,
+      "status": "completed",
+      "official": true,
+      "teamA": "Eagleridge Eddie's",
+      "teamB": "Substation",
+      "givesA": [
+        "Trevor Lawrence (QB)",
+        "Cameron Skattebo (RB)",
+        "Jordyn Tyson (WR)"
+      ],
+      "givesB": [
+        "Brock Purdy (QB)",
+        "Malik Nabers (WR)"
+      ],
+      "summary": "Week 9 — Eagleridge Eddie's sent Trevor Lawrence (QB), Cameron Skattebo (RB), Jordyn Tyson (WR) to Substation for Brock Purdy (QB), Malik Nabers (WR) (Nov 11 2:54 PM PST)."
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:56 AM PST",
+      "week": 9,
+      "status": "completed",
+      "official": true,
+      "teamA": "The Hypersecretors",
+      "teamB": "Ultron",
+      "givesA": [
+        "Amon-Ra St. Brown (WR)",
+        "Nick Bolton (LB)",
+        "Kirk Cousins (QB)"
+      ],
+      "givesB": [
+        "Josh Allen (QB)",
+        "Drake London (WR)"
+      ],
+      "summary": "Week 9 — The Hypersecretors sent Amon-Ra St. Brown (WR), Nick Bolton (LB), Kirk Cousins (QB) to Ultron for Josh Allen (QB), Drake London (WR) (Nov 11 9:56 AM PST)."
+    },
+    {
+      "date": "2026-11-11",
+      "time": "9:40 AM PST",
+      "week": 9,
+      "status": "completed",
+      "official": true,
+      "teamA": "Substation",
+      "teamB": "The Hypersecretors",
+      "givesA": [
+        "Nick Emmanwori (DB)",
+        "Emmett Johnson (RB)"
+      ],
+      "givesB": [
+        "Jeremy Chinn (DB)",
+        "Rachaad White (RB)"
+      ],
+      "summary": "Week 9 — Substation sent Nick Emmanwori (DB), Emmett Johnson (RB) to The Hypersecretors for Jeremy Chinn (DB), Rachaad White (RB) (Nov 11 9:40 AM PST)."
+    },
     {
       "date": "2026-11-10",
       "time": "6:07 PM PST",
@@ -763,11 +871,10 @@
     {
       "teamId": "eddies",
       "team": "Eagle Ridge Eddies",
-      "lastUpdated": "Nov 10 6:07 PM",
+      "lastUpdated": "Last Updated: Nov 15 8:40 AM",
       "players": [
         "Jalen Coker WR CAR",
         "Josh Downs WR KC",
-        "Ja'Kobi Lane WR BAL",
         "Trenton Simpson LB BAL"
       ],
       "note": null
@@ -775,27 +882,22 @@
     {
       "teamId": "morningside",
       "team": "Morningside Muff Divers",
-      "lastUpdated": "Oct 7 9:30 AM",
+      "lastUpdated": "Last Updated: Oct 7 9:30 AM",
       "players": [
         "Derrick Barnes LB DET",
         "Bobby Okereke LB CAR",
         "Pete Werner LB NO"
       ],
       "note": null,
-      "positionsOffered": [
-        "LB"
-      ],
-      "positionsNeeded": [
-        "RB"
-      ]
+      "positionsOffered": "LB",
+      "positionsNeeded": "RB"
     },
     {
       "teamId": "newman",
       "team": "Newman Lake Sleep Paralysis Demons",
-      "lastUpdated": "Nov 10 1:27 PM",
+      "lastUpdated": "Last Updated: Nov 18 9:00 AM",
       "players": [
         "Jordan Love QB GB",
-        "TreVeyon Henderson RB NE",
         "Jordan Mason RB MIN",
         "Jonathan Taylor RB IND",
         "Davante Adams WR LAR",
@@ -805,21 +907,19 @@
         "Tee Higgins WR CIN",
         "Myles Price WR MIN",
         "Juwan Johnson TE NO",
-        "Michael Mayer TE LV",
         "Andrew Van Ginkel DL,LB,ID MIN",
         "Azeez Al-Shaair LB HOU",
         "Zaire Franklin LB GB",
         "Ty'Ron Hopper LB GB",
         "Jeremiah Trotter LB PHI",
-        "Jordan Battle DB CIN",
-        "Xavier Watts DB ATL"
+        "Jordan Battle DB CIN"
       ],
       "note": null
     },
     {
       "teamId": "pocket",
       "team": "Pocket Agents",
-      "lastUpdated": "Oct 2 4:24 PM",
+      "lastUpdated": "Last Updated: Oct 2 4:24 PM",
       "players": [
         "Jared Goff QB DET",
         "Tyler Shough QB NO"
@@ -829,25 +929,23 @@
     {
       "teamId": "saltese",
       "team": "Saltese Slamm",
-      "lastUpdated": "Nov 10 2:17 PM",
+      "lastUpdated": "Last Updated: Nov 13 3:00 PM",
       "players": [
-        "D'Andre Swift RB CHI",
-        "Carson Schwesinger LB CLE",
-        "Dee Winters LB DAL"
+        "D'Andre Swift RB CHI"
       ],
       "note": null
     },
     {
       "teamId": "substation",
       "team": "Substation",
-      "lastUpdated": "Sep 30 8:25 AM",
+      "lastUpdated": "Last Updated: Sep 30 8:25 AM",
       "players": [],
       "note": null
     },
     {
       "teamId": "ttab",
       "team": "TTAB",
-      "lastUpdated": "Nov 3 7:21 AM",
+      "lastUpdated": "Last Updated: Nov 3 7:21 AM",
       "players": [
         "Javonte Williams RB DAL",
         "Christian Watson WR GB",
@@ -861,8 +959,8 @@
     }
   ],
   "leaderboard_note": "As of early HQ: Nate led all-2026 deal count (incl handshake). Fantrax official player/pick deals concentrated with Aga/Chase/Larry.",
-  "pending_note": "Pending trades 0 (Fantrax 2026-11-11 6:24 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
-  "fantrax_completed_view": "Newest official: Eagleridge↔Ultron George Pickens for Kyle Hamilton (Nov 10 6:07 PM); LAB↔Saltese C.J. Stroud for Matthew Stafford+Demetrius Knight (Nov 10 2:17 PM); LAB↔Newman Roquan Smith for Nathan Landman (Nov 10 1:27 PM).",
+  "pending_note": "Pending trades 0 (Fantrax 2026-11-18 10:16 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
+  "fantrax_completed_view": "Newest official: Saltese↔Substation Carson Schwesinger+Dre Greenlaw for Eric Wilson+Henry To'oTo'o+Zack Baun+Tucker Kraft (Nov 13 2:44 PM); Saltese↔Ultron Antonio Williams for Chris Rodriguez Jr. (Nov 11 5:13 PM); Hypersecretors↔TTAB Bryce Young for $7 FAAB (Nov 11 5:13 PM).",
   "hqComplete": true,
-  "lastSynced": "2026-11-11 6:24 AM PT"
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

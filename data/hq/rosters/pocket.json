@@ -2,8 +2,8 @@
   "teamId": "pocket",
   "teamName": "Pocket Agents",
   "owner": "Kellen Olson",
-  "asOf": "2026-11-11 9:25 AM PT",
-  "faabLeft": 69,
+  "asOf": "2026-11-18 10:16 AM PT",
+  "faabLeft": 66,
   "startingQB": "Jared Goff",
   "roster": {
     "QB": [
@@ -11,59 +11,64 @@
       "Tyler Shough"
     ],
     "RB": [
-      "Woody Marks",
-      "Mike Washington",
-      "Jonah Coleman"
+      "Jonah Coleman",
+      "Saquon Barkley"
     ],
     "WR": [
       "Tetairoa McMillan",
       "CeeDee Lamb",
-      "Rashid Shaheed"
+      "Rashid Shaheed",
+      "Jaylen Waddle"
     ],
     "TE": [
-      "Trey McBride",
+      "Chigoziem Okonkwo",
       "Dalton Kincaid",
-      "Chigoziem Okonkwo"
+      "Trey McBride"
     ],
     "DL": [
       "Will Anderson Jr."
     ],
     "LB": [
+      "Josiah Trotter",
       "Barrett Carter",
       "Ernest Jones",
-      "Josiah Trotter",
-      "Troy Dye"
+      "Bryce Boettcher"
     ],
     "DB": [
       "Dane Belton",
       "Cooper DeJean",
       "Amani Hooker",
-      "Tony Adams"
+      "Brandon Jones"
     ],
     "IR": [
-      "Saquon Barkley",
-      "Jaylen Waddle",
-      "Brandon Jones"
+      "Woody Marks",
+      "Robert Spillane",
+      "Tony Adams"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Rashid Shaheed — Q (reserve)",
-    "Jaylen Waddle — Q (IR slot)",
-    "Brandon Jones — Q (IR slot)"
+    "Jaylen Waddle — Q (reserve)",
+    "Woody Marks — Q (IR slot)",
+    "Brandon Jones — Q (reserve)",
+    "Robert Spillane — Q (IR slot)",
+    "Tony Adams — Q (IR slot)"
   ],
-  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "fantraxTeamId": "20zozmjgmsb3ulv4",
   "lineupFlags": [
-    "Rashid Shaheed — Q (reserve)"
+    "Jaylen Waddle — Q (reserve)",
+    "Brandon Jones — Q (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Rashid Shaheed — Q (reserve)",
-    "Jaylen Waddle — Q (IR slot)",
-    "Brandon Jones — Q (IR slot)"
+    "Jaylen Waddle — Q (reserve)",
+    "Woody Marks — Q (IR slot)",
+    "Brandon Jones — Q (reserve)",
+    "Robert Spillane — Q (IR slot)",
+    "Tony Adams — Q (IR slot)"
   ],
-  "updated": "2026-11-11",
-  "lastSynced": "2026-11-11 9:25 AM PT"
+  "updated": "2026-11-18",
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

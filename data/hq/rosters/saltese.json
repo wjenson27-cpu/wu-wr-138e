@@ -2,68 +2,70 @@
   "teamId": "saltese",
   "teamName": "Saltese Slamm",
   "owner": "Luke Sahlberg",
-  "asOf": "2026-11-11 9:25 AM PT",
-  "faabLeft": 3,
+  "asOf": "2026-11-18 10:16 AM PT",
+  "faabLeft": 2,
   "startingQB": "C.J. Stroud",
   "roster": {
     "QB": [
-      "C.J. Stroud",
-      "Aaron Rodgers"
+      "C.J. Stroud"
     ],
     "RB": [
       "Bhayshul Tuten",
       "Tyler Allgeier",
+      "David Montgomery",
+      "D'Andre Swift",
+      "Chris Rodriguez Jr.",
       "Rico Dowdle",
-      "Aaron Jones",
-      "Kyle Monangai",
-      "D'Andre Swift"
+      "Aaron Jones"
     ],
     "WR": [
       "Adonai Mitchell",
-      "Antonio Williams"
+      "Ashton Dulin"
     ],
     "TE": [
-      "Darnell Washington"
+      "Dalton Schultz",
+      "Tucker Kraft"
     ],
     "DL": [
-      "Boye Mafe"
+      "Jonathan Allen"
     ],
     "LB": [
       "Jamien Sherwood",
-      "Dre Greenlaw",
-      "Carson Schwesinger",
-      "Dee Winters"
+      "Zack Baun",
+      "Henry To'oTo'o",
+      "Eric Wilson"
     ],
     "DB": [
       "Jonas Sanker",
+      "M.J. Stewart",
       "Jaquan Brisker"
     ],
     "IR": [
+      "Kyle Monangai",
       "Jonathon Brooks",
-      "RJ Harvey",
-      "David Montgomery"
+      "RJ Harvey"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Kyle Monangai — Q (reserve)",
+    "Kyle Monangai — Q (IR slot)",
     "Jonathon Brooks — IR (IR slot)",
     "RJ Harvey — IR (IR slot)",
-    "David Montgomery — Q (IR slot)"
+    "Zack Baun — Q (active)"
   ],
-  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "fantraxTeamId": "xdx6ngm2msb3ulv5",
   "lineupFlags": [
-    "Kyle Monangai — Q (reserve)"
+    "Zack Baun — Q (active)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Kyle Monangai — Q (reserve)",
+    "Kyle Monangai — Q (IR slot)",
     "Jonathon Brooks — IR (IR slot)",
     "RJ Harvey — IR (IR slot)",
-    "David Montgomery — Q (IR slot)"
+    "Zack Baun — Q (active)"
   ],
-  "updated": "2026-11-11",
-  "lastSynced": "2026-11-11 9:25 AM PT"
+  "updated": "2026-11-18",
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

@@ -2,8 +2,8 @@
   "teamId": "goats",
   "teamName": "Valley Old Goats",
   "owner": "Mike Heff",
-  "asOf": "2026-11-11 9:25 AM PT",
-  "faabLeft": 18,
+  "asOf": "2026-11-18 10:16 AM PT",
+  "faabLeft": 16,
   "startingQB": "Patrick Mahomes",
   "roster": {
     "QB": [
@@ -13,56 +13,53 @@
       "Derrick Henry",
       "Chase Brown",
       "Bucky Irving",
-      "Josh Jacobs",
+      "Justice Hill",
       "Samaje Perine",
       "Corey Kiner"
     ],
     "WR": [
-      "Devaughn Vele",
-      "DK Metcalf",
-      "Marvin Harrison",
-      "Tank Dell"
+      "Tank Dell",
+      "DK Metcalf"
     ],
     "TE": [
-      "George Kittle",
-      "Mike Gesicki"
+      "George Kittle"
     ],
     "DL": [
-      "Danielle Hunter",
-      "T.J. Watt"
+      "T.J. Watt",
+      "Nik Bonitto"
     ],
     "LB": [
-      "Devin Lloyd",
       "Arvell Reese",
+      "Devin Bush",
+      "Devin Lloyd",
       "Drake Thomas",
-      "Quincy Williams",
-      "Devin Bush"
+      "Quincy Williams"
     ],
     "DB": [
-      "Kevin Byard",
-      "Amik Robertson"
+      "Amik Robertson",
+      "Nohl Williams",
+      "Kevin Byard"
     ],
     "IR": [
-      "Alvin Kamara"
+      "Josh Jacobs",
+      "Alvin Kamara",
+      "Danielle Hunter"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Patrick Mahomes — Q (active)",
-    "Josh Jacobs — O (active)"
+    "Josh Jacobs — Q (IR slot)",
+    "Danielle Hunter — Q (IR slot)"
   ],
-  "source": "Fantrax waivers capture 2026-11-11 ~9:20–9:25 AM PT (/workspace/fantrax-waivers-2026-11-11.json)",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "fantraxTeamId": "81bbo25imsb3ulv5",
-  "lineupFlags": [
-    "Patrick Mahomes — Q (active)",
-    "Josh Jacobs — O (active)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Patrick Mahomes — Q (active)",
-    "Josh Jacobs — O (active)"
+    "Josh Jacobs — Q (IR slot)",
+    "Danielle Hunter — Q (IR slot)"
   ],
-  "updated": "2026-11-11",
-  "lastSynced": "2026-11-11 9:25 AM PT"
+  "updated": "2026-11-18",
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }

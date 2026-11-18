@@ -2,28 +2,27 @@
   "teamId": "eddies",
   "teamName": "Eagleridge Eddie's",
   "owner": "",
-  "asOf": "2026-11-11 6:24 AM PT",
+  "asOf": "2026-11-18 10:16 AM PT",
   "faabLeft": 25,
-  "startingQB": "Trevor Lawrence",
+  "startingQB": "Brock Purdy",
   "roster": {
     "QB": [
-      "Trevor Lawrence"
+      "Brock Purdy"
     ],
     "RB": [
       "Breece Hall",
       "Zach Charbonnet",
-      "Cameron Skattebo",
-      "Devin Singletary"
+      "Travis Etienne"
     ],
     "WR": [
-      "Jalen Coker",
+      "Malik Nabers",
       "Chimere Dike",
       "Josh Downs",
-      "Ja'Kobi Lane",
-      "Jordyn Tyson"
+      "Garrett Wilson",
+      "Jalen Coker"
     ],
     "TE": [
-      "Brock Bowers"
+      "Michael Mayer"
     ],
     "DL": [
       "George Karlaftis"
@@ -31,37 +30,35 @@
     "LB": [
       "Fred Warner",
       "Jordyn Brooks",
-      "Frankie Luvu",
       "Cedric Gray",
+      "Frankie Luvu",
       "Trenton Simpson"
     ],
     "DB": [
+      "Cole Bishop",
+      "Kyle Hamilton",
       "Quentin Lake",
-      "Evan Williams",
-      "Cole Bishop"
+      "Evan Williams"
     ],
     "IR": [
-      "Travis Etienne",
-      "Garrett Wilson",
-      "Kyle Hamilton"
+      "De'Zhaun Stribling",
+      "Brock Bowers"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Travis Etienne — IR (IR slot)",
-    "Garrett Wilson — Q (IR slot)",
-    "Kyle Hamilton — Q (IR slot)"
+    "De'Zhaun Stribling — IR (IR slot)",
+    "Brock Bowers — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-11 6:24 AM PT (/workspace/fantrax-raw-2026-11-11-am-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
   "fantraxTeamId": "xbvk9dpgmsb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Travis Etienne — IR (IR slot)",
-    "Garrett Wilson — Q (IR slot)",
-    "Kyle Hamilton — Q (IR slot)"
+    "De'Zhaun Stribling — IR (IR slot)",
+    "Brock Bowers — Q (IR slot)"
   ],
-  "updated": "2026-11-11",
-  "lastSynced": "2026-11-11 6:24 AM PT"
+  "updated": "2026-11-18",
+  "lastSynced": "2026-11-18 10:16 AM PT"
 }
