@@ -238,6 +238,24 @@
           "swing": 2.0
         }
       ]
+    },
+    {
+      "week": 11,
+      "file": "w11.json",
+      "window": {
+        "start": "2026-11-19",
+        "end": "2026-11-23",
+        "label": "Nov 19–23"
+      },
+      "status": "pending",
+      "locked": true,
+      "robotLockedAt": "2026-11-19T13:52:57-08:00",
+      "result": null,
+      "winner": null,
+      "robotPoints": null,
+      "eddiesPoints": null,
+      "margin": null,
+      "decisions": []
     }
   ]
 }
