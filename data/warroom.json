@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-18T15:00:00-08:00",
-  "lastUpdated": "2026-11-18T15:00:00-08:00",
+  "asOf": "2026-11-19T15:25:00-08:00",
+  "lastUpdated": "2026-11-19T15:25:00-08:00",
   "season": 2026,
   "week": 11,
   "opponent": {
@@ -10,15 +10,15 @@
     "name": "Newman Lake Sleep Paralysis Demons"
   },
   "freshness": {
-    "plan": "2026-11-18T15:00:00-08:00",
-    "roster": "2026-11-18T14:45:00-08:00",
-    "scores": "2026-11-18T14:50:00-08:00",
-    "waivers": "2026-11-18T14:50:00-08:00",
-    "news": "2026-11-18T14:45:00-08:00"
+    "plan": "2026-11-19T15:25:00-08:00",
+    "roster": "2026-11-19T15:00:00-08:00",
+    "scores": "2026-11-19T15:10:00-08:00",
+    "waivers": "2026-11-19T15:10:00-08:00",
+    "news": "2026-11-19T14:50:00-08:00"
   },
   "lockTimes": [
     {
-      "label": "TNF IND @ HOU 5:15 PM PT (no Eddies; Walley FA plays)",
+      "label": "TNF IND @ HOU 5:15 PM PT (no Eddies; Newman: J. Taylor, Warren, Hansen)",
       "at": "2026-11-19T17:15:00-08:00"
     },
     {
@@ -67,7 +67,7 @@
       "verdict": "START",
       "reason": "vs JAX. 17.89 / 8.5, 80%.",
       "injury": "",
-      "practice": "Drills Wed (SNY); official status not seen"
+      "practice": "Practiced Thu in normal rotation (Pat Leonard)"
     },
     {
       "slot": "TE",
@@ -75,7 +75,7 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "@DEN (30th, soft). 11.55 / 7.67, 83%. Bowers fill-in.",
+      "reason": "@DEN (soft vs TE). 11.55 / 7.67, 83%. Starts unless Bowers clears Friday.",
       "injury": "",
       "practice": ""
     },
@@ -174,8 +174,8 @@
       "player": "Cedric Gray",
       "pos": "LB",
       "nflTeam": "TEN",
-      "verdict": "WATCH",
-      "reason": "@DAL. 14.88 / 21.5, 92% W10 / 68% 3-wk. Barton FULL Wed; Woellert: riskier. Lean swap to Simpson (17.4 / 13.0, 82%, @CAR) at the Sun 10 AM PT lock.",
+      "verdict": "START",
+      "reason": "@DAL. 14.88 / 21.5, 92% W10 (68% 3-wk). Barton in concussion protocol; Bradley: Gray majority of 1st-team reps; Woellert: took the job.",
       "injury": "",
       "practice": ""
     }
@@ -183,21 +183,21 @@
   "injuryWatch": [
     {
       "player": "Brock Bowers",
-      "tag": "Ankle, Q (IR slot)",
-      "practice": "DNP Wed",
-      "note": "Kubiak: progressing, day-to-day (Sam Warren, ESPN McFadden). Mayer starts."
+      "tag": "Ankle/quad, Q (IR slot)",
+      "practice": "DNP Wed, LP Thu",
+      "note": "Limited Thu (McFadden). If cleared Fri: drop Etienne, activate over Mayer before Sun 1:25 PM PT."
     },
     {
       "player": "Cole Bishop",
       "tag": "Shoulder, Q (IR slot)",
-      "practice": "Unverified Wed",
-      "note": "Fantrax expected return Nov 22. Moved to IR; McCollum added 2:34 PM PT."
+      "practice": "LP Wed, FP Thu",
+      "note": "Full Thu (Jon Scott). Leave in IR; McCollum better last 3."
     },
     {
       "player": "Cedric Gray",
-      "tag": "Role risk",
+      "tag": "Role up",
       "practice": "n/a",
-      "note": "Cody Barton FULL Wed; Anthony Hill Jr. limited (Davenport)."
+      "note": "Barton in concussion protocol (Davenport Thu); Gray majority 1st-team reps."
     },
     {
       "player": "De'Zhaun Stribling",
@@ -235,11 +235,24 @@
   "waivers": [
     {
       "rank": 1,
+      "player": "Justin Walley",
+      "pos": "DB",
+      "nflTeam": "IND",
+      "why": "WEEKLY. @HOU tonight (TNF). Even with McCollum on season FP/G; pass.",
+      "stats": "16.12 FP/G, last-3 33.0 (1 gm), 33 last wk, 78% snaps; Fantrax 2026-11-19T15:10:00-08:00",
+      "faabMin": 0,
+      "faabMax": 0,
+      "bid": 0,
+      "drop": "Travis Etienne",
+      "tag": "WEEKLY"
+    },
+    {
+      "rank": 2,
       "player": "Alontae Taylor",
       "pos": "DB",
       "nflTeam": "TEN",
-      "why": "WEEKLY. @DAL (28th, soft). Only if a DB starter pops up on a report.",
-      "stats": "15.86 FP/G, last-3 18.0, 15 last wk, 84% snaps; Fantrax 2026-11-18T14:50:00-08:00",
+      "why": "WEEKLY. @DAL (soft). Only if a DB starter pops up on a report.",
+      "stats": "15.86 FP/G, last-3 18.0, 15 last wk, 84% snaps; Fantrax 2026-11-19T15:10:00-08:00",
       "faabMin": 0,
       "faabMax": 0,
       "bid": 0,
@@ -409,8 +422,8 @@
     },
     {
       "nflTeam": "TEN",
-      "greenDot": "Dorian Mausi",
-      "notes": "W10: Anthony Hill and Cody Barton were both inactive, and Dorian Mausi wore the green dot. Mausi was on the field for 88% of the snaps and had 7 tackles and an 11.3% tackle rate. Cedric Gray also had a three-down role at 93% of the snaps and had a big game. He had…"
+      "greenDot": "Anthony Hill Jr.",
+      "notes": "Nov 19 Woellert: Hill is the green dot; Gray took the job; Barton in concussion protocol."
     },
     {
       "nflTeam": "WAS",
@@ -432,7 +445,7 @@
     {
       "player": "Cole Bishop",
       "nflTeam": "BUF",
-      "note": "Q shoulder, IR slot."
+      "note": "FULL Thu; IR slot."
     },
     {
       "player": "Quentin Lake",
@@ -446,6 +459,36 @@
     }
   ],
   "news": [
+    {
+      "source": "Turron Davenport (X)",
+      "time": "2026-11-19T12:12:00-08:00",
+      "text": "Cody Barton in concussion protocol. https://x.com/TDavenport_NFL/status/2123509760884359654"
+    },
+    {
+      "source": "Paul Kuharsky (X)",
+      "time": "2026-11-19T09:37:00-08:00",
+      "text": "Bradley: Cedric Gray getting majority of first-team reps. https://x.com/PaulKuharskyNFL/status/2123470651533009187"
+    },
+    {
+      "source": "Mike Woellert (X)",
+      "time": "2026-11-19T11:10:00-08:00",
+      "text": "Gray took the job by the throat last week. https://x.com/Mike_Woellert/status/2123494143846433185"
+    },
+    {
+      "source": "Ryan McFadden (X)",
+      "time": "2026-11-19T14:25:00-08:00",
+      "text": "Bowers (ankle/quad) limited Thu. https://x.com/ryanmcfadden_/status/2123543233787777405"
+    },
+    {
+      "source": "Jon Scott (X)",
+      "time": "2026-11-19T13:35:00-08:00",
+      "text": "Cole Bishop upgraded to full. https://x.com/JonScottTV/status/2123530576292364482"
+    },
+    {
+      "source": "Pat Leonard (X)",
+      "time": "2026-11-19T10:38:00-08:00",
+      "text": "Nabers joined position group, normal rotation. https://x.com/PLeonardNYDN/status/2123486025284530499"
+    },
     {
       "source": "Sam Warren (X)",
       "time": "2026-11-18T12:53:00-08:00",
@@ -475,16 +518,6 @@
       "source": "Mike Woellert (Substack)",
       "time": "2026-11-17T13:37:00-08:00",
       "text": "W10 dot report MNF update: Roquan BAL dot; Simpson 83%, comfortable starting both. Henley LAC dot."
-    },
-    {
-      "source": "SICscore (X)",
-      "time": "2026-11-17T14:01:00-08:00",
-      "text": "Bowers day-to-day, W11 uncertain. https://x.com/SICscore/status/2122812279142187426"
-    },
-    {
-      "source": "Justin M (X)",
-      "time": "2026-11-17T13:37:00-08:00",
-      "text": "Wan'Dale Robinson injury opens TEN WR targets for Dike. https://x.com/JustinM_NFL/status/2122806412224921835"
     }
   ]
 }
