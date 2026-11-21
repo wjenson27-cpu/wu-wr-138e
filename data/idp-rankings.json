@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-17T07:45-08:00",
+ "generatedAt": "2026-11-21T10:24-08:00",
  "week": 11,
  "statsThroughWeek": 10,
  "label": "Projections are ESTIMATES from a simple model, not Fantrax projections.",
@@ -8,16 +8,15 @@
   "snaps": "nflverse snap_counts_2026",
   "pbp": "nflverse play_by_play_2026 (https://github.com/nflverse/nflverse-data/releases/tag/pbp)",
   "matchup": "Week 11 opponent factors computed from nflverse play_by_play_2026 weeks 1-10: tackle points the opponent offense concedes to DL/LB/DB per game (pbp tackler ids mapped to position), sacks and sacks+QB hits allowed per dropback (OL pass-block proxy), dropbacks, run plays and completions per game, PD+INT allowed per game; weighted by each player's own tackle/pass-rush/ball-skill point mix",
-  "injuries": "no Week 11 report yet (practice reports start Wed); used Fantrax roster flags (HQ rosters Nov 17 6:05 AM PT (3302f19)) for rostered players and the nflverse Week 10 final report for players who missed Week 10 \u2014 UNVERIFIED for Week 11; players.csv status (RES/PUP/NFI/SUS excluded)",
+  "injuries": "nflverse injuries_2026 week 11; players.csv status (RES/PUP/NFI/SUS excluded)",
   "schedule": "nflverse nfldata games.csv (remaining weeks 11-17 for ROS)",
-  "greenDots": "Mike Woellert week 10 asOf 2026-11-16T15:10:00-08:00 (https://mikewoellert.substack.com/p/week-10-green-dot-and-full-time-linebackers-idp-fantasy-football) \u2014 current list for W11 (Monday piece covers the week just played)",
-  "rosters": "HQ rosters Nov 17 6:05 AM PT (3302f19)",
-  "previousFile": "week 10 file (rank movers compare against it)"
+  "greenDots": "Mike Woellert week 10 asOf 2026-11-20T14:04:00-08:00 (https://mikewoellert.substack.com/p/week-10-green-dot-and-full-time-linebackers-idp-fantasy-football) \u2014 current list for W11 (Monday piece covers the week just played)",
+  "rosters": "HQ rosters 2026-11-21 5:58 AM PT",
+  "previousFile": "week 11 file (rank movers compare against it)"
  },
  "unverified": [
   "PFF pass-block win rate / true pressure rate: NOT used (paywalled, unverified); OL strength uses nflverse sacks + QB hits per dropback as a proxy",
   "nflverse qb_hit is a hit count, not pressures (hurries are not in pbp)",
-  "no Week 11 report yet (practice reports start Wed); used Fantrax roster flags (HQ rosters Nov 17 6:05 AM PT (3302f19)) for rostered players and the nflverse Week 10 final report for players who missed Week 10 \u2014 UNVERIFIED for Week 11",
   "Stuffs and FR yards are not in nflverse and are left out of WU scoring",
   "ROS assumes current role/rate holds; fantasy horizon weeks 11-17 (14-wk regular season + 3 playoff weeks)"
  ],
@@ -134,8 +133,8 @@
     "rank": 1,
     "tier": 1,
     "note": "riser: 29.7 FP/G last 3 vs 17.2 earlier",
-    "prevRank": 3.0,
-    "rankChange": 2.0
+    "prevRank": 1.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0035718",
@@ -206,8 +205,8 @@
     "rank": 2,
     "tier": 2,
     "note": "riser: 31.7 FP/G last 3 vs 13.1 earlier",
-    "prevRank": 4.0,
-    "rankChange": 2.0
+    "prevRank": 2.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0035402",
@@ -276,8 +275,8 @@
     "rank": 3,
     "tier": 2,
     "note": "riser: 23.3 FP/G last 3 vs 17.3 earlier",
-    "prevRank": 1.0,
-    "rankChange": -2.0
+    "prevRank": 3.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0041026",
@@ -347,8 +346,8 @@
     "rank": 4,
     "tier": 2,
     "note": "",
-    "prevRank": 2.0,
-    "rankChange": -2.0
+    "prevRank": 4.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0035643",
@@ -418,8 +417,8 @@
     "rank": 5,
     "tier": 2,
     "note": "",
-    "prevRank": 178.0,
-    "rankChange": 173.0
+    "prevRank": 5.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0039108",
@@ -489,8 +488,8 @@
     "rank": 6,
     "tier": 2,
     "note": "",
-    "prevRank": 17.0,
-    "rankChange": 11.0
+    "prevRank": 6.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0031364",
@@ -558,8 +557,8 @@
     "rank": 7,
     "tier": 3,
     "note": "riser: 16.7 FP/G last 3 vs 7.4 earlier; snaps up to 76%",
-    "prevRank": 26.0,
-    "rankChange": 19.0
+    "prevRank": 7.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0034163",
@@ -629,8 +628,8 @@
     "rank": 8,
     "tier": 3,
     "note": "riser: 20.3 FP/G last 3 vs 8.9 earlier",
-    "prevRank": 10.0,
-    "rankChange": 2.0
+    "prevRank": 8.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0034973",
@@ -701,8 +700,8 @@
     "rank": 9,
     "tier": 3,
     "note": "riser: 23.7 FP/G last 3 vs 10.7 earlier",
-    "prevRank": 18.0,
-    "rankChange": 9.0
+    "prevRank": 9.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0041441",
@@ -769,8 +768,8 @@
     "rank": 10,
     "tier": 3,
     "note": "riser: 17.3 FP/G last 3 vs 2.7 earlier; snaps up to 68%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 10.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0036914",
@@ -840,8 +839,8 @@
     "rank": 11,
     "tier": 3,
     "note": "snaps down to 59%",
-    "prevRank": 5.0,
-    "rankChange": -6.0
+    "prevRank": 11.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0033886",
@@ -910,8 +909,79 @@
     "rank": 12,
     "tier": 3,
     "note": "",
-    "prevRank": 13.0,
-    "rankChange": 1.0
+    "prevRank": 12.0,
+    "rankChange": 0.0
+   },
+   {
+    "id": "00-0035272",
+    "player": "Andrew Van Ginkel",
+    "pos": "DL",
+    "nflPos": "OLB",
+    "team": "MIN",
+    "opp": "SF",
+    "bye": false,
+    "gp": 9,
+    "fpgSeason": 17.89,
+    "fpgL3": 23.67,
+    "proj": 16.4,
+    "rosPts": 122.2,
+    "rosPPG": 17.46,
+    "rosSOS": 0.975,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.812,
+    "snapShareL3": 0.733,
+    "snapShareLast": 0.65,
+    "tackleOpp": 0.052,
+    "tacklesPerSnap": 0.062,
+    "passRushProxy": 0.098,
+    "matchup": 0.895,
+    "matchupDetail": {
+     "opp": "SF",
+     "oppPlaysPG": 58.9,
+     "oppDropbacksPG": 33.1,
+     "oppRunPG": 25.8,
+     "oppPassRate": 0.562,
+     "oppSackRate": 0.044,
+     "oppPressureProxyRate": 0.117,
+     "oppCompletionsPG": 20.6,
+     "oppTklPtsToDLPG": 17.8,
+     "oppBallPlaysPG": 4.67,
+     "factors": {
+      "tackle": 0.939,
+      "rush": 0.669,
+      "ball": 0.882
+     },
+     "mix": {
+      "tackle": 0.53,
+      "rush": 0.41,
+      "ball": 0.06
+     }
+    },
+    "matchupNote": "vs SF OL: 4.4% sack / 12% hit rate allowed (lg 6.5%/16%), 33 DB/g \u2192 tough (x0.89)",
+    "greenDot": null,
+    "injury": null,
+    "injurySource": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 25.0,
+     "2": 18.0,
+     "3": 18.0,
+     "4": 3.0,
+     "5": 18.0,
+     "7": 8.0,
+     "8": 30.0,
+     "9": 19.0,
+     "10": 22.0
+    },
+    "league": "newman",
+    "weeklyRank": 13,
+    "rosRank": 8,
+    "rank": 13,
+    "tier": 3,
+    "note": "riser: 23.7 FP/G last 3 vs 15.0 earlier; snaps down to 65%",
+    "prevRank": 15.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0039924",
@@ -976,13 +1046,13 @@
      "10": 26.0
     },
     "league": "ultron",
-    "weeklyRank": 13,
+    "weeklyRank": 14,
     "rosRank": 9,
-    "rank": 13,
+    "rank": 14,
     "tier": 3,
     "note": "",
-    "prevRank": 16.0,
-    "rankChange": 3.0
+    "prevRank": 13.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0040640",
@@ -1047,84 +1117,13 @@
      "10": 27.0
     },
     "league": "FREE",
-    "weeklyRank": 14,
-    "rosRank": 16,
-    "rank": 14,
-    "tier": 3,
-    "note": "riser: 16.3 FP/G last 3 vs 7.0 earlier; snaps up to 75%",
-    "prevRank": 30.0,
-    "rankChange": 16.0
-   },
-   {
-    "id": "00-0035272",
-    "player": "Andrew Van Ginkel",
-    "pos": "DL",
-    "nflPos": "OLB",
-    "team": "MIN",
-    "opp": "SF",
-    "bye": false,
-    "gp": 9,
-    "fpgSeason": 17.89,
-    "fpgL3": 23.67,
-    "proj": 14.8,
-    "rosPts": 120.6,
-    "rosPPG": 17.23,
-    "rosSOS": 0.975,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.812,
-    "snapShareL3": 0.733,
-    "snapShareLast": 0.65,
-    "tackleOpp": 0.052,
-    "tacklesPerSnap": 0.062,
-    "passRushProxy": 0.098,
-    "matchup": 0.895,
-    "matchupDetail": {
-     "opp": "SF",
-     "oppPlaysPG": 58.9,
-     "oppDropbacksPG": 33.1,
-     "oppRunPG": 25.8,
-     "oppPassRate": 0.562,
-     "oppSackRate": 0.044,
-     "oppPressureProxyRate": 0.117,
-     "oppCompletionsPG": 20.6,
-     "oppTklPtsToDLPG": 17.8,
-     "oppBallPlaysPG": 4.67,
-     "factors": {
-      "tackle": 0.939,
-      "rush": 0.669,
-      "ball": 0.882
-     },
-     "mix": {
-      "tackle": 0.53,
-      "rush": 0.41,
-      "ball": 0.06
-     }
-    },
-    "matchupNote": "vs SF OL: 4.4% sack / 12% hit rate allowed (lg 6.5%/16%), 33 DB/g \u2192 tough (x0.89)",
-    "greenDot": null,
-    "injury": "Questionable",
-    "injurySource": "Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))",
-    "dnpLast": false,
-    "weekly": {
-     "1": 25.0,
-     "2": 18.0,
-     "3": 18.0,
-     "4": 3.0,
-     "5": 18.0,
-     "7": 8.0,
-     "8": 30.0,
-     "9": 19.0,
-     "10": 22.0
-    },
-    "league": "newman",
     "weeklyRank": 15,
-    "rosRank": 8,
+    "rosRank": 16,
     "rank": 15,
     "tier": 3,
-    "note": "injury: Questionable (Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))); riser: 23.7 FP/G last 3 vs 15.0 earlier",
-    "prevRank": 12.0,
-    "rankChange": -3.0
+    "note": "riser: 16.3 FP/G last 3 vs 7.0 earlier; snaps up to 75%",
+    "prevRank": 14.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0036335",
@@ -1191,10 +1190,10 @@
     "weeklyRank": 16,
     "rosRank": 18,
     "rank": 16,
-    "tier": 3,
+    "tier": 4,
     "note": "snaps up to 75%; sleeper: unrostered with a top-half projection",
-    "prevRank": 69.0,
-    "rankChange": 53.0
+    "prevRank": 16.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0032759",
@@ -1264,8 +1263,8 @@
     "rank": 17,
     "tier": 4,
     "note": "riser: 15.0 FP/G last 3 vs 9.9 earlier; sleeper: unrostered with a top-half projection",
-    "prevRank": 19.0,
-    "rankChange": 2.0
+    "prevRank": 17.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0036321",
@@ -1335,8 +1334,8 @@
     "rank": 18,
     "tier": 4,
     "note": "",
-    "prevRank": 6.0,
-    "rankChange": -12.0
+    "prevRank": 18.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0035763",
@@ -1406,8 +1405,76 @@
     "rank": 19,
     "tier": 4,
     "note": "",
-    "prevRank": 179.0,
-    "rankChange": 160.0
+    "prevRank": 19.0,
+    "rankChange": 0.0
+   },
+   {
+    "id": "00-0036934",
+    "player": "Jaelan Phillips",
+    "pos": "DL",
+    "nflPos": "LB",
+    "team": "CAR",
+    "opp": "BAL",
+    "bye": false,
+    "gp": 6,
+    "fpgSeason": 11.17,
+    "fpgL3": 11.67,
+    "proj": 13.8,
+    "rosPts": 76.8,
+    "rosPPG": 10.97,
+    "rosSOS": 1.032,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.68,
+    "snapShareL3": 0.633,
+    "snapShareLast": 0.87,
+    "tackleOpp": 0.036,
+    "tacklesPerSnap": 0.05,
+    "passRushProxy": 0.062,
+    "matchup": 1.096,
+    "matchupDetail": {
+     "opp": "BAL",
+     "oppPlaysPG": 59.3,
+     "oppDropbacksPG": 34.0,
+     "oppRunPG": 25.3,
+     "oppPassRate": 0.573,
+     "oppSackRate": 0.074,
+     "oppPressureProxyRate": 0.176,
+     "oppCompletionsPG": 19.8,
+     "oppTklPtsToDLPG": 23.6,
+     "oppBallPlaysPG": 4.3,
+     "factors": {
+      "tackle": 1.247,
+      "rush": 1.032,
+      "ball": 0.812
+     },
+     "mix": {
+      "tackle": 0.6,
+      "rush": 0.4,
+      "ball": 0.0
+     }
+    },
+    "matchupNote": "vs BAL OL: 7.4% sack / 18% hit rate allowed (lg 6.5%/16%), 34 DB/g \u2192 boost (x1.10)",
+    "greenDot": null,
+    "injury": null,
+    "injurySource": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 15.0,
+     "2": 14.0,
+     "3": 3.0,
+     "4": 1.0,
+     "6": 7.0,
+     "10": 27.0
+    },
+    "league": "substation",
+    "weeklyRank": 20,
+    "rosRank": 35,
+    "rank": 20,
+    "tier": 4,
+    "note": "snaps up to 87%",
+    "prevRank": null,
+    "rankChange": null
    },
    {
     "id": "00-0039401",
@@ -1469,13 +1536,13 @@
      "10": 13.0
     },
     "league": "FREE",
-    "weeklyRank": 20,
+    "weeklyRank": 21,
     "rosRank": 29,
-    "rank": 20,
+    "rank": 21,
     "tier": 4,
     "note": "riser: 12.0 FP/G last 3 vs 8.0 earlier; snaps up to 56%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 20.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0032762",
@@ -1538,13 +1605,13 @@
      "10": 5.0
     },
     "league": "FREE",
-    "weeklyRank": 21,
+    "weeklyRank": 22,
     "rosRank": 24,
-    "rank": 21,
+    "rank": 22,
     "tier": 4,
     "note": "riser: 14.0 FP/G last 3 vs 8.4 earlier",
     "prevRank": 21.0,
-    "rankChange": 0.0
+    "rankChange": -1.0
    },
    {
     "id": "00-0038386",
@@ -1608,14 +1675,14 @@
      "8": 24.0,
      "9": 15.0
     },
-    "league": "FREE",
-    "weeklyRank": 22,
+    "league": "doubtpfizer",
+    "weeklyRank": 23,
     "rosRank": 19,
-    "rank": 22,
+    "rank": 23,
     "tier": 4,
     "note": "",
-    "prevRank": 180.0,
-    "rankChange": 158.0
+    "prevRank": 22.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0038127",
@@ -1679,13 +1746,13 @@
      "10": 24.0
     },
     "league": "FREE",
-    "weeklyRank": 23,
-    "rosRank": 35,
-    "rank": 23,
+    "weeklyRank": 24,
+    "rosRank": 36,
+    "rank": 24,
     "tier": 4,
     "note": "riser: 13.0 FP/G last 3 vs 4.7 earlier",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 23.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0038133",
@@ -1750,13 +1817,13 @@
      "10": 16.0
     },
     "league": "morningside",
-    "weeklyRank": 24,
+    "weeklyRank": 25,
     "rosRank": 15,
-    "rank": 24,
+    "rank": 25,
     "tier": 4,
     "note": "",
-    "prevRank": 14.0,
-    "rankChange": -10.0
+    "prevRank": 24.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0039840",
@@ -1820,14 +1887,14 @@
      "8": 14.0,
      "9": 18.0
     },
-    "league": "FREE",
-    "weeklyRank": 25,
+    "league": "lab",
+    "weeklyRank": 26,
     "rosRank": 20,
-    "rank": 25,
-    "tier": 4,
+    "rank": 26,
+    "tier": 5,
     "note": "",
-    "prevRank": 181.0,
-    "rankChange": 156.0
+    "prevRank": 25.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0033546",
@@ -1888,13 +1955,13 @@
      "10": 32.0
     },
     "league": "FREE",
-    "weeklyRank": 26,
+    "weeklyRank": 27,
     "rosRank": 23,
-    "rank": 26,
-    "tier": 4,
+    "rank": 27,
+    "tier": 5,
     "note": "riser: 13.7 FP/G last 3 vs 6.0 earlier",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 26.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0035409",
@@ -1957,13 +2024,13 @@
      "10": 4.0
     },
     "league": "FREE",
-    "weeklyRank": 27,
+    "weeklyRank": 28,
     "rosRank": 30,
-    "rank": 27,
+    "rank": 28,
     "tier": 5,
     "note": "riser: 12.7 FP/G last 3 vs 5.8 earlier; snaps up to 52%",
-    "prevRank": 11.0,
-    "rankChange": -16.0
+    "prevRank": 27.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0040624",
@@ -2021,13 +2088,13 @@
      "10": 25.0
     },
     "league": "FREE",
-    "weeklyRank": 28,
+    "weeklyRank": 29,
     "rosRank": 21,
-    "rank": 28,
+    "rank": 29,
     "tier": 5,
     "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 28.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0027969",
@@ -2092,13 +2159,13 @@
      "10": 1.0
     },
     "league": "FREE",
-    "weeklyRank": 29,
+    "weeklyRank": 30,
     "rosRank": 33,
-    "rank": 29,
+    "rank": 30,
     "tier": 5,
     "note": "",
-    "prevRank": 22.0,
-    "rankChange": -7.0
+    "prevRank": 29.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0036624",
@@ -2163,13 +2230,13 @@
      "10": 12.0
     },
     "league": "FREE",
-    "weeklyRank": 30,
+    "weeklyRank": 31,
     "rosRank": 31,
-    "rank": 30,
+    "rank": 31,
     "tier": 5,
     "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 30.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0038778",
@@ -2234,13 +2301,13 @@
      "10": 17.0
     },
     "league": "FREE",
-    "weeklyRank": 31,
+    "weeklyRank": 32,
     "rosRank": 27,
-    "rank": 31,
+    "rank": 32,
     "tier": 5,
     "note": "",
-    "prevRank": 29.0,
-    "rankChange": -2.0
+    "prevRank": 31.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0037235",
@@ -2305,13 +2372,13 @@
      "10": 6.0
     },
     "league": "FREE",
-    "weeklyRank": 32,
-    "rosRank": 51,
-    "rank": 32,
+    "weeklyRank": 33,
+    "rosRank": 54,
+    "rank": 33,
     "tier": 5,
     "note": "snaps up to 93%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 32.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0040744",
@@ -2377,13 +2444,13 @@
      "10": 10.0
     },
     "league": "FREE",
-    "weeklyRank": 33,
-    "rosRank": 36,
-    "rank": 33,
+    "weeklyRank": 34,
+    "rosRank": 37,
+    "rank": 34,
     "tier": 5,
     "note": "riser: 15.0 FP/G last 3 vs 6.0 earlier",
-    "prevRank": 20.0,
-    "rankChange": -13.0
+    "prevRank": 33.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0039142",
@@ -2447,13 +2514,13 @@
      "10": 13.0
     },
     "league": "FREE",
-    "weeklyRank": 34,
-    "rosRank": 54,
-    "rank": 34,
+    "weeklyRank": 35,
+    "rosRank": 57,
+    "rank": 35,
     "tier": 5,
     "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 34.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0039421",
@@ -2517,84 +2584,13 @@
      "10": 26.0
     },
     "league": "FREE",
-    "weeklyRank": 35,
-    "rosRank": 34,
-    "rank": 35,
-    "tier": 5,
-    "note": "riser: 12.7 FP/G last 3 vs 6.6 earlier",
-    "prevRank": null,
-    "rankChange": null
-   },
-   {
-    "id": "00-0035642",
-    "player": "Josh Hines-Allen",
-    "pos": "DL",
-    "nflPos": "DE",
-    "team": "JAX",
-    "opp": "NYG",
-    "bye": false,
-    "gp": 9,
-    "fpgSeason": 11.0,
-    "fpgL3": 9.0,
-    "proj": 10.8,
-    "rosPts": 63.4,
-    "rosPPG": 9.05,
-    "rosSOS": 0.999,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.753,
-    "snapShareL3": 0.66,
-    "snapShareLast": 0.84,
-    "tackleOpp": 0.057,
-    "tacklesPerSnap": 0.072,
-    "passRushProxy": 0.045,
-    "matchup": 1.061,
-    "matchupDetail": {
-     "opp": "NYG",
-     "oppPlaysPG": 64.7,
-     "oppDropbacksPG": 38.2,
-     "oppRunPG": 26.4,
-     "oppPassRate": 0.591,
-     "oppSackRate": 0.081,
-     "oppPressureProxyRate": 0.18,
-     "oppCompletionsPG": 20.9,
-     "oppTklPtsToDLPG": 20.4,
-     "oppBallPlaysPG": 5.56,
-     "factors": {
-      "tackle": 1.08,
-      "rush": 1.185,
-      "ball": 1.05
-     },
-     "mix": {
-      "tackle": 0.75,
-      "rush": 0.22,
-      "ball": 0.04
-     }
-    },
-    "matchupNote": "vs NYG OL: 8.1% sack / 18% hit rate allowed (lg 6.5%/16%), 38 DB/g \u2192 boost (x1.06)",
-    "greenDot": null,
-    "injury": null,
-    "injurySource": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 30.0,
-     "2": 3.0,
-     "3": 9.0,
-     "4": 7.0,
-     "5": 20.0,
-     "6": 3.0,
-     "8": 19.0,
-     "9": 3.0,
-     "10": 5.0
-    },
-    "league": "FREE",
     "weeklyRank": 36,
-    "rosRank": 50,
+    "rosRank": 34,
     "rank": 36,
-    "tier": 5,
-    "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "tier": 6,
+    "note": "riser: 12.7 FP/G last 3 vs 6.6 earlier",
+    "prevRank": 35.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0035683",
@@ -2658,14 +2654,14 @@
      "9": 3.0,
      "10": 5.0
     },
-    "league": "substation",
-    "weeklyRank": 37,
+    "league": "FREE",
+    "weeklyRank": 38,
     "rosRank": 26,
-    "rank": 37,
+    "rank": 38,
     "tier": 6,
     "note": "",
-    "prevRank": 15.0,
-    "rankChange": -22.0
+    "prevRank": 37.0,
+    "rankChange": -1.0
    },
    {
     "id": "00-0033868",
@@ -2702,37 +2698,37 @@
      "10": 0.0
     },
     "league": "ultron",
-    "weeklyRank": 165,
+    "weeklyRank": 163,
     "rosRank": 28,
-    "rank": 165,
+    "rank": 163,
     "tier": 7,
     "note": "BYE in Week 11 \u2014 0 pts",
-    "prevRank": 9.0,
-    "rankChange": -156.0
+    "prevRank": 165.0,
+    "rankChange": 2.0
    },
    {
-    "id": "00-0039112",
-    "player": "Lukas Van Ness",
+    "id": "00-0039309",
+    "player": "Byron Murphy II",
     "pos": "DL",
-    "nflPos": "LB",
-    "team": "GB",
+    "nflPos": "DT",
+    "team": "SEA",
     "opp": "BYE",
     "bye": true,
     "gp": 10,
-    "fpgSeason": 13.7,
-    "fpgL3": 16.0,
+    "fpgSeason": 11.9,
+    "fpgL3": 13.33,
     "proj": 0.0,
-    "rosPts": 78.8,
-    "rosPPG": 11.26,
-    "rosSOS": 0.983,
+    "rosPts": 80.3,
+    "rosPPG": 11.47,
+    "rosSOS": 1.003,
     "rosByeWeek": 11.0,
     "rosGames": 6,
-    "snapShare": 0.624,
-    "snapShareL3": 0.56,
-    "snapShareLast": 0.54,
-    "tackleOpp": 0.055,
-    "tacklesPerSnap": 0.083,
-    "passRushProxy": 0.072,
+    "snapShare": 0.703,
+    "snapShareL3": 0.743,
+    "snapShareLast": 0.71,
+    "tackleOpp": 0.058,
+    "tacklesPerSnap": 0.079,
+    "passRushProxy": 0.049,
     "matchup": 1.0,
     "matchupDetail": {},
     "matchupNote": "BYE in Week 11",
@@ -2741,21 +2737,21 @@
     "injurySource": null,
     "dnpLast": false,
     "weekly": {
-     "1": 18.0,
-     "2": 38.0,
-     "3": 6.0,
-     "4": 6.0,
-     "5": 5.0,
-     "6": 15.0,
-     "7": 1.0,
-     "8": 26.0,
-     "9": 2.0,
-     "10": 20.0
+     "1": 7.0,
+     "2": 2.0,
+     "3": 13.0,
+     "4": 12.0,
+     "5": 36.0,
+     "6": 4.0,
+     "7": 5.0,
+     "8": 4.0,
+     "9": 17.0,
+     "10": 19.0
     },
-    "league": "morningside",
-    "weeklyRank": 166,
+    "league": "FREE",
+    "weeklyRank": 165,
     "rosRank": 32,
-    "rank": 166,
+    "rank": 165,
     "tier": 7,
     "note": "BYE in Week 11 \u2014 0 pts",
     "prevRank": null,
@@ -2827,12 +2823,12 @@
     },
     "league": "doubtpfizer",
     "weeklyRank": 1,
-    "rosRank": 2,
+    "rosRank": 1,
     "rank": 1,
     "tier": 1,
     "note": "riser: 33.7 FP/G last 3 vs 27.3 earlier; green dot (Woellert W10)",
-    "prevRank": 126.0,
-    "rankChange": 125.0
+    "prevRank": 1.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0035316",
@@ -2899,79 +2895,8 @@
     "rank": 2,
     "tier": 1,
     "note": "riser: 32.7 FP/G last 3 vs 17.2 earlier; green dot (Woellert W10)",
-    "prevRank": 15.0,
-    "rankChange": 13.0
-   },
-   {
-    "id": "00-0036323",
-    "player": "Patrick Queen",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "PIT",
-    "opp": "PHI",
-    "bye": false,
-    "gp": 9,
-    "fpgSeason": 21.11,
-    "fpgL3": 37.33,
-    "proj": 30.9,
-    "rosPts": 203.7,
-    "rosPPG": 29.1,
-    "rosSOS": 0.95,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.999,
-    "snapShareL3": 0.997,
-    "snapShareLast": 1.0,
-    "tackleOpp": 0.133,
-    "tacklesPerSnap": 0.127,
-    "passRushProxy": 0.023,
-    "matchup": 0.96,
-    "matchupDetail": {
-     "opp": "PHI",
-     "oppPlaysPG": 60.4,
-     "oppDropbacksPG": 39.4,
-     "oppRunPG": 21.0,
-     "oppPassRate": 0.653,
-     "oppSackRate": 0.085,
-     "oppPressureProxyRate": 0.172,
-     "oppCompletionsPG": 19.9,
-     "oppTklPtsToLBPG": 28.9,
-     "oppBallPlaysPG": 4.67,
-     "factors": {
-      "tackle": 0.9,
-      "rush": 1.166,
-      "ball": 0.882
-     },
-     "mix": {
-      "tackle": 0.78,
-      "rush": 0.13,
-      "ball": 0.09
-     }
-    },
-    "matchupNote": "vs PHI: 60 plays/g, 35% run, 29 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.96)",
-    "greenDot": "green",
-    "injury": null,
-    "injurySource": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 12.0,
-     "2": 11.0,
-     "3": 29.0,
-     "4": 11.0,
-     "5": 10.0,
-     "6": 5.0,
-     "7": 36.0,
-     "8": 41.0,
-     "10": 35.0
-    },
-    "league": "ttab",
-    "weeklyRank": 3,
-    "rosRank": 5,
-    "rank": 3,
-    "tier": 2,
-    "note": "riser: 37.3 FP/G last 3 vs 16.3 earlier; green dot (Woellert W10)",
-    "prevRank": 7.0,
-    "rankChange": 4.0
+    "prevRank": 2.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0034413",
@@ -3036,13 +2961,13 @@
      "10": 28.0
     },
     "league": "ultron",
-    "weeklyRank": 4,
+    "weeklyRank": 3,
     "rosRank": 10,
-    "rank": 4,
-    "tier": 3,
+    "rank": 3,
+    "tier": 2,
     "note": "riser: 27.3 FP/G last 3 vs 18.3 earlier; snaps up to 100%",
-    "prevRank": 20.0,
-    "rankChange": 16.0
+    "prevRank": 4.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0041509",
@@ -3107,83 +3032,84 @@
      "10": 23.0
     },
     "league": "goats",
-    "weeklyRank": 5,
-    "rosRank": 3,
-    "rank": 5,
-    "tier": 3,
+    "weeklyRank": 4,
+    "rosRank": 2,
+    "rank": 4,
+    "tier": 2,
     "note": "riser: 35.0 FP/G last 3 vs 23.0 earlier",
-    "prevRank": 1.0,
-    "rankChange": -4.0
+    "prevRank": 5.0,
+    "rankChange": 1.0
    },
    {
-    "id": "00-0035276",
-    "player": "Blake Cashman",
+    "id": "00-0036323",
+    "player": "Patrick Queen",
     "pos": "LB",
     "nflPos": "LB",
-    "team": "MIN",
-    "opp": "SF",
+    "team": "PIT",
+    "opp": "PHI",
     "bye": false,
-    "gp": 8,
-    "fpgSeason": 29.25,
-    "fpgL3": 38.67,
-    "proj": 28.4,
-    "rosPts": 223.9,
-    "rosPPG": 31.98,
-    "rosSOS": 1.016,
+    "gp": 9,
+    "fpgSeason": 21.11,
+    "fpgL3": 37.33,
+    "proj": 27.8,
+    "rosPts": 200.6,
+    "rosPPG": 28.66,
+    "rosSOS": 0.95,
     "rosByeWeek": null,
     "rosGames": 7,
-    "snapShare": 0.949,
-    "snapShareL3": 0.933,
-    "snapShareLast": 0.86,
-    "tackleOpp": 0.154,
-    "tacklesPerSnap": 0.154,
-    "passRushProxy": 0.054,
-    "matchup": 0.993,
+    "snapShare": 0.999,
+    "snapShareL3": 0.997,
+    "snapShareLast": 1.0,
+    "tackleOpp": 0.133,
+    "tacklesPerSnap": 0.127,
+    "passRushProxy": 0.023,
+    "matchup": 0.96,
     "matchupDetail": {
-     "opp": "SF",
-     "oppPlaysPG": 58.9,
-     "oppDropbacksPG": 33.1,
-     "oppRunPG": 25.8,
-     "oppPassRate": 0.562,
-     "oppSackRate": 0.044,
-     "oppPressureProxyRate": 0.117,
-     "oppCompletionsPG": 20.6,
-     "oppTklPtsToLBPG": 34.2,
+     "opp": "PHI",
+     "oppPlaysPG": 60.4,
+     "oppDropbacksPG": 39.4,
+     "oppRunPG": 21.0,
+     "oppPassRate": 0.653,
+     "oppSackRate": 0.085,
+     "oppPressureProxyRate": 0.172,
+     "oppCompletionsPG": 19.9,
+     "oppTklPtsToLBPG": 28.9,
      "oppBallPlaysPG": 4.67,
      "factors": {
-      "tackle": 1.066,
-      "rush": 0.669,
+      "tackle": 0.9,
+      "rush": 1.166,
       "ball": 0.882
      },
      "mix": {
-      "tackle": 0.76,
-      "rush": 0.15,
+      "tackle": 0.78,
+      "rush": 0.13,
       "ball": 0.09
      }
     },
-    "matchupNote": "vs SF: 59 plays/g, 44% run, 34 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.99)",
-    "greenDot": null,
+    "matchupNote": "vs PHI: 60 plays/g, 35% run, 29 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.96)",
+    "greenDot": "green",
     "injury": "Questionable",
-    "injurySource": "Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))",
-    "dnpLast": true,
+    "injurySource": "nflverse W11",
+    "dnpLast": false,
     "weekly": {
-     "1": 22.0,
-     "2": 29.0,
-     "3": 28.0,
-     "4": 18.0,
-     "5": 21.0,
-     "7": 59.0,
-     "8": 24.0,
-     "9": 33.0
+     "1": 12.0,
+     "2": 11.0,
+     "3": 29.0,
+     "4": 11.0,
+     "5": 10.0,
+     "6": 5.0,
+     "7": 36.0,
+     "8": 41.0,
+     "10": 35.0
     },
-    "league": "hyper",
-    "weeklyRank": 6,
-    "rosRank": 1,
-    "rank": 6,
+    "league": "ttab",
+    "weeklyRank": 5,
+    "rosRank": 5,
+    "rank": 5,
     "tier": 3,
-    "note": "injury: Questionable (Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))); riser: 38.7 FP/G last 3 vs 29.5 earlier",
-    "prevRank": null,
-    "rankChange": null
+    "note": "injury: Questionable (nflverse W11); riser: 37.3 FP/G last 3 vs 16.3 earlier",
+    "prevRank": 3.0,
+    "rankChange": -2.0
    },
    {
     "id": "00-0033336",
@@ -3248,13 +3174,13 @@
      "10": 29.0
     },
     "league": "saltese",
-    "weeklyRank": 7,
+    "weeklyRank": 6,
     "rosRank": 7,
-    "rank": 7,
+    "rank": 6,
     "tier": 4,
     "note": "riser: 28.0 FP/G last 3 vs 13.8 earlier; green dot (Woellert W10)",
-    "prevRank": 23.0,
-    "rankChange": 16.0
+    "prevRank": 7.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0037259",
@@ -3316,13 +3242,13 @@
      "10": 24.0
     },
     "league": "ttab",
-    "weeklyRank": 8,
+    "weeklyRank": 7,
     "rosRank": 8,
-    "rank": 8,
+    "rank": 7,
     "tier": 4,
     "note": "riser: 29.3 FP/G last 3 vs 9.0 earlier; snaps up to 100%",
     "prevRank": 8.0,
-    "rankChange": 0.0
+    "rankChange": 1.0
    },
    {
     "id": "00-0041039",
@@ -3384,13 +3310,13 @@
      "10": 31.0
     },
     "league": "ultron",
-    "weeklyRank": 9,
-    "rosRank": 22,
-    "rank": 9,
+    "weeklyRank": 8,
+    "rosRank": 21,
+    "rank": 8,
     "tier": 4,
     "note": "riser: 27.0 FP/G last 3 vs 2.3 earlier; snaps up to 100%",
-    "prevRank": 33.0,
-    "rankChange": 24.0
+    "prevRank": 9.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0037615",
@@ -3456,13 +3382,13 @@
      "10": 20.0
     },
     "league": "doubtpfizer",
-    "weeklyRank": 10,
+    "weeklyRank": 9,
     "rosRank": 15,
-    "rank": 10,
+    "rank": 9,
     "tier": 4,
     "note": "green dot (Woellert W10)",
-    "prevRank": 2.0,
-    "rankChange": -8.0
+    "prevRank": 10.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0036409",
@@ -3527,13 +3453,13 @@
      "10": 27.0
     },
     "league": "eddies",
-    "weeklyRank": 11,
+    "weeklyRank": 10,
     "rosRank": 12,
-    "rank": 11,
+    "rank": 10,
     "tier": 4,
     "note": "riser: 25.0 FP/G last 3 vs 17.5 earlier",
-    "prevRank": 18.0,
-    "rankChange": 7.0
+    "prevRank": 11.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0034302",
@@ -3596,13 +3522,13 @@
      "10": 14.0
     },
     "league": "eddies",
-    "weeklyRank": 12,
+    "weeklyRank": 11,
     "rosRank": 13,
-    "rank": 12,
+    "rank": 11,
     "tier": 4,
     "note": "riser: 24.3 FP/G last 3 vs 16.2 earlier; green dot (Woellert W10)",
-    "prevRank": 4.0,
-    "rankChange": -8.0
+    "prevRank": 12.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0036621",
@@ -3667,13 +3593,13 @@
      "10": 21.0
     },
     "league": "ultron",
-    "weeklyRank": 13,
+    "weeklyRank": 12,
     "rosRank": 14,
-    "rank": 13,
+    "rank": 12,
     "tier": 4,
     "note": "green dot (Woellert W10)",
-    "prevRank": 11.0,
-    "rankChange": -2.0
+    "prevRank": 13.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0039741",
@@ -3738,13 +3664,83 @@
      "10": 37.0
     },
     "league": "hyper",
-    "weeklyRank": 14,
+    "weeklyRank": 13,
     "rosRank": 11,
-    "rank": 14,
+    "rank": 13,
     "tier": 4,
     "note": "",
-    "prevRank": 22.0,
-    "rankChange": 8.0
+    "prevRank": 14.0,
+    "rankChange": 1.0
+   },
+   {
+    "id": "00-0035276",
+    "player": "Blake Cashman",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "MIN",
+    "opp": "SF",
+    "bye": false,
+    "gp": 8,
+    "fpgSeason": 29.25,
+    "fpgL3": 38.67,
+    "proj": 23.7,
+    "rosPts": 219.1,
+    "rosPPG": 31.3,
+    "rosSOS": 1.016,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.949,
+    "snapShareL3": 0.933,
+    "snapShareLast": 0.86,
+    "tackleOpp": 0.154,
+    "tacklesPerSnap": 0.154,
+    "passRushProxy": 0.054,
+    "matchup": 0.993,
+    "matchupDetail": {
+     "opp": "SF",
+     "oppPlaysPG": 58.9,
+     "oppDropbacksPG": 33.1,
+     "oppRunPG": 25.8,
+     "oppPassRate": 0.562,
+     "oppSackRate": 0.044,
+     "oppPressureProxyRate": 0.117,
+     "oppCompletionsPG": 20.6,
+     "oppTklPtsToLBPG": 34.2,
+     "oppBallPlaysPG": 4.67,
+     "factors": {
+      "tackle": 1.066,
+      "rush": 0.669,
+      "ball": 0.882
+     },
+     "mix": {
+      "tackle": 0.76,
+      "rush": 0.15,
+      "ball": 0.09
+     }
+    },
+    "matchupNote": "vs SF: 59 plays/g, 44% run, 34 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.99)",
+    "greenDot": null,
+    "injury": null,
+    "injurySource": null,
+    "dnpLast": true,
+    "weekly": {
+     "1": 22.0,
+     "2": 29.0,
+     "3": 28.0,
+     "4": 18.0,
+     "5": 21.0,
+     "7": 59.0,
+     "8": 24.0,
+     "9": 33.0
+    },
+    "league": "hyper",
+    "weeklyRank": 14,
+    "rosRank": 3,
+    "rank": 14,
+    "tier": 4,
+    "note": "did not play W10 \u2014 check status (proj cut 25%); riser: 38.7 FP/G last 3 vs 29.5 earlier",
+    "prevRank": 6.0,
+    "rankChange": -8.0
    },
    {
     "id": "00-0041028",
@@ -3814,8 +3810,8 @@
     "rank": 15,
     "tier": 4,
     "note": "riser: 23.3 FP/G last 3 vs 19.3 earlier",
-    "prevRank": 6.0,
-    "rankChange": -9.0
+    "prevRank": 15.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0040157",
@@ -3881,12 +3877,12 @@
     },
     "league": "pocket",
     "weeklyRank": 16,
-    "rosRank": 21,
+    "rosRank": 20,
     "rank": 16,
-    "tier": 4,
+    "tier": 5,
     "note": "green dot (Woellert W10)",
-    "prevRank": 21.0,
-    "rankChange": 5.0
+    "prevRank": 16.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0034815",
@@ -3956,8 +3952,8 @@
     "rank": 17,
     "tier": 5,
     "note": "green dot (Woellert W10)",
-    "prevRank": 10.0,
-    "rankChange": -7.0
+    "prevRank": 17.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0039826",
@@ -4025,8 +4021,8 @@
     "rank": 18,
     "tier": 5,
     "note": "riser: 22.7 FP/G last 3 vs 14.6 earlier; snaps up to 96%",
-    "prevRank": 129.0,
-    "rankChange": 111.0
+    "prevRank": 18.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0041502",
@@ -4091,12 +4087,12 @@
     },
     "league": "pocket",
     "weeklyRank": 19,
-    "rosRank": 24,
+    "rosRank": 23,
     "rank": 19,
     "tier": 5,
     "note": "",
-    "prevRank": 134.0,
-    "rankChange": 115.0
+    "prevRank": 19.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0034874",
@@ -4163,12 +4159,12 @@
     },
     "league": "newman",
     "weeklyRank": 20,
-    "rosRank": 33,
+    "rosRank": 32,
     "rank": 20,
     "tier": 5,
     "note": "green dot (Woellert W10)",
-    "prevRank": 12.0,
-    "rankChange": -8.0
+    "prevRank": 20.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0036500",
@@ -4235,12 +4231,12 @@
     },
     "league": "saltese",
     "weeklyRank": 21,
-    "rosRank": 32,
+    "rosRank": 31,
     "rank": 21,
     "tier": 5,
     "note": "",
-    "prevRank": 16.0,
-    "rankChange": -5.0
+    "prevRank": 21.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0037244",
@@ -4305,153 +4301,12 @@
     },
     "league": "goats",
     "weeklyRank": 22,
-    "rosRank": 19,
+    "rosRank": 18,
     "rank": 22,
     "tier": 5,
     "note": "green dot (Woellert W10)",
-    "prevRank": 30.0,
-    "rankChange": 8.0
-   },
-   {
-    "id": "00-0034982",
-    "player": "Dre Greenlaw",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "SF",
-    "opp": "MIN",
-    "bye": false,
-    "gp": 8,
-    "fpgSeason": 17.62,
-    "fpgL3": 22.67,
-    "proj": 20.3,
-    "rosPts": 157.9,
-    "rosPPG": 22.55,
-    "rosSOS": 1.02,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.76,
-    "snapShareL3": 0.92,
-    "snapShareLast": 0.87,
-    "tackleOpp": 0.13,
-    "tacklesPerSnap": 0.159,
-    "passRushProxy": 0.002,
-    "matchup": 0.92,
-    "matchupDetail": {
-     "opp": "MIN",
-     "oppPlaysPG": 56.8,
-     "oppDropbacksPG": 33.6,
-     "oppRunPG": 23.2,
-     "oppPassRate": 0.591,
-     "oppSackRate": 0.086,
-     "oppPressureProxyRate": 0.159,
-     "oppCompletionsPG": 17.6,
-     "oppTklPtsToLBPG": 27.8,
-     "oppBallPlaysPG": 4.22,
-     "factors": {
-      "tackle": 0.865,
-      "rush": 0.917,
-      "ball": 0.798
-     },
-     "mix": {
-      "tackle": 0.98,
-      "rush": 0.02,
-      "ball": 0.0
-     }
-    },
-    "matchupNote": "vs MIN: 57 plays/g, 41% run, 28 LB tkl pts/g allowed (lg 32) \u2192 tough (x0.92)",
-    "greenDot": "full",
-    "injury": null,
-    "injurySource": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 10.0,
-     "2": 16.0,
-     "3": 14.0,
-     "4": 28.0,
-     "5": 5.0,
-     "7": 22.0,
-     "9": 28.0,
-     "10": 18.0
-    },
-    "league": "substation",
-    "weeklyRank": 23,
-    "rosRank": 18,
-    "rank": 23,
-    "tier": 5,
-    "note": "riser: 22.7 FP/G last 3 vs 15.8 earlier; snaps up to 87%",
-    "prevRank": 28.0,
-    "rankChange": 5.0
-   },
-   {
-    "id": "00-0038553",
-    "player": "Daiyan Henley",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "LAC",
-    "opp": "NYJ",
-    "bye": false,
-    "gp": 9,
-    "fpgSeason": 16.56,
-    "fpgL3": 24.0,
-    "proj": 19.6,
-    "rosPts": 129.4,
-    "rosPPG": 18.48,
-    "rosSOS": 1.0,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.87,
-    "snapShareL3": 0.823,
-    "snapShareLast": 0.88,
-    "tackleOpp": 0.112,
-    "tacklesPerSnap": 0.118,
-    "passRushProxy": 0.009,
-    "matchup": 0.976,
-    "matchupDetail": {
-     "opp": "NYJ",
-     "oppPlaysPG": 59.3,
-     "oppDropbacksPG": 36.1,
-     "oppRunPG": 23.2,
-     "oppPassRate": 0.609,
-     "oppSackRate": 0.089,
-     "oppPressureProxyRate": 0.18,
-     "oppCompletionsPG": 20.7,
-     "oppTklPtsToLBPG": 31.3,
-     "oppBallPlaysPG": 4.1,
-     "factors": {
-      "tackle": 0.975,
-      "rush": 1.118,
-      "ball": 0.775
-     },
-     "mix": {
-      "tackle": 0.87,
-      "rush": 0.03,
-      "ball": 0.1
-     }
-    },
-    "matchupNote": "vs NYJ: 59 plays/g, 39% run, 31 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.98)",
-    "greenDot": null,
-    "injury": null,
-    "injurySource": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 17.0,
-     "2": 3.0,
-     "3": 26.0,
-     "4": 11.0,
-     "5": 14.0,
-     "6": 6.0,
-     "8": 11.0,
-     "9": 33.0,
-     "10": 28.0
-    },
-    "league": "morningside",
-    "weeklyRank": 24,
-    "rosRank": 27,
-    "rank": 24,
-    "tier": 5,
-    "note": "riser: 24.0 FP/G last 3 vs 12.8 earlier",
-    "prevRank": 42.0,
-    "rankChange": 18.0
+    "prevRank": 22.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0041522",
@@ -4516,13 +4371,13 @@
      "10": 2.0
     },
     "league": "hyper",
-    "weeklyRank": 25,
+    "weeklyRank": 23,
     "rosRank": 26,
-    "rank": 25,
-    "tier": 5,
+    "rank": 23,
+    "tier": 6,
     "note": "green dot (Woellert W10)",
-    "prevRank": 24.0,
-    "rankChange": -1.0
+    "prevRank": 25.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0040738",
@@ -4587,13 +4442,13 @@
      "10": 21.0
     },
     "league": "lab",
-    "weeklyRank": 26,
-    "rosRank": 31,
-    "rank": 26,
-    "tier": 5,
+    "weeklyRank": 24,
+    "rosRank": 30,
+    "rank": 24,
+    "tier": 6,
     "note": "",
-    "prevRank": 41.0,
-    "rankChange": 15.0
+    "prevRank": 26.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0035144",
@@ -4659,13 +4514,13 @@
      "10": 25.0
     },
     "league": "ultron",
-    "weeklyRank": 27,
-    "rosRank": 37,
-    "rank": 27,
+    "weeklyRank": 25,
+    "rosRank": 35,
+    "rank": 25,
     "tier": 6,
     "note": "riser: 19.7 FP/G last 3 vs 13.4 earlier; green dot (Woellert W10)",
-    "prevRank": 37.0,
-    "rankChange": 10.0
+    "prevRank": 27.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0040158",
@@ -4729,13 +4584,13 @@
      "9": 2.0
     },
     "league": "FREE",
-    "weeklyRank": 28,
-    "rosRank": 34,
-    "rank": 28,
+    "weeklyRank": 26,
+    "rosRank": 33,
+    "rank": 26,
     "tier": 6,
     "note": "riser: 17.7 FP/G last 3 vs 13.0 earlier; snaps up to 46%",
-    "prevRank": 133.0,
-    "rankChange": 105.0
+    "prevRank": 28.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0035262",
@@ -4800,13 +4655,13 @@
      "10": 18.0
     },
     "league": "lab",
-    "weeklyRank": 29,
+    "weeklyRank": 27,
     "rosRank": 25,
-    "rank": 29,
+    "rank": 27,
     "tier": 6,
     "note": "snaps down to 74%",
-    "prevRank": 25.0,
-    "rankChange": -4.0
+    "prevRank": 29.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0035525",
@@ -4871,13 +4726,83 @@
      "9": 24.0
     },
     "league": "goats",
-    "weeklyRank": 30,
-    "rosRank": 28,
-    "rank": 30,
+    "weeklyRank": 28,
+    "rosRank": 27,
+    "rank": 28,
     "tier": 6,
     "note": "",
-    "prevRank": 132.0,
-    "rankChange": 102.0
+    "prevRank": 30.0,
+    "rankChange": 2.0
+   },
+   {
+    "id": "00-0034982",
+    "player": "Dre Greenlaw",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "SF",
+    "opp": "MIN",
+    "bye": false,
+    "gp": 8,
+    "fpgSeason": 17.62,
+    "fpgL3": 22.67,
+    "proj": 18.3,
+    "rosPts": 155.8,
+    "rosPPG": 22.26,
+    "rosSOS": 1.02,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.76,
+    "snapShareL3": 0.92,
+    "snapShareLast": 0.87,
+    "tackleOpp": 0.13,
+    "tacklesPerSnap": 0.159,
+    "passRushProxy": 0.002,
+    "matchup": 0.92,
+    "matchupDetail": {
+     "opp": "MIN",
+     "oppPlaysPG": 56.8,
+     "oppDropbacksPG": 33.6,
+     "oppRunPG": 23.2,
+     "oppPassRate": 0.591,
+     "oppSackRate": 0.086,
+     "oppPressureProxyRate": 0.159,
+     "oppCompletionsPG": 17.6,
+     "oppTklPtsToLBPG": 27.8,
+     "oppBallPlaysPG": 4.22,
+     "factors": {
+      "tackle": 0.865,
+      "rush": 0.917,
+      "ball": 0.798
+     },
+     "mix": {
+      "tackle": 0.98,
+      "rush": 0.02,
+      "ball": 0.0
+     }
+    },
+    "matchupNote": "vs MIN: 57 plays/g, 41% run, 28 LB tkl pts/g allowed (lg 32) \u2192 tough (x0.92)",
+    "greenDot": "full",
+    "injury": "Questionable",
+    "injurySource": "nflverse W11",
+    "dnpLast": false,
+    "weekly": {
+     "1": 10.0,
+     "2": 16.0,
+     "3": 14.0,
+     "4": 28.0,
+     "5": 5.0,
+     "7": 22.0,
+     "9": 28.0,
+     "10": 18.0
+    },
+    "league": "substation",
+    "weeklyRank": 29,
+    "rosRank": 19,
+    "rank": 29,
+    "tier": 6,
+    "note": "injury: Questionable (nflverse W11); riser: 22.7 FP/G last 3 vs 15.8 earlier",
+    "prevRank": 23.0,
+    "rankChange": -6.0
    },
    {
     "id": "00-0039911",
@@ -4941,13 +4866,13 @@
      "10": 25.0
     },
     "league": "FREE",
-    "weeklyRank": 31,
-    "rosRank": 36,
-    "rank": 31,
+    "weeklyRank": 30,
+    "rosRank": 34,
+    "rank": 30,
     "tier": 6,
     "note": "riser: 19.0 FP/G last 3 vs 8.6 earlier; snaps up to 85%",
-    "prevRank": 43.0,
-    "rankChange": 12.0
+    "prevRank": 31.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0037074",
@@ -5013,13 +4938,13 @@
      "10": 21.0
     },
     "league": "lab",
-    "weeklyRank": 32,
-    "rosRank": 38,
-    "rank": 32,
+    "weeklyRank": 31,
+    "rosRank": 36,
+    "rank": 31,
     "tier": 6,
     "note": "",
-    "prevRank": 19.0,
-    "rankChange": -13.0
+    "prevRank": 32.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0040722",
@@ -5084,83 +5009,13 @@
      "10": 34.0
     },
     "league": "FREE",
-    "weeklyRank": 33,
-    "rosRank": 49,
-    "rank": 33,
+    "weeklyRank": 32,
+    "rosRank": 48,
+    "rank": 32,
     "tier": 6,
     "note": "riser: 17.0 FP/G last 3 vs 10.2 earlier; snaps up to 79%",
-    "prevRank": null,
-    "rankChange": null
-   },
-   {
-    "id": "00-0036418",
-    "player": "Zack Baun",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "PHI",
-    "opp": "PIT",
-    "bye": false,
-    "gp": 8,
-    "fpgSeason": 22.38,
-    "fpgL3": 24.33,
-    "proj": 17.3,
-    "rosPts": 150.4,
-    "rosPPG": 21.48,
-    "rosSOS": 0.997,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.925,
-    "snapShareL3": 0.827,
-    "snapShareLast": 0.48,
-    "tackleOpp": 0.121,
-    "tacklesPerSnap": 0.124,
-    "passRushProxy": 0.026,
-    "matchup": 0.922,
-    "matchupDetail": {
-     "opp": "PIT",
-     "oppPlaysPG": 61.3,
-     "oppDropbacksPG": 39.1,
-     "oppRunPG": 22.2,
-     "oppPassRate": 0.638,
-     "oppSackRate": 0.074,
-     "oppPressureProxyRate": 0.156,
-     "oppCompletionsPG": 21.2,
-     "oppTklPtsToLBPG": 26.6,
-     "oppBallPlaysPG": 5.89,
-     "factors": {
-      "tackle": 0.827,
-      "rush": 1.051,
-      "ball": 1.113
-     },
-     "mix": {
-      "tackle": 0.83,
-      "rush": 0.09,
-      "ball": 0.08
-     }
-    },
-    "matchupNote": "vs PIT: 61 plays/g, 36% run, 27 LB tkl pts/g allowed (lg 32) \u2192 tough (x0.92)",
-    "greenDot": "green",
-    "injury": "Questionable",
-    "injurySource": "Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))",
-    "dnpLast": false,
-    "weekly": {
-     "1": 34.0,
-     "2": 7.0,
-     "3": 22.0,
-     "5": 28.0,
-     "6": 15.0,
-     "7": 17.0,
-     "8": 17.0,
-     "9": 39.0
-    },
-    "league": "saltese",
-    "weeklyRank": 34,
-    "rosRank": 20,
-    "rank": 34,
-    "tier": 6,
-    "note": "injury: Questionable (Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))); green dot (Woellert W10)",
-    "prevRank": 128.0,
-    "rankChange": 94.0
+    "prevRank": 33.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0033914",
@@ -5224,14 +5079,14 @@
      "8": 33.0,
      "9": 13.0
     },
-    "league": "slumlords",
-    "weeklyRank": 35,
-    "rosRank": 41,
-    "rank": 35,
-    "tier": 6,
+    "league": "FREE",
+    "weeklyRank": 33,
+    "rosRank": 39,
+    "rank": 33,
+    "tier": 7,
     "note": "riser: 19.7 FP/G last 3 vs 12.0 earlier; green dot (Woellert W10)",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 35.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0029607",
@@ -5297,13 +5152,13 @@
      "10": 12.0
     },
     "league": "ttab",
-    "weeklyRank": 36,
-    "rosRank": 54,
-    "rank": 36,
-    "tier": 6,
+    "weeklyRank": 34,
+    "rosRank": 51,
+    "rank": 34,
+    "tier": 7,
     "note": "green dot (Woellert W10)",
-    "prevRank": 32.0,
-    "rankChange": -4.0
+    "prevRank": 36.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0038599",
@@ -5364,13 +5219,13 @@
      "10": 12.0
     },
     "league": "saltese",
-    "weeklyRank": 37,
-    "rosRank": 40,
-    "rank": 37,
+    "weeklyRank": 35,
+    "rosRank": 38,
+    "rank": 35,
     "tier": 7,
     "note": "green dot (Woellert W10)",
-    "prevRank": 29.0,
-    "rankChange": -8.0
+    "prevRank": 37.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0039858",
@@ -5434,13 +5289,13 @@
      "10": 35.0
     },
     "league": "eddies",
-    "weeklyRank": 38,
-    "rosRank": 39,
-    "rank": 38,
+    "weeklyRank": 36,
+    "rosRank": 37,
+    "rank": 36,
     "tier": 7,
     "note": "riser: 16.3 FP/G last 3 vs 11.3 earlier; snaps up to 92%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 38.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0040011",
@@ -5504,13 +5359,13 @@
      "10": 10.0
     },
     "league": "hyper",
-    "weeklyRank": 39,
-    "rosRank": 51,
-    "rank": 39,
+    "weeklyRank": 37,
+    "rosRank": 50,
+    "rank": 37,
     "tier": 7,
     "note": "riser: 18.0 FP/G last 3 vs 7.8 earlier; snaps up to 100%",
-    "prevRank": 26.0,
-    "rankChange": -13.0
+    "prevRank": 39.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0036159",
@@ -5575,13 +5430,13 @@
      "10": 5.0
     },
     "league": "FREE",
-    "weeklyRank": 40,
-    "rosRank": 43,
-    "rank": 40,
+    "weeklyRank": 38,
+    "rosRank": 41,
+    "rank": 38,
     "tier": 7,
     "note": "riser: 16.3 FP/G last 3 vs 10.5 earlier",
-    "prevRank": 39.0,
-    "rankChange": -1.0
+    "prevRank": 40.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0038504",
@@ -5594,9 +5449,9 @@
     "gp": 10,
     "fpgSeason": 16.4,
     "fpgL3": 12.33,
-    "proj": 15.2,
-    "rosPts": 89.0,
-    "rosPPG": 12.71,
+    "proj": 15.5,
+    "rosPts": 90.8,
+    "rosPPG": 12.97,
     "rosSOS": 0.978,
     "rosByeWeek": 13.0,
     "rosGames": 6,
@@ -5630,7 +5485,7 @@
      }
     },
     "matchupNote": "vs CAR: 65 plays/g, 35% run, 29 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.96)",
-    "greenDot": null,
+    "greenDot": "full",
     "injury": null,
     "injurySource": null,
     "dnpLast": false,
@@ -5647,13 +5502,13 @@
      "10": 19.0
     },
     "league": "eddies",
-    "weeklyRank": 41,
-    "rosRank": 57,
-    "rank": 41,
+    "weeklyRank": 39,
+    "rosRank": 54,
+    "rank": 39,
     "tier": 7,
     "note": "snaps up to 82%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 41.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0037254",
@@ -5718,13 +5573,13 @@
      "10": 15.0
     },
     "league": "morningside",
-    "weeklyRank": 42,
-    "rosRank": 46,
-    "rank": 42,
+    "weeklyRank": 40,
+    "rosRank": 44,
+    "rank": 40,
     "tier": 7,
     "note": "green dot (Woellert W10)",
-    "prevRank": 36.0,
-    "rankChange": -6.0
+    "prevRank": 42.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0037007",
@@ -5787,13 +5642,13 @@
      "10": 13.0
     },
     "league": "FREE",
-    "weeklyRank": 43,
-    "rosRank": 47,
-    "rank": 43,
+    "weeklyRank": 41,
+    "rosRank": 46,
+    "rank": 41,
     "tier": 7,
     "note": "riser: 17.0 FP/G last 3 vs 5.0 earlier",
-    "prevRank": 46.0,
-    "rankChange": 3.0
+    "prevRank": 43.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0038570",
@@ -5858,13 +5713,13 @@
      "10": 17.0
     },
     "league": "morningside",
-    "weeklyRank": 44,
-    "rosRank": 55,
-    "rank": 44,
+    "weeklyRank": 42,
+    "rosRank": 53,
+    "rank": 42,
     "tier": 7,
     "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 44.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0041036",
@@ -5928,153 +5783,13 @@
      "10": 32.0
     },
     "league": "FREE",
-    "weeklyRank": 45,
-    "rosRank": 48,
-    "rank": 45,
-    "tier": 7,
-    "note": "riser: 16.3 FP/G last 3 vs 6.8 earlier; snaps up to 55%",
-    "prevRank": null,
-    "rankChange": null
-   },
-   {
-    "id": "00-0039068",
-    "player": "Yaya Diaby",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "TB",
-    "opp": "DET",
-    "bye": false,
-    "gp": 7,
-    "fpgSeason": 11.57,
-    "fpgL3": 19.33,
-    "proj": 14.0,
-    "rosPts": 94.7,
-    "rosPPG": 13.53,
-    "rosSOS": 1.022,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.584,
-    "snapShareL3": 0.517,
-    "snapShareLast": 0.39,
-    "tackleOpp": 0.04,
-    "tacklesPerSnap": 0.062,
-    "passRushProxy": 0.053,
-    "matchup": 1.069,
-    "matchupDetail": {
-     "opp": "DET",
-     "oppPlaysPG": 64.7,
-     "oppDropbacksPG": 37.0,
-     "oppRunPG": 27.7,
-     "oppPassRate": 0.572,
-     "oppSackRate": 0.063,
-     "oppPressureProxyRate": 0.165,
-     "oppCompletionsPG": 23.0,
-     "oppTklPtsToLBPG": 38.2,
-     "oppBallPlaysPG": 4.78,
-     "factors": {
-      "tackle": 1.191,
-      "rush": 1.051,
-      "ball": 0.903
-     },
-     "mix": {
-      "tackle": 0.6,
-      "rush": 0.26,
-      "ball": 0.13
-     }
-    },
-    "matchupNote": "vs DET: 65 plays/g, 43% run, 38 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.07)",
-    "greenDot": null,
-    "injury": null,
-    "injurySource": null,
-    "dnpLast": false,
-    "weekly": {
-     "1": 5.0,
-     "2": 11.0,
-     "3": 4.0,
-     "4": 3.0,
-     "5": 10.0,
-     "6": 12.0,
-     "7": 36.0
-    },
-    "league": "FREE",
-    "weeklyRank": 46,
-    "rosRank": 52,
-    "rank": 46,
-    "tier": 7,
-    "note": "riser: 19.3 FP/G last 3 vs 11.6 earlier; snaps down to 39%",
-    "prevRank": null,
-    "rankChange": null
-   },
-   {
-    "id": "00-0036927",
-    "player": "Pete Werner",
-    "pos": "LB",
-    "nflPos": "LB",
-    "team": "NO",
-    "opp": "CHI",
-    "bye": false,
-    "gp": 9,
-    "fpgSeason": 18.44,
-    "fpgL3": 15.0,
-    "proj": 13.7,
-    "rosPts": 114.5,
-    "rosPPG": 16.35,
-    "rosSOS": 1.006,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.744,
-    "snapShareL3": 0.737,
-    "snapShareLast": 0.29,
-    "tackleOpp": 0.12,
-    "tacklesPerSnap": 0.151,
-    "passRushProxy": 0.022,
-    "matchup": 1.075,
-    "matchupDetail": {
-     "opp": "CHI",
-     "oppPlaysPG": 69.3,
-     "oppDropbacksPG": 39.3,
-     "oppRunPG": 30.0,
-     "oppPassRate": 0.567,
-     "oppSackRate": 0.056,
-     "oppPressureProxyRate": 0.133,
-     "oppCompletionsPG": 23.4,
-     "oppTklPtsToLBPG": 37.0,
-     "oppBallPlaysPG": 5.44,
-     "factors": {
-      "tackle": 1.153,
-      "rush": 0.898,
-      "ball": 1.029
-     },
-     "mix": {
-      "tackle": 0.87,
-      "rush": 0.09,
-      "ball": 0.03
-     }
-    },
-    "matchupNote": "vs CHI: 69 plays/g, 43% run, 37 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.08)",
-    "greenDot": "full",
-    "injury": "Questionable",
-    "injurySource": "Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))",
-    "dnpLast": false,
-    "weekly": {
-     "1": 19.0,
-     "2": 35.0,
-     "3": 6.0,
-     "4": 6.0,
-     "5": 20.0,
-     "6": 35.0,
-     "7": 15.0,
-     "9": 20.0,
-     "10": 10.0
-    },
-    "league": "morningside",
-    "weeklyRank": 47,
-    "rosRank": 35,
-    "rank": 47,
+    "weeklyRank": 43,
+    "rosRank": 47,
+    "rank": 43,
     "tier": 8,
-    "note": "injury: Questionable (Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))); snaps down to 29%",
-    "prevRank": 14.0,
-    "rankChange": -33.0
+    "note": "riser: 16.3 FP/G last 3 vs 6.8 earlier; snaps up to 55%",
+    "prevRank": 45.0,
+    "rankChange": 2.0
    },
    {
     "id": "00-0036964",
@@ -6139,13 +5854,295 @@
      "10": 17.0
     },
     "league": "morningside",
-    "weeklyRank": 48,
-    "rosRank": 58,
-    "rank": 48,
+    "weeklyRank": 44,
+    "rosRank": 56,
+    "rank": 44,
     "tier": 8,
     "note": "snaps up to 100%; green dot (Woellert W10)",
+    "prevRank": 48.0,
+    "rankChange": 4.0
+   },
+   {
+    "id": "00-0036933",
+    "player": "Zaven Collins",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "ARI",
+    "opp": "KC",
+    "bye": false,
+    "gp": 10,
+    "fpgSeason": 10.1,
+    "fpgL3": 13.33,
+    "proj": 13.3,
+    "rosPts": 78.2,
+    "rosPPG": 11.18,
+    "rosSOS": 1.023,
+    "rosByeWeek": 14.0,
+    "rosGames": 6,
+    "snapShare": 0.493,
+    "snapShareL3": 0.567,
+    "snapShareLast": 0.61,
+    "tackleOpp": 0.049,
+    "tacklesPerSnap": 0.093,
+    "passRushProxy": 0.042,
+    "matchup": 1.005,
+    "matchupDetail": {
+     "opp": "KC",
+     "oppPlaysPG": 60.9,
+     "oppDropbacksPG": 36.4,
+     "oppRunPG": 24.4,
+     "oppPassRate": 0.599,
+     "oppSackRate": 0.037,
+     "oppPressureProxyRate": 0.171,
+     "oppCompletionsPG": 22.1,
+     "oppTklPtsToLBPG": 32.8,
+     "oppBallPlaysPG": 3.33,
+     "factors": {
+      "tackle": 1.021,
+      "rush": 1.07,
+      "ball": 0.63
+     },
+     "mix": {
+      "tackle": 0.73,
+      "rush": 0.21,
+      "ball": 0.06
+     }
+    },
+    "matchupNote": "vs KC: 61 plays/g, 40% run, 33 LB tkl pts/g allowed (lg 32) \u2192 neutral (x1.01)",
+    "greenDot": null,
+    "injury": null,
+    "injurySource": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 6.0,
+     "2": 19.0,
+     "3": 12.0,
+     "4": 17.0,
+     "5": 3.0,
+     "6": 2.0,
+     "7": 2.0,
+     "8": 17.0,
+     "9": 4.0,
+     "10": 19.0
+    },
+    "league": "FREE",
+    "weeklyRank": 45,
+    "rosRank": 62,
+    "rank": 45,
+    "tier": 8,
+    "note": "riser: 13.3 FP/G last 3 vs 8.7 earlier; snaps up to 61%",
     "prevRank": null,
     "rankChange": null
+   },
+   {
+    "id": "00-0037457",
+    "player": "Jake Hansen",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "HOU",
+    "opp": "IND",
+    "bye": false,
+    "gp": 9,
+    "fpgSeason": 13.67,
+    "fpgL3": 10.33,
+    "proj": 13.0,
+    "rosPts": 74.2,
+    "rosPPG": 10.6,
+    "rosSOS": 0.963,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.656,
+    "snapShareL3": 0.497,
+    "snapShareLast": 0.97,
+    "tackleOpp": 0.088,
+    "tacklesPerSnap": 0.127,
+    "passRushProxy": 0.008,
+    "matchup": 0.979,
+    "matchupDetail": {
+     "opp": "IND",
+     "oppPlaysPG": 62.8,
+     "oppDropbacksPG": 36.6,
+     "oppRunPG": 26.2,
+     "oppPassRate": 0.583,
+     "oppSackRate": 0.071,
+     "oppPressureProxyRate": 0.178,
+     "oppCompletionsPG": 19.5,
+     "oppTklPtsToLBPG": 29.5,
+     "oppBallPlaysPG": 6.9,
+     "factors": {
+      "tackle": 0.919,
+      "rush": 1.118,
+      "ball": 1.304
+     },
+     "mix": {
+      "tackle": 0.86,
+      "rush": 0.05,
+      "ball": 0.09
+     }
+    },
+    "matchupNote": "vs IND: 63 plays/g, 42% run, 30 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.98)",
+    "greenDot": null,
+    "injury": null,
+    "injurySource": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 2.0,
+     "2": 10.0,
+     "3": 13.0,
+     "4": 38.0,
+     "5": 28.0,
+     "6": 1.0,
+     "7": 4.0,
+     "9": 5.0,
+     "10": 22.0
+    },
+    "league": "newman",
+    "weeklyRank": 46,
+    "rosRank": 65,
+    "rank": 46,
+    "tier": 8,
+    "note": "snaps up to 97%",
+    "prevRank": null,
+    "rankChange": null
+   },
+   {
+    "id": "00-0041518",
+    "player": "Bryce Boettcher",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "IND",
+    "opp": "HOU",
+    "bye": false,
+    "gp": 8,
+    "fpgSeason": 9.5,
+    "fpgL3": 13.0,
+    "proj": 12.8,
+    "rosPts": 74.0,
+    "rosPPG": 10.57,
+    "rosSOS": 0.984,
+    "rosByeWeek": 13.0,
+    "rosGames": 6,
+    "snapShare": 0.409,
+    "snapShareL3": 0.63,
+    "snapShareLast": 0.77,
+    "tackleOpp": 0.092,
+    "tacklesPerSnap": 0.201,
+    "passRushProxy": 0.008,
+    "matchup": 0.962,
+    "matchupDetail": {
+     "opp": "HOU",
+     "oppPlaysPG": 61.3,
+     "oppDropbacksPG": 39.0,
+     "oppRunPG": 22.3,
+     "oppPassRate": 0.636,
+     "oppSackRate": 0.048,
+     "oppPressureProxyRate": 0.123,
+     "oppCompletionsPG": 22.4,
+     "oppTklPtsToLBPG": 30.1,
+     "oppBallPlaysPG": 5.0,
+     "factors": {
+      "tackle": 0.938,
+      "rush": 0.822,
+      "ball": 0.945
+     },
+     "mix": {
+      "tackle": 0.99,
+      "rush": 0.01,
+      "ball": 0.0
+     }
+    },
+    "matchupNote": "vs HOU: 61 plays/g, 36% run, 30 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.96)",
+    "greenDot": null,
+    "injury": null,
+    "injurySource": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 12.0,
+     "2": 10.0,
+     "3": 2.0,
+     "4": 10.0,
+     "5": 3.0,
+     "6": 5.0,
+     "9": 22.0,
+     "10": 12.0
+    },
+    "league": "pocket",
+    "weeklyRank": 47,
+    "rosRank": 66,
+    "rank": 47,
+    "tier": 8,
+    "note": "riser: 13.0 FP/G last 3 vs 7.0 earlier; snaps up to 77%",
+    "prevRank": null,
+    "rankChange": null
+   },
+   {
+    "id": "00-0039068",
+    "player": "Yaya Diaby",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "TB",
+    "opp": "DET",
+    "bye": false,
+    "gp": 7,
+    "fpgSeason": 11.57,
+    "fpgL3": 19.33,
+    "proj": 12.6,
+    "rosPts": 93.3,
+    "rosPPG": 13.33,
+    "rosSOS": 1.022,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.584,
+    "snapShareL3": 0.517,
+    "snapShareLast": 0.39,
+    "tackleOpp": 0.04,
+    "tacklesPerSnap": 0.062,
+    "passRushProxy": 0.053,
+    "matchup": 1.069,
+    "matchupDetail": {
+     "opp": "DET",
+     "oppPlaysPG": 64.7,
+     "oppDropbacksPG": 37.0,
+     "oppRunPG": 27.7,
+     "oppPassRate": 0.572,
+     "oppSackRate": 0.063,
+     "oppPressureProxyRate": 0.165,
+     "oppCompletionsPG": 23.0,
+     "oppTklPtsToLBPG": 38.2,
+     "oppBallPlaysPG": 4.78,
+     "factors": {
+      "tackle": 1.191,
+      "rush": 1.051,
+      "ball": 0.903
+     },
+     "mix": {
+      "tackle": 0.6,
+      "rush": 0.26,
+      "ball": 0.13
+     }
+    },
+    "matchupNote": "vs DET: 65 plays/g, 43% run, 38 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.07)",
+    "greenDot": null,
+    "injury": "Questionable",
+    "injurySource": "nflverse W11",
+    "dnpLast": false,
+    "weekly": {
+     "1": 5.0,
+     "2": 11.0,
+     "3": 4.0,
+     "4": 3.0,
+     "5": 10.0,
+     "6": 12.0,
+     "7": 36.0
+    },
+    "league": "FREE",
+    "weeklyRank": 48,
+    "rosRank": 52,
+    "rank": 48,
+    "tier": 8,
+    "note": "injury: Questionable (nflverse W11); riser: 19.3 FP/G last 3 vs 11.6 earlier",
+    "prevRank": 46.0,
+    "rankChange": -2.0
    },
    {
     "id": "00-0040579",
@@ -6190,13 +6187,153 @@
      "10": 30.0
     },
     "league": "substation",
-    "weeklyRank": 126,
+    "weeklyRank": 117,
     "rosRank": 6,
-    "rank": 126,
+    "rank": 117,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts; riser: 35.7 FP/G last 3 vs 19.9 earlier",
-    "prevRank": 5.0,
-    "rankChange": -121.0
+    "prevRank": 126.0,
+    "rankChange": 9.0
+   },
+   {
+    "id": "00-0035687",
+    "player": "Bobby Okereke",
+    "pos": "LB",
+    "nflPos": "ILB",
+    "team": "CAR",
+    "opp": "BAL",
+    "bye": false,
+    "gp": 7,
+    "fpgSeason": 21.29,
+    "fpgL3": 27.0,
+    "proj": 0.0,
+    "rosPts": 137.7,
+    "rosPPG": 19.68,
+    "rosSOS": 0.983,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.89,
+    "snapShareL3": 0.96,
+    "snapShareLast": 1.0,
+    "tackleOpp": 0.106,
+    "tacklesPerSnap": 0.112,
+    "passRushProxy": 0.012,
+    "matchup": 0.967,
+    "matchupDetail": {
+     "opp": "BAL",
+     "oppPlaysPG": 59.3,
+     "oppDropbacksPG": 34.0,
+     "oppRunPG": 25.3,
+     "oppPassRate": 0.573,
+     "oppSackRate": 0.074,
+     "oppPressureProxyRate": 0.176,
+     "oppCompletionsPG": 19.8,
+     "oppTklPtsToLBPG": 30.9,
+     "oppBallPlaysPG": 4.3,
+     "factors": {
+      "tackle": 0.963,
+      "rush": 1.032,
+      "ball": 0.812
+     },
+     "mix": {
+      "tackle": 0.81,
+      "rush": 0.05,
+      "ball": 0.14
+     }
+    },
+    "matchupNote": "vs BAL: 59 plays/g, 43% run, 31 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.97)",
+    "greenDot": null,
+    "injury": "Out",
+    "injurySource": "nflverse W11",
+    "dnpLast": true,
+    "weekly": {
+     "1": 18.0,
+     "2": 28.0,
+     "3": 5.0,
+     "4": 17.0,
+     "6": 38.0,
+     "7": 29.0,
+     "8": 14.0
+    },
+    "league": "morningside",
+    "weeklyRank": 118,
+    "rosRank": 24,
+    "rank": 118,
+    "tier": 8,
+    "note": "injury: Out (nflverse W11); riser: 27.0 FP/G last 3 vs 22.5 earlier",
+    "prevRank": null,
+    "rankChange": null
+   },
+   {
+    "id": "00-0038553",
+    "player": "Daiyan Henley",
+    "pos": "LB",
+    "nflPos": "LB",
+    "team": "LAC",
+    "opp": "NYJ",
+    "bye": false,
+    "gp": 9,
+    "fpgSeason": 16.56,
+    "fpgL3": 24.0,
+    "proj": 0.0,
+    "rosPts": 103.0,
+    "rosPPG": 14.71,
+    "rosSOS": 1.0,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.87,
+    "snapShareL3": 0.823,
+    "snapShareLast": 0.88,
+    "tackleOpp": 0.112,
+    "tacklesPerSnap": 0.118,
+    "passRushProxy": 0.009,
+    "matchup": 0.976,
+    "matchupDetail": {
+     "opp": "NYJ",
+     "oppPlaysPG": 59.3,
+     "oppDropbacksPG": 36.1,
+     "oppRunPG": 23.2,
+     "oppPassRate": 0.609,
+     "oppSackRate": 0.089,
+     "oppPressureProxyRate": 0.18,
+     "oppCompletionsPG": 20.7,
+     "oppTklPtsToLBPG": 31.3,
+     "oppBallPlaysPG": 4.1,
+     "factors": {
+      "tackle": 0.975,
+      "rush": 1.118,
+      "ball": 0.775
+     },
+     "mix": {
+      "tackle": 0.87,
+      "rush": 0.03,
+      "ball": 0.1
+     }
+    },
+    "matchupNote": "vs NYJ: 59 plays/g, 39% run, 31 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.98)",
+    "greenDot": "full",
+    "injury": "Out",
+    "injurySource": "nflverse W11",
+    "dnpLast": false,
+    "weekly": {
+     "1": 17.0,
+     "2": 3.0,
+     "3": 26.0,
+     "4": 11.0,
+     "5": 14.0,
+     "6": 6.0,
+     "8": 11.0,
+     "9": 33.0,
+     "10": 28.0
+    },
+    "league": "morningside",
+    "weeklyRank": 119,
+    "rosRank": 45,
+    "rank": 119,
+    "tier": 8,
+    "note": "injury: Out (nflverse W11); riser: 24.0 FP/G last 3 vs 12.8 earlier",
+    "prevRank": 24.0,
+    "rankChange": -95.0
    },
    {
     "id": "00-0036658",
@@ -6241,13 +6378,13 @@
      "10": 15.0
     },
     "league": "dongers",
-    "weeklyRank": 127,
-    "rosRank": 30,
-    "rank": 127,
+    "weeklyRank": 120,
+    "rosRank": 29,
+    "rank": 120,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts; riser: 23.0 FP/G last 3 vs 9.7 earlier",
-    "prevRank": 13.0,
-    "rankChange": -114.0
+    "prevRank": 127.0,
+    "rankChange": 7.0
    },
    {
     "id": "00-0039812",
@@ -6290,13 +6427,13 @@
      "10": 16.0
     },
     "league": "newman",
-    "weeklyRank": 128,
-    "rosRank": 42,
-    "rank": 128,
+    "weeklyRank": 121,
+    "rosRank": 40,
+    "rank": 121,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts; riser: 23.0 FP/G last 3 vs 7.8 earlier",
-    "prevRank": 47.0,
-    "rankChange": -81.0
+    "prevRank": 128.0,
+    "rankChange": 7.0
    },
    {
     "id": "00-0036994",
@@ -6341,13 +6478,13 @@
      "10": 21.0
     },
     "league": "pocket",
-    "weeklyRank": 129,
-    "rosRank": 23,
-    "rank": 129,
+    "weeklyRank": 122,
+    "rosRank": 22,
+    "rank": 122,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts; green dot (Woellert W10)",
-    "prevRank": 9.0,
-    "rankChange": -120.0
+    "prevRank": 129.0,
+    "rankChange": 7.0
    },
    {
     "id": "00-0041066",
@@ -6392,13 +6529,13 @@
      "10": 13.0
     },
     "league": "ultron",
-    "weeklyRank": 131,
-    "rosRank": 29,
-    "rank": 131,
+    "weeklyRank": 124,
+    "rosRank": 28,
+    "rank": 124,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts; snaps up to 100%",
-    "prevRank": 3.0,
-    "rankChange": -128.0
+    "prevRank": 131.0,
+    "rankChange": 7.0
    },
    {
     "id": "00-0036813",
@@ -6443,13 +6580,13 @@
      "10": 19.0
     },
     "league": "dongers",
-    "weeklyRank": 132,
-    "rosRank": 45,
-    "rank": 132,
+    "weeklyRank": 125,
+    "rosRank": 43,
+    "rank": 125,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts",
-    "prevRank": 17.0,
-    "rankChange": -115.0
+    "prevRank": 132.0,
+    "rankChange": 7.0
    },
    {
     "id": "00-0035680",
@@ -6494,13 +6631,13 @@
      "10": 20.0
     },
     "league": "goats",
-    "weeklyRank": 133,
-    "rosRank": 44,
-    "rank": 133,
+    "weeklyRank": 126,
+    "rosRank": 42,
+    "rank": 126,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts",
-    "prevRank": 31.0,
-    "rankChange": -102.0
+    "prevRank": 133.0,
+    "rankChange": 7.0
    }
   ],
   "DB": [
@@ -6561,14 +6698,14 @@
      "9": 18.0,
      "10": 25.0
     },
-    "league": "FREE",
+    "league": "saltese",
     "weeklyRank": 1,
     "rosRank": 1,
     "rank": 1,
     "tier": 1,
     "note": "riser: 24.3 FP/G last 3 vs 18.0 earlier; snaps up to 96%",
-    "prevRank": 10.0,
-    "rankChange": 9.0
+    "prevRank": 1.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0040141",
@@ -6636,8 +6773,8 @@
     "rank": 2,
     "tier": 2,
     "note": "",
-    "prevRank": 12.0,
-    "rankChange": 10.0
+    "prevRank": 2.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0038123",
@@ -6704,7 +6841,7 @@
     },
     "league": "pocket",
     "weeklyRank": 3,
-    "rosRank": 13,
+    "rosRank": 14,
     "rank": 3,
     "tier": 2,
     "note": "",
@@ -6776,8 +6913,8 @@
     "rank": 4,
     "tier": 2,
     "note": "riser: 23.0 FP/G last 3 vs 11.7 earlier",
-    "prevRank": 9.0,
-    "rankChange": 5.0
+    "prevRank": 4.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0035632",
@@ -6846,8 +6983,8 @@
     "rank": 5,
     "tier": 2,
     "note": "",
-    "prevRank": 1.0,
-    "rankChange": -4.0
+    "prevRank": 5.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0039343",
@@ -6917,8 +7054,8 @@
     "rank": 6,
     "tier": 2,
     "note": "",
-    "prevRank": 11.0,
-    "rankChange": 5.0
+    "prevRank": 6.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0038038",
@@ -6989,8 +7126,8 @@
     "rank": 7,
     "tier": 2,
     "note": "",
-    "prevRank": 35.0,
-    "rankChange": 28.0
+    "prevRank": 7.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0036293",
@@ -7057,12 +7194,12 @@
     },
     "league": "substation",
     "weeklyRank": 8,
-    "rosRank": 12,
+    "rosRank": 13,
     "rank": 8,
     "tier": 2,
     "note": "",
-    "prevRank": 5.0,
-    "rankChange": -3.0
+    "prevRank": 8.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0038560",
@@ -7132,8 +7269,8 @@
     "rank": 9,
     "tier": 2,
     "note": "",
-    "prevRank": 7.0,
-    "rankChange": -2.0
+    "prevRank": 9.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0040143",
@@ -7202,8 +7339,8 @@
     "rank": 10,
     "tier": 2,
     "note": "",
-    "prevRank": 206.0,
-    "rankChange": 196.0
+    "prevRank": 10.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0037246",
@@ -7271,8 +7408,8 @@
     "rank": 11,
     "tier": 2,
     "note": "riser: 17.0 FP/G last 3 vs 12.6 earlier",
-    "prevRank": 17.0,
-    "rankChange": 6.0
+    "prevRank": 11.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0037384",
@@ -7337,12 +7474,12 @@
     },
     "league": "FREE",
     "weeklyRank": 12,
-    "rosRank": 9,
+    "rosRank": 10,
     "rank": 12,
     "tier": 3,
     "note": "sleeper: unrostered with a top-half projection",
-    "prevRank": 203.0,
-    "rankChange": 191.0
+    "prevRank": 12.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0036348",
@@ -7408,12 +7545,12 @@
     },
     "league": "ultron",
     "weeklyRank": 13,
-    "rosRank": 11,
+    "rosRank": 12,
     "rank": 13,
     "tier": 3,
     "note": "",
-    "prevRank": 15.0,
-    "rankChange": 2.0
+    "prevRank": 13.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0036587",
@@ -7482,74 +7619,8 @@
     "rank": 14,
     "tier": 3,
     "note": "riser: 17.7 FP/G last 3 vs 6.3 earlier; snaps up to 78%",
-    "prevRank": null,
-    "rankChange": null
-   },
-   {
-    "id": "00-0038111",
-    "player": "Kyler Gordon",
-    "pos": "DB",
-    "nflPos": "CB",
-    "team": "CHI",
-    "opp": "NO",
-    "bye": false,
-    "gp": 4,
-    "fpgSeason": 18.0,
-    "fpgL3": 10.33,
-    "proj": 16.3,
-    "rosPts": 107.3,
-    "rosPPG": 15.33,
-    "rosSOS": 1.011,
-    "rosByeWeek": null,
-    "rosGames": 7,
-    "snapShare": 0.565,
-    "snapShareL3": 0.65,
-    "snapShareLast": 0.76,
-    "tackleOpp": 0.049,
-    "tacklesPerSnap": 0.079,
-    "passRushProxy": 0.087,
-    "matchup": 1.081,
-    "matchupDetail": {
-     "opp": "NO",
-     "oppPlaysPG": 65.6,
-     "oppDropbacksPG": 42.8,
-     "oppRunPG": 22.8,
-     "oppPassRate": 0.653,
-     "oppSackRate": 0.06,
-     "oppPressureProxyRate": 0.148,
-     "oppCompletionsPG": 25.4,
-     "oppTklPtsToDBPG": 48.9,
-     "oppBallPlaysPG": 5.67,
-     "factors": {
-      "tackle": 1.17,
-      "rush": 1.089,
-      "ball": 1.071
-     },
-     "mix": {
-      "tackle": 0.57,
-      "rush": 0.39,
-      "ball": 0.04
-     }
-    },
-    "matchupNote": "vs NO OL: 6.0% sack / 15% hit rate allowed (lg 6.5%/16%), 43 DB/g \u2192 boost (x1.08)",
-    "greenDot": null,
-    "injury": null,
-    "injurySource": null,
-    "dnpLast": false,
-    "weekly": {
-     "6": 41.0,
-     "7": 19.0,
-     "8": 6.0,
-     "9": 6.0
-    },
-    "league": "FREE",
-    "weeklyRank": 15,
-    "rosRank": 17,
-    "rank": 15,
-    "tier": 3,
-    "note": "snaps up to 76%; sleeper: unrostered with a top-half projection",
-    "prevRank": 220.0,
-    "rankChange": 205.0
+    "prevRank": 14.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0038596",
@@ -7613,13 +7684,13 @@
      "10": 21.0
     },
     "league": "FREE",
-    "weeklyRank": 16,
+    "weeklyRank": 15,
     "rosRank": 40,
-    "rank": 16,
+    "rank": 15,
     "tier": 3,
     "note": "snaps up to 100%; sleeper: unrostered with a top-half projection",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 16.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0041538",
@@ -7684,13 +7755,13 @@
      "9": 11.0
     },
     "league": "ttab",
-    "weeklyRank": 17,
+    "weeklyRank": 16,
     "rosRank": 16,
-    "rank": 17,
+    "rank": 16,
     "tier": 3,
     "note": "",
-    "prevRank": 213.0,
-    "rankChange": 196.0
+    "prevRank": 17.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0033890",
@@ -7756,13 +7827,13 @@
      "10": 11.0
     },
     "league": "slumlords",
-    "weeklyRank": 18,
+    "weeklyRank": 17,
     "rosRank": 33,
-    "rank": 18,
+    "rank": 17,
     "tier": 3,
     "note": "",
-    "prevRank": 22.0,
-    "rankChange": 4.0
+    "prevRank": 18.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0034465",
@@ -7826,14 +7897,14 @@
      "9": 11.0,
      "10": 24.0
     },
-    "league": "FREE",
-    "weeklyRank": 19,
+    "league": "ultron",
+    "weeklyRank": 18,
     "rosRank": 36,
-    "rank": 19,
+    "rank": 18,
     "tier": 3,
-    "note": "sleeper: unrostered with a top-half projection",
-    "prevRank": null,
-    "rankChange": null
+    "note": "",
+    "prevRank": 19.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0040865",
@@ -7899,13 +7970,13 @@
      "10": 20.0
     },
     "league": "ttab",
-    "weeklyRank": 20,
+    "weeklyRank": 19,
     "rosRank": 38,
-    "rank": 20,
+    "rank": 19,
     "tier": 3,
     "note": "",
-    "prevRank": 31.0,
-    "rankChange": 11.0
+    "prevRank": 20.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0040749",
@@ -7970,13 +8041,13 @@
      "9": 13.0
     },
     "league": "FREE",
-    "weeklyRank": 21,
+    "weeklyRank": 20,
     "rosRank": 23,
-    "rank": 21,
+    "rank": 20,
     "tier": 3,
     "note": "riser: 17.3 FP/G last 3 vs 11.1 earlier; sleeper: unrostered with a top-half projection",
-    "prevRank": 204.0,
-    "rankChange": 183.0
+    "prevRank": 21.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0038125",
@@ -8040,14 +8111,14 @@
      "9": 16.0,
      "10": 27.0
     },
-    "league": "FREE",
-    "weeklyRank": 22,
-    "rosRank": 18,
-    "rank": 22,
-    "tier": 4,
-    "note": "snaps up to 100%; sleeper: unrostered with a top-half projection",
-    "prevRank": null,
-    "rankChange": null
+    "league": "morningside",
+    "weeklyRank": 21,
+    "rosRank": 17,
+    "rank": 21,
+    "tier": 3,
+    "note": "snaps up to 100%",
+    "prevRank": 22.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0040720",
@@ -8110,13 +8181,13 @@
      "9": 17.0
     },
     "league": "FREE",
-    "weeklyRank": 23,
+    "weeklyRank": 22,
     "rosRank": 24,
-    "rank": 23,
+    "rank": 22,
     "tier": 4,
     "note": "riser: 15.7 FP/G last 3 vs 10.7 earlier; snaps up to 79%",
-    "prevRank": 208.0,
-    "rankChange": 185.0
+    "prevRank": 23.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0036998",
@@ -8180,13 +8251,13 @@
      "10": 13.0
     },
     "league": "dongers",
-    "weeklyRank": 24,
+    "weeklyRank": 23,
     "rosRank": 20,
-    "rank": 24,
+    "rank": 23,
     "tier": 4,
     "note": "",
-    "prevRank": 49.0,
-    "rankChange": 25.0
+    "prevRank": 24.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0036375",
@@ -8251,13 +8322,13 @@
      "10": 21.0
     },
     "league": "goats",
-    "weeklyRank": 25,
+    "weeklyRank": 24,
     "rosRank": 22,
-    "rank": 25,
+    "rank": 24,
     "tier": 4,
     "note": "",
-    "prevRank": 40.0,
-    "rankChange": 15.0
+    "prevRank": 25.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0040139",
@@ -8321,13 +8392,13 @@
      "10": 33.0
     },
     "league": "FREE",
-    "weeklyRank": 26,
+    "weeklyRank": 25,
     "rosRank": 32,
-    "rank": 26,
+    "rank": 25,
     "tier": 4,
     "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 26.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0039846",
@@ -8392,13 +8463,13 @@
      "9": 28.0
     },
     "league": "substation",
-    "weeklyRank": 27,
+    "weeklyRank": 26,
     "rosRank": 35,
-    "rank": 27,
+    "rank": 26,
     "tier": 4,
     "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 27.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0041528",
@@ -8462,14 +8533,14 @@
      "9": 16.0,
      "10": 22.0
     },
-    "league": "FREE",
-    "weeklyRank": 28,
+    "league": "ttab",
+    "weeklyRank": 27,
     "rosRank": 15,
-    "rank": 28,
+    "rank": 27,
     "tier": 4,
     "note": "riser: 17.0 FP/G last 3 vs 13.0 earlier",
-    "prevRank": 36.0,
-    "rankChange": 8.0
+    "prevRank": 28.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0040670",
@@ -8533,14 +8604,14 @@
      "9": 13.0,
      "10": 24.0
     },
-    "league": "FREE",
-    "weeklyRank": 29,
+    "league": "goats",
+    "weeklyRank": 28,
     "rosRank": 29,
-    "rank": 29,
+    "rank": 28,
     "tier": 4,
     "note": "",
-    "prevRank": 25.0,
-    "rankChange": -4.0
+    "prevRank": 29.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0040643",
@@ -8605,13 +8676,13 @@
      "10": 17.0
     },
     "league": "saltese",
-    "weeklyRank": 30,
+    "weeklyRank": 29,
     "rosRank": 21,
-    "rank": 30,
+    "rank": 29,
     "tier": 4,
     "note": "",
-    "prevRank": 43.0,
-    "rankChange": 13.0
+    "prevRank": 30.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0034789",
@@ -8674,13 +8745,13 @@
      "10": 3.0
     },
     "league": "lab",
-    "weeklyRank": 31,
-    "rosRank": 57,
-    "rank": 31,
+    "weeklyRank": 30,
+    "rosRank": 54,
+    "rank": 30,
     "tier": 4,
     "note": "",
-    "prevRank": 6.0,
-    "rankChange": -25.0
+    "prevRank": 31.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0037268",
@@ -8744,14 +8815,14 @@
      "8": 11.0,
      "9": 33.0
     },
-    "league": "FREE",
-    "weeklyRank": 32,
+    "league": "eddies",
+    "weeklyRank": 31,
     "rosRank": 25,
-    "rank": 32,
-    "tier": 5,
+    "rank": 31,
+    "tier": 4,
     "note": "riser: 19.0 FP/G last 3 vs 14.0 earlier",
-    "prevRank": 201.0,
-    "rankChange": 169.0
+    "prevRank": 32.0,
+    "rankChange": 1.0
    },
    {
     "id": "00-0037758",
@@ -8815,11 +8886,78 @@
      "10": 16.0
     },
     "league": "FREE",
-    "weeklyRank": 33,
+    "weeklyRank": 32,
     "rosRank": 37,
-    "rank": 33,
+    "rank": 32,
     "tier": 5,
     "note": "riser: 15.7 FP/G last 3 vs 9.5 earlier",
+    "prevRank": 33.0,
+    "rankChange": 1.0
+   },
+   {
+    "id": "00-0036564",
+    "player": "Talanoa Hufanga",
+    "pos": "DB",
+    "nflPos": "SAF",
+    "team": "DEN",
+    "opp": "LV",
+    "bye": false,
+    "gp": 5,
+    "fpgSeason": 19.0,
+    "fpgL3": 22.33,
+    "proj": 14.3,
+    "rosPts": 105.5,
+    "rosPPG": 15.08,
+    "rosSOS": 0.992,
+    "rosByeWeek": null,
+    "rosGames": 7,
+    "snapShare": 0.926,
+    "snapShareL3": 0.877,
+    "snapShareLast": 0.66,
+    "tackleOpp": 0.068,
+    "tacklesPerSnap": 0.069,
+    "passRushProxy": 0.011,
+    "matchup": 1.016,
+    "matchupDetail": {
+     "opp": "LV",
+     "oppPlaysPG": 60.8,
+     "oppDropbacksPG": 38.2,
+     "oppRunPG": 22.6,
+     "oppPassRate": 0.628,
+     "oppSackRate": 0.045,
+     "oppPressureProxyRate": 0.178,
+     "oppCompletionsPG": 22.6,
+     "oppTklPtsToDBPG": 39.6,
+     "oppBallPlaysPG": 6.3,
+     "factors": {
+      "tackle": 0.947,
+      "rush": 1.169,
+      "ball": 1.19
+     },
+     "mix": {
+      "tackle": 0.67,
+      "rush": 0.08,
+      "ball": 0.25
+     }
+    },
+    "matchupNote": "vs LV: 38 dropbacks/g, 23 cmp/g, 40 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.02)",
+    "greenDot": null,
+    "injury": null,
+    "injurySource": null,
+    "dnpLast": false,
+    "weekly": {
+     "1": 11.0,
+     "2": 17.0,
+     "3": 53.0,
+     "4": 6.0,
+     "5": 8.0
+    },
+    "league": "slumlords",
+    "weeklyRank": 33,
+    "rosRank": 19,
+    "rank": 33,
+    "tier": 5,
+    "note": "snaps down to 66%",
     "prevRank": null,
     "rankChange": null
    },
@@ -8885,12 +9023,12 @@
     },
     "league": "FREE",
     "weeklyRank": 34,
-    "rosRank": 48,
+    "rosRank": 46,
     "rank": 34,
     "tier": 5,
     "note": "",
-    "prevRank": 55.0,
-    "rankChange": 21.0
+    "prevRank": 34.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0039838",
@@ -8959,8 +9097,8 @@
     "rank": 35,
     "tier": 5,
     "note": "",
-    "prevRank": 38.0,
-    "rankChange": 3.0
+    "prevRank": 35.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0035236",
@@ -9024,14 +9162,14 @@
      "9": 21.0,
      "10": 5.0
     },
-    "league": "morningside",
+    "league": "FREE",
     "weeklyRank": 36,
-    "rosRank": 46,
+    "rosRank": 44,
     "rank": 36,
     "tier": 5,
     "note": "",
-    "prevRank": 28.0,
-    "rankChange": -8.0
+    "prevRank": 36.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0040747",
@@ -9090,12 +9228,12 @@
     },
     "league": "FREE",
     "weeklyRank": 37,
-    "rosRank": 53,
+    "rosRank": 50,
     "rank": 37,
     "tier": 5,
     "note": "snaps up to 100%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 37.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0038043",
@@ -9156,12 +9294,12 @@
     },
     "league": "FREE",
     "weeklyRank": 38,
-    "rosRank": 52,
+    "rosRank": 49,
     "rank": 38,
     "tier": 5,
     "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 38.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0037193",
@@ -9226,12 +9364,12 @@
     },
     "league": "FREE",
     "weeklyRank": 39,
-    "rosRank": 19,
+    "rosRank": 18,
     "rank": 39,
     "tier": 5,
     "note": "",
-    "prevRank": 13.0,
-    "rankChange": -26.0
+    "prevRank": 39.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0035357",
@@ -9296,12 +9434,12 @@
     },
     "league": "FREE",
     "weeklyRank": 40,
-    "rosRank": 55,
+    "rosRank": 52,
     "rank": 40,
     "tier": 5,
     "note": "snaps up to 99%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 40.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0040213",
@@ -9366,12 +9504,12 @@
     },
     "league": "FREE",
     "weeklyRank": 41,
-    "rosRank": 66,
+    "rosRank": 63,
     "rank": 41,
     "tier": 5,
     "note": "riser: 17.3 FP/G last 3 vs 6.2 earlier; snaps up to 98%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 41.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0040868",
@@ -9437,12 +9575,12 @@
     },
     "league": "FREE",
     "weeklyRank": 42,
-    "rosRank": 71,
+    "rosRank": 68,
     "rank": 42,
     "tier": 6,
     "note": "riser: 15.3 FP/G last 3 vs 11.3 earlier",
-    "prevRank": 33.0,
-    "rankChange": -9.0
+    "prevRank": 42.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0036884",
@@ -9506,8 +9644,8 @@
     "rank": 43,
     "tier": 6,
     "note": "",
-    "prevRank": 30.0,
-    "rankChange": -13.0
+    "prevRank": 43.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0033294",
@@ -9577,8 +9715,8 @@
     "rank": 44,
     "tier": 6,
     "note": "",
-    "prevRank": 34.0,
-    "rankChange": -10.0
+    "prevRank": 44.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0040718",
@@ -9644,12 +9782,12 @@
     },
     "league": "hyper",
     "weeklyRank": 45,
-    "rosRank": 63,
+    "rosRank": 60,
     "rank": 45,
     "tier": 6,
     "note": "snaps up to 98%",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 45.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0040688",
@@ -9716,12 +9854,12 @@
     },
     "league": "morningside",
     "weeklyRank": 46,
-    "rosRank": 79,
+    "rosRank": 74,
     "rank": 46,
     "tier": 6,
     "note": "",
-    "prevRank": 39.0,
-    "rankChange": -7.0
+    "prevRank": 46.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0038982",
@@ -9784,12 +9922,12 @@
     },
     "league": "slumlords",
     "weeklyRank": 47,
-    "rosRank": 50,
+    "rosRank": 47,
     "rank": 47,
     "tier": 6,
     "note": "",
-    "prevRank": 56.0,
-    "rankChange": 9.0
+    "prevRank": 47.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0041533",
@@ -9855,12 +9993,12 @@
     },
     "league": "FREE",
     "weeklyRank": 48,
-    "rosRank": 45,
+    "rosRank": 43,
     "rank": 48,
     "tier": 6,
     "note": "",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 48.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0036221",
@@ -9911,7 +10049,7 @@
     "matchupNote": "vs LV: 38 dropbacks/g, 23 cmp/g, 40 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.00)",
     "greenDot": null,
     "injury": "Questionable",
-    "injurySource": "Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))",
+    "injurySource": "nflverse W11",
     "dnpLast": false,
     "weekly": {
      "1": 20.0,
@@ -9928,9 +10066,9 @@
     "rosRank": 39,
     "rank": 66,
     "tier": 6,
-    "note": "injury: Questionable (Fantrax flag (HQ rosters Nov 17 6:05 AM PT (3302f19))); snaps down to 35%",
-    "prevRank": null,
-    "rankChange": null
+    "note": "injury: Questionable (nflverse W11); snaps down to 35%",
+    "prevRank": 66.0,
+    "rankChange": 0.0
    },
    {
     "id": "00-0041543",
@@ -9992,80 +10130,80 @@
      "10": 11.0
     },
     "league": "FREE",
-    "weeklyRank": 76,
-    "rosRank": 47,
-    "rank": 76,
+    "weeklyRank": 75,
+    "rosRank": 45,
+    "rank": 75,
     "tier": 6,
     "note": "snaps down to 56%",
-    "prevRank": 19.0,
-    "rankChange": -57.0
+    "prevRank": 76.0,
+    "rankChange": 1.0
    },
    {
-    "id": "00-0034384",
-    "player": "D.J. Reed",
+    "id": "00-0041063",
+    "player": "Will Lee III",
     "pos": "DB",
     "nflPos": "CB",
-    "team": "DET",
-    "opp": "TB",
+    "team": "CAR",
+    "opp": "BAL",
     "bye": false,
     "gp": 7,
-    "fpgSeason": 17.57,
-    "fpgL3": 17.67,
-    "proj": 7.4,
-    "rosPts": 93.3,
-    "rosPPG": 13.32,
-    "rosSOS": 1.006,
+    "fpgSeason": 13.86,
+    "fpgL3": 14.67,
+    "proj": 7.9,
+    "rosPts": 91.0,
+    "rosPPG": 13.0,
+    "rosSOS": 0.999,
     "rosByeWeek": null,
     "rosGames": 7,
-    "snapShare": 0.94,
-    "snapShareL3": 0.897,
-    "snapShareLast": 0.79,
-    "tackleOpp": 0.087,
-    "tacklesPerSnap": 0.087,
+    "snapShare": 0.73,
+    "snapShareL3": 0.767,
+    "snapShareLast": 0.3,
+    "tackleOpp": 0.073,
+    "tacklesPerSnap": 0.095,
     "passRushProxy": 0.0,
-    "matchup": 0.994,
+    "matchup": 0.941,
     "matchupDetail": {
-     "opp": "TB",
-     "oppPlaysPG": 61.8,
-     "oppDropbacksPG": 32.6,
-     "oppRunPG": 29.2,
-     "oppPassRate": 0.527,
-     "oppSackRate": 0.092,
-     "oppPressureProxyRate": 0.157,
-     "oppCompletionsPG": 16.2,
-     "oppTklPtsToDBPG": 41.9,
-     "oppBallPlaysPG": 5.0,
+     "opp": "BAL",
+     "oppPlaysPG": 59.3,
+     "oppDropbacksPG": 34.0,
+     "oppRunPG": 25.3,
+     "oppPassRate": 0.573,
+     "oppSackRate": 0.074,
+     "oppPressureProxyRate": 0.176,
+     "oppCompletionsPG": 19.8,
+     "oppTklPtsToDBPG": 38.7,
+     "oppBallPlaysPG": 4.3,
      "factors": {
-      "tackle": 1.002,
-      "rush": 0.879,
-      "ball": 0.945
+      "tackle": 0.926,
+      "rush": 1.032,
+      "ball": 0.812
      },
      "mix": {
-      "tackle": 0.79,
+      "tackle": 0.78,
       "rush": 0.0,
-      "ball": 0.21
+      "ball": 0.22
      }
     },
-    "matchupNote": "vs TB: 33 dropbacks/g, 16 cmp/g, 42 DB tkl pts/g allowed (lg 42) \u2192 neutral (x0.99)",
+    "matchupNote": "vs BAL: 34 dropbacks/g, 20 cmp/g, 39 DB tkl pts/g allowed (lg 42) \u2192 tough (x0.94)",
     "greenDot": null,
-    "injury": "Out (W10)",
-    "injurySource": "nflverse W10 final report",
+    "injury": null,
+    "injurySource": null,
     "dnpLast": true,
     "weekly": {
-     "1": 26.0,
-     "2": 11.0,
-     "3": 19.0,
-     "4": 14.0,
-     "5": 27.0,
-     "7": 10.0,
-     "8": 16.0
+     "1": 19.0,
+     "2": 9.0,
+     "3": 15.0,
+     "4": 10.0,
+     "6": 24.0,
+     "7": 12.0,
+     "8": 8.0
     },
     "league": "FREE",
-    "weeklyRank": 123,
-    "rosRank": 43,
-    "rank": 123,
+    "weeklyRank": 114,
+    "rosRank": 48,
+    "rank": 114,
     "tier": 7,
-    "note": "injury: Out (W10) (nflverse W10 final report); snaps down to 79%",
+    "note": "did not play W10 \u2014 check status (proj cut 25%); snaps down to 30%",
     "prevRank": null,
     "rankChange": null
    },
@@ -10081,8 +10219,8 @@
     "fpgSeason": 16.44,
     "fpgL3": 25.67,
     "proj": 0.0,
-    "rosPts": 109.3,
-    "rosPPG": 15.62,
+    "rosPts": 118.8,
+    "rosPPG": 16.98,
     "rosSOS": 0.99,
     "rosByeWeek": 11.0,
     "rosGames": 6,
@@ -10096,8 +10234,8 @@
     "matchupDetail": {},
     "matchupNote": "BYE in Week 11",
     "greenDot": null,
-    "injury": "Out (W10)",
-    "injurySource": "nflverse W10 final report",
+    "injury": null,
+    "injurySource": null,
     "dnpLast": true,
     "weekly": {
      "1": 12.0,
@@ -10111,13 +10249,13 @@
      "9": 31.0
     },
     "league": "morningside",
-    "weeklyRank": 194,
-    "rosRank": 14,
-    "rank": 194,
+    "weeklyRank": 184,
+    "rosRank": 9,
+    "rank": 184,
     "tier": 8,
-    "note": "BYE in Week 11 \u2014 0 pts; injury: Out (W10) (nflverse W10 final report)",
-    "prevRank": 200.0,
-    "rankChange": 6.0
+    "note": "BYE in Week 11 \u2014 0 pts; did not play W10 \u2014 check status (proj cut 25%)",
+    "prevRank": 194.0,
+    "rankChange": 10.0
    },
    {
     "id": "00-0039169",
@@ -10162,63 +10300,13 @@
      "10": 29.0
     },
     "league": "slumlords",
-    "weeklyRank": 195,
-    "rosRank": 10,
-    "rank": 195,
+    "weeklyRank": 185,
+    "rosRank": 11,
+    "rank": 185,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts; riser: 22.0 FP/G last 3 vs 14.1 earlier",
-    "prevRank": 26.0,
-    "rankChange": -169.0
-   },
-   {
-    "id": "00-0038715",
-    "player": "Ronnie Hickman Jr.",
-    "pos": "DB",
-    "nflPos": "SAF",
-    "team": "CLE",
-    "opp": "BYE",
-    "bye": true,
-    "gp": 9,
-    "fpgSeason": 15.22,
-    "fpgL3": 20.0,
-    "proj": 0.0,
-    "rosPts": 93.4,
-    "rosPPG": 13.34,
-    "rosSOS": 0.999,
-    "rosByeWeek": 11.0,
-    "rosGames": 6,
-    "snapShare": 0.988,
-    "snapShareL3": 0.98,
-    "snapShareLast": 0.99,
-    "tackleOpp": 0.101,
-    "tacklesPerSnap": 0.097,
-    "passRushProxy": 0.006,
-    "matchup": 1.0,
-    "matchupDetail": {},
-    "matchupNote": "BYE in Week 11",
-    "greenDot": null,
-    "injury": "Out (W10)",
-    "injurySource": "nflverse W10 final report",
-    "dnpLast": true,
-    "weekly": {
-     "1": 14.0,
-     "2": 11.0,
-     "3": 22.0,
-     "4": 12.0,
-     "5": 6.0,
-     "6": 12.0,
-     "7": 25.0,
-     "8": 13.0,
-     "9": 22.0
-    },
-    "league": "FREE",
-    "weeklyRank": 197,
-    "rosRank": 42,
-    "rank": 197,
-    "tier": 8,
-    "note": "BYE in Week 11 \u2014 0 pts; injury: Out (W10) (nflverse W10 final report)",
-    "prevRank": null,
-    "rankChange": null
+    "prevRank": 195.0,
+    "rankChange": 10.0
    },
    {
     "id": "00-0039813",
@@ -10263,13 +10351,13 @@
      "10": 16.0
     },
     "league": "eddies",
-    "weeklyRank": 198,
+    "weeklyRank": 187,
     "rosRank": 7,
-    "rank": 198,
+    "rank": 187,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts",
-    "prevRank": 8.0,
-    "rankChange": -190.0
+    "prevRank": 198.0,
+    "rankChange": 11.0
    },
    {
     "id": "00-0039417",
@@ -10314,13 +10402,13 @@
      "10": 15.0
     },
     "league": "FREE",
-    "weeklyRank": 201,
-    "rosRank": 44,
-    "rank": 201,
+    "weeklyRank": 190,
+    "rosRank": 42,
+    "rank": 190,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts; riser: 18.3 FP/G last 3 vs 10.4 earlier",
-    "prevRank": 21.0,
-    "rankChange": -180.0
+    "prevRank": 201.0,
+    "rankChange": 11.0
    },
    {
     "id": "00-0037841",
@@ -10365,274 +10453,219 @@
      "10": 3.0
     },
     "league": "eddies",
-    "weeklyRank": 202,
+    "weeklyRank": 191,
     "rosRank": 31,
-    "rank": 202,
+    "rank": 191,
     "tier": 8,
     "note": "BYE in Week 11 \u2014 0 pts; green dot (Woellert W10)",
-    "prevRank": 2.0,
-    "rankChange": -200.0
+    "prevRank": 202.0,
+    "rankChange": 11.0
    }
   ]
  },
  "movers": {
-  "basis": "positional rank change vs the previous file (week 10) \u2014 players on bye in either week excluded",
+  "basis": "positional rank change vs the previous file (week 11) \u2014 players on bye in either week excluded",
   "up": [
    {
-    "player": "DJ Wonnum",
-    "pos": "DL",
-    "team": "DET",
-    "league": "FREE",
-    "prevRank": 69,
-    "weeklyRank": 16,
-    "rosRank": 18,
-    "change": 53,
-    "proj": 14.7,
-    "prevProj": 7.5,
-    "fpgL3": 12.0,
-    "matchupNote": "vs TB OL: 9.2% sack / 16% hit rate allowed (lg 6.5%/16%), 33 DB/g \u2192 neutral (x1.01)"
-   },
-   {
-    "player": "Kyle Hamilton",
-    "pos": "DB",
-    "team": "BAL",
-    "league": "eddies",
-    "prevRank": 35,
-    "weeklyRank": 7,
-    "rosRank": 26,
-    "change": 28,
-    "proj": 18.7,
-    "prevProj": 13.7,
-    "fpgL3": 17.67,
-    "matchupNote": "vs CAR: 42 dropbacks/g, 23 cmp/g, 41 DB tkl pts/g allowed (lg 42) \u2192 neutral (x0.99)"
-   },
-   {
-    "player": "Jevon Holland",
-    "pos": "DB",
-    "team": "NYG",
-    "league": "dongers",
-    "prevRank": 49,
-    "weeklyRank": 24,
-    "rosRank": 20,
-    "change": 25,
-    "proj": 15.4,
-    "prevProj": 12.5,
-    "fpgL3": 16.33,
-    "matchupNote": "vs JAX: 32 dropbacks/g, 19 cmp/g, 44 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.04)"
-   },
-   {
-    "player": "CJ Allen",
+    "player": "Derrick Barnes",
     "pos": "LB",
-    "team": "IND",
-    "league": "ultron",
-    "prevRank": 33,
-    "weeklyRank": 9,
-    "rosRank": 22,
-    "change": 24,
-    "proj": 25.6,
-    "prevProj": 16.3,
-    "fpgL3": 27.0,
-    "matchupNote": "vs HOU: 61 plays/g, 36% run, 30 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.95)"
+    "team": "DET",
+    "league": "morningside",
+    "prevRank": 48,
+    "weeklyRank": 44,
+    "rosRank": 56,
+    "change": 4,
+    "proj": 13.4,
+    "prevProj": 13.4,
+    "fpgL3": 8.67,
+    "matchupNote": "vs TB: 62 plays/g, 47% run, 35 LB tkl pts/g allowed (lg 32) \u2192 neutral (x1.03)"
    },
    {
-    "player": "Alontae Taylor",
-    "pos": "DB",
-    "team": "TEN",
-    "league": "FREE",
-    "prevRank": 55,
-    "weeklyRank": 34,
-    "rosRank": 48,
-    "change": 21,
-    "proj": 14.3,
-    "prevProj": 11.8,
-    "fpgL3": 14.0,
-    "matchupNote": "vs DAL: 43 dropbacks/g, 25 cmp/g, 47 DB tkl pts/g allowed (lg 42) \u2192 boost (x1.07)"
+    "player": "Jacob Rodriguez",
+    "pos": "LB",
+    "team": "MIA",
+    "league": "hyper",
+    "prevRank": 25,
+    "weeklyRank": 23,
+    "rosRank": 26,
+    "change": 2,
+    "proj": 19.5,
+    "prevProj": 19.5,
+    "fpgL3": 17.0,
+    "matchupNote": "vs BUF: 62 plays/g, 46% run, 34 LB tkl pts/g allowed (lg 32) \u2192 neutral (x1.03)"
    },
    {
-    "player": "Jadeveon Clowney",
-    "pos": "DL",
-    "team": "HOU",
-    "league": "FREE",
+    "player": "Demetrius Knight Jr.",
+    "pos": "LB",
+    "team": "CIN",
+    "league": "lab",
     "prevRank": 26,
-    "weeklyRank": 7,
-    "rosRank": 12,
-    "change": 19,
-    "proj": 18.4,
-    "prevProj": 11.8,
-    "fpgL3": 16.67,
-    "matchupNote": "vs IND OL: 7.1% sack / 18% hit rate allowed (lg 6.5%/16%), 37 DB/g \u2192 boost (x1.10)"
+    "weeklyRank": 24,
+    "rosRank": 30,
+    "change": 2,
+    "proj": 19.3,
+    "prevProj": 19.3,
+    "fpgL3": 18.0,
+    "matchupNote": "vs WAS: 62 plays/g, 36% run, 38 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.10)"
    },
+   {
+    "player": "Mack Wilson",
+    "pos": "LB",
+    "team": "ARI",
+    "league": "ultron",
+    "prevRank": 27,
+    "weeklyRank": 25,
+    "rosRank": 35,
+    "change": 2,
+    "proj": 19.1,
+    "prevProj": 19.1,
+    "fpgL3": 19.67,
+    "matchupNote": "vs KC: 61 plays/g, 40% run, 33 LB tkl pts/g allowed (lg 32) \u2192 neutral (x1.00)"
+   },
+   {
+    "player": "David Walker",
+    "pos": "LB",
+    "team": "TB",
+    "league": "FREE",
+    "prevRank": 28,
+    "weeklyRank": 26,
+    "rosRank": 33,
+    "change": 2,
+    "proj": 19.1,
+    "prevProj": 19.1,
+    "fpgL3": 17.67,
+    "matchupNote": "vs DET: 65 plays/g, 43% run, 38 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.09)"
+   },
+   {
+    "player": "Drue Tranquill",
+    "pos": "LB",
+    "team": "KC",
+    "league": "lab",
+    "prevRank": 29,
+    "weeklyRank": 27,
+    "rosRank": 25,
+    "change": 2,
+    "proj": 18.9,
+    "prevProj": 18.9,
+    "fpgL3": 18.67,
+    "matchupNote": "vs ARI: 63 plays/g, 35% run, 36 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.08)"
+   },
+   {
+    "player": "Devin Bush",
+    "pos": "LB",
+    "team": "CHI",
+    "league": "goats",
+    "prevRank": 30,
+    "weeklyRank": 28,
+    "rosRank": 27,
+    "change": 2,
+    "proj": 18.8,
+    "prevProj": 18.8,
+    "fpgL3": 18.67,
+    "matchupNote": "vs NO: 66 plays/g, 35% run, 33 LB tkl pts/g allowed (lg 32) \u2192 neutral (x1.02)"
+   },
+   {
+    "player": "Alex Anzalone",
+    "pos": "LB",
+    "team": "TB",
+    "league": "FREE",
+    "prevRank": 35,
+    "weeklyRank": 33,
+    "rosRank": 39,
+    "change": 2,
+    "proj": 17.0,
+    "prevProj": 17.0,
+    "fpgL3": 19.67,
+    "matchupNote": "vs DET: 65 plays/g, 43% run, 38 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.06)"
+   }
+  ],
+  "down": [
    {
     "player": "Daiyan Henley",
     "pos": "LB",
     "team": "LAC",
     "league": "morningside",
-    "prevRank": 42,
-    "weeklyRank": 24,
-    "rosRank": 27,
-    "change": 18,
-    "proj": 19.6,
-    "prevProj": 14.2,
+    "prevRank": 24,
+    "weeklyRank": 119,
+    "rosRank": 45,
+    "change": -95,
+    "proj": 0.0,
+    "prevProj": 19.6,
     "fpgL3": 24.0,
     "matchupNote": "vs NYJ: 59 plays/g, 39% run, 31 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.98)"
    },
-   {
-    "player": "Foyesade Oluokun",
-    "pos": "LB",
-    "team": "JAX",
-    "league": "ultron",
-    "prevRank": 20,
-    "weeklyRank": 4,
-    "rosRank": 10,
-    "change": 16,
-    "proj": 29.5,
-    "prevProj": 21.0,
-    "fpgL3": 27.33,
-    "matchupNote": "vs NYG: 65 plays/g, 41% run, 35 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.06)"
-   }
-  ],
-  "down": [
-   {
-    "player": "Mansoor Delane",
-    "pos": "DB",
-    "team": "KC",
-    "league": "FREE",
-    "prevRank": 19,
-    "weeklyRank": 76,
-    "rosRank": 47,
-    "change": -57,
-    "proj": 10.9,
-    "prevProj": 15.5,
-    "fpgL3": 9.33,
-    "matchupNote": "vs ARI: 41 dropbacks/g, 24 cmp/g, 43 DB tkl pts/g allowed (lg 42) \u2192 boost (x1.07)"
-   },
-   {
-    "player": "Pete Werner",
-    "pos": "LB",
-    "team": "NO",
-    "league": "morningside",
-    "prevRank": 14,
-    "weeklyRank": 47,
-    "rosRank": 35,
-    "change": -33,
-    "proj": 13.7,
-    "prevProj": 22.7,
-    "fpgL3": 15.0,
-    "matchupNote": "vs CHI: 69 plays/g, 43% run, 37 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.08)"
-   },
-   {
-    "player": "Bryan Cook",
-    "pos": "DB",
-    "team": "CIN",
-    "league": "FREE",
-    "prevRank": 13,
-    "weeklyRank": 39,
-    "rosRank": 19,
-    "change": -26,
-    "proj": 13.8,
-    "prevProj": 17.6,
-    "fpgL3": 14.67,
-    "matchupNote": "vs WAS: 39 dropbacks/g, 21 cmp/g, 37 DB tkl pts/g allowed (lg 42) \u2192 tough (x0.94)"
-   },
-   {
-    "player": "Minkah Fitzpatrick",
-    "pos": "DB",
-    "team": "NYJ",
-    "league": "lab",
-    "prevRank": 6,
-    "weeklyRank": 31,
-    "rosRank": 57,
-    "change": -25,
-    "proj": 14.9,
-    "prevProj": 19.4,
-    "fpgL3": 12.33,
-    "matchupNote": "vs LAC: 36 dropbacks/g, 18 cmp/g, 43 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.03)"
-   },
-   {
-    "player": "Dexter Lawrence",
-    "pos": "DL",
-    "team": "CIN",
-    "league": "substation",
-    "prevRank": 15,
-    "weeklyRank": 37,
-    "rosRank": 26,
-    "change": -22,
-    "proj": 10.6,
-    "prevProj": 15.6,
-    "fpgL3": 11.67,
-    "matchupNote": "vs WAS OL: 5.9% sack / 16% hit rate allowed (lg 6.5%/16%), 39 DB/g \u2192 neutral (x0.98)"
-   },
-   {
-    "player": "Shy Tuttle",
-    "pos": "DL",
-    "team": "WAS",
-    "league": "FREE",
-    "prevRank": 11,
-    "weeklyRank": 27,
-    "rosRank": 30,
-    "change": -16,
-    "proj": 12.3,
-    "prevProj": 17.0,
-    "fpgL3": 12.67,
-    "matchupNote": "vs CIN OL: 4.4% sack / 16% hit rate allowed (lg 6.5%/16%), 41 DB/g \u2192 neutral (x0.98)"
-   }
-  ],
-  "newToTop": [
    {
     "player": "Blake Cashman",
     "pos": "LB",
     "team": "MIN",
     "league": "hyper",
-    "weeklyRank": 6,
-    "rosRank": 1,
-    "proj": 28.4
-   },
-   {
-    "player": "Derrick Moore",
-    "pos": "DL",
-    "team": "DET",
-    "league": "FREE",
-    "weeklyRank": 10,
-    "rosRank": 14,
-    "proj": 16.7
-   },
-   {
-    "player": "Ar'Darius Washington",
-    "pos": "DB",
-    "team": "NYG",
-    "league": "FREE",
+    "prevRank": 6,
     "weeklyRank": 14,
-    "rosRank": 27,
-    "proj": 16.3
+    "rosRank": 3,
+    "change": -8,
+    "proj": 23.7,
+    "prevProj": 28.4,
+    "fpgL3": 38.67,
+    "matchupNote": "vs SF: 59 plays/g, 44% run, 34 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.99)"
    },
    {
-    "player": "Antonio Johnson",
-    "pos": "DB",
-    "team": "JAX",
-    "league": "FREE",
-    "weeklyRank": 16,
-    "rosRank": 40,
-    "proj": 16.1
+    "player": "Dre Greenlaw",
+    "pos": "LB",
+    "team": "SF",
+    "league": "substation",
+    "prevRank": 23,
+    "weeklyRank": 29,
+    "rosRank": 19,
+    "change": -6,
+    "proj": 18.3,
+    "prevProj": 20.3,
+    "fpgL3": 22.67,
+    "matchupNote": "vs MIN: 57 plays/g, 41% run, 28 LB tkl pts/g allowed (lg 32) \u2192 tough (x0.92)"
    },
    {
-    "player": "Jeremy Reaves",
-    "pos": "DB",
-    "team": "WAS",
+    "player": "Yaya Diaby",
+    "pos": "LB",
+    "team": "TB",
     "league": "FREE",
-    "weeklyRank": 19,
-    "rosRank": 36,
-    "proj": 15.7
+    "prevRank": 46,
+    "weeklyRank": 48,
+    "rosRank": 52,
+    "change": -2,
+    "proj": 12.6,
+    "prevProj": 14.0,
+    "fpgL3": 19.33,
+    "matchupNote": "vs DET: 65 plays/g, 43% run, 38 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.07)"
    },
    {
-    "player": "Roger McCreary",
-    "pos": "DB",
-    "team": "DET",
+    "player": "Patrick Queen",
+    "pos": "LB",
+    "team": "PIT",
+    "league": "ttab",
+    "prevRank": 3,
+    "weeklyRank": 5,
+    "rosRank": 5,
+    "change": -2,
+    "proj": 27.8,
+    "prevProj": 30.9,
+    "fpgL3": 37.33,
+    "matchupNote": "vs PHI: 60 plays/g, 35% run, 29 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.96)"
+   },
+   {
+    "player": "Dexter Lawrence",
+    "pos": "DL",
+    "team": "CIN",
     "league": "FREE",
-    "weeklyRank": 22,
-    "rosRank": 18,
-    "proj": 15.5
+    "prevRank": 37,
+    "weeklyRank": 38,
+    "rosRank": 26,
+    "change": -1,
+    "proj": 10.6,
+    "prevProj": 10.6,
+    "fpgL3": 11.67,
+    "matchupNote": "vs WAS OL: 5.9% sack / 16% hit rate allowed (lg 6.5%/16%), 39 DB/g \u2192 neutral (x0.98)"
    }
-  ]
+  ],
+  "newToTop": []
  },
  "trend": {
   "up": [
@@ -10654,7 +10687,7 @@
     "fpgEarly": 16.29,
     "fpgL3": 37.33,
     "delta": 21.0,
-    "proj": 30.9
+    "proj": 27.8
    },
    {
     "player": "Micah McFadden",
@@ -10698,16 +10731,6 @@
    }
   ],
   "down": [
-   {
-    "player": "Kyler Gordon",
-    "pos": "DB",
-    "team": "CHI",
-    "league": "FREE",
-    "fpgEarly": 30.0,
-    "fpgL3": 10.33,
-    "delta": -19.7,
-    "proj": 16.3
-   },
    {
     "player": "Minkah Fitzpatrick",
     "pos": "DB",
@@ -10757,6 +10780,16 @@
     "fpgL3": 9.33,
     "delta": -7.5,
     "proj": 10.9
+   },
+   {
+    "player": "Will Anderson Jr.",
+    "pos": "DL",
+    "team": "HOU",
+    "league": "pocket",
+    "fpgEarly": 23.14,
+    "fpgL3": 16.33,
+    "delta": -6.8,
+    "proj": 20.5
    }
   ]
  },
@@ -10772,6 +10805,10 @@
    1,
    1,
    1,
+   1,
+   1,
+   1,
+   1,
    2,
    2,
    2,
@@ -10781,6 +10818,9 @@
    2,
    2,
    2,
+   2,
+   2,
+   2,
    3,
    3,
    3,
@@ -10794,6 +10834,9 @@
    3,
    3,
    3,
+   3,
+   4,
+   4,
    4,
    4,
    4,
@@ -10835,41 +10878,16 @@
    31,
    42
   ],
-  "n": 72,
+  "n": 82,
   "p25": 2.0,
   "median": 4.0,
-  "p75": 8.0,
-  "p90": 15.799999999999997,
+  "p75": 7.75,
+  "p90": 13.900000000000006,
   "max": 42,
   "eddiesFaabLeft": 25,
   "nextClear": "Wed Oct 28, 2026 9:00 AM PT"
  },
  "claimTargets": [
-  {
-   "player": "M.J. Stewart",
-   "pos": "DB",
-   "team": "HOU",
-   "opp": "IND",
-   "tag": "ROS",
-   "proj": 25.4,
-   "weeklyRank": 1,
-   "rosRank": 1,
-   "posRank": 1,
-   "rosPPG": 24.39,
-   "rosByeWeek": null,
-   "fpgSeason": 19.75,
-   "fpgL3": 24.33,
-   "snapShareL3": 0.873,
-   "greenDot": null,
-   "injury": null,
-   "bid": 10,
-   "range": [
-    4,
-    16
-   ],
-   "matchupNote": "vs IND: 37 dropbacks/g, 20 cmp/g, 42 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.02)",
-   "note": "riser: 24.3 FP/G last 3 vs 18.0 earlier; snaps up to 96%"
-  },
   {
    "player": "David Walker",
    "pos": "LB",
@@ -10877,9 +10895,9 @@
    "opp": "DET",
    "tag": "WEEKLY",
    "proj": 19.1,
-   "weeklyRank": 28,
-   "rosRank": 34,
-   "posRank": 28,
+   "weeklyRank": 26,
+   "rosRank": 33,
+   "posRank": 26,
    "rosPPG": 16.71,
    "rosByeWeek": null,
    "fpgSeason": 11.62,
@@ -10927,9 +10945,9 @@
    "opp": "BUF",
    "tag": "WEEKLY",
    "proj": 18.0,
-   "weeklyRank": 31,
-   "rosRank": 36,
-   "posRank": 31,
+   "weeklyRank": 30,
+   "rosRank": 34,
+   "posRank": 30,
    "rosPPG": 16.31,
    "rosByeWeek": null,
    "fpgSeason": 12.5,
@@ -10953,7 +10971,7 @@
    "tag": "WEEKLY",
    "proj": 16.4,
    "weeklyRank": 12,
-   "rosRank": 9,
+   "rosRank": 10,
    "posRank": 12,
    "rosPPG": 16.89,
    "rosByeWeek": null,
@@ -10969,6 +10987,31 @@
    ],
    "matchupNote": "vs LV: 38 dropbacks/g, 23 cmp/g, 40 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.02)",
    "note": "sleeper: unrostered with a top-half projection"
+  },
+  {
+   "player": "Alex Anzalone",
+   "pos": "LB",
+   "team": "TB",
+   "opp": "DET",
+   "tag": "WEEKLY",
+   "proj": 17.0,
+   "weeklyRank": 33,
+   "rosRank": 39,
+   "posRank": 33,
+   "rosPPG": 15.73,
+   "rosByeWeek": null,
+   "fpgSeason": 14.44,
+   "fpgL3": 19.67,
+   "snapShareL3": 0.97,
+   "greenDot": "green",
+   "injury": null,
+   "bid": 0,
+   "range": [
+    0,
+    1
+   ],
+   "matchupNote": "vs DET: 65 plays/g, 43% run, 38 LB tkl pts/g allowed (lg 32) \u2192 boost (x1.06)",
+   "note": "riser: 19.7 FP/G last 3 vs 12.0 earlier; green dot (Woellert W10)"
   },
   {
    "player": "Derrick Moore",
@@ -10996,40 +11039,15 @@
    "note": "riser: 17.3 FP/G last 3 vs 2.7 earlier; snaps up to 68%"
   },
   {
-   "player": "Kyler Gordon",
-   "pos": "DB",
-   "team": "CHI",
-   "opp": "NO",
-   "tag": "ROS",
-   "proj": 16.3,
-   "weeklyRank": 15,
-   "rosRank": 17,
-   "posRank": 15,
-   "rosPPG": 15.33,
-   "rosByeWeek": null,
-   "fpgSeason": 18.0,
-   "fpgL3": 10.33,
-   "snapShareL3": 0.65,
-   "greenDot": null,
-   "injury": null,
-   "bid": 2,
-   "range": [
-    1,
-    4
-   ],
-   "matchupNote": "vs NO OL: 6.0% sack / 15% hit rate allowed (lg 6.5%/16%), 43 DB/g \u2192 boost (x1.08)",
-   "note": "snaps up to 76%; sleeper: unrostered with a top-half projection"
-  },
-  {
    "player": "Mike Green",
    "pos": "LB",
    "team": "BAL",
    "opp": "CAR",
    "tag": "WEEKLY",
    "proj": 17.5,
-   "weeklyRank": 33,
-   "rosRank": 49,
-   "posRank": 33,
+   "weeklyRank": 32,
+   "rosRank": 48,
+   "posRank": 32,
    "rosPPG": 14.06,
    "rosByeWeek": 13.0,
    "fpgSeason": 12.44,
@@ -11052,9 +11070,9 @@
    "opp": "BUF",
    "tag": "WEEKLY",
    "proj": 15.8,
-   "weeklyRank": 40,
-   "rosRank": 43,
-   "posRank": 40,
+   "weeklyRank": 38,
+   "rosRank": 41,
+   "posRank": 38,
    "rosPPG": 15.35,
    "rosByeWeek": null,
    "fpgSeason": 12.44,
@@ -11096,20 +11114,20 @@
    "note": "riser: 17.7 FP/G last 3 vs 6.3 earlier; snaps up to 78%"
   },
   {
-   "player": "Roger McCreary",
+   "player": "Jahdae Barron",
    "pos": "DB",
-   "team": "DET",
-   "opp": "TB",
+   "team": "DEN",
+   "opp": "LV",
    "tag": "ROS",
    "proj": 15.5,
    "weeklyRank": 22,
-   "rosRank": 18,
+   "rosRank": 24,
    "posRank": 22,
-   "rosPPG": 15.31,
+   "rosPPG": 14.82,
    "rosByeWeek": null,
-   "fpgSeason": 14.33,
-   "fpgL3": 16.67,
-   "snapShareL3": 0.917,
+   "fpgSeason": 11.57,
+   "fpgL3": 15.67,
+   "snapShareL3": 0.813,
    "greenDot": null,
    "injury": null,
    "bid": 2,
@@ -11117,24 +11135,49 @@
     1,
     4
    ],
-   "matchupNote": "vs TB: 33 dropbacks/g, 16 cmp/g, 42 DB tkl pts/g allowed (lg 42) \u2192 neutral (x0.99)",
-   "note": "snaps up to 100%; sleeper: unrostered with a top-half projection"
+   "matchupNote": "vs LV: 38 dropbacks/g, 23 cmp/g, 40 DB tkl pts/g allowed (lg 42) \u2192 neutral (x0.98)",
+   "note": "riser: 15.7 FP/G last 3 vs 10.7 earlier; snaps up to 79%"
   },
   {
-   "player": "Michael Taaffe",
+   "player": "Andrew Mukuba",
    "pos": "DB",
-   "team": "MIA",
-   "opp": "BUF",
+   "team": "PHI",
+   "opp": "PIT",
    "tag": "ROS",
-   "proj": 15.0,
-   "weeklyRank": 28,
-   "rosRank": 15,
-   "posRank": 28,
-   "rosPPG": 15.54,
+   "proj": 15.5,
+   "weeklyRank": 20,
+   "rosRank": 23,
+   "posRank": 20,
+   "rosPPG": 14.82,
    "rosByeWeek": null,
-   "fpgSeason": 14.33,
-   "fpgL3": 17.0,
-   "snapShareL3": 1.0,
+   "fpgSeason": 12.89,
+   "fpgL3": 17.33,
+   "snapShareL3": 0.993,
+   "greenDot": null,
+   "injury": null,
+   "bid": 2,
+   "range": [
+    1,
+    4
+   ],
+   "matchupNote": "vs PIT: 39 dropbacks/g, 21 cmp/g, 44 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.03)",
+   "note": "riser: 17.3 FP/G last 3 vs 11.1 earlier; sleeper: unrostered with a top-half projection"
+  },
+  {
+   "player": "Ashton Gillotte",
+   "pos": "DL",
+   "team": "KC",
+   "opp": "ARI",
+   "tag": "ROS",
+   "proj": 15.9,
+   "weeklyRank": 15,
+   "rosRank": 16,
+   "posRank": 15,
+   "rosPPG": 14.34,
+   "rosByeWeek": null,
+   "fpgSeason": 10.11,
+   "fpgL3": 16.33,
+   "snapShareL3": 0.71,
    "greenDot": null,
    "injury": null,
    "bid": 5,
@@ -11142,8 +11185,8 @@
     2,
     8
    ],
-   "matchupNote": "vs BUF: 33 dropbacks/g, 19 cmp/g, 42 DB tkl pts/g allowed (lg 42) \u2192 neutral (x0.99)",
-   "note": "riser: 17.0 FP/G last 3 vs 13.0 earlier"
+   "matchupNote": "vs ARI OL: 6.8% sack / 18% hit rate allowed (lg 6.5%/16%), 41 DB/g \u2192 neutral (x1.00)",
+   "note": "riser: 16.3 FP/G last 3 vs 7.0 earlier; snaps up to 75%"
   }
  ],
  "claimTagRules": {
@@ -11168,7 +11211,7 @@
    "team": "MIA",
    "opp": "BUF",
    "proj": 24.6,
-   "weeklyRank": 11,
+   "weeklyRank": 10,
    "rosRank": 12,
    "injury": null,
    "matchupNote": "vs BUF: 62 plays/g, 46% run, 34 LB tkl pts/g allowed (lg 32) \u2192 neutral (x1.04)"
@@ -11179,7 +11222,7 @@
    "team": "WAS",
    "opp": "CIN",
    "proj": 24.2,
-   "weeklyRank": 12,
+   "weeklyRank": 11,
    "rosRank": 13,
    "injury": null,
    "matchupNote": "vs CIN: 61 plays/g, 33% run, 31 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.99)"
@@ -11212,8 +11255,8 @@
    "team": "TEN",
    "opp": "DAL",
    "proj": 16.4,
-   "weeklyRank": 38,
-   "rosRank": 39,
+   "weeklyRank": 36,
+   "rosRank": 37,
    "injury": null,
    "matchupNote": "vs DAL: 66 plays/g, 36% run, 31 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.99)"
   },
@@ -11222,22 +11265,22 @@
    "pos": "LB",
    "team": "BAL",
    "opp": "CAR",
-   "proj": 15.2,
-   "weeklyRank": 41,
-   "rosRank": 57,
+   "proj": 15.5,
+   "weeklyRank": 39,
+   "rosRank": 54,
    "injury": null,
    "matchupNote": "vs CAR: 65 plays/g, 35% run, 29 LB tkl pts/g allowed (lg 32) \u2192 neutral (x0.96)"
   },
   {
-   "player": "Cole Bishop",
+   "player": "Zyon McCollum",
    "pos": "DB",
-   "team": "BUF",
-   "opp": "MIA",
-   "proj": 12.5,
-   "weeklyRank": 51,
-   "rosRank": 49,
+   "team": "TB",
+   "opp": "DET",
+   "proj": 14.6,
+   "weeklyRank": 31,
+   "rosRank": 25,
    "injury": null,
-   "matchupNote": "vs MIA: 33 dropbacks/g, 16 cmp/g, 37 DB tkl pts/g allowed (lg 42) \u2192 tough (x0.94)"
+   "matchupNote": "vs DET: 37 dropbacks/g, 23 cmp/g, 44 DB tkl pts/g allowed (lg 42) \u2192 neutral (x1.00)"
   },
   {
    "player": "Quentin Lake",
@@ -11245,7 +11288,7 @@
    "team": "LA",
    "opp": "BYE",
    "proj": 0.0,
-   "weeklyRank": 202,
+   "weeklyRank": 191,
    "rosRank": 31,
    "injury": null,
    "matchupNote": "BYE in Week 11"
@@ -11256,7 +11299,7 @@
    "team": "GB",
    "opp": "BYE",
    "proj": 0.0,
-   "weeklyRank": 198,
+   "weeklyRank": 187,
    "rosRank": 7,
    "injury": null,
    "matchupNote": "BYE in Week 11"
