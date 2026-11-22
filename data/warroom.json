@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-21T15:05:00-08:00",
-  "lastUpdated": "2026-11-21T15:05:00-08:00",
+  "asOf": "2026-11-22T15:10:00-08:00",
+  "lastUpdated": "2026-11-22T15:10:00-08:00",
   "season": 2026,
   "week": 11,
   "opponent": {
@@ -10,11 +10,11 @@
     "name": "Newman Lake Sleep Paralysis Demons"
   },
   "freshness": {
-    "plan": "2026-11-21T15:05:00-08:00",
-    "roster": "2026-11-21T14:55:00-08:00",
-    "scores": "2026-11-21T05:56:00-08:00",
-    "waivers": "2026-11-21T14:58:00-08:00",
-    "news": "2026-11-21T14:40:00-08:00"
+    "plan": "2026-11-22T15:10:00-08:00",
+    "roster": "2026-11-22T14:57:00-08:00",
+    "scores": "2026-11-22T14:56:00-08:00",
+    "waivers": "2026-11-22T14:59:00-08:00",
+    "news": "2026-11-22T15:00:00-08:00"
   },
   "lockTimes": [
     {
@@ -45,7 +45,7 @@
       "pos": "QB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "vs MIN (SNF). 29.0 / 42.0 FP/G, 100% snaps.",
+      "reason": "Live (Fantrax 2:56 PM PT): 0, SNF 5:20 PM PT. vs MIN (SNF). 29.0 / 42.0 FP/G, 100% snaps.",
       "injury": "",
       "practice": ""
     },
@@ -55,7 +55,7 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "@LAC. 16.0 / 14.0, 58%.",
+      "reason": "Live (Fantrax 2:56 PM PT): 15 so far (3Q). @LAC. 16.0 / 14.0, 58%.",
       "injury": "",
       "practice": ""
     },
@@ -65,7 +65,7 @@
       "pos": "WR",
       "nflTeam": "NYG",
       "verdict": "START",
-      "reason": "vs JAX. 17.89 / 8.5, 80%.",
+      "reason": "Live (Fantrax 2:56 PM PT): 13 so far (TD, 2Q). vs JAX. 17.89 / 8.5, 80%.",
       "injury": "",
       "practice": "No game designation (Giants final report, Doug Rush Fri)"
     },
@@ -75,7 +75,7 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "START",
-      "reason": "@DEN (soft vs TE). 11.55 / 7.67, 83%. Starts unless Bowers (Q) is confirmed active; LV kicks 1:25 PM PT.",
+      "reason": "Live (Fantrax 2:56 PM PT): 0 so far (2Q). @DEN (soft vs TE). 11.55 / 7.67, 83%. Starts unless Bowers (Q) is confirmed active; LV kicks 1:25 PM PT.",
       "injury": "",
       "practice": ""
     },
@@ -85,17 +85,7 @@
       "pos": "WR",
       "nflTeam": "TEN",
       "verdict": "START",
-      "reason": "@DAL (25th). 14.33 / 26.0, 95%. Wan'Dale on IR.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "RWT",
-      "player": "Garrett Wilson",
-      "pos": "WR",
-      "nflTeam": "NYJ",
-      "verdict": "START",
-      "reason": "@LAC. 15.67 / 17.0, 94%.",
+      "reason": "Live (Fantrax 2:56 PM PT): 24 final. @DAL (25th). 14.33 / 26.0, 95%. Wan'Dale on IR.",
       "injury": "",
       "practice": ""
     },
@@ -105,7 +95,17 @@
       "pos": "WR",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "vs ARI. 9.0 / 11.67, 17% debut. Covers Charbonnet bye.",
+      "reason": "Live (Fantrax 2:56 PM PT): 9 final. vs ARI. 9.0 / 11.67, 17% debut. Covers Charbonnet bye.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "RWT",
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "nflTeam": "NYJ",
+      "verdict": "START",
+      "reason": "Live (Fantrax 2:56 PM PT): 4 so far (3Q). @LAC. 15.67 / 17.0, 94%.",
       "injury": "",
       "practice": ""
     },
@@ -115,7 +115,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "vs ARI OL 6.8% sack rate (boost). 22.33 / 31.0, 82%. Weekly DL #1.",
+      "reason": "Live (Fantrax 2:56 PM PT): 37 final. vs ARI OL 6.8% sack rate (boost). 22.33 / 31.0, 82%. Weekly DL #1.",
       "injury": "",
       "practice": ""
     },
@@ -125,7 +125,7 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "vs MIN. 24.89 / 20.5, 100%, green dot. Woellert: tougher MIN matchup, still a weekly starter.",
+      "reason": "Live (Fantrax 2:56 PM PT): 0, SNF 5:20 PM PT. vs MIN. 24.89 / 20.5, 100%, green dot. Woellert: tougher MIN matchup, still a weekly starter.",
       "injury": "",
       "practice": ""
     },
@@ -135,7 +135,7 @@
       "pos": "DB",
       "nflTeam": "BAL",
       "verdict": "START",
-      "reason": "@CAR. 21.3 / 18.33, 98%. Weekly DB #7.",
+      "reason": "Live (Fantrax 2:56 PM PT): 20 final. @CAR. 21.3 / 18.33, 98%. Weekly DB #7.",
       "injury": "",
       "practice": ""
     },
@@ -145,7 +145,7 @@
       "pos": "DB",
       "nflTeam": "TB",
       "verdict": "START",
-      "reason": "@DET (21st). 16.0 / 22.0, 100% 3-wk. 0 last wk = TB bye W10. Weekly DB #32, ROS #25.",
+      "reason": "Live (Fantrax 2:56 PM PT): 5 final. @DET (21st). 16.0 / 22.0, 100% 3-wk. 0 last wk = TB bye W10. Weekly DB #32, ROS #25.",
       "injury": "",
       "practice": ""
     },
@@ -155,7 +155,17 @@
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "@BUF. 20.89 / 26.33, 100% full-time.",
+      "reason": "Live (Fantrax 2:56 PM PT): 26 final. @BUF. 20.89 / 26.33, 100% full-time.",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "ID",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "nflTeam": "TEN",
+      "verdict": "START",
+      "reason": "Live (Fantrax 2:56 PM PT): 15 final. @DAL. Played 38 of 38 snaps through the first half (Woellert X).",
       "injury": "",
       "practice": ""
     },
@@ -165,17 +175,7 @@
       "pos": "LB",
       "nflTeam": "WAS",
       "verdict": "START",
-      "reason": "vs CIN (MNF). 20.43 / 25.0, 100%, green dot.",
-      "injury": "",
-      "practice": ""
-    },
-    {
-      "slot": "ID",
-      "player": "Trenton Simpson",
-      "pos": "LB",
-      "nflTeam": "BAL",
-      "verdict": "START",
-      "reason": "@CAR. 17.4 / 13.0 FP/G, 82% W10. Back in over Gray: Barton cleared protocol, no designation (Titans PR Fri). Fantrax proj 13.53 vs Gray 12.58 (projection only). Lock Sun 10:00 AM PT.",
+      "reason": "Live (Fantrax 2:56 PM PT): 0, MNF Mon 5:15 PM PT. vs CIN (MNF). 20.43 / 25.0, 100%, green dot.",
       "injury": "",
       "practice": ""
     }
@@ -183,9 +183,9 @@
   "injuryWatch": [
     {
       "player": "Brock Bowers",
-      "tag": "Ankle/quad, Q (IR slot)",
+      "tag": "Inactive W11 (IR slot)",
       "practice": "DNP Wed, LP Thu, Q Fri",
-      "note": "Still Q (ankle/quad). Raiders elevated TE Carter Runyon from the practice squad Sat (Raiders PR) as insurance; not a ruling. If reported active Sun AM: drop Etienne before his 10:00 AM PT kickoff, start Bowers over Mayer before 1:25 PM PT."
+      "note": "Ruled out Sun W11 vs DEN; Mayer started at TE. No move needed."
     },
     {
       "player": "Cole Bishop",
@@ -195,9 +195,9 @@
     },
     {
       "player": "Cedric Gray",
-      "tag": "Role down",
+      "tag": "Started W11",
       "practice": "n/a",
-      "note": "Barton cleared concussion protocol, no designation (Titans PR Fri). Bench Gray, start Simpson."
+      "note": "Started over Simpson; 38/38 LB snaps in first half per Woellert (X 11:46 AM PT); 15 pts final."
     },
     {
       "player": "De'Zhaun Stribling",
@@ -235,39 +235,26 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "Alex Anzalone",
-      "pos": "LB",
-      "nflTeam": "TB",
-      "why": "WEEKLY (ROS hold upside). @DET, run-heavy Gibbs offense = tackle volume. TB green dot (Woellert W10), 100% snaps. Free agent (no waiver). 0 last wk = TB W10 bye. Weekly rank 33 vs Gray 36 / Simpson 39; ROS 39. Replaces Gray (14.88 / 21.5).",
-      "stats": "14.89 FP/G, last-3 25.0, 0.0 last wk, n/a% W10 snaps (100% 3-wk); Fantrax 2026-11-21T14:58:00-08:00",
+      "player": "Jalen Carter",
+      "pos": "DL",
+      "nflTeam": "PHI",
+      "why": "ROS watch only. Doubtpfizer dropped him Sun 9:49 AM PT for Dexter Lawrence; on waivers until Wed 9 AM PT. Interior DL, 84% snaps (War Room IDP feed: 13.11 season / 13.67 last-3). Would be depth behind Karlaftis, replacing Simpson (16.4 / 12.33). No clear edge; not a pitch.",
+      "stats": "13.11 FP/G, last-3 13.67, 84% snap share (idp-rankings.json; WU-scoring per Fantrax unverified)",
       "faabMin": 0,
-      "faabMax": 0,
+      "faabMax": 2,
       "bid": 0,
-      "drop": "Cedric Gray",
-      "tag": "WEEKLY"
+      "drop": "Trenton Simpson",
+      "tag": "ROS"
     },
     {
       "rank": 2,
-      "player": "Marlowe Wax",
-      "pos": "LB",
-      "nflTeam": "LAC",
-      "why": "WEEKLY DART. vs NYJ. Ultron dropped him Sat 12:22 PM; Woellert expects Wax to wear the LAC dot with Henley out. 3.33 FP/G, 17% W10 snaps; zero-week flag. Not over Simpson.",
-      "stats": "3.33 FP/G, last-3 None, None last wk, 17% W10 snaps (25% 3-wk); Fantrax 2026-11-21T14:58:00-08:00",
+      "player": "Justin Walley",
+      "pos": "DB",
+      "nflTeam": "IND",
+      "why": "WEEKLY watch for W12 only if a DB slot opens; Lake and E. Williams return from bye, so likely pass.",
+      "stats": "15.89 FP/G, last-3 33.0, 33.0 W10 pts, 78% W10 snaps (78% 3-wk); Fantrax 2026-11-22T14:59:00-08:00",
       "faabMin": 0,
-      "faabMax": 0,
-      "bid": 0,
-      "drop": "Travis Etienne",
-      "tag": "WEEKLY"
-    },
-    {
-      "rank": 3,
-      "player": "Mike Green",
-      "pos": "LB",
-      "nflTeam": "BAL",
-      "why": "WEEKLY. @CAR. 12.0 season vs Simpson 17.4; pass.",
-      "stats": "12.0 FP/G, last-3 18.0, 35.0 last wk, 79% W10 snaps (66% 3-wk); Fantrax 2026-11-21T14:58:00-08:00",
-      "faabMin": 0,
-      "faabMax": 0,
+      "faabMax": 1,
       "bid": 0,
       "drop": "Travis Etienne",
       "tag": "WEEKLY"
@@ -473,6 +460,36 @@
   ],
   "news": [
     {
+      "source": "X (multiple, incl. Raiders coverage)",
+      "time": "2026-11-22T15:00:00-08:00",
+      "text": "Brock Bowers officially inactive W11 @DEN; Mayer started at TE. https://x.com/i/status/2124639137722466670"
+    },
+    {
+      "source": "Mike Woellert (X)",
+      "time": "2026-11-22T11:46:00-08:00",
+      "text": "Titans LB snaps so far: Hill 38, Gray 38, Barton 10 of 38. https://x.com/Mike_Woellert/status/2124590369463574559"
+    },
+    {
+      "source": "Mike Woellert (X)",
+      "time": "2026-11-22T10:46:00-08:00",
+      "text": "Jeremiah Trotter has the green dot for Philly. https://x.com/Mike_Woellert/status/2124575309953634645"
+    },
+    {
+      "source": "Mike Woellert (X)",
+      "time": "2026-11-22T10:54:00-08:00",
+      "text": "Chuck Clark wearing the dot in Detroit. https://x.com/Mike_Woellert/status/2124577213001461901"
+    },
+    {
+      "source": "Fantrax",
+      "time": "2026-11-22T09:49:00-08:00",
+      "text": "Doubtpfizer added Dexter Lawrence (DL CIN), dropped Jalen Carter (DL PHI)."
+    },
+    {
+      "source": "Fantrax",
+      "time": "2026-11-22T08:55:00-08:00",
+      "text": "Hypersecretors added Lamar Jackson; Goats dropped Danielle Hunter; Slumlords dropped Keenan Allen."
+    },
+    {
       "source": "Raiders PR (X)",
       "time": "2026-11-21T13:06:00-08:00",
       "text": "Elevated TE Carter Runyon and DT Chris Williams from the practice squad. https://x.com/RAIDERS_PR/status/2124248125233885386"
@@ -491,31 +508,6 @@
       "source": "Fantrax",
       "time": "2026-11-21T12:22:00-08:00",
       "text": "Ultron added Makai Lemon (WR PHI), dropped Marlowe Wax (LB LAC)."
-    },
-    {
-      "source": "Fantrax",
-      "time": "2026-11-21T13:25:00-08:00",
-      "text": "Dongers dropped Mike Gesicki (TE CIN)."
-    },
-    {
-      "source": "Tennessee Titans PR (X)",
-      "time": "2026-11-20T12:31:00-08:00",
-      "text": "LB Cody Barton cleared concussion protocol, no injury designation. https://x.com/TitansPR/status/2123876963505066376"
-    },
-    {
-      "source": "The IDP Desk (X)",
-      "time": "2026-11-20T14:17:00-08:00",
-      "text": "Barton back, so Cedric Gray's role likely shrinks. https://x.com/theidpdesk/status/2123903557229322670"
-    },
-    {
-      "source": "Around The NFL (X)",
-      "time": "2026-11-20T13:54:00-08:00",
-      "text": "Brock Bowers officially questionable. https://x.com/AroundTheNFL/status/2123897749037043960"
-    },
-    {
-      "source": "Chris Brown (X)",
-      "time": "2026-11-20T12:16:00-08:00",
-      "text": "Cole Bishop good to go for Sunday vs MIA. https://x.com/ChrisBrownBills/status/2123873255928787287"
     }
   ]
 }
