@@ -1,285 +1,283 @@
 {
-  "asOf": "2026-11-23T08:31:00-08:00",
-  "week": 10,
-  "source": "Mike Woellert",
-  "sourceUrl": "https://mikewoellert.substack.com/p/week-10-green-dot-and-full-time-linebackers-idp-fantasy-football",
-  "teams": [
-    {
-      "team": "ARI",
-      "greenDot": "Mack Wilson",
-      "fullTime": [
-        "Mack Wilson"
-      ],
-      "notes": "W10: Mack Wilson has the green dot and a three-down role. He took advantage of a great matchup and had 10 tackles this week; resulting in a 13.5% tackle rate. He has 27 tackles and a 10.3% tackle rate over his last 4 games. That rate is lower than I\u2019d like for a\u2026"
-    },
-    {
-      "team": "ATL",
-      "greenDot": "Kendal Daniels",
-      "fullTime": [
-        "Kendal Daniels"
-      ],
-      "notes": "W10: Divine Deablo was inactive with his arm injury, and Kendal Daniels wore the green dot and was on the field for 100% of the snaps. Daniels had 8 tackles this week, and 40 tackles and a 16.9% tackle rate over his last 4 games. Harold Perkins was in a rotation\u2026"
-    },
-    {
-      "team": "BAL",
-      "greenDot": "Roquan Smith",
-      "fullTime": [
-        "Roquan Smith",
-        "Trenton Simpson"
-      ],
-      "notes": "W10 (MNF update): Roquan Smith wore the dot, 100% (54 snaps), 8 tkl. Trenton Simpson (Eddies) 83%, 8 tkl, 17.8% tackle rate; off the field some in 12 personnel. Woellert: 'Roquan and Simpson were both over 80% of the snaps, and I'm comfortable starting both.'"
-    },
-    {
-      "team": "BUF",
-      "greenDot": "Terrel Bernard",
-      "fullTime": [
-        "Terrel Bernard"
-      ],
-      "notes": "W10: Terrel Bernard played 58 snaps and wore the green dot. He was off the field for 10 snaps, and Kaleb Elarms-Orr wore the dot for those. Elarms-Orr and Bernard shared the field for 14 snaps, and Bernard wore the dot on those. Bernard had 8 tackles this week and\u2026"
-    },
-    {
-      "team": "CAR",
-      "greenDot": "Devin Lloyd",
-      "fullTime": [
-        "Devin Lloyd",
-        "Tyrel Dodson"
-      ],
-      "notes": "W10: Bobby Okereke was inactive and Tyrel Dodson got the start. Devin Lloyd missed 4 snaps with a concussion, but he was cleared to return. Lloyd played 93% of the snaps, and he had 9 tackles this week and a 15.8% tackle rate. Over his last 4 games he had 28\u2026"
-    },
-    {
-      "team": "CHI",
-      "greenDot": "T.J. Edwards",
-      "fullTime": [
-        "T.J. Edwards",
-        "Devin Bush"
-      ],
-      "notes": "W10 bye. W9: Edwards 100% with dot but 3 tkl; Bush 98%, 9 tkl, is the one to own. D'Marco Jackson non-factor."
-    },
-    {
-      "team": "CIN",
-      "greenDot": "Barrett Carter",
-      "fullTime": [
-        "Barrett Carter"
-      ],
-      "notes": "W10: Barrett Carter had the green dot and was on the field for 100% of the snaps, all 59 of them. He had 6 tackles and a 10.2% tackle rate this week, and 33 tackles and a 13.4% tackle rate over his last 4 games. Carter had 37 coverage snaps and was targeted once,\u2026"
-    },
-    {
-      "team": "CLE",
-      "greenDot": "Carson Schwesinger",
-      "fullTime": [
-        "Carson Schwesinger",
-        "Quincy Williams"
-      ],
-      "notes": "W10: Carson Schwesinger had the green dot and a three-down role. He had 13 tackles this week and a 20.6% tackle rate. Schwesinger has 46 tackles and an 18% tackle rate over his last 4 games. Quincy Williams had 9 tackles and a 15.5% tackle rate this week and\u2026"
-    },
-    {
-      "team": "DAL",
-      "greenDot": "Shemar James",
-      "fullTime": [
-        "Shemar James",
-        "Dee Winters"
-      ],
-      "notes": "W10: Shemar James had the green dot and a three-down role. He had 5 tackles this week and an 8.1% tackle rate, and 25 tackles and a 10.1% tackle rate over his last 4 games. Dee Winters played 89% of the snaps and had 5 tackles. Dallas went from 10% man coverage to\u2026"
-    },
-    {
-      "team": "DEN",
-      "greenDot": "Alex Singleton",
-      "fullTime": [
-        "Alex Singleton",
-        "Justin Strnad"
-      ],
-      "notes": "W10 bye. W9: Singleton 100% with dot; Strnad 72%->89%. Nov 11: Henley trade voided (failed physical), so Strnad's role is safe again."
-    },
-    {
-      "team": "DET",
-      "greenDot": "Chuck Clark",
-      "fullTime": [
-        "Derrick Barnes",
-        "Malcolm Rodriguez"
-      ],
-      "notes": "W10: Derrick Barnes wore the green dot and had a three-down role. He had 7 tackles this week and a 12.7% tackle rate, but 16 tackles and an 8.2% tackle rate over his last 4 games. His upside lies in his ability to create pressure. Over his last 5 games he had 9\u2026 Nov 22 W11 (Woellert X): Chuck Clark wearing the dot; LB rotation, Rodriguez 80% (mostly early-down), Barnes 77% (dime snaps)."
-    },
-    {
-      "team": "GB",
-      "greenDot": "Isaiah McDuffie",
-      "fullTime": [
-        "Isaiah McDuffie",
-        "Nick Niemann"
-      ],
-      "notes": "W10: Zaire Franklin was inactive, and Isaiah McDuffie wore the green dot and played 98% of the snaps. He had 9 tackles this week and a 14.1% tackle rate, and 39 tackles and a 15% tackle rate over his last 4 games. Ty\u2019Ron Hopper was able to return from the chest\u2026"
-    },
-    {
-      "team": "HOU",
-      "greenDot": "Henry To\u2019oTo\u2019o",
-      "fullTime": [
-        "Henry To\u2019oTo\u2019o",
-        "Henry To'oTo'o"
-      ],
-      "notes": "W10: Azeez Al-Shaair was inactive. Henry To\u2019oTo\u2019o wore the green dot and Jake Hansen was the LB2. Houston was a 2-LB defense in Week 10, and it was in base on just 2% of its snaps. To\u2019oTo\u2019o was on the field for 100% of the snaps and had 7 tackles and a 10.4%\u2026 Nov 17: Al-Shaair placed on IR (4+ games, Meirov); Woellert: To'oTo'o stays the dot, Jake Hansen full-time beside him."
-    },
-    {
-      "team": "IND",
-      "greenDot": "C.J. Allen",
-      "fullTime": [
-        "C.J. Allen"
-      ],
-      "notes": "W10: Akeem Davis-Gaither landed on IR this week and Jaylon Carlies was inactive. C.J. Allen is the green dot going forward, and Bryce Boettcher was the LB2. Allen was on the field for 100% of the snaps with 9 tackles and 2 TFLs. He had 29 tackles and a 16.3%\u2026 Nov 17 waiver piece: Bryce Boettcher LB2, 70%+ snaps two straight weeks with Davis-Gaither on IR."
-    },
-    {
-      "team": "JAX",
-      "greenDot": "Foyesade Oluokun",
-      "fullTime": [
-        "Foyesade Oluokun"
-      ],
-      "notes": "W10: Foyesade Oluokun is a green dot, so of course he stays on the field. He had 10 tackles and a 17.5% tackle rate this week, and has 26 tackles and an 18.1% tackle rate over his last 3 games. Ventrell Miller had 6 tackles and a 14% tackle rate and played 75% of\u2026"
-    },
-    {
-      "team": "KC",
-      "greenDot": "Nick Bolton",
-      "fullTime": [
-        "Nick Bolton",
-        "Drue Tranquill"
-      ],
-      "notes": "W10: Nick Bolton had the green dot and played 92% of the snaps. He had 9 tackles and a 14.8% tackle rate this week, and 41 tackles and a 16.9% tackle rate over his last 4 games. Drue Tranquill played 73% of the snaps and had 9 tackles and an 18.8% tackle rate this\u2026"
-    },
-    {
-      "team": "LAC",
-      "greenDot": "Marlowe Wax",
-      "fullTime": [
-        "Daiyan Henley"
-      ],
-      "notes": "W10 (MNF update): Henley wore the dot, 88% (58 of 66), 11 tkl; Marlowe Wax wore it when he sat. Del'Shawn Phillips 39%, 8 tkl + INT; Woellert says Phillips is a bye-week add only. Nov 20 (Woellert X): Henley is out; 'I'd say Wax wears the dot.' Nov 22 W11 (Woellert X): green-dot rotation with Henley inactive; Wax outsnapped Dye, switching by series."
-    },
-    {
-      "team": "LAR",
-      "greenDot": "Quentin Lake",
-      "fullTime": [
-        "Quentin Lake"
-      ],
-      "notes": "W10: The Rams defense limited Arizona to just 34 plays, and there was a rotation at linebacker. Omar Speights played against 13 personnel and in base, Shaun Dolac saw dime and 11 personnel, and Dolac saw more dime than Landman. Nate Landman led the group with 20\u2026"
-    },
-    {
-      "team": "LV",
-      "greenDot": "Nakobe Dean",
-      "fullTime": [
-        "Nakobe Dean",
-        "Quay Walker"
-      ],
-      "notes": "W10: Nakobe Dean had the green dot and Quay Walker shares the middle with him, and both had a three-down role. Dean had 8 tackles this week, and 50 tackles and a 19.8% tackle rate over his last 4 games. Walker had 8 tackles this week and 40 tackles and a 16.3%\u2026"
-    },
-    {
-      "team": "MIA",
-      "greenDot": "Jacob Rodriguez",
-      "fullTime": [
-        "Jacob Rodriguez",
-        "Jordyn Brooks"
-      ],
-      "notes": "W10: Unfortunately, it was one of those games for Jacob Rodriguez. Jordyn Brooks got to the ball before Rodriguez, and Rodriguez had 1 tackle this week and a 1.8% tackle rate. Both were on the field for 100% of the snaps. Brooks had 9 tackles and a 15.8% tackle\u2026"
-    },
-    {
-      "team": "MIN",
-      "greenDot": "Eric Wilson",
-      "fullTime": [
-        "Eric Wilson"
-      ],
-      "notes": "W10: Blake Cashman was inactive with a concussion, and Eric Wilson wore the green dot. Wilson was on the field for 100% of the snaps and had 7 tackles and a 13% tackle rate this week, along with 2 TFLs. Over his last 4 games he had 31 tackles and a 12.4% tackle\u2026"
-    },
-    {
-      "team": "NE",
-      "greenDot": "Robert Spillane",
-      "fullTime": [
-        "Robert Spillane",
-        "Christian Elliss"
-      ],
-      "notes": "W10: (Robert Spillane (Darius Muasau wore it when he left)) Robert Spillane had an illness in the third quarter and left the game with 8:28 left in the quarter. Darius Muasau came on in relief and wore the green dot. This shouldn\u2019t be anything long-term, and the Patriots are on bye in Week 11. Spillane played 71% of\u2026"
-    },
-    {
-      "team": "NO",
-      "greenDot": "Kaden Elliss",
-      "fullTime": [
-        "Kaden Elliss",
-        "Pete Werner"
-      ],
-      "notes": "W10: Pete Werner suffered a hamstring injury, and his last snap came in the second quarter with 13:39 left. Danny Stutsman came on as the LB2. Kaden Elliss had the green dot and was on the field for 100% of the snaps. He had 15 tackles and a 23.1% tackle rate this\u2026"
-    },
-    {
-      "team": "NYG",
-      "greenDot": "Micah McFadden",
-      "fullTime": [
-        "Micah McFadden",
-        "Arvell Reese"
-      ],
-      "notes": "W10: Micah McFadden had the green dot and Arvell Reese was next to him, and both had a three-down role. McFadden had 10 tackles and a 14.9% tackle rate this week, and 29 tackles and a 15.4% tackle rate over his last 3 games. Reese had 13 tackles and a 19.4% tackle\u2026"
-    },
-    {
-      "team": "NYJ",
-      "greenDot": "Demario Davis",
-      "fullTime": [
-        "Demario Davis",
-        "Jamien Sherwood"
-      ],
-      "notes": "W10: Demario Davis had the green dot and played 98% of the snaps. He had 6 tackles and an 11.3% tackle rate this week, and 25 tackles and a 10.4% tackle rate over his last 4 games. Jamien Sherwood played 98% of the snaps, with 9 tackles and a 17% tackle rate this\u2026"
-    },
-    {
-      "team": "PHI",
-      "greenDot": "Jeremiah Trotter",
-      "fullTime": [
-        "Jeremiah Trotter"
-      ],
-      "notes": "W10 bye. W9: Baun dot but left at 47% with back injury; Jeremiah Trotter took the dot, 95%, 10 tkl. Mondon 39%. PHI BYE W10. Nov 22 W11 (Woellert X 10:46 AM PT): Trotter has the green dot for Philly (Baun out)."
-    },
-    {
-      "team": "PIT",
-      "greenDot": "Patrick Queen",
-      "fullTime": [
-        "Patrick Queen",
-        "Payton Wilson"
-      ],
-      "notes": "W10: Patrick Queen had the green dot and was on the field for 100% of the snaps, all 65 of them. He had 14 tackles and a 21.5% tackle rate this week, and 39 tackles and a 15.2% tackle rate over his last 4 games. Pittsburgh was off in Week 9, so that stretch skips\u2026"
-    },
-    {
-      "team": "SEA",
-      "greenDot": "Ernest Jones",
-      "fullTime": [
-        "Ernest Jones"
-      ],
-      "notes": "W10: Ernest Jones had the green dot and was on the field for 100% of the snaps. He had 10 tackles and a 16.9% tackle rate this week, and 39 tackles and a 17% tackle rate over his last 4 games. Drake Thomas played just 39 snaps, or 66%. Seattle was in dime on 34%\u2026"
-    },
-    {
-      "team": "SF",
-      "greenDot": "Fred Warner",
-      "fullTime": [
-        "Fred Warner",
-        "Dre Greenlaw"
-      ],
-      "notes": "W10: Fred Warner had the green dot and was on the field for 100% of the snaps. He had 11 tackles and a 14.1% tackle rate this week, and 29 tackles and a 15.4% tackle rate over his last 3 games. Dre Greenlaw played 87% of the snaps and had 8 tackles and an 11.8%\u2026 Nov 23 (Woellert X): Greenlaw inactive W11; Wallow outsnapped Dugger."
-    },
-    {
-      "team": "TB",
-      "greenDot": "Alex Anzalone",
-      "fullTime": [
-        "Alex Anzalone",
-        "Josiah Trotter"
-      ],
-      "notes": "W10 bye. W9: Anzalone dot every snap (2 tkl, INT); Josiah Trotter 97%, 8 tkl; both blitzing a lot."
-    },
-    {
-      "team": "TEN",
-      "greenDot": "Anthony Hill Jr.",
-      "fullTime": [
-        "Anthony Hill Jr.",
-        "Cedric Gray"
-      ],
-      "notes": "W10: Anthony Hill and Cody Barton were both inactive, and Dorian Mausi wore the green dot. Mausi was on the field for 88% of the snaps and had 7 tackles and an 11.3% tackle rate. Cedric Gray also had a three-down role at 93% of the snaps and had a big game. He had\u2026 Nov 18 (Woellert X): Barton returning; Gray riskier. Nov 19: Barton in concussion protocol (Davenport); Bradley says Gray getting majority of 1st-team reps (Kuharsky); Woellert: 'Gray took the job by the throat' and 'Hill is the green dot.' Nov 20: Barton cleared concussion protocol, no designation (Titans PR). Nov 22 W11 (Woellert X 11:46 AM PT): first-half snaps Hill 38, Gray 38, Barton 10 of 38."
-    },
-    {
-      "team": "WAS",
-      "greenDot": "Frankie Luvu",
-      "fullTime": [
-        "Frankie Luvu",
-        "Sonny Styles"
-      ],
-      "notes": "W10: Frankie Luvu had the green dot and Sonny Styles was next to him, and both had a three-down role. Styles had 13 tackles and a 20.3% tackle rate this week, and 34 tackles and a 16.8% tackle rate over his last 3 games. Luvu had 6 tackles and a 9.4% tackle rate\u2026"
-    }
-  ]
+ "asOf": "2026-11-24T07:50:00-08:00",
+ "week": 11,
+ "source": "Mike Woellert",
+ "sourceUrl": "https://mikewoellert.substack.com/p/week-11-green-dot-and-full-time-linebackers",
+ "teams": [
+  {
+   "team": "ARI",
+   "greenDot": "Mack Wilson",
+   "fullTime": [
+    "Mack Wilson"
+   ],
+   "notes": "W11: Mack Wilson wore the dot per Woellert W11."
+  },
+  {
+   "team": "ATL",
+   "greenDot": "Kendal Daniels",
+   "fullTime": [
+    "Kendal Daniels"
+   ],
+   "notes": "W11 bye; W10 dot carried. W10: Divine Deablo was inactive with his arm injury, and Kendal Daniels wore the green dot and was on the field for 100% of the snaps. Daniels had 8 tackles this week, and 40 tackles and a 16.9% tackl"
+  },
+  {
+   "team": "BAL",
+   "greenDot": "Roquan Smith",
+   "fullTime": [
+    "Roquan Smith",
+    "Trenton Simpson"
+   ],
+   "notes": "W11: Roquan Smith wore the dot per Woellert W11."
+  },
+  {
+   "team": "BUF",
+   "greenDot": null,
+   "fullTime": [],
+   "notes": "W11: no clear dot; rotation of Shaq Thompson 56%, Elarms-Orr 53%, Terrel Bernard 51%. No clear add."
+  },
+  {
+   "team": "CAR",
+   "greenDot": "Devin Lloyd",
+   "fullTime": [
+    "Devin Lloyd",
+    "Tyrel Dodson"
+   ],
+   "notes": "W11: Devin Lloyd wore the dot per Woellert W11."
+  },
+  {
+   "team": "CHI",
+   "greenDot": "T.J. Edwards",
+   "fullTime": [
+    "T.J. Edwards",
+    "Devin Bush"
+   ],
+   "notes": "W11: T.J. Edwards wore the dot per Woellert W11."
+  },
+  {
+   "team": "CIN",
+   "greenDot": "Barrett Carter",
+   "fullTime": [
+    "Barrett Carter"
+   ],
+   "notes": "W11: Barrett Carter wore the dot per Woellert W11."
+  },
+  {
+   "team": "CLE",
+   "greenDot": "Carson Schwesinger",
+   "fullTime": [
+    "Carson Schwesinger",
+    "Quincy Williams"
+   ],
+   "notes": "W11 bye; W10 dot carried. W10: Carson Schwesinger had the green dot and a three-down role. He had 13 tackles this week and a 20.6% tackle rate. Schwesinger has 46 tackles and an 18% tackle rate over his last 4 games. Quincy Wi"
+  },
+  {
+   "team": "DAL",
+   "greenDot": "Shemar James",
+   "fullTime": [
+    "Shemar James",
+    "Dee Winters"
+   ],
+   "notes": "W11: Shemar James wore the dot per Woellert W11."
+  },
+  {
+   "team": "DEN",
+   "greenDot": "Alex Singleton",
+   "fullTime": [
+    "Alex Singleton",
+    "Justin Strnad"
+   ],
+   "notes": "W11: Alex Singleton wore the dot per Woellert W11."
+  },
+  {
+   "team": "DET",
+   "greenDot": "Chuck Clark",
+   "fullTime": [
+    "Derrick Barnes",
+    "Malcolm Rodriguez"
+   ],
+   "notes": "W11: Chuck Clark wore the dot per Woellert W11."
+  },
+  {
+   "team": "GB",
+   "greenDot": "Isaiah McDuffie",
+   "fullTime": [
+    "Isaiah McDuffie",
+    "Nick Niemann"
+   ],
+   "notes": "W11 bye; W10 dot carried. W10: Zaire Franklin was inactive, and Isaiah McDuffie wore the green dot and played 98% of the snaps. He had 9 tackles this week and a 14.1% tackle rate, and 39 tackles and a 15% tackle rate over his "
+  },
+  {
+   "team": "HOU",
+   "greenDot": "Henry To’oTo’o",
+   "fullTime": [
+    "Henry To’oTo’o",
+    "Henry To'oTo'o"
+   ],
+   "notes": "W11: Henry To’oTo’o wore the dot per Woellert W11."
+  },
+  {
+   "team": "IND",
+   "greenDot": "C.J. Allen",
+   "fullTime": [
+    "C.J. Allen"
+   ],
+   "notes": "W11: C.J. Allen wore the dot per Woellert W11."
+  },
+  {
+   "team": "JAX",
+   "greenDot": "Foyesade Oluokun",
+   "fullTime": [
+    "Foyesade Oluokun"
+   ],
+   "notes": "W11: Foyesade Oluokun wore the dot per Woellert W11."
+  },
+  {
+   "team": "KC",
+   "greenDot": "Nick Bolton",
+   "fullTime": [
+    "Nick Bolton",
+    "Drue Tranquill"
+   ],
+   "notes": "W11: Bolton (shin) played every snap until Q3 in a blowout, then exited as apparent precaution; Cochrane usage was garbage time. Bolton dot kept."
+  },
+  {
+   "team": "LAC",
+   "greenDot": "Marlowe Wax",
+   "fullTime": [
+    "Daiyan Henley"
+   ],
+   "notes": "W11: Marlowe Wax and Troy Dye shared the dot (volatile); Wax 63% snaps."
+  },
+  {
+   "team": "LAR",
+   "greenDot": "Quentin Lake",
+   "fullTime": [
+    "Quentin Lake"
+   ],
+   "notes": "W11 bye; W10 dot carried. W10: The Rams defense limited Arizona to just 34 plays, and there was a rotation at linebacker. Omar Speights played against 13 personnel and in base, Shaun Dolac saw dime and 11 personnel, and Dolac "
+  },
+  {
+   "team": "LV",
+   "greenDot": "Nakobe Dean",
+   "fullTime": [
+    "Nakobe Dean",
+    "Quay Walker"
+   ],
+   "notes": "W11: Nakobe Dean wore the dot per Woellert W11."
+  },
+  {
+   "team": "MIA",
+   "greenDot": "Jacob Rodriguez",
+   "fullTime": [
+    "Jacob Rodriguez",
+    "Jordyn Brooks"
+   ],
+   "notes": "W11: Jacob Rodriguez wore the dot per Woellert W11."
+  },
+  {
+   "team": "MIN",
+   "greenDot": "Blake Cashman",
+   "fullTime": [
+    "Blake Cashman"
+   ],
+   "notes": "W11: Blake Cashman back from injury and wore the dot, 92.5% snaps, 9 tkl. Eric Wilson fell to 67.9% (not an add)."
+  },
+  {
+   "team": "NE",
+   "greenDot": "Robert Spillane",
+   "fullTime": [
+    "Robert Spillane",
+    "Christian Elliss"
+   ],
+   "notes": "W11 bye; W10 dot carried. W10: (Robert Spillane (Darius Muasau wore it when he left)) Robert Spillane had an illness in the third quarter and left the game with 8:28 left in the quarter. Darius Muasau came on in relief and wor"
+  },
+  {
+   "team": "NO",
+   "greenDot": "Kaden Elliss",
+   "fullTime": [
+    "Kaden Elliss",
+    "Pete Werner"
+   ],
+   "notes": "W11: Kaden Elliss wore the dot per Woellert W11."
+  },
+  {
+   "team": "NYG",
+   "greenDot": "Micah McFadden",
+   "fullTime": [
+    "Micah McFadden",
+    "Arvell Reese"
+   ],
+   "notes": "W11: Micah McFadden wore the dot per Woellert W11."
+  },
+  {
+   "team": "NYJ",
+   "greenDot": "Demario Davis",
+   "fullTime": [
+    "Demario Davis",
+    "Jamien Sherwood"
+   ],
+   "notes": "W11: Demario Davis wore the dot per Woellert W11."
+  },
+  {
+   "team": "PHI",
+   "greenDot": "Jeremiah Trotter",
+   "fullTime": [
+    "Jeremiah Trotter"
+   ],
+   "notes": "W11: Jeremiah Trotter wore the dot per Woellert W11."
+  },
+  {
+   "team": "PIT",
+   "greenDot": "Patrick Queen",
+   "fullTime": [
+    "Patrick Queen",
+    "Payton Wilson"
+   ],
+   "notes": "W11: Patrick Queen wore the dot per Woellert W11."
+  },
+  {
+   "team": "SEA",
+   "greenDot": "Ernest Jones",
+   "fullTime": [
+    "Ernest Jones"
+   ],
+   "notes": "W11 bye; W10 dot carried. W10: Ernest Jones had the green dot and was on the field for 100% of the snaps. He had 10 tackles and a 16.9% tackle rate this week, and 39 tackles and a 17% tackle rate over his last 4 games. Drake T"
+  },
+  {
+   "team": "SF",
+   "greenDot": "Fred Warner",
+   "fullTime": [
+    "Fred Warner",
+    "Dre Greenlaw"
+   ],
+   "notes": "W11: Fred Warner wore the dot per Woellert W11."
+  },
+  {
+   "team": "TB",
+   "greenDot": "Alex Anzalone",
+   "fullTime": [
+    "Alex Anzalone",
+    "Josiah Trotter"
+   ],
+   "notes": "W11: Alex Anzalone wore the dot per Woellert W11."
+  },
+  {
+   "team": "TEN",
+   "greenDot": "Anthony Hill Jr.",
+   "fullTime": [
+    "Anthony Hill Jr.",
+    "Cedric Gray"
+   ],
+   "notes": "W11: Anthony Hill Jr. wore the dot per Woellert W11."
+  },
+  {
+   "team": "WAS",
+   "greenDot": "Frankie Luvu",
+   "fullTime": [
+    "Frankie Luvu",
+    "Sonny Styles"
+   ],
+   "notes": "W11: Frankie Luvu wore the dot per Woellert W11."
+  }
+ ]
 }
