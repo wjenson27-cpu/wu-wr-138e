@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-23T15:25:00-08:00",
-  "lastUpdated": "2026-11-23T15:25:00-08:00",
+  "asOf": "2026-11-24T15:20:00-08:00",
+  "lastUpdated": "2026-11-24T15:20:00-08:00",
   "season": 2026,
   "week": 12,
   "opponent": {
@@ -10,43 +10,39 @@
     "name": "Pocket Agents"
   },
   "freshness": {
-    "plan": "2026-11-23T15:25:00-08:00",
-    "roster": "2026-11-23T15:00:00-08:00",
-    "scores": "2026-11-23T15:00:00-08:00",
-    "waivers": "2026-11-23T15:05:00-08:00",
-    "news": "2026-11-23T14:55:00-08:00"
+    "plan": "2026-11-24T15:20:00-08:00",
+    "roster": "2026-11-24T15:00:00-08:00",
+    "scores": "2026-11-24T15:00:00-08:00",
+    "waivers": "2026-11-24T14:56:00-08:00",
+    "news": "2026-11-24T14:55:00-08:00"
   },
   "lockTimes": [
-    {
-      "label": "W11 MNF CIN @ WAS: Luvu (Eddies lead Newman 231.5-166; Newman has Higgins, Battle)",
-      "at": "2026-11-23T17:15:00-08:00"
-    },
     {
       "label": "W12 claims process Wed 9:00 AM PT",
       "at": "2026-11-25T09:00:00-08:00"
     },
     {
-      "label": "W12 Wed GB @ LA (Lake, E. Williams) 5:00 PM PT",
+      "label": "Wed GB @ LA 5:00 PM PT (Lake, E. Williams)",
       "at": "2026-11-25T17:00:00-08:00"
     },
     {
-      "label": "W12 Thu KC @ BUF (Karlaftis, Downs, Bishop) 5:20 PM PT",
+      "label": "Thu KC @ BUF 5:20 PM PT (Karlaftis, Downs, Bishop)",
       "at": "2026-11-26T17:20:00-08:00"
     },
     {
-      "label": "W12 Sun 10:00 AM PT: Hamilton, Simpson, Nabers, Dike, Gray, Hall, G. Wilson, Brooks, Etienne",
+      "label": "Sun 10:00 AM PT (Hall, Nabers, Dike, G. Wilson, Hamilton, Simpson, Gray, Brooks, Etienne)",
       "at": "2026-11-29T10:00:00-08:00"
     },
     {
-      "label": "W12 Sun SEA @ SF (Purdy, Warner, Charbonnet) and WAS @ ARI (Luvu) 1:25 PM PT",
+      "label": "Sun 1:25 PM PT SEA @ SF and WAS @ ARI (Purdy, Warner, Charbonnet, Luvu)",
       "at": "2026-11-29T13:25:00-08:00"
     },
     {
-      "label": "W12 SNF LV @ CLE (Bowers, Mayer) 5:20 PM PT",
+      "label": "SNF LV @ CLE 5:20 PM PT (Bowers, Mayer; inactives ~3:50 PM PT)",
       "at": "2026-11-29T17:20:00-08:00"
     },
     {
-      "label": "W12 MNF CAR @ TB (Coker, McCollum) 5:15 PM PT",
+      "label": "MNF CAR @ TB 5:15 PM PT (Coker)",
       "at": "2026-11-30T17:15:00-08:00"
     }
   ],
@@ -57,7 +53,7 @@
       "pos": "QB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "vs SEA (Sun 1:25 PM PT). Offense matchup data unverified. 28.9 / 37.33 FP/G, W11 28.0, snaps W11 89% (3-wk 94%)",
+      "reason": "vs SEA Sun 1:25 PM PT. Offense matchup unverified. 28.9 / 37.33 FP/G (season / last 3), W11 28.0, snaps W11 89% (3-wk 94%)",
       "injury": "",
       "practice": ""
     },
@@ -67,7 +63,7 @@
       "pos": "RB",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "@MIA (Sun 10 AM PT). 16.67 / 16.0 FP/G, W11 20.0, snaps W11 63% (3-wk 55%)",
+      "reason": "@MIA Sun 10 AM PT. 16.67 / 16.0 FP/G (season / last 3), W11 20.0, snaps W11 63% (3-wk 55%)",
       "injury": "",
       "practice": ""
     },
@@ -77,7 +73,7 @@
       "pos": "WR",
       "nflTeam": "NYG",
       "verdict": "START",
-      "reason": "@IND (Sun 10 AM PT). 17.9 / 11.67 FP/G, W11 18.0, snaps W11 76% (3-wk 78%)",
+      "reason": "@IND Sun 10 AM PT. 17.9 / 11.67 FP/G (season / last 3), W11 18.0, snaps W11 76% (3-wk 78%)",
       "injury": "",
       "practice": ""
     },
@@ -86,38 +82,58 @@
       "player": "Brock Bowers",
       "pos": "TE",
       "nflTeam": "LV",
-      "verdict": "START IF ACTIVE",
-      "reason": "@CLE SNF 5:20 PM PT. Fantrax expected return Nov 29; move him off IR and start over Mayer only if active (check inactives ~3:50 PM PT). Mayer 1.5 pts W11. 25.69 / 19.0 FP/G, W11 0.0, snaps W11 n/a% (3-wk 60%)",
+      "verdict": "WATCH",
+      "reason": "@CLE SNF. Q ankle, Fantrax expected return Nov 29; ProFootballDoc: chance to play, Raiders cautious. If active: IR to active, drop Mayer (Bill Nov 23), start Bowers. 25.69 / 19.0 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye) (3-wk 60%)",
+      "injury": "Q",
+      "practice": ""
+    },
+    {
+      "slot": "TE",
+      "player": "Michael Mayer",
+      "pos": "TE",
+      "nflTeam": "LV",
+      "verdict": "START",
+      "reason": "Active now; fallback if Bowers is out. 10.64 / 3.67 FP/G (season / last 3), W11 1.5, snaps W11 67% (3-wk 75%)",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "RWT",
+      "slot": "FLEX",
       "player": "Chimere Dike",
       "pos": "WR",
       "nflTeam": "TEN",
       "verdict": "START",
-      "reason": "@JAX (Sun 10 AM PT); returner. 15.3 / 21.0 FP/G, W11 24.0, snaps W11 78% (3-wk 86%)",
+      "reason": "@JAX; returner; Wan Dale Robinson out, Dike the slot guy (SMcCormick_FF X). 15.3 / 21.0 FP/G (season / last 3), W11 24.0, snaps W11 78% (3-wk 86%)",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "RWT",
+      "slot": "FLEX",
       "player": "Garrett Wilson",
       "pos": "WR",
       "nflTeam": "NYJ",
       "verdict": "START",
-      "reason": "@MIA (Sun 10 AM PT). 14.7 / 13.0 FP/G, W11 6.0, snaps W11 90% (3-wk 92%)",
+      "reason": "@MIA. 14.7 / 13.0 FP/G (season / last 3), W11 6.0, snaps W11 90% (3-wk 92%)",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "RWT",
-      "player": "Josh Downs",
+      "slot": "FLEX",
+      "player": "Jalen Coker",
       "pos": "WR",
-      "nflTeam": "KC",
-      "verdict": "START (thin)",
-      "reason": "@BUF Thu 5:20 PM PT. Low snaps; Coker (cleared concussion protocol Mon) is the alternative Mon night. 9.0 / 10.0 FP/G, W11 9.0, snaps W11 24% (3-wk 20%)",
+      "nflTeam": "CAR",
+      "verdict": "SWAP",
+      "reason": "@TB MNF. Lean Coker over Charbonnet (higher FP/G and snaps); swap before Sun 1:25 PM PT. 11.78 / 7.0 FP/G (season / last 3), W11 8.0, snaps W11 85% (3-wk 82%)",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Zach Charbonnet",
+      "pos": "RB",
+      "nflTeam": "SEA",
+      "verdict": "SIT",
+      "reason": "@SF Sun 1:25 PM PT; 0 last wk was SEA bye. 8.67 / 10.5 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye) (3-wk 64%)",
       "injury": "",
       "practice": ""
     },
@@ -127,7 +143,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "@BUF Thu 5:20 PM PT; DL1 weekly / DL2 ROS. BUF OL matchup unverified. 23.8 / 33.33 FP/G, W11 37.0, snaps W11 61% (3-wk 75%)",
+      "reason": "@BUF Thu 5:20 PM PT; DL5 weekly / DL2 ROS; BUF OL tough (x0.92). 23.8 / 33.33 FP/G (season / last 3), W11 37.0, snaps W11 61% (3-wk 75%)",
       "injury": "",
       "practice": ""
     },
@@ -137,7 +153,7 @@
       "pos": "LB",
       "nflTeam": "SF",
       "verdict": "START",
-      "reason": "vs SEA; green dot. 24.6 / 21.0 FP/G, W11 22.0, snaps W11 90% (3-wk 97%)",
+      "reason": "vs SEA; green dot (Woellert W11); x1.04. 24.6 / 21.0 FP/G (season / last 3), W11 22.0, snaps W11 90% (3-wk 97%)",
       "injury": "",
       "practice": ""
     },
@@ -147,7 +163,7 @@
       "pos": "DB",
       "nflTeam": "BAL",
       "verdict": "START",
-      "reason": "@HOU: DB matchup neutral (x0.98). 21.18 / 18.67 FP/G, W11 20.0, snaps W11 97% (3-wk 84%)",
+      "reason": "@HOU; DB4 weekly; x0.99. 21.18 / 18.67 FP/G (season / last 3), W11 20.0, snaps W11 97% (3-wk 84%)",
       "injury": "",
       "practice": ""
     },
@@ -157,37 +173,87 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "@LA Wed 5 PM PT; DB7 ROS. 23.9 / 18.5 FP/G, W11 0.0, snaps W11 n/a% (3-wk 98%)",
+      "reason": "@LA Wed 5 PM PT; DB1 weekly; 0 last wk was GB bye. 23.9 / 18.5 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye) (3-wk 98%)",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "ID",
+      "slot": "IDP",
       "player": "Jordyn Brooks",
       "pos": "LB",
       "nflTeam": "MIA",
       "verdict": "START",
-      "reason": "vs NYJ. 21.4 / 27.0 FP/G, W11 26.0, snaps W11 97% (3-wk 99%)",
+      "reason": "vs NYJ; full-time (MIA dot: Jacob Rodriguez); LB14 weekly. 21.4 / 27.0 FP/G (season / last 3), W11 26.0, snaps W11 97% (3-wk 99%)",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "ID",
+      "slot": "IDP",
       "player": "Frankie Luvu",
       "pos": "LB",
       "nflTeam": "WAS",
       "verdict": "START",
-      "reason": "@ARI: LB boost (x1.07, 36 LB tkl pts/g allowed); green dot. 20.43 / 30.5 FP/G, W11 0.0, snaps W11 n/a% (3-wk 100%)",
+      "reason": "@ARI; green dot; LB boost x1.07; LB7 weekly. 21.12 / 29.0 FP/G (season / last 3), W11 26.0, snaps W11 100% (3-wk 100%)",
       "injury": "",
       "practice": ""
     },
     {
-      "slot": "ID",
+      "slot": "IDP",
+      "player": "Trenton Simpson",
+      "pos": "LB",
+      "nflTeam": "BAL",
+      "verdict": "SWAP",
+      "reason": "@HOU; full-time per Woellert; model proj 19.1 vs Lake 16.6 / Gray 16.8. Swap in for Lake before Wed 5 PM PT. 17.73 / 17.67 FP/G (season / last 3), W11 21.0, snaps W11 85% (3-wk 75%)",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
       "player": "Quentin Lake",
       "pos": "DB",
       "nflTeam": "LAR",
-      "verdict": "COIN FLIP vs Gray",
-      "reason": "vs GB Wed 5 PM PT. Gray is hotter (27.0 last-3) but faces tough JAX LB matchup (x0.92). Lean Gray on form. 19.6 / 9.5 FP/G, W11 0.0, snaps W11 n/a% (3-wk 100%)",
+      "verdict": "SIT",
+      "reason": "vs GB Wed; 9.5 last-3 (0 last wk = bye). 19.6 / 9.5 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye) (3-wk 100%)",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "nflTeam": "TEN",
+      "verdict": "SIT",
+      "reason": "@JAX tough (x0.94). 14.89 / 27.0 FP/G (season / last 3), W11 15.0, snaps W11 100% (3-wk 96%)",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Cole Bishop",
+      "pos": "DB",
+      "nflTeam": "BUF",
+      "verdict": "SIT",
+      "reason": "vs KC; DB85 weekly. 15.2 / 13.33 FP/G (season / last 3), W11 17.0, snaps W11 81% (3-wk 92%)",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Josh Downs",
+      "pos": "WR",
+      "nflTeam": "KC",
+      "verdict": "SIT",
+      "reason": "20% 3-wk snaps. 9.0 / 10.0 FP/G (season / last 3), W11 9.0, snaps W11 24% (3-wk 20%)",
+      "injury": "",
+      "practice": ""
+    },
+    {
+      "slot": "BN",
+      "player": "Travis Etienne",
+      "pos": "RB",
+      "nflTeam": "NO",
+      "verdict": "SIT",
+      "reason": "38% 3-wk snaps. 9.4 / 8.0 FP/G (season / last 3), W11 9.0, snaps W11 44% (3-wk 38%)",
       "injury": "",
       "practice": ""
     }
@@ -195,27 +261,15 @@
   "injuryWatch": [
     {
       "player": "Brock Bowers",
-      "tag": "IR slot, Q (ankle)",
-      "practice": "TBD (Wed report)",
-      "note": "Fantrax: expected return Nov 29. Missed W11."
-    },
-    {
-      "player": "Jalen Coker",
-      "tag": "Cleared concussion protocol (IR slot)",
-      "practice": "TBD",
-      "note": "Canales Mon: cleared, on track for TB (RotoLegends/Panthers Wire). Moved to IR Mon 6:24 AM; Fantrax shows no injury tag, so the IR slot may be flagged illegal."
+      "tag": "Q (ankle), IR slot",
+      "practice": "TBD (first LV report Wed)",
+      "note": "Fantrax expected return Nov 29. ProFootballDoc Nov 24: chance to play, Raiders cautious."
     },
     {
       "player": "De'Zhaun Stribling",
       "tag": "IR (ankle)",
       "practice": "n/a",
       "note": "Fantrax expected return Dec 6."
-    },
-    {
-      "player": "Frankie Luvu",
-      "tag": "Active MNF",
-      "practice": "n/a",
-      "note": "Plays CIN tonight 5:15 PM PT."
     }
   ],
   "byes": [
@@ -231,42 +285,107 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "Mike Green",
-      "pos": "LB",
-      "nflTeam": "BAL",
-      "why": "ROS. Edge with LB eligibility: 38 pts W11, 5.5 sacks last 5 games (All_22 X). @HOU W12 (HOU OL 4.8% sack rate, tough). Would replace Simpson (17.73 / 17.67).",
-      "stats": "14.36 / 25.33 FP/G, W11 38.0, snaps W11 72% (3-wk 71%)",
-      "faabMin": 3,
-      "faabMax": 8,
-      "bid": 5,
-      "drop": "Trenton Simpson",
-      "tag": "ROS"
-    },
-    {
-      "rank": 2,
       "player": "Ja'Quan McMillian",
       "pos": "DB",
       "nflTeam": "DEN",
-      "why": "ROS. Slot DB, DB10 ROS; @PIT W12 (DB x1.03). Would replace Bishop (15.2 / 13.33).",
-      "stats": "16.1 / 31.0 FP/G, W11 36.0, snaps W11 77% (3-wk 70%)",
+      "why": "ROS: slot DB riser, 36 pts W11, DB3 ROS / DB2 weekly; @PIT Fri noon PT (DB x1.04).",
+      "stats": "16.1 / 31.0 FP/G (season / last 3), W11 36.0, snaps W11 77% (3-wk 70%)",
+      "faabMin": 6,
+      "faabMax": 12,
+      "bid": 9,
+      "drop": "Cole Bishop",
+      "tag": "LIKE"
+    },
+    {
+      "rank": 2,
+      "player": "Jadeveon Clowney",
+      "pos": "DL",
+      "nflTeam": "HOU",
+      "why": "ROS: 20+ FP/G last 3 on 80% W11 snaps; vs BAL OL (7.1% sack / 17% hit rate allowed, boost x1.06); DL8 ROS.",
+      "stats": "12.88 / 21.33 FP/G (season / last 3), W11 22.0, snaps W11 80% (3-wk 63%)",
+      "faabMin": 3,
+      "faabMax": 8,
+      "bid": 5,
+      "drop": "Travis Etienne",
+      "tag": "LIKE"
+    },
+    {
+      "rank": 3,
+      "player": "Joshua Williams",
+      "pos": "DB",
+      "nflTeam": "TEN",
+      "why": "ROS: 100% snaps, 27 pts W11, DB8 ROS; @JAX (x1.05). Backup if McMillian fails.",
+      "stats": "15.6 / 22.0 FP/G (season / last 3), W11 27.0, snaps W11 100% (3-wk 100%)",
       "faabMin": 2,
       "faabMax": 6,
       "bid": 4,
       "drop": "Cole Bishop",
-      "tag": "ROS"
+      "tag": "LIKE"
     },
     {
-      "rank": 3,
-      "player": "D.J. Wonnum",
+      "rank": 4,
+      "player": "Antonio Johnson",
+      "pos": "DB",
+      "nflTeam": "JAX",
+      "why": "ROS: 100% snaps, box role (33 box snaps W11 per RealIDPHunter), DB7 ROS; vs TEN tough (x0.94).",
+      "stats": "15.33 / 20.67 FP/G (season / last 3), W11 32.0, snaps W11 100% (3-wk 94%)",
+      "faabMin": 1,
+      "faabMax": 4,
+      "bid": 3,
+      "drop": "Cole Bishop",
+      "tag": "DART"
+    },
+    {
+      "rank": 5,
+      "player": "Derrick Moore",
       "pos": "DL",
       "nflTeam": "DET",
-      "why": "WEEKLY. 29 pts W11; vs CHI Thu. Depth behind Karlaftis only.",
-      "stats": "15.56 / 27.5 FP/G, W11 29.0, snaps W11 71% (3-wk 73%)",
+      "why": "ROS: 80% snaps and 7 pressures W11 with Hutchinson (ACL) out; Gill-Howard now out for year; vs CHI Thu 10 AM PT.",
+      "stats": "6.7 / 18.67 FP/G (season / last 3), W11 6.0, snaps W11 80% (3-wk 69%)",
+      "faabMin": 1,
+      "faabMax": 4,
+      "bid": 2,
+      "drop": "Travis Etienne",
+      "tag": "DART"
+    },
+    {
+      "rank": 6,
+      "player": "Mike Green",
+      "pos": "LB",
+      "nflTeam": "BAL",
+      "why": "WEEKLY: 38 pts W11, Ravens gave him more work (La Canfora); 71% 3-wk snaps below LB full-time bar; @HOU tough OL (x0.93).",
+      "stats": "14.36 / 25.33 FP/G (season / last 3), W11 38.0, snaps W11 72% (3-wk 71%)",
       "faabMin": 0,
       "faabMax": 2,
-      "bid": 0,
+      "bid": 1,
       "drop": "Travis Etienne",
-      "tag": "WEEKLY"
+      "tag": "DART"
+    },
+    {
+      "rank": 7,
+      "player": "Cameron Lewis",
+      "pos": "DB",
+      "nflTeam": "CHI",
+      "why": "ROS: 100% snaps, 25 pts W11, DB12 ROS; @DET Thu 10 AM PT (x1.02).",
+      "stats": "12.56 / 23.0 FP/G (season / last 3), W11 25.0, snaps W11 100% (3-wk 100%)",
+      "faabMin": 0,
+      "faabMax": 2,
+      "bid": 1,
+      "drop": "Cole Bishop",
+      "tag": "DART"
+    },
+    {
+      "rank": 8,
+      "player": "Zayne Anderson",
+      "pos": "DB",
+      "nflTeam": "MIA",
+      "why": "WEEKLY: 51 pts W11 on 100% snaps but 34% 3-wk avg (fill-in spike); vs NYJ (x0.98).",
+      "stats": "8.5 / 26.0 FP/G (season / last 3), W11 51.0, snaps W11 100% (3-wk 34%)",
+      "faabMin": 0,
+      "faabMax": 1,
+      "bid": 0,
+      "drop": "Cole Bishop",
+      "tag": "DART"
     }
   ],
   "drops": [
@@ -274,13 +393,19 @@
       "rank": 1,
       "player": "Travis Etienne",
       "pos": "RB",
-      "reason": "9.4 / 8.0 FP/G, W11 9.0, snaps W11 44% (3-wk 38%)"
+      "reason": "9.4 / 8.0 FP/G (season / last 3), W11 9.0, snaps W11 44% (3-wk 38%)"
     },
     {
       "rank": 2,
-      "player": "Trenton Simpson",
-      "pos": "LB",
-      "reason": "17.73 / 17.67 FP/G, W11 21.0, snaps W11 85% (3-wk 75%)"
+      "player": "Cole Bishop",
+      "pos": "DB",
+      "reason": "15.2 / 13.33 FP/G (season / last 3), W11 17.0, snaps W11 81% (3-wk 92%)"
+    },
+    {
+      "rank": 3,
+      "player": "Michael Mayer",
+      "pos": "TE",
+      "reason": "Bill: cut for Bowers when Bowers is active. 10.64 / 3.67 FP/G (season / last 3), W11 1.5, snaps W11 67% (3-wk 75%)"
     }
   ],
   "trades": [],
@@ -455,25 +580,55 @@
     {
       "player": "Evan Williams",
       "nflTeam": "GB",
-      "note": "Back from bye; W12 Wed @LA."
+      "note": "Back from bye; Wed @LA; DB1 weekly."
     },
     {
       "player": "Quentin Lake",
       "nflTeam": "LAR",
-      "note": "Back from bye; W12 Wed vs GB."
-    },
-    {
-      "player": "Zyon McCollum",
-      "nflTeam": "TB",
-      "note": "100% W11 snaps, 5 pts; benched for W12."
+      "note": "Back from bye; Wed vs GB; 9.5 last-3."
     },
     {
       "player": "Cole Bishop",
       "nflTeam": "BUF",
-      "note": "81% W11 snaps, 17 pts; off IR to bench."
+      "note": "81% W11 snaps, 17 pts."
     }
   ],
   "news": [
+    {
+      "source": "ProFootballDoc (X)",
+      "time": "2026-11-24T07:25:00-08:00",
+      "text": "Brock Bowers has a chance to play this week; Raiders expected to be cautious. https://x.com/i/status/2125249457247650200"
+    },
+    {
+      "source": "Nolan Bianchi (X)",
+      "time": "2026-11-24T14:12:00-08:00",
+      "text": "Lions estimated report: Wonnum (back) and Rakestraw DNP. https://x.com/i/status/2125351838241452097"
+    },
+    {
+      "source": "CalebBears1 (X)",
+      "time": "2026-11-24T13:40:00-08:00",
+      "text": "Skyler Gill-Howard out for season; joins Jack Campbell (neck, IR) and Aidan Hutchinson (torn ACL). https://x.com/i/status/2125343780526272757"
+    },
+    {
+      "source": "Ni_N9ne (X)",
+      "time": "2026-11-24T08:10:00-08:00",
+      "text": "Derrick Moore: 55 snaps (80%), 7 pressures without Hutchinson. https://x.com/i/status/2125260716672184639"
+    },
+    {
+      "source": "Jason La Canfora (X)",
+      "time": "2026-11-24T06:48:00-08:00",
+      "text": "Ravens gave TJ Tampa and Mike Green more opportunity than ever under Minter last week. https://x.com/i/status/2125240178667061369"
+    },
+    {
+      "source": "Footballblazer_ (X)",
+      "time": "2026-11-24T06:20:00-08:00",
+      "text": "Saquon Barkley (neck, illness) limited on first PHI report (Pocket Agents starter). https://x.com/i/status/2125232973414801608"
+    },
+    {
+      "source": "Fantrax",
+      "time": "2026-11-24T14:36:00-08:00",
+      "text": "Trade: Mrs. Doubtpfizer sent Rashee Rice to Ultron for Omarion Hampton (no FAAB). Eddies dropped Zyon McCollum 7:36 AM."
+    },
     {
       "source": "RotoLegends / Panthers Wire (X)",
       "time": "2026-11-23T10:47:00-08:00",
@@ -493,36 +648,6 @@
       "source": "Mike Woellert (X)",
       "time": "2026-11-23T08:31:00-08:00",
       "text": "SF: Greenlaw inactive W11; Wallow outsnapped Dugger. https://x.com/Mike_Woellert/status/2124903660740018639"
-    },
-    {
-      "source": "All_22_NFL_Cuts (X)",
-      "time": "2026-11-23T12:29:00-08:00",
-      "text": "Mike Green (BAL) 5.5 sacks, 7 QB hits last five games. https://x.com/i/status/2124963552758993068"
-    },
-    {
-      "source": "Fantrax",
-      "time": "2026-11-23T13:26:00-08:00",
-      "text": "Ultron dropped Terrance Ferguson, added Mike Gesicki; Ultron moved Myles Garrett to IR."
-    },
-    {
-      "source": "X (multiple, incl. Raiders coverage)",
-      "time": "2026-11-22T15:00:00-08:00",
-      "text": "Brock Bowers officially inactive W11 @DEN; Mayer started at TE. https://x.com/i/status/2124639137722466670"
-    },
-    {
-      "source": "Mike Woellert (X)",
-      "time": "2026-11-22T11:46:00-08:00",
-      "text": "Titans LB snaps so far: Hill 38, Gray 38, Barton 10 of 38. https://x.com/Mike_Woellert/status/2124590369463574559"
-    },
-    {
-      "source": "Mike Woellert (X)",
-      "time": "2026-11-22T10:46:00-08:00",
-      "text": "Jeremiah Trotter has the green dot for Philly. https://x.com/Mike_Woellert/status/2124575309953634645"
-    },
-    {
-      "source": "Mike Woellert (X)",
-      "time": "2026-11-22T10:54:00-08:00",
-      "text": "Chuck Clark wearing the dot in Detroit. https://x.com/Mike_Woellert/status/2124577213001461901"
     }
   ]
 }
