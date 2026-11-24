@@ -7,7 +7,7 @@
     "end": "2026-11-23",
     "label": "Nov 19–23"
   },
-  "status": "pending",
+  "status": "final",
   "robotLockedAt": "2026-11-19T13:52:57-08:00",
   "firstKickoff": "2026-11-19T17:15:00-08:00",
   "robot": [
@@ -16,107 +16,259 @@
       "player": "Brock Purdy",
       "pos": "QB",
       "team": "SF",
-      "points": null
+      "points": 28.0
     },
     {
       "slot": "RB",
       "player": "Breece Hall",
       "pos": "RB",
       "team": "NYJ",
-      "points": null
+      "points": 20.0
     },
     {
       "slot": "WR",
       "player": "Malik Nabers",
       "pos": "WR",
       "team": "NYG",
-      "points": null
+      "points": 18.0
     },
     {
       "slot": "TE",
       "player": "Michael Mayer",
       "pos": "TE",
       "team": "LV",
-      "points": null
+      "points": 1.5
     },
     {
       "slot": "FLEX",
       "player": "Chimere Dike",
       "pos": "WR",
       "team": "TEN",
-      "points": null
+      "points": 24.0
     },
     {
       "slot": "FLEX",
       "player": "Garrett Wilson",
       "pos": "WR",
       "team": "NYJ",
-      "points": null
+      "points": 6.0
     },
     {
       "slot": "FLEX",
       "player": "Josh Downs",
       "pos": "WR",
       "team": "KC",
-      "points": null
+      "points": 9.0
     },
     {
       "slot": "DL",
       "player": "George Karlaftis",
       "pos": "DL",
       "team": "KC",
-      "points": null
+      "points": 37.0
     },
     {
       "slot": "LB",
       "player": "Fred Warner",
       "pos": "LB",
       "team": "SF",
-      "points": null
+      "points": 22.0
     },
     {
       "slot": "DB",
       "player": "Kyle Hamilton",
       "pos": "DB",
       "team": "BAL",
-      "points": null
+      "points": 20.0
     },
     {
       "slot": "DB",
       "player": "Zyon McCollum",
       "pos": "DB",
       "team": "TB",
-      "points": null
+      "points": 5.0
     },
     {
       "slot": "IDP",
       "player": "Jordyn Brooks",
       "pos": "LB",
       "team": "MIA",
-      "points": null
+      "points": 26.0
     },
     {
       "slot": "IDP",
       "player": "Frankie Luvu",
       "pos": "LB",
       "team": "WAS",
-      "points": null
+      "points": 26.0
     },
     {
       "slot": "IDP",
       "player": "Trenton Simpson",
       "pos": "LB",
       "team": "BAL",
-      "points": null
+      "points": 21.0
     }
   ],
-  "actual": [],
+  "actual": [
+    {
+      "slot": "QB",
+      "player": "Brock Purdy",
+      "pos": "QB",
+      "team": "SF",
+      "points": 28.0
+    },
+    {
+      "slot": "RB",
+      "player": "Breece Hall",
+      "pos": "RB",
+      "team": "NYJ",
+      "points": 20.0
+    },
+    {
+      "slot": "WR",
+      "player": "Malik Nabers",
+      "pos": "WR",
+      "team": "NYG",
+      "points": 18.0
+    },
+    {
+      "slot": "TE",
+      "player": "Michael Mayer",
+      "pos": "TE",
+      "team": "LV",
+      "points": 1.5
+    },
+    {
+      "slot": "FLEX",
+      "player": "Chimere Dike",
+      "pos": "WR",
+      "team": "TEN",
+      "points": 24.0
+    },
+    {
+      "slot": "FLEX",
+      "player": "Josh Downs",
+      "pos": "WR",
+      "team": "KC",
+      "points": 9.0
+    },
+    {
+      "slot": "FLEX",
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "team": "NYJ",
+      "points": 6.0
+    },
+    {
+      "slot": "DL",
+      "player": "George Karlaftis",
+      "pos": "DL",
+      "team": "KC",
+      "points": 37.0
+    },
+    {
+      "slot": "LB",
+      "player": "Fred Warner",
+      "pos": "LB",
+      "team": "SF",
+      "points": 22.0
+    },
+    {
+      "slot": "DB",
+      "player": "Kyle Hamilton",
+      "pos": "DB",
+      "team": "BAL",
+      "points": 20.0
+    },
+    {
+      "slot": "DB",
+      "player": "Zyon McCollum",
+      "pos": "DB",
+      "team": "TB",
+      "points": 5.0
+    },
+    {
+      "slot": "IDP",
+      "player": "Jordyn Brooks",
+      "pos": "LB",
+      "team": "MIA",
+      "points": 26.0
+    },
+    {
+      "slot": "IDP",
+      "player": "Cedric Gray",
+      "pos": "LB",
+      "team": "TEN",
+      "points": 15.0
+    },
+    {
+      "slot": "IDP",
+      "player": "Frankie Luvu",
+      "pos": "LB",
+      "team": "WAS",
+      "points": 26.0
+    }
+  ],
   "totals": {
-    "robot": null,
-    "eddies": null
+    "robot": 263.5,
+    "eddies": 257.5
   },
-  "margin": null,
-  "result": null,
-  "winner": null,
-  "decisions": []
+  "margin": 6.0,
+  "result": "W",
+  "winner": "Robot",
+  "decisions": [
+    {
+      "slot": "FLEX",
+      "index": 5,
+      "robotPlayer": "Garrett Wilson",
+      "robotPos": "WR",
+      "robotTeam": "NYJ",
+      "robotPoints": 6.0,
+      "eddiesPlayer": "Josh Downs",
+      "eddiesPos": "WR",
+      "eddiesTeam": "KC",
+      "eddiesPoints": 9.0,
+      "swing": -3.0
+    },
+    {
+      "slot": "FLEX",
+      "index": 6,
+      "robotPlayer": "Josh Downs",
+      "robotPos": "WR",
+      "robotTeam": "KC",
+      "robotPoints": 9.0,
+      "eddiesPlayer": "Garrett Wilson",
+      "eddiesPos": "WR",
+      "eddiesTeam": "NYJ",
+      "eddiesPoints": 6.0,
+      "swing": 3.0
+    },
+    {
+      "slot": "IDP",
+      "index": 12,
+      "robotPlayer": "Frankie Luvu",
+      "robotPos": "LB",
+      "robotTeam": "WAS",
+      "robotPoints": 26.0,
+      "eddiesPlayer": "Cedric Gray",
+      "eddiesPos": "LB",
+      "eddiesTeam": "TEN",
+      "eddiesPoints": 15.0,
+      "swing": 11.0
+    },
+    {
+      "slot": "IDP",
+      "index": 13,
+      "robotPlayer": "Trenton Simpson",
+      "robotPos": "LB",
+      "robotTeam": "BAL",
+      "robotPoints": 21.0,
+      "eddiesPlayer": "Frankie Luvu",
+      "eddiesPos": "LB",
+      "eddiesTeam": "WAS",
+      "eddiesPoints": 26.0,
+      "swing": -5.0
+    }
+  ]
 }

@@ -8,15 +8,15 @@
   },
   "firstWeek": 9,
   "record": {
-    "wins": 0,
+    "wins": 1,
     "losses": 2,
     "ties": 0,
-    "label": "0-2-0"
+    "label": "1-2-0"
   },
   "points": {
-    "robot": 488.0,
-    "eddies": 548.0,
-    "margin": -60.0
+    "robot": 751.5,
+    "eddies": 805.5,
+    "margin": -54.0
   },
   "weeks": [
     {
@@ -247,15 +247,68 @@
         "end": "2026-11-23",
         "label": "Nov 19–23"
       },
-      "status": "pending",
+      "status": "final",
       "locked": true,
       "robotLockedAt": "2026-11-19T13:52:57-08:00",
-      "result": null,
-      "winner": null,
-      "robotPoints": null,
-      "eddiesPoints": null,
-      "margin": null,
-      "decisions": []
+      "result": "W",
+      "winner": "Robot",
+      "robotPoints": 263.5,
+      "eddiesPoints": 257.5,
+      "margin": 6.0,
+      "decisions": [
+        {
+          "slot": "FLEX",
+          "index": 5,
+          "robotPlayer": "Garrett Wilson",
+          "robotPos": "WR",
+          "robotTeam": "NYJ",
+          "robotPoints": 6.0,
+          "eddiesPlayer": "Josh Downs",
+          "eddiesPos": "WR",
+          "eddiesTeam": "KC",
+          "eddiesPoints": 9.0,
+          "swing": -3.0
+        },
+        {
+          "slot": "FLEX",
+          "index": 6,
+          "robotPlayer": "Josh Downs",
+          "robotPos": "WR",
+          "robotTeam": "KC",
+          "robotPoints": 9.0,
+          "eddiesPlayer": "Garrett Wilson",
+          "eddiesPos": "WR",
+          "eddiesTeam": "NYJ",
+          "eddiesPoints": 6.0,
+          "swing": 3.0
+        },
+        {
+          "slot": "IDP",
+          "index": 12,
+          "robotPlayer": "Frankie Luvu",
+          "robotPos": "LB",
+          "robotTeam": "WAS",
+          "robotPoints": 26.0,
+          "eddiesPlayer": "Cedric Gray",
+          "eddiesPos": "LB",
+          "eddiesTeam": "TEN",
+          "eddiesPoints": 15.0,
+          "swing": 11.0
+        },
+        {
+          "slot": "IDP",
+          "index": 13,
+          "robotPlayer": "Trenton Simpson",
+          "robotPos": "LB",
+          "robotTeam": "BAL",
+          "robotPoints": 21.0,
+          "eddiesPlayer": "Frankie Luvu",
+          "eddiesPos": "LB",
+          "eddiesTeam": "WAS",
+          "eddiesPoints": 26.0,
+          "swing": -5.0
+        }
+      ]
     }
   ]
 }
