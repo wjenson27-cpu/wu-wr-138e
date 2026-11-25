@@ -1,9 +1,9 @@
 {
   "teamId": "doubtpfizer",
   "teamName": "Mrs. Doubtpfizer",
-  "owner": "Kyle Weberg",
-  "asOf": "2026-11-18 10:16 AM PT",
-  "faabLeft": 68,
+  "owner": "Kyle",
+  "asOf": "2026-11-25 10:40 AM PT",
+  "faabLeft": 64,
   "startingQB": "Dak Prescott",
   "roster": {
     "QB": [
@@ -11,15 +11,15 @@
     ],
     "RB": [
       "Christian McCaffrey",
+      "Blake Corum",
+      "Omarion Hampton",
       "Chuba Hubbard",
       "Kaelon Black",
-      "Braelon Allen",
-      "Blake Corum"
+      "Braelon Allen"
     ],
     "WR": [
       "Nico Collins",
-      "Rome Odunze",
-      "Rashee Rice"
+      "Rome Odunze"
     ],
     "TE": [
       "Colston Loveland",
@@ -27,7 +27,6 @@
       "Kyle Pitts"
     ],
     "DL": [
-      "Jalen Carter",
       "Byron Young"
     ],
     "LB": [
@@ -38,27 +37,25 @@
     ],
     "DB": [
       "Reed Blankenship",
-      "Malik Mustapha"
+      "Kamari Lassiter",
+      "Antonio Johnson"
     ],
     "IR": [
-      "TreVeyon Henderson",
-      "Kamari Lassiter"
+      "TreVeyon Henderson"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "TreVeyon Henderson — IR (IR slot)",
-    "Kamari Lassiter — Q (IR slot)"
+    "TreVeyon Henderson — IR (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
   "fantraxTeamId": "xg1akj6omsb3ulv5",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "TreVeyon Henderson — IR (IR slot)",
-    "Kamari Lassiter — Q (IR slot)"
+    "TreVeyon Henderson — IR (IR slot)"
   ],
-  "updated": "2026-11-18",
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "updated": "2026-11-25",
+  "lastSynced": "2026-11-25 10:40 AM PT"
 }

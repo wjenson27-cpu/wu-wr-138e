@@ -1,8 +1,8 @@
 {
   "teamId": "saltese",
   "teamName": "Saltese Slamm",
-  "owner": "Luke Sahlberg",
-  "asOf": "2026-11-18 10:16 AM PT",
+  "owner": "Larry",
+  "asOf": "2026-11-25 10:40 AM PT",
   "faabLeft": 2,
   "startingQB": "C.J. Stroud",
   "roster": {
@@ -10,62 +10,61 @@
       "C.J. Stroud"
     ],
     "RB": [
-      "Bhayshul Tuten",
-      "Tyler Allgeier",
+      "Chris Rodriguez Jr.",
+      "Aaron Jones",
       "David Montgomery",
       "D'Andre Swift",
-      "Chris Rodriguez Jr.",
+      "Bhayshul Tuten",
+      "Tyler Allgeier",
       "Rico Dowdle",
-      "Aaron Jones"
+      "Kyle Monangai"
     ],
     "WR": [
-      "Adonai Mitchell",
-      "Ashton Dulin"
+      "Devontez Walker"
     ],
     "TE": [
-      "Dalton Schultz",
-      "Tucker Kraft"
+      "Tucker Kraft",
+      "Dalton Schultz"
     ],
     "DL": [
-      "Jonathan Allen"
+      "Abdul Carter"
     ],
     "LB": [
       "Jamien Sherwood",
-      "Zack Baun",
+      "Jaden Dugger",
       "Henry To'oTo'o",
       "Eric Wilson"
     ],
     "DB": [
       "Jonas Sanker",
-      "M.J. Stewart",
-      "Jaquan Brisker"
+      "Joshua Williams"
     ],
     "IR": [
-      "Kyle Monangai",
       "Jonathon Brooks",
-      "RJ Harvey"
+      "RJ Harvey",
+      "Zack Baun"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Kyle Monangai — Q (IR slot)",
+    "Bhayshul Tuten — Q (reserve)",
     "Jonathon Brooks — IR (IR slot)",
     "RJ Harvey — IR (IR slot)",
-    "Zack Baun — Q (active)"
+    "Zack Baun — IR (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
   "fantraxTeamId": "xdx6ngm2msb3ulv5",
   "lineupFlags": [
-    "Zack Baun — Q (active)"
+    "Bhayshul Tuten — Q (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Kyle Monangai — Q (IR slot)",
+    "Bhayshul Tuten — Q (reserve)",
     "Jonathon Brooks — IR (IR slot)",
     "RJ Harvey — IR (IR slot)",
-    "Zack Baun — Q (active)"
+    "Zack Baun — IR (IR slot)"
   ],
-  "updated": "2026-11-18",
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "updated": "2026-11-25",
+  "lastSynced": "2026-11-25 10:40 AM PT"
 }

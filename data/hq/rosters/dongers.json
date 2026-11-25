@@ -1,8 +1,8 @@
 {
   "teamId": "dongers",
   "teamName": "Drummond Dongers",
-  "owner": "Gavin Heaton",
-  "asOf": "2026-11-18 10:16 AM PT",
+  "owner": "Big Show",
+  "asOf": "2026-11-25 5:56 AM PT",
   "faabLeft": 1,
   "startingQB": "Joe Burrow",
   "roster": {
@@ -10,54 +10,51 @@
       "Joe Burrow"
     ],
     "RB": [
-      "Tony Pollard",
-      "Audric Estime"
+      "Tony Pollard"
     ],
     "WR": [
       "Parker Washington",
       "D.J. Moore",
       "Chris Olave",
       "Jaxon Smith-Njigba",
+      "Ladd McConkey",
       "KaVontae Turpin"
     ],
     "TE": [
-      "Brenton Strange",
-      "Mike Gesicki"
+      "T.J. Hockenson",
+      "Brenton Strange"
     ],
     "DL": [
-      "David Bailey",
-      "Zach Allen"
+      "Zach Allen",
+      "David Bailey"
     ],
     "LB": [
       "Christian Elliss",
       "Isaiah McDuffie"
     ],
     "DB": [
-      "Chuck Clark",
-      "Jalen Ramsey",
       "Nick Cross",
       "Xavier McKinney",
-      "Jevon Holland"
+      "Chuck Clark",
+      "Jevon Holland",
+      "Jalen Ramsey"
     ],
-    "IR": [
-      "T.J. Hockenson",
-      "Ladd McConkey"
-    ]
+    "IR": []
   },
   "notes": "",
   "injuryFlags": [
-    "T.J. Hockenson — Q (IR slot)",
-    "Ladd McConkey — Q (IR slot)"
+    "Chuck Clark — Q (active)"
   ],
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
   "fantraxTeamId": "lreem0zbmsb3ulv5",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Chuck Clark — Q (active)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "T.J. Hockenson — Q (IR slot)",
-    "Ladd McConkey — Q (IR slot)"
+    "Chuck Clark — Q (active)"
   ],
-  "updated": "2026-11-18",
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "updated": "2026-11-25",
+  "lastSynced": "2026-11-25 10:40 AM PT"
 }

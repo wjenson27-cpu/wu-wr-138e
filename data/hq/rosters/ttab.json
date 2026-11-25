@@ -1,28 +1,27 @@
 {
   "teamId": "ttab",
   "teamName": "Towner Top Aga Bottom",
-  "owner": "Chase Anderson",
-  "asOf": "2026-11-18 10:16 AM PT",
-  "faabLeft": 3,
+  "owner": "Chase",
+  "asOf": "2026-11-25 10:40 AM PT",
+  "faabLeft": 0,
   "startingQB": "Caleb Williams",
   "roster": {
     "QB": [
-      "Caleb Williams",
-      "Bryce Young"
+      "Caleb Williams"
     ],
     "RB": [
-      "Javonte Williams"
+      "Javonte Williams",
+      "Travis Etienne"
     ],
     "WR": [
       "Stefon Diggs",
-      "Ryan Flournoy",
-      "Malik Washington",
+      "DeVonta Smith",
+      "Christian Watson",
       "Jameson Williams",
-      "Omar Cooper Jr.",
-      "Christian Watson"
+      "Ryan Flournoy",
+      "Malik Washington"
     ],
     "TE": [
-      "Dallas Goedert",
       "Mark Andrews"
     ],
     "DL": [
@@ -38,34 +37,30 @@
       "Brian Branch",
       "Caleb Downs",
       "Dillon Thieneman",
-      "Michael Taaffe"
+      "Zayne Anderson"
     ],
     "IR": [
-      "DeVonta Smith",
+      "Omar Cooper Jr.",
       "Divine Deablo",
       "Dorian Williams"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Omar Cooper Jr. — Q (reserve)",
-    "DeVonta Smith — Q (IR slot)",
+    "Omar Cooper Jr. — Q (IR slot)",
     "Divine Deablo — Q (IR slot)",
     "Dorian Williams — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
   "fantraxTeamId": "4grk2ph6msb3ulv4",
-  "lineupFlags": [
-    "Omar Cooper Jr. — Q (reserve)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Omar Cooper Jr. — Q (reserve)",
-    "DeVonta Smith — Q (IR slot)",
+    "Omar Cooper Jr. — Q (IR slot)",
     "Divine Deablo — Q (IR slot)",
     "Dorian Williams — Q (IR slot)"
   ],
-  "updated": "2026-11-18",
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "updated": "2026-11-25",
+  "lastSynced": "2026-11-25 10:40 AM PT"
 }

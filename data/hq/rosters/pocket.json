@@ -1,8 +1,8 @@
 {
   "teamId": "pocket",
   "teamName": "Pocket Agents",
-  "owner": "Kellen Olson",
-  "asOf": "2026-11-18 10:16 AM PT",
+  "owner": "KO",
+  "asOf": "2026-11-25 5:56 AM PT",
   "faabLeft": 66,
   "startingQB": "Jared Goff",
   "roster": {
@@ -22,53 +22,51 @@
     ],
     "TE": [
       "Chigoziem Okonkwo",
-      "Dalton Kincaid",
       "Trey McBride"
     ],
     "DL": [
       "Will Anderson Jr."
     ],
     "LB": [
-      "Josiah Trotter",
+      "Robert Spillane",
       "Barrett Carter",
       "Ernest Jones",
+      "Josiah Trotter",
       "Bryce Boettcher"
     ],
     "DB": [
-      "Dane Belton",
+      "Tony Adams",
       "Cooper DeJean",
-      "Amani Hooker",
-      "Brandon Jones"
+      "Dane Belton",
+      "Amani Hooker"
     ],
     "IR": [
       "Woody Marks",
-      "Robert Spillane",
-      "Tony Adams"
+      "Dalton Kincaid",
+      "Brandon Jones"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Jaylen Waddle — Q (reserve)",
     "Woody Marks — Q (IR slot)",
-    "Brandon Jones — Q (reserve)",
-    "Robert Spillane — Q (IR slot)",
-    "Tony Adams — Q (IR slot)"
+    "Dalton Kincaid — Q (IR slot)",
+    "Robert Spillane — Q (active)",
+    "Tony Adams — Q (active)"
   ],
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
   "fantraxTeamId": "20zozmjgmsb3ulv4",
   "lineupFlags": [
-    "Jaylen Waddle — Q (reserve)",
-    "Brandon Jones — Q (reserve)"
+    "Robert Spillane — Q (active)",
+    "Tony Adams — Q (active)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Jaylen Waddle — Q (reserve)",
     "Woody Marks — Q (IR slot)",
-    "Brandon Jones — Q (reserve)",
-    "Robert Spillane — Q (IR slot)",
-    "Tony Adams — Q (IR slot)"
+    "Dalton Kincaid — Q (IR slot)",
+    "Robert Spillane — Q (active)",
+    "Tony Adams — Q (active)"
   ],
-  "updated": "2026-11-18",
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "updated": "2026-11-25",
+  "lastSynced": "2026-11-25 10:40 AM PT"
 }

@@ -1,9 +1,9 @@
 {
   "teamId": "lab",
   "teamName": "Little Ass Boys",
-  "owner": "Jesse Nicholson",
-  "asOf": "2026-11-18 10:16 AM PT",
-  "faabLeft": 44,
+  "owner": "Jesse",
+  "asOf": "2026-11-25 10:40 AM PT",
+  "faabLeft": 33,
   "startingQB": "Jayden Daniels",
   "roster": {
     "QB": [
@@ -13,13 +13,13 @@
     "RB": [
       "Jaylen Warren",
       "Ashton Jeanty",
-      "Dylan Sampson",
-      "Kyren Williams"
+      "Kyren Williams",
+      "Dylan Sampson"
     ],
     "WR": [
-      "Caleb Douglas",
       "Mike Evans",
       "Carnell Tate",
+      "Caleb Douglas",
       "Khalil Shakir"
     ],
     "TE": [
@@ -33,45 +33,35 @@
       "Demetrius Knight",
       "Drue Tranquill",
       "Quay Walker",
-      "Dee Winters",
-      "Akeem Davis-Gaither"
+      "Jihaad Campbell",
+      "Mike Green"
     ],
     "DB": [
       "Minkah Fitzpatrick",
-      "Jacob Parrish"
+      "Ja'Quan McMillian"
     ],
     "IR": [
-      "Puka Nacua",
       "Jeremiyah Love",
-      "Jihaad Campbell"
+      "Dee Winters",
+      "Jacob Parrish"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Mike Evans — Q (active)",
-    "Carnell Tate — Q (active)",
-    "Puka Nacua — IR (IR slot)",
     "Jeremiyah Love — IR (IR slot)",
-    "Akeem Davis-Gaither — IR (reserve)",
-    "Jihaad Campbell — Q (IR slot)"
+    "Dee Winters — Q (IR slot)",
+    "Jacob Parrish — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
   "fantraxTeamId": "a4q2ra3ymsb3ulv4",
-  "lineupFlags": [
-    "Mike Evans — Q (active)",
-    "Carnell Tate — Q (active)",
-    "Akeem Davis-Gaither — IR (reserve)"
-  ],
+  "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Mike Evans — Q (active)",
-    "Carnell Tate — Q (active)",
-    "Puka Nacua — IR (IR slot)",
     "Jeremiyah Love — IR (IR slot)",
-    "Akeem Davis-Gaither — IR (reserve)",
-    "Jihaad Campbell — Q (IR slot)"
+    "Dee Winters — Q (IR slot)",
+    "Jacob Parrish — Q (IR slot)"
   ],
-  "updated": "2026-11-18",
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "updated": "2026-11-25",
+  "lastSynced": "2026-11-25 10:40 AM PT"
 }

@@ -1,8 +1,58 @@
 {
-  "updated": "2026-11-18",
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "updated": "2026-11-25",
+  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
   "season": 2026,
   "trades": [
+    {
+      "date": "2026-11-24",
+      "time": "5:26 PM PST",
+      "week": 12,
+      "status": "completed",
+      "official": true,
+      "teamA": "The Eddies",
+      "teamB": "TTAB",
+      "givesA": [
+        "Travis Etienne (RB)"
+      ],
+      "givesB": [
+        "Dallas Goedert (TE)"
+      ],
+      "summary": "Week 12 — The Eddies sent Travis Etienne (RB) to TTAB for Dallas Goedert (TE) (Nov 24 5:26 PM PST)."
+    },
+    {
+      "date": "2026-11-24",
+      "time": "2:36 PM PST",
+      "week": 11,
+      "status": "completed",
+      "official": true,
+      "teamA": "Mrs. Doubtpfizer",
+      "teamB": "Ultron",
+      "givesA": [
+        "Rashee Rice (WR)"
+      ],
+      "givesB": [
+        "Omarion Hampton (RB)"
+      ],
+      "summary": "Week 11 — Mrs. Doubtpfizer sent Rashee Rice (WR) to Ultron for Omarion Hampton (RB) (Nov 24 2:36 PM PST)."
+    },
+    {
+      "date": "2026-11-18",
+      "time": "4:40 PM PST",
+      "week": 10,
+      "status": "completed",
+      "official": true,
+      "teamA": "The Hypersecretors",
+      "teamB": "Ultron",
+      "givesA": [
+        "Emmett Johnson (RB)",
+        "Luther Burden (WR)",
+        "$5 FAAB"
+      ],
+      "givesB": [
+        "Bijan Robinson (RB)"
+      ],
+      "summary": "Week 10 — The Hypersecretors sent Emmett Johnson (RB), Luther Burden (WR), $5 FAAB to Ultron for Bijan Robinson (RB) (Nov 18 4:40 PM PST)."
+    },
     {
       "date": "2026-11-13",
       "time": "2:44 PM PST",
@@ -553,7 +603,7 @@
       "status": "completed",
       "official": true,
       "teamA": "Eagleridge Eddie's",
-      "teamB": "Saltese Slamm (Luke)",
+      "teamB": "Saltese Slamm (Larry)",
       "givesA": [
         "Omarion Hampton (RB)",
         "Mack Wilson (LB)"
@@ -570,7 +620,7 @@
       "status": "completed",
       "official": true,
       "teamA": "Newman Lake Sleep Paralysis Demons (Ryan)",
-      "teamB": "Saltese Slamm (Luke)",
+      "teamB": "Saltese Slamm (Larry)",
       "givesA": [
         "Aaron Jones (RB)",
         "$5 FAAB"
@@ -600,7 +650,7 @@
       "time": "8:58 AM PDT",
       "status": "completed",
       "official": true,
-      "teamA": "Drummond Dongers (Gavin)",
+      "teamA": "Drummond Dongers (Big Show)",
       "teamB": "Substation (Nate)",
       "givesA": [
         "CJ Allen (LB)",
@@ -736,8 +786,8 @@
       "time": "11:50 PM PDT",
       "status": "completed",
       "official": true,
-      "teamA": "Pocket Agents (Kellen)",
-      "teamB": "Saltese Slamm (Luke)",
+      "teamA": "Pocket Agents (KO)",
+      "teamB": "Saltese Slamm (Larry)",
       "givesA": [
         "Jonas Sanker (DB)"
       ],
@@ -750,7 +800,7 @@
       "date": "2026-09-08",
       "time": "6:04 PM PDT",
       "status": "completed",
-      "teamA": "Pocket Agents (Kellen)",
+      "teamA": "Pocket Agents (KO)",
       "teamB": "Substation (Nate)",
       "givesA": [
         "Bo Nix (QB)"
@@ -889,8 +939,12 @@
         "Pete Werner LB NO"
       ],
       "note": null,
-      "positionsOffered": "LB",
-      "positionsNeeded": "RB"
+      "positionsOffered": [
+        "LB"
+      ],
+      "positionsNeeded": [
+        "RB"
+      ]
     },
     {
       "teamId": "newman",
@@ -945,12 +999,11 @@
     {
       "teamId": "ttab",
       "team": "TTAB",
-      "lastUpdated": "Last Updated: Nov 3 7:21 AM",
+      "lastUpdated": "Last Updated: Nov 24 5:26 PM",
       "players": [
         "Javonte Williams RB DAL",
         "Christian Watson WR GB",
         "Jameson Williams WR DET",
-        "Dallas Goedert TE PHI",
         "Divine Deablo LB ATL",
         "Harold Perkins LB ATL",
         "Dorian Williams LB BUF"
@@ -959,8 +1012,8 @@
     }
   ],
   "leaderboard_note": "As of early HQ: Nate led all-2026 deal count (incl handshake). Fantrax official player/pick deals concentrated with Aga/Chase/Larry.",
-  "pending_note": "Pending trades 0 (Fantrax 2026-11-18 10:16 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
-  "fantrax_completed_view": "Newest official: Saltese↔Substation Carson Schwesinger+Dre Greenlaw for Eric Wilson+Henry To'oTo'o+Zack Baun+Tucker Kraft (Nov 13 2:44 PM); Saltese↔Ultron Antonio Williams for Chris Rodriguez Jr. (Nov 11 5:13 PM); Hypersecretors↔TTAB Bryce Young for $7 FAAB (Nov 11 5:13 PM).",
+  "pending_note": "Pending trades 0 (Fantrax 2026-11-25 5:56 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
+  "fantrax_completed_view": "Newest official: The Eddies↔TTAB Travis Etienne for Dallas Goedert (Nov 24 5:26 PM); Doubtpfizer↔Ultron Rashee Rice for Omarion Hampton (Nov 24 2:36 PM); Hypersecretors↔Ultron Emmett Johnson+Luther Burden+$5 FAAB for Bijan Robinson (Nov 18 4:40 PM); Saltese↔Substation Carson Schwesinger+Dre Greenlaw for Eric Wilson+Henry To'oTo'o+Zack Baun+Tucker Kraft (Nov 13 2:44 PM).",
   "hqComplete": true,
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "lastSynced": "2026-11-25 5:56 AM PT"
 }

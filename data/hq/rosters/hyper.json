@@ -1,58 +1,59 @@
 {
   "teamId": "hyper",
   "teamName": "The Hypersecretors",
-  "owner": "Jacob Crisp",
-  "asOf": "2026-11-18 10:16 AM PT",
-  "faabLeft": 13,
+  "owner": "Jacob",
+  "asOf": "2026-11-25 10:40 AM PT",
+  "faabLeft": 2,
   "startingQB": "Josh Allen",
   "roster": {
     "QB": [
       "Josh Allen"
     ],
     "RB": [
+      "Bijan Robinson",
+      "Jacory Croskey-Merritt",
       "Kenneth Walker III",
-      "Seth McGowan",
-      "Jaylen Wright",
-      "Emmett Johnson"
+      "Jaylen Wright"
     ],
     "WR": [
-      "Luther Burden",
-      "Emeka Egbuka",
       "Drake London",
-      "Travis Hunter"
+      "Zavion Thomas",
+      "Emeka Egbuka",
+      "Travis Hunter",
+      "Konata Mumpfield"
     ],
     "TE": [
       "Sam LaPorta"
     ],
     "DL": [
-      "Chase Young",
-      "Nick Bosa"
+      "Chase Young"
     ],
     "LB": [
       "Jacob Rodriguez",
-      "Kaleb Elarms-Orr",
+      "Blake Cashman",
       "Shemar James",
       "Payton Wilson",
-      "Shaun Dolac"
+      "Shaun Dolac",
+      "Kaleb Elarms-Orr"
     ],
     "DB": [
-      "A.J. Haulcy",
-      "Nick Emmanwori"
+      "Nick Emmanwori",
+      "Xavier Watts"
     ],
     "IR": [
-      "Jacory Croskey-Merritt",
-      "Micah Parsons",
-      "Blake Cashman"
+      "Lamar Jackson",
+      "Seth McGowan",
+      "Micah Parsons"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Kenneth Walker III — Q (active)",
-    "Jacory Croskey-Merritt — IR (IR slot)",
-    "Micah Parsons — IR (IR slot)",
-    "Blake Cashman — Q (IR slot)"
+    "Lamar Jackson — IR (IR slot)",
+    "Seth McGowan — O (IR slot)",
+    "Micah Parsons — Q (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
   "fantraxTeamId": "xz2uv87rmsb3ulv4",
   "lineupFlags": [
     "Kenneth Walker III — Q (active)"
@@ -61,10 +62,10 @@
   "pendingClaims": [],
   "flags": [
     "Kenneth Walker III — Q (active)",
-    "Jacory Croskey-Merritt — IR (IR slot)",
-    "Micah Parsons — IR (IR slot)",
-    "Blake Cashman — Q (IR slot)"
+    "Lamar Jackson — IR (IR slot)",
+    "Seth McGowan — O (IR slot)",
+    "Micah Parsons — Q (IR slot)"
   ],
-  "updated": "2026-11-18",
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "updated": "2026-11-25",
+  "lastSynced": "2026-11-25 10:40 AM PT"
 }

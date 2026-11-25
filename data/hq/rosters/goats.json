@@ -1,8 +1,8 @@
 {
   "teamId": "goats",
   "teamName": "Valley Old Goats",
-  "owner": "Mike Heff",
-  "asOf": "2026-11-18 10:16 AM PT",
+  "owner": "Heff",
+  "asOf": "2026-11-25 5:56 AM PT",
   "faabLeft": 16,
   "startingQB": "Patrick Mahomes",
   "roster": {
@@ -13,13 +13,13 @@
       "Derrick Henry",
       "Chase Brown",
       "Bucky Irving",
+      "Corey Kiner",
       "Justice Hill",
-      "Samaje Perine",
-      "Corey Kiner"
+      "Samaje Perine"
     ],
     "WR": [
-      "Tank Dell",
-      "DK Metcalf"
+      "DK Metcalf",
+      "Tank Dell"
     ],
     "TE": [
       "George Kittle"
@@ -32,34 +32,35 @@
       "Arvell Reese",
       "Devin Bush",
       "Devin Lloyd",
-      "Drake Thomas",
-      "Quincy Williams"
+      "Quincy Williams",
+      "Drake Thomas"
     ],
     "DB": [
-      "Amik Robertson",
+      "Kevin Byard",
       "Nohl Williams",
-      "Kevin Byard"
+      "Amik Robertson"
     ],
     "IR": [
       "Josh Jacobs",
-      "Alvin Kamara",
-      "Danielle Hunter"
+      "Alvin Kamara"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Josh Jacobs — Q (IR slot)",
-    "Danielle Hunter — Q (IR slot)"
+    "Amik Robertson — Q (reserve)"
   ],
-  "source": "Fantrax roster sync 2026-11-18 10:16 AM PT (/workspace/fantrax-raw-2026-11-18-pw-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
   "fantraxTeamId": "81bbo25imsb3ulv5",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Amik Robertson — Q (reserve)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Josh Jacobs — Q (IR slot)",
-    "Danielle Hunter — Q (IR slot)"
+    "Amik Robertson — Q (reserve)"
   ],
-  "updated": "2026-11-18",
-  "lastSynced": "2026-11-18 10:16 AM PT"
+  "updated": "2026-11-25",
+  "lastSynced": "2026-11-25 10:40 AM PT"
 }
