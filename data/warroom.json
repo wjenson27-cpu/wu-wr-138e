@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-26T15:00:00-08:00",
-  "lastUpdated": "2026-11-26T15:00:00-08:00",
+  "asOf": "2026-11-27T15:10:00-08:00",
+  "lastUpdated": "2026-11-27T15:10:00-08:00",
   "season": 2026,
   "week": 12,
   "opponent": {
@@ -10,11 +10,11 @@
     "name": "Pocket Agents"
   },
   "freshness": {
-    "plan": "2026-11-26T15:00:00-08:00",
-    "roster": "2026-11-25T15:05:00-08:00",
-    "scores": "2026-11-25T15:05:00-08:00",
-    "waivers": "2026-11-25T15:00:00-08:00",
-    "news": "2026-11-26T14:50:00-08:00"
+    "plan": "2026-11-27T15:10:00-08:00",
+    "roster": "2026-11-27T14:55:00-08:00",
+    "scores": "2026-11-27T14:55:00-08:00",
+    "waivers": "2026-11-27T14:55:00-08:00",
+    "news": "2026-11-27T14:52:00-08:00"
   },
   "lockTimes": [
     {
@@ -57,7 +57,7 @@
       "pos": "QB",
       "nflTeam": "IND",
       "verdict": "START",
-      "reason": "vs NYG Sun 10 AM PT. Named IND starter after Daniel Jones release (Stephen Holder X). No 2026 stats: projection only. Swap to Purdy if Purdy practices and is not Doubtful/Out (needs a bench drop, e.g. Downs) before Sun 10 AM PT. 0.0 / 0.0 FP/G (season / last 3), W11 0.0, snaps W11 6% (3-wk 6%)",
+      "reason": "vs NYG Sun 10:00 AM PT. Purdy ruled out, so he starts. Steichen: \"great week of preparation.\" No 2026 stats: projection only.",
       "injury": "",
       "practice": ""
     },
@@ -87,8 +87,8 @@
       "pos": "TE",
       "nflTeam": "PHI",
       "verdict": "START",
-      "reason": "Thu @DAL 1:30 PM PT, locked. Hurt in 1st half, questionable to return (NBC Sports Philadelphia X). @DAL Thu 1:30 PM PT. 12.56 / 9.25 FP/G (season / last 3), W11 5.0, snaps W11 89% (3-wk 85%)",
-      "injury": "Shoulder: questionable to return Thu @DAL (in-game)",
+      "reason": "Played Thu, 2 pts, left 1st drive with shoulder; left stadium in a sling. W13 status unknown.",
+      "injury": "Shoulder (left in sling)",
       "practice": ""
     },
     {
@@ -117,7 +117,7 @@
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "SWAP",
-      "reason": "@SF Sun 1:25 PM PT. Swap for Bowers before 1:25 PM PT if Bowers is not ruled out Fri; else Coker. 8.67 / 10.5 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye/DNP) (3-wk 64%)",
+      "reason": "@SF Sun 1:25 PM PT (SF 6th vs RB). 8.67 / 10.5 FP/G, 64% 3-wk snaps. Bench for Bowers before 1:25 PM PT.",
       "injury": "",
       "practice": ""
     },
@@ -127,9 +127,9 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "SWAP",
-      "reason": "@CLE SNF. Limited Wed (ankle only; quad off report), Kubiak optimistic (Paul Gutierrez / Ryan McFadden X). Flex him over Charbonnet; if inactive at ~3:50 PM PT, Coker in. 25.69 / 19.0 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye/DNP) (3-wk 60%)",
+      "reason": "@CLE SNF 5:20 PM PT. Q after Fri DNP (Kubiak: \"we'll see\" on pregame workout). Still flex him over Charbonnet before Sun 1:25 PM PT; if inactive at ~3:50 PM PT, swap in Coker (MNF). 25.69 / 19.0 FP/G, 3-wk snaps 60%.",
       "injury": "Q (ankle)",
-      "practice": "Wed LP, Thu LP"
+      "practice": "Wed LP, Thu LP, Fri DNP"
     },
     {
       "slot": "BN",
@@ -166,10 +166,10 @@
       "player": "Brock Purdy",
       "pos": "QB",
       "nflTeam": "SF",
-      "verdict": "WATCH",
-      "reason": "vs SEA Sun 1:25 PM PT. DNP Wed (ankle), day-to-day; Maiocco: not high-ankle, expects him to play. 28.9 / 37.33 FP/G (season / last 3), W11 28.0, snaps W11 89% (3-wk 94%)",
-      "injury": "Ankle, IR slot",
-      "practice": "Wed DNP, Thu DNP"
+      "verdict": "SIT",
+      "reason": "Ruled OUT vs SEA (49ers injury report, Fri). Mac Jones starts. Stays on IR; Richardson is the QB.",
+      "injury": "OUT (ankle)",
+      "practice": "Wed DNP, Thu DNP, Fri ruled out"
     },
     {
       "slot": "IR",
@@ -284,22 +284,22 @@
   ],
   "injuryWatch": [
     {
-      "player": "Dallas Goedert",
-      "tag": "Shoulder (in-game), starting TE",
-      "practice": "n/a",
-      "note": "Questionable to return Thu vs DAL after 1st-half shoulder injury. Watch for W13 status."
-    },
-    {
       "player": "Brock Purdy",
-      "tag": "Ankle, IR slot",
-      "practice": "Wed DNP, Thu DNP",
-      "note": "Two straight DNPs; trending toward missing SEA game. Keep Richardson at QB unless Purdy practices Fri."
+      "tag": "OUT W12 (ankle), IR slot",
+      "practice": "DNP Wed/Thu, ruled out Fri",
+      "note": "Mac Jones starts vs SEA; Shanahan optimistic for W13 per reports. Keep Richardson at QB."
     },
     {
       "player": "Brock Bowers",
       "tag": "Q (ankle), bench",
-      "practice": "Wed LP, Thu LP",
-      "note": "Limited both days; swap in for Charbonnet before Sun 1:25 PM PT, Coker fallback."
+      "practice": "Wed LP, Thu LP, Fri DNP",
+      "note": "Downgrade Fri. Flex over Charbonnet before Sun 1:25 PM PT; Coker (MNF) fallback if inactive ~3:50 PM PT."
+    },
+    {
+      "player": "Dallas Goedert",
+      "tag": "Shoulder, game final (2 pts)",
+      "practice": "n/a",
+      "note": "Left PHI@DAL on 1st drive, in a sling after. Watch W13 TE plan."
     },
     {
       "player": "De'Zhaun Stribling",
@@ -321,29 +321,29 @@
   "waivers": [
     {
       "rank": 1,
-      "player": "Jadeveon Clowney",
+      "player": "Jaelan Phillips",
       "pos": "DL",
-      "nflTeam": "HOU",
-      "why": "ROS: free agent now (no bid). 80% W11 snaps; vs BAL OL (7.1% sack / 17% hit allowed, x1.06); DL8 weekly. Only if you want DL depth.",
-      "stats": "12.88 / 21.33 FP/G (season / last 3), W11 22.0, snaps W11 80% (3-wk 63%)",
+      "nflTeam": "CAR",
+      "why": "ROS: on waivers until Sat (Substation drop Thu). 86% 3-wk snaps; @TB MNF. DL depth behind Karlaftis only; low FAAB.",
+      "stats": "11.57 / 20.0 FP/G (season / last 3), W11 6.0, snaps W11 85% (3-wk 86%)",
       "faabMin": 0,
-      "faabMax": 0,
+      "faabMax": 1,
       "bid": 0,
       "drop": "Josh Downs",
       "tag": "LIKE"
     },
     {
       "rank": 2,
-      "player": "Myles Harden",
-      "pos": "DB",
-      "nflTeam": "CLE",
-      "why": "WEEKLY: free agent now. vs LV (x1.03), DB6 weekly model; 0 last wk was CLE bye.",
-      "stats": "13.0 / 25.5 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye/DNP) (3-wk 72%)",
+      "player": "Jadeveon Clowney",
+      "pos": "DL",
+      "nflTeam": "HOU",
+      "why": "ROS: free agent now. 80% W11 snaps; vs BAL Sun 10 AM PT. DL depth only.",
+      "stats": "12.88 / 21.33 FP/G (season / last 3), W11 22.0, snaps W11 80% (3-wk 63%)",
       "faabMin": 0,
       "faabMax": 0,
       "bid": 0,
       "drop": "Josh Downs",
-      "tag": "DART"
+      "tag": "LIKE"
     }
   ],
   "drops": [
@@ -542,59 +542,24 @@
   ],
   "news": [
     {
-      "source": "NBC Sports Philadelphia (X)",
-      "time": "2026-11-26T14:39:00-08:00",
-      "text": "Goedert questionable to return vs DAL with a shoulder injury. https://x.com/i/status/2126083492991623556"
+      "source": "49ers injury report via X",
+      "time": "2026-11-27T14:52:00-08:00",
+      "text": "Purdy ruled OUT vs SEA. https://x.com/i/status/2126449027432480829"
     },
     {
-      "source": "Eric Branch (X)",
-      "time": "2026-11-26T14:39:00-08:00",
-      "text": "Purdy did not practice Thursday, second straight absence. https://x.com/i/status/2126083420954726735"
+      "source": "Raiders beat (X)",
+      "time": "2026-11-27T12:36:00-08:00",
+      "text": "Bowers did not practice Fri, questionable for SNF; Kubiak \"we'll see\" on pregame workout. https://x.com/i/status/2126415000151712163"
     },
     {
-      "source": "Sam Warren (X)",
-      "time": "2026-11-26T14:08:00-08:00",
-      "text": "Bowers (ankle) limited again Thursday. https://x.com/i/status/2126075546794922268"
+      "source": "X post citing @DZangaroNBCS / @ReinerOlivia",
+      "time": "2026-11-27T09:04:00-08:00",
+      "text": "Goedert (shoulder) left in a sling. https://x.com/i/status/2126361485118939200"
     },
     {
-      "source": "PhlySprtsReprts (X)",
-      "time": "2026-11-26T14:41:00-08:00",
-      "text": "Saquon Barkley (stinger) also questionable to return (Pocket Agents RB). https://x.com/i/status/2126084000322355476"
-    },
-    {
-      "source": "Fantrax",
-      "time": "2026-11-26T14:52:00-08:00",
-      "text": "Fantrax app not connecting (STALE_CONNECT) at 5:58 AM and 2:50 PM PT; roster/scores/FAAB/FA pool from Nov 25 PM read."
-    },
-    {
-      "source": "49ersSportsTalk / Matt Maiocco (X)",
-      "time": "2026-11-25T14:11:00-08:00",
-      "text": "Purdy ankle not a high-ankle sprain; Maiocco believes he will play vs SEA. https://x.com/i/status/2125714007621283859"
-    },
-    {
-      "source": "49ersSportsTalk (X)",
-      "time": "2026-11-25T14:02:00-08:00",
-      "text": "Mac Jones getting QB1 reps; Purdy day-to-day (ankle). https://x.com/i/status/2125711829922103331"
-    },
-    {
-      "source": "Paul Gutierrez (X)",
-      "time": "2026-11-25T14:21:00-08:00",
-      "text": "Bowers (ankle) limited Wednesday. https://x.com/i/status/2125716505841279242"
-    },
-    {
-      "source": "Ryan McFadden (X)",
-      "time": "2026-11-25T14:13:00-08:00",
-      "text": "Bowers limited; quad no longer listed. https://x.com/i/status/2125714528705167678"
-    },
-    {
-      "source": "Stephen Holder (X)",
-      "time": "2026-11-25T12:55:00-08:00",
-      "text": "Anthony Richardson promoted to Colts QB1 after Daniel Jones was waived. https://x.com/i/status/2125694950058635679"
-    },
-    {
-      "source": "Fantrax",
-      "time": "2026-11-25T12:52:00-08:00",
-      "text": "Trade: Eddies sent Cole Bishop to Little Ass Boys for Dylan Sampson (no FAAB). Eddies +Boutte 10:47 AM, -Mayer 1:21 PM, +A. Richardson 1:24 PM."
+      "source": "Colts beat (X)",
+      "time": "2026-11-27T11:14:00-08:00",
+      "text": "Steichen on Richardson: great week of preparation. https://x.com/i/status/2126394190028472825"
     }
   ]
 }
