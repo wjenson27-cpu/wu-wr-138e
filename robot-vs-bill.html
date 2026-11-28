@@ -1,64 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-brand="wu-hq">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
-<meta name="theme-color" content="#002244">
+<meta name="theme-color" content="#061428">
 <title>Robot vs. The Eddies</title>
 <link rel="icon" href="img/eddies.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/hq-tokens.css">
 <link rel="stylesheet" href="css/warroom.css">
+<link rel="stylesheet" href="css/arrival.css">
 <style>
 body.rv{overflow-x:hidden}
 .rv .hdr > div:not(.tools){flex:1;min-width:0}
 .rv .tools{flex:0 0 auto}
 .rv h1{font-size:.98rem;line-height:1.15}
 .rv .sub{line-height:1.35}
-.rv .sub a{color:#69BE28;text-decoration:none;white-space:nowrap}
+.rv .sub a{color:var(--ds-accent);text-decoration:none;white-space:nowrap}
 .rv .badge.wait{background:#78350f;color:#fcd34d}
 .rv-main{max-width:640px;margin:0 auto;padding:10px 12px 28px}
 .rv-tally h2,.rv-card h2,.rv-hist-title{font-size:.95rem;margin:0}
 .rv-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}
 .rv-head h2{min-width:0;overflow-wrap:anywhere}
 .rv-score{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px;align-items:end}
-.rv-score span{display:block;font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#A5ACAF}
-.rv-score b{display:block;font-size:1.45rem;font-weight:800;color:#69BE28;letter-spacing:-.03em;line-height:1.05}
+.rv-score span{display:block;font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--ds-text-muted)}
+.rv-score b{display:block;font-size:1.45rem;font-weight:800;color:var(--ds-accent);letter-spacing:-.03em;line-height:1.05}
 .rv-right{text-align:right}
-.rv-right b{color:#7eb6ff}
-.rv-mid{font-size:.72rem;font-weight:800;color:#64748b;padding-bottom:6px}
+.rv-right b{color:var(--ds-blue-300)}
+.rv-mid{font-size:.72rem;font-weight:800;color:var(--ds-nav-inactive);padding-bottom:6px}
 .rv-sub{font-size:.75rem;color:#cbd5e1;margin:8px 0}
 .rv-empty{font-size:.84rem;line-height:1.4;margin:8px 0}
 .rv-chips{display:flex;flex-wrap:wrap;gap:4px}
-.rv-chips span{font-size:.62rem;font-weight:800;padding:3px 6px;border-radius:99px;background:#061018;color:#A5ACAF}
+.rv-chips span{font-size:.62rem;font-weight:800;padding:3px 6px;border-radius:99px;background:var(--ds-bg);color:var(--ds-text-muted)}
 .rv-pill{font-size:.6rem;font-weight:800;padding:2px 6px;border-radius:99px;background:#1e293b;color:#cbd5e1;flex-shrink:0}
 .rv-pill.win,.rv-pill.final{background:#14532d;color:#86efac}
-.rv-pill.loss{background:#1e3a5f;color:#93c5fd}
+.rv-pill.loss{background:var(--ds-border);color:#93c5fd}
 .rv-pill.tie{background:#1e293b;color:#cbd5e1}
 .rv-pill.pending{background:#78350f;color:#fcd34d}
 .rv-card h3,.rv-dec{font-size:.72rem}
-.rv-card h3{margin:12px 0 6px;color:#A5ACAF;text-transform:uppercase;letter-spacing:.04em;font-size:.68rem}
-.rv-caption{font-weight:700;color:#64748b;text-transform:none;letter-spacing:0}
-.rv-slot,.rv-dec{background:#061018;border-radius:8px;padding:8px 8px 4px;margin-bottom:6px;border-left:3px solid #1e3a5f}
+.rv-card h3{margin:12px 0 6px;color:var(--ds-text-muted);text-transform:uppercase;letter-spacing:.04em;font-size:.68rem}
+.rv-caption{font-weight:700;color:var(--ds-nav-inactive);text-transform:none;letter-spacing:0}
+.rv-slot,.rv-dec{background:var(--ds-bg);border-radius:8px;padding:8px 8px 4px;margin-bottom:6px;border-left:3px solid var(--ds-border)}
 .rv-slot.differ,.rv-dec{border-left-color:#fbbf24;background:#1a1408}
-.rv-slot-h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#A5ACAF}
+.rv-slot-h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--ds-text-muted)}
 .rv-flag{display:inline-block;background:#78350f;color:#fcd34d;border-radius:4px;padding:1px 4px;letter-spacing:.03em}
 .rv-side{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"tag pts" "who pts";column-gap:8px;align-items:center;padding:4px 0}
-.rv-side + .rv-side{border-top:1px solid #122334}
-.rv-tag{grid-area:tag;font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#69BE28}
-.rv-side.eddies .rv-tag{color:#7eb6ff}
+.rv-side + .rv-side{border-top:1px solid var(--wr-rule)}
+.rv-tag{grid-area:tag;font-size:.58rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--ds-accent)}
+.rv-side.eddies .rv-tag{color:var(--ds-blue-300)}
 .rv-who{grid-area:who;min-width:0}
 .rv-player{display:block;font-weight:700;font-size:.86rem;line-height:1.2;overflow-wrap:anywhere}
-.rv-player.muted{color:#64748b;font-weight:700}
-.rv-meta{display:block;font-size:.62rem;color:#A5ACAF;line-height:1.3}
+.rv-player.muted{color:var(--ds-nav-inactive);font-weight:700}
+.rv-meta{display:block;font-size:.62rem;color:var(--ds-text-muted);line-height:1.3}
 .rv-pad{padding:0 0 4px}
-.rv-pts{grid-area:pts;font-size:.95rem;font-weight:800;color:#e8eaed;white-space:nowrap}
+.rv-pts{grid-area:pts;font-size:.95rem;font-weight:800;color:var(--ds-text);white-space:nowrap}
 .rv-swing{font-size:.72rem;font-weight:800;letter-spacing:0;text-transform:none}
-.rv-swing.up{color:#69BE28}
+.rv-swing.up{color:var(--ds-accent)}
 .rv-swing.down{color:#f87171}
-.rv-swing.flat{color:#A5ACAF}
+.rv-swing.flat{color:var(--ds-text-muted)}
 .rv-hist-title{margin:4px 0 8px}
-.rv-history .card{border-left-color:#1e3a5f}
+.rv-history .card{border-left-color:var(--ds-border)}
 @media (max-width:389px){
   .rv-main{padding:8px 8px 24px}
   .rv h1{font-size:.9rem}
@@ -84,6 +89,7 @@ body.rv{overflow-x:hidden}
 <main class="rv-main" id="root"></main>
 <p class="footer">Robot vs. The Eddies · read-only scoreboard · times PT</p>
 <script src="js/robot-scoreboard.js"></script>
+<script src="js/arrival.js"></script>
 <script>
 (function () {
   var escMap = {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"};
@@ -115,7 +121,17 @@ body.rv{overflow-x:hidden}
     bits.push(week.statusLabel);
     bits.push("times PT");
     $("strip").textContent = bits.join(" · ");
-    $("root").innerHTML = WURobot.render(model);
+    var flight = window.WUArrival ? WUArrival.flightCode(week.week) : ("WU" + week.week);
+    var kind = !week.locked ? "delayed" : (week.status === "final" ? "final" : "ontime");
+    var head = window.WUArrival ? WUArrival.matchup({
+      flight: flight,
+      gate: "EDD",
+      statusLabel: badge,
+      statusKind: kind,
+      body: "<p class=\"tiny\" style=\"margin:0\">" + esc(bits.join(" · ")) + "</p>"
+    }) : "";
+    var when = week.lockLabel && week.lockLabel !== "Not yet locked" ? week.lockLabel : "";
+    $("root").innerHTML = (window.WUArrival ? WUArrival.stamp(when) : "") + head + WURobot.render(model);
   }
 
   function fail() {

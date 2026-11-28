@@ -25,6 +25,19 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
 
+  function flaps(value, extra) {
+    return window.WUArrival ? WUArrival.flaps(value, extra) : esc(value);
+  }
+
+  function stamp(value) {
+    return window.WUArrival ? WUArrival.stamp(value) : "";
+  }
+
+  function freshOf(key) {
+    var bag = state.plan && state.plan.freshness;
+    return (bag && bag[key]) || "";
+  }
+
   function parseTime(value) {
     if (!value) return null;
     var direct = Date.parse(value);
@@ -195,33 +208,45 @@
     var plan = state.plan || {};
     var sample = !!plan.sample;
     var bad = stale();
-    var stamp = planStamp();
-    var html = "";
+    var when = planStamp();
+    var html = stamp(plan.asOf || freshOf("plan") || when);
     if (sample) html += '<div class="banner">Sample plan. Eddie has not filled this week yet.</div>';
-    html += '<div class="card"><div class="statgrid">';
-    html += '<div class="stat"><span>Week</span><b>' + esc(state.week) + "</b></div>";
-    html += '<div class="stat"><span>Eddies</span><b>' + esc(me.record || "—") + "</b></div>";
-    html += '<div class="stat"><span>Opponent</span><b>' + esc(opp.name) + "</b><span>" + esc(opp.record || "") + "</span></div>";
-    html += '<div class="stat"><span>FAAB</span><b>' + (faabLeft() == null ? "—" : "$" + esc(faabLeft())) + "</b></div>";
-    html += "</div>";
+    var gateTeam = teamById(opp.id);
+    var gate = (gateTeam && gateTeam.abbrev) || (window.WUArrival ? WUArrival.code(opp.name, 3) : "VS");
+    var statusLabel = sample ? "SAMPLE" : (bad ? "STALE" : "FRESH");
+    var statusKind = sample || bad ? "delayed" : "ontime";
+    var body = '<div class="statgrid">';
+    body += '<div class="stat"><span>Week</span><b>' + flaps(state.week, "is-hero") + "</b></div>";
+    body += '<div class="stat"><span>Eddies</span><b>' + flaps(me.record || "—", "is-hero") + "</b></div>";
+    body += '<div class="stat"><span>Opponent</span><b>' + esc(opp.name) + "</b><span>" + esc(opp.record || "") + "</span></div>";
+    body += '<div class="stat"><span>FAAB</span><b>' + flaps(faabLeft() == null ? "—" : "$" + faabLeft(), "is-hero") + "</b></div>";
+    body += "</div>";
     if (score) {
-      html += '<p class="scoreline" style="margin-top:10px">' + esc(score.mine) + ' <em>vs</em> ' + esc(score.theirs) +
-        ' <em>' + esc(score.status || "") + "</em></p>";
+      var scoreKind = String(score.status || "").toLowerCase() === "final" ? "final" : (String(score.status || "").toLowerCase() === "live" ? "ontime" : "delayed");
+      body += '<p class="scoreline" style="margin-top:10px">' + flaps(score.mine, "is-hero is-win") + ' <em>vs</em> ' +
+        flaps(score.theirs, "is-hero") + " " + (window.WUArrival ? WUArrival.chip(score.status || "", scoreKind) : esc(score.status || "")) + "</p>";
     } else {
-      html += '<p class="tiny" style="margin-top:8px">No score posted for this week yet.</p>';
+      body += '<p class="tiny" style="margin-top:8px">No score posted for this week yet.</p>';
     }
-    html += '<p style="margin-top:8px">Claims <b id="claimsBig">' + esc(WUWeek.countdown(WUWeek.nextWaiver(new Date()), new Date())) +
+    body += '<p style="margin-top:8px">Claims <b id="claimsBig">' + esc(WUWeek.countdown(WUWeek.nextWaiver(new Date()), new Date())) +
       '</b> <span class="tiny">until Wed 9:00 AM PT</span></p>';
-    html += '<p class="tiny">Updated ' + esc(fmtPt(stamp) || "—") +
-      (bad ? ' <span class="badge stale">STALE</span>' : ' <span class="badge ok">FRESH</span>') +
-      (sample ? ' <span class="badge sample">SAMPLE</span>' : "") + "</p>";
+    if (window.WUArrival) {
+      html += WUArrival.matchup({
+        flight: WUArrival.flightCode(state.week),
+        gate: gate,
+        statusLabel: statusLabel,
+        statusKind: statusKind,
+        body: body
+      });
+    } else {
+      html += '<div class="card">' + body + "</div>";
+    }
     var locks = plan.lockTimes || [];
     if (locks.length) {
       html += '<p class="tiny">' + locks.map(function (l) {
         return esc(l.label) + " " + esc(fmtPt(parseTime(l.at)) || l.at || "");
       }).join(" · ") + "</p>";
     }
-    html += "</div>";
 
     var lineup = plan.lineup || [];
     ["START", "SWAP", "WATCH", "SIT"].forEach(function (group) {
@@ -263,7 +288,7 @@
 
   function renderRoster() {
     var rows = rosterRows();
-    var html = "";
+    var html = stamp(freshOf("roster") || (state.eddies && (state.eddies.asOf || state.eddies.updated)));
     if (!rows.length) {
       $("proster").innerHTML = '<div class="card"><p>Roster did not load.</p></div>';
       return;
@@ -289,7 +314,7 @@
     var rows = (state.plan && state.plan.waivers) || [];
     var drops = (state.plan && state.plan.drops) || [];
     var ideas = (state.plan && state.plan.trades) || [];
-    var html = "";
+    var html = stamp(freshOf("waivers") || (state.plan && state.plan.asOf));
     if (state.plan && state.plan.sample) html += '<div class="banner">Sample bid sheet. Eddie has not filled this week yet.</div>';
     html += window.WUGreen ? WUGreen.note(state.greenDots) : "";
     html += '<div class="scroll"><table class="sheet"><thead><tr><th>#</th><th>Player</th><th>Why</th><th>Recent</th><th>FAAB</th><th>Bid</th><th>Drop</th><th></th></tr></thead><tbody>';
@@ -320,7 +345,7 @@
   function renderIdp() {
     var plan = state.plan || {};
     var dots = state.greenDots;
-    var html = "";
+    var html = stamp(dots && dots.asOf);
     html += window.WUGreen ? WUGreen.note(dots) : "";
     html += '<div class="card"><h3>Green-dot tracker</h3>';
     if (dots && dots.fresh) {
@@ -356,7 +381,7 @@
 
   function renderNews() {
     var items = (state.plan && state.plan.news) || [];
-    var html = "";
+    var html = stamp(freshOf("news") || (state.plan && state.plan.asOf));
     if (state.plan && state.plan.sample) html += '<div class="banner">Sample wire. Eddie has not filled this week yet.</div>';
     if (!items.length) html += '<div class="card"><p>No news yet.</p></div>';
     items.forEach(function (n) {
@@ -370,11 +395,19 @@
     var teams = ((state.teamsDoc && state.teamsDoc.teams) || []).slice().sort(function (a, b) {
       return (a.standingsRank || 99) - (b.standingsRank || 99);
     });
-    var html = '<div class="scroll"><table class="sheet"><thead><tr><th>#</th><th>Team</th><th>W-L</th><th>PF</th><th>PA</th><th>FAAB</th></tr></thead><tbody>';
+    var leagueWhen = window.WUArrival ? WUArrival.newest([
+      state.teamsDoc && state.teamsDoc.updated,
+      state.scores && (state.scores.asOf || state.scores.updated),
+      state.faab && state.faab.updated,
+      state.tx && state.tx.updated,
+      state.trades && state.trades.updated
+    ]) : "";
+    var html = stamp(leagueWhen);
+    html += '<div class="sec">Standings</div><div class="scroll"><table class="sheet"><thead><tr><th>#</th><th>Club</th><th>W-L</th><th>PF</th><th>PA</th><th>FAAB</th></tr></thead><tbody>';
     teams.forEach(function (t) {
-      var mine = t.id === "eddies" ? ' style="background:#0c2416"' : "";
+      var mine = t.id === "eddies" ? ' class="mine"' : "";
       html += "<tr" + mine + "><td>" + esc(t.standingsRank) + "</td><td><b>" + esc(t.name) + "</b><div class=\"tiny\">" + esc(t.owner) +
-        "</div></td><td>" + esc(t.record) + "</td><td>" + esc(t.pointsFor) + "</td><td>" + esc(t.pointsAgainst) + "</td><td>$" + esc(t.faab) + "</td></tr>";
+        "</div></td><td>" + esc(t.record || "—") + "</td><td>" + esc(t.pointsFor) + "</td><td>" + esc(t.pointsAgainst) + "</td><td>$" + esc(t.faab) + "</td></tr>";
     });
     html += "</tbody></table></div>";
     var moves = ((state.tx && state.tx.items) || []).slice().sort(function (a, b) {
@@ -406,8 +439,12 @@
     badges.innerHTML = (sample ? '<span class="badge sample">SAMPLE</span>' : "") + (bad ? '<span class="badge stale">STALE</span>' : "");
     var score = liveScore();
     var scoreBit = score ? " · " + score.mine + "–" + score.theirs : "";
-    $("strip").innerHTML = "Week " + esc(state.week) + " · " + esc(me.record || "—") + " vs " + esc(opp.name) + " " + esc(opp.record || "") +
-      esc(scoreBit) + " · FAAB " + (faabLeft() == null ? "—" : "$" + esc(faabLeft())) + ' · <span id="claims"></span>';
+    var gateTeam = teamById(opp.id);
+    var gate = (gateTeam && gateTeam.abbrev) || opp.name;
+    $("strip").innerHTML = "Flight <span>" + esc(window.WUArrival ? WUArrival.flightCode(state.week) : ("WU" + state.week)) +
+      "</span> · Gate <span>" + esc(gate) + "</span> · <span class=\"nowrap\">" + esc(me.record || "—") + "</span> vs " + esc(opp.name) +
+      " <span class=\"nowrap\">" + esc(opp.record || "") + "</span>" +
+      esc(scoreBit) + " · FAAB <span class=\"nowrap\">" + (faabLeft() == null ? "—" : "$" + esc(faabLeft())) + '</span> · <span id="claims"></span>';
     tick();
   }
 

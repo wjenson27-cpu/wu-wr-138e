@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-brand="wu-hq">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
-<meta name="theme-color" content="#002244">
+<meta name="theme-color" content="#061428">
 <title>Eddies War Room</title>
 <link rel="icon" href="img/eddies.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/hq-tokens.css">
 <link rel="stylesheet" href="css/warroom.css">
+<link rel="stylesheet" href="css/arrival.css">
 </head>
 <body>
 <div class="sticky-top">
@@ -23,6 +28,7 @@
   </div>
 </header>
 <div class="strip" id="strip">Loading the week…</div>
+<div class="tabbar" data-tabs>
 <nav>
   <button type="button" class="active" data-p="pweek">This Week</button>
   <button type="button" data-p="prankings">Rankings</button>
@@ -38,6 +44,7 @@
   <a class="navlink" href="contingency.html">Contingency</a>
   <a class="navlink" href="idp.html">IDP Rankings</a>
 </nav>
+</div>
 </div>
 <main>
   <section class="panel active" id="pweek"></section>
@@ -69,6 +76,7 @@
 <script src="js/green-dots.js"></script>
 <script src="js/rankings.js"></script>
 <script src="js/trade.js"></script>
+<script src="js/arrival.js"></script>
 <script src="js/warroom.js"></script>
 </body>
 </html>

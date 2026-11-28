@@ -239,7 +239,7 @@
   }
 
   function summaryHtml(board, rows, appWeek, lookup) {
-    var html = "";
+    var html = window.WUArrival ? WUArrival.stamp(board.asOf) : "";
     if (appWeek && board.week && Number(appWeek) !== Number(board.week)) {
       html += '<div class="banner">This board is Week ' + esc(board.week) + ". The War Room week is " + esc(appWeek) + ".</div>";
     }
@@ -316,7 +316,8 @@
     var used = {};
     plan.starters.forEach(function (slot) { used[slot.player.name] = slot.slot; });
     var html = '<div class="card rk-start"><h2>Start / sit for Eddies</h2>';
-    html += '<p class="scoreline">' + esc((Math.round(plan.total * 10) / 10).toFixed(1)) + '</p><p class="tiny">Best lineup from this week\'s consensus. Questionable and doubtful can start. Out, IR, reserve, and bye cannot.</p>';
+    var totalTxt = (Math.round(plan.total * 10) / 10).toFixed(1);
+    html += '<p class="scoreline">' + (window.WUArrival ? WUArrival.flaps(totalTxt, "is-hero is-win") : esc(totalTxt)) + '</p><p class="tiny">Best lineup from this week\'s consensus. Questionable and doubtful can start. Out, IR, reserve, and bye cannot.</p>';
     html += plan.starters.map(function (slot) {
       var p = slot.player;
       var tag = p.injury && !hardOut(p.injury) ? " " + p.injury : "";
