@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "asOf": "2026-11-27T15:10:00-08:00",
-  "lastUpdated": "2026-11-27T15:10:00-08:00",
+  "asOf": "2026-11-28T06:30:00-08:00",
+  "lastUpdated": "2026-11-28T06:30:00-08:00",
   "season": 2026,
   "week": 12,
   "opponent": {
@@ -10,8 +10,8 @@
     "name": "Pocket Agents"
   },
   "freshness": {
-    "plan": "2026-11-27T15:10:00-08:00",
-    "roster": "2026-11-27T14:55:00-08:00",
+    "plan": "2026-11-28T06:30:00-08:00",
+    "roster": "2026-11-28T05:55:00-08:00",
     "scores": "2026-11-27T14:55:00-08:00",
     "waivers": "2026-11-27T14:55:00-08:00",
     "news": "2026-11-27T14:52:00-08:00"
@@ -30,7 +30,7 @@
       "at": "2026-11-26T17:20:00-08:00"
     },
     {
-      "label": "Sun 10:00 AM PT (Richardson, Hall, Nabers, Dike, G. Wilson, Hamilton, Simpson, Gray, Brooks, Boutte)",
+      "label": "Sun 10:00 AM PT (McCarthy, Hall, Nabers, Dike, G. Wilson, Hamilton, Simpson, Gray, Brooks, Boutte)",
       "at": "2026-11-29T10:00:00-08:00"
     },
     {
@@ -53,11 +53,11 @@
   "lineup": [
     {
       "slot": "QB",
-      "player": "Anthony Richardson",
+      "player": "J.J. McCarthy",
       "pos": "QB",
-      "nflTeam": "IND",
+      "nflTeam": "NYG",
       "verdict": "START",
-      "reason": "vs NYG Sun 10:00 AM PT. Purdy ruled out, so he starts. Steichen: \"great week of preparation.\" No 2026 stats: projection only.",
+      "reason": "@IND Sun 10:00 AM PT (IND 25th vs QB). 12.33 / 16.0 FP/G (season / last 3), W11 18.0, snaps W11 93% (3-wk 88%).",
       "injury": "",
       "practice": ""
     },
@@ -87,7 +87,7 @@
       "pos": "TE",
       "nflTeam": "PHI",
       "verdict": "START",
-      "reason": "Played Thu, 2 pts, left 1st drive with shoulder; left stadium in a sling. W13 status unknown.",
+      "reason": "Played Thu (final), 2 pts; left 1st drive with shoulder, left stadium in a sling. Locked for W12. W13 status unknown.",
       "injury": "Shoulder (left in sling)",
       "practice": ""
     },
@@ -117,7 +117,7 @@
       "pos": "RB",
       "nflTeam": "SEA",
       "verdict": "SWAP",
-      "reason": "@SF Sun 1:25 PM PT (SF 6th vs RB). 8.67 / 10.5 FP/G, 64% 3-wk snaps. Bench for Bowers before 1:25 PM PT.",
+      "reason": "RECOMMENDATION (not done): bench for Bowers before Sun 1:25 PM PT. @SF Sun 1:25 PM PT (SF 6th vs RB). 8.67 / 10.5 FP/G, 64% 3-wk snaps.",
       "injury": "",
       "practice": ""
     },
@@ -127,7 +127,7 @@
       "pos": "TE",
       "nflTeam": "LV",
       "verdict": "SWAP",
-      "reason": "@CLE SNF 5:20 PM PT. Q after Fri DNP (Kubiak: \"we'll see\" on pregame workout). Still flex him over Charbonnet before Sun 1:25 PM PT; if inactive at ~3:50 PM PT, swap in Coker (MNF). 25.69 / 19.0 FP/G, 3-wk snaps 60%.",
+      "reason": "RECOMMENDATION (not done): flex him over Charbonnet before Sun 1:25 PM PT; if inactive at ~3:50 PM PT, swap in Coker (MNF). @CLE SNF 5:20 PM PT. Q after Fri DNP (Kubiak: \"we'll see\" on pregame workout). 25.69 / 19.0 FP/G, 3-wk snaps 60%.",
       "injury": "Q (ankle)",
       "practice": "Wed LP, Thu LP, Fri DNP"
     },
@@ -137,7 +137,7 @@
       "pos": "WR",
       "nflTeam": "CAR",
       "verdict": "SIT",
-      "reason": "@TB MNF; fallback flex. 11.78 / 7.0 FP/G (season / last 3), W11 8.0, snaps W11 85% (3-wk 82%)",
+      "reason": "@TB MNF 5:15 PM PT; fallback flex only if Bowers is inactive (~3:50 PM PT). 11.78 / 7.0 FP/G (season / last 3), W11 8.0, snaps W11 85% (3-wk 82%)",
       "injury": "",
       "practice": ""
     },
@@ -157,7 +157,7 @@
       "pos": "WR",
       "nflTeam": "KC",
       "verdict": "SIT",
-      "reason": "20% 3-wk snaps; first drop if Purdy returns from IR. 9.0 / 10.0 FP/G (season / last 3), W11 9.0, snaps W11 24% (3-wk 20%)",
+      "reason": "Played Thu (KC 10 @ BUF 13, final). 20% 3-wk snaps; first drop candidate. 8.5 / 10.0 FP/G (season / last 3), W11 9.0, snaps W11 24% (3-wk 20%)",
       "injury": "",
       "practice": ""
     },
@@ -167,7 +167,7 @@
       "pos": "QB",
       "nflTeam": "SF",
       "verdict": "SIT",
-      "reason": "Ruled OUT vs SEA (49ers injury report, Fri). Mac Jones starts. Stays on IR; Richardson is the QB.",
+      "reason": "Ruled OUT vs SEA (49ers injury report, Fri). Mac Jones starts. Stays on IR; McCarthy is the QB.",
       "injury": "OUT (ankle)",
       "practice": "Wed DNP, Thu DNP, Fri ruled out"
     },
@@ -197,7 +197,7 @@
       "pos": "DL",
       "nflTeam": "KC",
       "verdict": "START",
-      "reason": "@BUF Thu 5:20 PM PT; DL5 weekly / DL2 ROS; BUF OL tough (x0.92). 23.8 / 33.33 FP/G (season / last 3), W11 37.0, snaps W11 61% (3-wk 75%)",
+      "reason": "Played Thu @BUF (final); locked for W12. 23.8 / 33.33 FP/G (season / last 3), W11 37.0, snaps W11 61% (3-wk 75%)",
       "injury": "",
       "practice": ""
     },
@@ -227,7 +227,7 @@
       "pos": "DB",
       "nflTeam": "GB",
       "verdict": "START",
-      "reason": "@LA Wed 5 PM PT; DB1 weekly; 0 last wk was GB bye. 23.9 / 18.5 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye/DNP) (3-wk 98%)",
+      "reason": "Played Wed @LA (final); locked for W12. DB1 weekly. 23.9 / 18.5 FP/G (season / last 3), 3-wk snaps 98%.",
       "injury": "",
       "practice": ""
     },
@@ -256,8 +256,8 @@
       "player": "Quentin Lake",
       "pos": "DB",
       "nflTeam": "LAR",
-      "verdict": "SWAP",
-      "reason": "vs GB Wed 5 PM PT; model 16.6 vs Simpson 19.1 (projection only); close call, lean Simpson. 19.6 / 9.5 FP/G (season / last 3), W11 0.0, snaps W11 n/a (bye/DNP) (3-wk 100%)",
+      "verdict": "START",
+      "reason": "Played Wed (GB 13 @ LAR 26, final); stayed in the IDP slot, locked for W12. 19.09 / 9.5 FP/G (season / last 3), 3-wk snaps 100%.",
       "injury": "",
       "practice": ""
     },
@@ -266,8 +266,8 @@
       "player": "Trenton Simpson",
       "pos": "LB",
       "nflTeam": "BAL",
-      "verdict": "SWAP",
-      "reason": "@HOU; full-time per Woellert; 85% W11 snaps. Swap in for Lake before Wed 5 PM PT. 17.73 / 17.67 FP/G (season / last 3), W11 21.0, snaps W11 85% (3-wk 75%)",
+      "verdict": "SIT",
+      "reason": "Bench for W12 (Lake started Wed and is locked). @HOU Sun 10 AM PT. 17.73 / 17.67 FP/G (season / last 3), W11 21.0, snaps W11 85% (3-wk 75%)",
       "injury": "",
       "practice": ""
     },
@@ -287,17 +287,17 @@
       "player": "Brock Purdy",
       "tag": "OUT W12 (ankle), IR slot",
       "practice": "DNP Wed/Thu, ruled out Fri",
-      "note": "Mac Jones starts vs SEA; Shanahan optimistic for W13 per reports. Keep Richardson at QB."
+      "note": "Mac Jones starts vs SEA; Shanahan optimistic for W13 per reports. McCarthy is the W12 QB."
     },
     {
       "player": "Brock Bowers",
       "tag": "Q (ankle), bench",
       "practice": "Wed LP, Thu LP, Fri DNP",
-      "note": "Downgrade Fri. Flex over Charbonnet before Sun 1:25 PM PT; Coker (MNF) fallback if inactive ~3:50 PM PT."
+      "note": "Downgraded Fri. Recommendation (needs your yes): flex over Charbonnet before Sun 1:25 PM PT; Coker (MNF) fallback if inactive ~3:50 PM PT."
     },
     {
       "player": "Dallas Goedert",
-      "tag": "Shoulder, game final (2 pts)",
+      "tag": "Shoulder, W12 game final (2 pts); W13 status unknown",
       "practice": "n/a",
       "note": "Left PHI@DAL on 1st drive, in a sling after. Watch W13 TE plan."
     },
@@ -365,12 +365,12 @@
     {
       "nflTeam": "ARI",
       "greenDot": "Mack Wilson",
-      "notes": "W10: Mack Wilson has the green dot and a three-down role. He took advantage of a great matchup and had 10 tackles this week; resulting in a 13.5% tackle rate. He has 27 tackles and a 10.3% tackle rate over his last 4 games. That rate is lower than I\u2019d like for a\u2026"
+      "notes": "W10: Mack Wilson has the green dot and a three-down role. He took advantage of a great matchup and had 10 tackles this week; resulting in a 13.5% tackle rate. He has 27 tackles and a 10.3% tackle rate over his last 4 games. That rate is lower than I’d like for a…"
     },
     {
       "nflTeam": "ATL",
       "greenDot": "Kendal Daniels",
-      "notes": "W10: Divine Deablo was inactive with his arm injury, and Kendal Daniels wore the green dot and was on the field for 100% of the snaps. Daniels had 8 tackles this week, and 40 tackles and a 16.9% tackle rate over his last 4 games. Harold Perkins was in a rotation\u2026"
+      "notes": "W10: Divine Deablo was inactive with his arm injury, and Kendal Daniels wore the green dot and was on the field for 100% of the snaps. Daniels had 8 tackles this week, and 40 tackles and a 16.9% tackle rate over his last 4 games. Harold Perkins was in a rotation…"
     },
     {
       "nflTeam": "BAL",
@@ -380,12 +380,12 @@
     {
       "nflTeam": "BUF",
       "greenDot": "Terrel Bernard",
-      "notes": "W10: Terrel Bernard played 58 snaps and wore the green dot. He was off the field for 10 snaps, and Kaleb Elarms-Orr wore the dot for those. Elarms-Orr and Bernard shared the field for 14 snaps, and Bernard wore the dot on those. Bernard had 8 tackles this week and\u2026"
+      "notes": "W10: Terrel Bernard played 58 snaps and wore the green dot. He was off the field for 10 snaps, and Kaleb Elarms-Orr wore the dot for those. Elarms-Orr and Bernard shared the field for 14 snaps, and Bernard wore the dot on those. Bernard had 8 tackles this week and…"
     },
     {
       "nflTeam": "CAR",
       "greenDot": "Devin Lloyd",
-      "notes": "W10: Bobby Okereke was inactive and Tyrel Dodson got the start. Devin Lloyd missed 4 snaps with a concussion, but he was cleared to return. Lloyd played 93% of the snaps, and he had 9 tackles this week and a 15.8% tackle rate. Over his last 4 games he had 28\u2026"
+      "notes": "W10: Bobby Okereke was inactive and Tyrel Dodson got the start. Devin Lloyd missed 4 snaps with a concussion, but he was cleared to return. Lloyd played 93% of the snaps, and he had 9 tackles this week and a 15.8% tackle rate. Over his last 4 games he had 28…"
     },
     {
       "nflTeam": "CHI",
@@ -395,17 +395,17 @@
     {
       "nflTeam": "CIN",
       "greenDot": "Barrett Carter",
-      "notes": "W10: Barrett Carter had the green dot and was on the field for 100% of the snaps, all 59 of them. He had 6 tackles and a 10.2% tackle rate this week, and 33 tackles and a 13.4% tackle rate over his last 4 games. Carter had 37 coverage snaps and was targeted once,\u2026"
+      "notes": "W10: Barrett Carter had the green dot and was on the field for 100% of the snaps, all 59 of them. He had 6 tackles and a 10.2% tackle rate this week, and 33 tackles and a 13.4% tackle rate over his last 4 games. Carter had 37 coverage snaps and was targeted once,…"
     },
     {
       "nflTeam": "CLE",
       "greenDot": "Carson Schwesinger",
-      "notes": "W10: Carson Schwesinger had the green dot and a three-down role. He had 13 tackles this week and a 20.6% tackle rate. Schwesinger has 46 tackles and an 18% tackle rate over his last 4 games. Quincy Williams had 9 tackles and a 15.5% tackle rate this week and\u2026"
+      "notes": "W10: Carson Schwesinger had the green dot and a three-down role. He had 13 tackles this week and a 20.6% tackle rate. Schwesinger has 46 tackles and an 18% tackle rate over his last 4 games. Quincy Williams had 9 tackles and a 15.5% tackle rate this week and…"
     },
     {
       "nflTeam": "DAL",
       "greenDot": "Shemar James",
-      "notes": "W10: Shemar James had the green dot and a three-down role. He had 5 tackles this week and an 8.1% tackle rate, and 25 tackles and a 10.1% tackle rate over his last 4 games. Dee Winters played 89% of the snaps and had 5 tackles. Dallas went from 10% man coverage to\u2026"
+      "notes": "W10: Shemar James had the green dot and a three-down role. He had 5 tackles this week and an 8.1% tackle rate, and 25 tackles and a 10.1% tackle rate over his last 4 games. Dee Winters played 89% of the snaps and had 5 tackles. Dallas went from 10% man coverage to…"
     },
     {
       "nflTeam": "DEN",
@@ -415,32 +415,32 @@
     {
       "nflTeam": "DET",
       "greenDot": "Derrick Barnes",
-      "notes": "W10: Derrick Barnes wore the green dot and had a three-down role. He had 7 tackles this week and a 12.7% tackle rate, but 16 tackles and an 8.2% tackle rate over his last 4 games. His upside lies in his ability to create pressure. Over his last 5 games he had 9\u2026"
+      "notes": "W10: Derrick Barnes wore the green dot and had a three-down role. He had 7 tackles this week and a 12.7% tackle rate, but 16 tackles and an 8.2% tackle rate over his last 4 games. His upside lies in his ability to create pressure. Over his last 5 games he had 9…"
     },
     {
       "nflTeam": "GB",
       "greenDot": "Isaiah McDuffie",
-      "notes": "W10: Zaire Franklin was inactive, and Isaiah McDuffie wore the green dot and played 98% of the snaps. He had 9 tackles this week and a 14.1% tackle rate, and 39 tackles and a 15% tackle rate over his last 4 games. Ty\u2019Ron Hopper was able to return from the chest\u2026"
+      "notes": "W10: Zaire Franklin was inactive, and Isaiah McDuffie wore the green dot and played 98% of the snaps. He had 9 tackles this week and a 14.1% tackle rate, and 39 tackles and a 15% tackle rate over his last 4 games. Ty’Ron Hopper was able to return from the chest…"
     },
     {
       "nflTeam": "HOU",
-      "greenDot": "Henry To\u2019oTo\u2019o",
-      "notes": "W10: Azeez Al-Shaair was inactive. Henry To\u2019oTo\u2019o wore the green dot and Jake Hansen was the LB2. Houston was a 2-LB defense in Week 10, and it was in base on just 2% of its snaps. To\u2019oTo\u2019o was on the field for 100% of the snaps and had 7 tackles and a 10.4%\u2026 Nov 17: Al-Shaair placed on IR (4+ games"
+      "greenDot": "Henry To’oTo’o",
+      "notes": "W10: Azeez Al-Shaair was inactive. Henry To’oTo’o wore the green dot and Jake Hansen was the LB2. Houston was a 2-LB defense in Week 10, and it was in base on just 2% of its snaps. To’oTo’o was on the field for 100% of the snaps and had 7 tackles and a 10.4%… Nov 17: Al-Shaair placed on IR (4+ games"
     },
     {
       "nflTeam": "IND",
       "greenDot": "C.J. Allen",
-      "notes": "W10: Akeem Davis-Gaither landed on IR this week and Jaylon Carlies was inactive. C.J. Allen is the green dot going forward, and Bryce Boettcher was the LB2. Allen was on the field for 100% of the snaps with 9 tackles and 2 TFLs. He had 29 tackles and a 16.3%\u2026 Nov 17 waiver piece: Bryce Boettcher LB2"
+      "notes": "W10: Akeem Davis-Gaither landed on IR this week and Jaylon Carlies was inactive. C.J. Allen is the green dot going forward, and Bryce Boettcher was the LB2. Allen was on the field for 100% of the snaps with 9 tackles and 2 TFLs. He had 29 tackles and a 16.3%… Nov 17 waiver piece: Bryce Boettcher LB2"
     },
     {
       "nflTeam": "JAX",
       "greenDot": "Foyesade Oluokun",
-      "notes": "W10: Foyesade Oluokun is a green dot, so of course he stays on the field. He had 10 tackles and a 17.5% tackle rate this week, and has 26 tackles and an 18.1% tackle rate over his last 3 games. Ventrell Miller had 6 tackles and a 14% tackle rate and played 75% of\u2026"
+      "notes": "W10: Foyesade Oluokun is a green dot, so of course he stays on the field. He had 10 tackles and a 17.5% tackle rate this week, and has 26 tackles and an 18.1% tackle rate over his last 3 games. Ventrell Miller had 6 tackles and a 14% tackle rate and played 75% of…"
     },
     {
       "nflTeam": "KC",
       "greenDot": "Nick Bolton",
-      "notes": "W10: Nick Bolton had the green dot and played 92% of the snaps. He had 9 tackles and a 14.8% tackle rate this week, and 41 tackles and a 16.9% tackle rate over his last 4 games. Drue Tranquill played 73% of the snaps and had 9 tackles and an 18.8% tackle rate this\u2026"
+      "notes": "W10: Nick Bolton had the green dot and played 92% of the snaps. He had 9 tackles and a 14.8% tackle rate this week, and 41 tackles and a 16.9% tackle rate over his last 4 games. Drue Tranquill played 73% of the snaps and had 9 tackles and an 18.8% tackle rate this…"
     },
     {
       "nflTeam": "LAC",
@@ -450,42 +450,42 @@
     {
       "nflTeam": "LAR",
       "greenDot": "Quentin Lake",
-      "notes": "W10: The Rams defense limited Arizona to just 34 plays, and there was a rotation at linebacker. Omar Speights played against 13 personnel and in base, Shaun Dolac saw dime and 11 personnel, and Dolac saw more dime than Landman. Nate Landman led the group with 20\u2026"
+      "notes": "W10: The Rams defense limited Arizona to just 34 plays, and there was a rotation at linebacker. Omar Speights played against 13 personnel and in base, Shaun Dolac saw dime and 11 personnel, and Dolac saw more dime than Landman. Nate Landman led the group with 20…"
     },
     {
       "nflTeam": "LV",
       "greenDot": "Nakobe Dean",
-      "notes": "W10: Nakobe Dean had the green dot and Quay Walker shares the middle with him, and both had a three-down role. Dean had 8 tackles this week, and 50 tackles and a 19.8% tackle rate over his last 4 games. Walker had 8 tackles this week and 40 tackles and a 16.3%\u2026"
+      "notes": "W10: Nakobe Dean had the green dot and Quay Walker shares the middle with him, and both had a three-down role. Dean had 8 tackles this week, and 50 tackles and a 19.8% tackle rate over his last 4 games. Walker had 8 tackles this week and 40 tackles and a 16.3%…"
     },
     {
       "nflTeam": "MIA",
       "greenDot": "Jacob Rodriguez",
-      "notes": "W10: Unfortunately, it was one of those games for Jacob Rodriguez. Jordyn Brooks got to the ball before Rodriguez, and Rodriguez had 1 tackle this week and a 1.8% tackle rate. Both were on the field for 100% of the snaps. Brooks had 9 tackles and a 15.8% tackle\u2026"
+      "notes": "W10: Unfortunately, it was one of those games for Jacob Rodriguez. Jordyn Brooks got to the ball before Rodriguez, and Rodriguez had 1 tackle this week and a 1.8% tackle rate. Both were on the field for 100% of the snaps. Brooks had 9 tackles and a 15.8% tackle…"
     },
     {
       "nflTeam": "MIN",
       "greenDot": "Eric Wilson",
-      "notes": "W10: Blake Cashman was inactive with a concussion, and Eric Wilson wore the green dot. Wilson was on the field for 100% of the snaps and had 7 tackles and a 13% tackle rate this week, along with 2 TFLs. Over his last 4 games he had 31 tackles and a 12.4% tackle\u2026"
+      "notes": "W10: Blake Cashman was inactive with a concussion, and Eric Wilson wore the green dot. Wilson was on the field for 100% of the snaps and had 7 tackles and a 13% tackle rate this week, along with 2 TFLs. Over his last 4 games he had 31 tackles and a 12.4% tackle…"
     },
     {
       "nflTeam": "NE",
       "greenDot": "Robert Spillane",
-      "notes": "W10: (Robert Spillane (Darius Muasau wore it when he left)) Robert Spillane had an illness in the third quarter and left the game with 8:28 left in the quarter. Darius Muasau came on in relief and wore the green dot. This shouldn\u2019t be anything long-term, and the Patriots are on bye in Week 11. Spill"
+      "notes": "W10: (Robert Spillane (Darius Muasau wore it when he left)) Robert Spillane had an illness in the third quarter and left the game with 8:28 left in the quarter. Darius Muasau came on in relief and wore the green dot. This shouldn’t be anything long-term, and the Patriots are on bye in Week 11. Spill"
     },
     {
       "nflTeam": "NO",
       "greenDot": "Kaden Elliss",
-      "notes": "W10: Pete Werner suffered a hamstring injury, and his last snap came in the second quarter with 13:39 left. Danny Stutsman came on as the LB2. Kaden Elliss had the green dot and was on the field for 100% of the snaps. He had 15 tackles and a 23.1% tackle rate this\u2026"
+      "notes": "W10: Pete Werner suffered a hamstring injury, and his last snap came in the second quarter with 13:39 left. Danny Stutsman came on as the LB2. Kaden Elliss had the green dot and was on the field for 100% of the snaps. He had 15 tackles and a 23.1% tackle rate this…"
     },
     {
       "nflTeam": "NYG",
       "greenDot": "Micah McFadden",
-      "notes": "W10: Micah McFadden had the green dot and Arvell Reese was next to him, and both had a three-down role. McFadden had 10 tackles and a 14.9% tackle rate this week, and 29 tackles and a 15.4% tackle rate over his last 3 games. Reese had 13 tackles and a 19.4% tackle\u2026"
+      "notes": "W10: Micah McFadden had the green dot and Arvell Reese was next to him, and both had a three-down role. McFadden had 10 tackles and a 14.9% tackle rate this week, and 29 tackles and a 15.4% tackle rate over his last 3 games. Reese had 13 tackles and a 19.4% tackle…"
     },
     {
       "nflTeam": "NYJ",
       "greenDot": "Demario Davis",
-      "notes": "W10: Demario Davis had the green dot and played 98% of the snaps. He had 6 tackles and an 11.3% tackle rate this week, and 25 tackles and a 10.4% tackle rate over his last 4 games. Jamien Sherwood played 98% of the snaps, with 9 tackles and a 17% tackle rate this\u2026"
+      "notes": "W10: Demario Davis had the green dot and played 98% of the snaps. He had 6 tackles and an 11.3% tackle rate this week, and 25 tackles and a 10.4% tackle rate over his last 4 games. Jamien Sherwood played 98% of the snaps, with 9 tackles and a 17% tackle rate this…"
     },
     {
       "nflTeam": "PHI",
@@ -495,17 +495,17 @@
     {
       "nflTeam": "PIT",
       "greenDot": "Patrick Queen",
-      "notes": "W10: Patrick Queen had the green dot and was on the field for 100% of the snaps, all 65 of them. He had 14 tackles and a 21.5% tackle rate this week, and 39 tackles and a 15.2% tackle rate over his last 4 games. Pittsburgh was off in Week 9, so that stretch skips\u2026"
+      "notes": "W10: Patrick Queen had the green dot and was on the field for 100% of the snaps, all 65 of them. He had 14 tackles and a 21.5% tackle rate this week, and 39 tackles and a 15.2% tackle rate over his last 4 games. Pittsburgh was off in Week 9, so that stretch skips…"
     },
     {
       "nflTeam": "SEA",
       "greenDot": "Ernest Jones",
-      "notes": "W10: Ernest Jones had the green dot and was on the field for 100% of the snaps. He had 10 tackles and a 16.9% tackle rate this week, and 39 tackles and a 17% tackle rate over his last 4 games. Drake Thomas played just 39 snaps, or 66%. Seattle was in dime on 34%\u2026"
+      "notes": "W10: Ernest Jones had the green dot and was on the field for 100% of the snaps. He had 10 tackles and a 16.9% tackle rate this week, and 39 tackles and a 17% tackle rate over his last 4 games. Drake Thomas played just 39 snaps, or 66%. Seattle was in dime on 34%…"
     },
     {
       "nflTeam": "SF",
       "greenDot": "Fred Warner",
-      "notes": "W10: Fred Warner had the green dot and was on the field for 100% of the snaps. He had 11 tackles and a 14.1% tackle rate this week, and 29 tackles and a 15.4% tackle rate over his last 3 games. Dre Greenlaw played 87% of the snaps and had 8 tackles and an 11.8%\u2026"
+      "notes": "W10: Fred Warner had the green dot and was on the field for 100% of the snaps. He had 11 tackles and a 14.1% tackle rate this week, and 29 tackles and a 15.4% tackle rate over his last 3 games. Dre Greenlaw played 87% of the snaps and had 8 tackles and an 11.8%…"
     },
     {
       "nflTeam": "TB",
@@ -520,7 +520,7 @@
     {
       "nflTeam": "WAS",
       "greenDot": "Frankie Luvu",
-      "notes": "W10: Frankie Luvu had the green dot and Sonny Styles was next to him, and both had a three-down role. Styles had 13 tackles and a 20.3% tackle rate this week, and 34 tackles and a 16.8% tackle rate over his last 3 games. Luvu had 6 tackles and a 9.4% tackle rate\u2026"
+      "notes": "W10: Frankie Luvu had the green dot and Sonny Styles was next to him, and both had a three-down role. Styles had 13 tackles and a 20.3% tackle rate this week, and 34 tackles and a 16.8% tackle rate over his last 3 games. Luvu had 6 tackles and a 9.4% tackle rate…"
     }
   ],
   "boxSafety": [
@@ -555,11 +555,6 @@
       "source": "X post citing @DZangaroNBCS / @ReinerOlivia",
       "time": "2026-11-27T09:04:00-08:00",
       "text": "Goedert (shoulder) left in a sling. https://x.com/i/status/2126361485118939200"
-    },
-    {
-      "source": "Colts beat (X)",
-      "time": "2026-11-27T11:14:00-08:00",
-      "text": "Steichen on Richardson: great week of preparation. https://x.com/i/status/2126394190028472825"
     }
   ]
 }

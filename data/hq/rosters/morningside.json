@@ -2,25 +2,25 @@
   "teamId": "morningside",
   "teamName": "Morningside Muff Divers",
   "owner": "Grizz",
-  "asOf": "2026-11-25 10:40 AM PT",
+  "asOf": "2026-11-28 5:55 AM PT",
   "faabLeft": 3,
-  "startingQB": "Aaron Rodgers",
+  "startingQB": "Deshaun Watson",
   "roster": {
     "QB": [
-      "Drew Lock",
       "Deshaun Watson"
     ],
     "RB": [
       "Ollie Gordon",
-      "Jadarian Price"
+      "Jadarian Price",
+      "Max Hurleman"
     ],
     "WR": [
       "Justin Jefferson",
       "Denzel Boston",
       "Deebo Samuel",
+      "Ted Hurst",
       "Elic Ayomanor",
-      "Xavier Worthy",
-      "Ted Hurst"
+      "Xavier Worthy"
     ],
     "TE": [
       "Travis Kelce"
@@ -33,7 +33,7 @@
       "Derrick Barnes",
       "Terrel Bernard",
       "Daiyan Henley",
-      "Bobby Okereke"
+      "Pete Werner"
     ],
     "DB": [
       "Jessie Bates",
@@ -43,35 +43,32 @@
     "IR": [
       "Jordan Addison",
       "Derwin James",
-      "Pete Werner"
+      "Bobby Okereke"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Denzel Boston — Q (active)",
-    "Jordan Addison — Q (IR slot)",
-    "Daiyan Henley — Q (reserve)",
-    "Bobby Okereke — Q (reserve)",
+    "Jordan Addison — O (IR slot)",
+    "Daiyan Henley — O (reserve)",
     "Derwin James — IR (IR slot)",
-    "Pete Werner — Q (IR slot)"
+    "Bobby Okereke — Q (IR slot)"
   ],
-  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
+  "source": "Fantrax roster sync 2026-11-28 5:55 AM PT (/workspace/fantrax-raw-2026-11-28-am.json)",
   "fantraxTeamId": "3hpc63ermsb3ulv5",
   "lineupFlags": [
     "Denzel Boston — Q (active)",
-    "Daiyan Henley — Q (reserve)",
-    "Bobby Okereke — Q (reserve)"
+    "Daiyan Henley — O (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Denzel Boston — Q (active)",
-    "Jordan Addison — Q (IR slot)",
-    "Daiyan Henley — Q (reserve)",
-    "Bobby Okereke — Q (reserve)",
+    "Jordan Addison — O (IR slot)",
+    "Daiyan Henley — O (reserve)",
     "Derwin James — IR (IR slot)",
-    "Pete Werner — Q (IR slot)"
+    "Bobby Okereke — Q (IR slot)"
   ],
-  "updated": "2026-11-25",
-  "lastSynced": "2026-11-25 10:40 AM PT"
+  "updated": "2026-11-28",
+  "lastSynced": "2026-11-28 5:55 AM PT"
 }

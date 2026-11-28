@@ -2,7 +2,7 @@
   "teamId": "pocket",
   "teamName": "Pocket Agents",
   "owner": "KO",
-  "asOf": "2026-11-25 5:56 AM PT",
+  "asOf": "2026-11-28 5:55 AM PT",
   "faabLeft": 66,
   "startingQB": "Jared Goff",
   "roster": {
@@ -11,18 +11,18 @@
       "Tyler Shough"
     ],
     "RB": [
-      "Jonah Coleman",
-      "Saquon Barkley"
+      "Saquon Barkley",
+      "Jonah Coleman"
     ],
     "WR": [
-      "Tetairoa McMillan",
       "CeeDee Lamb",
       "Rashid Shaheed",
       "Jaylen Waddle"
     ],
     "TE": [
       "Chigoziem Okonkwo",
-      "Trey McBride"
+      "Trey McBride",
+      "Dalton Kincaid"
     ],
     "DL": [
       "Will Anderson Jr."
@@ -42,31 +42,29 @@
     ],
     "IR": [
       "Woody Marks",
-      "Dalton Kincaid",
+      "Tetairoa McMillan",
       "Brandon Jones"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Woody Marks — Q (IR slot)",
-    "Dalton Kincaid — Q (IR slot)",
-    "Robert Spillane — Q (active)",
-    "Tony Adams — Q (active)"
+    "Saquon Barkley — Q (active)",
+    "Tetairoa McMillan — Q (IR slot)",
+    "Cooper DeJean — Q (active)"
   ],
-  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-28 5:55 AM PT (/workspace/fantrax-raw-2026-11-28-am.json)",
   "fantraxTeamId": "20zozmjgmsb3ulv4",
   "lineupFlags": [
-    "Robert Spillane — Q (active)",
-    "Tony Adams — Q (active)"
+    "Saquon Barkley — Q (active)",
+    "Cooper DeJean — Q (active)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Woody Marks — Q (IR slot)",
-    "Dalton Kincaid — Q (IR slot)",
-    "Robert Spillane — Q (active)",
-    "Tony Adams — Q (active)"
+    "Saquon Barkley — Q (active)",
+    "Tetairoa McMillan — Q (IR slot)",
+    "Cooper DeJean — Q (active)"
   ],
-  "updated": "2026-11-25",
-  "lastSynced": "2026-11-25 10:40 AM PT"
+  "updated": "2026-11-28",
+  "lastSynced": "2026-11-28 5:55 AM PT"
 }

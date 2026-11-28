@@ -2,7 +2,7 @@
   "teamId": "newman",
   "teamName": "Newman Lake Sleep Paralysis Demons",
   "owner": "Ryan",
-  "asOf": "2026-11-25 5:56 AM PT",
+  "asOf": "2026-11-28 5:55 AM PT",
   "faabLeft": 40,
   "startingQB": "Jordan Love",
   "roster": {
@@ -11,29 +11,30 @@
     ],
     "RB": [
       "Jonathan Taylor",
-      "Jordan Mason"
+      "Jordan Mason",
+      "Dylan Laube"
     ],
     "WR": [
-      "Zay Flowers",
       "Matthew Golden",
+      "Zay Flowers",
       "Tee Higgins",
+      "Xavier Hutchinson",
       "Myles Price"
     ],
     "TE": [
-      "Tyler Warren",
-      "Juwan Johnson"
+      "Tyler Warren"
     ],
     "DL": [
       "Andrew Van Ginkel"
     ],
     "LB": [
-      "Zaire Franklin",
+      "Ty'Ron Hopper",
       "Tyrel Dodson",
       "Roquan Smith",
       "Jeremiah Trotter",
+      "Zaire Franklin",
       "Jake Hansen",
-      "Danny Stutsman",
-      "Ty'Ron Hopper"
+      "Danny Stutsman"
     ],
     "DB": [
       "Jordan Battle",
@@ -47,27 +48,27 @@
   },
   "notes": "",
   "injuryFlags": [
-    "Juwan Johnson — Q (reserve)",
+    "Tee Higgins — Q (active)",
     "Davante Adams — IR (IR slot)",
-    "A.J. Brown — Q (IR slot)",
-    "Zaire Franklin — Q (active)",
+    "A.J. Brown — O (IR slot)",
+    "Zaire Franklin — O (reserve)",
     "Azeez Al-Shaair — IR (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-28 5:55 AM PT (/workspace/fantrax-raw-2026-11-28-am.json)",
   "fantraxTeamId": "kwaohsfwmsb3ulv4",
   "lineupFlags": [
-    "Juwan Johnson — Q (reserve)",
-    "Zaire Franklin — Q (active)"
+    "Tee Higgins — Q (active)",
+    "Zaire Franklin — O (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Juwan Johnson — Q (reserve)",
+    "Tee Higgins — Q (active)",
     "Davante Adams — IR (IR slot)",
-    "A.J. Brown — Q (IR slot)",
-    "Zaire Franklin — Q (active)",
+    "A.J. Brown — O (IR slot)",
+    "Zaire Franklin — O (reserve)",
     "Azeez Al-Shaair — IR (IR slot)"
   ],
-  "updated": "2026-11-25",
-  "lastSynced": "2026-11-25 10:40 AM PT"
+  "updated": "2026-11-28",
+  "lastSynced": "2026-11-28 5:55 AM PT"
 }

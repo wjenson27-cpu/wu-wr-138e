@@ -2,31 +2,31 @@
   "teamId": "slumlords",
   "teamName": "Indian Trail Slumlords",
   "owner": "Towner",
-  "asOf": "2026-11-25 5:56 AM PT",
+  "asOf": "2026-11-28 5:55 AM PT",
   "faabLeft": 0,
-  "startingQB": "Cam Ward",
+  "startingQB": "Jacoby Brissett",
   "roster": {
     "QB": [
-      "Cam Ward",
-      "Jacoby Brissett"
+      "Jacoby Brissett",
+      "Cam Ward"
     ],
     "RB": [
       "Jahmyr Gibbs",
       "James Cook",
-      "Quinshon Judkins"
+      "Quinshon Judkins",
+      "Rachaad White"
     ],
     "WR": [
       "Dohnte Meyers",
-      "Barion Brown",
-      "Josh Cameron"
+      "Josh Cameron",
+      "Barion Brown"
     ],
     "TE": [
-      "Gunnar Helm",
       "Harold Fannin"
     ],
     "DL": [
-      "Maxx Crosby",
       "Gregory Rousseau",
+      "Maxx Crosby",
       "Carl Granderson",
       "Jeffery Simmons",
       "Jacob Martin"
@@ -36,30 +36,27 @@
     ],
     "DB": [
       "Budda Baker",
+      "Devon Witherspoon",
       "Chamarri Conner",
-      "Talanoa Hufanga",
-      "Devon Witherspoon"
+      "Talanoa Hufanga"
     ],
     "IR": [
       "Drake Maye",
-      "Rachaad White",
       "Leonard Williams"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Drake Maye — O (IR slot)",
-    "Leonard Williams — Q (IR slot)"
+    "Drake Maye — O (IR slot)"
   ],
-  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-28 5:55 AM PT (/workspace/fantrax-raw-2026-11-28-am.json)",
   "fantraxTeamId": "59frnthimsb3ulv4",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Drake Maye — O (IR slot)",
-    "Leonard Williams — Q (IR slot)"
+    "Drake Maye — O (IR slot)"
   ],
-  "updated": "2026-11-25",
-  "lastSynced": "2026-11-25 10:40 AM PT"
+  "updated": "2026-11-28",
+  "lastSynced": "2026-11-28 5:55 AM PT"
 }

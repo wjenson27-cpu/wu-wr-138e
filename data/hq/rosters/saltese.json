@@ -2,7 +2,7 @@
   "teamId": "saltese",
   "teamName": "Saltese Slamm",
   "owner": "Larry",
-  "asOf": "2026-11-25 10:40 AM PT",
+  "asOf": "2026-11-28 5:55 AM PT",
   "faabLeft": 2,
   "startingQB": "C.J. Stroud",
   "roster": {
@@ -14,8 +14,8 @@
       "Aaron Jones",
       "David Montgomery",
       "D'Andre Swift",
-      "Bhayshul Tuten",
       "Tyler Allgeier",
+      "Jonathon Brooks",
       "Rico Dowdle",
       "Kyle Monangai"
     ],
@@ -27,44 +27,45 @@
       "Dalton Schultz"
     ],
     "DL": [
-      "Abdul Carter"
+      "Chop Robinson"
     ],
     "LB": [
       "Jamien Sherwood",
-      "Jaden Dugger",
       "Henry To'oTo'o",
-      "Eric Wilson"
+      "Eric Wilson",
+      "Jaden Dugger"
     ],
     "DB": [
       "Jonas Sanker",
-      "Joshua Williams"
+      "Joshua Williams",
+      "Emmanuel McNeil-Warren"
     ],
     "IR": [
-      "Jonathon Brooks",
+      "Bhayshul Tuten",
       "RJ Harvey",
       "Zack Baun"
     ]
   },
   "notes": "",
   "injuryFlags": [
-    "Bhayshul Tuten — Q (reserve)",
-    "Jonathon Brooks — IR (IR slot)",
+    "Jonathon Brooks — IR (reserve)",
+    "Bhayshul Tuten — O (IR slot)",
     "RJ Harvey — IR (IR slot)",
     "Zack Baun — IR (IR slot)"
   ],
-  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
+  "source": "Fantrax roster sync 2026-11-28 5:55 AM PT (/workspace/fantrax-raw-2026-11-28-am.json)",
   "fantraxTeamId": "xdx6ngm2msb3ulv5",
   "lineupFlags": [
-    "Bhayshul Tuten — Q (reserve)"
+    "Jonathon Brooks — IR (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Bhayshul Tuten — Q (reserve)",
-    "Jonathon Brooks — IR (IR slot)",
+    "Jonathon Brooks — IR (reserve)",
+    "Bhayshul Tuten — O (IR slot)",
     "RJ Harvey — IR (IR slot)",
     "Zack Baun — IR (IR slot)"
   ],
-  "updated": "2026-11-25",
-  "lastSynced": "2026-11-25 10:40 AM PT"
+  "updated": "2026-11-28",
+  "lastSynced": "2026-11-28 5:55 AM PT"
 }

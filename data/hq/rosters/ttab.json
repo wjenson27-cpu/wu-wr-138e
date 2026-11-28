@@ -2,7 +2,7 @@
   "teamId": "ttab",
   "teamName": "Towner Top Aga Bottom",
   "owner": "Chase",
-  "asOf": "2026-11-25 10:40 AM PT",
+  "asOf": "2026-11-28 5:55 AM PT",
   "faabLeft": 0,
   "startingQB": "Caleb Williams",
   "roster": {
@@ -14,9 +14,9 @@
       "Travis Etienne"
     ],
     "WR": [
+      "Christian Watson",
       "Stefon Diggs",
       "DeVonta Smith",
-      "Christian Watson",
       "Jameson Williams",
       "Ryan Flournoy",
       "Malik Washington"
@@ -35,8 +35,8 @@
     ],
     "DB": [
       "Brian Branch",
-      "Caleb Downs",
       "Dillon Thieneman",
+      "Caleb Downs",
       "Zayne Anderson"
     ],
     "IR": [
@@ -47,20 +47,29 @@
   },
   "notes": "",
   "injuryFlags": [
-    "Omar Cooper Jr. — Q (IR slot)",
-    "Divine Deablo — Q (IR slot)",
-    "Dorian Williams — Q (IR slot)"
+    "Caleb Williams — Q (active)",
+    "Christian Watson — Q (active)",
+    "DeVonta Smith — Q (active)",
+    "Omar Cooper Jr. — O (IR slot)",
+    "Quinnen Williams — Q (active)"
   ],
-  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
+  "source": "Fantrax roster sync 2026-11-28 5:55 AM PT (/workspace/fantrax-raw-2026-11-28-am.json)",
   "fantraxTeamId": "4grk2ph6msb3ulv4",
-  "lineupFlags": [],
+  "lineupFlags": [
+    "Caleb Williams — Q (active)",
+    "Christian Watson — Q (active)",
+    "DeVonta Smith — Q (active)",
+    "Quinnen Williams — Q (active)"
+  ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Omar Cooper Jr. — Q (IR slot)",
-    "Divine Deablo — Q (IR slot)",
-    "Dorian Williams — Q (IR slot)"
+    "Caleb Williams — Q (active)",
+    "Christian Watson — Q (active)",
+    "DeVonta Smith — Q (active)",
+    "Omar Cooper Jr. — O (IR slot)",
+    "Quinnen Williams — Q (active)"
   ],
-  "updated": "2026-11-25",
-  "lastSynced": "2026-11-25 10:40 AM PT"
+  "updated": "2026-11-28",
+  "lastSynced": "2026-11-28 5:55 AM PT"
 }

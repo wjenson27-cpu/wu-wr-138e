@@ -1,280 +1,315 @@
 {
   "schemaVersion": 1,
   "sample": false,
-  "updatedAt": "2026-11-05T20:06:00-08:00",
+  "updatedAt": "2026-11-28T06:16:00-08:00",
   "season": 2026,
-  "week": 9,
-  "opponent": "ultron",
-  "source": "Fantrax read-only scrape fantrax-raw-2026-11-05-pm.json (League HQ sync)",
-  "dataNote": "Team score and projected final are Fantrax matchup totals. Per-player points, projections and game status are not in the scrape and are left null.",
+  "week": 12,
+  "opponent": "pocket",
+  "source": "Fantrax live scoring page (read-only, captured 2026-11-28 6:16 AM PT) for team totals; Fantrax roster scrape fantrax-raw-2026-11-28-am.json (AM sync, ~5:55 AM PT) for starters and injury tags; NFL schedule (nflverse) for kickoffs in PT.",
+  "dataNote": "Team score and projected final are Fantrax matchup totals at 6:16 AM PT Sat. Per-player points and projections are not in the capture and are left null. Wed/Thu/Fri games are final; Sunday and Monday games have not started.",
   "teams": [
     {
       "id": "eddies",
       "name": "Eagleridge Eddie's",
-      "record": "6-2",
-      "score": 21.0,
-      "projection": 201.96,
+      "record": "9-2",
+      "score": 44.0,
+      "projection": 194.02,
       "starters": [
         {
-          "player": "Trevor Lawrence",
+          "player": "J.J. McCarthy",
           "pos": "QB",
-          "nflTeam": "JAX",
-          "status": null,
+          "nflTeam": "NYG",
+          "status": "not_started",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (NYG @ IND)"
         },
         {
           "player": "Breece Hall",
           "pos": "RB",
           "nflTeam": "NYJ",
-          "status": null,
+          "status": "not_started",
           "points": null,
           "projection": null,
-          "injury": "Q"
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (NYJ @ MIA)"
         },
         {
           "player": "Zach Charbonnet",
           "pos": "RB",
           "nflTeam": "SEA",
-          "status": null,
+          "status": "not_started",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Sun 1:25 PM PT (SEA @ SF)",
+          "swap": {
+            "player": "Brock Bowers",
+            "pos": "TE",
+            "nflTeam": "LV",
+            "note": "Recommendation, not a done move: Bowers in for Charbonnet before Sun 1:25 PM PT. Bowers is Q (Fri DNP) for SNF 5:20 PM PT; if he is inactive (~3:50 PM PT), Coker (MNF) instead."
+          }
+        },
+        {
+          "player": "Malik Nabers",
+          "pos": "WR",
+          "nflTeam": "NYG",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (NYG @ IND)"
+        },
+        {
+          "player": "Chimere Dike",
+          "pos": "WR",
+          "nflTeam": "TEN",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (TEN @ JAX)"
         },
         {
           "player": "Garrett Wilson",
           "pos": "WR",
           "nflTeam": "NYJ",
-          "status": null,
+          "status": "not_started",
           "points": null,
           "projection": null,
-          "injury": "Q"
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (NYJ @ MIA)"
         },
         {
-          "player": "Josh Downs",
-          "pos": "WR",
-          "nflTeam": "IND",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "George Pickens",
-          "pos": "WR",
-          "nflTeam": "DAL",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": "Q"
-        },
-        {
-          "player": "Brock Bowers",
+          "player": "Dallas Goedert",
           "pos": "TE",
-          "nflTeam": "LV",
-          "status": null,
+          "nflTeam": "PHI",
+          "status": "final",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "Q",
+          "kickoffPT": "Thu 1:30 PM PT (PHI @ DAL)",
+          "note": "Shoulder; left Thu game in a sling. W12 game final."
         },
         {
           "player": "George Karlaftis",
           "pos": "DL",
           "nflTeam": "KC",
-          "status": null,
+          "status": "final",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Thu 5:20 PM PT (KC @ BUF)"
         },
         {
           "player": "Fred Warner",
           "pos": "LB",
           "nflTeam": "SF",
-          "status": null,
+          "status": "not_started",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Sun 1:25 PM PT (SEA @ SF)"
         },
         {
           "player": "Jordyn Brooks",
           "pos": "LB",
           "nflTeam": "MIA",
-          "status": null,
+          "status": "not_started",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (NYJ @ MIA)"
         },
         {
           "player": "Frankie Luvu",
           "pos": "LB",
           "nflTeam": "WAS",
-          "status": null,
+          "status": "not_started",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Sun 1:25 PM PT (WAS @ ARI)"
         },
         {
           "player": "Quentin Lake",
           "pos": "DB",
           "nflTeam": "LAR",
-          "status": null,
+          "status": "final",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Wed 5:00 PM PT (GB @ LA)"
         },
         {
           "player": "Evan Williams",
           "pos": "DB",
           "nflTeam": "GB",
-          "status": null,
+          "status": "final",
           "points": null,
           "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Cole Bishop",
-          "pos": "DB",
-          "nflTeam": "BUF",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        }
-      ]
-    },
-    {
-      "id": "ultron",
-      "name": "Ultron",
-      "record": "3-5",
-      "score": 0.0,
-      "projection": 168.36,
-      "starters": [
-        {
-          "player": "Josh Allen",
-          "pos": "QB",
-          "nflTeam": "BUF",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Bijan Robinson",
-          "pos": "RB",
-          "nflTeam": "ATL",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Chris Rodriguez Jr.",
-          "pos": "RB",
-          "nflTeam": "JAX",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Rhamondre Stevenson",
-          "pos": "RB",
-          "nflTeam": "NE",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Drake London",
-          "pos": "WR",
-          "nflTeam": "ATL",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Michael Wilson",
-          "pos": "WR",
-          "nflTeam": "ARI",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": "Q"
-        },
-        {
-          "player": "AJ Barner",
-          "pos": "TE",
-          "nflTeam": "SEA",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Dallas Turner",
-          "pos": "DL",
-          "nflTeam": "MIN",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Foyesade Oluokun",
-          "pos": "LB",
-          "nflTeam": "JAX",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "CJ Allen",
-          "pos": "LB",
-          "nflTeam": "IND",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Kendal Daniels",
-          "pos": "LB",
-          "nflTeam": "ATL",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
-        },
-        {
-          "player": "Mack Wilson",
-          "pos": "LB",
-          "nflTeam": "ARI",
-          "status": null,
-          "points": null,
-          "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Wed 5:00 PM PT (GB @ LA)"
         },
         {
           "player": "Kyle Hamilton",
           "pos": "DB",
           "nflTeam": "BAL",
-          "status": null,
+          "status": "not_started",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (BAL @ HOU)"
+        }
+      ]
+    },
+    {
+      "id": "pocket",
+      "name": "Pocket Agents",
+      "record": "6-5",
+      "score": 66.0,
+      "projection": 194.3,
+      "starters": [
+        {
+          "player": "Jared Goff",
+          "pos": "QB",
+          "nflTeam": "DET",
+          "status": "final",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Thu 10:00 AM PT (CHI @ DET)"
         },
         {
-          "player": "Josh Metellus",
-          "pos": "DB",
-          "nflTeam": "MIN",
-          "status": null,
+          "player": "Saquon Barkley",
+          "pos": "RB",
+          "nflTeam": "PHI",
+          "status": "final",
           "points": null,
           "projection": null,
-          "injury": ""
+          "injury": "Q",
+          "kickoffPT": "Thu 1:30 PM PT (PHI @ DAL)"
+        },
+        {
+          "player": "Jonah Coleman",
+          "pos": "RB",
+          "nflTeam": "DEN",
+          "status": "final",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Fri 12:00 PM PT (DEN @ PIT)"
+        },
+        {
+          "player": "CeeDee Lamb",
+          "pos": "WR",
+          "nflTeam": "DAL",
+          "status": "final",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Thu 1:30 PM PT (PHI @ DAL)"
+        },
+        {
+          "player": "Rashid Shaheed",
+          "pos": "WR",
+          "nflTeam": "SEA",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 1:25 PM PT (SEA @ SF)"
+        },
+        {
+          "player": "Chigoziem Okonkwo",
+          "pos": "TE",
+          "nflTeam": "WAS",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 1:25 PM PT (WAS @ ARI)"
+        },
+        {
+          "player": "Trey McBride",
+          "pos": "TE",
+          "nflTeam": "ARI",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 1:25 PM PT (WAS @ ARI)"
+        },
+        {
+          "player": "Will Anderson Jr.",
+          "pos": "DL",
+          "nflTeam": "HOU",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (BAL @ HOU)"
+        },
+        {
+          "player": "Robert Spillane",
+          "pos": "LB",
+          "nflTeam": "NE",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 1:05 PM PT (NE @ LAC)"
+        },
+        {
+          "player": "Barrett Carter",
+          "pos": "LB",
+          "nflTeam": "CIN",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (NO @ CIN)"
+        },
+        {
+          "player": "Ernest Jones",
+          "pos": "LB",
+          "nflTeam": "SEA",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 1:25 PM PT (SEA @ SF)"
+        },
+        {
+          "player": "Josiah Trotter",
+          "pos": "LB",
+          "nflTeam": "TB",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Mon 5:15 PM PT (CAR @ TB)"
+        },
+        {
+          "player": "Tony Adams",
+          "pos": "DB",
+          "nflTeam": "TEN",
+          "status": "not_started",
+          "points": null,
+          "projection": null,
+          "injury": "",
+          "kickoffPT": "Sun 10:00 AM PT (TEN @ JAX)"
+        },
+        {
+          "player": "Cooper DeJean",
+          "pos": "DB",
+          "nflTeam": "PHI",
+          "status": "final",
+          "points": null,
+          "projection": null,
+          "injury": "Q",
+          "kickoffPT": "Thu 1:30 PM PT (PHI @ DAL)"
         }
       ]
     }

@@ -1,23 +1,39 @@
 {
-  "updated": "2026-11-25",
-  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
+  "updated": "2026-11-26",
+  "source": "Fantrax roster sync 2026-11-26 4:07 PM PT (/workspace/fantrax-raw-2026-11-26-pm-normalized.json)",
   "season": 2026,
   "trades": [
+    {
+      "date": "2026-11-25",
+      "time": "12:52 PM PST",
+      "week": 12,
+      "status": "completed",
+      "official": true,
+      "teamA": "Eagleridge Eddie's",
+      "teamB": "Little Ass Boys",
+      "givesA": [
+        "Cole Bishop (DB)"
+      ],
+      "givesB": [
+        "Dylan Sampson (RB)"
+      ],
+      "summary": "Week 12 — Eagleridge Eddie's sent Cole Bishop (DB) to Little Ass Boys for Dylan Sampson (RB) (Nov 25 12:52 PM PST)."
+    },
     {
       "date": "2026-11-24",
       "time": "5:26 PM PST",
       "week": 12,
       "status": "completed",
       "official": true,
-      "teamA": "The Eddies",
-      "teamB": "TTAB",
+      "teamA": "Eagleridge Eddie's",
+      "teamB": "Towner Top Aga Bottom",
       "givesA": [
         "Travis Etienne (RB)"
       ],
       "givesB": [
         "Dallas Goedert (TE)"
       ],
-      "summary": "Week 12 — The Eddies sent Travis Etienne (RB) to TTAB for Dallas Goedert (TE) (Nov 24 5:26 PM PST)."
+      "summary": "Week 12 — Eagleridge Eddie's sent Travis Etienne (RB) to TTAB for Dallas Goedert (TE) (Nov 24 5:26 PM PST)."
     },
     {
       "date": "2026-11-24",
@@ -949,7 +965,7 @@
     {
       "teamId": "newman",
       "team": "Newman Lake Sleep Paralysis Demons",
-      "lastUpdated": "Last Updated: Nov 18 9:00 AM",
+      "lastUpdated": "Last Updated: Nov 25 10:54 AM",
       "players": [
         "Jordan Love QB GB",
         "Jordan Mason RB MIN",
@@ -960,7 +976,6 @@
         "Matthew Golden WR GB",
         "Tee Higgins WR CIN",
         "Myles Price WR MIN",
-        "Juwan Johnson TE NO",
         "Andrew Van Ginkel DL,LB,ID MIN",
         "Azeez Al-Shaair LB HOU",
         "Zaire Franklin LB GB",
@@ -1012,8 +1027,8 @@
     }
   ],
   "leaderboard_note": "As of early HQ: Nate led all-2026 deal count (incl handshake). Fantrax official player/pick deals concentrated with Aga/Chase/Larry.",
-  "pending_note": "Pending trades 0 (Fantrax 2026-11-25 5:56 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
-  "fantrax_completed_view": "Newest official: The Eddies↔TTAB Travis Etienne for Dallas Goedert (Nov 24 5:26 PM); Doubtpfizer↔Ultron Rashee Rice for Omarion Hampton (Nov 24 2:36 PM); Hypersecretors↔Ultron Emmett Johnson+Luther Burden+$5 FAAB for Bijan Robinson (Nov 18 4:40 PM); Saltese↔Substation Carson Schwesinger+Dre Greenlaw for Eric Wilson+Henry To'oTo'o+Zack Baun+Tucker Kraft (Nov 13 2:44 PM).",
+  "pending_note": "Pending trades 0 (Fantrax 2026-11-27 5:50 AM PT roster sync). Eagle Ridge Eddies exclusion standing: no pending offers involving Eddies in public HQ.",
+  "fantrax_completed_view": "Newest official: Eagleridge↔LAB Cole Bishop for Dylan Sampson (Nov 25 12:52 PM); Eagleridge↔TTAB Travis Etienne for Dallas Goedert (Nov 24 5:26 PM); Doubtpfizer↔Ultron Rashee Rice for Omarion Hampton (Nov 24 2:36 PM).",
   "hqComplete": true,
-  "lastSynced": "2026-11-25 5:56 AM PT"
+  "lastSynced": "2026-11-27 4:10 PM PT"
 }

@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-11-28T06:35:00-08:00",
+  "currentWeek": 12,
+  "fileWeek": 11,
+  "rebuilt": false,
+  "stale": true,
+  "reason": "No Week 12 green-dot post in Mike Woellert's Substack archive as of Nov 28 6:35 AM PT (newest green-dot post is Week 11, Nov 24). File kept as Week 11. Checked by hand: refresh_green_dots.py fails on the archive API's new {posts:[...]} response shape.",
+  "latestPost": {
+    "week": 11,
+    "title": "Week 11 Green Dot and Full-Time Linebackers IDP Fantasy Football",
+    "url": "https://mikewoellert.substack.com/p/week-11-green-dot-and-full-time-linebackers"
+  }
+}

@@ -2,7 +2,7 @@
   "teamId": "substation",
   "teamName": "Substation",
   "owner": "Nate",
-  "asOf": "2026-11-25 10:40 AM PT",
+  "asOf": "2026-11-28 5:55 AM PT",
   "faabLeft": 4,
   "startingQB": "Trevor Lawrence",
   "roster": {
@@ -18,47 +18,50 @@
       "KC Concepcion",
       "Jakobi Meyers",
       "Jordyn Tyson",
-      "Pat Bryant",
+      "Jack Bech",
       "Germie Bernard"
     ],
     "TE": [
-      "David Njoku"
+      "Mike Gesicki"
     ],
     "DL": [
-      "Jaelan Phillips"
+      "Derrick Brown"
     ],
     "LB": [
       "Carson Schwesinger",
       "Kaden Elliss",
-      "Malcolm Rodriguez",
+      "Garret Wallow",
       "Alex Anzalone",
-      "Devin White"
+      "Malcolm Rodriguez"
     ],
     "DB": [
       "Jeremy Chinn",
       "Tykee Smith",
-      "Jalen Pitre",
-      "D.J. Reed"
+      "D.J. Reed",
+      "Jalen Pitre"
     ],
     "IR": [
       "Jack Campbell",
-      "Dre Greenlaw"
+      "Dre Greenlaw",
+      "Devin White"
     ]
   },
   "notes": "",
   "injuryFlags": [
     "Jack Campbell — IR (IR slot)",
-    "Dre Greenlaw — Q (IR slot)"
+    "Dre Greenlaw — Q (IR slot)",
+    "Devin White — IR (IR slot)"
   ],
-  "source": "Fantrax post-waiver read 2026-11-25 10:30 AM PT (patched from history adds/drops)",
+  "source": "Fantrax roster sync 2026-11-28 5:55 AM PT (/workspace/fantrax-raw-2026-11-28-am.json)",
   "fantraxTeamId": "bbdlo6fkmsb3ulv5",
   "lineupFlags": [],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
     "Jack Campbell — IR (IR slot)",
-    "Dre Greenlaw — Q (IR slot)"
+    "Dre Greenlaw — Q (IR slot)",
+    "Devin White — IR (IR slot)"
   ],
-  "updated": "2026-11-25",
-  "lastSynced": "2026-11-25 10:40 AM PT"
+  "updated": "2026-11-28",
+  "lastSynced": "2026-11-28 5:55 AM PT"
 }

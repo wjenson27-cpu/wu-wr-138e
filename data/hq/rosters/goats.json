@@ -2,7 +2,7 @@
   "teamId": "goats",
   "teamName": "Valley Old Goats",
   "owner": "Heff",
-  "asOf": "2026-11-25 5:56 AM PT",
+  "asOf": "2026-11-28 5:55 AM PT",
   "faabLeft": 16,
   "startingQB": "Patrick Mahomes",
   "roster": {
@@ -19,19 +19,19 @@
     ],
     "WR": [
       "DK Metcalf",
+      "Tre Tucker",
       "Tank Dell"
     ],
     "TE": [
       "George Kittle"
     ],
     "DL": [
-      "T.J. Watt",
-      "Nik Bonitto"
+      "T.J. Watt"
     ],
     "LB": [
-      "Arvell Reese",
       "Devin Bush",
       "Devin Lloyd",
+      "Arvell Reese",
       "Quincy Williams",
       "Drake Thomas"
     ],
@@ -47,20 +47,20 @@
   },
   "notes": "",
   "injuryFlags": [
-    "Josh Jacobs — Q (IR slot)",
-    "Amik Robertson — Q (reserve)"
+    "Josh Jacobs — O (IR slot)",
+    "Amik Robertson — O (reserve)"
   ],
-  "source": "Fantrax roster sync 2026-11-25 5:56 AM PT (/workspace/fantrax-raw-2026-11-25-am-normalized.json)",
+  "source": "Fantrax roster sync 2026-11-28 5:55 AM PT (/workspace/fantrax-raw-2026-11-28-am.json)",
   "fantraxTeamId": "81bbo25imsb3ulv5",
   "lineupFlags": [
-    "Amik Robertson — Q (reserve)"
+    "Amik Robertson — O (reserve)"
   ],
   "pendingClaim": null,
   "pendingClaims": [],
   "flags": [
-    "Josh Jacobs — Q (IR slot)",
-    "Amik Robertson — Q (reserve)"
+    "Josh Jacobs — O (IR slot)",
+    "Amik Robertson — O (reserve)"
   ],
-  "updated": "2026-11-25",
-  "lastSynced": "2026-11-25 10:40 AM PT"
+  "updated": "2026-11-28",
+  "lastSynced": "2026-11-28 5:55 AM PT"
 }
