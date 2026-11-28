@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-brand="wu-hq">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
-<meta name="theme-color" content="#002244">
+<meta name="theme-color" content="#061428">
 <title>Eddies ROS Trade Finder</title>
 <link rel="icon" href="img/eddies.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/hq-tokens.css">
 <link rel="stylesheet" href="css/warroom.css">
+<link rel="stylesheet" href="css/arrival.css">
 <style>
 main{padding:10px 12px;max-width:720px;margin:0 auto}
 .idea{border-left-width:4px}
 .idea h3{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
-.fit{font-size:.72rem;font-weight:800;color:#041208;background:#69BE28;border-radius:99px;padding:2px 8px;white-space:nowrap}
+.fit{font-size:.72rem;font-weight:800;color:var(--ds-on-accent);background:var(--ds-accent);border-radius:99px;padding:2px 8px;white-space:nowrap}
 .swap{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
-.side{background:#061018;border-radius:8px;padding:8px}
-.side .k{font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#A5ACAF}
+.side{background:var(--ds-bg);border-radius:8px;padding:8px}
+.side .k{font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--ds-text-muted)}
 .side .who{font-weight:800;margin-top:2px}
-.side .sub{font-size:.68rem;color:#A5ACAF;margin-top:2px}
-.stat b.delta{color:#69BE28;font-size:1.15rem}
+.side .sub{font-size:.68rem;color:var(--ds-text-muted);margin-top:2px}
+.stat b.delta{color:var(--ds-accent);font-size:1.15rem}
 .stat b.delta.flat{color:#fcd34d}
 .why{margin-top:6px}
 .pos{margin-left:4px}
@@ -30,11 +35,12 @@ tr.mine td{color:#86efac}
 <body>
 <div class="sticky-top">
 <header><div class="hdr"><img src="img/eddies.png" alt="Eddies"><div><h1>ROS Trade Finder</h1>
-<div class="sub">Eagle Ridge Eddies · ideas only · <a href="index.html" style="color:#69BE28">Back to War Room</a></div></div></div></header>
+<div class="sub">Eagle Ridge Eddies · ideas only · <a href="index.html">Back to War Room</a></div></div></div></header>
 <div class="strip" id="strip">Loading…</div>
 </div>
 <main id="root"></main>
 <p class="footer">Recommend-only. This page does not send trades or contact Fantrax.</p>
+<script src="js/arrival.js"></script>
 <script>
 function e(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function club(name){return name==='Towner Top Aga Bottom'?'TTAB':name}
@@ -47,7 +53,8 @@ function side(list){
 }
 fetch('data/trade-finder.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
   document.getElementById('strip').innerHTML='Week <span>'+e(d.week)+'</span> · roster <span>'+e(d.asOfRoster)+'</span> · FAAB <span>$'+e(d.faab)+'</span> · <span>'+d.ideas.length+' ideas</span>';
-  var h='<div class="banner">Recommend-only. Bill decides what to do with these. Nothing on this page is sent anywhere.</div>';
+  var h=(window.WUArrival?WUArrival.stamp(d.generatedAt||d.asOfRoster):'');
+  h+='<div class="banner">Recommend-only. Bill decides what to do with these. Nothing on this page is sent anywhere.</div>';
   h+='<div class="card"><h2>What the Eddies are shopping</h2>';
   h+='<p>'+e(d.eddied.needs)+'</p>';
   h+='<p>LB surplus: <b>'+e(d.eddied.surplus.LB.join(', '))+'</b>. Bench WRs: <b>'+e(d.eddied.surplus.WR.join(', '))+'</b>.</p>';
@@ -59,8 +66,8 @@ fetch('data/trade-finder.json',{cache:'no-store'}).then(function(r){return r.jso
     h+='<p class="tiny">'+e(idea.record)+(idea.faab!=null?' · FAAB $'+e(idea.faab):'')+' · '+e(idea.shape)+'</p>';
     h+='<div class="swap"><div class="side"><div class="k">Eddies give</div>'+side(idea.give)+'</div>';
     h+='<div class="side"><div class="k">Eddies get</div>'+side(idea.get)+'</div></div>';
-    h+='<div class="statgrid"><div class="stat"><b class="delta'+tone+'">'+signed(idea.valueDelta)+'</b><span>Eddies value</span></div>';
-    h+='<div class="stat"><b class="delta'+(idea.partnerDelta>=1?'':' flat')+'">'+signed(idea.partnerDelta)+'</b><span>Their lineup</span></div></div>';
+    h+='<div class="statgrid"><div class="stat"><b class="delta'+tone+'">'+(window.WUArrival?WUArrival.flaps(signed(idea.valueDelta), idea.valueDelta>0?'is-hero is-pos':'is-hero'):signed(idea.valueDelta))+'</b><span>Eddies value</span></div>';
+    h+='<div class="stat"><b class="delta'+(idea.partnerDelta>=1?'':' flat')+'">'+(window.WUArrival?WUArrival.flaps(signed(idea.partnerDelta), idea.partnerDelta>0?'is-hero is-pos':'is-hero'):signed(idea.partnerDelta))+'</b><span>Their lineup</span></div></div>';
     h+='<p class="why">'+e(idea.whyItWorksForThem)+'</p></div>';
   });
   if(d.notes&&d.notes.length){

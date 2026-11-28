@@ -328,7 +328,7 @@
     var net = state.context ? (ctx.aDelta.delta - ctx.bDelta.delta) : (ctx.bPack.vor - ctx.aPack.vor);
     var tilt = Math.max(-1, Math.min(1, net / scale));
     var knob = 50 + tilt * 42;
-    var color = net >= 0 ? ((teamById(state.a) || {}).color || "#69BE28") : ((teamById(state.b) || {}).color || "#7eb6ff");
+    var color = net >= 0 ? ((teamById(state.a) || {}).color || "var(--ds-accent)") : ((teamById(state.b) || {}).color || "var(--ds-blue-300)");
     var fill = knob >= 50
       ? "left:50%;width:" + (knob - 50) + "%;background:" + color
       : "left:" + knob + "%;width:" + (50 - knob) + "%;background:" + color;
@@ -399,7 +399,9 @@
     var host = document.getElementById("tradeRoot");
     if (!host) return;
     try { localStorage.setItem("wu-trade-v1", JSON.stringify({ a: state.a, b: state.b, aSend: state.aSend, bSend: state.bSend, aFaab: state.aFaab, bFaab: state.bFaab, context: state.context })); } catch (e) {}
+    var priced = state.values && state.values.asOf;
     host.innerHTML =
+      (window.WUArrival ? WUArrival.stamp(priced) : "") +
       '<div class="card"><h2>Trade calculator ' + badges() + '</h2><p class="tiny">' + esc(weightsLine()) + "</p><p class=\"tiny\">" + esc(state.waiverNote) + "</p>" +
       (window.WUGreen ? WUGreen.note(state.greenDots) : "") +
       '<label class="hide-drafted"><input type="checkbox" id="tcContext"' + (state.context ? " checked" : "") + "> Count lineup fit</label></div>" +

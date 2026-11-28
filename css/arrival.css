@@ -1,0 +1,389 @@
+/* Arrival-board layer. Colors are the HQ wu-hq tokens plus the
+   split-flap colors from the live departures.css. */
+
+:root {
+  --dep-row: #0E2A4A;
+  --dep-flap: #07182C;
+  --dep-ink: #FFFFFF;
+  --dep-pos: #8BD86A;
+  --dep-neg: #FF8A8A;
+  --dep-delay: var(--ds-warning);
+  --dep-cancel: #FFB4B4;
+  --dep-cancel-line: #E25B5B;
+}
+
+body {
+  overflow-x: clip;
+  background: var(--ds-bg);
+  color: var(--ds-text);
+  font-family: var(--ds-font-body);
+}
+h1, h2, h3, .sec, .strip, nav button, nav a, .badge, .dep-k, .updated, .tab-cue {
+  font-family: var(--ds-font-display);
+}
+h1, h2, h3 { letter-spacing: -0.01em; color: var(--ds-text); }
+a { color: var(--ds-link); }
+a:hover { color: var(--ds-kicker); }
+
+header {
+  background: var(--ds-nav-bg);
+  border-bottom: 1px solid color-mix(in srgb, var(--ds-accent) 45%, var(--ds-border));
+}
+.sticky-top, header, .hdr, .tabbar, main, .panel {
+  min-width: 0;
+  max-width: 100%;
+}
+.hdr h1 { font-size: 20px; line-height: 1.15; font-weight: 800; }
+.sub { font-size: 13px; line-height: 1.35; color: var(--ds-text-muted); }
+
+body .sub a,
+body.su .sub a,
+body.rv .sub a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin: 4px 0 4px 6px;
+  padding: 0 12px;
+  border: 1px solid var(--ds-border);
+  border-radius: 8px;
+  background: var(--ds-surface-raised);
+  color: var(--ds-link);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+a.btn, .btn, .btn-draft, .btn-copy {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.tools a, .tools button, button.linkish {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ds-text);
+}
+
+.strip {
+  background: var(--ds-surface);
+  color: var(--ds-text);
+  border-bottom: 1px solid var(--ds-border);
+  letter-spacing: 0.02em;
+}
+.strip span { color: var(--ds-kicker); }
+
+.sec {
+  color: var(--ds-kicker);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.card, .ic, .pick-slot, .recent-pick {
+  background: var(--dep-row);
+  border: 1px solid var(--ds-border);
+  border-radius: 10px;
+  box-shadow: var(--ds-shadow-card);
+}
+.card { border-left: 3px solid var(--ds-accent); }
+.row {
+  background: var(--dep-row);
+  border-radius: 10px;
+  border-top: 1px solid var(--ds-border);
+  border-right: 1px solid var(--ds-border);
+  border-bottom: 1px solid var(--ds-border);
+}
+.stat {
+  background: var(--dep-flap);
+  border: 1px solid var(--ds-border);
+  border-radius: 10px;
+}
+.stat span, .dep-k {
+  color: var(--ds-text-muted);
+  letter-spacing: 0.08em;
+}
+.sheet th, .idp-table th {
+  color: var(--ds-text-muted);
+  letter-spacing: 0.08em;
+}
+.sheet td:nth-child(n+3), .sheet th:nth-child(n+3) { white-space: nowrap; }
+.sheet .flap-char { height: 16px; min-width: 0.55em; padding: 0; font-size: 13px; border-radius: 2px; }
+.sheet .flap-tiles { flex-wrap: nowrap; gap: 1px; }
+tr.mine td { background: color-mix(in srgb, var(--ds-accent) 16%, var(--dep-row)); }
+
+.badge, .verdict, .dep-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.badge {
+  background: var(--ds-accent);
+  color: var(--ds-on-accent);
+  border-color: var(--ds-accent);
+}
+.badge.ok, .dep-chip.is-ontime {
+  color: var(--ds-accent);
+  border-color: var(--ds-accent);
+  background: transparent;
+}
+.badge.stale, .dep-chip.is-canceled {
+  color: var(--dep-cancel);
+  border-color: var(--dep-cancel-line);
+  background: transparent;
+}
+.badge.sample, .dep-chip.is-delayed {
+  color: var(--dep-delay);
+  border-color: var(--dep-delay);
+  background: transparent;
+}
+.dep-chip.is-final, .badge.ok.filled {
+  color: var(--ds-on-accent);
+  background: var(--ds-accent);
+  border-color: var(--ds-accent);
+}
+.gdot { box-shadow: 0 0 0 2px color-mix(in srgb, var(--ds-accent) 35%, transparent); }
+
+/* —— Section tabs. Scroll on a phone, with a cue that more sections exist. —— */
+.tabbar { position: relative; }
+.tabbar nav {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ds-accent) var(--ds-nav-bg);
+  padding-bottom: 10px;
+}
+.tabbar nav::-webkit-scrollbar { height: 6px; }
+.tabbar nav::-webkit-scrollbar-thumb {
+  background: var(--ds-accent);
+  border-radius: 99px;
+}
+.tabbar nav::-webkit-scrollbar-track { background: var(--ds-nav-bg); }
+nav button, nav a.navlink, .jump a, .sort button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+nav button.active, nav a.navlink.active {
+  color: var(--ds-kicker);
+  background: var(--ds-surface);
+  border-color: var(--ds-accent);
+  box-shadow: inset 0 -2px 0 var(--ds-nav-active-bar);
+}
+.tab-cue {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 6px;
+  width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 4px 0 0;
+  border: 0;
+  cursor: pointer;
+  color: var(--ds-kicker);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(90deg, transparent, var(--ds-bg) 55%);
+}
+.tabbar.has-more .tab-cue { display: flex; }
+.tabbar.has-more nav { width: calc(100% - 44px); }
+@media (max-width: 1099px) {
+  .tabbar nav { flex-wrap: wrap; overflow-x: visible; width: auto; max-height: none; }
+  .tabbar.has-more .tab-cue,
+  .tab-cue { display: none; }
+  .tabbar.has-more nav { width: auto; }
+}
+.dep-flight .flap-tiles, .dep-gate .flap-tiles { flex-wrap: nowrap; }
+
+/* —— Updated stamp —— */
+.updated {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  min-height: 44px;
+  background: var(--dep-row);
+  border: 1px solid var(--ds-border);
+  border-radius: 10px;
+  color: var(--ds-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.updated time {
+  color: var(--ds-kicker);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* —— Split-flap tiles (from HQ departures.css) —— */
+.flap-group { display: inline-block; max-width: 100%; vertical-align: middle; }
+.flap-tiles {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  max-width: 100%;
+  perspective: 280px;
+}
+.flap-char {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.78em;
+  height: 1.35em;
+  padding: 0 0.08em;
+  border-radius: 3px;
+  background: var(--dep-flap);
+  color: var(--dep-ink);
+  font-family: Archivo, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.flap-char.is-narrow { min-width: 0.42em; padding: 0; }
+.flap-char.is-gap { min-width: 0.35em; background: transparent; box-shadow: none; }
+.flap-char::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 50%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.78);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.14);
+  pointer-events: none;
+}
+.flap-char.is-gap::after { content: none; }
+.flap-group.is-pos .flap-char, .flap-group.is-win .flap-char { color: var(--dep-pos); }
+.flap-group.is-neg .flap-char { color: var(--dep-neg); }
+.flap-group.is-hero .flap-char { font-size: 22px; height: 1.28em; }
+.dep-blank {
+  color: var(--ds-text);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .flap-char {
+    transform-origin: center center;
+    animation: dep-flap-settle 0.38s ease both;
+    animation-delay: calc(var(--i, 0) * 16ms);
+  }
+}
+@keyframes dep-flap-settle {
+  from { transform: rotateX(-72deg); }
+  to { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flap-char { animation: none; }
+}
+
+.dep-k {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.dep-game { padding: 12px; }
+.dep-game-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  min-height: 28px;
+  padding: 0 4px 6px;
+  color: var(--ds-text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.dep-game-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "codes status" "dest dest";
+  gap: 6px 10px;
+  align-items: center;
+}
+.dep-codes {
+  grid-area: codes;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  min-width: 0;
+}
+.dep-dest { grid-area: dest; min-width: 0; }
+.dep-status {
+  grid-area: status;
+  display: flex;
+  justify-content: flex-end;
+  justify-self: end;
+}
+.stat b .flap-tiles { margin-top: 2px; }
+.scoreline, .su-score, .su-win b { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.su-score .flap-tiles, .su-win .flap-tiles, .scoreline .flap-tiles, .stat b .flap-tiles { flex-wrap: nowrap; }
+.strip { line-height: 1.45; }
+.strip .nowrap { white-space: nowrap; }
+.scoreline em { font-style: normal; color: var(--ds-text-muted); font-weight: 700; }
+
+@media (min-width: 900px) {
+  .flap-group.is-hero .flap-char { font-size: 28px; }
+  .dep-game-head {
+    display: grid;
+    grid-template-columns: 92px 72px minmax(0, 1fr) auto;
+    column-gap: 12px;
+    align-items: end;
+  }
+  .dep-game-top {
+    grid-template-columns: 92px 72px minmax(0, 1fr) auto;
+    grid-template-areas: "flight gate dest status";
+    align-items: center;
+    min-height: 48px;
+  }
+  .dep-codes { display: contents; }
+  .dep-flight { grid-area: flight; }
+  .dep-gate { grid-area: gate; }
+  .dep-dest { grid-area: dest; }
+}
+
+@media (max-width: 389px) {
+  .hdr h1 { font-size: 18px; }
+  .flap-group.is-hero .flap-char { font-size: 18px; }
+}
+@media (max-width: 899px) {
+  .dep-game-head { display: none; }
+}
+@media (min-width: 900px) {
+  .dep-game .dep-k { display: none; }
+}
